@@ -1,0 +1,116 @@
+.gridSection {
+  background-color: var(--white);
+  padding: 20px 0 80px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.introBlock {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 50px auto;
+}
+
+.introBlock h2 {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--black);
+  margin-bottom: 20px;
+}
+
+.introBlock p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #666;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* Perfect replica of screenshot 1 cards */
+.card {
+  background-color: #f7f6f1; 
+  display: flex;
+  flex-direction: column;
+  border-bottom: 5px solid var(--site-color); 
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.imgWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
+
+.cardImg {
+  object-fit: cover;
+}
+
+.cardBody {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.cardTitle {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--black);
+  margin: 0 0 20px 0;
+}
+
+.cardDesc {
+  color: #777;
+  font-size: 15px;
+  line-height: 1.7;
+  margin: 0 0 30px 0;
+  flex: 1;
+}
+
+.readMoreBtn {
+  display: inline-block;
+  align-self: flex-start;
+  background-color: var(--white);
+  color: var(--black);
+  font-size: 14px;
+  font-weight: 700;
+  padding: 12px 25px;
+  transition: all 0.3s;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.readMoreBtn:hover {
+  background-color: var(--button-color);
+  color: var(--white);
+}
+
+/* Responsiveness */
+@media screen and (max-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  .introBlock h2 {
+    font-size: 28px;
+  }
+}

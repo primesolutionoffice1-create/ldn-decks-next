@@ -1,0 +1,88 @@
+.featuresSection {
+  background-color: #f7f4ed;
+  /* Warm beige background */
+  padding: 20px 0;
+
+  /* Very subtle CSS diamond pattern matching the screenshot texture */
+  background-image:
+    linear-gradient(45deg, rgba(0, 0, 0, 0.015) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.015) 75%, rgba(0, 0, 0, 0.015)),
+    linear-gradient(45deg, rgba(0, 0, 0, 0.015) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.015) 75%, rgba(0, 0, 0, 0.015));
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.featureBox {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex: 1;
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  object-fit: contain;
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.number {
+  color: #a49c90;
+  /* Matching dusty brown tone of the number */
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.title {
+  color: var(--black);
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* --- Responsiveness --- */
+@media screen and (max-width: 1024px) {
+  .container {
+    flex-wrap: wrap;
+    column-gap: 40px;
+    row-gap: 50px;
+  }
+
+  .featureBox {
+    flex: 1 1 40%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .featureBox {
+    flex: 1 1 100%;
+    width: 100%;
+    gap: 20px;
+  }
+}

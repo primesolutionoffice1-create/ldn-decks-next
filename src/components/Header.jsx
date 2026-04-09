@@ -1,0 +1,271 @@
+"use client";
+import React, { useState } from 'react';
+import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import styles from "./Header.module.css";
+
+const EnvelopeIcon = () => (
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path d="M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z" />
+  </svg>
+);
+
+const LocationIcon = () => (
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z" />
+  </svg>
+);
+
+const CaretDownIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path d="M7 10L12 15L17 10H7Z" />
+  </svg>
+);
+
+const CaretRightIcon = () => (
+  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" style={{ marginLeft: 'auto' }}>
+    <polyline points="9 18 15 12 9 6"></polyline>
+  </svg>
+);
+
+const PhoneIcon = () => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path d="M6.62 10.79C8.06 13.62 10.38 15.93 13.21 17.38L15.41 15.18C15.68 14.91 16.08 14.82 16.43 14.94C17.55 15.31 18.76 15.51 20 15.51C20.55 15.51 21 15.96 21 16.51V20C21 20.55 20.55 21 20 21C10.06 21 2 12.94 2 3C2 2.45 2.45 2 3 2H6.5C7.05 2 7.5 2.45 7.5 3C7.5 4.25 7.7 5.45 8.07 6.57C8.18 6.92 8.1 7.31 7.82 7.59L5.62 9.79L6.62 10.79Z" />
+  </svg>
+);
+
+const BarsIcon = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path d="M4 6H20V8H4V6ZM4 11H20V13H4V11ZM4 16H20V18H4V16Z" />
+  </svg>
+);
+
+const CloseIcon = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z" />
+  </svg>
+);
+
+export default function Header() {
+  const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState(null);
+  const pathname = usePathname();
+
+  const isActive = (path) => {
+    if (path === "/") {
+      return pathname === "/" ? styles.active : "";
+    }
+    return pathname?.startsWith(path) ? styles.active : "";
+  };
+
+  const toggleDropdown = (menu) => {
+    if (openDropdown === menu) {
+      setOpenDropdown(null);
+    } else {
+      setOpenDropdown(menu);
+    }
+  };
+
+  return (
+    <div className={styles.headerWrapper}>
+      <header className={styles.header}>
+        {/* Left Logo Area */}
+        <div className={styles.logoArea}>
+          <Link href="/">
+            <Image
+              src="/ldndecks-logo.webp"
+              alt="ldndecks logo"
+              width={200}
+              height={100}
+              style={{ objectFit: "contain" }}
+              priority
+            />
+          </Link>
+        </div>
+
+        {/* Right Header Content */}
+        <div className={styles.headerRight}>
+          {/* Top Bar */}
+          <div className={styles.topBar}>
+            <div className={styles.topBarLeft}>
+              <div className={styles.topBarItem}>
+                <EnvelopeIcon />
+                <span>office@ldndecks.com</span>
+              </div>
+              <div className={styles.topBarItem}>
+                <LocationIcon />
+                <span>13704 Winding Oak Cir, Centreville, VA 20121, Virginia</span>
+              </div>
+            </div>
+            <div className={styles.topBarRight}>
+              <Link href="/team">Our Team</Link>
+              <Link href="/blog">News</Link>
+              <Link href="/faqs">FAQs</Link>
+            </div>
+          </div>
+
+          {/* Main Navigation Row */}
+          <div className={styles.mainNav}>
+            {/* Desktop Nav */}
+            <div className={styles.desktopNav}>
+              <nav className={styles.navLinks}>
+                <div className={styles.navItem}>
+                  <Link href="/" className={isActive("/")}>Home</Link>
+                </div>
+                
+                <div className={styles.navItem}>
+                  <Link href="/about" className={isActive("/about")}>About <CaretDownIcon /></Link>
+                  <div className={styles.dropdown}>
+                    <Link href="/contact">Our contacts</Link>
+                    <Link href="/about/why-choose-us">Why Choose Us</Link>
+                    <Link href="/about/process">Our Process</Link>
+                    <Link href="/faqs">FAQ</Link>
+                  </div>
+                </div>
+
+                <div className={styles.navItem}>
+                  <Link href="/services" className={isActive("/services")}>Services <CaretDownIcon /></Link>
+                  <div className={styles.dropdown}>
+                    <Link href="/services/new-decks">New Decks</Link>
+                    <Link href="/services/deck-resurfacing">Deck Resurfacing</Link>
+                    
+                    <div className={styles.nestedNavItem}>
+                      <Link href="/services/outdoor-washing">
+                        Outdoor washing <CaretRightIcon />
+                      </Link>
+                      <div className={styles.subMenu}>
+                        <Link href="/services/deck-washing">Deck Washing</Link>
+                        <Link href="/services/house-siding-washing">House Siding Washing</Link>
+                        <Link href="/services/concrete-washing">Concrete Washing</Link>
+                        <Link href="/services/fence-cleaning">Fence Cleaning</Link>
+                      </div>
+                    </div>
+
+                    <Link href="/services/gazebo-pergola">Gazebo and Pergola</Link>
+                    <Link href="/services/fence">Fence</Link>
+                    <Link href="/services/entry-doors">Entry Doors</Link>
+                    <Link href="/services/porches">Porches</Link>
+                    <Link href="/services/patios">Patios</Link>
+                  </div>
+                </div>
+
+                <div className={styles.navItem}>
+                  <Link href="/near-you" className={isActive("/near-you")}>Near You <CaretDownIcon /></Link>
+                  <div className={styles.dropdown}>
+                    <Link href="/near-you/loudoun-county">Loudoun County</Link>
+                    <Link href="/near-you/fairfax-county">Fairfax County</Link>
+                    <Link href="/near-you/prince-william-county">Prince William County</Link>
+                  </div>
+                </div>
+                
+                <div className={styles.navItem}>
+                  <Link href="/showcase" className={isActive("/showcase")}>Showcase</Link>
+                </div>
+
+                <div className={styles.navItem}>
+                  <Link href="/blog" className={isActive("/blog")}>Blog</Link>
+                </div>
+              </nav>
+
+              <a href="tel:+15716557207" className={styles.callNowBtn} aria-label="Call Us">
+                <PhoneIcon />
+                <span>Call Now</span>
+              </a>
+            </div>
+
+            {/* Mobile Toggle Button */}
+            <button 
+              className={styles.mobileToggle}
+              onClick={() => setIsMobileOpen(!isMobileOpen)}
+              aria-label="Toggle Menu"
+            >
+              {isMobileOpen ? <CloseIcon /> : <BarsIcon />}
+            </button>
+          </div>
+        </div>
+      </header>
+
+      {/* Mobile Nav Menu */}
+      {isMobileOpen && (
+        <div className={styles.mobileMenu}>
+          <div className={styles.mobileNavItem}>
+            <div className={`${styles.mobileNavLink} ${isActive('/')}`}>
+              <Link href="/" onClick={() => setIsMobileOpen(false)}>Home</Link>
+            </div>
+          </div>
+          
+          <div className={styles.mobileNavItem}>
+            <div 
+              className={`${styles.mobileNavLink} ${isActive('/about')}`} 
+              onClick={() => toggleDropdown('about')}
+            >
+              <span>About</span> <CaretDownIcon />
+            </div>
+            {openDropdown === 'about' && (
+              <div className={styles.mobileDropdown}>
+                <Link href="/contact" onClick={() => setIsMobileOpen(false)}>Our contacts</Link>
+                <Link href="/about/why-choose-us" onClick={() => setIsMobileOpen(false)}>Why Choose Us</Link>
+                <Link href="/about/process" onClick={() => setIsMobileOpen(false)}>Our Process</Link>
+                <Link href="/faqs" onClick={() => setIsMobileOpen(false)}>FAQ</Link>
+              </div>
+            )}
+          </div>
+
+          <div className={styles.mobileNavItem}>
+            <div 
+              className={`${styles.mobileNavLink} ${isActive('/services')}`} 
+              onClick={() => toggleDropdown('services')}
+            >
+              <span>Services</span> <CaretDownIcon />
+            </div>
+            {openDropdown === 'services' && (
+              <div className={styles.mobileDropdown}>
+                <Link href="/services/new-decks" onClick={() => setIsMobileOpen(false)}>New Decks</Link>
+                <Link href="/services/deck-resurfacing" onClick={() => setIsMobileOpen(false)}>Deck Resurfacing</Link>
+                <Link href="/services/outdoor-washing" onClick={() => setIsMobileOpen(false)}>Outdoor washing</Link>
+                <Link href="/services/deck-washing" onClick={() => setIsMobileOpen(false)} style={{ paddingLeft: '40px', fontSize: '13px' }}>- Deck Washing</Link>
+                <Link href="/services/house-siding-washing" onClick={() => setIsMobileOpen(false)} style={{ paddingLeft: '40px', fontSize: '13px' }}>- House Siding Washing</Link>
+                <Link href="/services/concrete-washing" onClick={() => setIsMobileOpen(false)} style={{ paddingLeft: '40px', fontSize: '13px' }}>- Concrete Washing</Link>
+                <Link href="/services/fence-cleaning" onClick={() => setIsMobileOpen(false)} style={{ paddingLeft: '40px', fontSize: '13px' }}>- Fence Cleaning</Link>
+                <Link href="/services/gazebo-pergola" onClick={() => setIsMobileOpen(false)}>Gazebo and Pergola</Link>
+                <Link href="/services/fence" onClick={() => setIsMobileOpen(false)}>Fence</Link>
+                <Link href="/services/entry-doors" onClick={() => setIsMobileOpen(false)}>Entry Doors</Link>
+                <Link href="/services/porches" onClick={() => setIsMobileOpen(false)}>Porches</Link>
+                <Link href="/services/patios" onClick={() => setIsMobileOpen(false)}>Patios</Link>
+              </div>
+            )}
+          </div>
+
+          <div className={styles.mobileNavItem}>
+            <div 
+              className={`${styles.mobileNavLink} ${isActive('/near-you')}`} 
+              onClick={() => toggleDropdown('near')}
+            >
+              <span>Near You</span> <CaretDownIcon />
+            </div>
+            {openDropdown === 'near' && (
+              <div className={styles.mobileDropdown}>
+                <Link href="/near-you/loudoun-county" onClick={() => setIsMobileOpen(false)}>Loudoun County</Link>
+                <Link href="/near-you/fairfax-county" onClick={() => setIsMobileOpen(false)}>Faifax County</Link>
+                <Link href="/near-you/prince-william-county" onClick={() => setIsMobileOpen(false)}>Prince William County</Link>
+              </div>
+            )}
+          </div>
+
+          <div className={styles.mobileNavItem}>
+            <div className={`${styles.mobileNavLink} ${isActive('/showcase')}`}>
+              <Link href="/showcase" onClick={() => setIsMobileOpen(false)}>Showcase</Link>
+            </div>
+          </div>
+
+          <div className={styles.mobileNavItem}>
+            <div className={`${styles.mobileNavLink} ${isActive('/blog')}`}>
+              <Link href="/blog" onClick={() => setIsMobileOpen(false)}>Blog</Link>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}

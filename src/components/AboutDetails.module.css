@@ -1,0 +1,152 @@
+.detailsSection {
+  background-color: #f7f6f1; /* Secondary contrasting shade */
+  padding: 80px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 80px;
+}
+
+.heading {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--black);
+  margin: 0 0 20px 0;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.heading::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  height: 3px;
+  background-color: var(--site-color);
+}
+
+.block p {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.checkList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.checkList li {
+  position: relative;
+  padding-left: 25px;
+  color: #444;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.checkList li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--site-color);
+  font-weight: bold;
+}
+
+/* Bottom Block */
+.bottomBlock {
+  text-align: center;
+}
+
+.bottomBlock .heading {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.bottomBlock .heading::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.subtitle {
+  color: #666;
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.chooseGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.chooseCard {
+  background-color: var(--white);
+  padding: 30px;
+  border-radius: 6px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  border-bottom: 4px solid var(--site-color);
+  transition: transform 0.3s;
+}
+
+.chooseCard:hover {
+  transform: translateY(-5px);
+}
+
+.chooseCard h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--black);
+  margin: 0 0 10px 0;
+}
+
+.chooseCard p {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.missionCard {
+  background-color: var(--site-color);
+  color: var(--white);
+  padding: 30px;
+  border-radius: 6px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.missionCard p {
+  margin: 0;
+}
+
+@media screen and (max-width: 992px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-bottom: 60px;
+  }
+
+  .chooseGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .chooseGrid {
+    grid-template-columns: 1fr;
+  }
+}

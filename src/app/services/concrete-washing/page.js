@@ -1,0 +1,72 @@
+import React from 'react';
+import ServicesHeader from '@/components/ServicesHeader';
+import ServiceMain from '@/components/ServiceMain';
+import ServiceInclusions from '@/components/ServiceInclusions';
+import ServicesFAQ from '@/components/ServicesFAQ';
+import ContactHome from '@/components/ContactHome';
+import ServiceVisual from '@/components/ServiceVisual';
+
+export const metadata = {
+  title: "Concrete Washing Services | Loudoun Decks",
+  description: "Professional concrete washing for driveways, patios, and walkways in Northern Virginia. Remove deep-set stains and grime."
+};
+
+const inclusions = [
+  {
+    title: "Stain Removal",
+    desc: "Lifting deep-set oil, tire marks, and rust stains from driveways and garage floors."
+  },
+  {
+    title: "Algae & Moss Control",
+    desc: "Removing slippery biological growth from walkways and shaded patio areas for better safety."
+  },
+  {
+    title: "Surface Sealing Prep",
+    desc: "Tapping into the concrete's pores to ensure maximum adhesion for future sealers or coatings."
+  }
+];
+
+export default function ConcreteWashingPage() {
+  return (
+    <main>
+      <ServicesHeader 
+        subtext="Our Services"
+        title="Concrete Washing Services"
+        description="Loudoun Decks provides expert concrete washing for homeowners in Northern Virginia, restoring the bright, clean look of your masonry."
+      />
+
+      <ServiceMain 
+        subtitle="Hardscape Refresh"
+        title="Restore Your Patios and Walkways"
+        description="Concrete and masonry are porous materials that tend to 'soak up' stains and accumulate ground-in dirt. Our high-grade power washing services reach deep into the surface to lift contaminants that a garden hose simply can't touch."
+        listTitle="Areas We Clean:"
+        listItems={[
+          "Residential driveways and aprons",
+          "Poured concrete and paver patios",
+          "Sidewalks and entry walkways",
+          "Pool decks and masonry walls"
+        ]}
+        image1="/images/img11.jpeg"
+        image2="/images/img13.jpeg"
+      />
+
+      <ServiceVisual image="/images/img15.jpeg" />
+
+      <ServiceInclusions 
+        title="Why Concrete Washing?"
+        description="Regular cleaning not only looks better but also prevents the long-term degradation of your hardscape materials."
+        items={inclusions}
+      />
+
+      <ServicesFAQ 
+        title="Concrete Washing FAQs"
+        faqs={[
+          { q: "Can you remove oil stains from my driveway?", a: "We have specialized treatments for oil and grease that significantly reduce their appearance, though total removal depends on how long the stain has been set." },
+          { q: "Will the pressure damage my concrete?", a: "We adjust our pressure for the age and condition of your concrete to ensure a deep clean without any etching or surface damage." }
+        ]}
+      />
+
+      <ContactHome />
+    </main>
+  );
+}

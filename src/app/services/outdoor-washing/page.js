@@ -1,0 +1,101 @@
+import React from 'react';
+import ServicesHeader from '@/components/ServicesHeader';
+import ServiceMain from '@/components/ServiceMain';
+import ServiceInclusions from '@/components/ServiceInclusions';
+import ServicesFAQ from '@/components/ServicesFAQ';
+import ContactHome from '@/components/ContactHome';
+import ServiceVisual from '@/components/ServiceVisual';
+import ProcessSteps from '@/components/ProcessSteps';
+
+export const metadata = {
+  title: "Outdoor Power Washing Services | Loudoun Decks",
+  description: "Professional outdoor power washing for decks, patios, and fences in Northern Virginia. Refresh your outdoor surfaces today."
+};
+
+const surfaces = [
+  {
+    title: "Deck Surfaces",
+    desc: "We remove dirt, mildew, and surface contaminants from deck boards before staining, sealing, or resurfacing."
+  },
+  {
+    title: "Concrete & Patios",
+    desc: "Refreshing walkways and concrete surfaces where outdoor use causes buildup of dirt and grime."
+  },
+  {
+    title: "Fences & Structures",
+    desc: "Cleaning fences and outdoor wood or composite structures to maintain appearance and reduce buildup."
+  }
+];
+
+const washingFAQs = [
+  {
+    q: "What is outdoor power washing?",
+    a: "Outdoor power washing is a method of cleaning exterior surfaces using controlled water pressure to remove dirt, mold, mildew, and surface buildup."
+  },
+  {
+    q: "Do you power wash decks?",
+    a: "Yes — we provide professional power washing for deck surfaces as part of our outdoor surface cleaning services."
+  },
+  {
+    q: "Where do you provide power washing services?",
+    a: "We serve homeowners in Loudoun County, Fairfax County, and Prince William County in Northern Virginia."
+  },
+  {
+    q: "Do you offer a free estimate?",
+    a: "Yes. We offer a free, no-obligation estimate to discuss your specific outdoor power washing needs."
+  }
+];
+
+export default function OutdoorWashingPage() {
+  return (
+    <main>
+      <ServicesHeader
+        subtext="Our Services"
+        title="Outdoor Power Washing Services"
+        description="Loudoun Decks provides professional outdoor power washing for homeowners across Northern Virginia. Refresh your deck, patio, and fences with our trusted cleaning solutions."
+      />
+
+      <ServiceMain
+        subtitle="Refresh & Clean"
+        title="Professional Cleaning for Every Surface"
+        description="Outdoor surfaces can accumulate dirt, pollen, mold, and algae over time. Loudoun Decks offers outdoor power washing to help clean and refresh these areas, significantly improving your home's curb appeal."
+        listTitle="Why Choose Power Washing:"
+        listItems={[
+          "Safely removes harmful mold and algae buildup",
+          "Improves the longevity of your wood or composite",
+          "Instantly refreshes the look of your home's exterior",
+          "Prepares surfaces for new staining or sealing"
+        ]}
+        image1="/images/img04.jpeg"
+        image2="/images/img08.jpeg"
+      />
+
+      <ServiceVisual image="/images/img14.jpeg" />
+
+      <ProcessSteps />
+
+      <ServiceInclusions
+        title="Surfaces We Clean"
+        description="Our power washing services are designed to safely and effectively remove buildup on all major exterior surfaces."
+        items={surfaces}
+      />
+
+      <ServiceInclusions
+        title="Why Choose Loudoun Decks"
+        description="Homeowners trust us for outdoor cleaning because we treat their property like our own."
+        items={[
+          { title: "Safe Methods", desc: "We use controlled pressure to clean effectively without damaging your wood or composite materials." },
+          { title: "Local Service", desc: "A local Northern Virginia provider focused entirely on outdoor living structures." },
+          { title: "Free Estimates", desc: "A straightforward, no-obligation estimate process to help you plan your project." }
+        ]}
+      />
+
+      <ServicesFAQ
+        title="Power Washing FAQs"
+        faqs={washingFAQs}
+      />
+
+      <ContactHome />
+    </main>
+  );
+}

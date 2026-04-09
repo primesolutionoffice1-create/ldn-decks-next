@@ -1,0 +1,64 @@
+.gridSection {
+  padding: 80px 0;
+  background-color: #f4f4f4;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.countyTitle {
+  font-size: 28px;
+  font-weight: 800;
+  color: #333;
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+
+.cityList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cityList li {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 8px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.cityList li::before {
+  content: "•";
+  margin-right: 12px;
+  color: #333;
+  font-size: 24px;
+  line-height: 1;
+}
+
+@media screen and (max-width: 1024px) {
+  .columns {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .countyTitle {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+}

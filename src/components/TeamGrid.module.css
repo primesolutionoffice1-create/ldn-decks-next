@@ -1,0 +1,89 @@
+.teamSection {
+  padding: 80px 0;
+  background-color: #fdfbf9;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.memberCard {
+  background-color: var(--white);
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.memberCard:hover {
+  transform: translateY(-5px);
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+
+.img {
+  object-fit: cover;
+}
+
+.info {
+  padding: 30px;
+}
+
+.name {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--black);
+  margin-bottom: 5px;
+}
+
+.role {
+  font-size: 16px;
+  color: #999;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.socialRow {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.circle {
+  width: 32px;
+  height: 32px;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #777;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.circle:hover {
+  background-color: var(--site-color);
+  color: #fff;
+}
+
+@media screen and (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}

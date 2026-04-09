@@ -1,0 +1,146 @@
+.testimonialsSection {
+  padding: 100px 0 120px 0;
+  background-color: var(--white);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.subtextWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.subtext {
+  color: #999;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.line {
+  width: 40px;
+  height: 2px;
+  background-color: var(--site-color);
+}
+
+.title {
+  font-size: 46px;
+  font-weight: 800;
+  color: var(--black);
+  margin: 0;
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.card {
+  position: relative;
+  background-color: #f7f4ed; /* Soft warm palette used elsewhere */
+  padding: 50px 40px;
+  border-radius: 12px;
+  border-bottom: 4px solid var(--site-color);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+}
+
+.quoteIcon {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+}
+
+.stars {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 25px;
+}
+
+.reviewText {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.8;
+  font-style: italic;
+  margin-bottom: 45px;
+  min-height: 120px;
+}
+
+.clientProfile {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-top: 1px solid rgba(0,0,0,0.06);
+  padding-top: 25px;
+}
+
+.avatarWrapper {
+  position: relative;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2.5px solid var(--site-color);
+}
+
+.avatar {
+  object-fit: cover;
+}
+
+.clientInfo h4 {
+  font-size: 19px;
+  font-weight: 800;
+  color: var(--black);
+  margin: 0 0 4px 0;
+}
+
+.clientInfo span {
+  font-size: 14px;
+  color: #888;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 1024px) {
+  .cardsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .card:nth-child(3) {
+    grid-column: 1 / -1;
+    max-width: 50%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 36px;
+  }
+  .cardsGrid {
+    grid-template-columns: 1fr;
+  }
+  .card:nth-child(3) {
+    max-width: 100%;
+  }
+  .reviewText {
+    min-height: auto;
+  }
+}

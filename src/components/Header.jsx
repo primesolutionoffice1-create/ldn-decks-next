@@ -47,9 +47,23 @@ const CloseIcon = () => (
   </svg>
 );
 
+const loudounCities = ["Ashburn", "Leesburg", "Sterling", "Aldie", "Middleburg", "Round Hill", "Purcellville", "Lovettsville", "Hamilton", "Waterford", "Brambleton", "South Riding", "Stone Ridge", "Broadlands"];
+const fairfaxCities = ["Alexandria", "Fairfax", "Vienna", "Reston", "Herndon", "Mclean", "Falls Church", "Annandale", "Burke", "Springfield", "Chantilly", "Centreville", "Oakton", "Great Falls", "Lorton", "Tysons", "West Springfield"];
+const pwcCities = ["Woodbridge", "Dumfries", "Quantico", "Haymarket", "Gainesville", "Bristow", "Nokesville", "Lake Ridge", "Montclair"];
+
+const slugify = (text) => {
+  return text.toString().toLowerCase()
+    .replace(/\s+/g, '-')
+    .replace(/[^\w\-]+/g, '')
+    .replace(/\-\-+/g, '-')
+    .replace(/^-+/, '')
+    .replace(/-+$/, '');
+};
+
 export default function Header() {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
+  const [activeSubMenu, setActiveSubMenu] = useState(null);
   const pathname = usePathname();
 
   const isActive = (path) => {
@@ -62,8 +76,18 @@ export default function Header() {
   const toggleDropdown = (menu) => {
     if (openDropdown === menu) {
       setOpenDropdown(null);
+      setActiveSubMenu(null);
     } else {
       setOpenDropdown(menu);
+      setActiveSubMenu(null);
+    }
+  };
+
+  const toggleSubMenu = (subMenu) => {
+    if (activeSubMenu === subMenu) {
+      setActiveSubMenu(null);
+    } else {
+      setActiveSubMenu(subMenu);
     }
   };
 
@@ -113,7 +137,7 @@ export default function Header() {
                 <div className={styles.navItem}>
                   <Link href="/" className={isActive("/")}>Home</Link>
                 </div>
-                
+
                 <div className={styles.navItem}>
                   <Link href="/about" className={isActive("/about")}>About <CaretDownIcon /></Link>
                   <div className={styles.dropdown}>
@@ -129,7 +153,7 @@ export default function Header() {
                   <div className={styles.dropdown}>
                     <Link href="/services/new-decks">New Decks</Link>
                     <Link href="/services/deck-resurfacing">Deck Resurfacing</Link>
-                    
+
                     <div className={styles.nestedNavItem}>
                       <Link href="/services/outdoor-washing">
                         Outdoor washing <CaretRightIcon />
@@ -153,12 +177,41 @@ export default function Header() {
                 <div className={styles.navItem}>
                   <Link href="/near-you" className={isActive("/near-you")}>Near You <CaretDownIcon /></Link>
                   <div className={styles.dropdown}>
-                    <Link href="/near-you/loudoun-county">Loudoun County</Link>
-                    <Link href="/near-you/fairfax-county">Fairfax County</Link>
-                    <Link href="/near-you/prince-william-county">Prince William County</Link>
+                    <div className={styles.nestedNavItem}>
+                      <Link href="/near-you/loudoun-county" onClick={() => setActiveSubMenu(null)}>
+                        Loudoun County <CaretRightIcon />
+                      </Link>
+                      <div className={styles.subMenu}>
+                        {loudounCities.map(city => (
+                          <Link key={city} href={`/near-you/loudoun-county/${slugify(city)}`} onClick={() => setIsMobileOpen(false)}>{city}, VA</Link>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className={styles.nestedNavItem}>
+                      <Link href="/near-you/fairfax-county" onClick={() => setActiveSubMenu(null)}>
+                        Fairfax County <CaretRightIcon />
+                      </Link>
+                      <div className={styles.subMenu}>
+                        {fairfaxCities.map(city => (
+                          <Link key={city} href={`/near-you/fairfax-county/${slugify(city)}`} onClick={() => setIsMobileOpen(false)}>{city}, VA</Link>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className={styles.nestedNavItem}>
+                      <Link href="/near-you/prince-william-county" onClick={() => setActiveSubMenu(null)}>
+                        Prince William County <CaretRightIcon />
+                      </Link>
+                      <div className={styles.subMenu}>
+                        {pwcCities.map(city => (
+                          <Link key={city} href={`/near-you/prince-william-county/${slugify(city)}`} onClick={() => setIsMobileOpen(false)}>{city}, VA</Link>
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 </div>
-                
+
                 <div className={styles.navItem}>
                   <Link href="/showcase" className={isActive("/showcase")}>Showcase</Link>
                 </div>
@@ -175,7 +228,7 @@ export default function Header() {
             </div>
 
             {/* Mobile Toggle Button */}
-            <button 
+            <button
               className={styles.mobileToggle}
               onClick={() => setIsMobileOpen(!isMobileOpen)}
               aria-label="Toggle Menu"
@@ -194,10 +247,10 @@ export default function Header() {
               <Link href="/" onClick={() => setIsMobileOpen(false)}>Home</Link>
             </div>
           </div>
-          
+
           <div className={styles.mobileNavItem}>
-            <div 
-              className={`${styles.mobileNavLink} ${isActive('/about')}`} 
+            <div
+              className={`${styles.mobileNavLink} ${isActive('/about')}`}
               onClick={() => toggleDropdown('about')}
             >
               <span>About</span> <CaretDownIcon />
@@ -213,8 +266,8 @@ export default function Header() {
           </div>
 
           <div className={styles.mobileNavItem}>
-            <div 
-              className={`${styles.mobileNavLink} ${isActive('/services')}`} 
+            <div
+              className={`${styles.mobileNavLink} ${isActive('/services')}`}
               onClick={() => toggleDropdown('services')}
             >
               <span>Services</span> <CaretDownIcon />
@@ -238,8 +291,8 @@ export default function Header() {
           </div>
 
           <div className={styles.mobileNavItem}>
-            <div 
-              className={`${styles.mobileNavLink} ${isActive('/near-you')}`} 
+            <div
+              className={`${styles.mobileNavLink} ${isActive('/near-you')}`}
               onClick={() => toggleDropdown('near')}
             >
               <span>Near You</span> <CaretDownIcon />
@@ -247,8 +300,19 @@ export default function Header() {
             {openDropdown === 'near' && (
               <div className={styles.mobileDropdown}>
                 <Link href="/near-you/loudoun-county" onClick={() => setIsMobileOpen(false)}>Loudoun County</Link>
-                <Link href="/near-you/fairfax-county" onClick={() => setIsMobileOpen(false)}>Faifax County</Link>
+                {loudounCities.map(city => (
+                  <Link key={city} href={`/near-you/loudoun-county/${slugify(city)}`} onClick={() => setIsMobileOpen(false)} style={{ paddingLeft: '40px', fontSize: '13px' }}>- {city}, VA</Link>
+                ))}
+
+                <Link href="/near-you/fairfax-county" onClick={() => setIsMobileOpen(false)}>Fairfax County</Link>
+                {fairfaxCities.map(city => (
+                  <Link key={city} href={`/near-you/fairfax-county/${slugify(city)}`} onClick={() => setIsMobileOpen(false)} style={{ paddingLeft: '40px', fontSize: '13px' }}>- {city}, VA</Link>
+                ))}
+
                 <Link href="/near-you/prince-william-county" onClick={() => setIsMobileOpen(false)}>Prince William County</Link>
+                {pwcCities.map(city => (
+                  <Link key={city} href={`/near-you/prince-william-county/${slugify(city)}`} onClick={() => setIsMobileOpen(false)} style={{ paddingLeft: '40px', fontSize: '13px' }}>- {city}, VA</Link>
+                ))}
               </div>
             )}
           </div>

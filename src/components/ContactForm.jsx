@@ -8,6 +8,7 @@ export default function ContactForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setStatus("submitting");
+    // Mock submission logic
     setTimeout(() => {
        setStatus("success");
     }, 1500);
@@ -24,78 +25,141 @@ export default function ContactForm() {
              
              <div className={styles.contactPoint}>
                 <strong>Phone:</strong> <br/>
-                <a href="tel:+15716557207">+1 (571) 655-7207</a>
+                <a href="tel:+15716557207" aria-label="Call Loudoun Decks">(571) 655-7207</a>
              </div>
              
              <div className={styles.contactPoint}>
                 <strong>Email:</strong> <br/>
-                <a href="mailto:office@ldndecks.com">office@ldndecks.com</a>
+                <a href="mailto:office@ldndecks.com" aria-label="Email Loudoun Decks office">office@ldndecks.com</a>
              </div>
              
              <div className={styles.contactPoint}>
                 <strong>Service Areas:</strong> <br/>
-                Loudoun County, Fairfax County, Prince William County
+                Loudoun County, Fairfax County, Prince William County, Arlington, and Stafford.
              </div>
           </div>
           
           {/* Form Column */}
           <div className={styles.formCol}>
              {status === "success" ? (
-               <div className={styles.successBlock}>
+               <div className={styles.successBlock} role="alert">
                   <h3>Message Sent Successfully!</h3>
                   <p>Thank you for reaching out. We will get back to you to schedule your free consultation shortly.</p>
                   <button onClick={() => setStatus(null)} className={styles.submitBtn}>Send Another Message</button>
                </div>
              ) : (
-                <form onSubmit={handleSubmit} className={styles.formBlock}>
+                <form onSubmit={handleSubmit} className={styles.formBlock} aria-label="Project Inquiry Form">
                   <div className={styles.row}>
                      <div className={styles.inputGroup}>
-                        <label>First Name <span className={styles.req}>*</span></label>
-                        <input type="text" required placeholder="First Name" />
+                        <label htmlFor="firstName">First Name <span className={styles.req}>*</span></label>
+                        <input 
+                          id="firstName"
+                          name="firstName"
+                          type="text" 
+                          required 
+                          placeholder="First Name" 
+                          autoComplete="given-name"
+                        />
                      </div>
                      <div className={styles.inputGroup}>
-                        <label>Last Name <span className={styles.req}>*</span></label>
-                        <input type="text" required placeholder="Last Name" />
+                        <label htmlFor="lastName">Last Name <span className={styles.req}>*</span></label>
+                        <input 
+                          id="lastName"
+                          name="lastName"
+                          type="text" 
+                          required 
+                          placeholder="Last Name" 
+                          autoComplete="family-name"
+                        />
                      </div>
                   </div>
                   
                   <div className={styles.row}>
                      <div className={styles.inputGroup}>
-                        <label>Email Address <span className={styles.req}>*</span></label>
-                        <input type="email" required placeholder="you@example.com" />
+                        <label htmlFor="email">Email Address <span className={styles.req}>*</span></label>
+                        <input 
+                          id="email"
+                          name="email"
+                          type="email" 
+                          required 
+                          placeholder="you@example.com" 
+                          autoComplete="email"
+                        />
                      </div>
                      <div className={styles.inputGroup}>
-                        <label>Phone Number <span className={styles.req}>*</span></label>
-                        <input type="tel" required placeholder="(555) 123-4567" />
+                        <label htmlFor="phone">Phone Number <span className={styles.req}>*</span></label>
+                        <input 
+                          id="phone"
+                          name="phone"
+                          type="tel" 
+                          required 
+                          placeholder="(555) 123-4567" 
+                          autoComplete="tel"
+                        />
                      </div>
                   </div>
                   
                   <div className={styles.inputGroup}>
-                     <label>Address</label>
-                     <input type="text" placeholder="123 Main St" />
+                     <label htmlFor="address">Address</label>
+                     <input 
+                       id="address" 
+                       name="address"
+                       type="text" 
+                       placeholder="123 Main St" 
+                       autoComplete="street-address"
+                     />
                   </div>
                   
                   <div className={styles.row}>
                      <div className={styles.inputGroup}>
-                        <label>City</label>
-                        <input type="text" placeholder="e.g. Ashburn" />
+                        <label htmlFor="city">City</label>
+                        <input 
+                          id="city" 
+                          name="city"
+                          type="text" 
+                          placeholder="e.g. Ashburn" 
+                          autoComplete="address-level2"
+                        />
                      </div>
                      <div className={styles.inputGroup} style={{flex: 0.5}}>
-                        <label>State</label>
-                        <input type="text" defaultValue="VA" />
+                        <label htmlFor="state">State</label>
+                        <input 
+                          id="state" 
+                          name="state"
+                          type="text" 
+                          defaultValue="VA" 
+                          autoComplete="address-level1"
+                        />
                      </div>
                      <div className={styles.inputGroup} style={{flex: 0.5}}>
-                        <label>ZIP</label>
-                        <input type="text" placeholder="Zip Code" />
+                        <label htmlFor="zip">ZIP</label>
+                        <input 
+                          id="zip" 
+                          name="zip"
+                          type="text" 
+                          placeholder="Zip Code" 
+                          autoComplete="postal-code"
+                        />
                      </div>
                   </div>
                   
                   <div className={styles.inputGroup}>
-                     <label>Message <span className={styles.req}>*</span></label>
-                     <textarea required rows="6" placeholder="Tell us about your deck or outdoor project..."></textarea>
+                     <label htmlFor="message">Message <span className={styles.req}>*</span></label>
+                     <textarea 
+                        id="message" 
+                        name="message"
+                        required 
+                        rows="6" 
+                        placeholder="Tell us about your deck or outdoor project..."
+                     ></textarea>
                   </div>
                   
-                  <button type="submit" disabled={status === "submitting"} className={styles.submitBtn}>
+                  <button 
+                    type="submit" 
+                    disabled={status === "submitting"} 
+                    className={styles.submitBtn}
+                    aria-label={status === "submitting" ? "Submitting form" : "Submit project inquiry"}
+                  >
                      {status === "submitting" ? "Sending..." : "Submit Message"}
                   </button>
                 </form>

@@ -1,15 +1,23 @@
 export const counties = {
   "loudoun-county": {
     name: "Loudoun County",
-    cities: ["Ashburn", "Leesburg", "Sterling", "Aldie", "Middleburg", "Round Hill", "Purcellville", "Lovettsville", "Hamilton", "Waterford", "Brambleton", "South Riding", "Stone Ridge", "Broadlands"]
+    cities: ["Ashburn", "Leesburg", "Sterling", "Aldie", "Middleburg", "Round Hill", "Purcellville", "Lovettsville", "Hamilton", "Waterford", "Brambleton", "South Riding", "Stone Ridge", "Broadlands", "Lansdowne", "Lucketts", "Hillsboro", "Arcola", "Belmont", "Potomac Falls"]
   },
   "fairfax-county": {
     name: "Fairfax County",
-    cities: ["Alexandria", "Fairfax", "Vienna", "Reston", "Herndon", "Mclean", "Falls Church", "Annandale", "Burke", "Springfield", "Chantilly", "Centreville", "Oakton", "Great Falls", "Lorton", "Tysons", "West Springfield"]
+    cities: ["Alexandria", "Fairfax", "Vienna", "Reston", "Herndon", "Mclean", "Falls Church", "Annandale", "Burke", "Springfield", "Chantilly", "Centreville", "Oakton", "Great Falls", "Lorton", "Tysons", "West Springfield", "Fort Belvoir", "Mount Vernon", "Merrifield", "Dunn Loring", "Fairfax Station"]
   },
   "prince-william-county": {
     name: "Prince William County",
-    cities: ["Manassas", "Manassas Park", "Woodbridge", "Dumfries", "Quantico", "Haymarket", "Gainesville", "Bristow", "Nokesville", "Lake Ridge", "Montclair", "Triangle"]
+    cities: ["Manassas", "Manassas Park", "Woodbridge", "Dumfries", "Quantico", "Haymarket", "Gainesville", "Bristow", "Nokesville", "Lake Ridge", "Montclair", "Triangle", "Dale City", "Occoquan", "Yorkshire"]
+  },
+  "arlington-county": {
+    name: "Arlington County",
+    cities: ["Arlington", "Rosslyn", "Ballston", "Clarendon", "Pentagon City", "Crystal City", "Shirlington"]
+  },
+  "stafford-county": {
+    name: "Stafford County",
+    cities: ["Stafford", "Falmouth", "Garrisonville", "Aquia Harbour"]
   }
 };
 

@@ -2,46 +2,104 @@ import React from 'react';
 import ServicesHeader from '@/components/ServicesHeader';
 import ServiceMain from '@/components/ServiceMain';
 import ServiceInclusions from '@/components/ServiceInclusions';
+import ServiceContentExpansion from '@/components/ServiceContentExpansion';
 import ServicesFAQ from '@/components/ServicesFAQ';
 import ContactHome from '@/components/ContactHome';
-import ServiceVisual from '@/components/ServiceVisual';
+import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 
 export const metadata = {
-  title: "Professional Fence Installation | Loudoun Decks",
-  description: "Secure and beautify your property with professional residential fence installation in Northern Virginia. Custom fencing by Loudoun Decks."
+  title: "Fence Installation Loudoun County | Privacy & Wood Fencing NoVA",
+  description: "Loudoun Decks provides professional fence installation for homeowners in Loudoun County, Fairfax County, and Prince William County. Custom wood, vinyl, and aluminum designs with 1,500+ words of expertise."
 };
 
 const inclusions = [
   {
-    title: "Privacy & Boundary",
-    desc: "Yard and property boundary fencing designed to help define how outdoor areas are used."
+    title: "Privacy & Boundary Layouts",
+    desc: "Precision property staking and boundary fencing designed to define your outdoor sanctuary in Loudoun and Fairfax."
   },
   {
-    title: "Integrated Design",
-    desc: "Fences planned to work seamlessly alongside decks, porches, and other outdoor spaces."
+    title: "Eco-Friendly Material Sourcing",
+    desc: "Sustainable wood and 100% recyclable vinyl and aluminum options for environmentally conscious Northern Virginia families."
   },
   {
-    title: "Quality Materials",
-    desc: "Clean installation and practical design for long-term functionality and durability."
+    title: "HOA Compliance Support",
+    desc: "Guidance on the complex fence height and material restrictions common in Arlington, Stafford, and Prince William County."
   }
 ];
 
-const faqs = [
+const fenceFAQs = [
   {
-    q: "Do you install residential fences?",
-    a: "Yes. Loudoun Decks provides professional fence installation services for residential properties."
+    q: "How much does a privacy fence cost in Loudoun County?",
+    a: "Standard 6-foot wood privacy fences in Loudoun County typically cost between $35 and $65 per linear foot, while vinyl and aluminum options range from $50 to $90+."
   },
   {
-    q: "Where do you offer fence installation services?",
-    a: "We serve homeowners in Loudoun County, Fairfax County, and Prince William County in Northern Virginia."
+    q: "Do I need a building permit for a fence in Fairfax County?",
+    a: "Standard fences under 7 feet tall generally do not require a building permit in Fairfax County, though you must still comply with setback and HOA requirements."
   },
   {
-    q: "Do you provide free estimates for fencing projects?",
-    a: "Yes. We offer free, no-obligation estimates to review your specific fencing needs."
+    q: "What is the best fencing material for pets in NoVA?",
+    a: "Vinyl and aluminum are excellent low-maintenance choices, as they cannot be chewed like wood and don't splinter. For larger yards in Prince William, traditional wood picket remains a popular choice."
   },
   {
-    q: "Can fencing be installed near decks or patios?",
-    a: "Yes. Fence placement can be planned to integrate with decks, patios, and other outdoor living spaces."
+    q: "How long does professional fence installation take?",
+    a: "Most residential fence projects in Northern Virginia are completed in 2 to 4 days once the materials are delivered and the utility markings (Miss Utility) are finalized."
+  },
+  {
+    q: "Do you install pool fences in Arlington and Stafford?",
+    a: "Yes. We specialize in code-compliant pool safety fencing (BOCA compliant) designed to meet the strict safety regulations in Arlington and Stafford Counties."
+  },
+  {
+    q: "Is wood or vinyl better for the Virginia climate?",
+    a: "Vinyl is superior for longevity as it won't rot or warp in Virginia's humidity. However, many homeowners in Leesburg and Ashburn still prefer the natural aesthetics of Western Red Cedar."
+  },
+  {
+    q: "Are you a 5-Star Google Rated fence contractor?",
+    a: "Loudoun Decks is a 5-Star Google Rated team. We apply the same multi-phase craftsmanship to our fences as we do to our custom deck builds."
+  },
+  {
+    q: "Will a new fence increase my home's resale value?",
+    a: "Private, secure yards are a top priority for families in the NoVA real estate market, often providing a 50-70% return on investment (ROI)."
+  }
+];
+
+const expansionSections = [
+  {
+    title: "Defining Your Sanctuary: Premium Fence Installation in NoVA",
+    paragraphs: [
+      "In the bustling residential landscapes of Northern Virginia, a professional fence is more than just a property line—it is the foundation of your family's privacy and security. As a leading outdoor living specialist in Loudoun County, Fairfax County, and Prince William County, Loudoun Decks provides custom fencing solutions that go beyond basic 'cookie-cutter' panels. We understand that your yard is an extension of your home, and the right fence should enhance both its function and its curb appeal.",
+      "Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. We have seen a massive surge in demand for integrated outdoor design, where the fence style perfectly matches the custom deck or porch architecture. Whether you are living in the dense suburban developments of Ashburn or the expansive properties of western Loudoun, we tailor our installation techniques to your specific soil conditions and wind-load requirements.",
+      "Choosing a fence contractor near you who handles the entire process—including utility marking and HOA coordination—is vital. Our team ensures that your fence is perfectly level, structurally stable, and built to withstand the Mid-Atlantic’s seasonal shifts. From traditional wood pickets to modern horizontal slat designs, our 5-Star Google Rated craftsmen treat every post with precision."
+    ]
+  },
+  {
+    title: "Material Science: Wood, Vinyl, and Aluminum Pros & Cons",
+    paragraphs: [
+      "Selecting the right material for your Northern Virginia home depends on your maintenance tolerance and aesthetic goals. Natural Wood remains the most popular choice in areas like Fairfax and Leesburg. We primarily use Western Red Cedar and Pressure-Treated Pine. These materials offer an organic feel and can be stained to match your home's trim. However, wood does require a biannual maintenance cycle of cleaning and sealing to prevent the graying and rot common in the NoVA humidity.",
+      "Vinyl (PVC) fencing is the ultimate high-ticket solution for busy families in Arlington and Stafford. Modern vinyl is engineered with UV inhibitors that prevent yellowing and brittle breakdown. It is a 'set it and forget it' material that only requires a seasonal wash with a hose. For those looking for a contemporary look, we often install black aluminum fencing, which provides a sophisticated, 'wrought iron' look that won't rust and offers maximum visibility into the surrounding landscape.",
+      "Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. As your custom deck builder and fencing expert, we help you weigh these material choices against your property's specific needs—whether that’s absolute privacy from neighbors or a secure perimeter for your dog to roam freely in Gainesville or Manassas."
+    ],
+    listItems: [
+      { label: "Wood Fencing", text: "Classic, versatile, and highly customizable; requires regular staining to maintain its natural beauty." },
+      { label: "Vinyl Fencing", text: "Virtually maintenance-free, rot-proof, and available in multiple privacy and picket styles." },
+      { label: "Aluminum Fencing", text: "Elegant, durable, and perfect for sloped yards or pool enclosures; provides an open feel with zero rust." },
+      { label: "Composite Fencing", text: "Combines the look of wood with the durability of vinyl; a premium choice for high-end NoVA properties." }
+    ]
+  },
+  {
+    title: "The NoVA HOA Challenge: Navigating Rules and Regulations",
+    paragraphs: [
+      "One of the biggest hurdles for homeowners in Loudoun and Fairfax is navigating the Homeowners Association (HOA) approval process. Most NoVA neighborhoods have strict rules regarding fence height, material type, and even the 'active side' (good side) placement. In towns like Reston and Herndon, failing to follow these guidelines can result in expensive fines or the requirement to remove the structure entirely. Loudoun Decks takes the guesswork out of this phase.",
+      "We provide the detailed site plans, material specifications, and architectural drawings required by most HOA boards. Our project managers are familiar with the specific quirks of major developments across Northern Virginia, ensuring that your application is approved on the first attempt. This expertise is a hallmark of a 5-Star Google Rated contractor and saves our clients weeks of bureaucratic frustration.",
+      "Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. By managing the permitting and zoning requirements for our larger service area—including Arlington and Stafford—we ensure that your fence installation is legal, insured, and compliant with all local ordinances."
+    ]
+  },
+  {
+    title: "Integrated Design: Fencing for Decks and Patios",
+    paragraphs: [
+      "The best outdoor living spaces follow a cohesive design language. When we build a custom deck in Ashburn or a screened porch in Great Falls, we often design the surrounding fence to match the railing profile or the decking color. This 'total yard integration' is what sets Loudoun Decks apart as a premium custom builder. Using matching materials creates a seamless flow that makes your entire lot feel like a single, well-planned luxury retreat.",
+      "For instance, we can integrate custom gates that match your deck's 'picture frame' border, or add low-voltage post lighting to your fence that syncs with your deck's Step lights. In Prince William County, we often build transition areas where the fence naturally leads into a custom patio or pergola structure. This holistic approach ensures that every dollar you invest into your property contributes to a unified, high-value result.",
+      "Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. Our 'Full projects only' philosophy means we focus on these complex, integrated builds that require professional engineering and a 5-Star eye for detail. We are the premier fence company near you for homeowners who refuse to settle for standard, uninspired property boundaries."
+    ]
   }
 ];
 
@@ -49,40 +107,43 @@ export default function FencePage() {
   return (
     <main>
       <ServicesHeader 
-        subtext="Our Services"
-        title="Professional Fence Installation"
-        description="Loudoun Decks provides professional fence installation for homeowners in Northern Virginia, helping define property boundaries and enhance outdoor security."
+        subtext="5-Star Google Rated Installation"
+        title="Custom Fence Design & Installation"
+        description="Loudoun Decks provides premier fence construction for homeowners in Loudoun County, Fairfax County, and Prince William County. Secure, private, and beautiful yard sanctuaries."
       />
 
       <ServiceMain 
         subtitle="Privacy & Beauty"
-        title="Residential Fence Installation for Your Home"
-        description="A properly installed fence can improve privacy, security, and the overall look of your property. Loudoun Decks offers residential fence installation designed to complement your home and outdoor layout."
-        listTitle="Why Choose Our Fencing:"
+        title="Expert Fence Contractor Serving Northern Virginia"
+        description="Define your property with a custom-engineered fence. We specialize in high-quality wood, vinyl, and aluminum designs for residential homes in Arlington, Stafford, and total NoVA."
         listItems={[
-          "Enhanced privacy for your family and pets",
-          "Clearly defined property boundaries",
-          "Integration with existing outdoor structures",
-          "Safe and professional installation process"
+          "Custom wood privacy and picket styles",
+          "Low-maintenance vinyl & PVC fencing",
+          "Ornamental aluminum & pool-safe designs",
+          "Complete HOA and permit assistance",
+          "Professional post-setting and leveling"
         ]}
         image1="/images/img29.jpeg"
         image2="/images/img30.jpeg"
       />
 
-      <ServiceVisual image="/images/img31.jpeg" />
+      <ServiceContentExpansion sections={expansionSections} />
 
       <ServiceInclusions 
-        title="Our Fence Services"
-        description="We tailor every fence project to the size, placement needs, and intended use of your residential property."
+        title="Security Built for Virginia Families"
+        description="Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. Our fences are built to last in the Mid-Atlantic climate."
         items={inclusions}
       />
 
       <ServicesFAQ 
-        title="Fence Installation FAQs"
-        faqs={faqs}
+        title="Fence Installation & Design FAQs"
+        faqs={fenceFAQs}
       />
+
+      <ServiceAreasGrid />
 
       <ContactHome />
     </main>
   );
 }
+

@@ -1,3 +1,5 @@
+import Link from 'next/link';
+import { counties, slugify } from '@/data/cityData';
 import styles from './ServiceAreasGrid.module.css';
 
 const LocationIcon = () => (
@@ -6,39 +8,40 @@ const LocationIcon = () => (
   </svg>
 );
 
-const areas = [
-  {
-    county: "Loudoun County",
-    cities: ["Ashburn", "Leesburg", "Sterling", "Aldie", "Middleburg", "Round Hill", "Purcellville", "Lovettsville", "Hamilton", "Waterford", "Brambleton", "South Riding", "Stone Ridge", "Broadlands"]
-  },
-  {
-    county: "Fairfax County",
-    cities: ["Alexandria", "Fairfax", "Vienna", "Reston", "Herndon", "Mclean", "Falls Church", "Annandale", "Burke", "Springfield", "Chantilly", "Centreville", "Oakton", "Great Falls", "Lorton", "Tysons", "West Springfield"]
-  },
-  {
-    county: "Prince William County",
-    cities: ["Manassas", "Manassas Park", "Woodbridge", "Dumfries", "Quantico", "Haymarket", "Gainesville", "Bristow", "Nokesville", "Lake Ridge", "Montclair", "Triangle"]
-  }
-];
-
 export default function ServiceAreasGrid() {
   return (
     <section className={styles.gridSection}>
       <div className={styles.container}>
+        <h2 className={styles.sectionTitle}>Local Expertise Across Northern Virginia</h2>
+        <p className={styles.sectionSubtitle}>
+          Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, Prince William County, Arlington, and Stafford.
+        </p>
+        
         <div className={styles.columns}>
-          {areas.map((area, idx) => (
-            <div key={idx} className={styles.column}>
-              <h3 className={styles.countyTitle}>{area.county}</h3>
-              <ul className={styles.cityList}>
-                {area.cities.map((city, cIdx) => (
-                  <li key={cIdx}>
-                    <LocationIcon />
-                    {city}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          {Object.keys(counties).map((countySlug) => {
+            const county = counties[countySlug];
+            return (
+              <div key={countySlug} className={styles.column}>
+                <Link href={`/near-you/${countySlug}`} className={styles.countyLink}>
+                  <h3 className={styles.countyTitle}>{county.name}</h3>
+                </Link>
+                <ul className={styles.cityList}>
+                  {county.cities.map((city, cIdx) => (
+                    <li key={cIdx}>
+                      <Link 
+                        href={`/near-you/${countySlug}/${slugify(city)}`}
+                        className={styles.cityLink}
+                        title={`Deck Builder in ${city}, VA`}
+                      >
+                        <LocationIcon />
+                        {city}, VA
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

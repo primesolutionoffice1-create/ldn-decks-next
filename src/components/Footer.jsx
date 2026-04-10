@@ -115,7 +115,7 @@ export default function Footer() {
       {/* Bottom Solid Black Bar */}
       <div className={styles.bottomBar}>
         <div className={styles.containerBottom}>
-          <p>© Copyrights are Reserved by Loudoun Company</p>
+          <p>© Copyrights are Reserved by Loudoun Decks</p>
 
           <div className={styles.socials}>
             <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}><FbIcon /></a>

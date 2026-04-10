@@ -76,9 +76,9 @@ export default function ShowcaseStats() {
     <section className={styles.statsSection}>
       <div className={styles.container}>
          <div className={styles.statsGrid}>
-           <StatItem endValue={15} suffix="K+" label="DECKS INSTALLED" />
+           <StatItem endValue={500} suffix="+" label="DECKS INSTALLED" />
            <StatItem endValue={20} suffix="+" label="SERVICES" />
-           <StatItem endValue={7} suffix="+" label="YEARS" />
+           <StatItem endValue={12} suffix="+" label="YEARS" />
            <StatItem endValue={100} suffix="%" label="PERMIT APPROVAL" />
          </div>
       </div>

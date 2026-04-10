@@ -8,6 +8,7 @@ import MasonryGallery from '@/components/MasonryGallery';
 import ProcessSteps from '@/components/ProcessSteps';
 import WhyChooseDetails from '@/components/WhyChooseDetails';
 import ContactHome from '@/components/ContactHome';
+import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import styles from './CityPage.module.css';
 
 // Pre-render all 43 city pages at build time
@@ -21,8 +22,8 @@ export async function generateMetadata({ params }) {
   if (!data) return {};
 
   return {
-    title: `Deck Builder in ${data.cityName}, VA | Custom Decks & Patios | Loudoun Decks`,
-    description: `Looking for a trusted deck builder in ${data.cityName}, VA? Loudoun Decks designs and builds custom wood and composite decks for homeowners across ${data.cityName} and ${data.countyName}.`
+    title: `Best Deck Builder in ${data.cityName}, VA | 5-Star Custom Decks & Patios`,
+    description: `Searching for the best deck builder in ${data.cityName}, VA? Loudoun Decks is a 5-Star Google Rated contractor specializing in custom Trex and wood decks across ${data.cityName} and ${data.countyName}.`
   };
 }
 
@@ -53,40 +54,40 @@ export default async function CityPage({ params }) {
   ];
 
   const services = [
-    "Custom wood and composite deck construction",
-    "Deck design based on your home and outdoor space",
-    "Permit coordination and local compliance",
-    "Full deck installation from start to finish",
-    "Replacement and upgrades for existing decks"
+    "Custom Trex and composite deck construction",
+    "Expert deck design for luxury outdoor living",
+    "Loudoun & Fairfax County permit coordination",
+    "Full deck installation with 5-Star craftsmanship",
+    "Pool decks, screened porches, and yard fencing"
   ];
 
   const whyChooseItems = [
     {
-      title: `Local experience building decks for ${cityName} homes`,
-      desc: "We understand the specific residential layouts and neighborhood styles common in this community."
+      title: `5-Star Rated local service in ${cityName}`,
+      desc: "Our team lives and breathes the Northern Virginia architectural style, ensuring your new deck adds maximum value."
     },
     {
-      title: "Clear communication from design to completion",
-      desc: "Our team keeps you informed at every stage to ensure your vision is realized."
+      title: "Hassle-free design-to-build journey",
+      desc: "We handle the HOAs and permits in your specific neighborhood, from Brambleton to Burke."
     },
     {
-      title: "Focus on durable materials and proper construction",
-      desc: "We only use premium wood and composite materials that withstand the Virginia climate."
+      title: "High-performance moisture-resistant materials",
+      desc: "We only use premium materials proven to survive the humid Mid-Atlantic seasonal cycles."
     }
   ];
 
   return (
     <main>
       <ServicesHeader 
-        subtext={`Trusted Local Contractor in ${countyName}`}
+        subtext={`5-Star Google Rated Specialist in ${countyName}`}
         title={`Deck Builder in ${cityName}`}
-        description={`Looking for a trusted deck builder in ${cityName}, VA? Loudoun Decks designs and builds custom wood and composite decks for homeowners across ${cityName} and nearby Northern Virginia communities.`}
+        description={`Loudoun Decks is the premier custom deck builder in ${cityName}, VA. We help ${cityName} families create luxury outdoor living spaces with a focus on durability and 5-Star service.`}
       />
 
       <ServiceMain 
-        subtitle={`Serving ${cityName} Homeowners`}
-        title={`Custom Deck Building Services in ${cityName}, Virginia`}
-        description={`We provide professional deck building services in ${cityName}, VA for homeowners looking to upgrade their outdoor space. Every deck is planned with your home’s layout, intended use, and material preference in mind.`}
+        subtitle={`Premier ${cityName} Contractor`}
+        title={`High-End Custom Decking in ${cityName}, Virginia`}
+        description={`Elevate your lifestyle with a professional deck build in ${cityName}, VA. We specialize in custom Trex, AZEK, and Western Red Cedar designs tailored for the unique neighborhoods of ${cityName}.`}
         listTitle="What We Do:"
         listItems={services}
         image1={mainImg}
@@ -96,9 +97,9 @@ export default async function CityPage({ params }) {
       <section className={styles.localFocus}>
         <div className={styles.container}>
           <div className={styles.content}>
-            <h2>A Local Deck Builder Serving {cityName} Homeowners</h2>
+            <h2>The Standard for Custom Decking in {cityName}</h2>
             <p>
-              As a locally focused deck builder in {cityName}, Virginia, we understand local residential layouts, neighborhood expectations, and common outdoor living needs. Our goal is to build decks that feel like a natural extension of your home.
+              As a dedicated deck builder in {cityName}, Virginia, Loudoun Decks combines local neighborhood knowledge with world-class construction standards. We understand the specific soil types and building codes across {countyName}, ensuring your installation is structurally superior and visually stunning.
             </p>
           </div>
         </div>
@@ -109,13 +110,16 @@ export default async function CityPage({ params }) {
       <ServiceVisual image={visualImg} />
 
       <WhyChooseDetails 
-        title={`Why Choose Loudoun Decks in ${cityName}, VA`}
+        title={`Why Your ${cityName} Neighbors Choose Us`}
         items={whyChooseItems}
       />
 
       <ProcessSteps />
 
+      <ServiceAreasGrid />
+
       <ContactHome />
     </main>
   );
 }
+

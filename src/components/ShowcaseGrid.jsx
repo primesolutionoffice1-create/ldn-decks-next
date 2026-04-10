@@ -1,5 +1,5 @@
-import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { showcaseProjects } from '@/lib/showcaseData';
 import styles from './ShowcaseGrid.module.css';
 
@@ -9,7 +9,11 @@ export default function ShowcaseGrid() {
        <div className={styles.container}>
           <div className={styles.grid}>
              {showcaseProjects.map((project) => (
-                <div key={project.id} className={styles.card}>
+                <Link 
+                   href={`/showcase/${project.slug}`} 
+                   key={project.id} 
+                   className={styles.card}
+                >
                    <div className={styles.imgWrapper}>
                       <Image 
                          src={project.image} 
@@ -23,7 +27,7 @@ export default function ShowcaseGrid() {
                       <h3 className={styles.cardTitle}>{project.title}</h3>
                       <p className={styles.cardLocation}>{project.location}</p>
                    </div>
-                </div>
+                </Link>
              ))}
           </div>
        </div>

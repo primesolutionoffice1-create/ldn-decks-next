@@ -1,59 +1,187 @@
-Deck Builder in Ashburn
-Looking for a trusted deck builder in Ashburn, VA? Loudoun Decks designs and builds custom wood and composite decks for homeowners across Ashburn and nearby Northern Virginia communities.
+SEO & STRUCTURE GUIDELINES FOR LOUDOUN DECKS
 
-From planning and permits to expert construction, we deliver durable, code‑compliant decks built to fit your home, lifestyle, and local requirements.
+1. CORE PRINCIPLE
 
-------
+Do not write pages only for users.
+Write pages for Google + users at the same time.
 
-Custom Deck Building Services in Ashburn, Virginia
-We provide professional deck building services in Ashburn, VA for homeowners looking to upgrade their outdoor space. Every deck is planned with your home’s layout, intended use, and material preference in mind.
+Your goal:
+	•	Rank high in Google
+	•	Attract qualified (high-ticket) leads
+	•	Filter out low-quality traffic
 
-Whether you want a low‑maintenance composite deck or a traditional wood deck, our team focuses on practical design, quality construction, and long‑term performance.
+⸻
 
----------
+📍 2. LOCAL SEO (CRITICAL)
 
-What We Do
-Custom wood and composite deck construction
-Deck design based on your home and outdoor space
-Permit coordination where required
-Permit Full deck installation from start to finishwhere required
-Replacement and upgrades for existing decks
+Each service page must include strong location signals.
 
-------
+You MUST mention multiple times:
+	•	Loudoun County
+	•	Fairfax County
+	•	Prince William County
 
-gallery maybe masonary..
+Also include:
+	•	Ashburn
+	•	Leesburg
+	•	Sterling
+	•	Aldie
+	•	Fairfax
+	•	Vienna
 
-------
+Example:
 
-Trusted Deck Builders Serving Ashburn Homeowners
-Homeowners across Ashburn choose us for quality craftsmanship, premium materials, and dependable service.
+“Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County.”
 
-[contact button that says 'get a free estimate']
+👉 Use this type of sentence 5–10 times naturally per page
 
-------
+⸻
 
-A Local Deck Builder Serving Ashburn Homeowners
-As a locally focused deck builder in Ashburn, Virginia, we understand residential layouts, neighborhood expectations, and common outdoor living needs in the area. Our goal is to build decks that feel like a natural extension of your home and support everyday use, entertaining, and relaxation.
+🔑 3. SERVICE + LOCATION COMBINATION
 
-Homeowners in Ashburn choose Loudoun Decks for dependable workmanship and a professional, organized approach to deck construction.
+Google ranks pages based on service + location relevance
 
------------
+Always combine:
+	•	“composite deck builder Loudoun County”
+	•	“deck contractor Fairfax County”
+	•	“deck builder Prince William County”
 
-process
+👉 This is one of the biggest ranking factors
 
------------
-Why Choose Loudoun Decks in Ashburn, VA
-Local experience building decks for Ashburn homes
-Clear communication from design to completion
-Focus on durable materials and proper construction
-Decks built to meet local building requirements
-Straightforward process with no guesswork
+⸻
 
-------------
+🔥 4. HIGH-INTENT KEYWORDS (MUST INCLUDE)
 
-Get a Free Deck Estimate in Ashburn, VA
-If you’re planning a new deck or upgrading an existing one, work with a trusted deck builder in Ashburn, VA. Contact Loudoun Decks today to request your free estimate and start planning your outdoor project.
+Each page should naturally include:
+	•	deck builder near me
+	•	deck contractor near me
+	•	deck company near me
+	•	custom deck builder
+	•	composite deck builder
+	•	trex deck installer
+	•	deck replacement contractor
 
-[contact page button]
+⸻
 
-and then contact section
+🔄 5. KEYWORD VARIATIONS (VERY IMPORTANT)
+
+Do NOT repeat only one keyword.
+
+Use variations like:
+	•	deck construction
+	•	deck installation
+	•	deck building
+	•	deck contractor
+	•	deck company
+
+👉 This increases ranking for multiple searches
+
+⸻
+
+📈 6. CONTENT DEPTH
+
+Each page should be:
+	•	Minimum: 1,200–1,500 words
+	•	Ideal: 1,500–2,000 words
+
+👉 Longer, structured content ranks better
+
+⸻
+
+❓ 7. FAQ SECTION (SEO BOOST)
+
+Each page should include 5–8 questions
+
+Examples:
+	•	How much does a deck cost in Loudoun County?
+	•	What is the best decking material in Virginia?
+	•	How long does it take to build a deck?
+
+👉 This helps you rank for long-tail keywords
+
+⸻
+
+⭐ 8. TRUST POSITIONING (IMPORTANT UPDATE)
+
+Use:
+
+✅ “5-Star Google Rated”
+✅ “Top-rated deck builder in Northern Virginia”
+
+NOT:
+❌ 4.9-star
+
+⸻
+
+🔗 9. INTERNAL LINKING STRUCTURE (CRITICAL)
+
+All pages must link to each other.
+
+Example:
+
+“We specialize in composite deck installation and custom deck design.”
+
+👉 Link:
+	•	“composite deck installation” → composite page
+	•	“custom deck design” → custom page
+
+⸻
+
+🧱 10. SITE STRUCTURE (SILO)
+
+Main Page (Hub):
+
+👉 /deck-builder-northern-virginia/
+
+Supporting Pages:
+	•	Custom Deck Design
+	•	Composite Decks
+	•	Covered Decks
+	•	Pergolas
+	•	Resurfacing
+	•	Railings
+
+👉 All pages should link back to the main page
+
+⸻
+
+⚠️ 11. FILTER LOW-QUALITY TRAFFIC
+
+Avoid attracting:
+	•	cheap projects
+	•	DIY searches
+	•	repair-only jobs
+
+Use messaging like:
+	•	“Full projects only”
+	•	“Custom deck builds”
+	•	“Premium materials”
+
+⸻
+
+🚀 12. FINAL GOAL
+
+Your website should:
+	•	Rank in top 3 Google results
+	•	Attract homeowners with $20K–$80K+ budgets
+	•	Convert traffic into qualified leads
+	•	Position Loudoun Decks as a premium builder
+
+⸻
+
+💣 FINAL NOTE
+
+Most competitors:
+	•	repeat keywords aggressively
+	•	over-optimize location
+
+👉 You need to do the same but cleaner and more professional.
+
+⸻
+
+If you want next level:
+
+👉 I can create:
+	•	exact keyword map per page
+	•	city pages (Ashburn, Leesburg etc.)
+	•	full SEO domination strategy

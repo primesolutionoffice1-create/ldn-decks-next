@@ -6,17 +6,17 @@ const teamMembers = [
   {
     name: "John Doe",
     role: "Manager",
-    image: "/avatar_1.png"
+    image: "/images/img21.jpeg"
   },
   {
     name: "Kevin Martin",
     role: "Manager",
-    image: "/avatar_2.png"
+    image: "/images/img22.jpeg"
   },
   {
     name: "Steve Jobs",
     role: "Manager",
-    image: "/avatar_3.png"
+    image: "/images/img23.jpeg"
   }
 ];
 
@@ -64,10 +64,10 @@ export default function TeamGrid() {
                 <h3 className={styles.name}>{member.name}</h3>
                 <p className={styles.role}>{member.role}</p>
                 <div className={styles.socialRow}>
-                  <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className={styles.circle}><FbIcon /></a>
-                  <a href="https://x.com/ldndecks" target="_blank" rel="noopener noreferrer" className={styles.circle}><XIcon /></a>
-                  <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" className={styles.circle}><LinkedinIcon /></a>
-                  <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className={styles.circle}><InstagramIcon /></a>
+                  <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className={styles.circle} aria-label={`${member.name}'s Facebook`}><FbIcon /></a>
+                  <a href="https://x.com/ldndecks" target="_blank" rel="noopener noreferrer" className={styles.circle} aria-label={`${member.name}'s Twitter`}><XIcon /></a>
+                  <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" className={styles.circle} aria-label={`${member.name}'s LinkedIn`}><LinkedinIcon /></a>
+                  <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className={styles.circle} aria-label={`${member.name}'s Instagram`}><InstagramIcon /></a>
                 </div>
               </div>
             </div>

@@ -19,6 +19,10 @@ export const metadata = {
     template: "%s | Loudoun Decks"
   },
   description: "Premier custom deck builder in Northern Virginia. We design and build high-quality composite and wood decks, patios, and outdoor living spaces.",
+  robots: {
+    index: true,
+    follow: true,
+  },
   icons: {
     icon: "/ldndecks-logo.webp",
     apple: "/ldndecks-logo.webp",
@@ -29,7 +33,7 @@ export const metadata = {
     url: "https://ldndecks.com",
     siteName: "Loudoun Decks",
     images: [{
-      url: "/main-hero.jpeg", // Using a fallback high-quality hero image
+      url: "/images/img64.jpeg",
       width: 1200,
       height: 630,
       alt: "Loudoun Decks Custom Project"
@@ -39,7 +43,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Loudoun Decks | Custom Deck Builder",
     description: "Premier custom deck builder in Northern Virginia.",
-    images: ["/main-hero.jpeg"],
+    images: ["/images/img64.jpeg"],
   }
 };
 
@@ -47,10 +51,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={outfit.variable}>
       <body>
+        <a href="#main" className="skip-link">Skip to main content</a>
         <StructuredData />
         <Header />
         <Breadcrumbs />
-        {children}
+        <main id="main">
+          {children}
+        </main>
         <Footer />
         <ScrollToTop />
       </body>

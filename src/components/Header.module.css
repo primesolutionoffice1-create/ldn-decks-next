@@ -274,11 +274,53 @@
 
 /* --- Mobile Menu --- */
 .mobileMenu {
-  display: none; /* controlled by React state but defaults hidden without JS logic */
+  position: fixed;
+  top: 0;
+  right: 0;
   width: 100%;
+  height: 100vh;
   background-color: var(--white);
-  border-top: 1px solid #eaeaea;
+  z-index: 9999;
+  display: flex;
   flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 0.4s cubic-bezier(0.77,0.2,0.05,1.0);
+  box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+  visibility: hidden;
+}
+
+.mobileMenu.open {
+  transform: translateX(0);
+  visibility: visible;
+}
+
+.mobileMenuHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.mobileMenuContent {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
 }
 
 .mobileNavItem {
@@ -315,10 +357,26 @@
 
 .mobileDropdown {
   background-color: #f9f9f9;
-  border-top: 1px solid #eaeaea;
   padding: 10px 0;
   display: flex;
   flex-direction: column;
+}
+
+.drawerAccordion {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease-out, opacity 0.2s;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.drawerAccordion.expanded {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+.drawerAccordionInner {
+  min-height: 0;
 }
 
 .mobileDropdown a {
@@ -346,18 +404,23 @@
     display: none;
   }
   
+  .headerRight {
+    justify-content: center;
+  }
+  
   .mainNav {
     justify-content: flex-end; /* Align mobile button to the right */
-    height: 80px;
-    padding: 0 20px;
+    height: auto;
+    padding: 15px 20px;
   }
   
   .mobileToggle {
     display: flex;
+    align-self: center;
   }
   
   .mobileMenu {
-    display: flex;
+    /* No changes needed here as the base class is already full screen */
   }
 }
 
@@ -368,14 +431,7 @@
   }
 
   .topBar {
-    height: auto;
-    padding: 12px 20px;
-  }
-
-  /* Re-stack email and location for mobile */
-  .topBarLeft {
-    flex-direction: column;
-    gap: 8px;
+    display: none;
   }
 
   /* Hide Our Team | News | FAQs string on tiny screens */

@@ -5,17 +5,17 @@ import styles from './Features.module.css';
 const featuresData = [
   {
     id: '01',
-    title: 'Restoration\nand Maintenance',
+    title: 'Restoration \nand Maintenance',
     icon: '/icons/icon-1.png'
   },
   {
     id: '02',
-    title: 'Fast and\nReliable Services',
+    title: 'Fast and \nReliable Services',
     icon: '/icons/icon-2.png'
   },
   {
     id: '03',
-    title: 'Skilled and\nTrained Experts',
+    title: 'Skilled and \nTrained Experts',
     icon: '/icons/icon-3.png'
   }
 ];

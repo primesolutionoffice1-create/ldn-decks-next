@@ -74,7 +74,7 @@ export default function FAQ() {
                 
                 <div 
                   className={styles.answerBlock}
-                  style={{ maxHeight: isOpen ? '250px' : '0px', opacity: isOpen ? 1 : 0 }}
+                  style={{ maxHeight: isOpen ? '250px' : '0px' }}
                 >
                   <p>{faq.answer}</p>
                 </div>

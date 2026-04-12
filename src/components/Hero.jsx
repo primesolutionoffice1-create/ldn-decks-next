@@ -15,7 +15,7 @@ export default function Hero() {
         <h1 className={styles.title}>
           Outdoor Deck <span className={styles.highlight}>&</span><br /> Fence Builder
         </h1>
-        <Link href="/discover" className={styles.ctaButton}>
+        <Link href="/services" className={styles.ctaButton}>
           Discover More
         </Link>
       </div>

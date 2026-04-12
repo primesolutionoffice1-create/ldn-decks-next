@@ -4,7 +4,7 @@ import TeamGrid from '@/components/TeamGrid';
 import ContactHome from '@/components/ContactHome';
 
 export const metadata = {
-  title: "Our Team | Loudoun Decks",
+  title: "Our Team",
   description: "Meet the professional craftsmanship team behind Loudoun Decks."
 };
 

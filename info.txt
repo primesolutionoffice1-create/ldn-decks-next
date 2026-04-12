@@ -1,187 +1,65 @@
-SEO & STRUCTURE GUIDELINES FOR LOUDOUN DECKS
+## CRITICAL (fix immediately)
 
-1. CORE PRINCIPLE
+**1. "Discover More" button in Hero leads to 404**
+The main CTA link in the hero section (`href="/discover"`) leads to a non-existent page. This is the most visible action a visitor can take, and it leads to a dead-end.
+→ **Fix:** Change `href="/discover"` to `href="/services"` or `href="/about"`.
 
-Do not write pages only for users.
-Write pages for Google + users at the same time.
+**2. Responsive layout COMPLETELY BROKEN on mobile (375px)**
+On a phone screen, after the hero, there are **multiple entirely blank/white screens** the user has to scroll through. The Features and Introduction sections generate a massive empty gap. This is a UX-destroying issue — a mobile user will leave instantly.
+→ **Fix:** remove the section that shows ema and address in mobile view, only want to see logo and burger menu icon
+---
 
-Your goal:
-	•	Rank high in Google
-	•	Attract qualified (high-ticket) leads
-	•	Filter out low-quality traffic
+## IMPORTANT (SEO and credibility impact)
 
-⸻
+**5. Facebook link goes to generic facebook.com**
+The footer has a social link pointing to `https://www.facebook.com/` — with no specific business page. A user lands on Facebook's homepage, not on Loudoun Decks' page.
+→ **Fix:** Use this url https://www.facebook.com/profile.php?id=61573750423712.
 
-📍 2. LOCAL SEO (CRITICAL)
+**6. Social links in footer have no accessible name**
+All 4 social links (Facebook, X/Twitter, Instagram, TikTok) have no text and no `aria-label`. Screen readers will read them as purposeless links.
+→ **Fix:** Add `aria-label="Facebook"`, `aria-label="Instagram"`, etc. to each one.
 
-Each service page must include strong location signals.
+**7. Form fields have no `<label>` or `aria-label`**
+The 5 form fields (name, email, phone, select, textarea) rely solely on `placeholder`. Placeholder text disappears on focus and is not a valid substitute for accessibility.
+→ **Fix:** Add visible `<label>` elements (or at minimum `aria-label`) to each field.
 
-You MUST mention multiple times:
-	•	Loudoun County
-	•	Fairfax County
-	•	Prince William County
+**8. Missing `<meta name="robots">`**
+No robots meta tag is set. While search engines will index by default, it should be explicit — especially since the site is on vercel.app (staging?). If it's staging, it should be `noindex`.
+→ **Fix:** Add `<meta name="robots" content="index, follow">` on production, or `noindex` on staging.
 
-Also include:
-	•	Ashburn
-	•	Leesburg
-	•	Sterling
-	•	Aldie
-	•	Fairfax
-	•	Vienna
+**10. H4 headings — text concatenated without space**
+"Restorationand Maintenance", "Fast andReliable Services", "Skilled andTrained Experts" — they have `<br>` in the HTML, but screen readers and Google read the text as glued together. A space is missing before the `<br>`.
+→ **Fix:** Change `Restoration<br>and` to `Restoration <br>and` (add a space).
 
-Example:
+---
 
-“Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County.”
+## MODERATE (polish and best practices)
 
-👉 Use this type of sentence 5–10 times naturally per page
+**12. Missing Skip Navigation link**
+There's no "Skip to main content" link for keyboard accessibility. This is a WCAG 2.1 Level A requirement.
+→ **Fix:** Add a `<a href="#main" class="skip-link">Skip to main content</a>` that's visually hidden but visible on focus.
 
-⸻
+**13. FAQ — 4 elements stuck at opacity 0**
+The FAQ section has 4 children with `opacity: 0`, likely from scroll animations. If the animation doesn't trigger (e.g., slow connections, JavaScript disabled), the content stays invisible.
+→ **Fix:** Set CSS fallback (`opacity: 1` as default) and use JS/IntersectionObserver only to add the animation class.
 
-🔑 3. SERVICE + LOCATION COMBINATION
+**14. Team page title — duplicated**
+The title reads "Our Team | Loudoun Decks | Loudoun Decks" — "Loudoun Decks" appears twice.
+→ **Fix:** Set it to "Our Team | Loudoun Decks".
 
-Google ranks pages based on service + location relevance
+**17. Structured Data (JSON-LD) — good but incomplete**
+You have a valid LocalBusiness schema, which is great. It could be extended with `FAQPage` schema on the FAQ page, and `Service` schema on service pages.
 
-Always combine:
-	•	“composite deck builder Loudoun County”
-	•	“deck contractor Fairfax County”
-	•	“deck builder Prince William County”
+**18. No Privacy Policy / Terms page**
+No privacy policy or terms of service link anywhere. If you're using Google Analytics, cookies, or collecting data through the form, this is legally required.
+→ **Fix:** Create and link Privacy Policy and Terms of Service pages in the footer and add data according to the business.
 
-👉 This is one of the biggest ranking factors
+---
 
-⸻
+## NICE-TO-HAVE (optimizations)
 
-🔥 4. HIGH-INTENT KEYWORDS (MUST INCLUDE)
-
-Each page should naturally include:
-	•	deck builder near me
-	•	deck contractor near me
-	•	deck company near me
-	•	custom deck builder
-	•	composite deck builder
-	•	trex deck installer
-	•	deck replacement contractor
-
-⸻
-
-🔄 5. KEYWORD VARIATIONS (VERY IMPORTANT)
-
-Do NOT repeat only one keyword.
-
-Use variations like:
-	•	deck construction
-	•	deck installation
-	•	deck building
-	•	deck contractor
-	•	deck company
-
-👉 This increases ranking for multiple searches
-
-⸻
-
-📈 6. CONTENT DEPTH
-
-Each page should be:
-	•	Minimum: 1,200–1,500 words
-	•	Ideal: 1,500–2,000 words
-
-👉 Longer, structured content ranks better
-
-⸻
-
-❓ 7. FAQ SECTION (SEO BOOST)
-
-Each page should include 5–8 questions
-
-Examples:
-	•	How much does a deck cost in Loudoun County?
-	•	What is the best decking material in Virginia?
-	•	How long does it take to build a deck?
-
-👉 This helps you rank for long-tail keywords
-
-⸻
-
-⭐ 8. TRUST POSITIONING (IMPORTANT UPDATE)
-
-Use:
-
-✅ “5-Star Google Rated”
-✅ “Top-rated deck builder in Northern Virginia”
-
-NOT:
-❌ 4.9-star
-
-⸻
-
-🔗 9. INTERNAL LINKING STRUCTURE (CRITICAL)
-
-All pages must link to each other.
-
-Example:
-
-“We specialize in composite deck installation and custom deck design.”
-
-👉 Link:
-	•	“composite deck installation” → composite page
-	•	“custom deck design” → custom page
-
-⸻
-
-🧱 10. SITE STRUCTURE (SILO)
-
-Main Page (Hub):
-
-👉 /deck-builder-northern-virginia/
-
-Supporting Pages:
-	•	Custom Deck Design
-	•	Composite Decks
-	•	Covered Decks
-	•	Pergolas
-	•	Resurfacing
-	•	Railings
-
-👉 All pages should link back to the main page
-
-⸻
-
-⚠️ 11. FILTER LOW-QUALITY TRAFFIC
-
-Avoid attracting:
-	•	cheap projects
-	•	DIY searches
-	•	repair-only jobs
-
-Use messaging like:
-	•	“Full projects only”
-	•	“Custom deck builds”
-	•	“Premium materials”
-
-⸻
-
-🚀 12. FINAL GOAL
-
-Your website should:
-	•	Rank in top 3 Google results
-	•	Attract homeowners with $20K–$80K+ budgets
-	•	Convert traffic into qualified leads
-	•	Position Loudoun Decks as a premium builder
-
-⸻
-
-💣 FINAL NOTE
-
-Most competitors:
-	•	repeat keywords aggressively
-	•	over-optimize location
-
-👉 You need to do the same but cleaner and more professional.
-
-⸻
-
-If you want next level:
-
-👉 I can create:
-	•	exact keyword map per page
-	•	city pages (Ashburn, Leesburg etc.)
-	•	full SEO domination strategy
+- Add `preconnect` for third-party domains (Google Fonts if used, Google Maps embed, etc.)
+- Implement a `sitemap.xml` and `robots.txt` on the production domain
+- Add lazy loading on hero image (the first image should be `priority`/`eager`, the rest `lazy` — which you're already doing well with Next.js Image)
+- Breadcrumbs are present on internal pages (very good), but could also have BreadcrumbList structured data
+- Testimonials could be marked up with `Review` schema

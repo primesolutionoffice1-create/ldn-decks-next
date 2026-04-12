@@ -67,16 +67,16 @@ export default function ContactHome() {
             <h3>Request A Free Quote</h3>
             <div className={styles.formGrid}>
               <div className={styles.inputGroup}>
-                <input type="text" placeholder="Your Name" required />
+                <input type="text" placeholder="Your Name" required aria-label="Your Name" />
               </div>
               <div className={styles.inputGroup}>
-                <input type="email" placeholder="Email Address" required />
+                <input type="email" placeholder="Email Address" required aria-label="Email Address" />
               </div>
               <div className={styles.inputGroup}>
-                <input type="tel" placeholder="Phone Number" required />
+                <input type="tel" placeholder="Phone Number" required aria-label="Phone Number" />
               </div>
               <div className={styles.inputGroup}>
-                <select required defaultValue="">
+                <select required defaultValue="" aria-label="Select Service">
                   <option value="" disabled>Select Service</option>
                   <option value="new_decks">New Decks</option>
                   <option value="resurfacing">Deck Resurfacing</option>
@@ -86,7 +86,7 @@ export default function ContactHome() {
               </div>
             </div>
             <div className={styles.inputGroup}>
-              <textarea placeholder="Tell us about your project..." rows="5" required></textarea>
+              <textarea placeholder="Tell us about your project..." rows="5" required aria-label="Project Details"></textarea>
             </div>
             <button type="button" className={styles.submitBtn}>Send Message</button>
           </form>

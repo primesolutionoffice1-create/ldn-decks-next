@@ -47,6 +47,19 @@ const CloseIcon = () => (
   </svg>
 );
 
+const PlusIcon = () => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+    <line x1="12" y1="5" x2="12" y2="19"></line>
+    <line x1="5" y1="12" x2="19" y2="12"></line>
+  </svg>
+);
+
+const MinusIcon = () => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--button-hover-color)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+    <line x1="5" y1="12" x2="19" y2="12"></line>
+  </svg>
+);
+
 const loudounCities = ["Ashburn", "Leesburg", "Sterling", "Aldie", "Middleburg", "Round Hill", "Purcellville", "Lovettsville", "Hamilton", "Waterford", "Brambleton", "South Riding", "Stone Ridge", "Broadlands"];
 const fairfaxCities = ["Alexandria", "Fairfax", "Vienna", "Reston", "Herndon", "Mclean", "Falls Church", "Annandale", "Burke", "Springfield", "Chantilly", "Centreville", "Oakton", "Great Falls", "Lorton", "Tysons", "West Springfield"];
 const pwcCities = ["Woodbridge", "Dumfries", "Quantico", "Haymarket", "Gainesville", "Bristow", "Nokesville", "Lake Ridge", "Montclair"];
@@ -63,7 +76,7 @@ const slugify = (text) => {
 export default function Header() {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
-  const [activeSubMenu, setActiveSubMenu] = useState(null);
+  const [activeSubMenu, setActiveSubMenu] = useState({}); // Changed to object for multi-level support
   const pathname = usePathname();
 
   const isActive = (path) => {
@@ -76,20 +89,31 @@ export default function Header() {
   const toggleDropdown = (menu) => {
     if (openDropdown === menu) {
       setOpenDropdown(null);
-      setActiveSubMenu(null);
+      setActiveSubMenu({});
     } else {
       setOpenDropdown(menu);
-      setActiveSubMenu(null);
+      setActiveSubMenu({});
     }
   };
 
   const toggleSubMenu = (subMenu) => {
-    if (activeSubMenu === subMenu) {
-      setActiveSubMenu(null);
-    } else {
-      setActiveSubMenu(subMenu);
-    }
+    setActiveSubMenu(prev => ({
+      ...prev,
+      [subMenu]: !prev[subMenu]
+    }));
   };
+
+  // Prevent scrolling when mobile menu is open
+  React.useEffect(() => {
+    if (isMobileOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isMobileOpen]);
 
   return (
     <div className={styles.headerWrapper}>
@@ -151,9 +175,30 @@ export default function Header() {
                 <div className={styles.navItem}>
                   <Link href="/services" className={isActive("/services")}>Services <CaretDownIcon /></Link>
                   <div className={styles.dropdown}>
-                    <Link href="/services/new-decks">New Decks</Link>
-                    <Link href="/services/deck-resurfacing">Deck Resurfacing</Link>
+                    {/* Pillar 1: New Decks */}
+                    <div className={styles.nestedNavItem}>
+                      <Link href="/services/new-decks">
+                        New Decks <CaretRightIcon />
+                      </Link>
+                      <div className={styles.subMenu}>
+                        <Link href="/services/deck-resurfacing">Deck Resurfacing</Link>
+                        <Link href="/services/gazebo-pergola">Gazebo and Pergola</Link>
+                        <Link href="/services/porches">Porches</Link>
+                      </div>
+                    </div>
 
+                    {/* Pillar 2: Patios */}
+                    <div className={styles.nestedNavItem}>
+                      <Link href="/services/patios">
+                        Patios <CaretRightIcon />
+                      </Link>
+                      <div className={styles.subMenu}>
+                        <Link href="/services/entry-doors">Entry Doors</Link>
+                        <Link href="/services/fence">Fence</Link>
+                      </div>
+                    </div>
+
+                    {/* Outdoor Washing (Back to Level 2) */}
                     <div className={styles.nestedNavItem}>
                       <Link href="/services/outdoor-washing">
                         Outdoor washing <CaretRightIcon />
@@ -165,12 +210,6 @@ export default function Header() {
                         <Link href="/services/fence-cleaning">Fence Cleaning</Link>
                       </div>
                     </div>
-
-                    <Link href="/services/gazebo-pergola">Gazebo and Pergola</Link>
-                    <Link href="/services/fence">Fence</Link>
-                    <Link href="/services/entry-doors">Entry Doors</Link>
-                    <Link href="/services/porches">Porches</Link>
-                    <Link href="/services/patios">Patios</Link>
                   </div>
                 </div>
 
@@ -178,7 +217,7 @@ export default function Header() {
                   <Link href="/near-you" className={isActive("/near-you")}>Near You <CaretDownIcon /></Link>
                   <div className={styles.dropdown}>
                     <div className={styles.nestedNavItem}>
-                      <Link href="/near-you/loudoun-county" onClick={() => setActiveSubMenu(null)}>
+                      <Link href="/near-you/loudoun-county" onClick={() => setActiveSubMenu({})}>
                         Loudoun County <CaretRightIcon />
                       </Link>
                       <div className={styles.subMenu}>
@@ -189,7 +228,7 @@ export default function Header() {
                     </div>
 
                     <div className={styles.nestedNavItem}>
-                      <Link href="/near-you/fairfax-county" onClick={() => setActiveSubMenu(null)}>
+                      <Link href="/near-you/fairfax-county" onClick={() => setActiveSubMenu({})}>
                         Fairfax County <CaretRightIcon />
                       </Link>
                       <div className={styles.subMenu}>
@@ -200,7 +239,7 @@ export default function Header() {
                     </div>
 
                     <div className={styles.nestedNavItem}>
-                      <Link href="/near-you/prince-william-county" onClick={() => setActiveSubMenu(null)}>
+                      <Link href="/near-you/prince-william-county" onClick={() => setActiveSubMenu({})}>
                         Prince William County <CaretRightIcon />
                       </Link>
                       <div className={styles.subMenu}>
@@ -231,17 +270,34 @@ export default function Header() {
             <button
               className={styles.mobileToggle}
               onClick={() => setIsMobileOpen(!isMobileOpen)}
-              aria-label="Toggle Menu"
+              aria-label="Open Menu"
             >
-              {isMobileOpen ? <CloseIcon /> : <BarsIcon />}
+              <BarsIcon />
             </button>
           </div>
         </div>
       </header>
 
-      {/* Mobile Nav Menu */}
-      {isMobileOpen && (
-        <div className={styles.mobileMenu}>
+      {/* Mobile Nav Drawer */}
+      <div className={`${styles.mobileMenu} ${isMobileOpen ? styles.open : ''}`}>
+        <div className={styles.mobileMenuHeader}>
+          <Image
+            src="/ldndecks-logo.webp"
+            alt="ldndecks logo"
+            width={120}
+            height={60}
+            style={{ objectFit: "contain" }}
+          />
+          <button
+            className={styles.closeBtn}
+            onClick={() => setIsMobileOpen(false)}
+            aria-label="Close Menu"
+          >
+            <CloseIcon />
+          </button>
+        </div>
+
+        <div className={styles.mobileMenuContent}>
           <div className={styles.mobileNavItem}>
             <div className={`${styles.mobileNavLink} ${isActive('/')}`}>
               <Link href="/" onClick={() => setIsMobileOpen(false)}>Home</Link>
@@ -253,16 +309,18 @@ export default function Header() {
               className={`${styles.mobileNavLink} ${isActive('/about')}`}
               onClick={() => toggleDropdown('about')}
             >
-              <span>About</span> <CaretDownIcon />
+              <span>About</span> {openDropdown === 'about' ? <MinusIcon /> : <PlusIcon />}
             </div>
-            {openDropdown === 'about' && (
-              <div className={styles.mobileDropdown}>
-                <Link href="/contact" onClick={() => setIsMobileOpen(false)}>Our contacts</Link>
-                <Link href="/about/why-choose-us" onClick={() => setIsMobileOpen(false)}>Why Choose Us</Link>
-                <Link href="/about/process" onClick={() => setIsMobileOpen(false)}>Our Process</Link>
-                <Link href="/faqs" onClick={() => setIsMobileOpen(false)}>FAQ</Link>
+            <div className={`${styles.drawerAccordion} ${openDropdown === 'about' ? styles.expanded : ''}`}>
+               <div className={styles.drawerAccordionInner}>
+                <div className={styles.mobileDropdown}>
+                  <Link href="/contact" onClick={() => setIsMobileOpen(false)}>Our contacts</Link>
+                  <Link href="/about/why-choose-us" onClick={() => setIsMobileOpen(false)}>Why Choose Us</Link>
+                  <Link href="/about/process" onClick={() => setIsMobileOpen(false)}>Our Process</Link>
+                  <Link href="/faqs" onClick={() => setIsMobileOpen(false)}>FAQ</Link>
+                </div>
               </div>
-            )}
+            </div>
           </div>
 
           <div className={styles.mobileNavItem}>
@@ -270,24 +328,75 @@ export default function Header() {
               className={`${styles.mobileNavLink} ${isActive('/services')}`}
               onClick={() => toggleDropdown('services')}
             >
-              <span>Services</span> <CaretDownIcon />
+              <span>Services</span> {openDropdown === 'services' ? <MinusIcon /> : <PlusIcon />}
             </div>
-            {openDropdown === 'services' && (
-              <div className={styles.mobileDropdown}>
-                <Link href="/services/new-decks" onClick={() => setIsMobileOpen(false)}>New Decks</Link>
-                <Link href="/services/deck-resurfacing" onClick={() => setIsMobileOpen(false)}>Deck Resurfacing</Link>
-                <Link href="/services/outdoor-washing" onClick={() => setIsMobileOpen(false)}>Outdoor washing</Link>
-                <Link href="/services/deck-washing" onClick={() => setIsMobileOpen(false)} style={{ paddingLeft: '40px', fontSize: '13px' }}>- Deck Washing</Link>
-                <Link href="/services/house-siding-washing" onClick={() => setIsMobileOpen(false)} style={{ paddingLeft: '40px', fontSize: '13px' }}>- House Siding Washing</Link>
-                <Link href="/services/concrete-washing" onClick={() => setIsMobileOpen(false)} style={{ paddingLeft: '40px', fontSize: '13px' }}>- Concrete Washing</Link>
-                <Link href="/services/fence-cleaning" onClick={() => setIsMobileOpen(false)} style={{ paddingLeft: '40px', fontSize: '13px' }}>- Fence Cleaning</Link>
-                <Link href="/services/gazebo-pergola" onClick={() => setIsMobileOpen(false)}>Gazebo and Pergola</Link>
-                <Link href="/services/fence" onClick={() => setIsMobileOpen(false)}>Fence</Link>
-                <Link href="/services/entry-doors" onClick={() => setIsMobileOpen(false)}>Entry Doors</Link>
-                <Link href="/services/porches" onClick={() => setIsMobileOpen(false)}>Porches</Link>
-                <Link href="/services/patios" onClick={() => setIsMobileOpen(false)}>Patios</Link>
+            <div className={`${styles.drawerAccordion} ${openDropdown === 'services' ? styles.expanded : ''}`}>
+               <div className={styles.drawerAccordionInner}>
+                <div className={styles.mobileDropdown}>
+                  
+                  {/* Pillar 1: New Decks */}
+                  <div 
+                    className={styles.mobileNavLink} 
+                    onClick={(e) => { e.stopPropagation(); toggleSubMenu('new-decks'); }}
+                    style={{ fontSize: '14px', fontWeight: '500', padding: '10px 20px 10px 30px', background: 'transparent' }}
+                  >
+                    <Link href="/services/new-decks" onClick={() => setIsMobileOpen(false)} style={{ padding: 0 }}>New Decks</Link>
+                    {activeSubMenu['new-decks'] ? <MinusIcon /> : <PlusIcon />}
+                  </div>
+                  
+                  <div className={`${styles.drawerAccordion} ${activeSubMenu['new-decks'] ? styles.expanded : ''}`}>
+                     <div className={styles.drawerAccordionInner}>
+                        <div className={styles.mobileDropdown} style={{ background: 'transparent' }}>
+                          <Link href="/services/deck-resurfacing" onClick={() => setIsMobileOpen(false)} style={{ paddingLeft: '50px', fontSize: '13px' }}>Deck Resurfacing</Link>
+                          <Link href="/services/gazebo-pergola" onClick={() => setIsMobileOpen(false)} style={{ paddingLeft: '50px', fontSize: '13px' }}>Gazebo and Pergola</Link>
+                          <Link href="/services/porches" onClick={() => setIsMobileOpen(false)} style={{ paddingLeft: '50px', fontSize: '13px' }}>Porches</Link>
+                        </div>
+                     </div>
+                  </div>
+
+                  {/* Pillar 2: Patios */}
+                  <div 
+                    className={styles.mobileNavLink} 
+                    onClick={(e) => { e.stopPropagation(); toggleSubMenu('patios'); }}
+                    style={{ fontSize: '14px', fontWeight: '500', padding: '10px 20px 10px 30px', background: 'transparent' }}
+                  >
+                    <Link href="/services/patios" onClick={() => setIsMobileOpen(false)} style={{ padding: 0 }}>Patios</Link>
+                    {activeSubMenu['patios'] ? <MinusIcon /> : <PlusIcon />}
+                  </div>
+                  
+                  <div className={`${styles.drawerAccordion} ${activeSubMenu['patios'] ? styles.expanded : ''}`}>
+                     <div className={styles.drawerAccordionInner}>
+                        <div className={styles.mobileDropdown} style={{ background: 'transparent' }}>
+                          <Link href="/services/entry-doors" onClick={() => setIsMobileOpen(false)} style={{ paddingLeft: '50px', fontSize: '13px' }}>Entry Doors</Link>
+                          <Link href="/services/fence" onClick={() => setIsMobileOpen(false)} style={{ paddingLeft: '50px', fontSize: '13px' }}>Fence</Link>
+                        </div>
+                     </div>
+                  </div>
+
+                  {/* Outdoor Washing (Back to Level 2) */}
+                  <div 
+                    className={styles.mobileNavLink} 
+                    onClick={(e) => { e.stopPropagation(); toggleSubMenu('outdoor'); }}
+                    style={{ fontSize: '14px', fontWeight: '500', padding: '10px 20px 10px 30px', background: 'transparent' }}
+                  >
+                    <Link href="/services/outdoor-washing" onClick={() => setIsMobileOpen(false)} style={{ padding: 0 }}>Outdoor washing</Link>
+                    {activeSubMenu['outdoor'] ? <MinusIcon /> : <PlusIcon />}
+                  </div>
+                  
+                  <div className={`${styles.drawerAccordion} ${activeSubMenu['outdoor'] ? styles.expanded : ''}`}>
+                     <div className={styles.drawerAccordionInner}>
+                        <div className={styles.mobileDropdown} style={{ background: 'transparent' }}>
+                          <Link href="/services/deck-washing" onClick={() => setIsMobileOpen(false)} style={{ paddingLeft: '50px', fontSize: '13px' }}>- Deck Washing</Link>
+                          <Link href="/services/house-siding-washing" onClick={() => setIsMobileOpen(false)} style={{ paddingLeft: '50px', fontSize: '13px' }}>- House Siding Washing</Link>
+                          <Link href="/services/concrete-washing" onClick={() => setIsMobileOpen(false)} style={{ paddingLeft: '50px', fontSize: '13px' }}>- Concrete Washing</Link>
+                          <Link href="/services/fence-cleaning" onClick={() => setIsMobileOpen(false)} style={{ paddingLeft: '50px', fontSize: '13px' }}>- Fence Cleaning</Link>
+                        </div>
+                     </div>
+                  </div>
+                </div>
               </div>
-            )}
+            </div>
+
           </div>
 
           <div className={styles.mobileNavItem}>
@@ -295,26 +404,70 @@ export default function Header() {
               className={`${styles.mobileNavLink} ${isActive('/near-you')}`}
               onClick={() => toggleDropdown('near')}
             >
-              <span>Near You</span> <CaretDownIcon />
+              <span>Near You</span> {openDropdown === 'near' ? <MinusIcon /> : <PlusIcon />}
             </div>
-            {openDropdown === 'near' && (
-              <div className={styles.mobileDropdown}>
-                <Link href="/near-you/loudoun-county" onClick={() => setIsMobileOpen(false)}>Loudoun County</Link>
-                {loudounCities.map(city => (
-                  <Link key={city} href={`/near-you/loudoun-county/${slugify(city)}`} onClick={() => setIsMobileOpen(false)} style={{ paddingLeft: '40px', fontSize: '13px' }}>- {city}, VA</Link>
-                ))}
+            <div className={`${styles.drawerAccordion} ${openDropdown === 'near' ? styles.expanded : ''}`}>
+               <div className={styles.drawerAccordionInner}>
+                <div className={styles.mobileDropdown}>
+                  {/* Loudoun County */}
+                  <div 
+                    className={styles.mobileNavLink} 
+                    onClick={(e) => { e.stopPropagation(); toggleSubMenu('loudoun'); }}
+                    style={{ fontSize: '14px', fontWeight: '500', padding: '10px 20px 10px 30px', background: 'transparent' }}
+                  >
+                    <Link href="/near-you/loudoun-county" onClick={() => setIsMobileOpen(false)} style={{ padding: 0 }}>Loudoun County</Link>
+                    {activeSubMenu['loudoun'] ? <MinusIcon /> : <PlusIcon />}
+                  </div>
+                  <div className={`${styles.drawerAccordion} ${activeSubMenu['loudoun'] ? styles.expanded : ''}`}>
+                    <div className={styles.drawerAccordionInner}>
+                      <div className={styles.mobileDropdown} style={{ background: 'transparent' }}>
+                        {loudounCities.map(city => (
+                          <Link key={city} href={`/near-you/loudoun-county/${slugify(city)}`} onClick={() => setIsMobileOpen(false)} style={{ paddingLeft: '50px', fontSize: '13px' }}>- {city}, VA</Link>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
 
-                <Link href="/near-you/fairfax-county" onClick={() => setIsMobileOpen(false)}>Fairfax County</Link>
-                {fairfaxCities.map(city => (
-                  <Link key={city} href={`/near-you/fairfax-county/${slugify(city)}`} onClick={() => setIsMobileOpen(false)} style={{ paddingLeft: '40px', fontSize: '13px' }}>- {city}, VA</Link>
-                ))}
+                  {/* Fairfax County */}
+                  <div 
+                    className={styles.mobileNavLink} 
+                    onClick={(e) => { e.stopPropagation(); toggleSubMenu('fairfax'); }}
+                    style={{ fontSize: '14px', fontWeight: '500', padding: '10px 20px 10px 30px', background: 'transparent' }}
+                  >
+                    <Link href="/near-you/fairfax-county" onClick={() => setIsMobileOpen(false)} style={{ padding: 0 }}>Fairfax County</Link>
+                    {activeSubMenu['fairfax'] ? <MinusIcon /> : <PlusIcon />}
+                  </div>
+                  <div className={`${styles.drawerAccordion} ${activeSubMenu['fairfax'] ? styles.expanded : ''}`}>
+                    <div className={styles.drawerAccordionInner}>
+                      <div className={styles.mobileDropdown} style={{ background: 'transparent' }}>
+                        {fairfaxCities.map(city => (
+                          <Link key={city} href={`/near-you/fairfax-county/${slugify(city)}`} onClick={() => setIsMobileOpen(false)} style={{ paddingLeft: '50px', fontSize: '13px' }}>- {city}, VA</Link>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
 
-                <Link href="/near-you/prince-william-county" onClick={() => setIsMobileOpen(false)}>Prince William County</Link>
-                {pwcCities.map(city => (
-                  <Link key={city} href={`/near-you/prince-william-county/${slugify(city)}`} onClick={() => setIsMobileOpen(false)} style={{ paddingLeft: '40px', fontSize: '13px' }}>- {city}, VA</Link>
-                ))}
+                  {/* Prince William County */}
+                  <div 
+                    className={styles.mobileNavLink} 
+                    onClick={(e) => { e.stopPropagation(); toggleSubMenu('pwc'); }}
+                    style={{ fontSize: '14px', fontWeight: '500', padding: '10px 20px 10px 30px', background: 'transparent' }}
+                  >
+                    <Link href="/near-you/prince-william-county" onClick={() => setIsMobileOpen(false)} style={{ padding: 0 }}>Prince William County</Link>
+                    {activeSubMenu['pwc'] ? <MinusIcon /> : <PlusIcon />}
+                  </div>
+                  <div className={`${styles.drawerAccordion} ${activeSubMenu['pwc'] ? styles.expanded : ''}`}>
+                    <div className={styles.drawerAccordionInner}>
+                      <div className={styles.mobileDropdown} style={{ background: 'transparent' }}>
+                        {pwcCities.map(city => (
+                          <Link key={city} href={`/near-you/prince-william-county/${slugify(city)}`} onClick={() => setIsMobileOpen(false)} style={{ paddingLeft: '50px', fontSize: '13px' }}>- {city}, VA</Link>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-            )}
+            </div>
           </div>
 
           <div className={styles.mobileNavItem}>
@@ -328,8 +481,15 @@ export default function Header() {
               <Link href="/blog" onClick={() => setIsMobileOpen(false)}>Blog</Link>
             </div>
           </div>
+
+          <div style={{ marginTop: 'auto', padding: '40px 20px' }}>
+            <a href="tel:+15716557207" className={styles.callNowBtn} style={{ width: '100%', justifyContent: 'center' }}>
+              <PhoneIcon />
+              <span>Call Us Now</span>
+            </a>
+          </div>
         </div>
-      )}
+      </div>
     </div>
   );
 }

@@ -30,3 +30,18 @@ a {
   text-decoration: none;
 }
 
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--site-color);
+  color: white;
+  padding: 8px;
+  z-index: 1000;
+  transition: top 0.3s;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+

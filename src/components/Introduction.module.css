@@ -190,11 +190,20 @@
 }
 
 @media screen and (max-width: 768px) {
+  .introSection {
+    padding: 40px 0;
+  }
+
   .imagesCol {
-    height: 400px;
+    height: 350px;
   }
 
   .title {
-    font-size: 34px;
+    font-size: 32px;
+  }
+
+  .description {
+    font-size: 15px;
+    margin-bottom: 25px;
   }
 }

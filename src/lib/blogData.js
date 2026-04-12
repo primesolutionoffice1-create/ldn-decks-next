@@ -3,7 +3,7 @@ export const blogPosts = [
     id: 1,
     title: 'Trex vs Wood Decking: Cost and Maintenance',
     slug: 'trex-vs-wood-decking',
-    image: '/blog_1.png',
+    image: '/images/img13.jpeg',
     date: 'April 4, 2026',
     author: 'Loudoun Decks Team',
     excerpt: 'Comparing smooth composite decking materials to rich natural wood. Which one offers the best long-term value for Northern Virginia homeowners?',
@@ -13,7 +13,7 @@ export const blogPosts = [
     id: 2,
     title: 'Why Enclosed Porches Are Trending',
     slug: 'enclosed-porches-trending',
-    image: '/blog_2.png',
+    image: '/images/img14.jpeg',
     date: 'March 28, 2026',
     author: 'Loudoun Decks Team',
     excerpt: 'Beautiful custom wooden porches are extending the outdoor living season well into the autumn months. Discover the benefits of screened-in architecture.',
@@ -23,7 +23,7 @@ export const blogPosts = [
     id: 3,
     title: 'Pergola vs. Gazebo: Finding Your Fit',
     slug: 'pergola-vs-gazebo',
-    image: '/blog_3.png',
+    image: '/images/img15.jpeg',
     date: 'March 15, 2026',
     author: 'Loudoun Decks Team',
     excerpt: 'Looking to add definition and shade to your stone patio? We break down the structural differences between open-air pergolas and enclosed-roof gazebos.',
@@ -33,10 +33,11 @@ export const blogPosts = [
     id: 4,
     title: 'The Ultimate Guide to Deck Resurfacing',
     slug: 'deck-resurfacing-guide',
-    image: '/blog_4.png',
+    image: '/images/img16.jpeg',
     date: 'February 22, 2026',
     author: 'Loudoun Decks Team',
     excerpt: 'Does your deck have structural integrity but a worn surface? Resurfacing might be the cost-effective solution to bring your outdoor space back to life.',
     content: 'Many homeowners look at their splintering, faded, or warped deck surface and assume they need to tear down the entire structure and start from scratch. However, if the underlying foundation—the posts, beams, and joists—are still structurally sound and free from widespread rot, deck resurfacing is an incredibly cost-effective alternative.\n\nResurfacing involves systematically removing the old top decking boards and the railing system, thoroughly inspecting and reinforcing the existing substructure, and laying down brand new material (often migrating from old wood to modern composite like Trex). This process dramatically minimizes material waste, cuts down on lengthy permitting processes for new footprints, and drastically reduces labor hours, giving you a brand new looking deck at a fraction of the cost.'
   }
 ];
+

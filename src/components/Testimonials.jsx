@@ -13,19 +13,19 @@ const testimonialsData = [
     id: 1,
     name: "Sarah Jenkins",
     text: "ldndecks transformed our backyard completely! The new redwood deck they built is stunning and exactly what we envisioned. Professional, timely, and excellent craftsmanship.",
-    image: "/avatar1.png"
+    image: "/images/img17.jpeg"
   },
   {
     id: 2,
     name: "Michael Thompson",
     text: "I hired them for deck resurfacing and couldn't be happier. They saved my old deck from ruin and made it look brand new. Their attention to detail is second to none.",
-    image: "/avatar2.png"
+    image: "/images/img18.jpeg"
   },
   {
     id: 3,
     name: "Robert & Linda",
     text: "From the initial consultation to the final cleanup, the entire team was a dream to work with. Our new outdoor fencing is incredibly sturdy and beautiful.",
-    image: "/avatar3.png"
+    image: "/images/img19.jpeg"
   }
 ];
 

@@ -90,7 +90,7 @@ export default function TrexRailingsPage() {
           "Clean, modern finish",
           "Great for hosting and entertaining"
         ]}
-        image1="/showcase/img06.jpeg"
+        image1="/showcase/img06.jpg"
         image2="/showcase/img07.jpeg"
       />
 
@@ -107,7 +107,7 @@ export default function TrexRailingsPage() {
         <p style={{ marginBottom: '40px', fontSize: '18px', color: '#555' }}>From standard railings to a premium entertaining space.</p>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
           <div style={{ position: 'relative', height: '400px', borderRadius: '8px', overflow: 'hidden' }}>
-            <Image src="/showcase/img06.jpeg" alt="Before deck railing upgrade" fill style={{ objectFit: 'cover' }} />
+            <Image src="/showcase/img06.jpg" alt="Before deck railing upgrade" fill style={{ objectFit: 'cover' }} />
           </div>
           <div style={{ position: 'relative', height: '400px', borderRadius: '8px', overflow: 'hidden' }}>
             <Image src="/showcase/img07.jpeg" alt="After Trex cocktail railing" fill style={{ objectFit: 'cover' }} />

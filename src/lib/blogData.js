@@ -138,5 +138,45 @@ export const blogPosts = [
     author: 'Nick - Loudoun Decks',
     excerpt: 'Maximize the square footage of your property by capturing the rain and creating a secondary, bone-dry outdoor living room beneath your elevated deck.',
     content: 'If you have an elevated deck (typically 8 feet or higher off the ground) attached to a walkout basement, the space directly beneath the deck is an incredible opportunity that is often wasted. It usually turns into a muddy, dark storage area where water constantly drips through the upper deck boards. \n\nBy installing an engineered Under-Deck Drainage System, we capture that water and fundamentally double your usable outdoor square footage.\n\n## How Dry Space Systems Work\n\nBefore the composite surface boards are screwed down, we install a heavy-duty waterproof membrane (such as the Trex RainEscape system) directly over the structural floor joists. \n\nThis continuous plastic trough system is pitched at a precise angle. When rain falls through the cracks of the upper deck, it lands on the trough and is immediately shunted into a traditional aluminum gutter system hidden behind the fascia board, which downspouts the water safely away into the yard.\n\n## The Aesthetic Finish\n\nOnce the underside is guaranteed dry, the real magic begins. Because no water can penetrate downward, we can install a gorgeous tongue-and-groove pine or beadboard ceiling underneath the deck joists. \n\nWe then wire the dry ceiling for recessed lighting, stereos, and large ceiling fans. The end result is a massive, completely sheltered outdoor living room directly outside your basement doors, perfectly capable of housing luxury patio furniture and outdoor televisions without fear of weather damage.'
+  },
+  {
+    id: 15,
+    title: 'Wood Preservatives: How to Stop Rot Before It Starts',
+    slug: 'wood-preservatives-stop-rot',
+    image: '/images/img14.jpeg',
+    date: 'December 12, 2025',
+    author: 'Loudoun Decks Team',
+    excerpt: 'Protecting your wood framing is crucial. Learn about the chemical preservatives and butyl tapes that prevent joist decay under your composite decking.',
+    content: 'Many homeowners spend thousands of dollars on highly resilient luxury composite deck boards, but completely ignore the structural skeleton underneath them. Because Trex and TimberTech boards can last 50 years, the pressure-treated pine joists underneath them are often the first thing to fail. Here is how you protect them.\n\n## The Threat of Standing Water\n\nWhen a screw is driven through a deck board and into the joist below, it creates a microscopic puncture hole in the wood. Over thousands of rainstorms, water seeps directly into these holes. Because the space between the joists is narrow and shaded from the sun, the water never evaporates. This leads to aggressive, rapid wood rot.\n\n### The Butyl Tape Solution\n\nAt Loudoun Decks, we deploy a crucial protective layer called joist tape. Before any surface boards are installed, we roll a thick layer of self-sealing butyl tape across the top ridge of every single joist and beam. \n\nWhen a screw is driven down, the butyl tape physically stretches and seals around the thread of the screw, permanently preventing water from entering the wood framing. It is an incredibly inexpensive preventative measure that adds decades to the structural life of your deck.'
+  },
+  {
+    id: 16,
+    title: 'Navigating Railing Heights: Safety and Local Codes',
+    slug: 'railing-heights-safety-and-codes',
+    image: '/images/img29.jpeg',
+    date: 'November 20, 2025',
+    author: 'Loudoun Decks Team',
+    excerpt: 'Building a safe deck means adhering strictly to Virginia Uniform Statewide Building Codes regarding railing heights, spindle spacing, and stairway graspability.',
+    content: 'A deck railing is not just an aesthetic border; it is a critical life-safety feature. The exact specifications regarding how a railing must be built are tightly regulated by Loudoun County and Fairfax County inspectors. Failure to meet these exact minimums will immediately result in a failed inspection.\n\n## Residential Minimum Heights\n\nFor any single-family residential deck that is 30 inches or more above the adjacent ground level, a guardrail is mandatory. Under current local codes, the top of the railing must sit exactly **36 inches measured vertically** from the surface of the deck board. However, for sheer aesthetics or added security, many homeowners opt to upgrade to a 42-inch railing.\n\n### The Sphere Rule\n\nPerhaps the most heavily enforced code is the "4-inch sphere rule." balusters or spindles must be spaced tightly enough that a 4-inch rigid sphere cannot pass through any gap. This code was specifically written to prevent small children from squeezing through the railing system.\n\n## Stair Handrails\n\nUnlike the perimeter guardrail, staircases require "graspable" handrails. These handrails must be installed at a height between 34 and 38 inches from the nose of the stair tread. More importantly, the profile of the handrail must allow the average human hand to wrap entirely around it to prevent falls during icy conditions.'
+  },
+  {
+    id: 17,
+    title: 'The ROI of Installing an Outdoor Kitchen',
+    slug: 'outdoor-kitchen-roi-on-deck',
+    image: '/showcase/img11.jpeg',
+    date: 'October 14, 2025',
+    author: 'Nick - Loudoun Decks',
+    excerpt: 'Outdoor culinary spaces are the most highly requested upgrade in 2026. Explore the structural costs and long-term equity benefits of built-in grilling stations.',
+    content: 'The era of pushing a cheap charcoal grill into the corner of the deck is ending. Homeowners in Northern Virginia are actively requesting massive outdoor kitchen installations seamlessly integrated into their new patio or deck architecture.\n\n## The Core Components\n\nA true outdoor kitchen transcends a simple grill. Today’s premier builds feature massive stone veneer islands dropping down into high-end stainless steel components. \n\n- **Built-in Power Burners** for boiling massive pots.\n- **Undercounter Refrigeration** meant to survive freezing winters.\n- **Integrated Storage Drawers** for dry goods and utensils.\n- **Granite or Concrete Countertops** capable of handling searing UV damage.\n\n## The Heavy Structural Impact\n\nIf you want an outdoor kitchen on an elevated wood deck, prepare for extreme engineering. A stone veneer island housing a heavy grill and refrigerator can weigh nearly 1,500 pounds over a small footprint. \n\nLoudoun Decks must install specialized triple-ply beams and sink heavy concrete footings directly beneath the kitchen footprint to prevent the deck from sagging under the static pressure. \n\nDespite the significant upfront cost (usually adding $10,000 to $25,000 to a project), outdoor kitchens boast one of the highest recovery rates in outdoor real estate, routinely recovering over 80% of their cost when the home is ultimately sold.'
+  },
+  {
+    id: 18,
+    title: 'Composite Decking Colors: Top Trends for 2026',
+    slug: 'composite-decking-colors-trends',
+    image: '/images/img66.jpg',
+    date: 'September 02, 2025',
+    author: 'Loudoun Decks Team',
+    excerpt: 'Move past standard gray. Discover the rich, dual-tone tropical colors and modern monochromatic decking trends dominating Northern Virginia backyards.',
+    content: 'When composite decking was first introduced, the color selection was notoriously awful. Now, advanced polymer engineering allows companies like TimberTech and Trex to manufacture boards that look virtually indistinguishable from exotic hardwoods. Choosing the right color is the most important aesthetic decision of your project.\n\n## The Rise of Tropical Hardwood Textures\n\nFor the past five years, standard "slate gray" decking dominated the market. In 2026, we are seeing a massive shift backward toward organic, deeply rich brown tones. Homeowners are specifically requesting boards that mimic highly expensive, exotic tropical woods like Ipe, Tigerwood, and Mahogany.\n\nThese modern flagship lines (like Trex Transcend Lineage) feature zero-repeat grain patterns and subtle color striations embedded within the plastic, meaning no two boards look exactly identical.\n\n## The Two-Tone "Picture Frame" Border\n\nA massive trend for new builds is the customized picture frame. Instead of installing a deck in a single monochromatic color, builders use a highly contrasting color to frame the perimeter of the deck and the staircase treads.\n\nFor example, pairing a light "Toasted Sand" inner deck field with a dark "Spiced Rum" outer border. This border acts as a visual anchor to the structure, while simultaneously highlighting the stairs for safety at night by drawing a stark contrast to the descending steps.'
   }
 ];

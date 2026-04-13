@@ -94,7 +94,7 @@ export default function LoudounCountyPage() {
                 <li>Building according to local standards and guidelines</li>
               </ul>
               <p className={styles.permitFooter}>
-                This means you don't have to worry about paperwork or code compliance - we include this as part of a smooth, start-to-finish experience.
+                This means you don&apos;t have to worry about paperwork or code compliance - we include this as part of a smooth, start-to-finish experience.
               </p>
             </div>
           </div>

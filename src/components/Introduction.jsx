@@ -26,13 +26,14 @@ export default function Introduction() {
       { threshold: 0.3 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    const currentRef = sectionRef.current;
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, []);
@@ -61,7 +62,7 @@ export default function Introduction() {
           </div>
           <h2 className={styles.title}>Trusted Decking<br /> Professionals</h2>
           <p className={styles.description}>
-            We are Loudoun County's premier outdoor living specialists. Whether it is a brand-new composite deck or a custom fencing solution, our team of expert carpenters ensures every joint is perfect, structurally sound, and built to withstand the elements.
+            We are Loudoun County&apos;s premier outdoor living specialists. Whether it is a brand-new composite deck or a custom fencing solution, our team of expert carpenters ensures every joint is perfect, structurally sound, and built to withstand the elements.
           </p>
 
           <ul className={styles.checkList}>

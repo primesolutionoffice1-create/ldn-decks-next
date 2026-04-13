@@ -58,8 +58,7 @@ export default function Testimonials() {
                 <StarIcon />
                 <StarIcon />
               </div>
-              
-              <p className={styles.reviewText}>"{t.text}"</p>
+              <p className={styles.reviewText}>&quot;{t.text}&quot;</p>
               
               <div className={styles.clientProfile}>
                 <div className={styles.avatarWrapper}>

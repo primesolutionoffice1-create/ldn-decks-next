@@ -23,7 +23,7 @@ export default function NotFound() {
           
           <h2 className={styles.title}>You stepped off the deck!</h2>
           <p className={styles.description}>
-            The outdoor space you are looking for doesn't exist or is currently undergoing renovation. Let's get you back to sturdy ground.
+            The outdoor space you are looking for doesn&apos;t exist or is currently undergoing renovation. Let&apos;s get you back to sturdy ground.
           </p>
 
           <Link href="/" className={styles.homeBtn}>

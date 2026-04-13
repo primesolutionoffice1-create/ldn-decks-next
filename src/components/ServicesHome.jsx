@@ -35,13 +35,13 @@ export default function ServicesHome() {
         <div className={styles.header}>
           <div className={styles.titleArea}>
             <div className={styles.subtextWrapper}>
-              <span className={styles.subtext}>What We're Offering</span>
+              <span className={styles.subtext}>What We&apos;re Offering</span>
               <span className={styles.line}></span>
             </div>
-            <h2 className={styles.title}>Best Services We're<br /> Providing You</h2>
+            <h2 className={styles.title}>Best Services We&apos;re<br /> Providing You</h2>
           </div>
           <div className={styles.descArea}>
-            <p>From ground-up construction to precise restoration, ldndecks provides comprehensive outdoor solutions. Each service is tailored to your home's unique layout and your family's needs, backed by our ironclad warranty.</p>
+            <p>From ground-up construction to precise restoration, ldndecks provides comprehensive outdoor solutions. Each service is tailored to your home&apos;s unique layout and your family&apos;s needs, backed by our ironclad warranty.</p>
           </div>
         </div>
 

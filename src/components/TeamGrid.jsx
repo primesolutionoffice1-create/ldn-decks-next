@@ -4,19 +4,14 @@ import styles from './TeamGrid.module.css';
 
 const teamMembers = [
   {
-    name: "John Doe",
-    role: "Manager",
-    image: "/images/img21.jpeg"
+    name: "Nick",
+    role: "Owner & Lead Designer",
+    image: "/team/Nick.jpg"
   },
   {
-    name: "Kevin Martin",
-    role: "Manager",
-    image: "/images/img22.jpeg"
-  },
-  {
-    name: "Steve Jobs",
-    role: "Manager",
-    image: "/images/img23.jpeg"
+    name: "Alex, Danile & Bet",
+    role: "Master Technicians",
+    image: "/team/alexdanielandbet.jpeg"
   }
 ];
 

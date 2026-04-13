@@ -6,6 +6,9 @@ import AboutDetails from '@/components/AboutDetails';
 import TeamSection from '@/components/TeamSection';
 
 export const metadata = {
+  alternates: {
+    canonical: "https://ldndecks.com/about"
+  },
   title: "About Us | ldndecks",
   description: "Learn more about Loudoun Decks, Northern Virginia's premier outdoor living structure craftsmen."
 };

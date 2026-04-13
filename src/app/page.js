@@ -9,8 +9,7 @@ import ContactHome from "@/components/ContactHome";
 import styles from "./page.module.css";
 
 export const metadata = {
-  title: "Custom Deck Builder in Northern Virginia | Loudoun Decks",
-  description: "Loudoun Decks is the premier custom deck builder in Northern Virginia. We design and build high-quality composite and wood decks, patios, and outdoor living spaces in Loudoun County, Fairfax, and Prince William.",
+  description: "Premier custom deck builder in Northern Virginia. We design and install high-quality composite and wood decks, patios, and outdoor living spaces.",
   alternates: {
     canonical: "https://ldndecks.com"
   }

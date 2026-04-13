@@ -1,5 +1,7 @@
-import React from 'react';
+"use client";
+import React, { useState } from 'react';
 import styles from './ContactHome.module.css';
+import { sendContactEmail } from '@/server/sendEmail';
 
 const PhoneIcon = () => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -22,6 +24,22 @@ const MapIcon = () => (
 );
 
 export default function ContactHome() {
+  const [status, setStatus] = useState(null);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("submitting");
+    const formData = new FormData(e.target);
+    const result = await sendContactEmail(formData);
+    
+    if (result && result.success) {
+      setStatus("success");
+      e.target.reset();
+    } else {
+      setStatus("error");
+    }
+  };
+
   return (
     <section className={styles.contactSection}>
       <div className={styles.container}>
@@ -63,33 +81,44 @@ export default function ContactHome() {
         </div>
 
         <div className={styles.rightCol}>
-          <form className={styles.contactForm}>
-            <h3>Request A Free Quote</h3>
-            <div className={styles.formGrid}>
-              <div className={styles.inputGroup}>
-                <input type="text" placeholder="Your Name" required aria-label="Your Name" />
+          {status === "success" ? (
+             <div style={{ background: '#fff', padding: '40px', borderRadius: '8px', textAlign: 'center' }}>
+                <h3 style={{ color: '#27ae60', marginBottom: '10px' }}>Message Sent Successfully!</h3>
+                <p>Thank you for reaching out. We will get back to you shortly.</p>
+                <button onClick={() => setStatus(null)} className={styles.submitBtn} style={{ marginTop: '20px' }}>Send Another Message</button>
+             </div>
+          ) : (
+            <form onSubmit={handleSubmit} className={styles.contactForm}>
+              <h3>Request A Free Quote</h3>
+              {status === "error" && <p style={{color: 'red', fontSize: '14px', marginBottom: '10px'}}>There was an error sending your message. Please try again.</p>}
+              <div className={styles.formGrid}>
+                <div className={styles.inputGroup}>
+                  <input type="text" name="name" placeholder="Your Name" required aria-label="Your Name" />
+                </div>
+                <div className={styles.inputGroup}>
+                  <input type="email" name="email" placeholder="Email Address" required aria-label="Email Address" />
+                </div>
+                <div className={styles.inputGroup}>
+                  <input type="tel" name="phone" placeholder="Phone Number" required aria-label="Phone Number" />
+                </div>
+                <div className={styles.inputGroup}>
+                  <select name="service" required defaultValue="" aria-label="Select Service">
+                    <option value="" disabled>Select Service</option>
+                    <option value="New Decks">New Decks</option>
+                    <option value="Deck Resurfacing">Deck Resurfacing</option>
+                    <option value="Fencing">Fencing</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
               </div>
               <div className={styles.inputGroup}>
-                <input type="email" placeholder="Email Address" required aria-label="Email Address" />
+                <textarea name="message" placeholder="Tell us about your project..." rows="5" required aria-label="Project Details"></textarea>
               </div>
-              <div className={styles.inputGroup}>
-                <input type="tel" placeholder="Phone Number" required aria-label="Phone Number" />
-              </div>
-              <div className={styles.inputGroup}>
-                <select required defaultValue="" aria-label="Select Service">
-                  <option value="" disabled>Select Service</option>
-                  <option value="new_decks">New Decks</option>
-                  <option value="resurfacing">Deck Resurfacing</option>
-                  <option value="fencing">Fencing</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-            </div>
-            <div className={styles.inputGroup}>
-              <textarea placeholder="Tell us about your project..." rows="5" required aria-label="Project Details"></textarea>
-            </div>
-            <button type="button" className={styles.submitBtn}>Send Message</button>
-          </form>
+              <button type="submit" disabled={status === "submitting"} className={styles.submitBtn}>
+                {status === "submitting" ? "Sending..." : "Send Message"}
+              </button>
+            </form>
+          )}
         </div>
       </div>
     </section>

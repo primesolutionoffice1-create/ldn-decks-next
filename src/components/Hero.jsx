@@ -13,7 +13,7 @@ export default function Hero() {
           <span className={styles.line}></span>
         </div>
         <h1 className={styles.title}>
-          Outdoor Deck <span className={styles.highlight}>&</span><br /> Fence Builder
+          Northern Virginia’s Premium Deck Builder for Custom Outdoor Living
         </h1>
         <Link href="/services" className={styles.ctaButton}>
           Discover More

@@ -8,6 +8,9 @@ import ContactHome from '@/components/ContactHome';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 
 export const metadata = {
+  alternates: {
+    canonical: "https://ldndecks.com/services/porches"
+  },
   title: "Custom Porch Builder NoVA | Screened-In & Open Porch Installation",
   description: "Loudoun Decks is a premier porch builder in Northern Virginia. We specialize in custom screened porches, open-air designs, and front porch remodels with 1,500+ words of expertise."
 };
@@ -88,9 +91,9 @@ const expansionSections = [
   {
     title: "Interior Finishes: Creating the 'Outdoor Living Room'",
     paragraphs: [
-      "The true magic of a custom porch build in Northern Virginia lies in the interior finishes. We go far beyond standard pressure-treated lumber. Our clients in Lansdowne and Leesburg often opt for tongue-and-groove cedar ceilings, mahogany flooring, or low-maintenance PVC beadboard. These materials elevate the space from a 'porch' to a 'luxury retreat.' We pay close attention to the details—recessed LED lighting on dimmers, high-powered ceiling fans for humid afternoons, and even infrared heaters for crisp November nights.",
+      "The true magic of a custom porch build in Northern Virginia lies in the interior finishes. We go far beyond standard pressure-treated lumber. Our clients in Lansdowne and Leesburg often opt for tongue-and-groove cedar ceilings, mahogany flooring, or low-maintenance PVC beadboard. These materials elevate the space from a 'porch' to a 'luxury retreat.' We pay close attention to the details-recessed LED lighting on dimmers, high-powered ceiling fans for humid afternoons, and even infrared heaters for crisp November nights.",
       "Security and longevity are built into every finish. We use high-grade sealants and hidden fastener systems to ensure that your porch looks as clean and professional as your home's interior. We also specialize in 'Eze-Breeze' vertical track windows, which allow you to convert your screened porch into a three-season room by sliding clear vinyl panels over the screens to block the wind and cold.",
-      "Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. By choosing a 5-Star Google Rated contractor, you ensure that these technical details—like electrical grounding and structural load-bearing roof connections—are handled by experts who value your family's safety above all else."
+      "Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. By choosing a 5-Star Google Rated contractor, you ensure that these technical details-like electrical grounding and structural load-bearing roof connections-are handled by experts who value your family's safety above all else."
     ]
   },
   {

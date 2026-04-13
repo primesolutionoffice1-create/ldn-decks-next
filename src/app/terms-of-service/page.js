@@ -1,6 +1,9 @@
 import React from 'react';
 
 export const metadata = {
+  alternates: {
+    canonical: "https://ldndecks.com/terms-of-service"
+  },
   title: "Terms of Service",
   description: "Terms and conditions for using Loudoun Decks services."
 };

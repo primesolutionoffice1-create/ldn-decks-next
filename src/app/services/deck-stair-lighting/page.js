@@ -1,0 +1,107 @@
+import React from 'react';
+import Image from 'next/image';
+import ServicesHeader from '@/components/ServicesHeader';
+import ServiceMain from '@/components/ServiceMain';
+import ServiceInclusions from '@/components/ServiceInclusions';
+import ServiceContentExpansion from '@/components/ServiceContentExpansion';
+import ProcessSteps from '@/components/ProcessSteps';
+import ContactHome from '@/components/ContactHome';
+import ServiceAreasGrid from '@/components/ServiceAreasGrid';
+
+export const metadata = {
+  alternates: {
+    canonical: "https://ldndecks.com/services/deck-stair-lighting"
+  },
+  title: "Deck Stair Lighting Loudoun VA | LDN Decks",
+  description: "Custom-built LED lighting systems installed directly into your deck stairs - clean, modern, and built to last in Loudoun, Fairfax & Prince William County."
+};
+
+const whyLdnDecks = [
+  {
+    title: "Local Loudoun County experts",
+    desc: "We understand local building codes and design trends."
+  },
+  {
+    title: "Clean and professional installations",
+    desc: "Our installers ensure all wiring is hidden and the finish is flawless."
+  },
+  {
+    title: "Built for long-term durability",
+    desc: "Lighting integrated directly into the build, designed to withstand Northern Virginia weather."
+  }
+];
+
+const expansionSections = [
+  {
+    title: "Recessed LED Stair Lights",
+    paragraphs: [
+      "Installed directly into each step, recessed LED stair lights provide a clean, modern flush finish. This is our most popular option for a seamless look that enhances both safety and aesthetics without protruding fixtures."
+    ]
+  },
+  {
+    title: "Side Rail Lighting",
+    paragraphs: [
+      "Subtle glow along railings that adds depth and ambiance to your deck's architecture, perfectly complementing the steps while guiding the way."
+    ]
+  },
+  {
+    title: "Post Cap & Smart Lighting Systems",
+    paragraphs: [
+      "We also offer elegant lighting on deck posts for soft top-down illumination, as well as smart lighting systems featuring motion sensors, timers, and remote or app-controlled capabilities to manage your deck's lighting effortlessly."
+    ]
+  }
+];
+
+export default function DeckStairLightingPage() {
+  return (
+    <main>
+      <ServicesHeader
+        subtext="Deck Stair Lighting Loudoun VA"
+        title="Deck Stair Lighting That Looks Amazing & Keeps Your Family Safe"
+        description="Custom-built LED lighting systems installed directly into your deck stairs - clean, modern, and built to last."
+      />
+
+      <ServiceMain
+        subtitle="Why It Matters"
+        title="Why Add Lights to Your Deck Stairs?"
+        description="Installed by LDN Decks – Loudoun County. Enhance the safety and beauty of your outdoor living space with premium lighting solutions."
+        listItems={[
+          "Prevent slips and accidents at night",
+          "Increase home value instantly",
+          "Create a luxury outdoor atmosphere",
+          "Perfect for entertaining and family use",
+          "Energy-efficient LED solutions"
+        ]}
+        image1="/showcase/light-img.jpeg"
+        image2="/showcase/img01.jpg"
+      />
+
+      <ServiceContentExpansion sections={expansionSections} />
+
+      <section style={{ padding: '60px 20px', maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
+        <h2 style={{ fontSize: '32px', marginBottom: '15px' }}>See the Transformation</h2>
+        <p style={{ marginBottom: '40px', fontSize: '18px', color: '#555' }}>Same deck. Completely different experience.</p>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+          <div style={{ position: 'relative', height: '400px', borderRadius: '8px', overflow: 'hidden' }}>
+            <Image src="/showcase/light-img.jpeg" alt="Before stair lighting" fill style={{ objectFit: 'cover' }} />
+          </div>
+          <div style={{ position: 'relative', height: '400px', borderRadius: '8px', overflow: 'hidden' }}>
+            <Image src="/showcase/img01.jpg" alt="After stair lighting" fill style={{ objectFit: 'cover' }} />
+          </div>
+        </div>
+      </section>
+
+      <ServiceInclusions
+        title="Why Choose Us"
+        description="At LDN Decks, we provide licensed and insured lighting installations integrated into your build."
+        items={whyLdnDecks}
+      />
+
+      <ProcessSteps />
+
+      <ServiceAreasGrid />
+
+      <ContactHome />
+    </main>
+  );
+}

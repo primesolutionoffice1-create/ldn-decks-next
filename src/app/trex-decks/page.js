@@ -9,6 +9,9 @@ import ContactHome from '@/components/ContactHome';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 
 export const metadata = {
+  alternates: {
+    canonical: "https://ldndecks.com/trex-decks"
+  },
   title: "Certified Trex Deck Builder Loudoun County | Trex Installation Fairfax NoVA",
   description: "Loudoun Decks is a certified Trex deck builder serving Northern Virginia. High-end Transcend designs, low-maintenance living, and 1,500+ words of expert product knowledge."
 };
@@ -89,7 +92,7 @@ const expansionSections = [
   {
     title: "The Science of Sustainability: 95% Recycled, 100% Luxury",
     paragraphs: [
-      "In modern Northern Virginia, sustainability is more than just a buzzword—it is a priority. One of the reasons we are proud to be a Trex builder in regions like Vienna and Reston is Trex's commitment to the environment. Every Trex deck board is made from 95% recycled material, including reclaimed industrial wood scraps and recycled plastic film from grocery bags and dry cleaning wrap. Trex is one of the largest recyclers of plastic film in North America.",
+      "In modern Northern Virginia, sustainability is more than just a buzzword-it is a priority. One of the reasons we are proud to be a Trex builder in regions like Vienna and Reston is Trex's commitment to the environment. Every Trex deck board is made from 95% recycled material, including reclaimed industrial wood scraps and recycled plastic film from grocery bags and dry cleaning wrap. Trex is one of the largest recyclers of plastic film in North America.",
       "This eco-friendly approach does not mean sacrificing quality. In fact, Trex material science produces a board that is more durable than natural wood. It won't splinter, making it much safer for bare feet and pets. It won't rot, even in the shaded, damp environments found in some parts of Prince William County and Stafford. You are essentially turning tons of waste into a permanent, high-value asset for your property.",
       "Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. By choosing a 5-Star Google Rated Trex installer, you are supporting sustainable construction practices while ensuring your home features the world's most trusted name in outdoor living."
     ]

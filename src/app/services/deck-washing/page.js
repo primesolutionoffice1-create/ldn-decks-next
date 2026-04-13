@@ -5,93 +5,173 @@ import ServiceInclusions from '@/components/ServiceInclusions';
 import ServicesFAQ from '@/components/ServicesFAQ';
 import ContactHome from '@/components/ContactHome';
 import ServiceProcessHorizontal from '@/components/ServiceProcessHorizontal';
+import ServiceContentExpansion from '@/components/ServiceContentExpansion';
+import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 
 export const metadata = {
-  title: "Deck Washing Services | Loudoun Decks",
-  description: "Professional deck washing for residential homes in Northern Virginia. Clean, refresh, and restore the look of your outdoor deck."
+  title: "Professional Deck Washing Loudoun VA | Pressure Washing",
+  description: "Restore your outdoor wood or composite deck with professional low-pressure washing services in Northern Virginia.",
+  alternates: {
+    canonical: "https://ldndecks.com/services/deck-washing"
+  }
 };
+
+const expansionSections = [
+  {
+    title: "Why Your Deck Needs Professional Washing",
+    paragraphs: [
+      "In Northern Virginia, the combination of intense spring pollen, humid summers, and freeze-thaw winter cycles creates the perfect breeding ground for organic growth on outdoor surfaces. Allowed to fester, mold, mildew, and algae will root deep into the pores of your wood or composite decking.",
+      "Beyond looking unsightly, this organic buildup becomes incredibly slippery and dangerous when wet. More importantly, mold feeds on the organic fibers of wood decks, accelerating rot and structurally compromising your investment. Professional washing is not just a cosmetic upgrade; it is critical preventative maintenance."
+    ],
+    listItems: [
+      { label: "Algae & Mildew Eradication", text: "We use eco-friendly chemical soft-washes to kill the root spores of algae, rather than just blasting the top layer away." },
+      { label: "Restored Traction", text: "Removing the slippery micro-film of mildew restores the original friction to your stairs and boards, ensuring family safety." },
+      { label: "Pollen & Tannin Removal", text: "We lift out the deep-seated yellow oak pollen and naturally occurring tannin stains that discolor your deck's appearance." },
+      { label: "Prep for Staining", text: "Wood pores must be completely free of dirt and old oils before applying a new semi-transparent or solid stain. Proper washing is step one." }
+    ]
+  },
+  {
+    title: "The Danger of DIY High-Pressure Washing",
+    paragraphs: [
+      "The most common mistake homeowners make is renting a 3000 PSI pressure washer and blasting their pressure-treated wood or Trex boards at point-blank range.",
+      "High pressure water acts like a liquid buzzsaw. On natural wood, it will 'fur' the boards by shredding the cellulose fibers, leading to massive splintering. On composite decks, excessive pressure will strip the protective acrylic capping, voiding the manufacturer's warranty entirely. We utilize specialized 'Soft Washing' techniques that rely on premium detergents and high water volume, not high pressure, to safely lift dirt."
+    ],
+    listItems: [
+      { label: "Wood Furring Prevention", text: "Our low-pressure nozzles ensure the wood grain stays tight and smooth, readying it for sealants." },
+      { label: "Composite Safe", text: "We use Trex and TimberTech-approved cleaning agents that will not degrade the synthetic capping." },
+      { label: "Environmentally Responsible", text: "The cleaning agents we use are neutralized before rinsing into your yard, protecting your grass, pets, and local waterways." },
+      { label: "Consistent Results", text: "We use wide-fan oscillating surface cleaners to prevent the 'zebra striping' marks left by inexperienced operators." }
+    ]
+  }
+];
 
 const washingSteps = [
   {
-    title: "Free Estimate",
-    desc: "We discuss your deck washing needs and schedule a visit."
+    title: "Property Protection",
+    desc: "We begin by watering down adjacent plants and covering delicate outdoor furniture or exposed electrical outlets."
   },
   {
-    title: "Design & Planning",
-    desc: "We evaluate your deck's condition on site."
+    title: "Chemical Application",
+    desc: "A bespoke mixture of surfactants and mildew-cides is applied at low pressure, allowing it to dwell and break down organic bonds."
   },
   {
-    title: "Professional Construction",
-    desc: "Controlled washing is applied to safely clean the deck surface."
+    title: "Volume Rinsing",
+    desc: "Using high-GPM (Gallons Per Minute) machines, we flush the dirt away using very low pressure (under 800 PSI)."
+  },
+  {
+    title: "Wood Brightening",
+    desc: "For natural wood decks, an optional oxalic acid brightener is applied to restore the wood's natural pH and blonde color."
   }
 ];
 
 const inclusions = [
   {
-    title: "Debris Removal",
-    desc: "Lifting dirt, pollen, and dust that has accumulated over the seasons."
+    title: "Deep Pores Cleaned",
+    desc: "Lifting years of embedded dust, barbecue grease, and muddy paw prints."
   },
   {
-    title: "Mildew Removal",
-    desc: "Safely removing mold and mildew buildup that can make surfaces slippery."
+    title: "Mildew Sanitization",
+    desc: "Safely killing the microscopic mold spores so they don't return six weeks later."
+  },
+  {
+    title: "Railing & Baluster Detailing",
+    desc: "Hand-clearing the intricate spaces between your stair balusters and handrails."
   },
   {
     title: "Surface Prep",
-    desc: "Improving surface appearance and preparing the deck for maintenance or finishing."
+    desc: "Opening the wood grain perfectly in preparation for clear coats or penetrating stains."
   }
 ];
 
 const deckWashingFAQs = [
   {
-    q: "What is deck washing?",
-    a: "Deck washing uses pressure and cleaning solutions to remove dirt, mildew, and buildup from deck surfaces."
+    q: "How often should I have my deck washed in Virginia?",
+    a: "We recommend a professional cleaning at least once every 12 to 18 months, typically scheduled in the late spring after the heavy oak and pine pollen drop has settled."
   },
   {
-    q: "Do you wash all types of deck surfaces?",
-    a: "Yes. We provide deck washing for residential wood and composite decks as part of our outdoor cleaning services."
+    q: "Will the cleaning chemicals harm my landscaping or pets?",
+    a: "We employ extensive property protection measures. We pre-wet and post-wet all surrounding grass and shrubs. The detergents we use are heavily diluted and break down quickly into harmless salts when flushed with water. It is completely safe for pets once the deck has dried."
   },
   {
-    q: "Where do you serve deck washing?",
-    a: "We serve Loudoun County, Fairfax County, and Prince William County in Northern Virginia."
+    q: "Do composite decks really need to be washed?",
+    a: "Yes. While composite decks (like Trex) are highly resistant to moisture, the dirt and pollen that settle on top of them can still grow mold. A bi-annual soft wash keeps them looking brand new and fulfills the maintenance requirements of the manufacturer warranty."
   },
   {
-    q: "Do you offer free estimates for deck washing?",
-    a: "Yes. We offer free estimates to homeowners considering professional deck washing."
+    q: "Do you also apply stain and sealant after washing?",
+    a: "Yes, once the organic wood has been thoroughly cleaned, neutralized, and allowed to dry to a proper moisture content level (usually 24-48 hours later depending on sun exposure), we can return to apply premium contractor-grade sealants."
   }
 ];
+
+const faqSchemaData = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": deckWashingFAQs.map(faq => ({
+    "@type": "Question",
+    "name": faq.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.a
+    }
+  }))
+};
+
+const serviceSchemaData = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Professional Deck Washing",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Loudoun Decks"
+  },
+  "areaServed": [
+    { "@type": "State", "name": "Virginia" }
+  ],
+  "description": "Professional exterior residential deck cleaning, soft washing, and wood brightening services in Northern Virginia."
+};
 
 export default function DeckWashingPage() {
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchemaData) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchemaData) }}
+      />
+
       <ServicesHeader 
-        subtext="Our Services"
-        title="Deck Washing Services"
-        description="Loudoun Decks offers professional deck washing for homeowners in Northern Virginia to clean and refresh deck surfaces, restoring appearance and preparing for maintenance."
+        subtext="Maintenance & Restoration"
+        title="Professional Deck Washing Services"
+        description="Safely strip away years of grime, dangerous mildew, and gray oxidation without damaging your wood or composite boards."
       />
 
       <ServiceMain 
-        subtitle="Professional Clean"
-        title="Professional Deck Washing for Residential Homes"
-        description="Over time, deck surfaces can accumulate dirt, grime, mildew, and organic buildup that affect appearance and traction. Loudoun Decks provides services designed to safely remove buildup and restore your outdoor deck."
-        listTitle="Why Choose Professional Washing:"
+        subtitle="Protect Your Investment"
+        title="Safe, Effective Restoration"
+        description="Whether you have an expensive IPE hardwood deck or low-maintenance Trex boards, aggressive high-pressure washing can cause irreversible damage. Loudoun Decks employs advanced 'Soft Washing' techniques that rely on high water volume and specialized detergents to melt dirt away effortlessly."
+        listTitle="The Benefits of Professional Soft Washing:"
         listItems={[
-          "Ensures the right water pressure for wood or composite",
-          "Helps protect the surface from damage during cleaning",
-          "Improves surface preparation for future treatments",
-          "Enhances your deck’s appearance and curb appeal"
+          "Zero risk of splintering or tearing natural wood grain",
+          "Eco-friendly detergents neutralize the root spores of algae",
+          "Deep cleans the porous surface properly before applying stains",
+          "Instantly raises the curb appeal of your backyard landscape"
         ]}
         image1="/images/img01.jpeg"
         image2="/images/img02.jpeg"
       />
 
+      <ServiceContentExpansion sections={expansionSections} />
+
       <ServiceProcessHorizontal 
-        title="Our Deck Washing Process"
+        title="Our Soft Washing Methodology"
         steps={washingSteps}
       />
 
       <ServiceInclusions 
-        title="What Deck Washing Involves"
-        description="Deck washing is a cleaning method that uses controlled pressure and solutions to remove contaminants from deck boards."
+        title="What Our Cleaning Service Includes"
+        description="A meticulous approach to restoring your entire outdoor footprint."
         items={inclusions}
       />
 
@@ -99,6 +179,8 @@ export default function DeckWashingPage() {
         title="Deck Washing FAQs"
         faqs={deckWashingFAQs}
       />
+
+      <ServiceAreasGrid />
 
       <ContactHome />
     </main>

@@ -19,7 +19,7 @@ export async function generateMetadata({ params }) {
   if (!project) return { title: "Project Not Found" };
 
   return {
-    title: `${project.title} | ${project.location} | Loudoun Decks`,
+    title: `${project.title} | ${project.location}`,
     description: `View details for our ${project.title.toLowerCase()} project in ${project.location}. Quality craftsmanship by Loudoun Decks.`,
     openGraph: {
       images: [project.image],

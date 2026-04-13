@@ -9,6 +9,9 @@ import ContactHome from '@/components/ContactHome';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 
 export const metadata = {
+  alternates: {
+    canonical: "https://ldndecks.com/deck-builders-loudoun"
+  },
   title: "Best Deck Builders in Loudoun County | Premier Custom Deck Contractor",
   description: "Loudoun Decks is the top-rated deck builder in Loudoun County, serving Ashburn, Leesburg, and Sterling. Award-winning custom designs and 1,500+ words of local expertise."
 };
@@ -68,7 +71,7 @@ const expansionSections = [
     title: "Loudoun County's Premier Outdoor Living Specialist",
     paragraphs: [
       "When it comes to enhancing your lifestyle and your property value in Northern Virginia, few investments carry the weight of a custom-designed deck. As the premier deck builder in Loudoun County, Loudoun Decks has dedicated years to perfecting the art of outdoor construction. We don't just build decks; we build environments. Our deep roots in the community allow us to provide a level of localized service that national franchises simply cannot match.",
-      "Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. We understand the unique architectural standards of our region. From the classic brick colonials of Sterling to the modern, open-concept designs in Brambleton, we ensure your outdoor space is a seamless continuation of your home's interior luxury. Our 5-Star Google Rated team is known for taking 'full projects only,' ensuring that every detail—from the initial foundation to the final lighting fixture—is handled with professional care.",
+      "Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. We understand the unique architectural standards of our region. From the classic brick colonials of Sterling to the modern, open-concept designs in Brambleton, we ensure your outdoor space is a seamless continuation of your home's interior luxury. Our 5-Star Google Rated team is known for taking 'full projects only,' ensuring that every detail-from the initial foundation to the final lighting fixture-is handled with professional care.",
       "Choosing a custom deck builder near you in Loudoun County means you're working with a team that sleeps in the same neighborhoods they build in. We are intimately familiar with the local building codes in Leesburg and the specific environmental factors of the Loudoun Valley. This hyper-local focus ensures that your deck is not only beautiful but also engineered to withstand the specific soil and weather patterns of NoVA."
     ]
   },
@@ -91,7 +94,7 @@ const expansionSections = [
     paragraphs: [
       "Building a deck in Loudoun County is a complex endeavor that requires strict adherence to the International Residential Code (IRC) and specific local amendments. As your local deck contractor, we handle all structural drawings and certification. We ensure that every footing is dug to the proper depth to avoid the frost line and that every support beam is sized correctly for the spans intended. This technical precision is what prevents the sagging and structural failure common in DIY or budget-grade builds.",
       "We also handle the integrated electrical and plumbing work required for modern luxury decks. Whether you want recessed lighting for your stairs in South Riding or a natural gas line for your grill in Stone Ridge, our licensed partners ensure the work is done safely and legally. This 'all-in-one' service is why we are considered the premier Loudoun County deck building team. We coordinate with the building inspectors in Arlington, Stafford, and beyond, ensuring a 5-Star finish that is fully documented and insured.",
-      "Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. We take pride in our transparency. When we provide a quote for your project, it includes every permit fee, every drawing, and every material cost. There are no hidden surprises—just an honest, professional path to your new outdoor living space."
+      "Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. We take pride in our transparency. When we provide a quote for your project, it includes every permit fee, every drawing, and every material cost. There are no hidden surprises-just an honest, professional path to your new outdoor living space."
     ]
   },
   {

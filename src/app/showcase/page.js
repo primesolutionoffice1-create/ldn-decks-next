@@ -6,6 +6,9 @@ import Testimonials from '@/components/Testimonials';
 import ContactHome from '@/components/ContactHome';
 
 export const metadata = {
+  alternates: {
+    canonical: "https://ldndecks.com/showcase"
+  },
   title: "Projects Showcase | ldndecks",
   description: "Explore our portfolio of stunning outdoor living transformations."
 };

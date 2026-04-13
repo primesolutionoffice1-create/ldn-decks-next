@@ -7,7 +7,10 @@ import ContactHome from '@/components/ContactHome';
 import ServiceVisual from '@/components/ServiceVisual';
 
 export const metadata = {
-  title: "House Siding Washing | Loudoun Decks",
+  alternates: {
+    canonical: "https://ldndecks.com/services/house-siding-washing"
+  },
+  title: "House Siding Washing",
   description: "Professional house siding washing for homeowners in Northern Virginia. Safely remove dirt, mold, and algae from your siding."
 };
 

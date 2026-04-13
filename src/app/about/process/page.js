@@ -8,7 +8,10 @@ import ServicesCallToAction from '@/components/ServicesCallToAction';
 import SimpleCTA from '@/components/SimpleCTA';
 
 export const metadata = {
-  title: "Our Process | Loudoun Decks",
+  alternates: {
+    canonical: "https://ldndecks.com/about/process"
+  },
+  title: "Our Process",
   description: "Learn about our clear and structured process for building outdoor living projects in Northern Virginia."
 };
 

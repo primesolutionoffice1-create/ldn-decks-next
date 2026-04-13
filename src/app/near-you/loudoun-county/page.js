@@ -13,7 +13,10 @@ const LocationIcon = () => (
 );
 
 export const metadata = {
-  title: "Deck Builder in Loudoun County, VA | Ashburn & Leesburg | Loudoun Decks",
+  alternates: {
+    canonical: "https://ldndecks.com/near-you/loudoun-county"
+  },
+  title: "Deck Builder in Loudoun County, VA | Ashburn & Leesburg",
   description: "Trusted local deck and outdoor living contractor serving Loudoun County, VA. Custom decks, patios, and porches in Ashburn, Leesburg, Sterling, and more."
 };
 
@@ -91,7 +94,7 @@ export default function LoudounCountyPage() {
                 <li>Building according to local standards and guidelines</li>
               </ul>
               <p className={styles.permitFooter}>
-                This means you don't have to worry about paperwork or code compliance — we include this as part of a smooth, start-to-finish experience.
+                This means you don't have to worry about paperwork or code compliance - we include this as part of a smooth, start-to-finish experience.
               </p>
             </div>
           </div>

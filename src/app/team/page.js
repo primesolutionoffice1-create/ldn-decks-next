@@ -4,6 +4,9 @@ import TeamGrid from '@/components/TeamGrid';
 import ContactHome from '@/components/ContactHome';
 
 export const metadata = {
+  alternates: {
+    canonical: "https://ldndecks.com/team"
+  },
   title: "Our Team",
   description: "Meet the professional craftsmanship team behind Loudoun Decks."
 };

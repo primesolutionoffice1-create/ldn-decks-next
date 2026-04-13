@@ -9,6 +9,9 @@ import ContactHome from '@/components/ContactHome';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 
 export const metadata = {
+  alternates: {
+    canonical: "https://ldndecks.com/composite-decks"
+  },
   title: "Composite Deck Builder Loudoun County | Custom Composite Decks NoVA",
   description: "Loudoun Decks is the premier composite deck builder in Northern Virginia. Specialized in custom Trex and low-maintenance decking with 1,500+ words of expert guidance."
 };
@@ -67,7 +70,7 @@ const expansionSections = [
   {
     title: "The Future of Outdoor Living: The Composite Revolution in NoVA",
     paragraphs: [
-      "In the competitive Northern Virginia real estate market, homeowners are increasingly moving away from traditional wood in favor of high-performance composite decking. As a leading composite deck builder in Loudoun County, Fairfax County, and Prince William County, Loudoun Decks has mastered the art and science of these advanced materials. Our clients in Ashburn and Leesburg are looking for more than just a deck; they are looking for a permanent extension of their indoor luxury—one that doesn't require annual maintenance weekends.",
+      "In the competitive Northern Virginia real estate market, homeowners are increasingly moving away from traditional wood in favor of high-performance composite decking. As a leading composite deck builder in Loudoun County, Fairfax County, and Prince William County, Loudoun Decks has mastered the art and science of these advanced materials. Our clients in Ashburn and Leesburg are looking for more than just a deck; they are looking for a permanent extension of their indoor luxury-one that doesn't require annual maintenance weekends.",
       "Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. The transition to composite is driven by the desire for longevity and consistent aesthetics. Unlike natural wood, which can warp, splinter, and gray within just a few years of NoVA's humid cycles, composite materials maintain their rich color and structural integrity for decades. This 'set it and forget it' mentality is perfect for busy professionals in Arlington and the growing families in Gainesville.",
       "As your custom deck builder, we don't just 'install' composite; we engineer it. This includes specialized joist spacing and structural reinforcement that compensates for the unique thermal expansion and weight characteristics of high-end composite boards. When you choose a 5-Star Google Rated local expert, you are ensuring your deck remains a beautiful, safe sanctuary year after year."
     ]
@@ -76,7 +79,7 @@ const expansionSections = [
     title: "The Science of High-Performance Material: Why It Wins",
     paragraphs: [
       "Modern composite decking is a marvel of material science. Leading brands like Trex and AZEK use a combination of recycled wood fibers and high-density polyethylene (HDPE) to create a board that is impervious to rot, insects, and moisture. In regions like Sterling and Herndon, where moisture-driven fungal growth is common on older wooden structures, composite stands as a rot-proof alternative. The 'capped' surface of the board acts as a protective shield against UV rays, ensuring that the deep browns and grays you choose during the design phase are the same colors you see 20 years later.",
-      "Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. We prioritize material knowledge, helping you navigate the various 'tiers' of composite—from basic scalloped-back boards to ultra-premium solid-core PVC. Each has its place depending on your project's vertical architecture and budget. For instance, if you're building a deck with an integrated fire pit or outdoor kitchen, certain high-heat resistant composites are mandatory.",
+      "Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. We prioritize material knowledge, helping you navigate the various 'tiers' of composite-from basic scalloped-back boards to ultra-premium solid-core PVC. Each has its place depending on your project's vertical architecture and budget. For instance, if you're building a deck with an integrated fire pit or outdoor kitchen, certain high-heat resistant composites are mandatory.",
       "Beyond just the boards, we utilize hidden fastener systems. These industrial-grade clips are installed between the gaps of the boards, meaning there are no visible screws on the surface of your deck. This creates a smooth, barefoot-friendly floor that is safer for children and pets, and provides the high-ticket, seamless look expected in areas like Great Falls and Mclean."
     ],
     listItems: [
@@ -89,7 +92,7 @@ const expansionSections = [
   {
     title: "Low Maintenance vs. Zero Maintenance: Real Expectations",
     paragraphs: [
-      "While many contractors promise 'zero maintenance,' we prefer to be honest with our Northern Virginia clients. A composite deck is 'low-maintenance,' meaning it does not require sanding, staining, painting, or sealing—ever. However, like any outdoor surface in areas like Fairfax Station or Burke, it will collect dust, pollen, and leaves. A simple seasonal wash with mild soap and water is all that's required to keep your 5-Star space looking pristine.",
+      "While many contractors promise 'zero maintenance,' we prefer to be honest with our Northern Virginia clients. A composite deck is 'low-maintenance,' meaning it does not require sanding, staining, painting, or sealing-ever. However, like any outdoor surface in areas like Fairfax Station or Burke, it will collect dust, pollen, and leaves. A simple seasonal wash with mild soap and water is all that's required to keep your 5-Star space looking pristine.",
       "The beauty of this low-maintenance profile is the time and money it saves. Homeowners in Prince William County can spend their weekends enjoying their outdoor living space rather than laboring over it. Over a 10-year period, the cost of staining and professional sanding for a wood deck can easily exceed $5,000 to $8,000. When you factor in these savings, composite decking often pays for its price premium in just 5 to 7 years.",
       "Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. We provide our clients with a custom maintenance guide for their specific composite brand, ensuring they know exactly how to care for their investment for maximum longevity."
     ]

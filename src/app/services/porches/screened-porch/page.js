@@ -8,7 +8,10 @@ import ContactHome from '@/components/ContactHome';
 import ServiceVisual from '@/components/ServiceVisual';
 
 export const metadata = {
-  title: "Screened-In Porch Construction | Bug-Free Outdoor Living | Loudoun Decks",
+  alternates: {
+    canonical: "https://ldndecks.com/services/porches/screened-porch"
+  },
+  title: "Screened-In Porch Construction | Bug-Free Outdoor Living",
   description: "Protect your outdoor experience with a custom screened-in porch. High-quality craftsmanship and professional installation in Northern Virginia."
 };
 

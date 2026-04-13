@@ -4,7 +4,10 @@ import FAQCategorized from '@/components/FAQCategorized';
 import SimpleCTA from '@/components/SimpleCTA';
 
 export const metadata = {
-  title: "FAQs | Loudoun Decks",
+  alternates: {
+    canonical: "https://ldndecks.com/faqs"
+  },
+  title: "FAQs",
   description: "Find answers to frequently asked questions about deck building, our process, and our services in Northern Virginia."
 };
 

@@ -5,75 +5,164 @@ import ServiceInclusions from '@/components/ServiceInclusions';
 import ServicesFAQ from '@/components/ServicesFAQ';
 import ContactHome from '@/components/ContactHome';
 import ServiceVisual from '@/components/ServiceVisual';
+import ServiceContentExpansion from '@/components/ServiceContentExpansion';
+import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 
 export const metadata = {
-  title: "Custom Gazebos and Pergolas | Loudoun Decks",
-  description: "Add shade and character to your outdoor space with custom gazebos and pergolas in Northern Virginia. Designed and built by Loudoun Decks."
+  title: "Custom Gazebos and Pergolas Loudoun VA",
+  description: "Add shade, define your outdoor space, and improve property value with custom gazebos and pergolas in Northern Virginia. Designed by Loudoun Decks.",
+  alternates: {
+    canonical: "https://ldndecks.com/services/gazebo-pergola"
+  }
 };
 
-const inclusions = [
+const expansionSections = [
   {
-    title: "Custom Design",
-    desc: "Gazebos and pergolas tailored to the layout of your property and your outdoor goals."
+    title: "Understanding the Difference: Pergolas vs Gazebos",
+    paragraphs: [
+      "When planning to add vertical architecture to your backyard, the terms 'pergola' and 'gazebo' are often used interchangeably, but they serve very different functional purposes.",
+      "A pergola is an outdoor structure featuring an open-beam roof supported by vertical columns or pillars. Its primary purpose isn't to block out the rain, but rather to diffuse harsh sunlight, provide a framework for climbing vines, and create a gorgeous architectural transition space. Conversely, a gazebo acts as an outdoor room. It features a fully closed, pitched roof (often shingled to match your house) and provides total shelter from the elements, allowing you to enjoy your backyard even during summer downpours."
+    ],
+    listItems: [
+      { label: "Pergola Function", text: "Best for partial shade, visual definition, and an airy, open environment." },
+      { label: "Gazebo Function", text: "Best for complete weather protection and creating a distinctly enclosed outdoor room." },
+      { label: "Material Choices", text: "Available in premium natural woods (Cedar, Redwood) or low-maintenance composites and aluminum." },
+      { label: "Placement Integration", text: "Can be built freestanding in a garden or structurally tied into an existing deck or patio." }
+    ]
   },
   {
-    title: "Freestanding or Attached",
-    desc: "Structures designed to complement decks and patios or act as standalone garden features."
+    title: "Custom Pergola Designs for Northern Virginia",
+    paragraphs: [
+      "A pergola is the perfect addition to a bluestone patio or Trex deck. It creates a defined 'ceiling' that instantly makes the outdoor area feel cozy and intentional.",
+      "At Loudoun Decks, we don't install flimsy, kit-in-a-box pergolas. Our structures are custom-engineered. We frequently incorporate automated louvered roof systems (allowing you to open and close the roof slits mechanically), integrated lighting, and outdoor ceiling fans to push away the heavy Virginia humidity."
+    ],
+    listItems: [
+      { label: "Attached vs. Freestanding", text: "We can anchor them directly to your home's ledger board or construct them as standalone backyard focal points." },
+      { label: "Louvered Roof Systems", text: "High-end mechanical systems that let you control exactly how much sun or rain enters the space." },
+      { label: "Privacy Screens", text: "Integrated slatted wood walls on one side of the pergola to block out nosy neighbors." },
+      { label: "Lighting Packages", text: "Hardwired LED string lights and post-mounted sconces for nighttime entertaining." }
+    ]
   },
   {
-    title: "Quality Construction",
-    desc: "Built with a focus on clean design, proper installation, and long-lasting results."
+    title: "Gazebos: Complete Shelter and Elegance",
+    paragraphs: [
+      "If your goal is to spend hours outdoors reading, dining, or working regardless of the sun's intensity or passing rainclouds, a custom gazebo is the superior choice.",
+      "Our gazebos are built to exact residential building codes, meaning they are engineered to withstand extreme wind and heavy snow loads. We craft octagonal, oval, and rectangular gazebos, often finishing the interior ceilings with beautiful tongue-and-groove pine and fully screened-in walls to keep the mosquitos out."
+    ],
+    listItems: [
+      { label: "Screened Enclosures", text: "Floor-to-ceiling screens provide an insect-free dining experience." },
+      { label: "Roof Matching", text: "We match the asphalt shingles or standing seam metal roof to your main house for a cohesive look." },
+      { label: "Electrical Rough-Ins", text: "Full electrical wiring for TVs, heaters, fans, and recessed lighting." },
+      { label: "Flooring Base", text: "Built directly onto elevated decks, concrete slabs, or custom stonework." }
+    ]
   }
 ];
 
 const faqs = [
   {
     q: "What is the main difference between a gazebo and a pergola?",
-    a: "A gazebo typically has a solid roof and provides full shade, while a pergola has an open-beam design that provides partial shade."
+    a: "A gazebo typically has a completely solid, pitched roof and provides full shade and rain protection, while a pergola has an open-beam or slatted roof design that provides partial shade and allows air to flow directly upward."
   },
   {
-    q: "Do you build custom gazebos and pergolas?",
-    a: "Yes. Our gazebos and pergolas are planned based on your outdoor space and preferences."
+    q: "Do I need a building permit for these structures in Loudoun County?",
+    a: "Yes. Almost all permanent vertical structures like gazebos and pergolas require a residential building permit, particularly because they must adhere to setbacks and wind-load engineering requirements. Loudoun Decks handles 100% of the permit process for you."
   },
   {
-    q: "Where do you offer gazebo and pergola services?",
-    a: "We serve Loudoun County, Fairfax County, and Prince William County in Northern Virginia."
+    q: "Can you build a pergola on top of my existing deck?",
+    a: "Yes, but it depends on the foundational framing. Pergolas are heavy. We must first evaluate your deck's joists and footings to ensure they can support the additional structural load and resist wind uplift before proceeding."
   },
   {
-    q: "Do you offer free estimates?",
-    a: "Yes. We provide free estimates for gazebo and pergola projects."
+    q: "How much maintenance does a wood pergola require?",
+    a: "If built with Cedar or Redwood, natural wood pergolas require staining or sealing every 2 to 3 years to maintain their rich color and prevent greying. If you prefer zero maintenance, we highly recommend our vinyl, fiberglass, or heavy-gauge aluminum options."
+  }
+];
+
+const faqSchemaData = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(faq => ({
+    "@type": "Question",
+    "name": faq.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.a
+    }
+  }))
+};
+
+const serviceSchemaData = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Custom Gazebos and Pergolas",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Loudoun Decks"
+  },
+  "areaServed": [
+    { "@type": "State", "name": "Virginia" }
+  ],
+  "description": "Custom design and build services for luxury pergolas, gazebos, and outdoor shade structures in Northern Virginia."
+};
+
+const inclusions = [
+  {
+    title: "Architectural Design Phase",
+    desc: "We provide 3D renderings of the proposed structure, ensuring the rooflines, scale, and materials perfectly complement your property."
+  },
+  {
+    title: "Structural Engineering",
+    desc: "Rigorous wind-load and snow-load calculations to ensure your freestanding roof remains immovable during severe Virginia storms."
+  },
+  {
+    title: "Turnkey Installation",
+    desc: "From pouring massive concrete footings to the final coat of stain, we manage the entire build using in-house master carpenters."
+  },
+  {
+    title: "Integrated Electronics",
+    desc: "Safe, hidden conduit routing for all electrical needs, including outdoor fans, heaters, and lighting arrays."
   }
 ];
 
 export default function GazeboPergolaPage() {
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchemaData) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchemaData) }}
+      />
+
       <ServicesHeader 
-        subtext="Our Services"
-        title="Custom Gazebos and Pergolas"
-        description="Loudoun Decks designs and builds custom gazebos and pergolas for homeowners in Loudoun County, Fairfax County, and Prince William County, creating functional and visually appealing outdoor living spaces."
+        subtext="Gazebos & Pergolas Loudoun VA"
+        title="Custom Built Shade & Structure"
+        description="Add lasting value, incredible shade, and stunning architectural character to your outdoor space with a custom gazebo or pergola engineered by Loudoun Decks."
       />
 
       <ServiceMain 
-        subtitle="Shade & Structure"
-        title="Custom Structures for Your Outdoor Space"
-        description="Gazebos and pergolas add structure, shade, and character to outdoor living areas. Whether placed over a patio, deck, or garden space, these structures help define how outdoor areas are used and enjoyed."
-        listTitle="Choosing Your Structure:"
+        subtitle="Vertical Outdoor Living"
+        title="Define Your Backyard Experience"
+        description="Gazebos and pergolas do more than just provide shade—they fundamentally change how a backyard feels by creating a 'ceiling' outdoors. Whether anchored over a sprawling patio or acting as a secluded garden retreat, these structures serve as the ultimate focal point for entertaining."
+        listTitle="Benefits of Vertical Structures:"
         listItems={[
-          "Gazebos provide a solid roof for full shade",
-          "Pergolas offer partial shade with an open-beam design",
-          "Both options enhance the visual definition of your space",
-          "Custom builds integrate perfectly with existing decks"
+          "Extend your outdoor living season by shielding intense heat or rain",
+          "Create a defined, intimate dining space within a larger yard",
+          "Provide necessary structural framework for outdoor lighting and fans",
+          "Significantly raise property value and neighborhood curb appeal"
         ]}
         image1="/images/img23.jpeg"
         image2="/images/img25.jpeg"
       />
 
+      <ServiceContentExpansion sections={expansionSections} />
+
       <ServiceVisual image="/images/img26.jpeg" />
 
       <ServiceInclusions 
-        title="Our Services"
-        description="We offer professional installation for custom outdoor features built to match your property layout."
+        title="Our Complete Build Services"
+        description="Professional installation requiring expert carpentry and deep structural knowledge."
         items={inclusions}
       />
 
@@ -81,6 +170,8 @@ export default function GazeboPergolaPage() {
         title="Gazebos and Pergolas FAQs"
         faqs={faqs}
       />
+
+      <ServiceAreasGrid />
 
       <ContactHome />
     </main>

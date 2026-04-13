@@ -9,6 +9,9 @@ import ContactHome from '@/components/ContactHome';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 
 export const metadata = {
+  alternates: {
+    canonical: "https://ldndecks.com/deck-repair"
+  },
   title: "Deck Repair Loudoun County | Structural Restoration Fairfax & Prince William",
   description: "Loudoun Decks provides professional deck repair and structural restoration across Northern Virginia. Fix rot, wobbly railings, and unstable ledgers with 1,500+ words of expertise."
 };
@@ -67,7 +70,7 @@ const expansionSections = [
   {
     title: "The Critical Importance of Deck Maintenance in Northern Virginia",
     paragraphs: [
-      "Residential decks in Northern Virginia are subject to extreme environmental stress. Between the high humidity of our summers and the snow and ice cycles of winter, even the best-built decks eventually require professional attention. As a leading deck builder in Loudoun County, Fairfax County, and Prince William County, Loudoun Decks understands that deck repair is not just about aesthetics—it's about preserving a critical structural component of your home.",
+      "Residential decks in Northern Virginia are subject to extreme environmental stress. Between the high humidity of our summers and the snow and ice cycles of winter, even the best-built decks eventually require professional attention. As a leading deck builder in Loudoun County, Fairfax County, and Prince William County, Loudoun Decks understands that deck repair is not just about aesthetics-it's about preserving a critical structural component of your home.",
       "Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. We have seen countless decks in Ashburn and Leesburg that look healthy on the surface but have significant rot hidden beneath the decking boards. This is why we advocate for proactive maintenance and professional safety audits. Catching a loose ledger or a rotting post early can save you thousands of dollars in full replacement costs and prevent potentially dangerous structural failures.",
       "If you are searching for a deck contractor near you who values safety and structural integrity, look no further. Our team provides comprehensive restoration services designed specifically for the unique architectural styles and building codes found across NoVA and Stafford."
     ]
@@ -89,7 +92,7 @@ const expansionSections = [
   {
     title: "Resurfacing vs. Full Replacement: The Cost-Effective Path",
     paragraphs: [
-      "One of our most popular services for homeowners in Loudoun County and Arlington is 'Deck Resurfacing.' This process is ideal if your deck's 'skeleton'—the posts, beams, and joists—is still structurally sound but the top boards are splintering or warped. By removing the surface material and replacing it with brand-new wood or low-maintenance composite like Trex, you can get a 'new deck' look for a fraction of the cost of a full knockdown and rebuild.",
+      "One of our most popular services for homeowners in Loudoun County and Arlington is 'Deck Resurfacing.' This process is ideal if your deck's 'skeleton'-the posts, beams, and joists-is still structurally sound but the top boards are splintering or warped. By removing the surface material and replacing it with brand-new wood or low-maintenance composite like Trex, you can get a 'new deck' look for a fraction of the cost of a full knockdown and rebuild.",
       "During a resurfacing project, we also take the opportunity to reinforce the existing structure. We add 'joist hangers' where they might be missing and double-up on beams to bring the deck in line with modern safety standards. This hybrid approach is extremely popular in Great Falls and Mclean, where large existing footprints make full replacements prohibitively expensive or complicated with modern zoning setbacks.",
       "Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. Whether you need a simple board swap or a massive structural overhaul, we approach every repair project with the same level of care and precision as our new $50k+ custom builds."
     ]

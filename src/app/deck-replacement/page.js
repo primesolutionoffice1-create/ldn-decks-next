@@ -8,7 +8,10 @@ import ContactHome from '@/components/ContactHome';
 import ServiceVisual from '@/components/ServiceVisual';
 
 export const metadata = {
-  title: "Deck Replacement Services | Professional Teardown & Rebuild | Loudoun Decks",
+  alternates: {
+    canonical: "https://ldndecks.com/deck-replacement"
+  },
+  title: "Deck Replacement Services | Professional Teardown & Rebuild",
   description: "Is your old deck beyond repair? We provide complete deck replacement services, handling the teardown and building a beautiful new outdoor space."
 };
 

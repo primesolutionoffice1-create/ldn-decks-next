@@ -181,7 +181,6 @@ export default function Header() {
                         New Decks <CaretRightIcon />
                       </Link>
                       <div className={styles.subMenu}>
-                        <Link href="/services/deck-resurfacing">Deck Resurfacing</Link>
                         <Link href="/services/gazebo-pergola">Gazebo and Pergola</Link>
                         <Link href="/services/porches">Porches</Link>
                       </div>
@@ -210,6 +209,13 @@ export default function Header() {
                         <Link href="/services/fence-cleaning">Fence Cleaning</Link>
                       </div>
                     </div>
+                    
+                    <Link href="/services/deck-resurfacing" style={{ padding: '10px 20px', display: 'block' }}>Deck Resurfacing</Link>
+                    <Link href="/services/trex-calm-shell" style={{ padding: '10px 20px', display: 'block' }}>Trex Calm Shell</Link>
+                    <Link href="/services/deck-stair-lighting" style={{ padding: '10px 20px', display: 'block' }}>Deck Stair Lighting</Link>
+                    <Link href="/services/trex-railings" style={{ padding: '10px 20px', display: 'block' }}>Trex Railings</Link>
+                    <Link href="/services/fire-pits" style={{ padding: '10px 20px', display: 'block' }}>Custom Fire Pits</Link>
+                    <Link href="/services/under-deck-patios" style={{ padding: '10px 20px', display: 'block' }}>Under Deck Patios</Link>
                   </div>
                 </div>
 
@@ -347,7 +353,6 @@ export default function Header() {
                   <div className={`${styles.drawerAccordion} ${activeSubMenu['new-decks'] ? styles.expanded : ''}`}>
                      <div className={styles.drawerAccordionInner}>
                         <div className={styles.mobileDropdown} style={{ background: 'transparent' }}>
-                          <Link href="/services/deck-resurfacing" onClick={() => setIsMobileOpen(false)} style={{ paddingLeft: '50px', fontSize: '13px' }}>Deck Resurfacing</Link>
                           <Link href="/services/gazebo-pergola" onClick={() => setIsMobileOpen(false)} style={{ paddingLeft: '50px', fontSize: '13px' }}>Gazebo and Pergola</Link>
                           <Link href="/services/porches" onClick={() => setIsMobileOpen(false)} style={{ paddingLeft: '50px', fontSize: '13px' }}>Porches</Link>
                         </div>
@@ -393,6 +398,13 @@ export default function Header() {
                         </div>
                      </div>
                   </div>
+
+                  <Link href="/services/deck-resurfacing" onClick={() => setIsMobileOpen(false)}>Deck Resurfacing</Link>
+                  <Link href="/services/trex-calm-shell" onClick={() => setIsMobileOpen(false)}>Trex Calm Shell</Link>
+                  <Link href="/services/deck-stair-lighting" onClick={() => setIsMobileOpen(false)}>Deck Stair Lighting</Link>
+                  <Link href="/services/trex-railings" onClick={() => setIsMobileOpen(false)}>Trex Railings</Link>
+                  <Link href="/services/fire-pits" onClick={() => setIsMobileOpen(false)}>Custom Fire Pits</Link>
+                  <Link href="/services/under-deck-patios" onClick={() => setIsMobileOpen(false)}>Under Deck Patios</Link>
                 </div>
               </div>
             </div>

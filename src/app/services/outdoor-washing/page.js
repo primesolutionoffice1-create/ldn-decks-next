@@ -8,7 +8,10 @@ import ServiceVisual from '@/components/ServiceVisual';
 import ProcessSteps from '@/components/ProcessSteps';
 
 export const metadata = {
-  title: "Outdoor Power Washing Services | Loudoun Decks",
+  alternates: {
+    canonical: "https://ldndecks.com/services/outdoor-washing"
+  },
+  title: "Outdoor Power Washing Services",
   description: "Professional outdoor power washing for decks, patios, and fences in Northern Virginia. Refresh your outdoor surfaces today."
 };
 
@@ -34,7 +37,7 @@ const washingFAQs = [
   },
   {
     q: "Do you power wash decks?",
-    a: "Yes — we provide professional power washing for deck surfaces as part of our outdoor surface cleaning services."
+    a: "Yes - we provide professional power washing for deck surfaces as part of our outdoor surface cleaning services."
   },
   {
     q: "Where do you provide power washing services?",

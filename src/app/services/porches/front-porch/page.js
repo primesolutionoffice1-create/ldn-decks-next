@@ -8,7 +8,10 @@ import ContactHome from '@/components/ContactHome';
 import ServiceVisual from '@/components/ServiceVisual';
 
 export const metadata = {
-  title: "Front Porch Construction | Curb Appeal Upgrades | Loudoun Decks",
+  alternates: {
+    canonical: "https://ldndecks.com/services/porches/front-porch"
+  },
+  title: "Front Porch Construction | Curb Appeal Upgrades",
   description: "Transform your home's entrance with a custom front porch. Professional design and construction services in Northern Virginia."
 };
 

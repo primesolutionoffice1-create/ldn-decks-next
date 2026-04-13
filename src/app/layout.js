@@ -13,6 +13,9 @@ const outfit = Outfit({
 });
 
 export const metadata = {
+  alternates: {
+    canonical: "https://ldndecks.com/layout.js"
+  },
   metadataBase: new URL("https://ldndecks.com"),
   title: {
     default: "Loudoun Decks | Custom Deck Builder Northern Virginia",

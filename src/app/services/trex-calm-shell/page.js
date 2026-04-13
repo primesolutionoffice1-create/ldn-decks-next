@@ -1,0 +1,116 @@
+import React from 'react';
+import Image from 'next/image';
+import ServicesHeader from '@/components/ServicesHeader';
+import ServiceMain from '@/components/ServiceMain';
+import ServiceInclusions from '@/components/ServiceInclusions';
+import ServiceContentExpansion from '@/components/ServiceContentExpansion';
+import ServiceAreasGrid from '@/components/ServiceAreasGrid';
+import ContactHome from '@/components/ContactHome';
+
+export const metadata = {
+  alternates: {
+    canonical: "https://ldndecks.com/services/trex-calm-shell"
+  },
+  title: "Trex Calm Shell Deck Resurfacing Loudoun VA | LDN Decks",
+  description: "Upgrade your existing deck with a fresh, modern look using Trex Calm Shell composite decking in Northern Virginia."
+};
+
+const expansionSections = [
+  {
+    title: "Why Trex Calm Shell",
+    paragraphs: [
+      "Clean, Modern & Built to Last."
+    ],
+    listItems: [
+      { label: "Soft Neutral Color", text: "A soft, neutral tone that perfectly complements any house exterior and landscape." },
+      { label: "High-Performance", text: "Superior scratch, stain, and fade resistance backed by a strong manufacturer warranty." },
+      { label: "Low Maintenance", text: "Never sand, stain, or paint your deck again. A simple soap-and-water cleaning is all it takes." },
+      { label: "Eco-Friendly", text: "Made from 95% recycled materials, it’s an environmentally conscious choice." }
+    ]
+  },
+  {
+    title: "What is Deck Resurfacing?",
+    paragraphs: [
+      "A Smarter Alternative to Full Replacement."
+    ],
+    listItems: [
+      { label: "Cost-Effective", text: "Save money compared to a full rebuild by utilizing your existing framing." },
+      { label: "Faster Installation", text: "Complete your project in less time with fewer structural building requirements." },
+      { label: "Structural Evaluation", text: "We carefully inspect your sub-structure to guarantee it is safe and built to code before adding new boards." },
+      { label: "Complete Upgrade", text: "Enjoy a brand new, modern deck surface without the mess of major demolition." }
+    ]
+  }
+];
+
+const resurfacingProcess = [
+  { title: "Step 1: Frame Inspection", desc: "We evaluate your existing deck structure to ensure it is sound and meets code requirements." },
+  { title: "Step 2: Old Board Removal", desc: "Safe tear-down and disposal of your old, worn-out wood or composite surface boards." },
+  { title: "Step 3: Joist Protection", desc: "Application of joist tape to prevent future rot and extend the life of your existing wood frame." },
+  { title: "Step 4: Surface Installation", desc: "Precision installation of your new Trex Calm Shell decking with hidden fasteners." },
+  { title: "Step 5: Final Review", desc: "Final walkthrough to ensure a perfect, durable finish." }
+];
+
+const whyLdnDecks = [
+  { title: "Local Team", desc: "Proudly serving Loudoun County and Northern Virginia." },
+  { title: "Trusted", desc: "Fully licensed and insured professionals." },
+  { title: "Certified Builders", desc: "Extensive experience with Trex composite systems." },
+  { title: "Craftsmanship", desc: "Clean, detail-oriented installation and high-quality finishes." },
+  { title: "Satisfaction", desc: "Driven by 5-star customer reviews and long-lasting durability." }
+];
+
+export default function TrexCalmShellPage() {
+  return (
+    <main>
+      <ServicesHeader 
+        subtext="Deck Resurfacing"
+        title="Upgrade Your Deck with Trex Calm Shell Resurfacing"
+        description="Give your old deck a fresh, modern look with Trex Calm Shell - a premium composite color designed for durability, style, and low maintenance."
+      />
+
+      <ServiceMain 
+        subtitle="A Smarter Alternative to Full Replacement"
+        title="What is Deck Resurfacing?"
+        description="Deck resurfacing allows you to keep your existing structure while upgrading the surface with new composite decking."
+        listItems={[
+          "Save money vs full rebuild",
+          "Faster installation",
+          "Modern look without major construction",
+          "Extend the life of your deck"
+        ]}
+        image1="/showcase/img21.jpg"
+        image2="/showcase/img22.jpg"
+      />
+
+      <ServiceContentExpansion sections={expansionSections} />
+
+      <ServiceInclusions 
+        title="The Resurfacing Process"
+        description="How we transform your existing structure."
+        items={resurfacingProcess}
+      />
+
+      <section style={{ padding: '60px 20px', maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
+        <h2 style={{ fontSize: '32px', marginBottom: '15px' }}>See the Transformation</h2>
+        <p style={{ marginBottom: '40px', fontSize: '18px', color: '#555' }}>From weathered wood to a beautiful Trex surface.</p>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+          <div style={{ position: 'relative', height: '400px', borderRadius: '8px', overflow: 'hidden' }}>
+            <Image src="/showcase/img23.jpg" alt="Before deck resurfacing" fill style={{ objectFit: 'cover' }} />
+          </div>
+          <div style={{ position: 'relative', height: '400px', borderRadius: '8px', overflow: 'hidden' }}>
+            <Image src="/showcase/img24.jpg" alt="After Trex Calm Shell installation" fill style={{ objectFit: 'cover' }} />
+          </div>
+        </div>
+      </section>
+
+      <ServiceInclusions 
+        title="Why LDN Decks"
+        description="Your dedicated local Trex installer."
+        items={whyLdnDecks}
+      />
+
+      <ServiceAreasGrid />
+
+      <ContactHome />
+    </main>
+  );
+}

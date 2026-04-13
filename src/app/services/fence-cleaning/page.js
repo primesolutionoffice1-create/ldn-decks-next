@@ -7,7 +7,10 @@ import ContactHome from '@/components/ContactHome';
 import ServiceVisual from '@/components/ServiceVisual';
 
 export const metadata = {
-  title: "Fence Cleaning Services | Loudoun Decks",
+  alternates: {
+    canonical: "https://ldndecks.com/services/fence-cleaning"
+  },
+  title: "Fence Cleaning Services",
   description: "Professional fence cleaning for wood and composite fences in Northern Virginia. Restore the original color and look of your fence."
 };
 

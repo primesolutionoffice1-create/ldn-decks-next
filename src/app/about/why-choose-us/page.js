@@ -8,6 +8,9 @@ import WhyChooseDetails from '@/components/WhyChooseDetails';
 import WhyChooseFAQ from '@/components/WhyChooseFAQ';
 
 export const metadata = {
+  alternates: {
+    canonical: "https://ldndecks.com/about/why-choose-us"
+  },
   title: "Why Choose Us | ldndecks",
   description: "Learn why homeowners across Northern Virginia choose Loudoun Decks."
 };

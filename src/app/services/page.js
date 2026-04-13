@@ -6,6 +6,9 @@ import ServicesFooterInfo from '@/components/ServicesFooterInfo';
 import ServicesCallToAction from '@/components/ServicesCallToAction';
 
 export const metadata = {
+  alternates: {
+    canonical: "https://ldndecks.com/services"
+  },
   title: "Our Outdoor Services | ldndecks",
   description: "View our comprehensive residential decking and outdoor solutions."
 };

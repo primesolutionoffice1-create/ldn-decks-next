@@ -8,7 +8,10 @@ import ContactHome from '@/components/ContactHome';
 import ServiceVisual from '@/components/ServiceVisual';
 
 export const metadata = {
-  title: "Open Porch Design & Construction | Outdoor Living | Loudoun Decks",
+  alternates: {
+    canonical: "https://ldndecks.com/services/porches/open-porch"
+  },
+  title: "Open Porch Design & Construction | Outdoor Living",
   description: "Expand your living area with a custom open porch. Enjoy the outdoors with protection from the sun and elements in Northern Virginia."
 };
 

@@ -2,29 +2,27 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styles from './ShowcaseStats.module.css';
 
-// Hook for counting up dynamically
 const useCountUp = (end, duration, inView) => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
+    if (!inView) return;
+    
     let startTimestamp = null;
     let animationFrameId;
 
     const step = (timestamp) => {
       if (!startTimestamp) startTimestamp = timestamp;
       const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-      // Easing function for smoother approach to end value
-      const easeOutQuart = 1 - Math.pow(1 - progress, 4);
-      setCount(Math.floor(easeOutQuart * end));
+      
+      setCount(Math.floor(progress * end));
 
       if (progress < 1) {
         animationFrameId = window.requestAnimationFrame(step);
       }
     };
 
-    if (inView) {
-      animationFrameId = window.requestAnimationFrame(step);
-    }
+    animationFrameId = window.requestAnimationFrame(step);
 
     return () => {
       if (animationFrameId) window.cancelAnimationFrame(animationFrameId);

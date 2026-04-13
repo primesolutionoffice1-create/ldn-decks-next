@@ -7,7 +7,10 @@ import ContactHome from '@/components/ContactHome';
 import ServiceVisual from '@/components/ServiceVisual';
 
 export const metadata = {
-  title: "Concrete Washing Services | Loudoun Decks",
+  alternates: {
+    canonical: "https://ldndecks.com/services/concrete-washing"
+  },
+  title: "Concrete Washing Services",
   description: "Professional concrete washing for driveways, patios, and walkways in Northern Virginia. Remove deep-set stains and grime."
 };
 

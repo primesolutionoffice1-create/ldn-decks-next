@@ -1,65 +1,133 @@
-## CRITICAL (fix immediately)
+# Full Site Audit — Loudoun Decks (ldndecks.com)
 
-**1. "Discover More" button in Hero leads to 404**
-The main CTA link in the hero section (`href="/discover"`) leads to a non-existent page. This is the most visible action a visitor can take, and it leads to a dead-end.
-→ **Fix:** Change `href="/discover"` to `href="/services"` or `href="/about"`.
-
-**2. Responsive layout COMPLETELY BROKEN on mobile (375px)**
-On a phone screen, after the hero, there are **multiple entirely blank/white screens** the user has to scroll through. The Features and Introduction sections generate a massive empty gap. This is a UX-destroying issue — a mobile user will leave instantly.
-→ **Fix:** remove the section that shows ema and address in mobile view, only want to see logo and burger menu icon
----
-
-## IMPORTANT (SEO and credibility impact)
-
-**5. Facebook link goes to generic facebook.com**
-The footer has a social link pointing to `https://www.facebook.com/` — with no specific business page. A user lands on Facebook's homepage, not on Loudoun Decks' page.
-→ **Fix:** Use this url https://www.facebook.com/profile.php?id=61573750423712.
-
-**6. Social links in footer have no accessible name**
-All 4 social links (Facebook, X/Twitter, Instagram, TikTok) have no text and no `aria-label`. Screen readers will read them as purposeless links.
-→ **Fix:** Add `aria-label="Facebook"`, `aria-label="Instagram"`, etc. to each one.
-
-**7. Form fields have no `<label>` or `aria-label`**
-The 5 form fields (name, email, phone, select, textarea) rely solely on `placeholder`. Placeholder text disappears on focus and is not a valid substitute for accessibility.
-→ **Fix:** Add visible `<label>` elements (or at minimum `aria-label`) to each field.
-
-**8. Missing `<meta name="robots">`**
-No robots meta tag is set. While search engines will index by default, it should be explicit — especially since the site is on vercel.app (staging?). If it's staging, it should be `noindex`.
-→ **Fix:** Add `<meta name="robots" content="index, follow">` on production, or `noindex` on staging.
-
-**10. H4 headings — text concatenated without space**
-"Restorationand Maintenance", "Fast andReliable Services", "Skilled andTrained Experts" — they have `<br>` in the HTML, but screen readers and Google read the text as glued together. A space is missing before the `<br>`.
-→ **Fix:** Change `Restoration<br>and` to `Restoration <br>and` (add a space).
+I analyzed 25+ pages across the site, including the homepage, about, all service pages, location pages, blog, showcase, contact, FAQs, team, robots.txt, sitemap, and the 404 page. Here is the complete analysis by category:
 
 ---
 
-## MODERATE (polish and best practices)
+## 1. TECHNICAL SEO — Critical Site-Wide Issues
 
-**12. Missing Skip Navigation link**
-There's no "Skip to main content" link for keyboard accessibility. This is a WCAG 2.1 Level A requirement.
-→ **Fix:** Add a `<a href="#main" class="skip-link">Skip to main content</a>` that's visually hidden but visible on focus.
+**Duplicate `<title>` tag brand name:** Nearly all pages repeat the brand name — for example "Deck Resurfacing Services | Loudoun Decks | Loudoun Decks". This pattern repeats across 10+ pages. It wastes valuable title characters and looks unprofessional in SERPs.
 
-**13. FAQ — 4 elements stuck at opacity 0**
-The FAQ section has 4 children with `opacity: 0`, likely from scroll animations. If the animation doesn't trigger (e.g., slow connections, JavaScript disabled), the content stays invisible.
-→ **Fix:** Set CSS fallback (`opacity: 1` as default) and use JS/IntersectionObserver only to add the animation class.
+**Canonical tags are MISSING on ALL pages** except the homepage (which correctly has a canonical pointing to ldndecks.com). This is a serious issue — especially since the site runs on a Vercel subdomain (ldn-decks-next.vercel.app) that could be indexed as a duplicate.
 
-**14. Team page title — duplicated**
-The title reads "Our Team | Loudoun Decks | Loudoun Decks" — "Loudoun Decks" appears twice.
-→ **Fix:** Set it to "Our Team | Loudoun Decks".
+**Generic meta description on blog posts:** All blog articles share the same generic site-wide meta description ("Premier custom deck builder in Northern Virginia..."). Each article must have a unique meta description.
 
-**17. Structured Data (JSON-LD) — good but incomplete**
-You have a valid LocalBusiness schema, which is great. It could be extended with `FAQPage` schema on the FAQ page, and `Service` schema on service pages.
+**Homepage meta description too long:** 211 characters — Google truncates at ~155-160. It needs to be shortened.
 
-**18. No Privacy Policy / Terms page**
-No privacy policy or terms of service link anywhere. If you're using Google Analytics, cookies, or collecting data through the form, this is legally required.
-→ **Fix:** Create and link Privacy Policy and Terms of Service pages in the footer and add data according to the business.
+**Limited Schema Markup:** The entire site only has LocalBusiness schema. Missing: ArticleSchema/BlogPosting on blog posts, FAQPage schema on FAQ sections (homepage, services, contact — all have FAQ accordions), Service schema on service pages, BreadcrumbList schema (even though breadcrumbs are visually present).
+
+**og:type = "website" everywhere** — on blog articles it should be "article".
+
+**og:url = homepage on blog posts** — each page needs its own og:url.
+
+**Sitemap:** Exists and correctly references ldndecks.com. Robots.txt is OK (Allow: /, Disallow: /private/). Well configured.
 
 ---
 
-## NICE-TO-HAVE (optimizations)
+## 2. CONTENT — Massive Inconsistency Across Pages
 
-- Add `preconnect` for third-party domains (Google Fonts if used, Google Maps embed, etc.)
-- Implement a `sitemap.xml` and `robots.txt` on the production domain
-- Add lazy loading on hero image (the first image should be `priority`/`eager`, the rest `lazy` — which you're already doing well with Next.js Image)
-- Breadcrumbs are present on internal pages (very good), but could also have BreadcrumbList structured data
-- Testimonials could be marked up with `Review` schema
+There is a huge imbalance in content depth:
+
+**Strong pages (1000+ words):** /services/new-decks (~1400+ words, detailed FAQs, information about permits, materials, process — excellent), /services/porches (~1445 words), /services/fence (~1473 words).
+
+**Weak pages (under 400 words):** /services/deck-resurfacing (374 words), /services/patios (289 words), /services/gazebo-pergola (302 words), /services/entry-doors (288 words), /services/deck-washing (329 words), /about (270 words), /about/why-choose-us (~350 words).
+
+**Blog:** Only 4 articles, all under 170 words. This is very problematic — articles under 300 words rarely rank on Google. The /services/new-decks page has 10x more content than any blog article.
+
+**Recommendation:** All service pages should be brought up to the level of the New Decks page (1000-1500+ words), with sections about materials, costs, process, Northern Virginia specifics, and dedicated FAQs. Blog articles need to be 800-1500 words.
+
+---
+
+## 3. LOCATION PAGES — Duplicate Content (Template-Based)
+
+I checked Ashburn, Reston, Vienna, and Woodbridge. They all have the exact same structure, the same H2 headings, the same sections, ~605 words each. The only difference is the city name mechanically swapped:
+
+Ashburn: "Loudoun Decks is the premier custom deck builder in Ashburn, VA."
+Vienna: "Loudoun Decks is the premier custom deck builder in Vienna, VA."
+Woodbridge: "...in Woodbridge, VA."
+
+You have ~40+ location pages built this way. Google may penalize this type of thin/duplicate content as "doorway pages."
+
+**Recommendation:** Each location page should contain unique content: projects completed in that city (linked to the showcase), local specifics (city-specific HOAs, local building regulations), testimonials from clients in that area, references to specific neighborhoods/communities. County pages (Loudoun County, Fairfax County, Prince William County) at only 433 words are thin — these should be the most robust local pages.
+
+---
+
+## 4. TEAM PAGE — Credibility Issues
+
+The /team page lists: John Doe (Manager), Kevin Martin (Manager), Steve Jobs (Manager), Mason Mount (Manager).
+
+"John Doe" and "Steve Jobs" are obviously placeholder names. This seriously undermines site credibility. If you don't want to display the real team, it's better to remove the page entirely than to have visibly fake generic names.
+i have added 2 images in public/team folder. first image nick is the owner, and then teh technicians imaegs is alexdanileandbet, there are 3 guys in oen frame so i suppose you will have to change the design also
+---
+
+## 5. HOMEPAGE — Solid, But With Opportunities
+
+Positives: strong hero image with clear CTA, service sections, testimonials (3 reviews), FAQs, integrated contact form, NAP information (name, address, phone), persistent "Call Now" button, skip link for accessibility, LocalBusiness schema.
+
+Issues found: H1 = "Outdoor Deck & Fence Builder" — doesn't include location. It would be better as "Custom Deck & Fence Builder in Northern Virginia" or similar. The H2 heading "Best Services We'reProviding You" has a formatting error (the line is broken with a newline, creating "We'reProviding" — missing space). Form inputs lack `name` attributes (only have `type`) — this can cause issues with form processing. Testimonials lack Review/AggregateRating schema. The statistics on the showcase page ("0+ DECKS INSTALLED", "0+ SERVICES") literally show "0+" — the counter animation isn't working or the content isn't populated.
+
+---
+
+
+## 7. BLOG — Underdeveloped
+
+4 articles, all under 170 words, no H2 headings, no supplementary images in the body, no contextual internal links, no ArticleSchema/BlogPosting schema, generic meta descriptions on all of them. The blog in its current state provides no SEO value and doesn't serve as an informational resource.
+
+**Recommendation:** Each existing article needs to be expanded to 800-1500 words with structured H2/H3 headings. Suggested new article targets: "How Much Does a Deck Cost in Northern Virginia 2026?", "Trex vs TimberTech vs AZEK: Complete Comparison", "Do I Need a Permit for a Deck in Loudoun County?", "Best Deck Designs for Sloped Backyards", "How to Maintain Your Composite Deck" — all with high SEO potential and commercial/informational intent.
+so add atelast 10 more blogs, with all SEO optimized content..
+---
+
+## 9. NAVIGATION & STRUCTURE
+
+Positives: clear navigation with mega-menu, dropdowns on About/Services/Near You, breadcrumbs on pages, visible "Call Now" button in the header, social links in the footer, custom 404 page (with a creative deck-themed message).
+
+Issues: the "News" link in the top bar goes to /blog, but the main menu also has "Blog" — inconsistency (News vs Blog). The About, Why Choose Us, and Our Process pages have redundant content between them — many sections repeat ("Why Homeowners Contact Loudoun Decks", the 4-step process). These could be consolidated. The mega-menu has 40+ location links — the high volume can dilute link equity.
+
+---
+
+## 10. PERFORMANCE — Excellent
+
+Load time: ~235ms, DOM Content Loaded: 78ms, TTFB: 14ms. Next.js on Vercel delivers excellent performance. 17 out of 18 images are lazy-loaded. This is not a major concern.
+
+Issue: Most images are JPEG, not WebP/AVIF. Converting would reduce file sizes by ~25-35%.
+
+---
+
+## 11. ACCESSIBILITY — Decent
+
+Skip link present, lang="en" set, 19 aria-labels, all images have alt attributes. Good.
+
+---
+
+## PRIORITIZED ACTION PLAN
+
+**URGENT (Week 1-2):**
+- Fix duplicate titles ("| Loudoun Decks | Loudoun Decks" → "| Loudoun Decks")
+- Add canonical tags on ALL pages (pointing to ldndecks.com)
+- Write unique meta descriptions for all blog articles
+- Fix homepage meta description (shorten to 155 characters)
+- Replace placeholder names on the Team page (or hide the page)
+- Fix the counter on the Showcase page (shows "0+")
+- Fix the "We'reProviding" heading (missing space) also remove AI generatee  — from everywhere
+
+**IMPORTANT (Week 2-4):**
+- Expand weak service pages (patios, deck-resurfacing, gazebo, entry-doors, deck-washing) to 1000+ words
+- Add FAQPage schema on all pages with FAQ sections
+- Add BlogPosting schema on articles
+- Add BreadcrumbList schema
+- Fix og:type and og:url on blog posts
+- Expand existing blog articles to 800-1500 words
+
+**MEDIUM TERM (Month 2):**
+- Differentiate location page content (add unique content per city)
+- Optimize images (WebP, proper dimensions)
+- Add Review/AggregateRating schema on testimonials
+- Consolidate redundant About pages
+
+**LONG TERM (Month 3+):**
+- Publish 2-4 new blog articles per month (800-1500 words each)
+- Add more real testimonials and case studies
+- Implement an internal linking strategy (each page should have 3-5 contextual links)
+- Add Service schema on service pages
+
+Do you have questions about any of these recommendations, or would you like me to go deeper on a specific area?

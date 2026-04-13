@@ -1,97 +1,197 @@
 import React from 'react';
+import Image from 'next/image';
 import ServicesHeader from '@/components/ServicesHeader';
 import ServiceMain from '@/components/ServiceMain';
 import ServiceInclusions from '@/components/ServiceInclusions';
-import ProcessSteps from '@/components/ProcessSteps';
-import ServicesFAQ from '@/components/ServicesFAQ';
+import ServiceContentExpansion from '@/components/ServiceContentExpansion';
+import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import ContactHome from '@/components/ContactHome';
-import ServiceVisual from '@/components/ServiceVisual';
 
 export const metadata = {
-  title: "Deck Resurfacing Services | Loudoun Decks",
-  description: "Professional deck resurfacing for residential homes in Northern Virginia. Refresh and extend the life of your existing deck."
+  title: "Deck Resurfacing Loudoun VA | TimberTech Vintage Collection",
+  description: "Transform your old deck with premium composite resurfacing. Upgrade your existing frame with TimberTech Vintage Collection in Northern Virginia.",
+  alternates: {
+    canonical: "https://ldndecks.com/services/deck-resurfacing"
+  }
 };
 
-const inclusions = [
+const expansionSections = [
   {
-    title: "Condition Review",
-    desc: "We start by reviewing the structural condition of your existing deck to ensure it is a safe candidate for resurfacing."
+    title: "Why Resurface with the TimberTech Vintage Collection",
+    paragraphs: [
+      "The TimberTech Vintage Collection is the gold standard of composite decking in the industry. While many homeowners are familiar with standard composite boards, Vintage stands apart by utilizing an Advanced PVC material core that contains zero wood fibers.",
+      "This 100% synthetic composition makes it effectively immune to the moisture, swelling, mold, and rot that slowly degrades traditional wood-composite blends in Northern Virginia’s humid climate. Its proprietary capping technology resists fading and staining, ensuring your deck looks as vibrant in year 20 as it did on day one."
+    ],
+    listItems: [
+      { label: "Unmatched Aesthetics", text: "Wire-brushed texture that perfectly mimics the intricate grain patterns of premium hardwood." },
+      { label: "Advanced PVC Core", text: "Zero organic material means zero food source for mold, mildew, or termites." },
+      { label: "Barefoot Friendly", text: "Stays up to 30% cooler than competitive composite products under the hot Virginia sun." },
+      { label: "Fade Resistance", text: "Backed by an industry-leading 50-Year Fade & Stain Warranty." },
+      { label: "Eco-Conscious", text: "Manufactured in the USA from over 50% recycled polymer material." }
+    ]
   },
   {
-    title: "Appearance Update",
-    desc: "Planning specific updates to improve the appearance and function of your outdoor space."
+    title: "Popular TimberTech Vintage Color Options",
+    paragraphs: [
+      "The Vintage Collection offers a curated palette of elegant, complex colors that feature highlights and lowlights designed to emulate natural aged wood. During our on-site consultation, we provide physical samples so you can see how the light interacts with the boards against your home's exterior."
+    ],
+    listItems: [
+      { label: "Coastline", text: "A highly sought-after cool, weathered gray. Perfect for modern and coastal-inspired architectural styles." },
+      { label: "English Walnut", text: "A rich, saturated brown with deep, realistic graining. Ideal for traditional brick homes in Loudoun." },
+      { label: "Weathered Teak", text: "A warm, golden-brown hue that invokes the feel of a classic luxury yacht deck." },
+      { label: "Dark Hickory", text: "A striking, deeply colored board bringing a sophisticated contrast to lighter home sidings." }
+    ]
   },
   {
-    title: "Surface Refresher",
-    desc: "Refreshing the deck surface with modern materials to extend its overall use and durability."
+    title: "The Financial & Lifestyle Benefits of Resurfacing",
+    paragraphs: [
+      "If your deck's substructure (the posts, beams, and joists) is still structurally sound, a full tear-down is financially wasteful. Deck resurfacing is the ultimate high-ROI upgrade."
+    ],
+    listItems: [
+      { label: "Cost-Effective", text: "Save thousands by reusing your existing pressure-treated structural frame rather than paying for outright demolition and rebuilding." },
+      { label: "Faster Turnaround", text: "Resurfacing projects are typically completed in half the time of full new builds, minimizing disruption to your yard." },
+      { label: "Zero Maintenance", text: "Reclaim your weekends. Never spend another summer power washing, sanding, or staining splintered wood again." },
+      { label: "Safety First", text: "Eliminate the hazard of splinters, loose nails, and slippery moss buildup. TimberTech provides a safe, highly slip-resistant surface for children and pets." }
+    ]
   }
 ];
 
+const resurfacingProcess = [
+  { title: "Step 1: Structural Integrity Inspection", desc: "Before we ever lay a new board, we rigorously inspect your existing ledger board, joists, and concrete footings. If the sub-structure is rotting, we cannot resurface it. Safety is always our primary directive." },
+  { title: "Step 2: Permit Acquisition", desc: "If modifications to the railing system or structural reinforcements are needed, we handle all Loudoun County building permits required to ensure total code compliance." },
+  { title: "Step 3: Strategic Demolition", desc: "We carefully remove and haul away your old, warped surface boards and railing systems without damaging the foundational joist structure beneath." },
+  { title: "Step 4: Joist Protection & Reinforcement", desc: "We apply heavy-duty butyl joist tape over the top of your existing wood framing. This crucial barrier prevents future water intrusion and dramatically extends the life of your wood." },
+  { title: "Step 5: Surface & Railing Installation", desc: "We install your new TimberTech Vintage boards using hidden fastening systems for a clean, screw-free surface. We then install upgraded railings (such as Trex Signature Aluminum or glass panels)." },
+  { title: "Step 6: Lighting Integration & Clean-Up", desc: "Low-voltage LED lighting is wired into the stairs and posts. A final safety inspection is conducted, and your yard is left spotless." }
+];
+
 const resurfacingFAQs = [
-  {
-    q: "What is deck resurfacing?",
-    a: "Deck resurfacing focuses on updating the surface and appearance of an existing deck rather than building a completely new structure from scratch."
+  { 
+    question: "How do I know if my deck is a candidate for resurfacing?", 
+    answer: "A deck is typically a good candidate if the foundational posts, beams, and joists are sturdy, free of deep rot, and built to modern safety codes. During our free evaluation, we structurally probe the wood. If your frame is over 25 years old or severely compromised by water damage, a full replacement will be necessary." 
   },
-  {
-    q: "Do you inspect the deck before resurfacing?",
-    a: "Yes. We conduct a thorough review of the existing deck structure during our consultation to ensure it is structurally sound."
+  { 
+    question: "How much does deck resurfacing cost compared to building a new deck?", 
+    answer: "On average, resurfacing your deck with premium composite material costs 25-40% less than building a brand new deck of the same size, primarily because you are saving significantly on foundational lumber and structural labor." 
   },
-  {
-    q: "What areas do you serve for deck resurfacing?",
-    a: "We provide deck resurfacing services throughout Loudoun County, Fairfax County, and Prince William County in Northern Virginia."
+  { 
+    question: "Do I need a building permit to resurface my deck in Virginia?", 
+    answer: "If you are strictly replacing the surface decking boards (the 'skin') on a one-for-one basis, many jurisdictions consider it a repair that does not require a permit. However, if the project involves altering the structural framing, changing the stairs, or installing a new railing system, a permit is almost always required. We navigate this entirely for you." 
   },
-  {
-    q: "Do you offer free consultations?",
-    a: "Yes. We offer free consultations for homeowners considering a refresh of their existing deck surface."
+  { 
+    question: "Can I change the layout or size of my deck during resurfacing?", 
+    answer: "Usually, yes. While the main body of the deck remains the same, we can often frame out extensions, widen stairs, or add specialized bumps-outs for a grill station while utilizing the main existing structure." 
   }
+];
+
+const faqSchemaData = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": resurfacingFAQs.map(faq => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer
+    }
+  }))
+};
+
+const serviceSchemaData = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Custom Deck Resurfacing",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Loudoun Decks"
+  },
+  "areaServed": [
+    { "@type": "State", "name": "Virginia" }
+  ],
+  "description": "Professional deck resurfacing services utilizing TimberTech Vintage Collection composite boards, structural reinforcement, and aluminum railings in Northern Virginia."
+};
+
+const whyLdnDecks = [
+  { title: "TimberTech Specialists", desc: "We have extensive, specialized experience handling and installing Advanced PVC composite materials with hidden fastening systems." },
+  { title: "Structural Rigor", desc: "We never 'slap lipstick on a pig'. If your frame is unsafe, we will not resurface it. We prioritize the long-term safety of your family." },
+  { title: "Turnkey Project Management", desc: "From lumber disposal to final LED light wiring, we manage the entire ecosystem of your backyard remodel." },
+  { title: "Local Market Knowledge", desc: "Deep understanding of HOA architectural review board guidelines across Ashburn, Leesburg, and Fairfax." },
+  { title: "Dedicated Support", desc: "We provide direct, communicative project management from day one until the final walkthrough." }
 ];
 
 export default function DeckResurfacingPage() {
   return (
     <main>
+      {/* Dynamic SEO Schemas */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchemaData) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchemaData) }}
+      />
+
       <ServicesHeader 
-        subtext="Our Services"
-        title="Deck Resurfacing Services"
-        description="Loudoun Decks provides professional deck resurfacing for homeowners in Northern Virginia, helping refresh and improve existing outdoor spaces without the cost of a full rebuild."
+        subtext="Deck Resurfacing Loudoun VA"
+        title="Upgrade Your Deck with TimberTech Vintage Collection"
+        description="Don't tear down a structurally sound deck. Transform your outdated outdoor space into a premium retreat with high-end TimberTech Vintage Collection composite boards—engineered for beauty, durability, and a lifetime of performance."
       />
 
       <ServiceMain 
-        subtitle="Refresh & Renew"
-        title="Refresh Your Existing Outdoor Space"
-        description="If your deck structure is still usable but the surface has aged or worn over time, deck resurfacing is a practical, value-driven option. We help homeowners update their decks to improve both appearance and usability."
-        listTitle="When to Consider Resurfacing:"
+        subtitle="The Smarter Upgrade Path"
+        title="Give Your Existing Deck a Second Life"
+        description="Loudoun Decks specializes in premium deck resurfacing across Northern Virginia. Deck resurfacing is a highly efficient remodeling process that allows you to salvage your existing pressure-treated structural frame while replacing the aging surface boards, railings, stairs, and fascia with modern, zero-maintenance composite materials."
         listItems={[
-          "The main structure is still functional and safe",
-          "The surface boards show signs of wear or aging",
-          "You want to upgrade to composite materials",
-          "You want to improve your home's value quickly"
+          "Save up to 40% vs a full tear-down and structural replacement",
+          "Significantly faster construction timeline with less yard disruption",
+          "Instant architectural upgrade with premium aluminum railings",
+          "Extend the functional lifespan of your outdoor space by decades"
         ]}
-        image1="/images/img06.jpeg"
-        image2="/images/img10.jpeg"
+        image1="/showcase/img03.jpg"
+        image2="/showcase/img05.jpeg"
       />
 
-      <ServiceVisual image="/images/img12.jpeg" />
+      <ServiceContentExpansion sections={expansionSections} />
 
       <ServiceInclusions 
-        title="Our Resurfacing Process"
-        description="Our deck resurfacing service focuses on maximizing the life of your existing investment with modern, durable finishes."
-        items={inclusions}
+        title="Our Engineered Resurfacing Process"
+        description="A rigorous, multi-step process ensuring total structural integrity before a single new board is fastened."
+        items={resurfacingProcess}
       />
+
+      <section style={{ padding: '60px 20px', maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
+        <h2 style={{ fontSize: '32px', marginBottom: '15px' }}>See the Transformation</h2>
+        <p style={{ marginBottom: '40px', fontSize: '18px', color: '#555' }}>Same base structure. Completely transformed aesthetic.</p>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+          <div style={{ position: 'relative', height: '400px', borderRadius: '8px', overflow: 'hidden', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}>
+            <Image src="/showcase/img03.jpg" alt="Before deck resurfacing - old wood" fill style={{ objectFit: 'cover' }} />
+          </div>
+          <div style={{ position: 'relative', height: '400px', borderRadius: '8px', overflow: 'hidden', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}>
+            <Image src="/showcase/img05.jpeg" alt="After TimberTech Vintage resurfacing" fill style={{ objectFit: 'cover' }} />
+          </div>
+        </div>
+      </section>
+
+      <section style={{ background: '#f9f9f9', padding: '60px 20px' }}>
+        <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+          <h2 style={{ fontSize: '32px', marginBottom: '30px', textAlign: 'center' }}>Resurfacing FAQs</h2>
+          {resurfacingFAQs.map((faq, index) => (
+            <div key={index} style={{ marginBottom: '20px', background: '#fff', padding: '25px', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.05)' }}>
+              <h3 style={{ fontSize: '20px', marginBottom: '10px', color: '#B58E3B' }}>{faq.question}</h3>
+              <p style={{ lineHeight: '1.6', color: '#444' }}>{faq.answer}</p>
+            </div>
+          ))}
+        </div>
+      </section>
 
       <ServiceInclusions 
-        title="Why Choose Resurfacing"
-        description="Many homeowners choose resurfacing as a way to refresh their outdoor space efficiently and economically."
-        items={[
-          { title: "Cost Effective", desc: "Saves the significant expense of rebuilding a perfectly good structure from scratch." },
-          { title: "Faster Project", desc: "Resurfacing typically takes less time than a full installation, getting you back to your deck sooner." },
-          { title: "Material Upgrade", desc: "An excellent opportunity to transition from wood to low-maintenance composite materials." }
-        ]}
+        title="Local Experts You Can Trust"
+        description="Why choose Loudoun Decks for your remodel?"
+        items={whyLdnDecks}
       />
 
-      <ServicesFAQ 
-        title="Deck Resurfacing FAQs"
-        faqs={resurfacingFAQs}
-      />
+      <ServiceAreasGrid />
 
       <ContactHome />
     </main>

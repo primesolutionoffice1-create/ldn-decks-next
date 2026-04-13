@@ -13,7 +13,10 @@ const LocationIcon = () => (
 );
 
 export const metadata = {
-  title: "Deck Builder in Prince William County, VA | Manassas & Woodbridge | Loudoun Decks",
+  alternates: {
+    canonical: "https://ldndecks.com/near-you/prince-william-county"
+  },
+  title: "Deck Builder in Prince William County, VA | Manassas & Woodbridge",
   description: "Professional deck and outdoor living contractor serving Prince William County, VA. Custom decks, patios, and porches in Manassas, Woodbridge, and Haymarket."
 };
 
@@ -90,7 +93,7 @@ export default function PrinceWilliamCountyPage() {
                 <li>Building according to local standards and guidelines</li>
               </ul>
               <p className={styles.permitFooter}>
-                This means you don't have to worry about paperwork or code compliance — we include this as part of a smooth, start-to-finish experience.
+                This means you don't have to worry about paperwork or code compliance - we include this as part of a smooth, start-to-finish experience.
               </p>
             </div>
           </div>

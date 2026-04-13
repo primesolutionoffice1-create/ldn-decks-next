@@ -1,6 +1,9 @@
 import React from 'react';
 
 export const metadata = {
+  alternates: {
+    canonical: "https://ldndecks.com/privacy-policy"
+  },
   title: "Privacy Policy",
   description: "Learn how Loudoun Decks protects your personal information and privacy."
 };

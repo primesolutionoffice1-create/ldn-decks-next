@@ -6,9 +6,9 @@ import styles from './ServicesGrid.module.css';
 const servicesContent = [
   {
     id: 1,
-    title: 'Custom Deck Construction',
-    desc: 'We design and build custom decks tailored to the layout of your home and how you plan to use your outdoor space. Each deck project is planned around the property, available space, and homeowner preferences. Custom decks can be designed as standalone outdoor spaces or integrated with other outdoor features such as patios or porches.',
-    image: '/images/img24.jpeg',
+    title: 'Custom Deck Design & Build',
+    desc: 'From concept to completion, we design and build fully custom decks tailored to your space, style, and budget — no templates, no shortcuts.',
+    image: '/showcase/img08.jpeg',
     link: '/services/new-decks'
   },
   {
@@ -20,9 +20,9 @@ const servicesContent = [
   },
   {
     id: 3,
-    title: 'Patios',
-    desc: 'We build patios that provide a functional outdoor area for relaxation and gatherings. Patios can be designed as standalone outdoor spaces or as part of a larger outdoor living layout connected to decks or other features. Each patio project is planned to complement the home and outdoor environment.',
-    image: '/images/img26.jpeg',
+    title: 'Bluestone Patios',
+    desc: 'Upgrade your outdoor space with a high-end bluestone patio — natural beauty, unmatched durability, and a timeless look.',
+    image: '/showcase/img11.jpeg',
     link: '/services/patios'
   },
   {
@@ -41,6 +41,41 @@ const servicesContent = [
   },
   {
     id: 6,
+    title: 'Deck Stair Lighting',
+    desc: 'Custom-built LED lighting systems installed directly into your deck stairs for safety and a luxurious evening atmosphere.',
+    image: '/showcase/light-img.jpeg',
+    link: '/services/deck-stair-lighting'
+  },
+  {
+    id: 7,
+    title: 'Trex Railings',
+    desc: 'Upgrade your deck with modern Trex railing systems and a custom cocktail top — perfect for entertaining and relaxing.',
+    image: '/showcase/img06.jpeg',
+    link: '/services/trex-railings'
+  },
+  {
+    id: 8,
+    title: 'Custom Fire Pits',
+    desc: 'Transform your backyard into a warm, inviting space with a custom-built fire pit — perfect for relaxing nights and entertaining guests.',
+    image: '/showcase/img15.jpeg',
+    link: '/services/fire-pits'
+  },
+  {
+    id: 9,
+    title: 'Under Deck Patios',
+    desc: 'Maximize your outdoor living space with a custom under-deck patio system — protected from rain, clean, and perfect for relaxing or entertaining year-round.',
+    image: '/showcase/img19.jpg',
+    link: '/services/under-deck-patios'
+  },
+  {
+    id: 10,
+    title: 'Trex Calm Shell Resurfacing',
+    desc: 'Give your old deck a fresh, modern look with Trex Calm Shell — a premium composite color designed for durability, style, and low maintenance.',
+    image: '/showcase/img21.jpg',
+    link: '/services/trex-calm-shell'
+  },
+  {
+    id: 11,
     title: 'How to Get Started',
     desc: 'If you’re considering a deck or outdoor living project, the first step is a free consultation. During this conversation, we discuss your ideas, review the space, and answer any questions you may have. This helps homeowners understand their options before moving forward.',
     image: '/images/img29.jpeg',

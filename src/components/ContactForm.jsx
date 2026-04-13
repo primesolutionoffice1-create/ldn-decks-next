@@ -2,16 +2,24 @@
 import React, { useState } from 'react';
 import styles from './ContactForm.module.css';
 
+import { sendContactEmail } from '@/server/sendEmail';
+
 export default function ContactForm() {
   const [status, setStatus] = useState(null);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus("submitting");
-    // Mock submission logic
-    setTimeout(() => {
+    const formData = new FormData(e.target);
+    const result = await sendContactEmail(formData);
+    
+    if (result && result.success) {
        setStatus("success");
-    }, 1500);
+    } else {
+       // Ideally show an error, but fallback to resetting status
+       alert("Failed to send message. Please try again.");
+       setStatus(null);
+    }
   };
 
   return (

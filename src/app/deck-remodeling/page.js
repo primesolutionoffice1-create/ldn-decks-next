@@ -8,7 +8,10 @@ import ContactHome from '@/components/ContactHome';
 import ServiceVisual from '@/components/ServiceVisual';
 
 export const metadata = {
-  title: "Custom Deck Remodeling & Upgrades | Transform Your Space | Loudoun Decks",
+  alternates: {
+    canonical: "https://ldndecks.com/deck-remodeling"
+  },
+  title: "Custom Deck Remodeling & Upgrades | Transform Your Space",
   description: "Upgrade your existing deck with modern features. From new railings to built-in lighting, we remodel decks to fit your modern lifestyle."
 };
 

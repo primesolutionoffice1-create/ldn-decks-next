@@ -32,13 +32,13 @@ const inclusions = [
 export default function ConcreteWashingPage() {
   return (
     <main>
-      <ServicesHeader 
+      <ServicesHeader
         subtext="Our Services"
         title="Concrete Washing Services"
         description="Loudoun Decks provides expert concrete washing for homeowners in Northern Virginia, restoring the bright, clean look of your masonry."
       />
 
-      <ServiceMain 
+      <ServiceMain
         subtitle="Hardscape Refresh"
         title="Restore Your Patios and Walkways"
         description="Concrete and masonry are porous materials that tend to 'soak up' stains and accumulate ground-in dirt. Our high-grade power washing services reach deep into the surface to lift contaminants that a garden hose simply can't touch."
@@ -49,19 +49,19 @@ export default function ConcreteWashingPage() {
           "Sidewalks and entry walkways",
           "Pool decks and masonry walls"
         ]}
-        image1="/images/img11.jpeg"
-        image2="/images/img13.jpeg"
+        image1="/concretewash.jpg"
+        image2="/concretewash2.jpg"
       />
 
-      <ServiceVisual image="/images/img15.jpeg" />
+      <ServiceVisual image="/outdoorwashing2.webp" />
 
-      <ServiceInclusions 
+      <ServiceInclusions
         title="Why Concrete Washing?"
         description="Regular cleaning not only looks better but also prevents the long-term degradation of your hardscape materials."
         items={inclusions}
       />
 
-      <ServicesFAQ 
+      <ServicesFAQ
         title="Concrete Washing FAQs"
         faqs={[
           { q: "Can you remove oil stains from my driveway?", a: "We have specialized treatments for oil and grease that significantly reduce their appearance, though total removal depends on how long the stain has been set." },

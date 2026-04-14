@@ -32,13 +32,13 @@ const inclusions = [
 export default function FenceCleaningPage() {
   return (
     <main>
-      <ServicesHeader 
+      <ServicesHeader
         subtext="Our Services"
         title="Fence Cleaning Services"
         description="Loudoun Decks provides professional fence cleaning for homeowners in Northern Virginia, helping maintain the integrity and appearance of your property boundaries."
       />
 
-      <ServiceMain 
+      <ServiceMain
         subtitle="Boundary Refresh"
         title="Restore the Life of Your Fencing"
         description="Fences are constantly exposed to the elements and often the first part of your home to show signs of weathering. Whether you have natural wood or modern composite fencing, our professional cleaning services can strip away years of exposure and leave your fence looking new."
@@ -49,19 +49,19 @@ export default function FenceCleaningPage() {
           "Cleans composite surfaces without abrasive scrubbing",
           "Increases the aesthetic appeal of your backyard"
         ]}
-        image1="/images/img17.jpeg"
-        image2="/images/img19.jpeg"
+        image1="/fensewash.jpg"
+        image2="/fensewash1.jpg"
       />
 
-      <ServiceVisual image="/images/img21.jpeg" />
+      <ServiceVisual image="/fenasewash2.jpg" />
 
-      <ServiceInclusions 
+      <ServiceInclusions
         title="Our Fence Cleaning Approach"
         description="We use specialized techniques tailored to the specific material of your fence to ensure a thorough clean without any structural damage."
         items={inclusions}
       />
 
-      <ServicesFAQ 
+      <ServicesFAQ
         title="Fence Cleaning FAQs"
         faqs={[
           { q: "Will cleaning make my grey fence look like new wood again?", a: "Yes! For natural wood fences, our process removes the dead outer fibers (the grey layer) to expose the fresh, original color of the wood." },

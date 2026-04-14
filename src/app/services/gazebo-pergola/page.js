@@ -135,13 +135,13 @@ export default function GazeboPergolaPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchemaData) }}
       />
 
-      <ServicesHeader 
+      <ServicesHeader
         subtext="Gazebos & Pergolas Loudoun VA"
         title="Custom Built Shade & Structure"
         description="Add lasting value, incredible shade, and stunning architectural character to your outdoor space with a custom gazebo or pergola engineered by Loudoun Decks."
       />
 
-      <ServiceMain 
+      <ServiceMain
         subtitle="Vertical Outdoor Living"
         title="Define Your Backyard Experience"
         description="Gazebos and pergolas do more than just provide shade—they fundamentally change how a backyard feels by creating a 'ceiling' outdoors. Whether anchored over a sprawling patio or acting as a secluded garden retreat, these structures serve as the ultimate focal point for entertaining."
@@ -153,20 +153,20 @@ export default function GazeboPergolaPage() {
           "Significantly raise property value and neighborhood curb appeal"
         ]}
         image1="/images/img23.jpeg"
-        image2="/images/img25.jpeg"
+        image2="/images/img67.webp"
       />
 
       <ServiceContentExpansion sections={expansionSections} />
 
-      <ServiceVisual image="/images/img26.jpeg" />
+      <ServiceVisual image="/gazeboandparagols.webp" />
 
-      <ServiceInclusions 
+      <ServiceInclusions
         title="Our Complete Build Services"
         description="Professional installation requiring expert carpentry and deep structural knowledge."
         items={inclusions}
       />
 
-      <ServicesFAQ 
+      <ServicesFAQ
         title="Gazebos and Pergolas FAQs"
         faqs={faqs}
       />

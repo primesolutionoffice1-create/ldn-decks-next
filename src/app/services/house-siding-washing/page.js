@@ -32,13 +32,13 @@ const inclusions = [
 export default function HouseSidingWashingPage() {
   return (
     <main>
-      <ServicesHeader 
+      <ServicesHeader
         subtext="Our Services"
         title="House Siding Washing"
         description="Loudoun Decks provides professional house siding washing for homeowners in Northern Virginia, helping restore the original beauty of your home's exterior."
       />
 
-      <ServiceMain 
+      <ServiceMain
         subtitle="Home Refresh"
         title="Safely Restore Your Home's Curb Appeal"
         description="Your home's siding is its first line of defense against the elements. Over time, it can accumulate dirt, pollen, and biological growth that can dull its finish. Our controlled washing process cleans effectively without risking damage to your siding."
@@ -49,19 +49,19 @@ export default function HouseSidingWashingPage() {
           "Instantly improves the look of your property",
           "Prepares siding for painting if needed"
         ]}
-        image1="/images/img05.jpeg"
-        image2="/images/img07.jpeg"
+        image1="/outdoorwash2.webp"
+        image2="/outdoorwash.jpg"
       />
 
-      <ServiceVisual image="/images/img09.jpeg" />
+      <ServiceVisual image="/outdoorwashing2.webp" />
 
-      <ServiceInclusions 
+      <ServiceInclusions
         title="What's Included"
         description="We focus on a thorough yet gentle cleaning process that covers your entire home's exterior."
         items={inclusions}
       />
 
-      <ServicesFAQ 
+      <ServicesFAQ
         title="Siding Washing FAQs"
         faqs={[
           { q: "Is pressure washing safe for my siding?", a: "We use soft-washing or controlled pressure methods specifically designed to clean siding without forcing water behind the panels or causing cracks." },

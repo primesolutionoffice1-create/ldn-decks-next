@@ -66,21 +66,21 @@ const patioProcess = [
 ];
 
 const patioFAQs = [
-  { 
-    question: "Do I need a permit for a patio in Northern Virginia?", 
-    answer: "Most ground-level patios that do not alter the major grading or drainage of the property do not require a building permit. However, if your patio includes retaining walls over 2 feet, electrical lines for kitchens, or sits in a designated RPA (Resource Protection Area), county permits are required. Loudoun Decks handles all of this compliance for you." 
+  {
+    question: "Do I need a permit for a patio in Northern Virginia?",
+    answer: "Most ground-level patios that do not alter the major grading or drainage of the property do not require a building permit. However, if your patio includes retaining walls over 2 feet, electrical lines for kitchens, or sits in a designated RPA (Resource Protection Area), county permits are required. Loudoun Decks handles all of this compliance for you."
   },
-  { 
-    question: "How much does a bluestone patio cost compared to stamped concrete?", 
-    answer: "Bluestone is a premium natural material, so the upfront material and labor costs are higher than poured or stamped concrete. However, stamped concrete is highly prone to cracking during Virginia's freeze-thaw cycles. Bluestone, laid on a flexible aggregate base, rarely cracks and can be easily repaired stone-by-stone, offering a vastly superior long-term ROI." 
+  {
+    question: "How much does a bluestone patio cost compared to stamped concrete?",
+    answer: "Bluestone is a premium natural material, so the upfront material and labor costs are higher than poured or stamped concrete. However, stamped concrete is highly prone to cracking during Virginia's freeze-thaw cycles. Bluestone, laid on a flexible aggregate base, rarely cracks and can be easily repaired stone-by-stone, offering a vastly superior long-term ROI."
   },
-  { 
-    question: "How do you handle water runoff and drainage?", 
-    answer: "Proper drainage is the hallmark of professional hardscaping. We grade all our patios with a subtle, imperceptible slope (typically 1/8 inch per foot) directing water away from your home's foundation. If your yard has existing water pooling issues, we integrate French drains and catch basins beneath the patio structure." 
+  {
+    question: "How do you handle water runoff and drainage?",
+    answer: "Proper drainage is the hallmark of professional hardscaping. We grade all our patios with a subtle, imperceptible slope (typically 1/8 inch per foot) directing water away from your home's foundation. If your yard has existing water pooling issues, we integrate French drains and catch basins beneath the patio structure."
   },
-  { 
-    question: "Can I put a hot tub on my bluestone patio?", 
-    answer: "Absolutely. If you plan to install a hot tub, we simply adjust the depth and compaction of our crushed stone aggregate base in that specific footprint to support the immense weight (often exceeding 4,000 lbs filled) without shifting the surrounding stones." 
+  {
+    question: "Can I put a hot tub on my bluestone patio?",
+    answer: "Absolutely. If you plan to install a hot tub, we simply adjust the depth and compaction of our crushed stone aggregate base in that specific footprint to support the immense weight (often exceeding 4,000 lbs filled) without shifting the surrounding stones."
   }
 ];
 
@@ -132,13 +132,13 @@ export default function PatiosPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchemaData) }}
       />
 
-      <ServicesHeader 
+      <ServicesHeader
         subtext="Bluestone Patio Loudoun VA"
         title="Premium Bluestone Patios Built to Last"
         description="Upgrade your outdoor living area with a custom bluestone patio. Experience natural beauty, unmatched durability, and a timeless architectural aesthetic that transforms your backyard into a luxury retreat."
       />
 
-      <ServiceMain 
+      <ServiceMain
         subtitle="Natural Stone. Timeless Design."
         title="What is Bluestone Hardscaping?"
         description="Loudoun Decks is the premier custom hardscaper in Northern Virginia. Bluestone is a heavy, layered sandstone quarried primarily in New York and Pennsylvania. Renowned for its durability and slip-resistant texture, it is the absolute gold-standard for luxury patios in the Mid-Atlantic region."
@@ -148,13 +148,13 @@ export default function PatiosPage() {
           "Ideal for patios, walkways, pool decks, and fire pits",
           "Decades of proven weather resistance"
         ]}
-        image1="/showcase/img11.jpeg"
+        image1="/images/img36.jpeg"
         image2="/showcase/img12.jpeg"
       />
 
       <ServiceContentExpansion sections={expansionSections} />
 
-      <ServiceInclusions 
+      <ServiceInclusions
         title="Our Layout & Build Process"
         description="A patio is only as good as what’s underneath it. We employ a rigorous, engineered approach to base layering."
         items={patioProcess}
@@ -198,7 +198,7 @@ export default function PatiosPage() {
         </div>
       </section>
 
-      <ServiceInclusions 
+      <ServiceInclusions
         title="Why LDN Decks for Hardscaping"
         description="Local experts delivering high-end, indestructible architecture."
         items={whyLdnDecks}

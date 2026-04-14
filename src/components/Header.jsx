@@ -176,15 +176,11 @@ export default function Header() {
                   <Link href="/services" className={isActive("/services")}>Services <CaretDownIcon /></Link>
                   <div className={styles.dropdown}>
                     {/* Pillar 1: New Decks */}
-                    <div className={styles.nestedNavItem}>
-                      <Link href="/services/new-decks">
-                        New Decks <CaretRightIcon />
-                      </Link>
-                      <div className={styles.subMenu}>
-                        <Link href="/services/gazebo-pergola">Gazebo and Pergola</Link>
-                        <Link href="/services/porches">Porches</Link>
-                      </div>
-                    </div>
+                    <Link href="/services/new-decks" style={{ padding: '10px 20px', display: 'block' }}>New Decks</Link>
+                    <Link href="/services/deck-inspection" style={{ padding: '10px 20px', display: 'block' }}>Deck Inspection</Link>
+                    <Link href="/services/deck-maintenance" style={{ padding: '10px 20px', display: 'block' }}>Deck Maintenance</Link>
+                    <Link href="/services/gazebo-pergola" style={{ padding: '10px 20px', display: 'block' }}>Gazebo and Pergola</Link>
+                    <Link href="/services/porches" style={{ padding: '10px 20px', display: 'block' }}>Porches</Link>
 
                     {/* Pillar 2: Patios */}
                     <div className={styles.nestedNavItem}>
@@ -341,23 +337,11 @@ export default function Header() {
                 <div className={styles.mobileDropdown}>
                   
                   {/* Pillar 1: New Decks */}
-                  <div 
-                    className={styles.mobileNavLink} 
-                    onClick={(e) => { e.stopPropagation(); toggleSubMenu('new-decks'); }}
-                    style={{ fontSize: '14px', fontWeight: '500', padding: '10px 20px 10px 30px', background: 'transparent' }}
-                  >
-                    <Link href="/services/new-decks" onClick={() => setIsMobileOpen(false)} style={{ padding: 0 }}>New Decks</Link>
-                    {activeSubMenu['new-decks'] ? <MinusIcon /> : <PlusIcon />}
-                  </div>
-                  
-                  <div className={`${styles.drawerAccordion} ${activeSubMenu['new-decks'] ? styles.expanded : ''}`}>
-                     <div className={styles.drawerAccordionInner}>
-                        <div className={styles.mobileDropdown} style={{ background: 'transparent' }}>
-                          <Link href="/services/gazebo-pergola" onClick={() => setIsMobileOpen(false)} style={{ paddingLeft: '50px', fontSize: '13px' }}>Gazebo and Pergola</Link>
-                          <Link href="/services/porches" onClick={() => setIsMobileOpen(false)} style={{ paddingLeft: '50px', fontSize: '13px' }}>Porches</Link>
-                        </div>
-                     </div>
-                  </div>
+                  <Link href="/services/new-decks" onClick={() => setIsMobileOpen(false)}>New Decks</Link>
+                  <Link href="/services/deck-inspection" onClick={() => setIsMobileOpen(false)}>Deck Inspection</Link>
+                  <Link href="/services/deck-maintenance" onClick={() => setIsMobileOpen(false)}>Deck Maintenance</Link>
+                  <Link href="/services/gazebo-pergola" onClick={() => setIsMobileOpen(false)}>Gazebo and Pergola</Link>
+                  <Link href="/services/porches" onClick={() => setIsMobileOpen(false)}>Porches</Link>
 
                   {/* Pillar 2: Patios */}
                   <div 

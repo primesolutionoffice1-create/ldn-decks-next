@@ -44,13 +44,13 @@ export default function Introduction() {
         {/* Images Column */}
         <div className={styles.imagesCol}>
           <div className={styles.subImgWrapper}>
-            <Image src="/images/img08.jpeg" alt="Relaxing deck" fill className={styles.imgProps} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+            <Image src="/images/img53.jpeg" alt="Relaxing deck" fill className={styles.imgProps} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
           </div>
 
           <div className={styles.frameOutline}></div>
 
           <div className={styles.mainImgWrapper}>
-            <Image src="/images/img60.jpeg" alt="Decking experts" fill className={styles.imgProps} sizes="(max-width: 768px) 100vw, 50vw" />
+            <Image src="/images/img31.jpeg" alt="Decking experts" fill className={styles.imgProps} sizes="(max-width: 768px) 100vw, 50vw" />
           </div>
         </div>
 

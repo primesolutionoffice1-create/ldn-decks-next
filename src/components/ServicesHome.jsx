@@ -8,19 +8,19 @@ const servicesData = [
     id: 1,
     title: 'New Decks',
     description: 'Custom-designed and structurally engineered decks using premium composite or natural wood materials to expand your outdoor space.',
-    image: '/images/img100.jpg',
+    image: '/images/img58.jpeg',
   },
   {
     id: 2,
     title: 'Deck Resurfacing',
     description: 'Breathe new life into your existing deck frame with completely refreshed surface boards, modern railings, and updated stairs.',
-    image: '/images/img49.jpeg',
+    image: '/showcase/img04.jpg',
   },
   {
     id: 3,
     title: 'Outdoor Washing',
     description: 'Professional high-pressure washing and treatment services to remove years of grime, mold, and weather damage from your wood.',
-    image: '/images/img50.jpeg',
+    image: '/homeimg4.webp',
   }
 ];
 

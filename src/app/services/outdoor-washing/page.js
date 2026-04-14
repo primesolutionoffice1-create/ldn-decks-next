@@ -69,11 +69,11 @@ export default function OutdoorWashingPage() {
           "Instantly refreshes the look of your home's exterior",
           "Prepares surfaces for new staining or sealing"
         ]}
-        image1="/images/img04.jpeg"
-        image2="/images/img08.jpeg"
+        image1="/outdoorwashing2.webp"
+        image2="/outdoorwashing3.jpg"
       />
 
-      <ServiceVisual image="/images/img14.jpeg" />
+      <ServiceVisual image="/outdoorwashing2.webp" />
 
       <ProcessSteps />
 

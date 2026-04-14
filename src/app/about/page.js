@@ -3,7 +3,7 @@ import AboutHeader from '@/components/AboutHeader';
 import QualityLeader from '@/components/QualityLeader';
 import StatsRow from '@/components/StatsRow';
 import AboutDetails from '@/components/AboutDetails';
-import TeamSection from '@/components/TeamSection';
+import TeamGrid from '@/components/TeamGrid';
 
 export const metadata = {
   alternates: {
@@ -20,7 +20,7 @@ export default function AboutPage() {
       <QualityLeader />
       <StatsRow />
       <AboutDetails />
-      <TeamSection />
+      <TeamGrid />
     </main>
   );
 }

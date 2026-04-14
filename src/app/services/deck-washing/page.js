@@ -141,13 +141,13 @@ export default function DeckWashingPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchemaData) }}
       />
 
-      <ServicesHeader 
+      <ServicesHeader
         subtext="Maintenance & Restoration"
         title="Professional Deck Washing Services"
         description="Safely strip away years of grime, dangerous mildew, and gray oxidation without damaging your wood or composite boards."
       />
 
-      <ServiceMain 
+      <ServiceMain
         subtitle="Protect Your Investment"
         title="Safe, Effective Restoration"
         description="Whether you have an expensive IPE hardwood deck or low-maintenance Trex boards, aggressive high-pressure washing can cause irreversible damage. Loudoun Decks employs advanced 'Soft Washing' techniques that rely on high water volume and specialized detergents to melt dirt away effortlessly."
@@ -158,24 +158,24 @@ export default function DeckWashingPage() {
           "Deep cleans the porous surface properly before applying stains",
           "Instantly raises the curb appeal of your backyard landscape"
         ]}
-        image1="/images/img01.jpeg"
-        image2="/images/img02.jpeg"
+        image1="/outdoorwashing2.webp"
+        image2="/homeimg4.webp"
       />
 
       <ServiceContentExpansion sections={expansionSections} />
 
-      <ServiceProcessHorizontal 
+      <ServiceProcessHorizontal
         title="Our Soft Washing Methodology"
         steps={washingSteps}
       />
 
-      <ServiceInclusions 
+      <ServiceInclusions
         title="What Our Cleaning Service Includes"
         description="A meticulous approach to restoring your entire outdoor footprint."
         items={inclusions}
       />
 
-      <ServicesFAQ 
+      <ServicesFAQ
         title="Deck Washing FAQs"
         faqs={deckWashingFAQs}
       />

@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import Features from "@/components/Features";
+import HandCraftedDecks from "@/components/HandCraftedDecks";
 import Introduction from "@/components/Introduction";
 import ServicesHome from "@/components/ServicesHome";
 import Testimonials from "@/components/Testimonials";
@@ -21,6 +22,7 @@ export default function Home() {
       <Hero />
       <Features />
       <Introduction />
+      <HandCraftedDecks />
       <ServicesHome />
       <Testimonials />
       <FAQ />

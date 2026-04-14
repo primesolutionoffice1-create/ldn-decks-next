@@ -109,13 +109,13 @@ const expansionSections = [
 export default function FencePage() {
   return (
     <main>
-      <ServicesHeader 
+      <ServicesHeader
         subtext="5-Star Google Rated Installation"
         title="Custom Fence Design & Installation"
         description="Loudoun Decks provides premier fence construction for homeowners in Loudoun County, Fairfax County, and Prince William County. Secure, private, and beautiful yard sanctuaries."
       />
 
-      <ServiceMain 
+      <ServiceMain
         subtitle="Privacy & Beauty"
         title="Expert Fence Contractor Serving Northern Virginia"
         description="Define your property with a custom-engineered fence. We specialize in high-quality wood, vinyl, and aluminum designs for residential homes in Arlington, Stafford, and total NoVA."
@@ -126,19 +126,19 @@ export default function FencePage() {
           "Complete HOA and permit assistance",
           "Professional post-setting and leveling"
         ]}
-        image1="/images/img14.jpeg"
-        image2="/images/img02.jpeg"
+        image1="/fence.webp"
+        image2="/fence2.avif"
       />
 
       <ServiceContentExpansion sections={expansionSections} />
 
-      <ServiceInclusions 
+      <ServiceInclusions
         title="Security Built for Virginia Families"
         description="Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. Our fences are built to last in the Mid-Atlantic climate."
         items={inclusions}
       />
 
-      <ServicesFAQ 
+      <ServicesFAQ
         title="Fence Installation & Design FAQs"
         faqs={fenceFAQs}
       />

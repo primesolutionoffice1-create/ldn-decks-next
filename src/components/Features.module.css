@@ -1,16 +1,7 @@
 .featuresSection {
-  background-color: #f7f4ed;
-  /* Warm beige background */
-  padding: 20px 0;
-
-  /* Very subtle CSS diamond pattern matching the screenshot texture */
-  background-image:
-    linear-gradient(45deg, rgba(0, 0, 0, 0.015) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.015) 75%, rgba(0, 0, 0, 0.015)),
-    linear-gradient(45deg, rgba(0, 0, 0, 0.015) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.015) 75%, rgba(0, 0, 0, 0.015));
-  background-size: 40px 40px;
-  background-position: 0 0, 20px 20px;
-  width: 85%;
-  margin: 0 auto;
+  background-color: var(--site-color);
+  padding: 50px 0;
+  width: 100%;
 }
 
 .container {
@@ -19,76 +10,83 @@
   padding: 0 40px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 30px;
 }
 
 .featureBox {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 24px;
+  text-align: center;
+  gap: 15px;
   flex: 1;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.4s ease-out;
 }
 
-.iconWrapper {
+.featureBox.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.iconCircle {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #ffffff;
+  transition: transform 0.3s ease;
 }
 
-.icon {
-  object-fit: contain;
+.featureBox:hover .iconCircle {
+  transform: translateY(-10px);
 }
 
 .textContent {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-}
-
-.number {
-  color: #a49c90;
-  /* Matching dusty brown tone of the number */
-  font-size: 15px;
-  font-weight: 500;
-  margin-bottom: 6px;
+  gap: 8px;
 }
 
 .title {
-  color: var(--black);
+  color: #ffffff;
   font-size: 19px;
   font-weight: 700;
-  line-height: 1.4;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.subtitle {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
   margin: 0;
 }
 
 /* --- Responsiveness --- */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 900px) {
   .container {
     flex-wrap: wrap;
     column-gap: 40px;
     row-gap: 50px;
   }
-
   .featureBox {
     flex: 1 1 40%;
   }
 }
 
-@media screen and (max-width: 768px) {
-  .featuresSection {
-    padding: 20px 0;
-    width: 95%;
-  }
-
+@media screen and (max-width: 600px) {
   .container {
     flex-direction: column;
-    align-items: flex-start;
     padding: 0 20px;
   }
-
   .featureBox {
     flex: 1 1 100%;
     width: 100%;
-    gap: 20px;
   }
 }

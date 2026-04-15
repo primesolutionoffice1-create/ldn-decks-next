@@ -2,6 +2,7 @@ import Hero from "@/components/Hero";
 import Features from "@/components/Features";
 import HandCraftedDecks from "@/components/HandCraftedDecks";
 import Introduction from "@/components/Introduction";
+import PromoModal from "@/components/PromoModal";
 import ServicesHome from "@/components/ServicesHome";
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
@@ -19,6 +20,7 @@ export const metadata = {
 export default function Home() {
   return (
     <main className={styles.main}>
+      <PromoModal />
       <Hero />
       <Features />
       <Introduction />

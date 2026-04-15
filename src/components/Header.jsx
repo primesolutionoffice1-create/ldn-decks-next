@@ -117,6 +117,12 @@ export default function Header() {
 
   return (
     <div className={styles.headerWrapper}>
+      {/* Mobile Sticky Top Call Bar */}
+      <a href="tel:+15716557207" className={styles.mobileTopCallBar} aria-label="Call Us Now">
+        <PhoneIcon />
+        <span>Call Now for a Free Estimate</span>
+      </a>
+
       <header className={styles.header}>
         {/* Left Logo Area */}
         <div className={styles.logoArea}>

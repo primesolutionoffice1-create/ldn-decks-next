@@ -3,6 +3,10 @@
   width: 100%;
 }
 
+.mobileTopCallBar {
+  display: none;
+}
+
 .header {
   display: flex;
   width: 100%;
@@ -395,6 +399,29 @@
 
 /* Tablet View (<= 1024px) */
 @media screen and (max-width: 1024px) {
+  .headerWrapper {
+    padding-top: 44px; /* Offset for the fixed call bar */
+  }
+
+  .mobileTopCallBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--site-color, #E65C2B);
+    color: var(--white, #ffffff);
+    width: 100%;
+    padding: 12px;
+    font-weight: 700;
+    font-size: 15px;
+    text-decoration: none;
+    z-index: 9998; /* Just below mobileMenu (9999) */
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    gap: 8px;
+  }
+
   .logoArea {
     width: 200px; /* Compress slightly */
   }

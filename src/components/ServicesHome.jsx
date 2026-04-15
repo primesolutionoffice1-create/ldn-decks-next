@@ -59,8 +59,11 @@ export default function ServicesHome() {
           ))}
         </div>
 
-        <div className={styles.btnWrapper}>
-          <Link href="/services" className={styles.ctaButton}>
+        <div className={styles.btnWrapper} style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
+          <a href="tel:+15716557207" className={styles.ctaButton}>
+            Call To Discuss Properties
+          </a>
+          <Link href="/services" className={styles.ctaButton} style={{ backgroundColor: 'transparent', border: '2px solid var(--site-color)', color: 'var(--site-color)' }}>
             More Services
           </Link>
         </div>

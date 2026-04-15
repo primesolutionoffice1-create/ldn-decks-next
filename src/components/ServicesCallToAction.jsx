@@ -10,9 +10,9 @@ export default function ServicesCallToAction() {
         <p className={styles.description}>
           Get in touch with our experts today to schedule your free consultation and transform your outdoor living space.
         </p>
-        <Link href="/contact" className={styles.ctaButton}>
-          Contact Us
-        </Link>
+        <a href="tel:+15716557207" className={styles.ctaButton}>
+          Call Now: (571) 655-7207
+        </a>
       </div>
     </section>
   );

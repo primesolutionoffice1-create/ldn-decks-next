@@ -101,9 +101,9 @@ export default function Introduction() {
             </div>
           </div>
 
-          <Link href="/services" className={styles.ctaButton}>
-            Discover More
-          </Link>
+          <a href="tel:+15716557207" className={styles.ctaButton}>
+            Call For A Free Quote
+          </a>
         </div>
       </div>
     </section>

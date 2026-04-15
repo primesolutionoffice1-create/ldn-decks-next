@@ -65,6 +65,14 @@
   color: var(--site-color);
 }
 
+.buttonGroup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
 .ctaButton {
   display: inline-block;
   background-color: var(--site-color);
@@ -79,6 +87,24 @@
 .ctaButton:hover {
   background-color: var(--black);
   color: var(--white);
+  transform: translateY(-3px);
+}
+
+.ctaButtonAlt {
+  display: inline-block;
+  background-color: transparent;
+  color: var(--white);
+  border: 2px solid var(--white);
+  font-size: 16px;
+  font-weight: 600;
+  padding: 16px 45px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.ctaButtonAlt:hover {
+  background-color: var(--white);
+  color: var(--black);
   transform: translateY(-3px);
 }
 
@@ -108,7 +134,7 @@
     letter-spacing: 2px;
   }
 
-  .ctaButton {
+  .ctaButton, .ctaButtonAlt {
     padding: 15px 35px;
   }
 }

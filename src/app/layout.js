@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ScrollToTop from "../components/ScrollToTop";
+import FloatingCallButton from "../components/FloatingCallButton";
 import StructuredData from "../components/StructuredData";
 import Breadcrumbs from "../components/Breadcrumbs";
 
@@ -63,6 +64,7 @@ export default function RootLayout({ children }) {
         </main>
         <Footer />
         <ScrollToTop />
+        <FloatingCallButton />
       </body>
     </html>
   );

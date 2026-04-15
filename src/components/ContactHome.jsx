@@ -77,6 +77,14 @@ export default function ContactHome() {
                 <strong>13704 Winding Oak Cir, Centreville, VA 20121, Virginia</strong>
               </div>
             </div>
+
+            <div className={styles.infoItem}>
+              <div className={styles.iconBox}><MapIcon /></div>
+              <div className={styles.infoText}>
+                <span>Main Office & Warehouse</span>
+                <strong>8735 Quarry Rd., Unit 102, Manassas, VA, 20110</strong>
+              </div>
+            </div>
           </div>
         </div>
 

@@ -15,9 +15,14 @@ export default function Hero() {
         <h1 className={styles.title}>
           Northern Virginia’s Premium Deck Builder for Custom Outdoor Living
         </h1>
-        <Link href="/services" className={styles.ctaButton}>
-          Discover More
-        </Link>
+        <div className={styles.buttonGroup}>
+          <a href="tel:+15716557207" className={styles.ctaButton}>
+            Call Now: (571) 655-7207
+          </a>
+          <Link href="/contact" className={styles.ctaButtonAlt}>
+            Get Free Estimate
+          </Link>
+        </div>
       </div>
     </section>
   );

@@ -4,7 +4,7 @@ import styles from './ContactForm.module.css';
 
 import { sendContactEmail } from '@/server/sendEmail';
 
-export default function ContactForm() {
+export default function ContactForm({ hideInfoCol = false, noPadding = false }) {
   const [status, setStatus] = useState(null);
 
   const handleSubmit = async (e) => {
@@ -23,37 +23,39 @@ export default function ContactForm() {
   };
 
   return (
-    <section className={styles.formSection}>
-      <div className={styles.container}>
-        <div className={styles.grid}>
+    <section className={`${styles.formSection} ${noPadding ? styles.noPadding : ''}`}>
+      <div className={`${styles.container} ${noPadding ? styles.noPadding : ''}`}>
+        <div className={`${styles.grid} ${hideInfoCol ? styles.fullWidthGrid : ''}`}>
           {/* Info Column */}
-          <div className={styles.infoCol}>
-             <h2>Reach Out Directly</h2>
-             <p className={styles.infoDesc}>Our team reviews inquiries as they come in and responds as soon as possible during business hours.</p>
-             
-             <div className={styles.contactPoint}>
-                <strong>Phone:</strong> <br/>
-                <a href="tel:+15716557207" aria-label="Call Loudoun Decks">(571) 655-7207</a>
-             </div>
-             
-             <div className={styles.contactPoint}>
-                <strong>Email:</strong> <br/>
-                <a href="mailto:office@ldndecks.com" aria-label="Email Loudoun Decks office">office@ldndecks.com</a>
-             </div>
-             
-             <div className={styles.contactPoint}>
-                <strong>Service Areas:</strong> <br/>
-                Loudoun County, Fairfax County, Prince William County, Arlington, and Stafford.
-             </div>
-             
-             <div className={styles.contactPoint}>
-                <strong>Main Office & Warehouse:</strong> <br/>
-                8735 Quarry Rd., Unit 102, Manassas, VA, 20110
-             </div>
-          </div>
+          {!hideInfoCol && (
+            <div className={styles.infoCol}>
+               <h2>Reach Out Directly</h2>
+               <p className={styles.infoDesc}>Our team reviews inquiries as they come in and responds as soon as possible during business hours.</p>
+               
+               <div className={styles.contactPoint}>
+                  <strong>Phone:</strong> <br/>
+                  <a href="tel:+15716557207" aria-label="Call Loudoun Decks">(571) 655-7207</a>
+               </div>
+               
+               <div className={styles.contactPoint}>
+                  <strong>Email:</strong> <br/>
+                  <a href="mailto:office@ldndecks.com" aria-label="Email Loudoun Decks office">office@ldndecks.com</a>
+               </div>
+               
+               <div className={styles.contactPoint}>
+                  <strong>Service Areas:</strong> <br/>
+                  Loudoun County, Fairfax County, Prince William County, Arlington, and Stafford.
+               </div>
+               
+               <div className={styles.contactPoint}>
+                  <strong>Main Office & Warehouse:</strong> <br/>
+                  8735 Quarry Rd., Unit 102, Manassas, VA, 20110
+               </div>
+            </div>
+          )}
           
           {/* Form Column */}
-          <div className={styles.formCol}>
+          <div className={`${styles.formCol} ${noPadding ? styles.formColNoPadding : ''}`}>
              {status === "success" ? (
                <div className={styles.successBlock} role="alert">
                   <h3>Message Sent Successfully!</h3>
@@ -123,6 +125,41 @@ export default function ContactForm() {
                      />
                   </div>
                   
+                  <div className={styles.row}>
+                     <div className={styles.inputGroup}>
+                        <label htmlFor="budget">Approximate Budget <span className={styles.req}>*</span></label>
+                        <select 
+                          id="budget" 
+                          name="budget" 
+                          required 
+                          defaultValue=""
+                          className={styles.selectInput}
+                        >
+                           <option value="" disabled>Select Budget Range</option>
+                           <option value="$10k - $20k">$10k - $20k</option>
+                           <option value="$20k - $40k">$20k - $40k</option>
+                           <option value="$40k+">$40k+</option>
+                           <option value="Not Sure">Not Sure</option>
+                        </select>
+                     </div>
+                     <div className={styles.inputGroup}>
+                        <label htmlFor="timeline">Project Timeline <span className={styles.req}>*</span></label>
+                        <select 
+                          id="timeline" 
+                          name="timeline" 
+                          required 
+                          defaultValue=""
+                          className={styles.selectInput}
+                        >
+                           <option value="" disabled>Select Start Date</option>
+                           <option value="Immediately">Immediately</option>
+                           <option value="1-3 Months">1-3 Months</option>
+                           <option value="3-6 Months">3-6 Months</option>
+                           <option value="Just Exploring">Just Exploring</option>
+                        </select>
+                     </div>
+                  </div>
+
                   <div className={styles.row}>
                      <div className={styles.inputGroup}>
                         <label htmlFor="city">City</label>

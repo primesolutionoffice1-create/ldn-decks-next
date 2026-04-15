@@ -9,10 +9,27 @@
   padding: 0 40px;
 }
 
+.noPadding {
+  padding: 0 !important;
+  background-color: transparent !important;
+}
+
+.formColNoPadding {
+  padding: 20px 20px 40px 20px !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  margin-bottom: 20px;
+}
+
 .grid {
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 60px;
+}
+
+.fullWidthGrid {
+  grid-template-columns: 1fr;
+  gap: 0;
 }
 
 /* Info Column Styles */
@@ -96,6 +113,7 @@
 }
 
 .inputGroup input,
+.inputGroup select,
 .inputGroup textarea {
   width: 100%;
   padding: 14px 16px;
@@ -104,6 +122,7 @@
   font-size: 16px;
   font-family: inherit;
   transition: border-color 0.3s;
+  background-color: var(--white);
 }
 
 .inputGroup input:focus,

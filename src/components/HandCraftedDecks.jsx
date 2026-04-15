@@ -30,10 +30,10 @@ const cards = [
     href: '/services/gazebo-pergola'
   },
   {
-    title: 'Deck\nWashing',
-    description: 'Protect your investment with professional power washing and sealing services.',
-    image: '/homeimg4.webp',
-    href: '/services/deck-washing'
+    title: 'Custom\nPorches',
+    description: 'Extend your living space with a beautiful, weather-protected screened-in porch.',
+    image: '/images/img23.jpeg',
+    href: '/services/porches'
   }
 ];
 
@@ -46,7 +46,7 @@ export default function HandCraftedDecks() {
           <div className={styles.checkmarks}>
             <span className={styles.checkItem}><CheckIcon /> High-Quality</span>
             <span className={styles.checkItem}><CheckIcon /> Custom Designs</span>
-            <span className={styles.checkItem}><CheckIcon /> At Prices That Fit Your Budget</span>
+            <span className={styles.checkItem}><CheckIcon /> Custom-Engineered Construction</span>
           </div>
         </div>
 

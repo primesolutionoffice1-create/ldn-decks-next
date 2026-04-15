@@ -97,7 +97,7 @@ export default function ContactHome() {
              </div>
           ) : (
             <form onSubmit={handleSubmit} className={styles.contactForm}>
-              <h3>Request A Free Quote</h3>
+              <h3>Request Your Free Design Consultation</h3>
               {status === "error" && <p style={{color: 'red', fontSize: '14px', marginBottom: '10px'}}>There was an error sending your message. Please try again.</p>}
               <div className={styles.formGrid}>
                 <div className={styles.inputGroup}>
@@ -114,8 +114,27 @@ export default function ContactHome() {
                     <option value="" disabled>Select Service</option>
                     <option value="New Decks">New Decks</option>
                     <option value="Deck Resurfacing">Deck Resurfacing</option>
+                    <option value="Porches">Screened Porches</option>
                     <option value="Fencing">Fencing</option>
                     <option value="Other">Other</option>
+                  </select>
+                </div>
+                <div className={styles.inputGroup}>
+                  <select name="budget" required defaultValue="" aria-label="Approximate Budget">
+                    <option value="" disabled>Approximate Budget</option>
+                    <option value="$10k - $20k">$10k - $20k</option>
+                    <option value="$20k - $40k">$20k - $40k</option>
+                    <option value="$40k+">$40k+</option>
+                    <option value="Not Sure">Not Sure</option>
+                  </select>
+                </div>
+                <div className={styles.inputGroup}>
+                  <select name="timeline" required defaultValue="" aria-label="Project Timeline">
+                    <option value="" disabled>Project Timeline</option>
+                    <option value="Immediately">Immediately</option>
+                    <option value="1-3 Months">1-3 Months</option>
+                    <option value="3-6 Months">3-6 Months</option>
+                    <option value="Just Exploring">Just Exploring</option>
                   </select>
                 </div>
               </div>

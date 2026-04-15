@@ -3,6 +3,8 @@ import Features from "@/components/Features";
 import HandCraftedDecks from "@/components/HandCraftedDecks";
 import Introduction from "@/components/Introduction";
 import PromoModal from "@/components/PromoModal";
+import HowItWorks from "@/components/HowItWorks";
+import MaterialPartners from "@/components/MaterialPartners";
 import ServicesHome from "@/components/ServicesHome";
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
@@ -23,7 +25,9 @@ export default function Home() {
       <PromoModal />
       <Hero />
       <Features />
+      <MaterialPartners />
       <Introduction />
+      <HowItWorks />
       <HandCraftedDecks />
       <ServicesHome />
       <Testimonials />

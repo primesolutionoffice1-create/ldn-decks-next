@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import ContactForm from "@/components/ContactForm";
 import styles from "./Header.module.css";
 
 const EnvelopeIcon = () => (
@@ -75,6 +76,7 @@ const slugify = (text) => {
 
 export default function Header() {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const [isContactOpen, setIsContactOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
   const [activeSubMenu, setActiveSubMenu] = useState({}); // Changed to object for multi-level support
   const pathname = usePathname();
@@ -103,9 +105,9 @@ export default function Header() {
     }));
   };
 
-  // Prevent scrolling when mobile menu is open
+  // Prevent scrolling when any drawer is open
   React.useEffect(() => {
-    if (isMobileOpen) {
+    if (isMobileOpen || isContactOpen) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'unset';
@@ -113,15 +115,15 @@ export default function Header() {
     return () => {
       document.body.style.overflow = 'unset';
     };
-  }, [isMobileOpen]);
+  }, [isMobileOpen, isContactOpen]);
 
   return (
     <div className={styles.headerWrapper}>
       {/* Mobile Sticky Top Call Bar */}
-      <a href="tel:+15716557207" className={styles.mobileTopCallBar} aria-label="Call Us Now">
+      <button onClick={() => setIsContactOpen(true)} className={styles.mobileTopCallBar} aria-label="Open Contact Form">
         <PhoneIcon />
-        <span>Call Now for a Free Estimate</span>
-      </a>
+        <span>Get A Free Estimate</span>
+      </button>
 
       <header className={styles.header}>
         {/* Left Logo Area */}
@@ -490,6 +492,24 @@ export default function Header() {
               <span>Call Us Now</span>
             </a>
           </div>
+        </div>
+      </div>
+
+      {/* Contact Drawer Panel */}
+      <div className={`${styles.contactDrawerOverlay} ${isContactOpen ? styles.open : ''}`} onClick={() => setIsContactOpen(false)}></div>
+      <div className={`${styles.contactDrawer} ${isContactOpen ? styles.open : ''}`}>
+        <div className={styles.mobileMenuHeader}>
+          <h3 style={{ margin: 0, fontSize: '20px', fontWeight: 700, color: '#333' }}>Get A Free Quote</h3>
+          <button
+            className={styles.closeBtn}
+            onClick={() => setIsContactOpen(false)}
+            aria-label="Close Contact Drawer"
+          >
+            <CloseIcon />
+          </button>
+        </div>
+        <div className={styles.contactDrawerContent}>
+          <ContactForm hideInfoCol={true} noPadding={true} />
         </div>
       </div>
     </div>

@@ -9,7 +9,10 @@ import ContactHome from '@/components/ContactHome';
 
 export const metadata = {
   alternates: {
-    canonical: "https://ldndecks.com/services/new-decks"
+    canonical: "/services/new-decks"
+  },
+  openGraph: {
+    url: "/services/new-decks"
   },
   title: "Custom Deck Builder Loudoun VA | Design & Build Services",
   description: "From concept to completion, we design and build fully custom decks tailored to your space, style, and budget in Northern Virginia."

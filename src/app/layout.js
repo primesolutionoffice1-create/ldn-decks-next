@@ -15,7 +15,7 @@ const outfit = Outfit({
 
 export const metadata = {
   alternates: {
-    canonical: "https://ldndecks.com/layout.js"
+    canonical: "/"
   },
   metadataBase: new URL("https://ldndecks.com"),
   title: {
@@ -34,7 +34,6 @@ export const metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://ldndecks.com",
     siteName: "Loudoun Decks",
     images: [{
       url: "/images/img64.jpeg",

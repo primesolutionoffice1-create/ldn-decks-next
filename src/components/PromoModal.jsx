@@ -21,13 +21,13 @@ export default function PromoModal() {
   useEffect(() => {
     // Only show once per session so it isn't an annoyance when navigating
     const hasSeenModal = sessionStorage.getItem('promoModalSeen');
-    
+
     if (!hasSeenModal) {
       const timer = setTimeout(() => {
         setIsOpen(true);
         sessionStorage.setItem('promoModalSeen', 'true');
       }, 3000); // Trigger after exactly 3 seconds
-      
+
       return () => clearTimeout(timer);
     }
   }, []);
@@ -46,38 +46,38 @@ export default function PromoModal() {
 
   return (
     <div className={styles.modalOverlay} onClick={() => setIsOpen(false)}>
-      <div 
-        className={styles.modalContent} 
+      <div
+        className={styles.modalContent}
         onClick={(e) => e.stopPropagation()} /* Prevent close when clicking inner content */
       >
-        <button 
-          className={styles.closeBtn} 
+        <button
+          className={styles.closeBtn}
           onClick={() => setIsOpen(false)}
           aria-label="Close modal"
         >
           <CloseIcon />
         </button>
-        
+
         <div className={styles.imageContainer}>
-          <Image 
-            src="/images/img26.jpeg" 
-            alt="Beautiful Custom Deck" 
-            fill 
-            style={{ objectFit: 'cover' }} 
+          <Image
+            src="/images/img63.jpeg"
+            alt="Beautiful Custom Deck"
+            fill
+            style={{ objectFit: 'cover' }}
             sizes="(max-width: 600px) 100vw, 400px"
           />
           <div className={styles.logoOverlay}>
             <Image src="/ldndecks-logo.webp" alt="Loudoun Decks" width={140} height={50} style={{ objectFit: 'contain' }} />
           </div>
         </div>
-        
+
         <div className={styles.textContent}>
           <h2>Ready for Your Dream Deck?</h2>
           <p>
             Transform your outdoor living space with Northern Virginia's premier custom deck builder. We specialize in top-tier composite decking, customized patios, and beautiful pergolas!
           </p>
           <p className={styles.highlightText}>Unlock your free, no-obligation estimate today!</p>
-          
+
           <a href="tel:+15716557207" className={styles.callBtn}>
             <PhoneIcon />
             Call Us Now: (571) 655-7207

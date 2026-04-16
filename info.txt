@@ -1,365 +1,319 @@
----
-
-# LOUDOUN DECKS — DEEP WEBSITE, ADS & COMPETITOR ANALYSIS
-
----
-
-## 1. FULL WEBSITE AUDIT — NEW NEXT.JS SITE
-
-### ABOVE THE FOLD — First Impression
-
-**What's there:** A full-bleed hero image of a composite deck with pergola, "BUILDING MEMORIES TOGETHER" tagline, headline "Northern Virginia's Premium Deck Builder for Custom Outdoor Living," and a single "Discover More" button.
-
-**What's wrong:**
-
-The hero is aesthetically beautiful but conversion-dead. Here's why:
-
-**"Building Memories Together"** is emotional fluff that says nothing to a Google Ads visitor who just searched "deck builder near me." They want to know: Can you build my deck? Are you available? How fast? That tagline wastes the most valuable real estate on the page.
-
-**"Discover More"** is the weakest possible CTA for a lead-gen business. Nobody searching for a deck builder wants to "discover." They want to "Get a Free Quote," "Schedule My Consultation," or "Call Now." "Discover More" is an exploration CTA — appropriate for a museum, not a contractor trying to generate $20K leads.
-
-**No phone number visible in the hero.** The "Call Now" button is in the nav, but Google Ads visitors on mobile need a giant, tappable phone number INSIDE the hero, not hidden in navigation.
-
-**No form visible above the fold.** The contact form is buried at the very bottom of the page. A visitor from a Google Ad has to scroll through the ENTIRE page to find a way to submit their information. This is a massive conversion killer.
-
-**No social proof in the hero.** No "5.0 Stars on Google" badge, no "41 Reviews," no "100+ Decks Built." The old WordPress site at least had trust badges immediately below the fold.
-
-### TRUST SIGNALS
-
-The site shows 4 trust badges below the hero: 2 Years Labor Warranty, Sustainable Materials, Licensed Company, Free Estimates. These are generic and weak. "2 Years Labor Warranty" actually undermines confidence — competitors tout 5-year or lifetime warranties. "Sustainable Materials" is vague. "Licensed Company" should be the bare minimum, not a selling point. "Free Estimates" is expected by everyone.
-
-The BBB, Thumbtack, Hotfrog, and Brownbook logos are near the bottom — they need to be visible much higher up and accompanied by your Google review count/rating.
-
-### VISUAL HIERARCHY
-
-The page flows: Hero → Trust Badges → About Section → Services Cards → Services Detail → Testimonials → FAQ → Third-Party Logos → Contact Form + Footer. This is backwards for lead generation. The contact form and phone number should be accessible within the first scroll, not after 8+ scroll-lengths.
-
-### CTA PLACEMENT & STRENGTH
-
-There are only three CTAs on the entire homepage: "Discover More" (hero), "Discover More" (about section), and "More Services." None of them say "Get a Free Quote" or "Call Now" until the very bottom. The entire mid-section is a CTA desert. A high-ticket lead gen page needs a CTA visible at every scroll-depth.
-
-### TESTIMONIALS
-
-Three testimonials from "Sarah Jenkins," "Michael Thompson," and "Robert & Linda" with generic titles "Satisfied Customer." These feel fabricated. No last names with verifiable detail, no Google review links, no city/state. Your old site mentions actual Google reviews. Competitors like xScape have 100+ Google reviews with full names and locations. This is a huge credibility gap.
-
-### PSYCHOLOGICAL TRIGGERS — What's Missing
-
-No urgency (seasonal booking, limited availability). No specificity (number of projects completed, years in business, specific materials used). No risk reversal (money-back guarantee language, satisfaction guarantee). No authority (certifications, manufacturer partnerships — your old site showed Trex, TimberTech, Fiberon logos). No scarcity (booking calendar filling up).
-
-### What IS Strong
-
-The photography on the hero is high-quality and professional. The site loads fast on Next.js (good perceived performance). The orange brand color is distinctive. The services page is well-organized with clear categories. The showcase portfolio has real project photos with locations and dates.
-
----
-
-## 2. COMPARISON: NEW SITE vs OLD SITE
-
-### What the OLD WordPress Site Did BETTER
-
-**Hero messaging.** The old site says "Deck Builder in Northern Virginia Serving Loudoun, Fairfax & Prince William Counties." This is clearer, more keyword-rich, and immediately tells the visitor WHERE you work and WHAT you do. The new site's "Building Memories Together" is weaker.
-
-**Dual CTAs in the hero.** The old site has both "Get Free Estimate" (popup form) AND "+1 (571) 655-7207" as buttons directly in the hero. The new site has only the weak "Discover More."
-
-**Above-the-fold form.** The old site has a "Get A Free Estimate" form (Name, Phone, Email + "Call Me Back" button) visible within one scroll. It even says "We won't spam you, we promise." The new site buries its form at the very bottom.
-
-**More services visible.** The old site shows 8 service categories (New Decks, Resurfacing, Gazebo/Pergola, Deck Washing, Fence, Entry Doors, Porches, Patios). The new homepage only shows 3 services before the "More Services" button.
-
-**Process section.** The old site has a clear "Our Deck Building Process" section (Free Consultation → Design & Planning → Construction). This reduces anxiety for first-time buyers. The new site has nothing like this.
-
-**Manufacturer logos.** The old site displays Fiberon, TimberTech, Veka, Versatex, Nexan brand logos. These are massive trust builders for composite deck buyers. The new site has ZERO manufacturer logos.
-
-**Chat widget.** The old site has a Tidio live chat widget ("Chat with us"). The new site removed this — killing a lead capture channel.
-
-**Blog/content section.** The old site shows blog posts on the homepage ("Composite Decks: Essential Tips," "Wood vs. Composite Decking"). The new site's homepage has no content.
-
-**SEO-specific links.** The old site footer has links to "Deck Repair Loudoun County," "Composite Deck Builder Loudoun," "Trex Deck Builder Loudoun," "Deck Cost Guide." These are SEO-critical landing pages that should be preserved.
-
-### What the NEW Site Does BETTER
-
-The visual design is cleaner and more modern. The page performance is dramatically better (Next.js vs heavy WordPress/Elementor). The services page is more comprehensive with 10+ service types and better descriptions. The showcase page is better organized with project locations and dates. The FAQ section is cleaner and more usable.
-
-### What Was LOST in Migration — MUST RESTORE
-
-1. Above-the-fold lead capture form
-4. "Our Process" section
-6. Blog posts on homepage
-7. SEO-specific landing pages (composite deck, Trex, deck cost guide, deck repair)
-9. Keyword-rich hero headline (old site matched search intent better)
-10. "Get Free Estimate" popup form functionality
-
----
-
-## 3. GOOGLE ADS LANDING PAGE ANALYSIS
-
-### Does it match search intent?
-
-When someone searches "deck builder near me" or "composite deck builder Northern Virginia" and clicks your ad, they land on a page that says "Building Memories Together" and "Discover More." This is a complete intent mismatch. The searcher wants to find a contractor, see proof of quality, and submit their info FAST. Your page asks them to go on a journey.
-
-### Does it filter low-quality leads?
-
-No. The messaging is completely generic. There's no price anchoring, no mention of project minimums, nothing that says "Our typical projects start at $15,000." The phrase "At Prices That Fit Your Budget" actively ATTRACTS budget shoppers. The inclusion of "Deck Washing" as a homepage service draws in small-ticket cleaning jobs when you want full builds.
-
-### Does it attract high-ticket clients?
-
-Partially. The word "Premium" in the hero helps. But there's no portfolio showcase visible above the fold showing luxury builds. No project value ranges. No material-specific language (Trex, TimberTech) that signals premium. No financing options mentioned that signal bigger projects.
-
-### Is it too "pretty" vs "conversion-focused"?
-
-Yes. This site looks like it was designed by a designer, not a conversion strategist. Beautiful typography, generous whitespace, subtle animations — but zero urgency, zero friction-reducing elements, zero conversion triggers. It's a portfolio website, not a lead generation machine.
-
-### Why Current Structure Increases CPA
-
-Your ad budget is sending traffic to a page that: makes visitors scroll 8+ times to find a form; uses a passive CTA that doesn't compel action; shows no social proof above the fold; includes low-ticket services that attract wrong leads; has no phone number visible in the hero section; offers no urgency or scarcity messaging.
-
-Every one of these issues causes drop-off. If even 20% of ad visitors bounce because they can't find the form fast enough, your CPA increases by 25%.
-
-### Where Users Drop Off
-
-The biggest drop-off zone is immediately after the hero. The visitor sees "Discover More," doesn't feel compelled to click, and bounces. The second drop-off zone is the long "Our Introduction" section — it's about YOU, not about THEM. The third is the FAQ section, which feels like the page is ending without ever asking the visitor to take action.
-
----
-
-## 4. LEAD QUALITY FILTER SYSTEM
-
-### Messaging Filters
-
-Your copy needs to signal premium pricing without being off-putting. Replace "At Prices That Fit Your Budget" (attracts bargain hunters) with language like "Custom-Designed Outdoor Living Spaces Starting at $15K" or "Premium Composite Decks Engineered for Northern Virginia Homes." The word "budget" should never appear on your site.
-
-Remove or de-emphasize "Deck Washing" from the homepage. That's a $200-500 job. Keep it on a services sub-page for SEO if needed, but it shouldn't be one of the first four services a visitor sees. Lead with New Decks, Deck Replacement/Resurfacing, Screened Porches, and Premium Outdoor Living.
-
-### CTA Filters
-
-Instead of "Get Free Estimate," consider "Request Your Design Consultation." "Free Estimate" attracts price-shoppers. "Design Consultation" attracts people ready to invest in a planned project. Your form should ask for project type, approximate timeline, and budget range — this alone filters out 80% of unqualified leads.
-
-### Form Structure (Recommended)
-
-The bottom-of-page form currently has: Name, Email, Phone, Service Dropdown, Message. This captures everyone including tire-kickers. A filtering form would include:
-
-- Name, Phone, Email (basics)
-- What type of project? (dropdown: New Deck Build, Deck Replacement, Screened Porch, Other Outdoor Living)
-- Approximate budget range (dropdown: $10K-$20K, $20K-$40K, $40K+, Not Sure)
-- When are you looking to start? (dropdown: Within 1 month, 1-3 months, 3-6 months, Just exploring)
-- Brief project description (textarea)
-
-The budget and timeline dropdowns immediately filter leads. Anyone selecting "Just exploring" or who doesn't want to indicate budget self-selects out. The form heading should say "Request Your Free Design Consultation" not just "Request A Free Quote."
-
-### Copy That Repels Low-Budget Clients
-
-Throughout the site, use phrases that signal premium: "custom-engineered," "precision-built," "design-build process," "premium composite materials," "Trex Platinum installer." Avoid: "affordable," "budget-friendly," "cheap," "discount," "deals." The words "custom" and "premium" should be the two most-repeated adjectives on the entire site.
-
----
-
-## 5. COMPETITOR WEBSITE BREAKDOWN
-
-### Competitor #1: xScape / Deckscapes of Virginia (deckscapesofva.com)
-
-This is your most dangerous competitor. They position as a full design-build firm, not just a deck builder.
-
-What they do that you don't: They have a "Price Out Your Project" CTA (interactive pricing tool). They display 100+ five-star Google reviews with real names and locations right on the homepage. They have a "TEXT US" button for instant contact (average response time <1 min displayed). They offer 3D design sessions. They list 20+ years in business and 15 award-winning projects. They have a dedicated "Design Process" page that walks clients through the experience. They cover a massive service range (pools, outdoor kitchens, masonry, landscaping) positioning as a one-stop shop. They have an interactive project map showing completed work locations.
-
-Why they convert better: Social proof is overwhelming (100+ reviews visible immediately). Multiple contact methods (text, chat, form, phone). The "Price Out Your Project" tool engages visitors who aren't ready to call. The breadth of services signals capability for large projects.
-
-### Competitor #2: Virginia Deck Builders (decksva.com)
-
-This is your closest direct competitor in terms of service offering.
-
-What they do that you don't: "REQUEST A FREE ESTIMATE" is the hero CTA — direct, clear, no ambiguity. They display their TrexPro Platinum certification prominently — this is a massive trust signal. They have a scrolling client testimonial carousel with real names and detailed reviews. They show their VA license number in the footer (VA LIC #: 2705177868) — signals legitimacy. They display their full business address (501 Holland Ln, Ste 402, Alexandria). They have a clear service navigation (New Decks, Resurfacing, Gazebos & Pavilions, Louvered Roof, Porches). They have a process page (About > Process) and a "Why Choose Us" page.
-
-Why they convert: Clear CTA. Immediate social proof. Trex partnership displayed. Direct phone number with click-to-call. Their messaging is "we build decks" — simple, clear, no confusion.
-
-### Competitor #3: Northern Deckworks (northerndeckworks.com)
-
-This is the premium/heritage competitor — 39 years in business (since 1987).
-
-What they do that you don't: "39 YEARS" badge is displayed prominently in the header — instant authority. The owner (Tim O'Neill) is featured personally with photos and biography. The tagline "Custom Design, Quality Craftsmanship, Since 1987" communicates legacy. They emphasize that each project is "custom-designed by the Owner" — personal touch. They serve specific counties and name them in the header. Phone number is displayed in the header bar.
-
-Why they convert: Heritage/longevity is a massive trust signal. Personal owner involvement signals accountability. The messaging is warm, story-driven, and feels like working with a craftsman, not a company.
-
-### Competitor #4: HD Exteriors (buildhd.com)
-
-This is the aggressive, conversion-optimized competitor.
-
-What they do that you don't: The hero has a lead capture form directly above the fold — Name, Email, Phone. "20% OFF New Installations + 12 Months Zero Interest" — aggressive offer. A "Free Quote" sticky tab on the right side of every page. A "Reviews" sticky tab on the right side. They offer financing (no money down, low APR). "Schedule Online Now" link in the top bar. Multiple service categories visible in a sub-navigation bar (Decks, Patios, Porches, Roofing, Windows, Siding). They have a "Recent Projects" page with real completed work.
-
-Why they convert: The form is IN YOUR FACE immediately. The financing offer attracts people with big projects. The discount creates urgency. Multiple sticky CTAs mean the visitor is never more than one click from converting.
-
-### What They ALL Do That You Are NOT Doing
-
-1. Form or phone number above the fold
-2. Real Google reviews (not generic testimonials)
-3. Specific years in business / projects completed
-4. Manufacturer certifications (Trex, TimberTech)
-5. A clear process page (how it works)
-6. Financing options mentioned
-7. Sticky/persistent CTA (sidebar, bottom bar, or floating button)
-8. Owner/team personality (faces, names, stories)
-9. Service-specific landing pages
-10. Location-specific pages with local SEO signals
-
----
-
-## 6. CRO — EXACT FIXES
-
-### Hero Section — Rewrite
-
-**Current:** "BUILDING MEMORIES TOGETHER / Northern Virginia's Premium Deck Builder for Custom Outdoor Living / [Discover More]"
-
-**Replace with:**
-- Remove "Building Memories Together" entirely
-- New headline: "Northern Virginia's #1 Rated Composite Deck Builder"
-- Sub-headline: "Custom-designed decks, screened porches & outdoor living spaces. Trex & TimberTech certified. Serving Loudoun, Fairfax & Prince William Counties."
-- Primary CTA: "Get Your Free Design Consultation" (links to form or opens popup)
-- Secondary CTA: "Call (571) 655-7207"
-- Add badge: "★ 5.0 Google Rating | 41 Reviews"
-
-### Trust Bar — Improve
-
-Replace current 4 badges with: "5-Year Workmanship Warranty" (not 2 years), "100+ Decks Built" (or whatever real number you have), "Licensed & Insured — VA #[your number]", "Free Design Consultation"
-
-### Add Above-the-Fold Form
-
-Place a compact lead capture form (Name, Phone, Service Dropdown) directly in the hero section, to the right of the headline, or immediately below it. The form heading should say "Get Your Free Design Consultation" with a "Submit" button that says "Request My Consultation."
-
-### Testimonials — Replace with Real Reviews
-
-Remove the generic "Sarah Jenkins, Satisfied Customer" testimonials. Replace with actual Google reviews showing the reviewer's Google avatar, their star rating, location, and a verified review badge. Link to your Google Business Profile.
-
-### Add a "How It Works" Section
-
-Add immediately after the trust bar: Step 1: Free Consultation (We visit your property and discuss your vision) → Step 2: Custom Design (We create a detailed 3D design with material selections) → Step 3: Build (Our expert crew completes your project in 1-3 weeks) → Step 4: Enjoy (5-year workmanship warranty included). This reduces buyer anxiety and makes the next step clear.
-
-### Add Manufacturer Logos
-
-Add a "Trusted Material Partners" strip showing Trex, TimberTech, Fiberon, and any other brand logos. If you're a TrexPro dealer, that badge alone increases perceived value.
-
-### Add Financing Mention
-
-Add a one-line mention: "Flexible financing options available — 0% interest for 12 months" (if applicable). This signals big projects and removes the "I can't afford it" objection.
-
-### Remove "Deck Washing" from Homepage
-
-Remove it from the four featured service cards. Replace with "Screened Porches" or "Custom Outdoor Living." Keep Deck Washing on a sub-page.
-
-### Add Sticky CTA
-
-Add a sticky bottom bar on mobile (and a floating button on desktop) that says "Get Free Estimate — Call (571) 655-7207" or a persistent "Request Quote" button that's always visible.
-
-### Footer Form — Improve
-
-Add a budget range dropdown and timeline dropdown to filter leads. Change the button from "Send Message" to "Request My Free Consultation."
-
----
-
-## 7. IDEAL STRUCTURE FOR MAXIMUM CONVERSIONS
-
-Here is the exact page structure I'd build, section by section:
-
-**Section 1 — Hero (Above the Fold)**
-Left side: Headline "Northern Virginia's #1 Rated Composite Deck Builder" / Sub-headline with service list and service areas / Two CTAs (primary button + phone link) / Trust badge strip (Google rating, years in business, license number).
-Right side: Compact lead form (Name, Phone, Email, Project Type dropdown, "Get My Free Consultation" button).
-Background: High-quality completed project photo.
-
-**Section 2 — Social Proof Bar**
-"100+ Decks Built | 5.0 Google Rating | 41 Reviews | 5-Year Warranty" — with linked logos.
-
-**Section 3 — How It Works**
-4-step visual process: Consultation → Design → Build → Enjoy. Each step gets an icon and 1-sentence description.
-
-**Section 4 — Core Services**
-3-4 cards: New Custom Decks, Deck Replacement/Resurfacing, Screened Porches & Pergolas, Premium Outdoor Living. Each with a stunning photo, 2-line description, and "Learn More" link. No washing. No fencing here.
-
-**Section 5 — Portfolio Showcase**
-3-4 large, high-quality before/after or completed project images. Each with project type, location, and materials used. "View All Projects" link.
-
-**Section 6 — Why Loudoun Decks**
-Manufacturer certifications (Trex, TimberTech logos). Licensed & insured with VA license number. Owner/team photo with brief story. "Family-Owned, Northern Virginia Local" messaging.
-
-**Section 7 — Real Testimonials**
-Google review embeds or screenshots. Real names, locations, star ratings. Minimum 4-5 reviews. Link to full Google profile.
-
-**Section 8 — Service Areas**
-Map or list of Loudoun, Fairfax, Prince William counties. Cities served. This reinforces local relevance.
-
-**Section 9 — CTA + Lead Form**
-Full-width section: "Ready to Transform Your Outdoor Space?" with a more detailed form (Name, Phone, Email, Project Type, Budget Range, Timeline, Message). "Request My Free Design Consultation" button.
-
-**Section 10 — FAQ**
-5-6 questions addressing objections: timeline, permits, materials, cost, warranty.
-
----
-
-## 8. CRITICAL MISTAKES — BRUTAL HONESTY
-
-**1. The homepage has no lead form above the fold.** This single issue could be responsible for 40-60% of lost conversions from paid traffic. Every competitor has a form or prominent phone number visible immediately.
-
-**2. "Discover More" is your primary CTA.** This is a browsing CTA, not a conversion CTA. It sends people deeper into the site instead of converting them. Every click away from conversion is a lost opportunity.
-
-**3. "At Prices That Fit Your Budget" actively attracts the wrong audience.** This phrase tells bargain hunters "we're cheap enough for you." It should be removed and replaced with premium-positioning language.
-
-**4. Deck Washing is featured as a core homepage service.** This is a $200-500 job. You're spending Google Ads dollars to show this to people who came looking for a $20K deck. It dilutes your positioning and attracts low-ticket inquiries.
-
-**5. The testimonials appear fabricated.** Generic names, no locations, no verification, stock-looking avatar photos. This actively hurts trust instead of building it. Real Google reviews with verifiable names and locations are non-negotiable.
-
-**6. No manufacturer certifications visible.** Trex and TimberTech are the two most-searched composite deck brands. Your old site had these logos. The new site removed them. This is leaving money on the table for branded search queries.
-
-**7. No "How It Works" process section.** High-ticket buyers have anxiety about the process. Not explaining your steps (consult → design → build → warranty) forces them to figure it out themselves — many won't bother and will go to a competitor who makes it clear.
-
-**8. The form asks for too little information.** Name, Email, Phone, Service, Message — this captures everyone, including tire-kickers. Adding budget and timeline fields would filter leads dramatically and give your sales team better data.
-
-**9. No chat widget.** The old site had Tidio chat. The new site removed it. Some visitors will never fill out a form or make a phone call — chat is their preferred contact method. You lost a lead channel.
-
-**10. No sticky/persistent CTA.** Once a visitor scrolls past the header navigation, the only way to contact you is to scroll all the way back up or all the way to the bottom. There should be a floating "Call Now" or "Get Quote" button visible at all times.
-
----
-
-## 9. PRIORITY ACTION PLAN
-
-### 🔴 MUST FIX IMMEDIATELY (0–3 Days)
-
-1. **Add a lead capture form above the fold.** Either embed a compact form in the hero section or add a "Get Free Estimate" button that opens a modal/popup form. This alone can double your conversion rate.
-
-2. **Replace "Discover More" with "Get Your Free Design Consultation."** Change the hero CTA immediately. Use action language that matches what the visitor wants.
-
-3. **Add phone number as a visible, clickable element in the hero section.** Not just in the nav — a large "(571) 655-7207" below the headline with "Call for Free Estimate" text.
-
-4. **Remove "At Prices That Fit Your Budget" from the site.** Replace with "Premium Composite Decks Designed for Your Home" or "Custom-Engineered Outdoor Living Spaces."
-
-5. **Add Google review rating badge to the hero.** "★ 5.0 on Google — 41 Reviews" with a link to your Google Business Profile.
-
-6. **Add a sticky mobile CTA bar.** A bottom-fixed bar on mobile that says "Call Now — Free Estimate" or "Get a Quote" that stays visible as visitors scroll.
-
-### 🟡 HIGH IMPACT (This Week)
-
-7. **Replace generic testimonials with real Google reviews.** Embed or screenshot actual reviews showing names, locations, and star ratings. Use at least 5 reviews.
-
-8. **Add manufacturer logos.** Trex, TimberTech, Fiberon — displayed in a "Trusted Material Partners" strip visible within the first 2 scrolls.
-
-9. **Add a "How It Works" process section.** 4-step visual: Consultation → Design → Build → Warranty. Place it between the trust bar and services.
-
-10. **Remove Deck Washing from homepage service cards.** Replace with Screened Porches or Outdoor Living. Keep Deck Washing on a sub-page.
-
-11. **Improve the lead form.** Add Budget Range dropdown ($10K-$20K / $20K-$40K / $40K+ / Not Sure) and Timeline dropdown (Within 1 month / 1-3 months / 3-6 months).
-
-12. **Add a "Rewrite" of the hero headline.** Change from "Northern Virginia's Premium Deck Builder for Custom Outdoor Living" to "Northern Virginia's #1 Rated Composite Deck Builder — Serving Loudoun, Fairfax & Prince William Counties."
-
-13. **Re-add live chat.** Implement Tidio or similar. This captures leads that don't want to call or fill out forms.
-
-### 🟢 SCALE / IMPROVE (Next 2-4 Weeks)
-
-14. **Create service-specific landing pages for Google Ads.** Dedicated pages for: "Composite Deck Builder NoVA," "Trex Deck Builder Northern Virginia," "Deck Replacement Fairfax County," "Screened Porch Builder Loudoun." Each page should match specific ad group keywords with tailored hero headlines, relevant portfolio images, and an embedded form.
-
-15. **Build out an owner/team page with real photos.** Northern Deckworks wins trust by featuring their owner. Put faces to the business — this separates you from anonymous companies.
-
-16. **Add financing information.** If you offer financing, add it to the homepage and create a dedicated financing page. HD Exteriors leads with "20% OFF + 12 months zero interest." Financing unlocks larger projects.
-
-17. **Implement a price calculator or project estimator tool.** xScape/Deckscapes has "Price Out Your Project." This engages visitors who aren't ready to call but are researching costs. It captures leads mid-funnel.
-
-18. **Restore SEO landing pages from the old site.** The old site had pages for "deck repair loudoun county," "composite deck builder loudoun," "trex deck builder loudoun," "deck cost guide," "deck vs patio." These are SEO-critical and should be migrated to the new site with proper 301 redirects.
-
-19. **Add schema markup.** LocalBusiness, Service, Review schema to improve Google search appearance with stars, service areas, and business details.
-
-20. **Create dedicated Google Ads landing pages.** Do not send ad traffic to your homepage. Build stripped-down, form-first landing pages with no navigation, matched to specific keyword groups, that load in under 2 seconds and have the form visible without scrolling.
-
----
-
-The single highest-ROI change you can make today is putting a lead form above the fold with a phone number visible in the hero. That alone, based on conversion rate benchmarks for contractor websites, could increase your conversion rate from the likely current 2-3% range to 5-8%, cutting your CPA nearly in half.
+Loudoun Decks — Website & SEO Audit
+URL audited: https://ldn-decks-next.vercel.app/ Date: 2026-04-15
+1. Executive summary
+The site is a professional, conversion-focused marketing website for a Northern Virginia deck
+construction company, built on Next.js and deployed to Vercel. Overall presentation and technical
+foundation are solid, but several critical SEO bugs affect the most important pages (city-level location
+pages), key schema opportunities are unused, and the blog/showcase are empty.
+The three highest-priority issues:
+1. Broken canonical URL on ~63 city-level location pages — they all point to /layout.js
+2. Vercel staging is indexable — risk of duplicate content with the production domain
+3. Missing AggregateRating and FAQPage schemas — leaving rich snippets on the table despite
+having the raw data (5.0 / 41 reviews and 17 FAQs)
+2. General site review
+Strengths
+Design & presentation
+Clean, professional aesthetic that inspires trust — essential for a construction business
+High-quality project photography
+Clear primary navigation: Home, About, Services, Near You, Showcase, Blog, Contact
+Mobile-friendly, built on Next.js with image optimization
+Conversion & trust
+Multiple visible CTAs: "Call Now", "Get Free Estimate", "Call For A Free Quote" (4+ instances)
+Strong trust signals: 5.0 Google rating (41 reviews), "Licensed & Insured", 5-year workmanship
+warranty
+Clear positioning: "Northern Virginia's #1 Rated Composite Deck Builder"
+Well-explained 4-step process (Consultation → Design → Build → Warranty)
+Two physical locations listed (Centreville + Manassas)
+Direct contact available: phone (571) 655-7207, email office@ldndecks.com
+Local SEO foundation
+Dedicated pages per location (Loudoun, Fairfax, Prince William) — good coverage for local searches
+Links to trust platforms: Thumbtack, BuildZoom, BBB
+Weaknesses
+Underdeveloped content
+The blog exists but has no visible articles — significant SEO traffic left unused
+The "Showcase"/portfolio section appears empty or sparsely populated
+No before/after galleries — critical for a construction business
+No video content (project tours, build timelapses) — industry standard
+The "Team" page has no team information
+Service descriptions are too short and lack depth
+UX & forms
+The main contact form is too long (name, email, phone, address, budget, timeline, city, state, ZIP,
+message) — reduces completion rate
+The form could be more prominent above the fold
+No pricing transparency (even an indicative range would help)
+Educational content
+Few details about the warranty beyond "5-year workmanship"
+No educational content about composite materials, maintenance, durability — customers research
+this before calling
+Other observations
+No multilingual support (English only) — the DC/Virginia area has a sizable Hispanic community;
+Spanish could bring in leads
+3. Technical SEO audit
+What is done well
+On-page basics
+Unique, well-structured title tags per page: "Custom Deck Builder Loudoun VA | Design & Build
+Services | Loudoun Decks"
+Unique meta description per page, ~150 characters, with local keywords
+<meta name="robots" content="index, follow"> present
+lang="en" set on <html>
+A single H1 per page, clean H2 hierarchy
+Viewport meta present (mobile-friendly)
+Technical SEO
+Clean robots.txt with sitemap reference: Sitemap: https://ldndecks.com/sitemap.xml
+sitemap.xml with 107 URLs well organized (homepage + services + 87 geo pages)
+Clean, semantic URL structure: /services/new-decks , /near-you/loudoun-county/ashburn
+Next.js image optimization (WebP, srcset, lazy loading)
+Logo preloaded (helps LCP)
+Canonical tag present on homepage: https://ldndecks.com
+Fonts preloaded (woff2)
+Social & structured data
+Full Open Graph: og:title , og:description , og:image (1200x630), og:type , og:locale
+Twitter Card: summary_large_image
+Schema.org LocalBusiness JSON-LD with: full address, geo coordinates (38.83, -77.44), phone,
+hours (Mon–Sat 08:00–18:00), social profiles
+Local content (geo SEO)
+87 per-city pages — strong strategy for "deck builder [city]" queries
+Localized titles: "Best Deck Builder in Ashburn, VA | 5-Star Custom Decks & Patios"
+4. Critical bugs
+4.1 Broken canonical on city-level pages
+I tested 18 pages. The pattern is clear:
+Page type Canonical Status
+/ https://ldndecks.com OK
+/services/new-decks https://ldndecks.com/services/new-decks OK
+/near-you/loudoun-county (county) https://ldndecks.com/near-you/loudouncounty
+OK
+/near-you/loudoun-county/ashburn
+(city)
+https://ldndecks.com/layout.js BROKEN
+/near-you/fairfax-county/vienna https://ldndecks.com/layout.js BROKEN
+/near-you/prince-williamcounty/woodbridge
+https://ldndecks.com/layout.js BROKEN
+Root cause: the dynamic [city]/page.tsx route — generateMetadata is not receiving the segment
+correctly, likely referencing params.layout or __filename incorrectly, or the function that constructs
+alternates.canonical has a bug.
+Affected scope: ~63 city pages (18 Loudoun + 20 Fairfax + 14 Prince William + 7 Arlington + 4 Stafford)
+— the most important SEO layer for local searches.
+Fix (Next.js 13+ App Router) in app/near-you/[county]/[city]/page.tsx :
+export async function generateMetadata(
+{ params }: { params: { county: string; city: string } }
+): Promise<Metadata> {
+const { county, city } = params;
+return {
+alternates: {
+canonical: `https://ldndecks.com/near-you/${county}/${city}`,
+},
+openGraph: {
+url: `https://ldndecks.com/near-you/${county}/${city}`,
+// ...
+},
+};
+}
+4.2 Vercel staging is indexable
+Confirmed:
+GET https://ldn-decks-next.vercel.app/robots.txt
+User-Agent: *
+Allow: /
+No X-Robots-Tag header is returned. Google can index the staging deployment.
+Fix — add to next.config.js :
+async headers() {
+if (process.env.VERCEL_ENV !== 'production') {
+return [{
+source: '/:path*',
+headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }],
+}];
+}
+return [];
+}
+Alternatively, a robots.ts conditioned on VERCEL_ENV .
+4.3 og:url hardcoded to homepage on all pages
+On /services/new-decks the meta tag is:
+<meta property="og:url" content="https://ldndecks.com"/>
+It should be the URL of the current page. This affects social media sharing (wrong page shared when
+someone shares a service page).
+4.4 og:image identical on every page
+The same image ( img64.jpeg ) is used sitewide — missed opportunity for service/location-specific
+preview images.
+5. Schema.org — missed opportunities
+Only LocalBusiness is present, and it is identical on every page. Missing:
+FAQPage schema — the site has FAQs on the homepage and a /faqs page, but they are not
+marked up. Free rich snippet on Google.
+AggregateRating / Review schema — "5.0 out of 41 Google reviews" is displayed but not in
+schema. Could earn star ratings in SERPs.
+Service schema on each service page
+BreadcrumbList schema — no visual or structured-data breadcrumbs
+LocalBusiness.sameAs — https://www.facebook.com/ is a broken link (no actual page)
+5.1 FAQPage schema (ready-to-use)
+Extract from /faqs — 17 real questions. Add a <script type="application/ld+json"> to
+app/faqs/page.tsx :
+{
+"@context": "https://schema.org",
+"@type": "FAQPage",
+"mainEntity": [
+{
+"@type": "Question",
+"name": "What areas do you serve?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "We serve Loudoun County, Fairfax County, and Prince William County."
+}
+},
+{
+"@type": "Question",
+"name": "Do you offer free consultations?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Yes. We offer free consultations to discuss your outdoor living project and an
+}
+},
+{
+"@type": "Question",
+"name": "Do you provide free estimates?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Yes. We provide free consultations and estimates for homeowners in our service
+}
+}
+// add all 17 Q&A pairs
+]
+}
+5.2 AggregateRating — extend the existing LocalBusiness
+Modify the existing LocalBusiness block:
+{
+"@context": "https://schema.org",
+"@type": "LocalBusiness",
+"name": "Loudoun Decks",
+"@id": "https://ldndecks.com",
+"url": "https://ldndecks.com",
+"telephone": "+1-571-655-7207",
+"priceRange": "$$-$$$",
+"aggregateRating": {
+"@type": "AggregateRating",
+"ratingValue": "5.0",
+"reviewCount": "41",
+"bestRating": "5",
+"worstRating": "1"
+},
+"address": { /* ... */ },
+"geo": { /* ... */ }
+}
+Result: yellow stars appear in SERP — historically lifts CTR by 20–35%.
+5.3 BreadcrumbList (for city and service pages)
+On /near-you/loudoun-county/ashburn :
+{
+"@context": "https://schema.org",
+"@type": "BreadcrumbList",
+"itemListElement": [
+{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ldndecks.com" },
+{ "@type": "ListItem", "position": 2, "name": "Service Areas", "item": "https://ldndecks.co
+{ "@type": "ListItem", "position": 3, "name": "Loudoun County", "item": "https://ldndecks.c
+{ "@type": "ListItem", "position": 4, "name": "Ashburn", "item": "https://ldndecks.com/near
+]
+}
+Also add visual breadcrumbs to the UI — not just in structured data.
+5.4 Service schema (for /services/* pages)
+On /services/new-decks :
+{
+"@context": "https://schema.org",
+"@type": "Service",
+"serviceType": "Custom Deck Construction",
+"provider": { "@id": "https://ldndecks.com" },
+"areaServed": [
+{ "@type": "AdministrativeArea", "name": "Loudoun County, VA" },
+{ "@type": "AdministrativeArea", "name": "Fairfax County, VA" },
+{ "@type": "AdministrativeArea", "name": "Prince William County, VA" }
+],
+"description": "From concept to completion, we design and build fully custom decks tailored t
+}
+6. Other issues worth fixing
+Broken Facebook sameAs — LocalBusiness contains:
+"sameAs": ["https://www.facebook.com/", ...]
+Replace with the actual Facebook page URL, or remove it entirely.
+Identical lastmod on all 107 sitemap URLs — generate lastmod from the actual content edit date,
+not build time. Google discounts sitemaps with artificial timestamps.
+Generic image alt text — alt="New Decks" , alt="Relaxing deck" are not optimized. Use
+descriptive alts with keywords, e.g. alt="Custom Trex composite deck in Ashburn Virginia
+backyard" .
+No visible breadcrumbs — neither in HTML nor in schema.
+No hreflang — OK since the site is English-only, but a future es-US variant could help in Northern
+Virginia.
+Weak internal linking between geo pages — e.g. Ashburn pages should link to Leesburg, Sterling, etc.
+(neighbor cities) to distribute PageRank and help crawling.
+Blog is empty — /blog is in the sitemap but has no articles. Long-tail traffic opportunities lost:
+"composite vs wood deck Virginia", "cost of a deck in Ashburn", "how long does a Trex deck last", etc.
+Potential "thin content" risk on geo pages — if the 63 city pages are just templates with the city name
+swapped in, Google may ignore or penalize them as doorway pages. Each should contain unique content
+(local projects, zoning references, area-specific details).
+7. Prioritized remediation plan
+Priority Issue Impact
+P0 Canonical /layout.js on city pages 63 pages with broken SEO
+P0 Vercel staging indexable Duplicate content risk
+P1 Hardcoded og:url Incorrect social sharing
+P1 Missing FAQPage + AggregateRating schema Missed rich snippets and SERP stars
+P2 Empty blog Unused long-tail SEO potential
+P2 Identical lastmod in sitemap Sitemap partially ignored
+P2 Broken Facebook sameAs Weakened E-E-A-T signal
+P3 Generic image alt text Image search visibility
+P3 Thin content on geo pages Doorway page risk
+Recommended order of attack
+1. Fix the canonical on city pages (≈1 hour of dev work) — unblocks 63 pages
+2. Noindex the Vercel staging (≈15 min) — removes duplicate content risk
+3. Add AggregateRating to LocalBusiness (≈15 min) — visible SERP gain (stars)
+4. Add FAQPage schema (≈30 min) — free rich snippet
+5. Per-page og:url (≈30 min)
+6. Unique content on city pages — larger investment, but critical to avoid being flagged as doorway
+pages
+7. F
+i
+l
+l
+t
+h
+e
+b
+l
+o
+g
+wit
+h
+5–1
+0
+f
+o
+u
+n
+d
+a
+tio
+n
+al a
+r
+ticles
+(
+"
+C
+o
+m
+p
+osi
+t
+e vs
+w
+o
+o
+d
+", "
+C
+ost
+o
+f
+a
+d
+e
+c
+k in
+Vir
+ginia
+", "
+H
+o
+w long does a deck last")

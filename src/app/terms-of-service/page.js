@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function TermsOfService() {
   return (
-    <div style={{ maxWidth: '800px', margin: '0 auto', padding: '100px 20px', lineHeight: '1.6' }}>
+    <div style={{ maxWidth: '800px', margin: '0 auto', padding: '100px 20px', lineHeight: '1.6', color: '#333' }}>
       <h1>Terms of Service</h1>
       <p>Last Updated: April 2026</p>
       
@@ -36,14 +36,21 @@ export default function TermsOfService() {
       </section>
 
       <section style={{ marginTop: '30px' }}>
-        <h2>4. Limitation of Liability</h2>
+        <h2>4. Disclaimer of Warranties</h2>
+        <p>
+          The materials on Loudoun Decks' website are provided on an 'as is' basis. Loudoun Decks makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.
+        </p>
+      </section>
+
+      <section style={{ marginTop: '30px' }}>
+        <h2>5. Limitation of Liability</h2>
         <p>
           Loudoun Decks shall not be liable for any indirect, incidental, special, or consequential damages arising out of the use of our services or website.
         </p>
       </section>
 
       <section style={{ marginTop: '30px' }}>
-        <h2>5. Governing Law</h2>
+        <h2>6. Governing Law</h2>
         <p>
           These terms are governed by the laws of the Commonwealth of Virginia.
         </p>

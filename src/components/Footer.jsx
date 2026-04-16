@@ -87,7 +87,8 @@ export default function Footer() {
             <h3>Links</h3>
             <ul>
               <li><Link href="/team">Our Team</Link></li>
-              <li><Link href="/about">About Us</Link></li>
+              <li><Link href="/privacy-policy">Privacy Policy</Link></li>
+              <li><Link href="/terms-of-service">Terms of Service</Link></li>
               <li><Link href="/contact">Free Estimate</Link></li>
             </ul>
           </div>

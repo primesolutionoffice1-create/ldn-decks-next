@@ -15,7 +15,10 @@ const PhoneIcon = () => (
   </svg>
 );
 
+import { useContact } from '@/context/ContactContext';
+
 export default function PromoModal() {
+  const { openContact } = useContact();
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
@@ -31,6 +34,11 @@ export default function PromoModal() {
       return () => clearTimeout(timer);
     }
   }, []);
+
+  const handleGetEstimate = () => {
+    setIsOpen(false);
+    openContact();
+  };
 
   // Prevent background scrolling while modal is active
   useEffect(() => {
@@ -78,10 +86,15 @@ export default function PromoModal() {
           </p>
           <p className={styles.highlightText}>Unlock your free, no-obligation estimate today!</p>
 
-          <a href="tel:+15716557207" className={styles.callBtn}>
-            <PhoneIcon />
-            Call Us Now: (571) 655-7207
-          </a>
+          <div className={styles.buttonGroup}>
+            <a href="tel:+15716557207" className={styles.callBtn}>
+              <PhoneIcon />
+              Call Us
+            </a>
+            <button onClick={handleGetEstimate} className={styles.estimateBtn}>
+              Get Free Estimate
+            </button>
+          </div>
         </div>
       </div>
     </div>

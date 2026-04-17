@@ -63,3 +63,28 @@
     margin-bottom: 50px;
   }
 }
+
+.ctaWrapper {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.ctaButton {
+  background-color: var(--button-color, #f15a24);
+  color: white;
+  border: none;
+  padding: 16px 40px;
+  font-size: 18px;
+  font-weight: 800;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+.ctaButton:hover {
+  background-color: var(--button-hover-color, #d14a1c);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+}

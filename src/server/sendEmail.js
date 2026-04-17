@@ -5,11 +5,15 @@ import nodemailer from 'nodemailer';
 export async function sendContactEmail(formData) {
   try {
     const transporter = nodemailer.createTransport({
-      service: 'gmail',
+      host: 'smtp.gmail.com',
+      port: 465,
+      secure: true,
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
       },
+      debug: false,
+      logger: false
     });
 
     const name = formData.get('name') || `${formData.get('firstName')} ${formData.get('lastName')}`;
@@ -27,9 +31,13 @@ export async function sendContactEmail(formData) {
        fullAddress = `${address || ''}, ${city || ''}, ${state || ''} ${zip || ''}`;
     }
 
+    const recipient = process.env.EMAIL_TO || process.env.EMAIL_USER;
+    console.log(`Attempting to send lead email to: ${recipient}`);
+
     const mailOptions = {
-      from: process.env.EMAIL_USER,
-      to: process.env.EMAIL_TO || process.env.EMAIL_USER, // Send to the configured recipient
+      from: `Loudoun Decks <${process.env.EMAIL_USER}>`,
+      to: recipient,
+      replyTo: email,
       subject: `New Lead: ${service} from ${name}`,
       html: `
         <h2>New Website Contact Submission</h2>

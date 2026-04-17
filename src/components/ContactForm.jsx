@@ -1,11 +1,15 @@
 "use client";
 import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { useContact } from '@/context/ContactContext';
 import styles from './ContactForm.module.css';
 
 import { sendContactEmail } from '@/server/sendEmail';
 
 export default function ContactForm({ hideInfoCol = false, noPadding = false }) {
   const [status, setStatus] = useState(null);
+  const router = useRouter();
+  const { closeContact } = useContact();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -14,7 +18,8 @@ export default function ContactForm({ hideInfoCol = false, noPadding = false }) 
     const result = await sendContactEmail(formData);
     
     if (result && result.success) {
-       setStatus("success");
+       closeContact();
+       router.push('/thank-you');
     } else {
        // Ideally show an error, but fallback to resetting status
        alert("Failed to send message. Please try again.");
@@ -56,14 +61,7 @@ export default function ContactForm({ hideInfoCol = false, noPadding = false }) 
           
           {/* Form Column */}
           <div className={`${styles.formCol} ${noPadding ? styles.formColNoPadding : ''}`}>
-             {status === "success" ? (
-               <div className={styles.successBlock} role="alert">
-                  <h3>Message Sent Successfully!</h3>
-                  <p>Thank you for reaching out. We will get back to you to schedule your free consultation shortly.</p>
-                  <button onClick={() => setStatus(null)} className={styles.submitBtn}>Send Another Message</button>
-               </div>
-             ) : (
-                <form onSubmit={handleSubmit} className={styles.formBlock} aria-label="Project Inquiry Form">
+             <form onSubmit={handleSubmit} className={styles.formBlock} aria-label="Project Inquiry Form">
                   <div className={styles.row}>
                      <div className={styles.inputGroup}>
                         <label htmlFor="firstName">First Name <span className={styles.req}>*</span></label>
@@ -197,7 +195,6 @@ export default function ContactForm({ hideInfoCol = false, noPadding = false }) 
                      {status === "submitting" ? "Sending..." : "Submit Message"}
                   </button>
                 </form>
-             )}
           </div>
         </div>
       </div>

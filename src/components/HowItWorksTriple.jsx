@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 import styles from './HowItWorksTriple.module.css';
 
@@ -23,7 +24,11 @@ const steps = [
   }
 ];
 
+import { useContact } from '@/context/ContactContext';
+
 export default function HowItWorksTriple() {
+  const { openContact } = useContact();
+
   return (
     <section className={styles.section}>
       <div className={styles.container}>
@@ -38,6 +43,12 @@ export default function HowItWorksTriple() {
               <p className={styles.cardDesc}>{step.desc}</p>
             </div>
           ))}
+        </div>
+
+        <div className={styles.ctaWrapper}>
+          <button onClick={openContact} className={styles.ctaButton}>
+            Get Free Estimate Now
+          </button>
         </div>
       </div>
     </section>

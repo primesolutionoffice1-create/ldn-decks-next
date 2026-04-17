@@ -1,12 +1,7 @@
 import { Outfit } from "next/font/google";
 import "./variables.css";
 import "./globals.css";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import ScrollToTop from "../components/ScrollToTop";
-import FloatingCallButton from "../components/FloatingCallButton";
 import StructuredData from "../components/StructuredData";
-import Breadcrumbs from "../components/Breadcrumbs";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -32,20 +27,20 @@ metadata.icons = {
   apple: "/ldndecks-logo.webp",
 };
 
+import { ContactProvider } from "@/context/ContactContext";
+import LayoutContent from "./LayoutContent";
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={outfit.variable}>
       <body>
-        <a href="#main" className="skip-link">Skip to main content</a>
-        <StructuredData />
-        <Header />
-        <Breadcrumbs />
-        <main id="main">
-          {children}
-        </main>
-        <Footer />
-        <ScrollToTop />
-        <FloatingCallButton />
+        <ContactProvider>
+          <a href="#main" className="skip-link">Skip to main content</a>
+          <StructuredData />
+          <LayoutContent>
+            {children}
+          </LayoutContent>
+        </ContactProvider>
       </body>
     </html>
   );

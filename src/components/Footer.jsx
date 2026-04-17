@@ -2,6 +2,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useContact } from '@/context/ContactContext';
 import styles from './Footer.module.css';
 
 const PhoneIcon = () => (
@@ -53,6 +54,7 @@ const InstagramIcon = () => (
 );
 
 export default function Footer() {
+  const { openContact } = useContact();
   return (
     <footer className={styles.footerWrapper}>
       {/* Top Dark Background Layer with image */}
@@ -79,7 +81,7 @@ export default function Footer() {
               <li><Link href="/about">About</Link></li>
               <li><Link href="/services">Our Services</Link></li>
               <li><Link href="/showcase">Recent Projects</Link></li>
-              <li><Link href="/contact">Contact Us</Link></li>
+              <li><button onClick={openContact} className={styles.footerBtnLink}>Contact Us</button></li>
             </ul>
           </div>
 
@@ -89,7 +91,7 @@ export default function Footer() {
               <li><Link href="/team">Our Team</Link></li>
               <li><Link href="/privacy-policy">Privacy Policy</Link></li>
               <li><Link href="/terms-of-service">Terms of Service</Link></li>
-              <li><Link href="/contact">Free Estimate</Link></li>
+              <li><button onClick={openContact} className={styles.footerBtnLink}>Free Estimate</button></li>
             </ul>
           </div>
 

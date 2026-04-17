@@ -107,6 +107,13 @@
   font-size: 18px !important;
 }
 
+.buttonGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 10px;
+}
+
 .callBtn {
   display: inline-flex;
   align-items: center;
@@ -116,18 +123,48 @@
   color: var(--white, #ffffff);
   padding: 16px 24px;
   border-radius: 8px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
   text-decoration: none;
-  margin-top: 10px;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(230, 92, 43, 0.3);
+}
+
+.estimateBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: var(--site-color, #E65C2B);
+  border: 2px solid var(--site-color, #E65C2B);
+  padding: 14px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .callBtn:hover {
   background-color: var(--button-hover-color, #c14d24);
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(230, 92, 43, 0.4);
+}
+
+.estimateBtn:hover {
+  background-color: var(--site-color, #E65C2B);
+  color: var(--white);
+  transform: translateY(-3px);
+}
+
+@media screen and (min-width: 600px) {
+  .buttonGroup {
+    flex-direction: row;
+  }
+  
+  .callBtn, .estimateBtn {
+    flex: 1;
+  }
 }
 
 /* Mobile Responsiveness */

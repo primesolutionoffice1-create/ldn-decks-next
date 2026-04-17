@@ -1,9 +1,10 @@
-import React from 'react';
+"use client";
+import { useContact } from '@/context/ContactContext';
 import styles from './Hero.module.css';
-import Link from 'next/link';
 import Image from 'next/image';
-
 export default function Hero() {
+  const { openContact } = useContact();
+
   return (
     <section className={styles.heroSection}>
       <Image 
@@ -36,9 +37,9 @@ export default function Hero() {
           <a href="tel:+15716557207" className={styles.ctaButton}>
             Call Now: (571) 655-7207
           </a>
-          <Link href="/contact" className={styles.ctaButtonAlt}>
+          <button onClick={openContact} className={styles.ctaButtonAlt}>
             Get Free Estimate
-          </Link>
+          </button>
         </div>
       </div>
     </section>

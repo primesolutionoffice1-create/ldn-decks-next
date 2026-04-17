@@ -9,6 +9,7 @@ import ServicesHome from "@/components/ServicesHome";
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 import TrustLogos from "@/components/TrustLogos";
+import ContactMap from "@/components/ContactMap";
 import ContactHome from "@/components/ContactHome";
 import styles from "./page.module.css";
 
@@ -33,6 +34,7 @@ export default function Home() {
       <Testimonials />
       <FAQ />
       <TrustLogos />
+      <ContactMap />
       <ContactHome />
     </main>
   );

@@ -74,9 +74,11 @@ const slugify = (text) => {
     .replace(/-+$/, '');
 };
 
+import { useContact } from '@/context/ContactContext';
+
 export default function Header() {
+  const { isContactOpen, openContact, closeContact, toggleContact } = useContact();
   const [isMobileOpen, setIsMobileOpen] = useState(false);
-  const [isContactOpen, setIsContactOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
   const [activeSubMenu, setActiveSubMenu] = useState({}); // Changed to object for multi-level support
   const pathname = usePathname();
@@ -120,7 +122,7 @@ export default function Header() {
   return (
     <div className={styles.headerWrapper}>
       {/* Mobile Sticky Top Call Bar */}
-      <button onClick={() => setIsContactOpen(true)} className={styles.mobileTopCallBar} aria-label="Open Contact Form">
+      <button onClick={openContact} className={styles.mobileTopCallBar} aria-label="Open Contact Form">
         <PhoneIcon />
         <span>Get A Free Estimate</span>
       </button>
@@ -146,12 +148,22 @@ export default function Header() {
           <div className={styles.topBar}>
             <div className={styles.topBarLeft}>
               <div className={styles.topBarItem}>
-                <EnvelopeIcon />
-                <span>office@ldndecks.com</span>
+                <a href="mailto:office@ldndecks.com" aria-label="Email office@ldndecks.com">
+                  <EnvelopeIcon />
+                  <span>office@ldndecks.com</span>
+                </a>
               </div>
               <div className={styles.topBarItem}>
-                <LocationIcon />
-                <span>13704 Winding Oak Cir, Centreville, VA 20121, Virginia</span>
+                <a href="https://www.google.com/maps/search/?api=1&query=13704+Winding+Oak+Cir+Centreville+VA+20121" target="_blank" rel="noopener noreferrer" aria-label="View our location on Google Maps">
+                  <LocationIcon />
+                  <span>13704 Winding Oak Cir, Centreville, VA 20121</span>
+                </a>
+              </div>
+              <div className={styles.topBarItem}>
+                 <a href="tel:+15716557207" aria-label="Call Loudoun Decks">
+                    <PhoneIcon />
+                    <span>(571) 655-7207</span>
+                 </a>
               </div>
             </div>
             <div className={styles.topBarRight}>
@@ -496,13 +508,13 @@ export default function Header() {
       </div>
 
       {/* Contact Drawer Panel */}
-      <div className={`${styles.contactDrawerOverlay} ${isContactOpen ? styles.open : ''}`} onClick={() => setIsContactOpen(false)}></div>
+      <div className={`${styles.contactDrawerOverlay} ${isContactOpen ? styles.open : ''}`} onClick={closeContact}></div>
       <div className={`${styles.contactDrawer} ${isContactOpen ? styles.open : ''}`}>
         <div className={styles.mobileMenuHeader}>
           <h3 style={{ margin: 0, fontSize: '20px', fontWeight: 700, color: '#333' }}>Get A Free Quote</h3>
           <button
             className={styles.closeBtn}
-            onClick={() => setIsContactOpen(false)}
+            onClick={closeContact}
             aria-label="Close Contact Drawer"
           >
             <CloseIcon />

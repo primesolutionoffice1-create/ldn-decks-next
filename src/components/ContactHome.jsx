@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import styles from './ContactHome.module.css';
 import { sendContactEmail } from '@/server/sendEmail';
 
@@ -25,6 +26,7 @@ const MapIcon = () => (
 
 export default function ContactHome() {
   const [status, setStatus] = useState(null);
+  const router = useRouter();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -33,8 +35,7 @@ export default function ContactHome() {
     const result = await sendContactEmail(formData);
     
     if (result && result.success) {
-      setStatus("success");
-      e.target.reset();
+      router.push('/thank-you');
     } else {
       setStatus("error");
     }
@@ -89,13 +90,6 @@ export default function ContactHome() {
         </div>
 
         <div className={styles.rightCol}>
-          {status === "success" ? (
-             <div style={{ background: '#fff', padding: '40px', borderRadius: '8px', textAlign: 'center' }}>
-                <h3 style={{ color: '#27ae60', marginBottom: '10px' }}>Message Sent Successfully!</h3>
-                <p>Thank you for reaching out. We will get back to you shortly.</p>
-                <button onClick={() => setStatus(null)} className={styles.submitBtn} style={{ marginTop: '20px' }}>Send Another Message</button>
-             </div>
-          ) : (
             <form onSubmit={handleSubmit} className={styles.contactForm}>
               <h3>Request Your Free Design Consultation</h3>
               {status === "error" && <p style={{color: 'red', fontSize: '14px', marginBottom: '10px'}}>There was an error sending your message. Please try again.</p>}
@@ -119,25 +113,16 @@ export default function ContactHome() {
                     <option value="Other">Other</option>
                   </select>
                 </div>
-                <div className={styles.inputGroup}>
-                  <select name="budget" required defaultValue="" aria-label="Approximate Budget">
-                    <option value="" disabled>Approximate Budget</option>
-                    <option value="$10k - $20k">$10k - $20k</option>
-                    <option value="$20k - $40k">$20k - $40k</option>
-                    <option value="$40k+">$40k+</option>
-                    <option value="Not Sure">Not Sure</option>
-                  </select>
+                  <div className={styles.inputGroup}>
+                    <select name="timeline" required defaultValue="" aria-label="Project Timeline">
+                      <option value="" disabled>Project Timeline</option>
+                      <option value="Immediately">Immediately</option>
+                      <option value="1-3 Months">1-3 Months</option>
+                      <option value="3-6 Months">3-6 Months</option>
+                      <option value="Just Exploring">Just Exploring</option>
+                    </select>
+                  </div>
                 </div>
-                <div className={styles.inputGroup}>
-                  <select name="timeline" required defaultValue="" aria-label="Project Timeline">
-                    <option value="" disabled>Project Timeline</option>
-                    <option value="Immediately">Immediately</option>
-                    <option value="1-3 Months">1-3 Months</option>
-                    <option value="3-6 Months">3-6 Months</option>
-                    <option value="Just Exploring">Just Exploring</option>
-                  </select>
-                </div>
-              </div>
               <div className={styles.inputGroup}>
                 <textarea name="message" placeholder="Tell us about your project..." rows="5" required aria-label="Project Details"></textarea>
               </div>
@@ -145,7 +130,6 @@ export default function ContactHome() {
                 {status === "submitting" ? "Sending..." : "Send Message"}
               </button>
             </form>
-          )}
         </div>
       </div>
     </section>

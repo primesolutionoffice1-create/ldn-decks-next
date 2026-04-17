@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 import styles from './ServiceProcessHorizontal.module.css';
 import Link from 'next/link';
@@ -9,7 +10,10 @@ const OrangeCheckIcon = () => (
   </svg>
 );
 
+import { useContact } from '@/context/ContactContext';
+
 export default function ServiceProcessHorizontal({ title, steps }) {
+  const { openContact } = useContact();
   return (
     <section className={styles.processSection}>
       <div className={styles.container}>
@@ -31,9 +35,9 @@ export default function ServiceProcessHorizontal({ title, steps }) {
           <p className={styles.ctaText}>
             Get Started Today! Ready to enhance your property with us? Contact us to schedule your <strong>Free consultation</strong>.
           </p>
-          <Link href="/contact" className={styles.ctaButton}>
+          <button onClick={openContact} className={styles.ctaButton}>
             Contacts
-          </Link>
+          </button>
         </div>
       </div>
     </section>

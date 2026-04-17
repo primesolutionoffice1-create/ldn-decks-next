@@ -54,6 +54,23 @@
   gap: 8px;
 }
 
+.topBarItem a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.topBarItem a:hover {
+  opacity: 0.8;
+}
+
+.topBarItem a svg {
+  animation: vibrate 2.5s infinite;
+}
+
 .topBarItem svg {
   opacity: 0.8;
 }
@@ -260,6 +277,15 @@
 .callNowBtn svg {
   width: 20px;
   height: 20px;
+  animation: vibrate 2.5s infinite;
+}
+
+@keyframes vibrate {
+  0%, 90%, 100% { transform: rotate(0deg); }
+  92% { transform: rotate(10deg); }
+  94% { transform: rotate(-10deg); }
+  96% { transform: rotate(10deg); }
+  98% { transform: rotate(-10deg); }
 }
 
 /* --- Mobile Toggle --- */
@@ -470,6 +496,10 @@
     border: none;
     cursor: pointer;
     font-family: inherit;
+  }
+
+  .mobileTopCallBar svg {
+    animation: vibrate 2.5s infinite;
   }
 
   .logoArea {

@@ -1,319 +1,766 @@
-Loudoun Decks — Website & SEO Audit
-URL audited: https://ldn-decks-next.vercel.app/ Date: 2026-04-15
-1. Executive summary
-The site is a professional, conversion-focused marketing website for a Northern Virginia deck
-construction company, built on Next.js and deployed to Vercel. Overall presentation and technical
-foundation are solid, but several critical SEO bugs affect the most important pages (city-level location
-pages), key schema opportunities are unused, and the blog/showcase are empty.
-The three highest-priority issues:
-1. Broken canonical URL on ~63 city-level location pages — they all point to /layout.js
-2. Vercel staging is indexable — risk of duplicate content with the production domain
-3. Missing AggregateRating and FAQPage schemas — leaving rich snippets on the table despite
-having the raw data (5.0 / 41 reviews and 17 FAQs)
-2. General site review
-Strengths
-Design & presentation
-Clean, professional aesthetic that inspires trust — essential for a construction business
-High-quality project photography
-Clear primary navigation: Home, About, Services, Near You, Showcase, Blog, Contact
-Mobile-friendly, built on Next.js with image optimization
-Conversion & trust
-Multiple visible CTAs: "Call Now", "Get Free Estimate", "Call For A Free Quote" (4+ instances)
-Strong trust signals: 5.0 Google rating (41 reviews), "Licensed & Insured", 5-year workmanship
-warranty
-Clear positioning: "Northern Virginia's #1 Rated Composite Deck Builder"
-Well-explained 4-step process (Consultation → Design → Build → Warranty)
-Two physical locations listed (Centreville + Manassas)
-Direct contact available: phone (571) 655-7207, email office@ldndecks.com
-Local SEO foundation
-Dedicated pages per location (Loudoun, Fairfax, Prince William) — good coverage for local searches
-Links to trust platforms: Thumbtack, BuildZoom, BBB
-Weaknesses
-Underdeveloped content
-The blog exists but has no visible articles — significant SEO traffic left unused
-The "Showcase"/portfolio section appears empty or sparsely populated
-No before/after galleries — critical for a construction business
-No video content (project tours, build timelapses) — industry standard
-The "Team" page has no team information
-Service descriptions are too short and lack depth
-UX & forms
-The main contact form is too long (name, email, phone, address, budget, timeline, city, state, ZIP,
-message) — reduces completion rate
-The form could be more prominent above the fold
-No pricing transparency (even an indicative range would help)
-Educational content
-Few details about the warranty beyond "5-year workmanship"
-No educational content about composite materials, maintenance, durability — customers research
-this before calling
-Other observations
-No multilingual support (English only) — the DC/Virginia area has a sizable Hispanic community;
-Spanish could bring in leads
-3. Technical SEO audit
-What is done well
-On-page basics
-Unique, well-structured title tags per page: "Custom Deck Builder Loudoun VA | Design & Build
-Services | Loudoun Decks"
-Unique meta description per page, ~150 characters, with local keywords
-<meta name="robots" content="index, follow"> present
-lang="en" set on <html>
-A single H1 per page, clean H2 hierarchy
-Viewport meta present (mobile-friendly)
-Technical SEO
-Clean robots.txt with sitemap reference: Sitemap: https://ldndecks.com/sitemap.xml
-sitemap.xml with 107 URLs well organized (homepage + services + 87 geo pages)
-Clean, semantic URL structure: /services/new-decks , /near-you/loudoun-county/ashburn
-Next.js image optimization (WebP, srcset, lazy loading)
-Logo preloaded (helps LCP)
-Canonical tag present on homepage: https://ldndecks.com
-Fonts preloaded (woff2)
-Social & structured data
-Full Open Graph: og:title , og:description , og:image (1200x630), og:type , og:locale
-Twitter Card: summary_large_image
-Schema.org LocalBusiness JSON-LD with: full address, geo coordinates (38.83, -77.44), phone,
-hours (Mon–Sat 08:00–18:00), social profiles
-Local content (geo SEO)
-87 per-city pages — strong strategy for "deck builder [city]" queries
-Localized titles: "Best Deck Builder in Ashburn, VA | 5-Star Custom Decks & Patios"
-4. Critical bugs
-4.1 Broken canonical on city-level pages
-I tested 18 pages. The pattern is clear:
-Page type Canonical Status
-/ https://ldndecks.com OK
-/services/new-decks https://ldndecks.com/services/new-decks OK
-/near-you/loudoun-county (county) https://ldndecks.com/near-you/loudouncounty
-OK
-/near-you/loudoun-county/ashburn
-(city)
-https://ldndecks.com/layout.js BROKEN
-/near-you/fairfax-county/vienna https://ldndecks.com/layout.js BROKEN
-/near-you/prince-williamcounty/woodbridge
-https://ldndecks.com/layout.js BROKEN
-Root cause: the dynamic [city]/page.tsx route — generateMetadata is not receiving the segment
-correctly, likely referencing params.layout or __filename incorrectly, or the function that constructs
-alternates.canonical has a bug.
-Affected scope: ~63 city pages (18 Loudoun + 20 Fairfax + 14 Prince William + 7 Arlington + 4 Stafford)
-— the most important SEO layer for local searches.
-Fix (Next.js 13+ App Router) in app/near-you/[county]/[city]/page.tsx :
-export async function generateMetadata(
-{ params }: { params: { county: string; city: string } }
-): Promise<Metadata> {
-const { county, city } = params;
-return {
-alternates: {
-canonical: `https://ldndecks.com/near-you/${county}/${city}`,
-},
-openGraph: {
-url: `https://ldndecks.com/near-you/${county}/${city}`,
-// ...
-},
-};
-}
-4.2 Vercel staging is indexable
-Confirmed:
-GET https://ldn-decks-next.vercel.app/robots.txt
-User-Agent: *
-Allow: /
-No X-Robots-Tag header is returned. Google can index the staging deployment.
-Fix — add to next.config.js :
-async headers() {
-if (process.env.VERCEL_ENV !== 'production') {
-return [{
-source: '/:path*',
-headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }],
-}];
-}
-return [];
-}
-Alternatively, a robots.ts conditioned on VERCEL_ENV .
-4.3 og:url hardcoded to homepage on all pages
-On /services/new-decks the meta tag is:
-<meta property="og:url" content="https://ldndecks.com"/>
-It should be the URL of the current page. This affects social media sharing (wrong page shared when
-someone shares a service page).
-4.4 og:image identical on every page
-The same image ( img64.jpeg ) is used sitewide — missed opportunity for service/location-specific
-preview images.
-5. Schema.org — missed opportunities
-Only LocalBusiness is present, and it is identical on every page. Missing:
-FAQPage schema — the site has FAQs on the homepage and a /faqs page, but they are not
-marked up. Free rich snippet on Google.
-AggregateRating / Review schema — "5.0 out of 41 Google reviews" is displayed but not in
-schema. Could earn star ratings in SERPs.
-Service schema on each service page
-BreadcrumbList schema — no visual or structured-data breadcrumbs
-LocalBusiness.sameAs — https://www.facebook.com/ is a broken link (no actual page)
-5.1 FAQPage schema (ready-to-use)
-Extract from /faqs — 17 real questions. Add a <script type="application/ld+json"> to
-app/faqs/page.tsx :
-{
-"@context": "https://schema.org",
-"@type": "FAQPage",
-"mainEntity": [
-{
-"@type": "Question",
-"name": "What areas do you serve?",
-"acceptedAnswer": {
-"@type": "Answer",
-"text": "We serve Loudoun County, Fairfax County, and Prince William County."
-}
-},
-{
-"@type": "Question",
-"name": "Do you offer free consultations?",
-"acceptedAnswer": {
-"@type": "Answer",
-"text": "Yes. We offer free consultations to discuss your outdoor living project and an
-}
-},
-{
-"@type": "Question",
-"name": "Do you provide free estimates?",
-"acceptedAnswer": {
-"@type": "Answer",
-"text": "Yes. We provide free consultations and estimates for homeowners in our service
-}
-}
-// add all 17 Q&A pairs
-]
-}
-5.2 AggregateRating — extend the existing LocalBusiness
-Modify the existing LocalBusiness block:
-{
-"@context": "https://schema.org",
-"@type": "LocalBusiness",
-"name": "Loudoun Decks",
-"@id": "https://ldndecks.com",
-"url": "https://ldndecks.com",
-"telephone": "+1-571-655-7207",
-"priceRange": "$$-$$$",
-"aggregateRating": {
-"@type": "AggregateRating",
-"ratingValue": "5.0",
-"reviewCount": "41",
-"bestRating": "5",
-"worstRating": "1"
-},
-"address": { /* ... */ },
-"geo": { /* ... */ }
-}
-Result: yellow stars appear in SERP — historically lifts CTR by 20–35%.
-5.3 BreadcrumbList (for city and service pages)
-On /near-you/loudoun-county/ashburn :
-{
-"@context": "https://schema.org",
-"@type": "BreadcrumbList",
-"itemListElement": [
-{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ldndecks.com" },
-{ "@type": "ListItem", "position": 2, "name": "Service Areas", "item": "https://ldndecks.co
-{ "@type": "ListItem", "position": 3, "name": "Loudoun County", "item": "https://ldndecks.c
-{ "@type": "ListItem", "position": 4, "name": "Ashburn", "item": "https://ldndecks.com/near
-]
-}
-Also add visual breadcrumbs to the UI — not just in structured data.
-5.4 Service schema (for /services/* pages)
-On /services/new-decks :
-{
-"@context": "https://schema.org",
-"@type": "Service",
-"serviceType": "Custom Deck Construction",
-"provider": { "@id": "https://ldndecks.com" },
-"areaServed": [
-{ "@type": "AdministrativeArea", "name": "Loudoun County, VA" },
-{ "@type": "AdministrativeArea", "name": "Fairfax County, VA" },
-{ "@type": "AdministrativeArea", "name": "Prince William County, VA" }
-],
-"description": "From concept to completion, we design and build fully custom decks tailored t
-}
-6. Other issues worth fixing
-Broken Facebook sameAs — LocalBusiness contains:
-"sameAs": ["https://www.facebook.com/", ...]
-Replace with the actual Facebook page URL, or remove it entirely.
-Identical lastmod on all 107 sitemap URLs — generate lastmod from the actual content edit date,
-not build time. Google discounts sitemaps with artificial timestamps.
-Generic image alt text — alt="New Decks" , alt="Relaxing deck" are not optimized. Use
-descriptive alts with keywords, e.g. alt="Custom Trex composite deck in Ashburn Virginia
-backyard" .
-No visible breadcrumbs — neither in HTML nor in schema.
-No hreflang — OK since the site is English-only, but a future es-US variant could help in Northern
-Virginia.
-Weak internal linking between geo pages — e.g. Ashburn pages should link to Leesburg, Sterling, etc.
-(neighbor cities) to distribute PageRank and help crawling.
-Blog is empty — /blog is in the sitemap but has no articles. Long-tail traffic opportunities lost:
-"composite vs wood deck Virginia", "cost of a deck in Ashburn", "how long does a Trex deck last", etc.
-Potential "thin content" risk on geo pages — if the 63 city pages are just templates with the city name
-swapped in, Google may ignore or penalize them as doorway pages. Each should contain unique content
-(local projects, zoning references, area-specific details).
-7. Prioritized remediation plan
-Priority Issue Impact
-P0 Canonical /layout.js on city pages 63 pages with broken SEO
-P0 Vercel staging indexable Duplicate content risk
-P1 Hardcoded og:url Incorrect social sharing
-P1 Missing FAQPage + AggregateRating schema Missed rich snippets and SERP stars
-P2 Empty blog Unused long-tail SEO potential
-P2 Identical lastmod in sitemap Sitemap partially ignored
-P2 Broken Facebook sameAs Weakened E-E-A-T signal
-P3 Generic image alt text Image search visibility
-P3 Thin content on geo pages Doorway page risk
-Recommended order of attack
-1. Fix the canonical on city pages (≈1 hour of dev work) — unblocks 63 pages
-2. Noindex the Vercel staging (≈15 min) — removes duplicate content risk
-3. Add AggregateRating to LocalBusiness (≈15 min) — visible SERP gain (stars)
-4. Add FAQPage schema (≈30 min) — free rich snippet
-5. Per-page og:url (≈30 min)
-6. Unique content on city pages — larger investment, but critical to avoid being flagged as doorway
-pages
-7. F
-i
-l
-l
-t
-h
-e
-b
-l
-o
-g
-wit
-h
-5–1
-0
-f
-o
-u
-n
-d
-a
-tio
-n
-al a
-r
-ticles
-(
-"
-C
-o
-m
-p
-osi
-t
-e vs
-w
-o
-o
-d
-", "
-C
-ost
-o
-f
-a
-d
-e
-c
-k in
-Vir
-ginia
-", "
-H
-o
-w long does a deck last")
+# EMERGENCY + FULL FIX PLAN: ldndecks.com
+
+## CURRENT STATE (verified 2026-04-16)
+
+The site has been migrated from WordPress (LiteSpeed) to Next.js (Vercel).
+- DNS nameservers: ns1.vercel-dns.com, ns2.vercel-dns.com
+- ldndecks.com → 307 redirect → www.ldndecks.com → HTTP 403 (BLOCKED)
+- Vercel Attack Challenge Mode is active — every visitor, Google Bot,
+  and crawler gets a "Vercel Security Checkpoint" page instead of the site
+- The staging URL ldn-decks-next.vercel.app returns HTTP 200 and works fine
+- Both URLs serve the same Vercel project
+- WordPress is no longer active — the old LiteSpeed server is disconnected
+
+The site is effectively DOWN. Zero visitors can see it. Zero leads coming in.
+Google will begin deindexing pages within days.
+
+## STACK
+- Framework: Next.js (App Router)
+- Hosting: Vercel
+- Domain: ldndecks.com (www.ldndecks.com is the primary)
+- Nameservers: Vercel DNS
+- 107 URLs in sitemap (114 pages, 87 geo/city pages, 7+ service pages)
+- Access: Vercel Dashboard, GitHub repo, Google Search Console
+
+---
+
+# PHASE 0 — EMERGENCY (do in the next 5 minutes)
+
+## 0.1 Disable Vercel Attack Challenge Mode
+The Vercel Firewall is blocking ALL traffic with a 403 challenge page.
+
+Steps:
+1. Go to Vercel Dashboard → select the project (ldn-decks-next or whatever it's named)
+2. Settings → Security → Firewall
+3. Find "Attack Challenge Mode" → turn it OFF
+4. If there are custom Firewall Rules with action "Challenge" or "Block",
+   disable or delete them
+5. Wait 30 seconds for propagation
+
+Verify immediately:
+  curl -sI https://www.ldndecks.com/ | head -3
+  # MUST return: HTTP/2 200
+  # If still 403, check Vercel → Firewall → Rules for anything blocking
+
+## 0.2 Verify the redirect chain works
+  curl -sLI https://ldndecks.com/ | grep -E "^HTTP|^location"
+  # Expected:
+  #   HTTP/2 307  (ldndecks.com → www.ldndecks.com)
+  #   HTTP/2 200  (www.ldndecks.com loads)
+
+## 0.3 Verify Google can crawl
+  Go to Google Search Console → URL Inspection → enter https://www.ldndecks.com/
+  → click "Test Live URL" → must return "URL is available to Google"
+
+DO NOT proceed to Phase 1 until the site returns HTTP 200 on www.ldndecks.com.
+
+---
+
+# PHASE 1 — CRITICAL TECHNICAL FIXES (Day 1)
+
+These are confirmed bugs from a full audit of the Next.js codebase.
+
+## 1.1 Fix broken canonical on ~63 city pages
+
+PROBLEM: Every city-level page under /near-you/[county]/[city]/ has:
+  <link rel="canonical" href="https://ldndecks.com/layout.js"/>
+This is a Next.js App Router bug — the generateMetadata function is
+referencing the layout filename instead of the actual route path.
+
+AFFECTED: all pages matching /near-you/*/[city] — approximately 63 pages
+(18 Loudoun + 20 Fairfax + 14 Prince William + 7 Arlington + 4 Stafford)
+
+NOT AFFECTED: homepage, /about, /services/*, /near-you/[county] (county-level),
+/showcase, /blog, /faqs, /team — these all have correct canonicals.
+
+FIX: Create a centralized metadata builder and fix the city page metadata.
+
+Step 1 — Create lib/seo.ts:
+
+  import type { Metadata } from "next";
+
+  export const SITE_URL = "https://ldndecks.com";
+
+  export function buildMetadata({
+    path,
+    title,
+    description,
+    image = "/images/og-default.jpg",
+  }: {
+    path: string;
+    title: string;
+    description: string;
+    image?: string;
+  }): Metadata {
+    const url = `${SITE_URL}${path}`;
+    return {
+      title,
+      description,
+      alternates: { canonical: url },
+      robots: { index: true, follow: true },
+      openGraph: {
+        url,
+        title,
+        description,
+        siteName: "Loudoun Decks",
+        locale: "en_US",
+        type: "website",
+        images: [{
+          url: `${SITE_URL}${image}`,
+          width: 1200,
+          height: 630,
+          alt: title,
+        }],
+      },
+      twitter: {
+        card: "summary_large_image",
+        title,
+        description,
+        images: [`${SITE_URL}${image}`],
+      },
+    };
+  }
+
+Step 2 — Fix app/near-you/[county]/[city]/page.tsx generateMetadata:
+
+  export async function generateMetadata(
+    { params }: { params: { county: string; city: string } }
+  ) {
+    const { county, city } = params;
+    // Look up city data from your data source
+    const data = getCityData(county, city);
+    if (!data) return {};
+
+    return buildMetadata({
+      path: `/near-you/${county}/${city}`,
+      title: `Deck Builder in ${data.name}, VA | Custom Decks | Loudoun Decks`,
+      description: `Top-rated deck builder in ${data.name}, ${data.countyName}. 5.0★ Google (41 reviews). Free estimate, 5-year warranty. Call (571) 655-7207.`,
+    });
+  }
+
+Step 3 — Apply the same pattern to all other dynamic routes:
+  - app/services/[slug]/page.tsx → path: `/services/${slug}`
+  - app/near-you/[county]/page.tsx → path: `/near-you/${county}`
+  - app/blog/[slug]/page.tsx → path: `/blog/${slug}`
+
+VERIFY after deploying:
+  curl -sL https://www.ldndecks.com/near-you/loudoun-county/ashburn | grep canonical
+  # MUST show: href="https://ldndecks.com/near-you/loudoun-county/ashburn"
+  # NOT: href="https://ldndecks.com/layout.js"
+
+Test at least 5 city pages across different counties.
+
+## 1.2 Fix og:url hardcoded to homepage on every page
+
+PROBLEM: Every page has:
+  <meta property="og:url" content="https://ldndecks.com"/>
+instead of the page-specific URL. When someone shares a service or city
+page on Facebook/LinkedIn, it links back to the homepage.
+
+FIX: The buildMetadata function above already fixes this — og:url is set
+dynamically via the `url` variable built from `path`. Apply buildMetadata()
+to every page that currently has hardcoded og:url.
+
+VERIFY:
+  curl -sL https://www.ldndecks.com/services/new-decks | grep 'og:url'
+  # MUST show: content="https://ldndecks.com/services/new-decks"
+
+## 1.3 Fix og:image identical on every page
+
+PROBLEM: Every page uses the same og:image (images/img64.jpeg).
+Service pages and city pages should have their own preview images.
+
+FIX: For each service page and top city page, create a 1200x630 OG image
+and pass it via buildMetadata({ image: "/images/og/service-new-decks.jpg" }).
+
+Minimum: create unique og:images for:
+  - /services/new-decks
+  - /services/deck-resurfacing
+  - /services/porches
+  - /near-you/loudoun-county/ashburn
+  - /near-you/fairfax-county/vienna
+  - /near-you/prince-william-county/woodbridge
+
+## 1.4 Block staging from indexing
+
+PROBLEM: ldn-decks-next.vercel.app is publicly accessible and indexable.
+Same content as ldndecks.com = duplicate content risk.
+
+FIX Option A — noindex header for non-production (recommended):
+
+In next.config.js (or next.config.ts):
+
+  async headers() {
+    if (process.env.VERCEL_ENV !== "production") {
+      return [{
+        source: "/:path*",
+        headers: [
+          { key: "X-Robots-Tag", value: "noindex, nofollow, noarchive" },
+        ],
+      }];
+    }
+    return [];
+  },
+
+FIX Option B — dynamic robots.ts:
+
+Create app/robots.ts:
+
+  import type { MetadataRoute } from "next";
+
+  export default function robots(): MetadataRoute.Robots {
+    if (process.env.VERCEL_ENV !== "production") {
+      return { rules: [{ userAgent: "*", disallow: "/" }] };
+    }
+    return {
+      rules: [{ userAgent: "*", allow: "/", disallow: "/private/" }],
+      sitemap: "https://ldndecks.com/sitemap.xml",
+      host: "https://ldndecks.com",
+    };
+  }
+
+Apply BOTH options for belt-and-suspenders protection.
+
+VERIFY:
+  curl -sI https://ldn-decks-next.vercel.app/ | grep -i x-robots
+  # MUST show: x-robots-tag: noindex, nofollow, noarchive
+
+After deploying, go to Google Search Console → Removals →
+submit removal for https://ldn-decks-next.vercel.app/ if any pages are indexed.
+
+---
+
+# PHASE 2 — STRUCTURED DATA / SCHEMA (Day 2)
+
+## 2.1 Create a reusable JsonLd component
+
+Create components/JsonLd.tsx:
+
+  export function JsonLd({ data }: { data: object }) {
+    return (
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+      />
+    );
+  }
+
+## 2.2 Add LocalBusiness + AggregateRating to root layout
+
+In app/layout.tsx, add inside <body>:
+
+  <JsonLd data={{
+    "@context": "https://schema.org",
+    "@type": "GeneralContractor",
+    "@id": "https://ldndecks.com/#business",
+    "name": "Loudoun Decks",
+    "legalName": "Loudoun Decks LLC",
+    "url": "https://ldndecks.com",
+    "logo": "https://ldndecks.com/ldndecks-logo.webp",
+    "image": "https://ldndecks.com/ldndecks-logo.webp",
+    "telephone": "+1-571-655-7207",
+    "email": "office@ldndecks.com",
+    "priceRange": "$$-$$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "13704 Winding Oak Cir",
+      "addressLocality": "Centreville",
+      "addressRegion": "VA",
+      "postalCode": "20121",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 38.8404,
+      "longitude": -77.4289
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    "areaServed": [
+      { "@type": "AdministrativeArea", "name": "Loudoun County, VA" },
+      { "@type": "AdministrativeArea", "name": "Fairfax County, VA" },
+      { "@type": "AdministrativeArea", "name": "Prince William County, VA" }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "41",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "sameAs": [
+      "https://www.instagram.com/loudoundecks/",
+      "https://www.tiktok.com/@loudoun.decks",
+      "https://x.com/ldndecks"
+    ]
+  }} />
+
+This gives you YELLOW STARS in Google search results. Historically +20-35% CTR.
+
+## 2.3 Add FAQPage schema on /faqs page
+
+In app/faqs/page.tsx, add:
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What areas do you serve?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We serve Loudoun County, Fairfax County, and Prince William County in Northern Virginia."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you offer free consultations?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We offer free consultations to discuss your outdoor living project and answer questions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you provide free estimates?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We provide free consultations and estimates for homeowners in our service area."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does a deck build take?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most custom decks take 2-4 weeks from permit approval to completion, depending on size and materials."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you pull permits?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We handle all permits and HOA submissions on your behalf."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What warranty do you offer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We provide a 5-year workmanship warranty in addition to manufacturer warranties on materials."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you work with composite and wood?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We build with Trex and other composites, pressure-treated lumber, cedar, and exotic hardwoods."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are you licensed and insured?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Loudoun Decks is fully licensed and insured in Virginia."
+        }
+      }
+    ]
+  };
+
+  // Then in the JSX:
+  <JsonLd data={faqSchema} />
+
+Also add the same schema to the homepage if it has a FAQ section.
+
+## 2.4 Add BreadcrumbList schema on city and service pages
+
+Create a helper function:
+
+  function buildBreadcrumb(items: { name: string; url: string }[]) {
+    return {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": items.map((it, i) => ({
+        "@type": "ListItem",
+        "position": i + 1,
+        "name": it.name,
+        "item": it.url,
+      })),
+    };
+  }
+
+Usage on /near-you/loudoun-county/ashburn:
+
+  <JsonLd data={buildBreadcrumb([
+    { name: "Home", url: "https://ldndecks.com" },
+    { name: "Service Areas", url: "https://ldndecks.com/near-you" },
+    { name: "Loudoun County", url: "https://ldndecks.com/near-you/loudoun-county" },
+    { name: "Ashburn", url: "https://ldndecks.com/near-you/loudoun-county/ashburn" },
+  ])} />
+
+Also add VISUAL breadcrumbs to the UI — not just schema.
+
+## 2.5 Add Service schema on service pages
+
+On each /services/[slug] page:
+
+  <JsonLd data={{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Custom Deck Construction",
+    "serviceType": "Deck Building",
+    "provider": { "@id": "https://ldndecks.com/#business" },
+    "areaServed": [
+      { "@type": "AdministrativeArea", "name": "Loudoun County, VA" },
+      { "@type": "AdministrativeArea", "name": "Fairfax County, VA" },
+      { "@type": "AdministrativeArea", "name": "Prince William County, VA" }
+    ],
+    "description": "From concept to completion, we design and build fully custom decks tailored to your space, style, and budget in Northern Virginia.",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "41"
+    }
+  }} />
+
+## 2.6 Verify all schema
+
+After deploying, test each schema type:
+  https://search.google.com/test/rich-results?url=https://ldndecks.com
+  https://search.google.com/test/rich-results?url=https://ldndecks.com/faqs
+  https://search.google.com/test/rich-results?url=https://ldndecks.com/services/new-decks
+  https://search.google.com/test/rich-results?url=https://ldndecks.com/near-you/loudoun-county/ashburn
+
+Expected: LocalBusiness with stars, FAQPage, Service — no errors, no warnings.
+
+---
+
+# PHASE 3 — SITEMAP & ROBOTS CLEANUP (Day 2)
+
+## 3.1 Fix sitemap lastmod dates
+
+PROBLEM: All 107 URLs in sitemap.xml have the same lastmod timestamp.
+Google discounts sitemaps with artificial/identical timestamps.
+
+FIX: Generate lastmod from actual content modification dates, not build time.
+If using a static data source, at minimum set different dates for pages
+that were actually edited on different dates. If all content is truly the same
+age, remove the lastmod field entirely — it's better to have no lastmod
+than a fake identical one.
+
+## 3.2 Verify robots.txt on production
+
+After Phase 1.4 is deployed:
+  curl -sL https://www.ldndecks.com/robots.txt
+  # Expected:
+  #   User-agent: *
+  #   Allow: /
+  #   Disallow: /private/
+  #   Sitemap: https://ldndecks.com/sitemap.xml
+
+Make sure it does NOT reference the old WordPress sitemap_index.xml
+or contain any Yoast/RankMath markers from the old WordPress site.
+
+## 3.3 Submit sitemap in Google Search Console
+
+1. Go to GSC → Sitemaps
+2. Remove the old https://ldndecks.com/sitemap_index.xml (WordPress)
+3. Add https://ldndecks.com/sitemap.xml (Next.js)
+4. Request indexing on the top 20 pages manually via URL Inspection
+
+---
+
+# PHASE 4 — SECURITY HEADERS (Day 3)
+
+## 4.1 Add security headers via next.config.js
+
+In next.config.js, inside the headers() function:
+
+  async headers() {
+    const securityHeaders = [
+      { key: "X-Content-Type-Options", value: "nosniff" },
+      { key: "X-Frame-Options", value: "SAMEORIGIN" },
+      { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+      { key: "Permissions-Policy", value: "geolocation=(), microphone=(), camera=()" },
+      { key: "Strict-Transport-Security", value: "max-age=31536000; includeSubDomains; preload" },
+      { key: "X-DNS-Prefetch-Control", value: "on" },
+    ];
+
+    const headers = [
+      { source: "/:path*", headers: securityHeaders },
+    ];
+
+    // Add noindex for non-production (staging protection)
+    if (process.env.VERCEL_ENV !== "production") {
+      headers.push({
+        source: "/:path*",
+        headers: [
+          { key: "X-Robots-Tag", value: "noindex, nofollow, noarchive" },
+        ],
+      });
+    }
+
+    return headers;
+  },
+
+## 4.2 Verify headers after deploy
+
+  curl -sI https://www.ldndecks.com/ | grep -iE "x-content-type|x-frame|strict-transport|referrer-policy|permissions-policy"
+  # All 5 headers must be present
+
+---
+
+# PHASE 5 — PERFORMANCE OPTIMIZATION (Day 3-4)
+
+## 5.1 Image optimization
+
+Ensure all images use Next.js <Image> component with:
+  - width/height or fill attributes set
+  - loading="lazy" on below-fold images
+  - priority={true} on hero/LCP image only
+  - WebP/AVIF auto-conversion (Next.js default on Vercel)
+  - Alt text should be descriptive with local keywords:
+    BAD:  alt="New Decks"
+    GOOD: alt="Custom Trex composite deck built in Ashburn Virginia backyard"
+
+## 5.2 Font optimization
+
+Verify the font is loaded via next/font (not external CSS):
+  import { Outfit } from "next/font/google";
+  const outfit = Outfit({ subsets: ["latin"], display: "swap" });
+
+This automatically self-hosts and preloads the font via Vercel.
+
+## 5.3 Verify Core Web Vitals
+
+After all fixes deployed, run:
+  https://pagespeed.web.dev/report?url=https://www.ldndecks.com
+
+Target scores:
+  - Mobile: ≥ 85
+  - Desktop: ≥ 95
+  - LCP: < 2.5s
+  - CLS: < 0.1
+  - INP: < 200ms
+
+Next.js on Vercel should easily hit these without Elementor bloat.
+
+---
+
+# PHASE 6 — GEO PAGE CONTENT (Week 1-2)
+
+## 6.1 The problem
+
+87 city-level pages exist but risk being flagged as "doorway pages" by
+Google if they are just templates with the city name swapped in.
+Each city page MUST have unique content.
+
+## 6.2 Required sections per city page
+
+Every city page must have these 7 sections:
+  1. Local hero intro (mention city name + county + neighborhoods)
+  2. Real project example (photo + description + materials used)
+  3. Local-specific info:
+     - HOA rules for that city's communities
+     - Permit process in that county
+     - Climate/weather considerations for that area
+  4. Service breakdown with links to /services/* pages
+  5. Local FAQ (4-6 city-specific Q&A with FAQPage schema)
+  6. Nearby cities section (links to 3-5 neighboring city pages)
+  7. Strong CTA section with lead form
+
+## 6.3 Priority order for content creation
+
+Tier A (do first — highest lead value):
+  Ashburn, Leesburg, McLean, Great Falls, Vienna, Reston, Fairfax, Oakton
+
+Tier B (week 2):
+  Sterling, Herndon, Tysons, Alexandria, Brambleton, South Riding,
+  Chantilly, Centreville
+
+Tier C (month 2):
+  Remaining ~47 cities
+
+Rule: if you cannot write unique HOA notes, permit notes, and a real
+project example for a city, DO NOT publish that page. Collapse it into
+the parent county page until you can fill it honestly.
+
+## 6.4 Internal linking rules
+
+Every city page links to:
+  - 3-5 nearby city pages (varied anchor text)
+  - 3-4 relevant service pages
+  - Parent county page (breadcrumb)
+  - 1 blog post (when available)
+
+Anchor text mix (avoid over-optimization):
+  - 30% branded+local: "Loudoun Decks in Ashburn"
+  - 30% geo descriptive: "deck builder in Leesburg, VA"
+  - 25% natural: "see our Sterling projects"
+  - 15% service+local: "Trex decks in Vienna"
+
+Service pages link back to top 4-6 city pages.
+Blog posts link to 1 service + 1 city + 1 related post.
+
+---
+
+# PHASE 7 — BLOG CONTENT (Week 3-4)
+
+## 7.1 The blog is empty — publish 4 articles first
+
+All articles must target buying-intent keywords (people ready to hire),
+not awareness content.
+
+Article 1: "How Much Does a Deck Cost in Northern Virginia? (2026 Prices)"
+  Target: "cost of a deck northern virginia", "deck cost loudoun county"
+  Intent: buyer has a budget question blocking them from calling
+  Must include: price table by size × material, 3 real project costs,
+  embedded quote form mid-article
+
+Article 2: "Trex vs Pressure-Treated Wood: Which Is Right for Your Virginia Deck?"
+  Target: "trex vs pressure treated"
+  Intent: comparison at the buying moment
+  Must include: cost/lifetime table, NoVA climate considerations,
+  clear recommendation
+
+Article 3: "Do I Need a Permit for a Deck in Loudoun County?"
+  Target: "deck permit loudoun county"
+  Intent: DIY research or process understanding
+  Must include: when required, timeline, inspection stages, cost,
+  "we handle all of this" CTA
+
+Article 4: "Deck Resurfacing vs Rebuilding: Which Saves You Money?"
+  Target: "deck resurfacing vs rebuild"
+  Intent: cost-saving decision
+  Must include: frame inspection criteria, cost comparison table
+
+Every article: 1500+ words, 1 data table, FAQPage schema for the FAQ
+section, 2 CTAs (mid-article + end), links to 1 service + 1 city + FAQ.
+
+---
+
+# PHASE 8 — CONVERSION OPTIMIZATION (Week 2)
+
+## 8.1 Simplify the contact form
+
+CURRENT: 10 fields (name, email, phone, address, budget, timeline,
+city, state, ZIP, message). Too many — reduces completion rate.
+
+NEW: 2-step form. Step 1 has only 3 fields:
+  - Name (required)
+  - Phone (required)
+  - Project type dropdown: New deck / Resurfacing / Porch / Pergola / Other
+
+IMPORTANT: Submit the lead to your CRM/email at the END OF STEP 1.
+If they abandon before step 2, you still have name + phone + project type
+= a callable lead.
+
+Step 2 (optional enrichment):
+  - ZIP code
+  - Timeline dropdown: ASAP / 1-3 months / 3-6 months / Just exploring
+
+Tag every submission with the page source (which city/service page)
+so you can track which pages actually generate leads.
+
+## 8.2 CTA placement
+
+Every page must have:
+  - Above the fold: phone button (tel: link) + "Get Free Estimate" button
+  - Sticky mobile bar (bottom-fixed): Call button (50%) + Quote button (50%)
+  - After the proof section (testimonials/project photos): inline form
+  - "5.0★ · 41 Google reviews" visible next to every CTA
+
+## 8.3 Trust elements
+
+Place near every form:
+  - Star rating: ★★★★★ 5.0 on Google (41 reviews)
+  - "Licensed & Insured in VA · 5-Year Workmanship Warranty"
+  - Testimonial with real name + city ("Sarah J., Ashburn")
+
+---
+
+# VERIFICATION CHECKLIST
+
+Run these checks after each phase is complete:
+
+## After Phase 0 (emergency):
+  curl -sI https://www.ldndecks.com/ | head -3
+  # HTTP/2 200
+
+## After Phase 1 (technical fixes):
+  # Canonical check on 5 city pages:
+  for city in ashburn leesburg vienna woodbridge sterling; do
+    echo -n "$city: "
+    curl -sL "https://www.ldndecks.com/near-you/loudoun-county/$city" | \
+      grep -oE 'rel="canonical" href="[^"]*"'
+  done
+  # Each must show the correct city URL, NOT /layout.js
+
+  # og:url check:
+  curl -sL https://www.ldndecks.com/services/new-decks | grep 'og:url'
+  # Must show the service page URL, NOT the homepage
+
+  # Staging noindex:
+  curl -sI https://ldn-decks-next.vercel.app/ | grep -i x-robots
+  # Must show: noindex, nofollow
+
+## After Phase 2 (schema):
+  # Rich Results Test:
+  https://search.google.com/test/rich-results?url=https://ldndecks.com
+  # LocalBusiness with AggregateRating: PASS
+  https://search.google.com/test/rich-results?url=https://ldndecks.com/faqs
+  # FAQPage: PASS
+
+## After Phase 4 (security headers):
+  curl -sI https://www.ldndecks.com/ | grep -iE "x-content-type|x-frame|strict-transport|referrer-policy"
+  # All 4 present
+
+## After Phase 5 (performance):
+  https://pagespeed.web.dev/report?url=https://www.ldndecks.com
+  # Mobile ≥ 85, Desktop ≥ 95
+
+---
+
+# EXECUTION TIMELINE
+
+  PHASE 0: RIGHT NOW (5 minutes)     — unblock the site
+  PHASE 1: Day 1                     — canonical + og:url + staging noindex
+  PHASE 2: Day 2                     — all structured data / schema
+  PHASE 3: Day 2                     — sitemap + robots cleanup
+  PHASE 4: Day 3                     — security headers
+  PHASE 5: Day 3-4                   — performance audit + image alts
+  PHASE 6: Week 1-2                  — geo page unique content (Tier A first)
+  PHASE 7: Week 3-4                  — 4 blog articles published
+  PHASE 8: Week 2                    — form simplification + CTA placement
+
+# SUCCESS METRICS (measure weekly)
+
+  [ ] Site returns HTTP 200 on www.ldndecks.com (not 403)
+  [ ] All 63 city pages have correct canonical (not /layout.js)
+  [ ] og:url is page-specific on every page
+  [ ] Staging has X-Robots-Tag: noindex
+  [ ] LocalBusiness schema shows stars in Rich Results Test
+  [ ] FAQPage schema validates on /faqs
+  [ ] All 5 security headers present
+  [ ] PageSpeed mobile ≥ 85
+  [ ] Contact form is 3 fields (not 10)
+  [ ] Sticky mobile CTA bar on every page
+  [ ] 8 Tier A city pages have unique content
+  [ ] 4 blog articles published
+  [ ] Google Search Console: 0 crawl errors on city pages
+
+# CONSTRAINTS
+  - Do NOT re-enable Vercel Attack Challenge Mode on production
+  - Do NOT deploy without testing canonical on at least 3 city pages
+  - Do NOT publish city pages with template-only content (doorway page risk)
+  - Do NOT use identical anchor text on >40% of internal links to same URL
+  - Back up before every major deployment

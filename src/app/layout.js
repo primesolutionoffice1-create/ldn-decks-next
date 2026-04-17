@@ -13,41 +13,23 @@ const outfit = Outfit({
   subsets: ["latin"],
 });
 
-export const metadata = {
-  alternates: {
-    canonical: "/"
-  },
-  metadataBase: new URL("https://ldndecks.com"),
-  title: {
-    default: "Loudoun Decks | Custom Deck Builder Northern Virginia",
-    template: "%s | Loudoun Decks"
-  },
+import { buildMetadata, SITE_URL } from "@/lib/seo";
+
+export const metadata = buildMetadata({
+  path: "/",
+  title: "Loudoun Decks | Custom Deck Builder Northern Virginia",
   description: "Premier custom deck builder in Northern Virginia. We design and build high-quality composite and wood decks, patios, and outdoor living spaces.",
-  robots: {
-    index: true,
-    follow: true,
-  },
-  icons: {
-    icon: "/ldndecks-logo.webp",
-    apple: "/ldndecks-logo.webp",
-  },
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    siteName: "Loudoun Decks",
-    images: [{
-      url: "/images/img64.jpeg",
-      width: 1200,
-      height: 630,
-      alt: "Loudoun Decks Custom Project"
-    }]
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Loudoun Decks | Custom Deck Builder",
-    description: "Premier custom deck builder in Northern Virginia.",
-    images: ["/images/img64.jpeg"],
-  }
+});
+
+// Add extra global settings not covered by buildMetadata if necessary
+metadata.metadataBase = new URL(SITE_URL);
+metadata.title = {
+  default: "Loudoun Decks | Custom Deck Builder Northern Virginia",
+  template: "%s | Loudoun Decks"
+};
+metadata.icons = {
+  icon: "/ldndecks-logo.webp",
+  apple: "/ldndecks-logo.webp",
 };
 
 export default function RootLayout({ children }) {

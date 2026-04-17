@@ -7,16 +7,13 @@ import ServiceContentExpansion from '@/components/ServiceContentExpansion';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import ContactHome from '@/components/ContactHome';
 
-export const metadata = {
-  alternates: {
-    canonical: "/services/new-decks"
-  },
-  openGraph: {
-    url: "/services/new-decks"
-  },
+import { buildMetadata } from '@/lib/seo';
+
+export const metadata = buildMetadata({
+  path: "/services/new-decks",
   title: "Custom Deck Builder Loudoun VA | Design & Build Services",
   description: "From concept to completion, we design and build fully custom decks tailored to your space, style, and budget in Northern Virginia."
-};
+});
 
 const expansionSections = [
   {
@@ -62,9 +59,30 @@ const whyLdnDecks = [
   { title: "Longevity", desc: "Heavily focused on long-term structural durability." }
 ];
 
+import JsonLd from '@/components/JsonLd';
+
 export default function NewDecksPage() {
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Custom Deck Construction",
+    "provider": { "@id": "https://www.ldndecks.com/#business" },
+    "areaServed": [
+      { "@type": "AdministrativeArea", "name": "Loudoun County, VA" },
+      { "@type": "AdministrativeArea", "name": "Fairfax County, VA" },
+      { "@type": "AdministrativeArea", "name": "Prince William County, VA" }
+    ],
+    "description": "From concept to completion, we design and build fully custom decks tailored to your space, style, and budget in Northern Virginia.",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "41"
+    }
+  };
+
   return (
     <main>
+      <JsonLd data={serviceSchema} />
       <ServicesHeader 
         subtext="Custom Deck Design Loudoun VA"
         title="Custom Deck Design Built Around Your Home & Lifestyle"

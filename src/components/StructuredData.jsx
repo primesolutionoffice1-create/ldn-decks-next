@@ -3,12 +3,13 @@ import React from 'react';
 export default function StructuredData() {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": "GeneralContractor",
     "name": "Loudoun Decks",
-    "image": "https://ldndecks.com/ldndecks-logo.webp",
-    "@id": "https://ldndecks.com",
-    "url": "https://ldndecks.com",
+    "image": "https://www.ldndecks.com/ldndecks-logo.webp",
+    "@id": "https://www.ldndecks.com/#business",
+    "url": "https://www.ldndecks.com",
     "telephone": "+1-571-655-7207",
+    "priceRange": "$$-$$$",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "13704 Winding Oak Cir",
@@ -19,18 +20,13 @@ export default function StructuredData() {
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 38.8396576,
-      "longitude": -77.4392692
+      "latitude": 38.8404,
+      "longitude": -77.4289
     },
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday"
+        "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
       ],
       "opens": "08:00",
       "closes": "18:00"
@@ -59,7 +55,7 @@ export default function StructuredData() {
         "name": "What areas do you serve?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We serve Loudoun County, Fairfax County, and Prince William County, including cities like Ashburn, Leesburg, Sterling, and Centreville."
+          "text": "We serve Loudoun County, Fairfax County, and Prince William County, including cities like Ashburn, Leesburg, Sterling, Centreville, Reston, and Woodbridge."
         }
       },
       {
@@ -67,15 +63,15 @@ export default function StructuredData() {
         "name": "Do you offer free consultations?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. We offer free consultations to discuss your outdoor living project and provide expert advice on design and materials."
+          "text": "Yes. We offer free on-site consultations to discuss your outdoor living project and provide a detailed estimate."
         }
       },
       {
         "@type": "Question",
-        "name": "What type of decking materials do you use?",
+        "name": "How long does it take to build a deck?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We specialize in premium composite decking from brands like Trex and TimberTech, as well as high-quality natural wood options."
+          "text": "Most deck projects take 2-4 weeks to complete once construction begins, depending on the size and complexity of the design."
         }
       },
       {
@@ -83,7 +79,15 @@ export default function StructuredData() {
         "name": "Are you licensed and insured?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes, Loudoun Decks is fully licensed and insured to operate in the state of Virginia."
+          "text": "Yes, Loudoun Decks is a fully licensed and insured Class A contractor in the state of Virginia."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you handle HOA and permits?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We manage the entire permitting process and provide the necessary diagrams for your HOA architectural review."
         }
       }
     ]

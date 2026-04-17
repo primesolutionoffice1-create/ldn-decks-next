@@ -35,6 +35,33 @@ const nextConfig = {
       { source: '/top-decks-build-near-you/deck-builder-in-sterling-va', destination: '/near-you/loudoun-county/sterling', permanent: true },
     ];
   },
+  async headers() {
+    const headers = [];
+    
+    // Security headers
+    headers.push({
+      source: '/:path*',
+      headers: [
+        { key: 'X-DNS-Prefetch-Control', value: 'on' },
+        { key: 'Strict-Transport-Security', value: 'max-age=63072000; includeSubDomains; preload' },
+        { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
+        { key: 'X-Content-Type-Options', value: 'nosniff' },
+        { key: 'Referrer-Policy', value: 'origin-when-cross-origin' },
+      ],
+    });
+
+    // Block indexing on staging / preview deployments
+    if (process.env.VERCEL_ENV !== 'production') {
+      headers.push({
+        source: '/:path*',
+        headers: [
+          { key: 'X-Robots-Tag', value: 'noindex, nofollow, noarchive' },
+        ],
+      });
+    }
+
+    return headers;
+  },
   images: {
     formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 60,

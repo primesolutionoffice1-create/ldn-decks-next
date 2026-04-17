@@ -127,22 +127,6 @@ export default function ContactForm({ hideInfoCol = false, noPadding = false }) 
                   
                   <div className={styles.row}>
                      <div className={styles.inputGroup}>
-                        <label htmlFor="budget">Approximate Budget <span className={styles.req}>*</span></label>
-                        <select 
-                          id="budget" 
-                          name="budget" 
-                          required 
-                          defaultValue=""
-                          className={styles.selectInput}
-                        >
-                           <option value="" disabled>Select Budget Range</option>
-                           <option value="$10k - $20k">$10k - $20k</option>
-                           <option value="$20k - $40k">$20k - $40k</option>
-                           <option value="$40k+">$40k+</option>
-                           <option value="Not Sure">Not Sure</option>
-                        </select>
-                     </div>
-                     <div className={styles.inputGroup}>
                         <label htmlFor="timeline">Project Timeline <span className={styles.req}>*</span></label>
                         <select 
                           id="timeline" 

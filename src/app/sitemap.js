@@ -1,7 +1,7 @@
 import { getAllCityPaths } from '@/data/cityData';
 
 export default async function sitemap() {
-  const baseUrl = "https://ldndecks.com";
+  const baseUrl = "https://www.ldndecks.com";
 
   // Static pages
   const staticPages = [
@@ -35,7 +35,6 @@ export default async function sitemap() {
 
   return allPaths.map(path => ({
     url: `${baseUrl}${path}`,
-    lastModified: new Date(),
     changeFrequency: path === "" ? "daily" : "weekly",
     priority: path === "" ? 1 : 0.7,
   }));

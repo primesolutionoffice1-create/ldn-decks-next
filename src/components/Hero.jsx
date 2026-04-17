@@ -1,10 +1,20 @@
 import React from 'react';
 import styles from './Hero.module.css';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Hero() {
   return (
     <section className={styles.heroSection}>
+      <Image 
+        src="/home-page-ldn.png"
+        alt="Loudoun Decks Hero"
+        fill
+        priority
+        fetchPriority="high"
+        style={{ objectFit: 'cover' }}
+        sizes="100vw"
+      />
       <div className={styles.overlay}></div>
       <div className={styles.content}>
         <div className={styles.subtextWrapper}>

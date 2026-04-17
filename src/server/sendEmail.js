@@ -29,7 +29,7 @@ export async function sendContactEmail(formData) {
 
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: process.env.EMAIL_USER, // Send to the same address as requested
+      to: process.env.EMAIL_TO || process.env.EMAIL_USER, // Send to the configured recipient
       subject: `New Lead: ${service} from ${name}`,
       html: `
         <h2>New Website Contact Submission</h2>

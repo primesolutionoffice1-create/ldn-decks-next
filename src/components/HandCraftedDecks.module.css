@@ -2,11 +2,25 @@
   position: relative;
   width: 100%;
   padding: 80px 0;
-  background: linear-gradient(rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 0.9)), url('/showcase/img14.jpg') center/cover no-repeat;
+  /* background-image removed for performance optimization */
+  background-color: #0a0a0a;
   color: white;
+  overflow: hidden;
+}
+
+.bgOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(10, 10, 10, 0.9);
+  z-index: 1;
 }
 
 .container {
+  position: relative;
+  z-index: 2;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 40px;

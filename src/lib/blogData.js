@@ -63,7 +63,7 @@ export const blogPosts = [
     id: 7,
     title: 'Top 5 Deck Designs for Sloped Backyards',
     slug: 'top-deck-designs-sloped-backyards',
-    image: '/images/img66.jpg',
+    image: '/images/img26.jpeg',
     date: 'July 22, 2026',
     author: 'Nick - Loudoun Decks',
     excerpt: 'Overcome aggressive yard slopes with these multi-level and elevated deck configurations tailored for hilly Northern Virginia properties.',
@@ -173,10 +173,20 @@ export const blogPosts = [
     id: 18,
     title: 'Composite Decking Colors: Top Trends for 2026',
     slug: 'composite-decking-colors-trends',
-    image: '/images/img66.jpg',
+    image: '/images/img32.jpeg',
     date: 'September 02, 2025',
     author: 'Loudoun Decks Team',
     excerpt: 'Move past standard gray. Discover the rich, dual-tone tropical colors and modern monochromatic decking trends dominating Northern Virginia backyards.',
     content: 'When composite decking was first introduced, the color selection was notoriously awful. Now, advanced polymer engineering allows companies like TimberTech and Trex to manufacture boards that look virtually indistinguishable from exotic hardwoods. Choosing the right color is the most important aesthetic decision of your project.\n\n## The Rise of Tropical Hardwood Textures\n\nFor the past five years, standard "slate gray" decking dominated the market. In 2026, we are seeing a massive shift backward toward organic, deeply rich brown tones. Homeowners are specifically requesting boards that mimic highly expensive, exotic tropical woods like Ipe, Tigerwood, and Mahogany.\n\nThese modern flagship lines (like Trex Transcend Lineage) feature zero-repeat grain patterns and subtle color striations embedded within the plastic, meaning no two boards look exactly identical.\n\n## The Two-Tone "Picture Frame" Border\n\nA massive trend for new builds is the customized picture frame. Instead of installing a deck in a single monochromatic color, builders use a highly contrasting color to frame the perimeter of the deck and the staircase treads.\n\nFor example, pairing a light "Toasted Sand" inner deck field with a dark "Spiced Rum" outer border. This border acts as a visual anchor to the structure, while simultaneously highlighting the stairs for safety at night by drawing a stark contrast to the descending steps.'
+  },
+  {
+    id: 19,
+    title: 'Expert Tips: Preparing Your Deck for a Virginia Summer',
+    slug: 'preparing-deck-for-virginia-summer',
+    image: '/images/img01.jpeg',
+    date: 'April 17, 2026',
+    author: 'Loudoun Decks Team',
+    excerpt: 'Summer is around the corner! Follow our professional checklist to ensure your outdoor space is safe, clean, and ready for BBQ season.',
+    content: 'With the Virginia humidity and intense summer sun fast approaching, now is the perfect time to give your deck the attention it deserves. A proactive afternoon of maintenance can prevent costly repairs later in the season and ensure your family has a safe haven for summer gatherings.\n\n## 1. The Deep Visual Inspection\n\nBefore the first BBQ of the season, walk your deck with a critical eye. Check for loose boards, protruding nails, or wobbly railing posts. In Loudoun County, the freeze-thaw cycles of winter can often loosen ledger board bolts or cause wooden posts to check and split. If you notice structural movement when leaning against the railing, it is time to call a professional for a safety certification.\n\n## 2. The Great Spring Wash\n\nWinter leaves behind more than just dirt; it leaves a film of algae and fungal spores that thrive in the coming humidity. \n- **For Wood Decks:** Use a dedicated wood cleaner and a soft-bristle brush. Avoid high-pressure settings that can "fuzz" the wood fibers.\n- **For Composite Decks:** Use warm, soapy water and a soft cloth or brush to remove sticky pollen and mold spores. This simple step keeps your Trex or TimberTech boards looking vibrant.\n\n## 3. Sand and Seal (If Necessary)\n\nIf you have a natural wood deck and notice that water no longer beads on the surface, your sealant has failed. April is the ideal window for restaining, as the temperatures are moderate and the humidity is lower than in July. Sanding down the rough spots and applying a fresh UV-inhibiting stain will protect your wood from the brutal mid-day sun.\n\n## 4. Lighting and Electrical Check\n\nTest your integrated deck lighting. Replace any burnt-out LEDs in your stair risers or post caps. Ensure your GFCI outlets are functioning correctly—you don’t want your outdoor kitchen or string lights failing in the middle of a Fourth of July party!\n\nBy following this simple checklist, you ensure your deck remains the highlight of your home all summer long. Need a hand with a professional deep clean or structural repair? The Loudoun Decks team is here to help.'
   }
 ];

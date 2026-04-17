@@ -35,6 +35,10 @@ const nextConfig = {
       { source: '/top-decks-build-near-you/deck-builder-in-sterling-va', destination: '/near-you/loudoun-county/sterling', permanent: true },
     ];
   },
+  images: {
+    formats: ['image/avif', 'image/webp'],
+    minimumCacheTTL: 60,
+  },
 };
 
 export default nextConfig;

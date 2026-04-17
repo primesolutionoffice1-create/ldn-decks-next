@@ -40,6 +40,14 @@ const cards = [
 export default function HandCraftedDecks() {
   return (
     <section className={styles.section}>
+      <Image 
+        src="/showcase/img14.jpg"
+        alt="Featured custom deck project"
+        fill
+        style={{ objectFit: 'cover' }}
+        sizes="100vw"
+      />
+      <div className={styles.bgOverlay}></div>
       <div className={styles.container}>
         <div className={styles.header}>
           <h2>Hand Crafted Decks</h2>

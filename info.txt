@@ -755,7 +755,7 @@ Run these checks after each phase is complete:
   [ ] Contact form is 3 fields (not 10)
   [ ] Sticky mobile CTA bar on every page
   [ ] 8 Tier A city pages have unique content
-  [ ] 4 blog articles published
+  [ ] 4 blog articles published 
   [ ] Google Search Console: 0 crawl errors on city pages
 
 # CONSTRAINTS

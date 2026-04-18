@@ -1,12 +1,11 @@
 import React from 'react';
+import { buildMetadata } from '@/lib/seo';
 
-export const metadata = {
-  alternates: {
-    canonical: "https://ldndecks.com/terms-of-service"
-  },
-  title: "Terms of Service",
-  description: "Terms and conditions for using Loudoun Decks services."
-};
+export const metadata = buildMetadata({
+  path: '/terms-of-service',
+  title: 'Terms of Service | LDN Decks',
+  description: 'Terms and conditions for using Loudoun Decks services.',
+});
 
 export default function TermsOfService() {
   return (

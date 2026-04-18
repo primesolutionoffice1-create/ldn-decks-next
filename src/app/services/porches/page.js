@@ -11,7 +11,7 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: "/services/porches",
-  title: "Custom Porch Builder NoVA | Screened-In & Open Porch Installation",
+  title: "Custom Porch Builder NoVA | Screened-In & Open Porch Installtion",
   description: "Loudoun Decks is a premier porch builder in Northern Virginia. We specialize in custom screened porches, open-air pavilions, and front porch remodels. Licensed & 5-Star Rated."
 });
 
@@ -104,6 +104,11 @@ const expansionSections = [
       "Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. Our local presence means we have established relationships with building inspectors across NoVA, leading to faster approvals and fewer headaches for our clients. We position Loudoun Decks as a premium builder because we don't cut corners on these essential hidden details."
     ]
   }
+];
+
+const authorityLinks = [
+  { text: "Loudoun County Building Permits", url: "https://www.loudoun.gov/1725/Building-Permits" },
+  { text: "Fairfax County Deck & Porch Guide", url: "https://www.fairfaxcounty.gov/landdevelopment/typical-deck-details" }
 ];
 
 export default function PorchesPage() {

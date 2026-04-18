@@ -2,11 +2,15 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './thank-you.module.css';
+import { buildMetadata } from '@/lib/seo';
 
 export const metadata = {
-  title: 'Thank You | Loudoun Decks',
-  description: 'Your message has been successfully sent. We will get back to you shortly to discuss your outdoor project.',
-  robots: { index: false, follow: true } // No need to index thank you page
+  ...buildMetadata({
+    path: '/thank-you',
+    title: 'Thank You | Loudoun Decks',
+    description: 'Your message has been successfully sent. We will get back to you shortly to discuss your outdoor project.',
+  }),
+  robots: { index: false, follow: true },
 };
 
 export default function ThankYouPage() {

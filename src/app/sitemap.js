@@ -1,56 +1,71 @@
 import { getAllCityPaths } from '@/data/cityData';
 
+// Tiered lastModified dates - avoids identical timestamps that Google discounts.
+// Tier 1 (homepage, top service pages): most recent update
+// Tier 2 (city landing pages, county hubs): last significant content update
+// Tier 3 (secondary service pages, blog, contact): stable pages
+// Tier 4 (legal, team): rarely change
+const TIER1 = "2026-04-15";
+const TIER2 = "2026-04-10";
+const TIER3 = "2026-03-20";
+const TIER4 = "2026-01-10";
+
 export default async function sitemap() {
-      const baseUrl = "https://www.ldndecks.com";
+        const baseUrl = "https://www.ldndecks.com";
 
   const staticPages = [
-      { path: "",                                   priority: 1.00 },
-      { path: "/deck-builders-loudoun",             priority: 0.95 },
-      { path: "/composite-decks",                   priority: 0.90 },
-      { path: "/trex-decks",                        priority: 0.90 },
-      { path: "/deck-replacement",                  priority: 0.90 },
-      { path: "/deck-remodeling",                   priority: 0.90 },
-      { path: "/deck-repair",                       priority: 0.90 },
-          // City landing pages - high priority SEO targets
-      { path: "/deck-builder-ashburn-va",           priority: 0.92 },
-      { path: "/deck-builder-leesburg-va",          priority: 0.92 },
-      { path: "/deck-builder-reston-va",            priority: 0.90 },
-      { path: "/services",                          priority: 0.85 },
-      { path: "/services/new-decks",                priority: 0.85 },
-      { path: "/services/deck-resurfacing",         priority: 0.85 },
-      { path: "/services/porches",                  priority: 0.85 },
-      { path: "/services/gazebo-pergola",           priority: 0.85 },
-      { path: "/services/patios",                   priority: 0.80 },
-      { path: "/services/fence",                    priority: 0.75 },
-      { path: "/services/outdoor-washing",          priority: 0.70 },
-      { path: "/services/entry-doors",              priority: 0.65 },
-      { path: "/near-you",                          priority: 0.85 },
-      { path: "/near-you/loudoun-county",           priority: 0.85 },
-      { path: "/near-you/fairfax-county",           priority: 0.85 },
-      { path: "/near-you/prince-william-county",    priority: 0.85 },
-      { path: "/faqs",                              priority: 0.75 },
-      { path: "/showcase",                          priority: 0.75 },
-      { path: "/blog",                              priority: 0.70 },
-      { path: "/contact",                           priority: 0.70 },
-      { path: "/about",                             priority: 0.65 },
-      { path: "/about/why-choose-us",               priority: 0.65 },
-      { path: "/about/process",                     priority: 0.60 },
-      { path: "/team",                              priority: 0.55 },
-      { path: "/privacy-policy",                    priority: 0.30 },
-      { path: "/terms-of-service",                  priority: 0.30 },
-        ];
+            // Tier 1 - Homepage & top commercial pages
+        { path: "",                              priority: 1.00, lastMod: TIER1, freq: "daily" },
+        { path: "/deck-builders-loudoun",        priority: 0.95, lastMod: TIER1, freq: "weekly" },
+        { path: "/deck-builder-ashburn-va",      priority: 0.92, lastMod: TIER1, freq: "weekly" },
+        { path: "/deck-builder-leesburg-va",     priority: 0.92, lastMod: TIER1, freq: "weekly" },
+        { path: "/deck-builder-reston-va",       priority: 0.90, lastMod: TIER1, freq: "weekly" },
+            // Tier 2 - Core service pages
+        { path: "/composite-decks",              priority: 0.90, lastMod: TIER2, freq: "weekly" },
+        { path: "/trex-decks",                   priority: 0.90, lastMod: TIER2, freq: "weekly" },
+        { path: "/deck-replacement",             priority: 0.90, lastMod: TIER2, freq: "weekly" },
+        { path: "/deck-remodeling",              priority: 0.90, lastMod: TIER2, freq: "weekly" },
+        { path: "/deck-repair",                  priority: 0.90, lastMod: TIER2, freq: "weekly" },
+        { path: "/services",                     priority: 0.85, lastMod: TIER2, freq: "weekly" },
+        { path: "/services/new-decks",           priority: 0.85, lastMod: TIER2, freq: "weekly" },
+        { path: "/services/deck-resurfacing",    priority: 0.85, lastMod: TIER2, freq: "weekly" },
+        { path: "/services/porches",             priority: 0.85, lastMod: TIER2, freq: "weekly" },
+        { path: "/services/gazebo-pergola",      priority: 0.85, lastMod: TIER2, freq: "weekly" },
+        { path: "/near-you",                     priority: 0.85, lastMod: TIER2, freq: "weekly" },
+        { path: "/near-you/loudoun-county",      priority: 0.85, lastMod: TIER2, freq: "weekly" },
+        { path: "/near-you/fairfax-county",      priority: 0.85, lastMod: TIER2, freq: "weekly" },
+        { path: "/near-you/prince-william-county", priority: 0.85, lastMod: TIER2, freq: "weekly" },
+            // Tier 3 - Secondary & support pages
+        { path: "/services/patios",              priority: 0.80, lastMod: TIER3, freq: "monthly" },
+        { path: "/services/fence",               priority: 0.75, lastMod: TIER3, freq: "monthly" },
+        { path: "/services/outdoor-washing",     priority: 0.70, lastMod: TIER3, freq: "monthly" },
+        { path: "/services/entry-doors",         priority: 0.65, lastMod: TIER3, freq: "monthly" },
+        { path: "/faqs",                         priority: 0.75, lastMod: TIER3, freq: "monthly" },
+        { path: "/showcase",                     priority: 0.75, lastMod: TIER3, freq: "monthly" },
+        { path: "/blog",                         priority: 0.70, lastMod: TIER3, freq: "weekly" },
+        { path: "/contact",                      priority: 0.70, lastMod: TIER3, freq: "monthly" },
+            // Tier 4 - Evergreen / rarely changes
+        { path: "/about",                        priority: 0.65, lastMod: TIER4, freq: "monthly" },
+        { path: "/about/why-choose-us",          priority: 0.65, lastMod: TIER4, freq: "monthly" },
+        { path: "/about/process",                priority: 0.60, lastMod: TIER4, freq: "monthly" },
+        { path: "/team",                         priority: 0.55, lastMod: TIER4, freq: "monthly" },
+        { path: "/privacy-policy",               priority: 0.30, lastMod: TIER4, freq: "yearly" },
+        { path: "/terms-of-service",             priority: 0.30, lastMod: TIER4, freq: "yearly" },
+          ];
 
   const cityPaths = getAllCityPaths().map(path => ({
-          path: `/near-you/${path.county}/${path.city}`,
-          priority: 0.85,
+            path: `/near-you/${path.county}/${path.city}`,
+            priority: 0.80,
+            lastMod: TIER2,
+            freq: "monthly",
   }));
 
   const allPages = [...staticPages, ...cityPaths];
 
-  return allPages.map(({ path, priority }) => ({
-          url: `${baseUrl}${path}`,
-          changeFrequency: path === "" ? "daily" : priority >= 0.85 ? "weekly" : "monthly",
-          priority,
-          lastModified: new Date().toISOString(),
+  return allPages.map(({ path, priority, lastMod, freq }) => ({
+            url: `${baseUrl}${path}`,
+            changeFrequency: freq,
+            priority,
+            lastModified: lastMod,
   }));
 }

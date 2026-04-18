@@ -30,16 +30,16 @@ export default function DeckInspectionPage() {
         
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '20px', alignItems: 'stretch' }}>
           <div style={{ position: 'relative', height: '300px', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 10px 20px rgba(0,0,0,0.1)' }}>
-            <Image src="/torndeck.webp" alt="Old deck damage" fill style={{ objectFit: 'cover' }} />
+            <Image src="/torndeck.webp" alt="Old deck damage" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw" style={{ objectFit: 'cover' }} />
           </div>
           <div style={{ position: 'relative', height: '300px', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 10px 20px rgba(0,0,0,0.1)' }}>
-            <Image src="/torndeck1.webp" alt="Weathered deck boards" fill style={{ objectFit: 'cover' }} />
+            <Image src="/torndeck1.webp" alt="Weathered deck boards" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw" style={{ objectFit: 'cover' }} />
           </div>
           <div style={{ position: 'relative', height: '300px', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 10px 20px rgba(0,0,0,0.1)' }}>
-            <Image src="/torndeck2.webp" alt="Deck requiring restoration" fill style={{ objectFit: 'cover' }} />
+            <Image src="/torndeck2.webp" alt="Deck requiring restoration" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw" style={{ objectFit: 'cover' }} />
           </div>
           <div style={{ position: 'relative', height: '300px', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 10px 20px rgba(0,0,0,0.1)' }}>
-            <Image src="/torndeck3.jpg" alt="Deck structural inspection" fill style={{ objectFit: 'cover' }} />
+            <Image src="/torndeck3.jpg" alt="Deck structural inspection" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw" style={{ objectFit: 'cover' }} />
           </div>
         </div>
       </section>

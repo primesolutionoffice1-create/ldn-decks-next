@@ -34,6 +34,10 @@ metadata.other = {
     "ICBM": "38.8404, -77.4289",
 };
 
+metadata.verification = {
+  google: "KqDI0PPrY8iiZYZI-hk1ikIKVqCtIcTrO3dHSM7U-Eg",
+};
+
 import { ContactProvider } from "@/context/ContactContext";
 import LayoutContent from "./LayoutContent";
 

@@ -1,0 +1,141 @@
+import React from 'react';
+import Image from 'next/image';
+import ServicesHeader from '@/components/ServicesHeader';
+import ServiceMain from '@/components/ServiceMain';
+import ServiceInclusions from '@/components/ServiceInclusions';
+import ServiceContentExpansion from '@/components/ServiceContentExpansion';
+import ServiceAreasGrid from '@/components/ServiceAreasGrid';
+import ContactHome from '@/components/ContactHome';
+import JsonLd from '@/components/JsonLd';
+
+import { buildMetadata } from '@/lib/seo';
+
+export const metadata = buildMetadata({
+  path: "/services/deck-replacement",
+  title: "Professional Deck Replacement Northern Virginia | Rebuild & Remodel",
+  description: "Breathe new life into your backyard with professional deck replacement services in Northern Virginia. We specialize in transforming old wood decks into luxury composite spaces."
+});
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Deck Replacement and Rebuilding",
+  "provider": { "@id": "https://www.ldndecks.com/#business" },
+  "areaServed": [
+    { "@type": "AdministrativeArea", "name": "Loudoun County, VA" },
+    { "@type": "AdministrativeArea", "name": "Fairfax County, VA" },
+    { "@type": "AdministrativeArea", "name": "Prince William County, VA" }
+  ],
+  "description": "Professional deck replacement services including structural assessment, old deck removal, and premium composite rebuilds using Trex and TimberTech.",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "44"
+  }
+};
+
+const replacementSections = [
+  {
+    title: "Why Replace Instead of Repair?",
+    paragraphs: [
+      "Often, an aging deck has underlying structural issues or wood rot that makes simple repairs unsafe or cost-ineffective. Our replacement service provides a fresh start with modern materials."
+    ],
+    listItems: [
+      { label: "1. Safety First", text: "We identify and fix hidden structural failures in old ledger boards or joists." },
+      { label: "2. Value Increase", text: "A new composite deck offers a significantly higher ROI than patching up an old wood one." },
+      { label: "3. Zero Maintenance", text: "Trade in your yearly staining and sanding for a deck that stays beautiful for 25+ years." },
+      { label: "4. Modern Aesthetics", text: "Update your home's look with current colors, hidden fasteners, and sleek railing systems." }
+    ]
+  },
+  {
+    title: "Our Specialized Rebuild Process",
+    paragraphs: [
+      "We don't just 'slap new boards' on top of old wood. Our meticulous process ensures your new deck is built to last a lifetime."
+    ],
+    listItems: [
+      { label: "Structural Audit", text: "We perform a deep-dive inspection of your existing framing to see what can be safely salvaged." },
+      { label: "Clean Tear-Down", text: "Eco-friendly removal and disposal of your old, rotted, or infested deck materials." },
+      { label: "Framing Reinforcement", text: "We reinforce existing joists or pour new footings to meet modern 2024 building codes." },
+      { label: "Composite Transformation", text: "Expert installation of Trex, AZEK, or TimberTech boards with a 25-year manufacturer warranty." }
+    ]
+  }
+];
+
+const replacementBenefits = [
+  { title: "Code Compliance", desc: "We ensure every rebuild meets or exceeds current VA building codes." },
+  { title: "Trex Specialists", desc: "Authorized installers for the world's #1 decking brand." },
+  { title: "Clean Jobsite", desc: "No debris left behind; we respect your lawn and landscaping." },
+  { title: "Fast Turnaround", desc: "Most basic replacements are completed in under 7 business days." },
+  { title: "Fixed Pricing", desc: "Detailed, itemized quotes with no hidden 'extra' fees during construction." }
+];
+
+export default function DeckReplacementPage() {
+  return (
+    <main>
+      <JsonLd data={serviceSchema} />
+
+      <ServicesHeader
+        subtext="Old to New Transformation"
+        title="Professional Deck Replacement in Northern Virginia"
+        description="Don't let an aging, splintering deck hold you back. We specialize in tearing down old structures and building premium, low-maintenance outdoor retreats."
+      />
+
+      <ServiceMain
+        subtitle="Northern Virginia's Rebuild Experts"
+        title="Is it Time to Replace Your Deck?"
+        description="If your deck is over 15 years old, shows signs of wood rot, or requires constant sanding and staining, a professional replacement is your best investment. We help Northern Virginia homeowners transition from old pressure-treated wood to luxury composite decking."
+        listItems={[
+          "Full removal of existing structural debris",
+          "Verification of framing and footing integrity",
+          "High-end composite and PVC board options",
+          "Modern railing and lighting upgrades",
+          "Comprehensive HOA and permit coordination"
+        ]}
+        image1="/images/img05.jpeg"
+        image2="/images/img06.jpeg"
+      />
+
+      <ServiceContentExpansion sections={replacementSections} />
+
+      <section style={{ padding: '80px 20px', maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
+        <h2 style={{ fontSize: '36px', marginBottom: '20px', fontWeight: '800' }}>Common Signs Your Deck Needs Replacement</h2>
+        <p style={{ fontSize: '18px', color: '#555', maxWidth: '800px', margin: '0 auto 50px', lineHeight: '1.6' }}>
+          If your deck exhibits any of the following issues, a full replacement is often the safest and most cost-effective solution. Don't wait until the structure becomes a hazard.
+        </p>
+
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '20px', alignItems: 'stretch' }}>
+          <div style={{ position: 'relative', height: '300px', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 10px 20px rgba(0,0,0,0.1)' }}>
+            <Image src="/torndeck.webp" alt="Severe board rot and splintering" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw" style={{ objectFit: 'cover' }} />
+          </div>
+          <div style={{ position: 'relative', height: '300px', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 10px 20px rgba(0,0,0,0.1)' }}>
+            <Image src="/torndeck1.webp" alt="Weathered and graying structural wood" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw" style={{ objectFit: 'cover' }} />
+          </div>
+          <div style={{ position: 'relative', height: '300px', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 10px 20px rgba(0,0,0,0.1)' }}>
+            <Image src="/torndeck2.webp" alt="Failing deck fasteners and hardware" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw" style={{ objectFit: 'cover' }} />
+          </div>
+          <div style={{ position: 'relative', height: '300px', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 10px 20px rgba(0,0,0,0.1)' }}>
+            <Image src="/torndeck3.jpg" alt="Unsafe railing and structural decay" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw" style={{ objectFit: 'cover' }} />
+          </div>
+        </div>
+      </section>
+
+      <section style={{ padding: '60px 20px', maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
+        <h2 style={{ fontSize: '32px', marginBottom: '15px', fontWeight: 800 }}>Seamless Transitions</h2>
+        <p style={{ marginBottom: '40px', fontSize: '18px', color: '#555' }}>We handle everything from the first drill to the final cleanup.</p>
+        <div style={{ position: 'relative', height: '500px', borderRadius: '15px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }}>
+          <Image src="/images/img97.jpeg" alt="Deck replacement transformation" fill sizes="100vw" style={{ objectFit: 'cover' }} />
+        </div>
+      </section>
+
+      <ServiceInclusions
+        title="The LDN Difference in Replacements"
+        description="Why trust us with your rebuild project?"
+        items={replacementBenefits}
+      />
+
+      <ServiceAreasGrid />
+
+      <ContactHome />
+    </main>
+  );
+}

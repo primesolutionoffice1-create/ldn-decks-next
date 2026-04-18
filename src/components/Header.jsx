@@ -197,6 +197,7 @@ export default function Header() {
                   <div className={styles.dropdown}>
                     {/* Pillar 1: New Decks */}
                     <Link href="/services/new-decks" style={{ padding: '10px 20px', display: 'block' }}>New Decks</Link>
+                    <Link href="/services/deck-replacement" style={{ padding: '10px 20px', display: 'block' }}>Deck Replacement</Link>
                     <Link href="/services/deck-inspection" style={{ padding: '10px 20px', display: 'block' }}>Deck Inspection</Link>
                     <Link href="/services/deck-maintenance" style={{ padding: '10px 20px', display: 'block' }}>Deck Maintenance</Link>
                     <Link href="/services/gazebo-pergola" style={{ padding: '10px 20px', display: 'block' }}>Gazebo and Pergola</Link>
@@ -358,6 +359,7 @@ export default function Header() {
                   
                   {/* Pillar 1: New Decks */}
                   <Link href="/services/new-decks" onClick={() => setIsMobileOpen(false)}>New Decks</Link>
+                  <Link href="/services/deck-replacement" onClick={() => setIsMobileOpen(false)}>Deck Replacement</Link>
                   <Link href="/services/deck-inspection" onClick={() => setIsMobileOpen(false)}>Deck Inspection</Link>
                   <Link href="/services/deck-maintenance" onClick={() => setIsMobileOpen(false)}>Deck Maintenance</Link>
                   <Link href="/services/gazebo-pergola" onClick={() => setIsMobileOpen(false)}>Gazebo and Pergola</Link>

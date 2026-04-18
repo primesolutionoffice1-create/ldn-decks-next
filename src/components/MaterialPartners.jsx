@@ -10,17 +10,21 @@ const partners = [
 ];
 
 export default function MaterialPartners() {
+  const allPartners = [...partners, ...partners]; // Double for seamless loop
+
   return (
     <section className={styles.partnersSection}>
       <div className={styles.container}>
         <h3 className={styles.heading}>Our Trusted Material Partners</h3>
-        <div className={styles.grid}>
-          {partners.map((partner, index) => (
-            <div key={index} className={styles.partnerCard}>
-              <span className={styles.partnerName}>{partner.name}</span>
-              <span className={styles.partnerSub}>{partner.sub}</span>
-            </div>
-          ))}
+        <div className={styles.ticker}>
+          <div className={styles.tickerTrack}>
+            {allPartners.map((partner, index) => (
+              <div key={index} className={styles.partnerCard}>
+                <span className={styles.partnerName}>{partner.name}</span>
+                <span className={styles.partnerSub}>{partner.sub}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

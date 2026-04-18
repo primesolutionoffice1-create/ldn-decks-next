@@ -20,48 +20,99 @@
   font-weight: 700;
 }
 
-.grid {
+.ticker {
+  overflow: hidden;
+  padding: 20px 0;
+  white-space: nowrap;
+  position: relative;
+  /* Smoother edges */
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 15%,
+    black 85%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 15%,
+    black 85%,
+    transparent
+  );
+}
+
+.tickerTrack {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 30px;
+  width: max-content;
+  animation: scroll 30s linear infinite;
+  gap: 60px;
+}
+
+.ticker:hover .tickerTrack {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-50% - 30px)); } /* Half of the doubled content */
 }
 
 .partnerCard {
   display: flex;
   flex-direction: column;
   align-items: center;
-  opacity: 0.6;
+  justify-content: center;
+  padding: 20px 40px;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  opacity: 0.7;
   filter: grayscale(1);
-  transition: all 0.3s ease;
-  min-width: 150px;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  min-width: 200px;
+  cursor: pointer;
 }
 
 .partnerCard:hover {
   opacity: 1;
   filter: grayscale(0);
-  transform: translateY(-5px);
+  transform: translateY(-8px) scale(1.05);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  border-color: var(--site-color);
 }
 
 .partnerName {
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 900;
-  color: #333;
-  margin-bottom: 4px;
+  color: #222;
+  margin-bottom: 6px;
   font-family: var(--font-outfit), sans-serif;
+  letter-spacing: -0.5px;
 }
 
 .partnerSub {
-  font-size: 11px;
+  font-size: 10px;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 800;
   color: var(--site-color);
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
 }
 
 @media screen and (max-width: 768px) {
-  .grid {
-    gap: 40px;
+  .tickerTrack {
+    gap: 30px;
+    animation-duration: 20s;
+  }
+  .partnerCard {
+    min-width: 160px;
+    padding: 15px 25px;
+  }
+  .partnerName {
+    font-size: 20px;
   }
 }

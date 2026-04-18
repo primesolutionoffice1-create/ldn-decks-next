@@ -4,23 +4,22 @@ import ContactForm from '@/components/ContactForm';
 import ContactMap from '@/components/ContactMap';
 import ServicesFooterInfo from '@/components/ServicesFooterInfo';
 import ContactFAQ from '@/components/ContactFAQ';
+import { buildMetadata } from '@/lib/seo';
 
-export const metadata = {
-  alternates: {
-    canonical: "https://ldndecks.com/contact"
-  },
-  title: "Contact Us | ldndecks",
-  description: "Get in touch for a free estimate on your outdoor living project."
-};
+export const metadata = buildMetadata({
+    path: '/contact',
+    title: 'Contact Us',
+    description: 'Get a free estimate on your deck or outdoor living project. Call or message the LDN Decks team serving Loudoun, Fairfax, and Prince William County.',
+});
 
 export default function ContactPage() {
-  return (
-    <main>
-       <ContactHeader />
-       <ContactForm />
-       <ContactMap />
-       <ServicesFooterInfo />
-       <ContactFAQ />
-    </main>
-  );
+    return (
+          <main>
+            <ContactHeader />
+            <ContactForm />
+            <ContactMap />
+            <ServicesFooterInfo />
+            <ContactFAQ />
+      </main>
+    );
 }

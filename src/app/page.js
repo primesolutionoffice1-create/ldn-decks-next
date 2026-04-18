@@ -12,30 +12,31 @@ import TrustLogos from "@/components/TrustLogos";
 import ContactMap from "@/components/ContactMap";
 import ContactHome from "@/components/ContactHome";
 import styles from "./page.module.css";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata = {
-  description: "Premier custom deck builder in Northern Virginia. We design and install high-quality composite and wood decks, patios, and outdoor living spaces.",
-  alternates: {
-    canonical: "https://ldndecks.com"
-  }
-};
+export const metadata = buildMetadata({
+    path: "/",
+    title: "Deck Builder in Loudoun County | Custom Decks | LDN Decks",
+    description: "Top-rated deck builder in Loudoun County, VA. Trex Platinum Partner & TimberTech Certified. Custom composite & wood decks from $15k+. Serving Ashburn, Leesburg & Northern VA. Free estimate — (571) 655-7207.",
+    image: "/images/img64.jpeg",
+});
 
 export default function Home() {
-  return (
-    <main className={styles.main}>
+    return (
+          <main className={styles.main}>
       <PromoModal />
-      <Hero />
-      <Features />
-      <MaterialPartners />
-      <Introduction />
-      <HowItWorks />
-      <HandCraftedDecks />
-      <ServicesHome />
-      <Testimonials />
-      <FAQ />
-      <TrustLogos />
-      <ContactMap />
-      <ContactHome />
-    </main>
-  );
+            <Hero />
+            <Features />
+            <MaterialPartners />
+            <Introduction />
+            <HowItWorks />
+            <HandCraftedDecks />
+            <ServicesHome />
+            <Testimonials />
+            <FAQ />
+            <TrustLogos />
+            <ContactMap />
+            <ContactHome />
+      </main>
+    );
 }

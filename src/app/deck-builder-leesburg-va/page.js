@@ -12,7 +12,7 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
     path: '/deck-builder-leesburg-va',
-    title: 'Deck Builder in Leesburg VA | Custom Decks | LDN Decks',
+    title: 'Deck Builder in Leesburg VA | Custom Decks',
     description: 'Top-rated deck builder in Leesburg, VA. Custom composite and wood decks. Trex Certified. Traditional and contemporary designs for Leesburg homes. Call (571) 655-7207.',
     image: '/images/img36.jpeg',
 });

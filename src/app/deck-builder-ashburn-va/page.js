@@ -12,7 +12,7 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
     path: '/deck-builder-ashburn-va',
-    title: 'Deck Builder in Ashburn VA | Trex Certified | LDN Decks',
+    title: 'Deck Builder in Ashburn VA | Trex Certified',
     description: 'Top-rated deck builder in Ashburn, VA. Trex Platinum Partner & TimberTech Certified. Custom composite decks, screened porches & pergolas. HOA-approved designs. Free estimate  -  call (571) 655-7207.',
     image: '/images/img36.jpeg',
 });

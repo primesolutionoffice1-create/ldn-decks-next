@@ -3,25 +3,25 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { blogPosts } from '@/lib/blogData';
+import { buildMetadata } from '@/lib/seo';
 import styles from './BlogContent.module.css';
 
 export async function generateMetadata({ params }) {
   const resolvedParams = await params;
   const post = blogPosts.find(p => p.slug === resolvedParams.slug);
   if (!post) return { title: 'Post Not Found' };
-  return { 
-    title: `${post.title}`,
+  const base = buildMetadata({
+    path: `/blog/${post.slug}`,
+    title: post.title,
     description: post.excerpt,
-    alternates: {
-      canonical: `https://ldndecks.com/blog/${post.slug}`
-    },
+    image: post.image,
+  });
+  return {
+    ...base,
     openGraph: {
-      title: post.title,
-      description: post.excerpt,
-      type: "article",
-      url: `https://ldndecks.com/blog/${post.slug}`,
-      images: [post.image]
-    }
+      ...base.openGraph,
+      type: 'article',
+    },
   };
 }
 
@@ -40,12 +40,12 @@ export default async function SingleBlogPage({ params }) {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "headline": post.title,
-    "image": [`https://ldndecks.com${post.image}`],
+    "image": [`https://www.ldndecks.com${post.image}`],
     "datePublished": new Date(post.date).toISOString(),
     "author": [{
       "@type": "Organization",
       "name": post.author,
-      "url": "https://ldndecks.com"
+      "url": "https://www.ldndecks.com"
     }],
     "description": post.excerpt
   };

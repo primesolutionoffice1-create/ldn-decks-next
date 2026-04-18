@@ -1,12 +1,11 @@
 import React from 'react';
+import { buildMetadata } from '@/lib/seo';
 
-export const metadata = {
-  alternates: {
-    canonical: "https://ldndecks.com/privacy-policy"
-  },
-  title: "Privacy Policy",
-  description: "Learn how Loudoun Decks protects your personal information and privacy."
-};
+export const metadata = buildMetadata({
+  path: '/privacy-policy',
+  title: 'Privacy Policy | LDN Decks',
+  description: 'Learn how Loudoun Decks protects your personal information and privacy.',
+});
 
 export default function PrivacyPolicy() {
   return (

@@ -7,14 +7,13 @@ import ServiceContentExpansion from '@/components/ServiceContentExpansion';
 import ProcessSteps from '@/components/ProcessSteps';
 import ContactHome from '@/components/ContactHome';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
+import { buildMetadata } from '@/lib/seo';
 
-export const metadata = {
-  alternates: {
-    canonical: "https://ldndecks.com/services/deck-stair-lighting"
-  },
-  title: "Deck Stair Lighting Loudoun VA | LDN Decks",
-  description: "Custom-built LED lighting systems installed directly into your deck stairs - clean, modern, and built to last in Loudoun, Fairfax & Prince William County."
-};
+export const metadata = buildMetadata({
+  path: '/services/deck-stair-lighting',
+  title: 'Deck Stair Lighting Loudoun VA | LDN Decks',
+  description: 'Custom-built LED lighting systems installed directly into your deck stairs - clean, modern, and built to last in Loudoun, Fairfax & Prince William County.',
+});
 
 const whyLdnDecks = [
   {

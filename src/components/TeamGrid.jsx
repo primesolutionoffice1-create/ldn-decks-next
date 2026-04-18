@@ -9,7 +9,7 @@ const teamMembers = [
     image: "/team/Nick.jpg"
   },
   {
-    name: "Pete",
+    name: "Jeff Mineo",
     role: "Head of Sales Department",
     image: "/team/pete.png"
   },
@@ -28,10 +28,10 @@ export default function TeamGrid() {
           {teamMembers.map((member, idx) => (
             <div key={idx} className={styles.memberCard}>
               <div className={styles.imageWrapper}>
-                <Image 
-                  src={member.image} 
-                  alt={member.name} 
-                  fill 
+                <Image
+                  src={member.image}
+                  alt={member.name}
+                  fill
                   className={styles.img}
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />

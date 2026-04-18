@@ -6,14 +6,13 @@ import ProcessSteps from '@/components/ProcessSteps';
 import ServicesFAQ from '@/components/ServicesFAQ';
 import ContactHome from '@/components/ContactHome';
 import ServiceVisual from '@/components/ServiceVisual';
+import { buildMetadata } from '@/lib/seo';
 
-export const metadata = {
-  alternates: {
-    canonical: "https://ldndecks.com/deck-replacement"
-  },
-  title: "Deck Replacement Services | Professional Teardown & Rebuild",
-  description: "Is your old deck beyond repair? We provide complete deck replacement services, handling the teardown and building a beautiful new outdoor space."
-};
+export const metadata = buildMetadata({
+  path: '/deck-replacement',
+  title: 'Deck Replacement Services | Professional Teardown & Rebuild',
+  description: 'Is your old deck beyond repair? We provide complete deck replacement services, handling the teardown and building a beautiful new outdoor space.',
+});
 
 export default function DeckReplacementPage() {
   return (

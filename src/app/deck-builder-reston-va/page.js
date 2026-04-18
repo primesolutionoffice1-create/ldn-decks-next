@@ -12,7 +12,7 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
     path: '/deck-builder-reston-va',
-    title: 'Deck Builder in Reston VA | Custom Composite Decks | LDN Decks',
+    title: 'Deck Builder in Reston VA | Custom Composite Decks',
     description: 'Top-rated deck builder in Reston, VA. Custom composite decks for Reston townhomes and single-family homes. Trex Certified. HOA-approved designs. Call (571) 655-7207.',
     image: '/images/img36.jpeg',
 });

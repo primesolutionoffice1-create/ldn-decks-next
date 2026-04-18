@@ -7,14 +7,14 @@ import ProcessSteps from '@/components/ProcessSteps';
 import ServicesFAQ from '@/components/ServicesFAQ';
 import ContactHome from '@/components/ContactHome';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
+import { buildMetadata } from '@/lib/seo';
 
-export const metadata = {
-  alternates: {
-    canonical: "https://ldndecks.com/deck-repair"
-  },
-  title: "Deck Repair Loudoun County | Structural Restoration Fairfax & Prince William",
-  description: "Loudoun Decks provides professional deck repair and structural restoration across Northern Virginia. Fix rot, wobbly railings, and unstable ledgers with 1,500+ words of expertise."
-};
+export const metadata = buildMetadata({
+  path: '/deck-repair',
+  title: 'Deck Repair Loudoun County | Structural Restoration Fairfax & Prince William',
+  description: 'Loudoun Decks provides professional deck repair and structural restoration across Northern Virginia. Fix rot, wobbly railings, and unstable ledgers with 1,500+ words of expertise.',
+  image: '/images/img05.jpeg',
+});
 
 const inclusions = [
   {

@@ -54,31 +54,7 @@
   font-size: 16px;
   color: #999;
   font-weight: 600;
-  margin-bottom: 25px;
-}
-
-.socialRow {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-}
-
-.circle {
-  width: 32px;
-  height: 32px;
-  background-color: #f0f0f0;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #777;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.circle:hover {
-  background-color: var(--site-color);
-  color: #fff;
+  margin-bottom: 0;
 }
 
 @media screen and (max-width: 900px) {

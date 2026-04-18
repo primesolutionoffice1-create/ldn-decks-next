@@ -9,7 +9,7 @@ const faqsData = [
   },
   {
     question: "Do I need a permit to build a deck or fence?",
-    answer: "In most counties, yes. But don't worry—ldndecks handles the entire permitting process for you. We ensure all plans are compliant with local building codes, taking the paperwork off your hands."
+    answer: "In most counties, yes. But don't worry ldndecks handles the entire permitting process for you. We ensure all plans are compliant with local building codes, taking the paperwork off your hands."
   },
   {
     question: "What decking materials do you recommend for longevity?",
@@ -21,7 +21,7 @@ const faqsData = [
   },
   {
     question: "Do you provide warranties on your work?",
-    answer: "Yes, we stand firmly behind our craftsmanship. We offer a 5-year workmanship warranty on all structural builds, alongside passing down the comprehensive manufacturer warranties for the specific materials used."
+    answer: "Yes, we stand firmly behind our craftsmanship. We offer a 24-year workmanship warranty on all structural builds, alongside passing down the comprehensive manufacturer warranties for the specific materials used."
   }
 ];
 
@@ -41,20 +41,20 @@ export default function FAQ() {
             <span className={styles.subtext}>Find Your Answers</span>
             <span className={styles.line}></span>
           </div>
-          <h2 className={styles.title}>Frequently Asked<br/> Questions</h2>
+          <h2 className={styles.title}>Frequently Asked<br /> Questions</h2>
         </div>
 
         <div className={styles.accordionContainer}>
           {faqsData.map((faq, index) => {
             const isOpen = openIndex === index;
-            
+
             return (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className={`${styles.faqItem} ${isOpen ? styles.open : ''}`}
               >
-                <div 
-                  className={styles.questionBlock} 
+                <div
+                  className={styles.questionBlock}
                   onClick={() => toggleFAQ(index)}
                 >
                   <h3>{faq.question}</h3>
@@ -71,8 +71,8 @@ export default function FAQ() {
                     )}
                   </button>
                 </div>
-                
-                <div 
+
+                <div
                   className={styles.answerBlock}
                   style={{ maxHeight: isOpen ? '250px' : '0px' }}
                 >

@@ -31,8 +31,8 @@ const HandshakeIcon = () => (
 const featuresData = [
   {
     icon: <RibbonIcon />,
-    title: '5 YEAR',
-    subtitle: 'Workmanship warranty'
+    title: '24+ YEARS',
+    subtitle: 'Experience'
   },
   {
     icon: <LeafIcon />,

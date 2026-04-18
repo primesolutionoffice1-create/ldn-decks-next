@@ -12,7 +12,7 @@ import { buildMetadata, SITE_URL } from '@/lib/seo';
 
 export const metadata = buildMetadata({
       path: '/deck-builders-loudoun',
-      title: 'Deck Builder in Loudoun County | Trex Certified | LDN Decks',
+      title: 'Deck Builder in Loudoun County | Trex Certified',
       description: 'Top-rated deck builder in Loudoun County. Trex Platinum Partner & TimberTech Certified. Custom composite decks, screened porches & pergolas. Serving Ashburn, Leesburg & Sterling. Free estimate — call (571) 655-7207.',
       image: '/images/img36.jpeg',
 });

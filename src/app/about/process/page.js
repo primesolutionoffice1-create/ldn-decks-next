@@ -6,29 +6,24 @@ import ProcessFAQ from '@/components/ProcessFAQ';
 import ServicesFooterInfo from '@/components/ServicesFooterInfo';
 import ServicesCallToAction from '@/components/ServicesCallToAction';
 import SimpleCTA from '@/components/SimpleCTA';
+import { buildMetadata } from '@/lib/seo';
 
-export const metadata = {
-  alternates: {
-    canonical: "https://ldndecks.com/about/process"
-  },
-  title: "Our Process",
-  description: "Learn about our clear and structured process for building outdoor living projects in Northern Virginia."
-};
+export const metadata = buildMetadata({
+  path: "/about/process",
+  title: "Our Process | LDN Decks",
+  description: "Learn about our clear and structured process for building outdoor living projects in Northern Virginia.",
+});
 
 export default function ProcessPage() {
-    return (
-        <main>
-            <ProcessHeader />
-            <ProcessSteps />
-            <ServicesFooterInfo />
-            <ServicesCallToAction />
-            <ProcessMatters />
-            <ProcessFAQ />
-            <SimpleCTA 
-                title="Start your project"
-                buttonText="Contact Us"
-                link="/contact"
-            />
-        </main>
-    );
+  return (
+    <main>
+      <ProcessHeader />
+      <ProcessSteps />
+      <ServicesFooterInfo />
+      <ServicesCallToAction />
+      <ProcessMatters />
+      <ProcessFAQ />
+      <SimpleCTA title="Start your project" buttonText="Contact Us" link="/contact" />
+    </main>
+  );
 }

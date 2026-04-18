@@ -2,14 +2,13 @@ import React from 'react';
 import TeamHeader from '@/components/TeamHeader';
 import TeamGrid from '@/components/TeamGrid';
 import ContactHome from '@/components/ContactHome';
+import { buildMetadata } from '@/lib/seo';
 
-export const metadata = {
-  alternates: {
-    canonical: "https://ldndecks.com/team"
-  },
-  title: "Our Team",
-  description: "Meet the professional craftsmanship team behind Loudoun Decks."
-};
+export const metadata = buildMetadata({
+  path: '/team',
+  title: 'Our Team | LDN Decks',
+  description: 'Meet the professional craftsmanship team behind Loudoun Decks.',
+});
 
 export default function TeamPage() {
   return (

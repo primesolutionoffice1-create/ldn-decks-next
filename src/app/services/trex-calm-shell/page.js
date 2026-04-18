@@ -7,13 +7,13 @@ import ServiceContentExpansion from '@/components/ServiceContentExpansion';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import ContactHome from '@/components/ContactHome';
 
-export const metadata = {
-  alternates: {
-    canonical: "https://ldndecks.com/services/trex-calm-shell"
-  },
-  title: "Trex Calm Shell Deck Resurfacing Loudoun VA | LDN Decks",
-  description: "Upgrade your existing deck with a fresh, modern look using Trex Calm Shell composite decking in Northern Virginia."
-};
+import { buildMetadata } from '@/lib/seo';
+
+export const metadata = buildMetadata({
+  path: "/services/trex-calm-shell",
+  title: "Trex Clam Shell Deck Resurfacing Loudoun VA | Clean Modern Looks",
+  description: "Upgrade your existing deck with a fresh, modern look using Trex Clam Shell composite decking in Northern Virginia. Expert resurfacing & installation."
+});
 
 const expansionSections = [
   {

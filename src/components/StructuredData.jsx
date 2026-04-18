@@ -32,7 +32,15 @@ export default function StructuredData() {
                   }
                       ],
               "geo": { "@type": "GeoCoordinates", "latitude": 38.8404, "longitude": -77.4289 },
+              "contactPoint": {
+                        "@type": "ContactPoint",
+                        "telephone": "+1-571-655-7207",
+                        "contactType": "customer service",
+                        "areaServed": ["US-VA"],
+                        "availableLanguage": "en"
+              },
               "areaServed": [
+                  { "@type": "State", "name": "Virginia" },
                   { "@type": "County", "name": "Loudoun County, VA" },
                   { "@type": "County", "name": "Fairfax County, VA" },
                   { "@type": "County", "name": "Prince William County, VA" },
@@ -43,8 +51,18 @@ export default function StructuredData() {
                   { "@type": "City", "name": "Herndon, VA" },
                   { "@type": "City", "name": "Fairfax, VA" },
                   { "@type": "City", "name": "Centreville, VA" },
-                  { "@type": "City", "name": "Manassas, VA" }
-                      ],
+                  { "@type": "City", "name": "Manassas, VA" },
+                  { "@type": "City", "name": "Alexandria, VA" },
+                  { "@type": "City", "name": "Vienna, VA" },
+                  { "@type": "City", "name": "Mclean, VA" },
+                  { "@type": "City", "name": "Falls Church, VA" },
+                  { "@type": "City", "name": "Burke, VA" },
+                  { "@type": "City", "name": "Springfield, VA" },
+                  { "@type": "City", "name": "Chantilly, VA" },
+                  { "@type": "City", "name": "Woodbridge, VA" },
+                  { "@type": "City", "name": "Haymarket, VA" },
+                  { "@type": "City", "name": "Gainesville, VA" }
+                       ],
               "openingHoursSpecification": {
                         "@type": "OpeningHoursSpecification",
                         "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],

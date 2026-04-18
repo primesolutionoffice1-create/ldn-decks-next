@@ -19,13 +19,13 @@ const expansionSections = [
   {
     title: "Design Options: Endless Possibilities",
     paragraphs: [
-      "We build more than just standard platforms. We create fully personalized outdoor living zones configured to the unique layout of your home and yard."
+      "We build more than just standard platforms. We create fully personalized outdoor living zones configured to the unique layout of your home and yard. Whether you need a massive entertaining space or a cozy [screened porch](/services/porches), our design team handles every detail."
     ],
     listItems: [
       { label: "1. Multi-Level Decks", text: "Separate zones for dining, lounging, and entertaining. Ideal for sloped yards." },
       { label: "2. Wraparound Decks", text: "Seamless flow around your home that expands usable outdoor space." },
       { label: "3. Decks with Built-In Seating", text: "Clean, functional design that is perfect for large gatherings." },
-      { label: "4. Integrated Features", text: "Seamlessly integrate lighting systems, pergolas, fire pits, outdoor kitchens, privacy walls, and custom railings." }
+      { label: "4. Integrated Features", text: "Seamlessly integrate lighting systems, pergolas, fire pits, outdoor kitchens, privacy walls, and custom railings. Many homeowners also choose to combine their new build with [deck resurfacing](/services/deck-resurfacing) for existing structures." }
     ]
   },
   {
@@ -37,7 +37,7 @@ const expansionSections = [
       { label: "Composite Decking", text: "Industry-leading boards from Trex and TimberTech." },
       { label: "Traditional Wood", text: "High-grade pressure-treated wood." },
       { label: "PVC Decking", text: "Advanced, ultra-durable PVC decking systems." },
-      { label: "Custom Railings", text: "Available in Trex, aluminum, and natural wood." }
+      { label: "Custom Railings", text: "Available in [Trex Railings](/services/trex-railings), aluminum, and natural wood." }
     ]
   }
 ];
@@ -56,7 +56,13 @@ const whyLdnDecks = [
   { title: "Trustworthy", desc: "Fully licensed, bonded, and insured." },
   { title: "Tailored Approach", desc: "A 100% custom design approach (no templates)." },
   { title: "Professional", desc: "Clean, quiet, and professional builds." },
-  { title: "Longevity", desc: "Heavily focused on long-term structural durability." }
+  { title: "Longevity", desc: "Heavily focused on long-term structural durability and safety." }
+];
+
+const authorityLinks = [
+  { text: "Loudoun County Residential Deck Details", url: "https://www.loudoun.gov/DocumentCenter/View/1183/Typical-Residential-Deck-Detail" },
+  { text: "Fairfax County Typical Deck Guide", url: "https://www.fairfaxcounty.gov/landdevelopment/typical-deck-details" },
+  { text: "Official Trex Warranty & Care", url: "https://www.trex.com/customer-support/trex-owners/warranty/" }
 ];
 
 import JsonLd from '@/components/JsonLd';
@@ -124,6 +130,26 @@ export default function NewDecksPage() {
         description="Why LDN Decks?"
         items={whyLdnDecks}
       />
+
+      <section style={{ padding: '40px 20px', backgroundColor: '#f9f9f9', borderTop: '1px solid #eee' }}>
+        <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
+          <h3 style={{ fontSize: '24px', marginBottom: '15px' }}>Official Resources & Safety Standards</h3>
+          <p style={{ marginBottom: '20px', color: '#666' }}>We build all our decks to exceed local Northern Virginia building codes and manufacturer specifications.</p>
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}>
+            {authorityLinks.map((link, idx) => (
+              <a 
+                key={idx} 
+                href={link.url} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                style={{ color: 'var(--site-color)', fontWeight: '600', textDecoration: 'underline', fontSize: '14px' }}
+              >
+                {link.text}
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <ServiceAreasGrid />
 

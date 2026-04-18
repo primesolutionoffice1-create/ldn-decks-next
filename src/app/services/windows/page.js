@@ -8,13 +8,13 @@ import ServicesFAQ from '@/components/ServicesFAQ';
 import ContactHome from '@/components/ContactHome';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 
-export const metadata = {
-  alternates: {
-    canonical: "https://ldndecks.com/services/windows"
-  },
+import { buildMetadata } from '@/lib/seo';
+
+export const metadata = buildMetadata({
+  path: "/services/windows",
   title: "Window Replacement Loudoun County | Energy Efficient Windows Fairfax NoVA",
-  description: "Loudoun Decks provides premium window replacement and installation across Northern Virginia. Improve energy efficiency with 1,500+ words of expert guidance."
-};
+  description: "Loudoun Decks provides premium window replacement and installation across Northern Virginia. Improve energy efficiency, quiet, and curb appeal."
+});
 
 const windowInclusions = [
   {

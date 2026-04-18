@@ -46,7 +46,7 @@ export default function Introduction() {
           <div className={styles.subImgWrapper}>
             <Image 
               src="/images/img53.jpeg" 
-              alt="Relaxing deck" 
+              alt="Custom composite deck in Northern Virginia" 
               fill 
               className={styles.imgProps} 
               sizes="(max-width: 768px) 50vw, 300px" 
@@ -58,7 +58,7 @@ export default function Introduction() {
           <div className={styles.mainImgWrapper}>
             <Image 
               src="/images/img31.jpeg" 
-              alt="Decking experts" 
+              alt="Loudoun County deck construction experts" 
               fill 
               className={styles.imgProps} 
               sizes="(max-width: 768px) 80vw, 400px" 

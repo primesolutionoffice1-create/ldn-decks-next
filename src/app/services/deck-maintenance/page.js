@@ -6,13 +6,13 @@ import Testimonials from '@/components/Testimonials';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import ContactHome from '@/components/ContactHome';
 
-export const metadata = {
-  alternates: {
-    canonical: "https://ldndecks.com/services/deck-maintenance"
-  },
-  title: "Deck Maintenance Services | Loudoun Decks",
-  description: "Protect your investment with professional deck maintenance, staining, sealing, and repair services in Northern Virginia."
-};
+import { buildMetadata } from '@/lib/seo';
+
+export const metadata = buildMetadata({
+  path: "/services/deck-maintenance",
+  title: "Professional Deck Maintenance NoVA | Staining & Sealing Services",
+  description: "Protect your outdoor investment with expert deck maintenance in Northern Virginia. We specialize in wood staining, sealing, and structural care."
+});
 
 const maintenanceProcess = [
   {

@@ -6,13 +6,13 @@ import ServicesFAQ from '@/components/ServicesFAQ';
 import ContactHome from '@/components/ContactHome';
 import ServiceVisual from '@/components/ServiceVisual';
 
-export const metadata = {
-  alternates: {
-    canonical: "https://ldndecks.com/services/house-siding-washing"
-  },
-  title: "House Siding Washing",
-  description: "Professional house siding washing for homeowners in Northern Virginia. Safely remove dirt, mold, and algae from your siding."
-};
+import { buildMetadata } from '@/lib/seo';
+
+export const metadata = buildMetadata({
+  path: "/services/house-siding-washing",
+  title: "Professional House Siding Washing NoVA | Safe Exterior Cleaning",
+  description: "Restore your home's curb appeal with professional house siding washing in Northern Virginia. We safely remove dirt, mold, and algae from vinyl and fiber cement."
+});
 
 const inclusions = [
   {

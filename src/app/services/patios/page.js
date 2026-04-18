@@ -7,19 +7,19 @@ import ServiceContentExpansion from '@/components/ServiceContentExpansion';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import ContactHome from '@/components/ContactHome';
 
-export const metadata = {
-  title: "Bluestone Patio Loudoun VA | Natural Stone Installation",
-  description: "Upgrade your outdoor space with a high-end bluestone patio. Natural stone patio installation in Northern Virginia by luxury contractors.",
-  alternates: {
-    canonical: "https://ldndecks.com/services/patios"
-  }
-};
+import { buildMetadata } from '@/lib/seo';
+
+export const metadata = buildMetadata({
+  path: "/services/patios",
+  title: "Bluestone Patio Loudoun VA | Natural Stone Masonry & Installation",
+  description: "Upgrade your outdoor space with a high-end bluestone patio. Expert natural stone patio installation, fire pits, and hardscaping in Northern Virginia."
+});
 
 const expansionSections = [
   {
     title: "Why Choose a Bluestone Patio in Northern Virginia",
     paragraphs: [
-      "Bluestone is uniquely suited for the Northern Virginia climate. It easily withstands the freezing winters and scorching, humid summers of Loudoun and Fairfax counties without cracking, provided it is installed with a proper architectural base. Beyond its performance, natural cleft bluestone provides an organic, luxurious aesthetic that stamped concrete and standard pavers simply cannot match.",
+      "Bluestone is uniquely suited for the Northern Virginia climate. It easily withstands the freezing winters and scorching, humid summers of Loudoun and Fairfax counties without cracking, provided it is installed with a proper architectural base. Many of our patio projects are designed to integrate perfectly with a [new composite deck](/services/new-decks) or a custom [screened porch](/services/porches).",
       "Custom stonework is also one of the highest ROI hardscaping investments you can make. It immediately elevates your backyard into a luxury entertainment space that appeals to homebuyers across the DC metro region."
     ],
     listItems: [
@@ -120,6 +120,11 @@ const whyLdnDecks = [
   { title: "Ironclad Warranty", desc: "We stand behind our hardscaping foundations with robust workmanship guarantees." }
 ];
 
+const authorityLinks = [
+  { text: "Loudoun County Paving & Grading", url: "https://www.loudoun.gov/" },
+  { text: "Fairfax County Hardscape Guide", url: "https://www.fairfaxcounty.gov/landdevelopment/typical-deck-details" }
+];
+
 export default function PatiosPage() {
   return (
     <main>
@@ -203,6 +208,26 @@ export default function PatiosPage() {
         description="Local experts delivering high-end, indestructible architecture."
         items={whyLdnDecks}
       />
+
+      <section style={{ padding: '40px 20px', backgroundColor: '#f9f9f9', borderTop: '1px solid #eee' }}>
+        <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
+          <h3 style={{ fontSize: '24px', marginBottom: '15px' }}>Official Resources & Safety Standards</h3>
+          <p style={{ marginBottom: '20px', color: '#666' }}>We build all our patios to exceed local Northern Virginia building codes and hardscape specifications.</p>
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}>
+            {authorityLinks.map((link, idx) => (
+              <a 
+                key={idx} 
+                href={link.url} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                style={{ color: 'var(--site-color)', fontWeight: '600', textDecoration: 'underline', fontSize: '14px' }}
+              >
+                {link.text}
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <ServiceAreasGrid />
 

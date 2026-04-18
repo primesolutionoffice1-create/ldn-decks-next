@@ -103,7 +103,7 @@ export default async function CityPage({ params }) {
           <div className={styles.content}>
             <h2>The Standard for Custom Decking in {cityName}</h2>
             <p>
-              As a dedicated deck builder in {cityName}, Virginia, Loudoun Decks combines local neighborhood knowledge with world-class construction standards. We understand the specific soil types and building codes across {countyName}, ensuring your installation is structurally superior and visually stunning.
+              As a dedicated deck builder in {cityName}, Virginia, Loudoun Decks combines local neighborhood knowledge with world-class construction standards. We understand the specific soil types and building codes across {countyName}, ensuring your installation is structurally superior and visually stunning. Explore our full range of [custom outdoor services](/services) to see how we can transform your backyard.
             </p>
           </div>
         </div>

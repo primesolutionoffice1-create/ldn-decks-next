@@ -8,13 +8,13 @@ import ServiceVisual from '@/components/ServiceVisual';
 import ServiceContentExpansion from '@/components/ServiceContentExpansion';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 
-export const metadata = {
-  title: "Entry Door Installation Loudoun VA | Custom Front Doors",
-  description: "Improve curb appeal, security, and energy efficiency with professional entry door installation in Northern Virginia. Custom fiberglass and wood doors.",
-  alternates: {
-    canonical: "https://ldndecks.com/services/entry-doors"
-  }
-};
+import { buildMetadata } from '@/lib/seo';
+
+export const metadata = buildMetadata({
+  path: "/services/entry-doors",
+  title: "Professional Entry Door Installation Loudoun VA | Custom Front Doors",
+  description: "Improve curb appeal, security, and energy efficiency with professional entry door installation in Northern Virginia. Custom fiberglass and wood door solutions."
+});
 
 const expansionSections = [
   {

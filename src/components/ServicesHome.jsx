@@ -9,18 +9,21 @@ const servicesData = [
     title: 'New Decks',
     description: 'Custom-designed and structurally engineered decks using premium composite or natural wood materials to expand your outdoor space.',
     image: '/images/img58.jpeg',
+    link: '/services/new-decks'
   },
   {
     id: 2,
     title: 'Deck Resurfacing',
     description: 'Breathe new life into your existing deck frame with completely refreshed surface boards, modern railings, and updated stairs.',
     image: '/showcase/img04.jpg',
+    link: '/services/deck-resurfacing'
   },
   {
     id: 3,
     title: 'Outdoor Washing',
     description: 'Professional high-pressure washing and treatment services to remove years of grime, mold, and weather damage from your wood.',
     image: '/homeimg4.webp',
+    link: '/services/outdoor-washing'
   }
 ];
 
@@ -47,7 +50,7 @@ export default function ServicesHome() {
 
         <div className={styles.cardsGrid}>
           {servicesData.map(service => (
-            <div key={service.id} className={styles.card}>
+            <Link key={service.id} href={service.link} className={styles.card}>
               <div className={styles.imgWrapper}>
                 <Image src={service.image} alt={service.title} fill className={styles.cardImg} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
               </div>
@@ -55,7 +58,7 @@ export default function ServicesHome() {
                 <h3>{service.title}</h3>
                 <p>{service.description}</p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 

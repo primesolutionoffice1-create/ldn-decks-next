@@ -7,13 +7,13 @@ import ContactHome from '@/components/ContactHome';
 import ServiceVisual from '@/components/ServiceVisual';
 import ProcessSteps from '@/components/ProcessSteps';
 
-export const metadata = {
-  alternates: {
-    canonical: "https://ldndecks.com/services/outdoor-washing"
-  },
-  title: "Outdoor Power Washing Services",
-  description: "Professional outdoor power washing for decks, patios, and fences in Northern Virginia. Refresh your outdoor surfaces today."
-};
+import { buildMetadata } from '@/lib/seo';
+
+export const metadata = buildMetadata({
+  path: "/services/outdoor-washing",
+  title: "Professional Outdoor Power Washing NoVA | Deck & Patio Cleaning",
+  description: "Restore your outdoor oasis with professional power washing services in Northern Virginia. We specialize in safe, effective cleaning for decks, patios, and fences."
+});
 
 const surfaces = [
   {

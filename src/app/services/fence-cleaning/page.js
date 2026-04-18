@@ -6,13 +6,13 @@ import ServicesFAQ from '@/components/ServicesFAQ';
 import ContactHome from '@/components/ContactHome';
 import ServiceVisual from '@/components/ServiceVisual';
 
-export const metadata = {
-  alternates: {
-    canonical: "https://ldndecks.com/services/fence-cleaning"
-  },
-  title: "Fence Cleaning Services",
-  description: "Professional fence cleaning for wood and composite fences in Northern Virginia. Restore the original color and look of your fence."
-};
+import { buildMetadata } from '@/lib/seo';
+
+export const metadata = buildMetadata({
+  path: "/services/fence-cleaning",
+  title: "Professional Fence Cleaning NoVA | Wood & Composite Restoration",
+  description: "Restore your fence with professional cleaning services in Northern Virginia. We safely remove gray weathering, mold, and algae from wood and composite fencing."
+});
 
 const inclusions = [
   {

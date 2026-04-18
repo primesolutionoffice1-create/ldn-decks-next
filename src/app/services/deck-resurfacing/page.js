@@ -7,19 +7,19 @@ import ServiceContentExpansion from '@/components/ServiceContentExpansion';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import ContactHome from '@/components/ContactHome';
 
-export const metadata = {
-  title: "Deck Resurfacing Loudoun VA | TimberTech Vintage Collection",
-  description: "Transform your old deck with premium composite resurfacing. Upgrade your existing frame with TimberTech Vintage Collection in Northern Virginia.",
-  alternates: {
-    canonical: "https://ldndecks.com/services/deck-resurfacing"
-  }
-};
+import { buildMetadata } from '@/lib/seo';
+
+export const metadata = buildMetadata({
+  path: "/services/deck-resurfacing",
+  title: "Premium Deck Resurfacing Loudoun VA | TimberTech Advanced PVC upgrade",
+  description: "Transform your old deck with premium composite resurfacing. Save up to 40% by upgrading your existing frame with TimberTech Vintage Collection in Northern Virginia."
+});
 
 const expansionSections = [
   {
     title: "Why Resurface with the TimberTech Vintage Collection",
     paragraphs: [
-      "The TimberTech Vintage Collection is the gold standard of composite decking in the industry. While many homeowners are familiar with standard composite boards, Vintage stands apart by utilizing an Advanced PVC material core that contains zero wood fibers.",
+      "The TimberTech Vintage Collection is the gold standard of composite decking in the industry. While many homeowners are familiar with standard composite boards, Vintage stands apart by utilizing an Advanced PVC material core that contains zero wood fibers. This makes it a superior option compared to traditional [new deck construction](/services/new-decks) materials.",
       "This 100% synthetic composition makes it effectively immune to the moisture, swelling, mold, and rot that slowly degrades traditional wood-composite blends in Northern Virginia’s humid climate. Its proprietary capping technology resists fading and staining, ensuring your deck looks as vibrant in year 20 as it did on day one."
     ],
     listItems: [
@@ -119,6 +119,12 @@ const whyLdnDecks = [
   { title: "Dedicated Support", desc: "We provide direct, communicative project management from day one until the final walkthrough." }
 ];
 
+const authorityLinks = [
+  { text: "Loudoun County Building Permits", url: "https://www.loudoun.gov/DocumentCenter/View/1183/Typical-Residential-Deck-Detail" },
+  { text: "Fairfax County Deck Requirements", url: "https://www.fairfaxcounty.gov/landdevelopment/typical-deck-details" },
+  { text: "TimberTech Official Site", url: "https://www.timbertech.com/" }
+];
+
 export default function DeckResurfacingPage() {
   return (
     <main>
@@ -190,6 +196,26 @@ export default function DeckResurfacingPage() {
         description="Why choose Loudoun Decks for your remodel?"
         items={whyLdnDecks}
       />
+
+      <section style={{ padding: '40px 20px', backgroundColor: '#f9f9f9', borderTop: '1px solid #eee' }}>
+        <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
+          <h3 style={{ fontSize: '24px', marginBottom: '15px' }}>Official Resources & Safety Standards</h3>
+          <p style={{ marginBottom: '20px', color: '#666' }}>We build all our projects to exceed local Northern Virginia building codes and manufacturer specifications.</p>
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}>
+            {authorityLinks.map((link, idx) => (
+              <a 
+                key={idx} 
+                href={link.url} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                style={{ color: 'var(--site-color)', fontWeight: '600', textDecoration: 'underline', fontSize: '14px' }}
+              >
+                {link.text}
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <ServiceAreasGrid />
 

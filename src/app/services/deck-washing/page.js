@@ -8,13 +8,13 @@ import ServiceProcessHorizontal from '@/components/ServiceProcessHorizontal';
 import ServiceContentExpansion from '@/components/ServiceContentExpansion';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 
-export const metadata = {
-  title: "Professional Deck Washing Loudoun VA | Pressure Washing",
-  description: "Restore your outdoor wood or composite deck with professional low-pressure washing services in Northern Virginia.",
-  alternates: {
-    canonical: "https://ldndecks.com/services/deck-washing"
-  }
-};
+import { buildMetadata } from '@/lib/seo';
+
+export const metadata = buildMetadata({
+  path: "/services/deck-washing",
+  title: "Professional Deck Washing Loudoun VA | Safe Soft-Wash Restoration",
+  description: "Restore your outdoor wood or composite deck with professional low-pressure soft-washing in Northern Virginia. We safely remove algae, mold, and grime."
+});
 
 const expansionSections = [
   {

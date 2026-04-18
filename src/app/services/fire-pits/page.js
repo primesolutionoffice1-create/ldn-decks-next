@@ -7,13 +7,13 @@ import ServiceContentExpansion from '@/components/ServiceContentExpansion';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import ContactHome from '@/components/ContactHome';
 
-export const metadata = {
-  alternates: {
-    canonical: "https://ldndecks.com/services/fire-pits"
-  },
-  title: "Custom Fire Pit Installation Loudoun VA | Outdoor Living NoVA",
-  description: "Transform your backyard with a custom-built fire pit in Northern Virginia. We build gas, wood-burning, and stone fire pits."
-};
+import { buildMetadata } from '@/lib/seo';
+
+export const metadata = buildMetadata({
+  path: "/services/fire-pits",
+  title: "Custom Fire Pit Installation Loudoun VA | Outdoor Entertainment",
+  description: "Transform your backyard with a custom-built fire pit in Northern Virginia. We specialize in gas, wood-burning, and stone fire pits for year-round enjoyment."
+});
 
 const expansionSections = [
   {

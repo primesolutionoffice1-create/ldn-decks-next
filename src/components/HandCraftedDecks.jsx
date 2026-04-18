@@ -42,7 +42,7 @@ export default function HandCraftedDecks() {
     <section className={styles.section}>
       <Image 
         src="/showcase/img14.jpg"
-        alt="Featured custom deck project"
+        alt="Custom custom engineered deck project in Northern Virginia"
         fill
         style={{ objectFit: 'cover' }}
         sizes="100vw"

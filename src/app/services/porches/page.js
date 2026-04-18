@@ -7,13 +7,13 @@ import ServicesFAQ from '@/components/ServicesFAQ';
 import ContactHome from '@/components/ContactHome';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 
-export const metadata = {
-  alternates: {
-    canonical: "https://ldndecks.com/services/porches"
-  },
+import { buildMetadata } from '@/lib/seo';
+
+export const metadata = buildMetadata({
+  path: "/services/porches",
   title: "Custom Porch Builder NoVA | Screened-In & Open Porch Installation",
-  description: "Loudoun Decks is a premier porch builder in Northern Virginia. We specialize in custom screened porches, open-air designs, and front porch remodels with 1,500+ words of expertise."
-};
+  description: "Loudoun Decks is a premier porch builder in Northern Virginia. We specialize in custom screened porches, open-air pavilions, and front porch remodels. Licensed & 5-Star Rated."
+});
 
 const inclusions = [
   {
@@ -69,8 +69,8 @@ const expansionSections = [
   {
     title: "The Evolution of Outdoor Living: Custom Porches in Northern Virginia",
     paragraphs: [
-      "For homeowners in Northern Virginia, the outdoor living season is one of the year's highlights. However, the region's humidity and summer insects can often cut those pleasant evenings short. As a premier porch builder in Loudoun County, Fairfax County, and Prince William County, Loudoun Decks creates beautiful, structural sanctuaries that allow you to enjoy the fresh air without the drawbacks. A custom porch is more than just an addition; it is a lifestyle upgrade that bridges the gap between your indoor comfort and the natural beauty of your backyard.",
-      "Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. We have seen a massive trend toward 'outdoor living rooms' in neighborhoods like Ashburn and Great Falls. These spaces are no longer just wooden platforms; they are sophisticated architectural extensions featuring vaulted ceilings, integrated sound systems, and designer lighting. Our mission is to ensure that your new porch feels like it was part of the original home design, not an afterthought.",
+      "For homeowners in Northern Virginia, the outdoor living season is one of the year's highlights. However, the region's humidity and summer insects can often cut those pleasant evenings short. As a premier porch builder in Loudoun County, Fairfax County, and Prince William County, Loudoun Decks creates beautiful, structural sanctuaries that allow you to enjoy the fresh air without the drawbacks. A custom porch is more than just an addition; it is a lifestyle upgrade that bridges the gap between your indoor comfort and the natural beauty of your backyard. Many homeowners also choose to pair their porch with a [custom deck](/services/new-decks) for the ultimate outdoor experience.",
+      "Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. We have seen a massive trend toward 'outdoor living rooms' in neighborhoods like Ashburn and Great Falls. These spaces are no longer just wooden platforms; they are sophisticated architectural extensions featuring vaulted ceilings, integrated sound systems, and designer lighting. Our mission is to ensure that your new porch feels like it was part of the original home design, not an afterthought. If you have an existing structure, we also offer [deck resurfacing](/services/deck-resurfacing) to match your new porch.",
       "Whether you are looking for a simple open-air retreat to oversee your garden or a fully enclosed screened porch to host summer dinners, choosing a porch contractor near you with local structural expertise is vital. Our builds are engineered to exceed local building codes in Arlington and Stafford, ensuring your investment is safe, legal, and built to last."
     ]
   },
@@ -142,6 +142,26 @@ export default function PorchesPage() {
         title="Porch Construction & Design FAQs"
         faqs={porchFAQs}
       />
+
+      <section style={{ padding: '40px 20px', backgroundColor: '#f9f9f9', borderTop: '1px solid #eee' }}>
+        <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
+          <h3 style={{ fontSize: '24px', marginBottom: '15px' }}>Official Resources & Safety Standards</h3>
+          <p style={{ marginBottom: '20px', color: '#666' }}>We build all our porches to exceed local Northern Virginia building codes and safety regulations.</p>
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}>
+            {authorityLinks.map((link, idx) => (
+              <a 
+                key={idx} 
+                href={link.url} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                style={{ color: 'var(--site-color)', fontWeight: '600', textDecoration: 'underline', fontSize: '14px' }}
+              >
+                {link.text}
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <ServiceAreasGrid />
 

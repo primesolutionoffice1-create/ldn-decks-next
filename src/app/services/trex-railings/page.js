@@ -7,13 +7,13 @@ import ServiceContentExpansion from '@/components/ServiceContentExpansion';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import ContactHome from '@/components/ContactHome';
 
-export const metadata = {
-  alternates: {
-    canonical: "https://ldndecks.com/services/trex-railings"
-  },
-  title: "Trex Railings With Cocktail Top Loudoun VA | LDN Decks",
-  description: "Upgrade your deck with modern Trex railing systems and a custom cocktail top in Northern Virginia."
-};
+import { buildMetadata } from '@/lib/seo';
+
+export const metadata = buildMetadata({
+  path: "/services/trex-railings",
+  title: "Trex Railings With Cocktail Top Loudoun VA | Custom Deck Upgrades",
+  description: "Upgrade your deck with modern Trex railing systems and a custom cocktail top in Northern Virginia. Perfect for entertaining and adding a premium finish."
+});
 
 const expansionSections = [
   {

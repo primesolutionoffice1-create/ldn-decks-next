@@ -7,13 +7,13 @@ import ServiceContentExpansion from '@/components/ServiceContentExpansion';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import ContactHome from '@/components/ContactHome';
 
-export const metadata = {
-  alternates: {
-    canonical: "https://ldndecks.com/services/under-deck-patios"
-  },
-  title: "Under Deck Patio Systems Loudoun VA | LDN Decks",
-  description: "Maximize your outdoor living space with a custom waterproof under deck ceiling system in Northern Virginia."
-};
+import { buildMetadata } from '@/lib/seo';
+
+export const metadata = buildMetadata({
+  path: "/services/under-deck-patios",
+  title: "Under Deck Patio Systems Loudoun VA | Waterproofing & Ceilings",
+  description: "Maximize your outdoor living space with a custom waterproof under deck ceiling system in Northern Virginia. Turn your under-deck space into a dry, stylish patio."
+});
 
 const expansionSections = [
   {

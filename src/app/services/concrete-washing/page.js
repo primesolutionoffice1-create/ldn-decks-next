@@ -6,13 +6,13 @@ import ServicesFAQ from '@/components/ServicesFAQ';
 import ContactHome from '@/components/ContactHome';
 import ServiceVisual from '@/components/ServiceVisual';
 
-export const metadata = {
-  alternates: {
-    canonical: "https://ldndecks.com/services/concrete-washing"
-  },
-  title: "Concrete Washing Services",
-  description: "Professional concrete washing for driveways, patios, and walkways in Northern Virginia. Remove deep-set stains and grime."
-};
+import { buildMetadata } from '@/lib/seo';
+
+export const metadata = buildMetadata({
+  path: "/services/concrete-washing",
+  title: "Professional Concrete Washing NoVA | Driveway & Walkway Cleaning",
+  description: "Restore your driveways, patios, and walkways with expert concrete washing in Northern Virginia. We remove deep-set stains, oil, and algae."
+});
 
 const inclusions = [
   {

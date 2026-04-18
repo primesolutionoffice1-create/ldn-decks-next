@@ -5,13 +5,13 @@ import Testimonials from '@/components/Testimonials';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import ContactHome from '@/components/ContactHome';
 
-export const metadata = {
-  alternates: {
-    canonical: "https://ldndecks.com/services/deck-inspection"
-  },
-  title: "Deck Inspection Services | Loudoun Decks",
-  description: "Professional deck inspection and expert deck restoration services in Northern Virginia for just $350. Keep your outdoor living space safe and beautiful."
-};
+import { buildMetadata } from '@/lib/seo';
+
+export const metadata = buildMetadata({
+  path: "/services/deck-inspection",
+  title: "Professional Deck Inspection Loudoun VA | $350 Structural Safety Audit",
+  description: "Ensure your outdoor space is safe with a professional $350 deck inspection in Northern Virginia. We identify hidden structural rot, foundational settling, and safety hazards."
+});
 
 export default function DeckInspectionPage() {
   return (
@@ -25,7 +25,7 @@ export default function DeckInspectionPage() {
       <section style={{ padding: '80px 20px', maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
         <h2 style={{ fontSize: '36px', marginBottom: '20px', fontWeight: '700' }}>Providing Expert Deck Restoration Services</h2>
         <p style={{ fontSize: '18px', color: '#555', maxWidth: '800px', margin: '0 auto 50px', lineHeight: '1.6' }}>
-          Over time, even the most well-built decks fall victim to weathering, moisture, and foundational settling. Our $350 specialized deck inspection evaluates your entire structure from the footers to the railings. If we find issues, our restoration experts can repair, reinforce, and completely revitalize your older deck, saving you thousands compared to a full replacement.
+          Over time, even the most well-built decks fall victim to weathering, moisture, and foundational settling. Our $350 specialized deck inspection evaluates your entire structure from the footers to the railings. If we find issues, our restoration experts can repair, reinforce, and completely revitalize your older deck through [deck resurfacing](/services/deck-resurfacing), saving you thousands compared to a full [new deck build](/services/new-decks).
         </p>
         
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '20px', alignItems: 'stretch' }}>
@@ -58,6 +58,15 @@ export default function DeckInspectionPage() {
         <p style={{ fontSize: '18px' }}>
           It is absolutely essential that older decks are routinely inspected and evaluated for structural retro-fitting or outright replacement. Changing out an outdated deck doesn't just modernize your backyard aesthetic, raise your property value, and eliminate maintenance chores; it guarantees the fundamental safety of your family, friends, and guests. If your deck spans over 10 to 15 years old, begins to feel even slightly spongy underfoot, visibly sways when you walk, or exhibits extensive surface splintering and warping, it is definitely time for a professional change. Let our experts assess your structure with a comprehensive $350 inspection to keep your outdoor living space safe, secure, and beautiful for years to come.
         </p>
+
+        <section style={{ marginTop: '40px', padding: '30px', backgroundColor: '#f9f9f9', borderRadius: '12px', textAlign: 'center' }}>
+          <h4 style={{ fontSize: '22px', marginBottom: '15px' }}>Check Your Local Safety Standards</h4>
+          <p style={{ marginBottom: '20px', fontSize: '16px' }}>Verify if your deck meets the latest safety and building codes in Northern Virginia:</p>
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}>
+            <a href="https://www.loudoun.gov/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--site-color)', fontWeight: '600', textDecoration: 'underline' }}>Loudoun County Residential Decks</a>
+            <a href="https://www.fairfaxcounty.gov/landdevelopment/typical-deck-details" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--site-color)', fontWeight: '600', textDecoration: 'underline' }}>Fairfax County Deck Audit Guide</a>
+          </div>
+        </section>
       </section>
 
       <Testimonials />

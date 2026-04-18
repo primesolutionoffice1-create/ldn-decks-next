@@ -7,13 +7,13 @@ import ServicesFAQ from '@/components/ServicesFAQ';
 import ContactHome from '@/components/ContactHome';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 
-export const metadata = {
-  alternates: {
-    canonical: "https://ldndecks.com/services/fence"
-  },
-  title: "Fence Installation Loudoun County | Privacy & Wood Fencing NoVA",
-  description: "Loudoun Decks provides professional fence installation for homeowners in Loudoun County, Fairfax County, and Prince William County. Custom wood, vinyl, and aluminum designs with 1,500+ words of expertise."
-};
+import { buildMetadata } from '@/lib/seo';
+
+export const metadata = buildMetadata({
+  path: "/services/fence",
+  title: "Professional Fence Installation Loudoun County | Privacy & Wood Fencing NoVA",
+  description: "Loudoun Decks provides expert fence installation for homeowners in Loudoun County, Fairfax, and Prince William. Custom wood, vinyl, and aluminum fencing."
+});
 
 const inclusions = [
   {

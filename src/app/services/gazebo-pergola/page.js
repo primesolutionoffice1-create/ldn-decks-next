@@ -8,13 +8,13 @@ import ServiceVisual from '@/components/ServiceVisual';
 import ServiceContentExpansion from '@/components/ServiceContentExpansion';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 
-export const metadata = {
-  title: "Custom Gazebos and Pergolas Loudoun VA",
-  description: "Add shade, define your outdoor space, and improve property value with custom gazebos and pergolas in Northern Virginia. Designed by Loudoun Decks.",
-  alternates: {
-    canonical: "https://ldndecks.com/services/gazebo-pergola"
-  }
-};
+import { buildMetadata } from '@/lib/seo';
+
+export const metadata = buildMetadata({
+  path: "/services/gazebo-pergola",
+  title: "Custom Gazebos and Pergolas Loudoun VA | Professional Shade Structures",
+  description: "Add shade and stunning architectural character to your backyard with custom gazebos and pergolas in Northern Virginia. Expert design and build services."
+});
 
 const expansionSections = [
   {

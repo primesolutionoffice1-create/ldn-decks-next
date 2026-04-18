@@ -8,14 +8,13 @@ import ContactHome from '@/components/ContactHome';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './NearYouPage.module.css';
+import { buildMetadata } from '@/lib/seo';
 
-export const metadata = {
-  alternates: {
-    canonical: "https://ldndecks.com/near-you"
-  },
-  title: "Deck Builder Near You | Northern Virginia",
-  description: "Find a professional deck builder near you in Loudoun, Fairfax, and Prince William counties. Quality decks, patios, and outdoor living spaces."
-};
+export const metadata = buildMetadata({
+  path: '/near-you',
+  title: 'Deck Builder Near You | Northern Virginia',
+  description: 'Find a professional deck builder near you in Loudoun, Fairfax, and Prince William counties. Quality decks, patios, and outdoor living spaces.',
+});
 
 const chooseItems = [
   {

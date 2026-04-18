@@ -7,14 +7,14 @@ import ProcessSteps from '@/components/ProcessSteps';
 import ServicesFAQ from '@/components/ServicesFAQ';
 import ContactHome from '@/components/ContactHome';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
+import { buildMetadata } from '@/lib/seo';
 
-export const metadata = {
-  alternates: {
-    canonical: "https://ldndecks.com/composite-decks"
-  },
-  title: "Composite Deck Builder Loudoun County | Custom Composite Decks NoVA",
-  description: "Loudoun Decks is the premier composite deck builder in Northern Virginia. Specialized in custom Trex and low-maintenance decking with 1,500+ words of expert guidance."
-};
+export const metadata = buildMetadata({
+  path: '/composite-decks',
+  title: 'Composite Deck Builder Loudoun County | Custom Composite Decks NoVA',
+  description: 'Loudoun Decks is the premier composite deck builder in Northern Virginia. Specialized in custom Trex and low-maintenance decking with 1,500+ words of expert guidance.',
+  image: '/images/img10.jpeg',
+});
 
 const inclusions = [
   {

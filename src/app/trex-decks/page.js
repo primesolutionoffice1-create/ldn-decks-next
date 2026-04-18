@@ -7,14 +7,14 @@ import ProcessSteps from '@/components/ProcessSteps';
 import ServicesFAQ from '@/components/ServicesFAQ';
 import ContactHome from '@/components/ContactHome';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
+import { buildMetadata } from '@/lib/seo';
 
-export const metadata = {
-  alternates: {
-    canonical: "https://ldndecks.com/trex-decks"
-  },
-  title: "Certified Trex Deck Builder Loudoun County | Trex Installation Fairfax NoVA",
-  description: "Loudoun Decks is a certified Trex deck builder serving Northern Virginia. High-end Transcend designs, low-maintenance living, and 1,500+ words of expert product knowledge."
-};
+export const metadata = buildMetadata({
+  path: '/trex-decks',
+  title: 'Certified Trex Deck Builder Loudoun County | Trex Installation Fairfax NoVA',
+  description: 'Loudoun Decks is a certified Trex deck builder serving Northern Virginia. High-end Transcend designs, low-maintenance living, and 1,500+ words of expert product knowledge.',
+  image: '/images/img12.jpeg',
+});
 
 const inclusions = [
   {

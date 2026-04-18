@@ -6,14 +6,13 @@ import ProcessSteps from '@/components/ProcessSteps';
 import ServicesFAQ from '@/components/ServicesFAQ';
 import ContactHome from '@/components/ContactHome';
 import ServiceVisual from '@/components/ServiceVisual';
+import { buildMetadata } from '@/lib/seo';
 
-export const metadata = {
-  alternates: {
-    canonical: "https://ldndecks.com/deck-remodeling"
-  },
-  title: "Custom Deck Remodeling & Upgrades | Transform Your Space",
-  description: "Upgrade your existing deck with modern features. From new railings to built-in lighting, we remodel decks to fit your modern lifestyle."
-};
+export const metadata = buildMetadata({
+  path: '/deck-remodeling',
+  title: 'Custom Deck Remodeling & Upgrades | Transform Your Space',
+  description: 'Upgrade your existing deck with modern features. From new railings to built-in lighting, we remodel decks to fit your modern lifestyle.',
+});
 
 export default function DeckRemodelingPage() {
   return (

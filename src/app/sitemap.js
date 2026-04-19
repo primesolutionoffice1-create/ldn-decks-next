@@ -98,6 +98,11 @@ export default async function sitemap() {
                 { path: "/pet-friendly-deck-design",                     priority: 0.80, lastMod: TIER1, freq: "weekly" },
                 { path: "/under-deck-ceiling-ideas",                     priority: 0.85, lastMod: TIER1, freq: "weekly" },
 
+                // Authority & E-E-A-T pages
+                { path: "/about/certifications-and-licenses",           priority: 0.80, lastMod: TIER1, freq: "monthly" },
+                { path: "/areas-we-serve",                              priority: 0.85, lastMod: TIER1, freq: "monthly" },
+                { path: "/reviews",                                     priority: 0.85, lastMod: TIER1, freq: "weekly" },
+
                 // Tier 4 - Evergreen / rarely changes
                 { path: "/about",                        priority: 0.65, lastMod: TIER4, freq: "monthly" },
                 { path: "/about/why-choose-us",          priority: 0.65, lastMod: TIER4, freq: "monthly" },

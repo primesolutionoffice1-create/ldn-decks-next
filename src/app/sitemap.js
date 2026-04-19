@@ -82,6 +82,15 @@ export default async function sitemap() {
                 { path: "/deck-staining-northern-virginia",            priority: 0.85, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-financing-northern-virginia",           priority: 0.80, lastMod: TIER1, freq: "weekly" },
 
+                // Tier 1.5b - Deep competitor analysis pages (batch 2)
+                { path: "/how-long-to-build-a-deck-northern-virginia",  priority: 0.90, lastMod: TIER1, freq: "weekly" },
+                { path: "/deck-railing-options-northern-virginia",      priority: 0.90, lastMod: TIER1, freq: "weekly" },
+                { path: "/porch-vs-deck-which-should-you-build",       priority: 0.85, lastMod: TIER1, freq: "weekly" },
+                { path: "/deck-lighting-ideas-northern-virginia",      priority: 0.85, lastMod: TIER1, freq: "weekly" },
+                { path: "/deck-maintenance-checklist-virginia",        priority: 0.85, lastMod: TIER1, freq: "weekly" },
+                { path: "/winterize-your-deck-northern-virginia",      priority: 0.85, lastMod: TIER1, freq: "weekly" },
+                { path: "/what-size-deck-should-i-build",              priority: 0.85, lastMod: TIER1, freq: "weekly" },
+
                 // Tier 4 - Evergreen / rarely changes
                 { path: "/about",                        priority: 0.65, lastMod: TIER4, freq: "monthly" },
                 { path: "/about/why-choose-us",          priority: 0.65, lastMod: TIER4, freq: "monthly" },

@@ -47,8 +47,9 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+                <link rel="preload" href="/home-page-ldn.png" as="image" fetchpriority="high" />
         {/* Google Tag Manager - dataLayer init */}
-        <Script id="gtm-init" strategy="beforeInteractive">
+                    <Script id="gtm-init" strategy="afterInteractive">
           {`window.dataLayer = window.dataLayer || [];`}
         </Script>
         {/* Google Tag Manager */}

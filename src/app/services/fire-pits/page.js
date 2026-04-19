@@ -6,7 +6,6 @@ import ServiceInclusions from '@/components/ServiceInclusions';
 import ServiceContentExpansion from '@/components/ServiceContentExpansion';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import ContactHome from '@/components/ContactHome';
-
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -15,12 +14,27 @@ export const metadata = buildMetadata({
   description: "Transform your backyard with a custom-built fire pit in Northern Virginia. We specialize in gas, wood-burning, and stone fire pits for year-round enjoyment."
 });
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Custom Fire Pit Installation",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Loudoun Decks",
+    "@id": "https://www.ldndecks.com/#business"
+  },
+  "areaServed": [
+    { "@type": "AdministrativeArea", "name": "Loudoun County, VA" },
+    { "@type": "AdministrativeArea", "name": "Fairfax County, VA" },
+    { "@type": "AdministrativeArea", "name": "Prince William County, VA" }
+  ],
+  "description": "Professional custom fire pit design and installation in Northern Virginia. Wood-burning, gas, and built-in stone fire pits with integrated seating areas."
+};
+
 const expansionSections = [
   {
     title: "Fire Pit Options",
-    paragraphs: [
-      "Built to Match Your Style."
-    ],
+    paragraphs: [ "Built to Match Your Style." ],
     listItems: [
       { label: "1. Wood-Burning Fire Pits", text: "Classic experience with natural flame and sound. Ideal for traditional setups." },
       { label: "2. Gas Fire Pits (Propane / Natural Gas)", text: "Easy to use and maintain. Instant ignition, clean and modern." },
@@ -30,9 +44,7 @@ const expansionSections = [
   },
   {
     title: "Premium Material Options",
-    paragraphs: [
-      "Materials That Last."
-    ],
+    paragraphs: [ "Materials That Last." ],
     listItems: [
       { label: "Bluestone", text: "Elegant natural stone style" },
       { label: "Concrete Pavers", text: "Versatile and highly durable" },
@@ -43,9 +55,7 @@ const expansionSections = [
   },
   {
     title: "Benefits of Adding a Fire Pit",
-    paragraphs: [
-      "Why Homeowners Love Fire Pits."
-    ],
+    paragraphs: [ "Why Homeowners Love Fire Pits." ],
     listItems: [
       { label: "Atmosphere", text: "Creates a cozy, warm outdoor atmosphere" },
       { label: "Value", text: "Increases property value immediately" },
@@ -75,14 +85,14 @@ const whyLdnDecks = [
 export default function FirePitsPage() {
   return (
     <main>
-      <ServicesHeader 
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <ServicesHeader
         subtext="Custom Fire Pit Loudoun VA"
         title="Custom Fire Pits Built for Comfort, Style & Year-Round Enjoyment"
         description="Transform your backyard into a warm, inviting space with a custom-built fire pit - perfect for relaxing nights, entertaining guests, and adding value to your home."
       />
-
-      <ServiceMain 
-        subtitle="More Than Just a Feature - It’s the Centerpiece"
+      <ServiceMain
+        subtitle="More Than Just a Feature - It's the Centerpiece"
         title="What is a Custom Fire Pit?"
         description="Custom Fire Pit by LDN Decks – Loudoun County. A custom fire pit creates a natural gathering space in your backyard."
         listItems={[
@@ -94,15 +104,12 @@ export default function FirePitsPage() {
         image1="/showcase/img15.jpeg"
         image2="/showcase/img16.jpeg"
       />
-
       <ServiceContentExpansion sections={expansionSections} />
-
-      <ServiceInclusions 
+      <ServiceInclusions
         title="Our Layout Process"
         description="How We Build Your Fire Pit."
         items={firePitProcess}
       />
-
       <section style={{ padding: '60px 20px', maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
         <h2 style={{ fontSize: '32px', marginBottom: '15px' }}>See the Transformation</h2>
         <p style={{ marginBottom: '40px', fontSize: '18px', color: '#555' }}>From empty backyard to a warm, inviting gathering space.</p>
@@ -115,15 +122,12 @@ export default function FirePitsPage() {
           </div>
         </div>
       </section>
-
-      <ServiceInclusions 
+      <ServiceInclusions
         title="Why LDN Decks"
         description="Your dedicated local contractor."
         items={whyLdnDecks}
       />
-
       <ServiceAreasGrid />
-
       <ContactHome />
     </main>
   );

@@ -20,6 +20,7 @@ export default async function sitemap() {
                 { path: "/deck-builder-ashburn-va",      priority: 0.92, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-builder-leesburg-va",     priority: 0.92, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-builder-reston-va",       priority: 0.90, lastMod: TIER1, freq: "weekly" },
+                { path: "/deck-design-ideas-northern-virginia-2026", priority: 0.92, lastMod: TIER1, freq: "weekly" },
 
                 // Tier 2 - Core service pages
                 { path: "/composite-decks",              priority: 0.90, lastMod: TIER2, freq: "weekly" },

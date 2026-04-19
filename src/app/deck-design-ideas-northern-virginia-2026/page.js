@@ -12,7 +12,7 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/deck-design-ideas-northern-virginia-2026',
-    title: 'Deck Design Ideas Northern Virginia 2026 | LDN Decks',
+    title: 'Deck Design Ideas Northern Virginia 2026',
       description: 'Explore the top deck design ideas for Northern Virginia homeowners in 2026. Custom composite decks, multi-level builds, screened porches & pergolas. Trex Platinum Partner. Free estimate - call (571) 655-7207.',
         image: '/images/img36.jpeg',
         });

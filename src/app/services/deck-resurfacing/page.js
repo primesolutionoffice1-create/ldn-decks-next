@@ -6,12 +6,11 @@ import ServiceInclusions from '@/components/ServiceInclusions';
 import ServiceContentExpansion from '@/components/ServiceContentExpansion';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import ContactHome from '@/components/ContactHome';
-
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: "/services/deck-resurfacing",
-  title: "Premium Deck Resurfacing Loudoun VA | TimberTech Advanced PVC upgrade",
+  title: "Premium Deck Resurfacing Loudoun VA | TimberTech Advanced PVC Upgrade",
   description: "Transform your old deck with premium composite resurfacing. Save up to 40% by upgrading your existing frame with TimberTech Vintage Collection in Northern Virginia."
 });
 
@@ -20,7 +19,7 @@ const expansionSections = [
     title: "Why Resurface with the TimberTech Vintage Collection",
     paragraphs: [
       "The TimberTech Vintage Collection is the gold standard of composite decking in the industry. While many homeowners are familiar with standard composite boards, Vintage stands apart by utilizing an Advanced PVC material core that contains zero wood fibers. This makes it a superior option compared to traditional [new deck construction](/services/new-decks) materials.",
-      "This 100% synthetic composition makes it effectively immune to the moisture, swelling, mold, and rot that slowly degrades traditional wood-composite blends in Northern Virginia’s humid climate. Its proprietary capping technology resists fading and staining, ensuring your deck looks as vibrant in year 20 as it did on day one."
+      "This 100% synthetic composition makes it effectively immune to the moisture, swelling, mold, and rot that slowly degrades traditional wood-composite blends in Northern Virginia's humid climate. Its proprietary capping technology resists fading and staining, ensuring your deck looks as vibrant in year 20 as it did on day one."
     ],
     listItems: [
       { label: "Unmatched Aesthetics", text: "Wire-brushed texture that perfectly mimics the intricate grain patterns of premium hardwood." },
@@ -66,22 +65,10 @@ const resurfacingProcess = [
 ];
 
 const resurfacingFAQs = [
-  { 
-    question: "How do I know if my deck is a candidate for resurfacing?", 
-    answer: "A deck is typically a good candidate if the foundational posts, beams, and joists are sturdy, free of deep rot, and built to modern safety codes. During our free evaluation, we structurally probe the wood. If your frame is over 25 years old or severely compromised by water damage, a full replacement will be necessary." 
-  },
-  { 
-    question: "How much does deck resurfacing cost compared to building a new deck?", 
-    answer: "On average, resurfacing your deck with premium composite material costs 25-40% less than building a brand new deck of the same size, primarily because you are saving significantly on foundational lumber and structural labor." 
-  },
-  { 
-    question: "Do I need a building permit to resurface my deck in Virginia?", 
-    answer: "If you are strictly replacing the surface decking boards (the 'skin') on a one-for-one basis, many jurisdictions consider it a repair that does not require a permit. However, if the project involves altering the structural framing, changing the stairs, or installing a new railing system, a permit is almost always required. We navigate this entirely for you." 
-  },
-  { 
-    question: "Can I change the layout or size of my deck during resurfacing?", 
-    answer: "Usually, yes. While the main body of the deck remains the same, we can often frame out extensions, widen stairs, or add specialized bumps-outs for a grill station while utilizing the main existing structure." 
-  }
+  { question: "How do I know if my deck is a candidate for resurfacing?", answer: "A deck is typically a good candidate if the foundational posts, beams, and joists are sturdy, free of deep rot, and built to modern safety codes. During our free evaluation, we structurally probe the wood. If your frame is over 25 years old or severely compromised by water damage, a full replacement will be necessary." },
+  { question: "How much does deck resurfacing cost compared to building a new deck?", answer: "On average, resurfacing your deck with premium composite material costs 25-40% less than building a brand new deck of the same size, primarily because you are saving significantly on foundational lumber and structural labor." },
+  { question: "Do I need a building permit to resurface my deck in Virginia?", answer: "If you are strictly replacing the surface decking boards (the 'skin') on a one-for-one basis, many jurisdictions consider it a repair that does not require a permit. However, if the project involves altering the structural framing, changing the stairs, or installing a new railing system, a permit is almost always required. We navigate this entirely for you." },
+  { question: "Can I change the layout or size of my deck during resurfacing?", answer: "Usually, yes. While the main body of the deck remains the same, we can often frame out extensions, widen stairs, or add specialized bumps-outs for a grill station while utilizing the main existing structure." }
 ];
 
 const faqSchemaData = {
@@ -90,10 +77,7 @@ const faqSchemaData = {
   "mainEntity": resurfacingFAQs.map(faq => ({
     "@type": "Question",
     "name": faq.question,
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": faq.answer
-    }
+    "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
   }))
 };
 
@@ -101,13 +85,8 @@ const serviceSchemaData = {
   "@context": "https://schema.org",
   "@type": "Service",
   "name": "Custom Deck Resurfacing",
-  "provider": {
-    "@type": "LocalBusiness",
-    "name": "Loudoun Decks"
-  },
-  "areaServed": [
-    { "@type": "State", "name": "Virginia" }
-  ],
+  "provider": { "@type": "LocalBusiness", "name": "Loudoun Decks" },
+  "areaServed": [{ "@type": "State", "name": "Virginia" }],
   "description": "Professional deck resurfacing services utilizing TimberTech Vintage Collection composite boards, structural reinforcement, and aluminum railings in Northern Virginia."
 };
 
@@ -129,22 +108,27 @@ export default function DeckResurfacingPage() {
   return (
     <main>
       {/* Dynamic SEO Schemas */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchemaData) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchemaData) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchemaData) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchemaData) }} />
 
-      <ServicesHeader 
+      <ServicesHeader
         subtext="Deck Resurfacing Loudoun VA"
         title="Upgrade Your Deck with TimberTech Vintage Collection"
         description="Don't tear down a structurally sound deck. Transform your outdated outdoor space into a premium retreat with high-end TimberTech Vintage Collection composite boards—engineered for beauty, durability, and a lifetime of performance."
       />
 
-      <ServiceMain 
+      {/* Pricing Anchor */}
+      <section style={{ backgroundColor: '#f9f9f9', padding: '24px 20px', borderBottom: '1px solid #eee' }}>
+        <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
+          <p style={{ fontSize: '16px', color: '#555', margin: 0 }}>
+            <strong style={{ color: '#222' }}>Deck resurfacing projects typically start at $12,000+</strong>
+            {' '}— materials, deck size, structural condition, and railing upgrades affect final pricing.{' '}
+            <strong>Free structural evaluation included.</strong>
+          </p>
+        </div>
+      </section>
+
+      <ServiceMain
         subtitle="The Smarter Upgrade Path"
         title="Give Your Existing Deck a Second Life"
         description="Loudoun Decks specializes in premium deck resurfacing across Northern Virginia. Deck resurfacing is a highly efficient remodeling process that allows you to salvage your existing pressure-treated structural frame while replacing the aging surface boards, railings, stairs, and fascia with modern, zero-maintenance composite materials."
@@ -157,15 +141,12 @@ export default function DeckResurfacingPage() {
         image1="/showcase/img03.jpg"
         image2="/showcase/img05.jpeg"
       />
-
       <ServiceContentExpansion sections={expansionSections} />
-
-      <ServiceInclusions 
+      <ServiceInclusions
         title="Our Engineered Resurfacing Process"
         description="A rigorous, multi-step process ensuring total structural integrity before a single new board is fastened."
         items={resurfacingProcess}
       />
-
       <section style={{ padding: '60px 20px', maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
         <h2 style={{ fontSize: '32px', marginBottom: '15px' }}>See the Transformation</h2>
         <p style={{ marginBottom: '40px', fontSize: '18px', color: '#555' }}>Same base structure. Completely transformed aesthetic.</p>
@@ -178,7 +159,6 @@ export default function DeckResurfacingPage() {
           </div>
         </div>
       </section>
-
       <section style={{ background: '#f9f9f9', padding: '60px 20px' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto' }}>
           <h2 style={{ fontSize: '32px', marginBottom: '30px', textAlign: 'center' }}>Resurfacing FAQs</h2>
@@ -190,35 +170,26 @@ export default function DeckResurfacingPage() {
           ))}
         </div>
       </section>
-
-      <ServiceInclusions 
+      <ServiceInclusions
         title="Local Experts You Can Trust"
         description="Why choose Loudoun Decks for your remodel?"
         items={whyLdnDecks}
       />
-
       <section style={{ padding: '40px 20px', backgroundColor: '#f9f9f9', borderTop: '1px solid #eee' }}>
         <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
           <h3 style={{ fontSize: '24px', marginBottom: '15px' }}>Official Resources & Safety Standards</h3>
           <p style={{ marginBottom: '20px', color: '#666' }}>We build all our projects to exceed local Northern Virginia building codes and manufacturer specifications.</p>
           <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}>
             {authorityLinks.map((link, idx) => (
-              <a 
-                key={idx} 
-                href={link.url} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                style={{ color: 'var(--site-color)', fontWeight: '600', textDecoration: 'underline', fontSize: '14px' }}
-              >
+              <a key={idx} href={link.url} target="_blank" rel="noopener noreferrer"
+                style={{ color: 'var(--site-color)', fontWeight: '600', textDecoration: 'underline', fontSize: '14px' }}>
                 {link.text}
               </a>
             ))}
           </div>
         </div>
       </section>
-
       <ServiceAreasGrid />
-
       <ContactHome />
     </main>
   );

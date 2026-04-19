@@ -7,7 +7,6 @@ import ServiceContentExpansion from '@/components/ServiceContentExpansion';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import ContactHome from '@/components/ContactHome';
 import JsonLd from '@/components/JsonLd';
-
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -27,11 +26,7 @@ const serviceSchema = {
     { "@type": "AdministrativeArea", "name": "Prince William County, VA" }
   ],
   "description": "Professional deck replacement services including structural assessment, old deck removal, and premium composite rebuilds using Trex and TimberTech.",
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5.0",
-    "reviewCount": "44"
-  }
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "41" }
 };
 
 const replacementSections = [
@@ -55,7 +50,7 @@ const replacementSections = [
     listItems: [
       { label: "Structural Audit", text: "We perform a deep-dive inspection of your existing framing to see what can be safely salvaged." },
       { label: "Clean Tear-Down", text: "Eco-friendly removal and disposal of your old, rotted, or infested deck materials." },
-      { label: "Framing Reinforcement", text: "We reinforce existing joists or pour new footings to meet modern 2024 building codes." },
+      { label: "Framing Reinforcement", text: "We reinforce existing joists or pour new footings to meet modern building codes." },
       { label: "Composite Transformation", text: "Expert installation of Trex, AZEK, or TimberTech boards with a 25-year manufacturer warranty." }
     ]
   }
@@ -73,12 +68,22 @@ export default function DeckReplacementPage() {
   return (
     <main>
       <JsonLd data={serviceSchema} />
-
       <ServicesHeader
         subtext="Old to New Transformation"
         title="Professional Deck Replacement in Northern Virginia"
         description="Don't let an aging, splintering deck hold you back. We specialize in tearing down old structures and building premium, low-maintenance outdoor retreats."
       />
+
+      {/* Pricing Anchor */}
+      <section style={{ backgroundColor: '#f9f9f9', padding: '24px 20px', borderBottom: '1px solid #eee' }}>
+        <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
+          <p style={{ fontSize: '16px', color: '#555', margin: 0 }}>
+            <strong style={{ color: '#222' }}>Deck replacement projects typically start at $18,000+</strong>
+            {' '}— deck size, structural condition, materials, and railing upgrades affect final pricing.{' '}
+            <strong>Free structural evaluation included.</strong>
+          </p>
+        </div>
+      </section>
 
       <ServiceMain
         subtitle="Northern Virginia's Rebuild Experts"
@@ -94,15 +99,12 @@ export default function DeckReplacementPage() {
         image1="/images/img05.jpeg"
         image2="/images/img06.jpeg"
       />
-
       <ServiceContentExpansion sections={replacementSections} />
-
       <section style={{ padding: '80px 20px', maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
         <h2 style={{ fontSize: '36px', marginBottom: '20px', fontWeight: '800' }}>Common Signs Your Deck Needs Replacement</h2>
         <p style={{ fontSize: '18px', color: '#555', maxWidth: '800px', margin: '0 auto 50px', lineHeight: '1.6' }}>
-          If your deck exhibits any of the following issues, a full replacement is often the safest and most cost-effective solution. Don't wait until the structure becomes a hazard.
+          If your deck exhibits any of the following issues, a full replacement is often the safest and most cost-effective solution.
         </p>
-
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '20px', alignItems: 'stretch' }}>
           <div style={{ position: 'relative', height: '300px', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 10px 20px rgba(0,0,0,0.1)' }}>
             <Image src="/torndeck.webp" alt="Severe board rot and splintering" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw" style={{ objectFit: 'cover' }} />
@@ -118,7 +120,6 @@ export default function DeckReplacementPage() {
           </div>
         </div>
       </section>
-
       <section style={{ padding: '60px 20px', maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
         <h2 style={{ fontSize: '32px', marginBottom: '15px', fontWeight: 800 }}>Seamless Transitions</h2>
         <p style={{ marginBottom: '40px', fontSize: '18px', color: '#555' }}>We handle everything from the first drill to the final cleanup.</p>
@@ -126,15 +127,12 @@ export default function DeckReplacementPage() {
           <Image src="/images/img97.jpeg" alt="Deck replacement transformation" fill sizes="100vw" style={{ objectFit: 'cover' }} />
         </div>
       </section>
-
       <ServiceInclusions
         title="The LDN Difference in Replacements"
         description="Why trust us with your rebuild project?"
         items={replacementBenefits}
       />
-
       <ServiceAreasGrid />
-
       <ContactHome />
     </main>
   );

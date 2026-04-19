@@ -1,6 +1,7 @@
 "use client";
 import React from 'react';
 import styles from './FloatingCallButton.module.css';
+import { trackPhoneClick } from '@/lib/tracking';
 
 const PhoneIcon = () => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
@@ -10,7 +11,12 @@ const PhoneIcon = () => (
 
 export default function FloatingCallButton() {
   return (
-    <a href="tel:+15716557207" className={styles.floatingBtn} aria-label="Call Us Now">
+    <a
+      href="tel:+15716557207"
+      className={styles.floatingBtn}
+      aria-label="Call Us Now"
+      onClick={trackPhoneClick}
+    >
       <div className={styles.iconWrapper}>
         <PhoneIcon />
       </div>

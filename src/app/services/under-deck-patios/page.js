@@ -6,7 +6,6 @@ import ServiceInclusions from '@/components/ServiceInclusions';
 import ServiceContentExpansion from '@/components/ServiceContentExpansion';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import ContactHome from '@/components/ContactHome';
-
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -15,12 +14,27 @@ export const metadata = buildMetadata({
   description: "Maximize your outdoor living space with a custom waterproof under deck ceiling system in Northern Virginia. Turn your under-deck space into a dry, stylish patio."
 });
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Under Deck Patio System Installation",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Loudoun Decks",
+    "@id": "https://www.ldndecks.com/#business"
+  },
+  "areaServed": [
+    { "@type": "AdministrativeArea", "name": "Loudoun County, VA" },
+    { "@type": "AdministrativeArea", "name": "Fairfax County, VA" },
+    { "@type": "AdministrativeArea", "name": "Prince William County, VA" }
+  ],
+  "description": "Custom under deck patio waterproofing and ceiling systems in Northern Virginia. Drainage systems, aluminum ceiling panels, recessed lighting, and electrical integration."
+};
+
 const expansionSections = [
   {
     title: "Under Deck System Options",
-    paragraphs: [
-      "Built for Performance & Comfort."
-    ],
+    paragraphs: [ "Built for Performance & Comfort." ],
     listItems: [
       { label: "1. Drainage Systems", text: "Channels water away from the deck above, keeps the patio below completely dry, clean finished ceiling look." },
       { label: "2. Ceiling Systems", text: "Vinyl or aluminum ceiling panels with a modern, polished appearance. Easy to maintain." },
@@ -30,9 +44,7 @@ const expansionSections = [
   },
   {
     title: "Benefits of Under Deck Patios",
-    paragraphs: [
-      "Why Homeowners Love Under Deck Patios."
-    ],
+    paragraphs: [ "Why Homeowners Love Under Deck Patios." ],
     listItems: [
       { label: "Protection", text: "Protects from rain and weather." },
       { label: "Space", text: "Creates a second outdoor living area." },
@@ -43,9 +55,7 @@ const expansionSections = [
   },
   {
     title: "Design Ideas",
-    paragraphs: [
-      "Customize Your Space."
-    ],
+    paragraphs: [ "Customize Your Space." ],
     listItems: [
       { label: "Lounge", text: "Lounge seating areas." },
       { label: "Dining", text: "Outdoor dining setups." },
@@ -75,13 +85,13 @@ const whyLdnDecks = [
 export default function UnderDeckPatiosPage() {
   return (
     <main>
-      <ServicesHeader 
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <ServicesHeader
         subtext="Under Deck Patio Loudoun VA"
         title="Turn the Space Under Your Deck Into a Beautiful, Dry Patio"
         description="Maximize your outdoor living space with a custom under-deck patio system - protected from rain, clean, and perfect for relaxing or entertaining year-round."
       />
-
-      <ServiceMain 
+      <ServiceMain
         subtitle="Double Your Outdoor Living Space"
         title="What is an Under Deck Patio?"
         description="Custom Under Deck Patio by LDN Decks – Loudoun County. An under-deck patio transforms the unused area beneath your deck into a functional, dry, and stylish space."
@@ -94,15 +104,12 @@ export default function UnderDeckPatiosPage() {
         image1="/showcase/img19.jpg"
         image2="/showcase/img20.jpg"
       />
-
       <ServiceContentExpansion sections={expansionSections} />
-
-      <ServiceInclusions 
+      <ServiceInclusions
         title="Our Layout Process"
         description="How We Build Your Under Deck Space."
         items={underDeckProcess}
       />
-
       <section style={{ padding: '60px 20px', maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
         <h2 style={{ fontSize: '32px', marginBottom: '15px' }}>See the Transformation</h2>
         <p style={{ marginBottom: '40px', fontSize: '18px', color: '#555' }}>From unused space to a fully functional outdoor area.</p>
@@ -115,15 +122,12 @@ export default function UnderDeckPatiosPage() {
           </div>
         </div>
       </section>
-
-      <ServiceInclusions 
+      <ServiceInclusions
         title="Why LDN Decks"
         description="Your dedicated local contractor."
         items={whyLdnDecks}
       />
-
       <ServiceAreasGrid />
-
       <ContactHome />
     </main>
   );

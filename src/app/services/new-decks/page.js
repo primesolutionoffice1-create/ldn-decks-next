@@ -6,7 +6,6 @@ import ServiceInclusions from '@/components/ServiceInclusions';
 import ServiceContentExpansion from '@/components/ServiceContentExpansion';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import ContactHome from '@/components/ContactHome';
-
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -79,23 +78,30 @@ export default function NewDecksPage() {
       { "@type": "AdministrativeArea", "name": "Prince William County, VA" }
     ],
     "description": "From concept to completion, we design and build fully custom decks tailored to your space, style, and budget in Northern Virginia.",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5.0",
-      "reviewCount": "41"
-    }
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "41" }
   };
 
   return (
     <main>
       <JsonLd data={serviceSchema} />
-      <ServicesHeader 
+      <ServicesHeader
         subtext="Custom Deck Design Loudoun VA"
         title="Custom Deck Design Built Around Your Home & Lifestyle"
         description="From concept to completion, we design and build fully custom decks tailored to your space, style, and budget - no templates, no shortcuts."
       />
 
-      <ServiceMain 
+      {/* Pricing Anchor */}
+      <section style={{ backgroundColor: '#f9f9f9', padding: '24px 20px', borderBottom: '1px solid #eee' }}>
+        <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
+          <p style={{ fontSize: '16px', color: '#555', margin: 0 }}>
+            <strong style={{ color: '#222' }}>Most custom deck projects start at $15,000+</strong>
+            {' '}— materials, size, access, and design complexity affect final pricing.{' '}
+            <strong>Free in-home estimate included.</strong>
+          </p>
+        </div>
+      </section>
+
+      <ServiceMain
         subtitle="Not Just a Deck - A Personalized Outdoor Space"
         title="What is a Custom Deck?"
         description="Designed & Built by LDN Decks – Loudoun County. A custom deck is designed specifically for your home, layout, and exactly how you want to use your outdoor space."
@@ -108,15 +114,12 @@ export default function NewDecksPage() {
         image1="/showcase/img08.jpeg"
         image2="/showcase/img09.jpeg"
       />
-
       <ServiceContentExpansion sections={expansionSections} />
-
-      <ServiceInclusions 
+      <ServiceInclusions
         title="Our Design Process"
         description="How We Bring Your Vision to Life. A step-by-step roadmap to building your perfect deck."
         items={designProcess}
       />
-
       <section style={{ padding: '60px 20px', maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
         <h2 style={{ fontSize: '32px', marginBottom: '15px' }}>See the Transformation</h2>
         <p style={{ marginBottom: '40px', fontSize: '18px', color: '#555' }}>From empty backyard to fully customized outdoor living space.</p>
@@ -124,35 +127,26 @@ export default function NewDecksPage() {
           <Image src="/showcase/img10.jpeg" alt="Custom deck transformation" fill style={{ objectFit: 'cover' }} />
         </div>
       </section>
-
-      <ServiceInclusions 
+      <ServiceInclusions
         title="Local Experts You Can Trust"
         description="Why LDN Decks?"
         items={whyLdnDecks}
       />
-
       <section style={{ padding: '40px 20px', backgroundColor: '#f9f9f9', borderTop: '1px solid #eee' }}>
         <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
           <h3 style={{ fontSize: '24px', marginBottom: '15px' }}>Official Resources & Safety Standards</h3>
           <p style={{ marginBottom: '20px', color: '#666' }}>We build all our decks to exceed local Northern Virginia building codes and manufacturer specifications.</p>
           <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}>
             {authorityLinks.map((link, idx) => (
-              <a 
-                key={idx} 
-                href={link.url} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                style={{ color: 'var(--site-color)', fontWeight: '600', textDecoration: 'underline', fontSize: '14px' }}
-              >
+              <a key={idx} href={link.url} target="_blank" rel="noopener noreferrer"
+                style={{ color: 'var(--site-color)', fontWeight: '600', textDecoration: 'underline', fontSize: '14px' }}>
                 {link.text}
               </a>
             ))}
           </div>
         </div>
       </section>
-
       <ServiceAreasGrid />
-
       <ContactHome />
     </main>
   );

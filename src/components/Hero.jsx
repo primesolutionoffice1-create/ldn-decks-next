@@ -8,7 +8,7 @@ export default function Hero() {
   return (
     <section className={styles.heroSection}>
       <Image 
-                            src="/home-page-ldn.webp"
+                                                          src="/home-page-ldn.png"
                     alt="Loudoun Decks Hero"
         fill
         priority

@@ -1,11 +1,15 @@
+'use client';
 import React from 'react';
 import styles from './ServicesHeader.module.css';
+import { useContact } from '@/context/ContactContext';
 
-export default function ServicesHeader({ 
-  subtext = "What We DO", 
-  title = "Deck & Outdoor Living Services", 
+export default function ServicesHeader({
+  subtext = "What We DO",
+  title = "Deck & Outdoor Living Services",
   description = "Loudoun Decks provides residential deck and outdoor living services for homeowners in Loudoun County, Fairfax County, and Prince William County. Our focus is on planning and building outdoor spaces that fit each home and lifestyle."
 }) {
+  const { openContact } = useContact();
+
   return (
     <section className={styles.headerSection}>
       <div className={styles.container}>
@@ -15,6 +19,23 @@ export default function ServicesHeader({
         </div>
         <h1 className={styles.title}>{title}</h1>
         <p className={styles.description}>{description}</p>
+        <div className={styles.ctaWrapper}>
+          <button
+            className={styles.ctaPrimary}
+            onClick={openContact}
+            aria-label="Get a free estimate"
+          >
+            Get a Free Estimate
+          </button>
+          <a
+            href="tel:+15716557207"
+            className={styles.ctaSecondary}
+            aria-label="Call Loudoun Decks"
+          >
+            Call (571) 655-7207
+          </a>
+        </div>
+        <p className={styles.trustText}>Free estimate &bull; No obligation &bull; Fully permitted builds</p>
       </div>
     </section>
   );

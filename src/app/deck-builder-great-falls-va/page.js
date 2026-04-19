@@ -1,0 +1,113 @@
+import React from 'react';
+import Link from 'next/link';
+import JsonLd from '@/components/JsonLd';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import SimpleCTA from '@/components/SimpleCTA';
+import ContactHome from '@/components/ContactHome';
+import { buildMetadata } from '@/lib/seo';
+
+export const metadata = buildMetadata({
+  path: '/deck-builder-great-falls-va',
+  title: 'Best Deck Builder in Great Falls, VA | Premium Composite Decks',
+  description: 'Top-rated deck builder for Great Falls, VA. Premium Trex & AZEK decks for $1M+ homes. 5.0★ Google. RPA-zone expertise. Free estimate. Call (571) 655-7207.',
+});
+
+const faqSchema = {
+  "@context": "https://schema.org", "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "How much does a deck cost in Great Falls, VA?", acceptedAnswer: { "@type": "Answer", text: "Deck projects in Great Falls typically range from $40,000-$100,000+ due to larger lots, premium material preferences (AZEK, Trex Transcend), and complex designs. Great Falls homeowners often add screened porches, outdoor kitchens, and multi-level designs." } },
+    { "@type": "Question", name: "Do I need special permits for a deck in Great Falls?", acceptedAnswer: { "@type": "Answer", text: "Great Falls is in Fairfax County — standard building permits required. Many Great Falls lots are in RPA (Resource Protection Area) zones near the Potomac River, requiring additional environmental review. We handle all permitting including RPA submissions." } },
+    { "@type": "Question", name: "Do Great Falls homes have HOA restrictions on decks?", acceptedAnswer: { "@type": "Answer", text: "Some Great Falls neighborhoods have deed covenants or HOA architectural review. Many estate-lot homes have no HOA. We research your specific property's restrictions before design begins." } },
+  ],
+};
+
+const S = { h2: { fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }, p: { marginBottom: '1rem', lineHeight: 1.7 } };
+
+export default function GreatFallsDeckBuilderPage() {
+  return (
+    <>
+      <JsonLd data={faqSchema} />
+      <Breadcrumbs />
+      <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
+          <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Premium Deck Builder in Great Falls, VA</h1>
+          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Custom composite decks, screened porches &amp; outdoor living for Great Falls estate homes</p>
+          <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+            <a href="tel:+15716557207" style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</a>
+            <Link href="/contact" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Estimate</Link>
+          </div>
+          <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#aaa' }}>★★★★★ 5.0 on Google · 41 reviews · Licensed &amp; Insured · 5-Year Warranty</p>
+        </div>
+      </section>
+      <article style={{ padding: '4rem 0' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
+
+          <h2 style={S.h2}>Why Great Falls Homeowners Choose Loudoun Decks</h2>
+          <p style={S.p}>Great Falls properties demand exceptional craftsmanship. With home values averaging $1.5M+ and lot sizes of 1-5+ acres, Great Falls deck projects are among the most detailed and architecturally significant in Northern Virginia. We specialize in the premium outdoor living spaces these properties deserve.</p>
+          <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
+            <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Premium materials exclusively:</strong> TimberTech AZEK, Trex Transcend, exotic hardwoods — materials that match the caliber of Great Falls homes</li>
+            <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>RPA zone expertise:</strong> Many Great Falls lots near the Potomac are in Resource Protection Areas requiring additional environmental review. We navigate this process routinely.</li>
+            <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Architectural complexity:</strong> Multi-level decks, wraparound designs, integrated outdoor kitchens, screened porches with fireplaces, pool deck surrounds</li>
+            <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Estate-scale projects:</strong> 600-1,200+ sqft outdoor living spaces designed to complement the scale of Great Falls properties</li>
+            <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Fairfax County permitting:</strong> We handle all zoning review, building permits, and inspections — including the more complex requirements for large properties</li>
+          </ul>
+
+          <h2 style={S.h2}>What We Build in Great Falls</h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
+            {[
+              { title: 'Estate Composite Decks', desc: 'Multi-level AZEK and Trex Transcend builds with premium railings, integrated lighting, and custom details', range: '$50k–$120k+' },
+              { title: 'Screened Porches & Sunrooms', desc: 'EZE-Breeze, retractable screens, stone fireplaces, cedar ceilings, climate-controlled options', range: '$40k–$90k+' },
+              { title: 'Pool Deck Surrounds', desc: 'Heat-resistant pavers and composite around pools with code-compliant barriers and outdoor showers', range: '$35k–$80k+' },
+              { title: 'Outdoor Kitchens', desc: 'Full kitchens with grill, pizza oven, bar, sink, fridge — designed for Great Falls entertaining', range: '$30k–$80k+' },
+            ].map((item) => (
+              <div key={item.title} style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.25rem' }}>
+                <h3 style={{ fontWeight: 600, marginBottom: '0.25rem' }}>{item.title}</h3>
+                <p style={{ fontSize: '0.85rem', color: 'var(--color-primary)', fontWeight: 600, marginBottom: '0.5rem' }}>{item.range}</p>
+                <p style={{ fontSize: '0.9rem', color: '#555', lineHeight: 1.6 }}>{item.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          <h2 style={S.h2}>Great Falls Project Example</h2>
+          <div style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', marginBottom: '2rem' }}>
+            <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>$92,000 — 800 sqft Multi-Level Deck + Screened Porch, River Creek</h3>
+            <p style={{ lineHeight: 1.7 }}>Three-level TimberTech AZEK deck (500 sqft) in Mahogany connected to a screened porch (300 sqft) with stone fireplace, tongue-and-groove cedar ceiling, retractable screens, and built-in bar. Trex Signature cable railings for Potomac River views. RPA environmental review + Fairfax County building permit. HOA architectural review approved first submission. 7-week build.</p>
+          </div>
+
+          <h2 style={S.h2}>Permits &amp; RPA Zones in Great Falls</h2>
+          <p style={S.p}><strong>Standard permits:</strong> All decks in Great Falls require Fairfax County building permits (zoning + structural review, 3-6 weeks). <Link href="/deck-permit-fairfax-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Read our Fairfax County permit guide</Link>.</p>
+          <p style={S.p}><strong>RPA (Resource Protection Area):</strong> Properties within 100 feet of perennial streams or the Potomac River are in Fairfax County&apos;s RPA zone. Deck construction in RPAs requires additional environmental review, may limit impervious surface, and sometimes requires mitigation planting. We routinely navigate RPA permitting for Great Falls properties.</p>
+          <p style={S.p}><strong>Well &amp; septic considerations:</strong> Some Great Falls properties use well water and septic systems. Deck footings must avoid septic drain fields and well casings. We coordinate with your septic company when needed.</p>
+
+          <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>FAQ</h2>
+          {[
+            { q: "How much does a deck cost in Great Falls?", a: "$40,000-$100,000+ for most projects. Great Falls homeowners typically choose AZEK or Trex Transcend with premium features." },
+            { q: "Do I need special permits?", a: "Standard Fairfax County permits plus potential RPA review for lots near the Potomac. We handle everything." },
+            { q: "HOA restrictions?", a: "Varies — some neighborhoods have covenants, many estate lots have no HOA. We research your property before design." },
+          ].map((faq, i) => (
+            <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
+              <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>
+              <p style={{ marginTop: '1rem', lineHeight: 1.7, color: '#555' }}>{faq.a}</p>
+            </details>
+          ))}
+
+          <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Also Serving Nearby</h2>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '2rem' }}>
+            {[
+              ['/deck-builder-mclean-va', 'McLean'],
+              ['/near-you/fairfax-county/vienna', 'Vienna'],
+              ['/near-you/fairfax-county/oakton', 'Oakton'],
+              ['/near-you/fairfax-county/reston', 'Reston'],
+              ['/near-you/fairfax-county/herndon', 'Herndon'],
+              ['/near-you/fairfax-county/falls-church', 'Falls Church'],
+            ].map(([href, text]) => (
+              <Link key={href} href={href} style={{ padding: '0.4rem 0.8rem', border: '1px solid #e5e5e5', borderRadius: 20, fontSize: '0.9rem', textDecoration: 'none', color: 'var(--color-dark)' }}>{text}</Link>
+            ))}
+          </div>
+        </div>
+      </article>
+      <SimpleCTA title="Get Your Great Falls Deck Quote" buttonText="Get Free Estimate" link="/contact" />
+      <ContactHome />
+    </>
+  );
+}

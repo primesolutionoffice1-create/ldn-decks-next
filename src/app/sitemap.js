@@ -103,6 +103,13 @@ export default async function sitemap() {
                 { path: "/areas-we-serve",                              priority: 0.85, lastMod: TIER1, freq: "monthly" },
                 { path: "/reviews",                                     priority: 0.85, lastMod: TIER1, freq: "weekly" },
 
+                // Geo landing pages (standalone — premium markets)
+                { path: "/deck-builder-great-falls-va",                 priority: 0.92, lastMod: TIER1, freq: "weekly" },
+                { path: "/deck-builder-vienna-va",                      priority: 0.90, lastMod: TIER1, freq: "weekly" },
+
+                // Additional keyword pages
+                { path: "/cable-railing-for-decks-northern-virginia",   priority: 0.85, lastMod: TIER1, freq: "weekly" },
+
                 // Tier 4 - Evergreen / rarely changes
                 { path: "/about",                        priority: 0.65, lastMod: TIER4, freq: "monthly" },
                 { path: "/about/why-choose-us",          priority: 0.65, lastMod: TIER4, freq: "monthly" },

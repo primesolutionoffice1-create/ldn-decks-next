@@ -8,13 +8,12 @@ export default function Hero() {
   return (
     <section className={styles.heroSection}>
       <Image 
-        src="/home-page-ldn.png"
-        alt="Loudoun Decks Hero"
+                            src="/home-page-ldn.webp"
+                    alt="Loudoun Decks Hero"
         fill
         priority
         fetchPriority="high"
-        style={{ objectFit: 'cover' }}
-        sizes="100vw"
+                                sizes="100vw"
       />
       <div className={styles.overlay}></div>
       <div className={styles.content}>

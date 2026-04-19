@@ -64,6 +64,23 @@ export default async function sitemap() {
                 { path: "/blog",                         priority: 0.70, lastMod: TIER3, freq: "weekly" },
                 { path: "/contact",                      priority: 0.70, lastMod: TIER3, freq: "monthly" },
 
+                // Tier 1.5 - High-intent keyword/content pages (new)
+                { path: "/how-much-does-a-deck-cost-northern-virginia", priority: 0.95, lastMod: TIER1, freq: "weekly" },
+                { path: "/trex-vs-timbertech-vs-azek",                 priority: 0.90, lastMod: TIER1, freq: "weekly" },
+                { path: "/screened-porch-cost-northern-virginia",       priority: 0.90, lastMod: TIER1, freq: "weekly" },
+                { path: "/composite-deck-vs-wood-deck-virginia",       priority: 0.90, lastMod: TIER1, freq: "weekly" },
+                { path: "/does-a-deck-add-value-to-your-home",         priority: 0.85, lastMod: TIER1, freq: "weekly" },
+                { path: "/hoa-deck-rules-northern-virginia",           priority: 0.85, lastMod: TIER1, freq: "weekly" },
+                { path: "/deck-vs-patio-which-is-right",               priority: 0.85, lastMod: TIER1, freq: "weekly" },
+                { path: "/best-time-to-build-a-deck-northern-virginia", priority: 0.85, lastMod: TIER1, freq: "weekly" },
+                { path: "/how-to-choose-a-deck-builder-northern-virginia", priority: 0.85, lastMod: TIER1, freq: "weekly" },
+                { path: "/how-long-does-a-composite-deck-last",        priority: 0.85, lastMod: TIER1, freq: "weekly" },
+                { path: "/deck-permit-fairfax-county-virginia",        priority: 0.85, lastMod: TIER1, freq: "weekly" },
+                { path: "/deck-builder-mclean-va",                     priority: 0.90, lastMod: TIER1, freq: "weekly" },
+                { path: "/outdoor-kitchen-builder-northern-virginia",   priority: 0.85, lastMod: TIER1, freq: "weekly" },
+                { path: "/deck-staining-northern-virginia",            priority: 0.85, lastMod: TIER1, freq: "weekly" },
+                { path: "/deck-financing-northern-virginia",           priority: 0.80, lastMod: TIER1, freq: "weekly" },
+
                 // Tier 4 - Evergreen / rarely changes
                 { path: "/about",                        priority: 0.65, lastMod: TIER4, freq: "monthly" },
                 { path: "/about/why-choose-us",          priority: 0.65, lastMod: TIER4, freq: "monthly" },

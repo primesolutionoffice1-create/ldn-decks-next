@@ -6,7 +6,6 @@ import ServiceInclusions from '@/components/ServiceInclusions';
 import ServiceContentExpansion from '@/components/ServiceContentExpansion';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import ContactHome from '@/components/ContactHome';
-
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -15,24 +14,37 @@ export const metadata = buildMetadata({
   description: "Upgrade your existing deck with a fresh, modern look using Trex Clam Shell composite decking in Northern Virginia. Expert resurfacing & installation."
 });
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Trex Clam Shell Deck Resurfacing",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Loudoun Decks",
+    "@id": "https://www.ldndecks.com/#business"
+  },
+  "areaServed": [
+    { "@type": "AdministrativeArea", "name": "Loudoun County, VA" },
+    { "@type": "AdministrativeArea", "name": "Fairfax County, VA" },
+    { "@type": "AdministrativeArea", "name": "Prince William County, VA" }
+  ],
+  "description": "Professional Trex Clam Shell composite deck resurfacing in Northern Virginia. Premium surface upgrade with hidden fasteners and structural evaluation included."
+};
+
 const expansionSections = [
   {
     title: "Why Trex Calm Shell",
-    paragraphs: [
-      "Clean, Modern & Built to Last."
-    ],
+    paragraphs: [ "Clean, Modern & Built to Last." ],
     listItems: [
       { label: "Soft Neutral Color", text: "A soft, neutral tone that perfectly complements any house exterior and landscape." },
       { label: "High-Performance", text: "Superior scratch, stain, and fade resistance backed by a strong manufacturer warranty." },
       { label: "Low Maintenance", text: "Never sand, stain, or paint your deck again. A simple soap-and-water cleaning is all it takes." },
-      { label: "Eco-Friendly", text: "Made from 95% recycled materials, it’s an environmentally conscious choice." }
+      { label: "Eco-Friendly", text: "Made from 95% recycled materials, it's an environmentally conscious choice." }
     ]
   },
   {
     title: "What is Deck Resurfacing?",
-    paragraphs: [
-      "A Smarter Alternative to Full Replacement."
-    ],
+    paragraphs: [ "A Smarter Alternative to Full Replacement." ],
     listItems: [
       { label: "Cost-Effective", text: "Save money compared to a full rebuild by utilizing your existing framing." },
       { label: "Faster Installation", text: "Complete your project in less time with fewer structural building requirements." },
@@ -61,13 +73,13 @@ const whyLdnDecks = [
 export default function TrexCalmShellPage() {
   return (
     <main>
-      <ServicesHeader 
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <ServicesHeader
         subtext="Deck Resurfacing"
         title="Upgrade Your Deck with Trex Calm Shell Resurfacing"
         description="Give your old deck a fresh, modern look with Trex Calm Shell - a premium composite color designed for durability, style, and low maintenance."
       />
-
-      <ServiceMain 
+      <ServiceMain
         subtitle="A Smarter Alternative to Full Replacement"
         title="What is Deck Resurfacing?"
         description="Deck resurfacing allows you to keep your existing structure while upgrading the surface with new composite decking."
@@ -80,15 +92,12 @@ export default function TrexCalmShellPage() {
         image1="/showcase/img21.jpg"
         image2="/showcase/img22.jpg"
       />
-
       <ServiceContentExpansion sections={expansionSections} />
-
-      <ServiceInclusions 
+      <ServiceInclusions
         title="The Resurfacing Process"
         description="How we transform your existing structure."
         items={resurfacingProcess}
       />
-
       <section style={{ padding: '60px 20px', maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
         <h2 style={{ fontSize: '32px', marginBottom: '15px' }}>See the Transformation</h2>
         <p style={{ marginBottom: '40px', fontSize: '18px', color: '#555' }}>From weathered wood to a beautiful Trex surface.</p>
@@ -101,15 +110,12 @@ export default function TrexCalmShellPage() {
           </div>
         </div>
       </section>
-
-      <ServiceInclusions 
+      <ServiceInclusions
         title="Why LDN Decks"
         description="Your dedicated local Trex installer."
         items={whyLdnDecks}
       />
-
       <ServiceAreasGrid />
-
       <ContactHome />
     </main>
   );

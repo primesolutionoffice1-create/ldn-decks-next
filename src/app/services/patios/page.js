@@ -6,13 +6,12 @@ import ServiceInclusions from '@/components/ServiceInclusions';
 import ServiceContentExpansion from '@/components/ServiceContentExpansion';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import ContactHome from '@/components/ContactHome';
-
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: "/services/patios",
-  title: "Bluestone Patio Loudoun VA | Natural Stone Masonry & Installation",
-  description: "Upgrade your outdoor space with a high-end bluestone patio. Expert natural stone patio installation, fire pits, and hardscaping in Northern Virginia."
+  title: "Custom Patio Builder Northern Virginia | Bluestone, Pavers & Hardscaping",
+  description: "Expert custom patio design and installation in Northern Virginia. Bluestone, natural stone, concrete pavers, and full hardscape builds. Free estimate from LDN Decks."
 });
 
 const expansionSections = [
@@ -45,7 +44,7 @@ const expansionSections = [
   {
     title: "Custom Outdoor Living Features",
     paragraphs: [
-      "A patio is just the foundation. Loudoun Decks turns your bluestone surface into a fully functional outdoor living room by integrating premium architectural elements."
+      "A patio is just the foundation. Loudoun Decks turns your surface into a fully functional outdoor living room by integrating premium architectural elements."
     ],
     listItems: [
       { label: "Retaining & Seating Walls", text: "Built-in masonry walls wrapped in natural stone veneer to provide structural support for sloped yards and permanent seating for guests." },
@@ -57,31 +56,20 @@ const expansionSections = [
 ];
 
 const patioProcess = [
-  { title: "Step 1: On-Site Evaluation", desc: "We review your property’s soil composition, grading, and drainage to determine the necessary sub-base requirements." },
+  { title: "Step 1: On-Site Evaluation", desc: "We review your property's soil composition, grading, and drainage to determine the necessary sub-base requirements." },
   { title: "Step 2: 3D Design & Permitting", desc: "We provide detailed layouts and handle all Loudoun County grading and zoning permits required for the hardscape project." },
   { title: "Step 3: Excavation & Base Prep", desc: "The most critical step. We excavate and compress layers of crushed stone and gravel to create an immovable foundation resistant to freezing." },
-  { title: "Step 4: Stone Installation", desc: "Our masons precision-cut and lay each piece of bluestone, ensuring perfect leveling and water runoff." },
+  { title: "Step 4: Stone Installation", desc: "Our masons precision-cut and lay each piece of stone, ensuring perfect leveling and water runoff." },
   { title: "Step 5: Polymeric Jointing", desc: "We fill the gaps with high-grade polymeric sand or mortar to lock the stones together and prevent weed growth." },
   { title: "Step 6: Final Seal & Review", desc: "An optional invisible sealant is applied to protect the stone from stains before a final client walkthrough." }
 ];
 
 const patioFAQs = [
-  {
-    question: "Do I need a permit for a patio in Northern Virginia?",
-    answer: "Most ground-level patios that do not alter the major grading or drainage of the property do not require a building permit. However, if your patio includes retaining walls over 2 feet, electrical lines for kitchens, or sits in a designated RPA (Resource Protection Area), county permits are required. Loudoun Decks handles all of this compliance for you."
-  },
-  {
-    question: "How much does a bluestone patio cost compared to stamped concrete?",
-    answer: "Bluestone is a premium natural material, so the upfront material and labor costs are higher than poured or stamped concrete. However, stamped concrete is highly prone to cracking during Virginia's freeze-thaw cycles. Bluestone, laid on a flexible aggregate base, rarely cracks and can be easily repaired stone-by-stone, offering a vastly superior long-term ROI."
-  },
-  {
-    question: "How do you handle water runoff and drainage?",
-    answer: "Proper drainage is the hallmark of professional hardscaping. We grade all our patios with a subtle, imperceptible slope (typically 1/8 inch per foot) directing water away from your home's foundation. If your yard has existing water pooling issues, we integrate French drains and catch basins beneath the patio structure."
-  },
-  {
-    question: "Can I put a hot tub on my bluestone patio?",
-    answer: "Absolutely. If you plan to install a hot tub, we simply adjust the depth and compaction of our crushed stone aggregate base in that specific footprint to support the immense weight (often exceeding 4,000 lbs filled) without shifting the surrounding stones."
-  }
+  { question: "Do I need a permit for a patio in Northern Virginia?", answer: "Most ground-level patios that do not alter the major grading or drainage of the property do not require a building permit. However, if your patio includes retaining walls over 2 feet, electrical lines for kitchens, or sits in a designated RPA (Resource Protection Area), county permits are required. Loudoun Decks handles all of this compliance for you." },
+  { question: "How much does a custom patio cost?", answer: "Custom patio projects in Northern Virginia typically start at $15,000+ for natural stone and premium pavers. Pricing varies based on square footage, material selection, grading requirements, and integrated features like fire pits or outdoor kitchens." },
+  { question: "How much does a bluestone patio cost compared to stamped concrete?", answer: "Bluestone is a premium natural material, so the upfront material and labor costs are higher than poured or stamped concrete. However, stamped concrete is highly prone to cracking during Virginia's freeze-thaw cycles. Bluestone, laid on a flexible aggregate base, rarely cracks and can be easily repaired stone-by-stone, offering a vastly superior long-term ROI." },
+  { question: "How do you handle water runoff and drainage?", answer: "Proper drainage is the hallmark of professional hardscaping. We grade all our patios with a subtle, imperceptible slope (typically 1/8 inch per foot) directing water away from your home's foundation. If your yard has existing water pooling issues, we integrate French drains and catch basins beneath the patio structure." },
+  { question: "Can I put a hot tub on my patio?", answer: "Absolutely. If you plan to install a hot tub, we simply adjust the depth and compaction of our crushed stone aggregate base in that specific footprint to support the immense weight (often exceeding 4,000 lbs filled) without shifting the surrounding stones." }
 ];
 
 const faqSchemaData = {
@@ -90,26 +78,17 @@ const faqSchemaData = {
   "mainEntity": patioFAQs.map(faq => ({
     "@type": "Question",
     "name": faq.question,
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": faq.answer
-    }
+    "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
   }))
 };
 
 const serviceSchemaData = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "Custom Bluestone Patio Installation",
-  "provider": {
-    "@type": "LocalBusiness",
-    "name": "Loudoun Decks"
-  },
-  "areaServed": {
-    "@type": "State",
-    "name": "Virginia"
-  },
-  "description": "Premium natural stone patio installation specializing in traditional and thermal bluestone, fire pits, and outdoor kitchens in Northern Virginia."
+  "name": "Custom Patio Installation",
+  "provider": { "@type": "LocalBusiness", "name": "Loudoun Decks" },
+  "areaServed": { "@type": "State", "name": "Virginia" },
+  "description": "Premium patio installation specializing in bluestone, natural stone, concrete pavers, fire pits, and outdoor kitchens in Northern Virginia."
 };
 
 const whyLdnDecks = [
@@ -128,43 +107,66 @@ const authorityLinks = [
 export default function PatiosPage() {
   return (
     <main>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchemaData) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchemaData) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchemaData) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchemaData) }} />
 
       <ServicesHeader
-        subtext="Bluestone Patio Loudoun VA"
-        title="Premium Bluestone Patios Built to Last"
-        description="Upgrade your outdoor living area with a custom bluestone patio. Experience natural beauty, unmatched durability, and a timeless architectural aesthetic that transforms your backyard into a luxury retreat."
+        subtext="Custom Patio Builder Northern Virginia"
+        title="Custom Patio Design & Installation in Northern Virginia"
+        description="Transform your backyard with a premium custom patio. From natural bluestone and flagstone to concrete pavers and full outdoor living builds — we design and install high-performance hardscapes for Northern Virginia homeowners."
       />
+
+      {/* Pricing Anchor */}
+      <section style={{ backgroundColor: '#f9f9f9', padding: '24px 20px', borderBottom: '1px solid #eee' }}>
+        <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
+          <p style={{ fontSize: '16px', color: '#555', margin: 0 }}>
+            <strong style={{ color: '#222' }}>Custom patio projects typically start at $15,000+</strong>
+            {' '}— materials, size, grading, and integrated features affect final pricing.{' '}
+            <strong>Free estimate included.</strong>
+          </p>
+        </div>
+      </section>
+
+      {/* Material Options Section */}
+      <section style={{ padding: '48px 20px', maxWidth: '900px', margin: '0 auto' }}>
+        <h2 style={{ fontSize: '26px', fontWeight: '800', marginBottom: '12px', textAlign: 'center' }}>Patio Material Options</h2>
+        <p style={{ textAlign: 'center', color: '#555', marginBottom: '28px', fontSize: '16px' }}>
+          We build with the materials that perform best in Northern Virginia&apos;s climate and match your home&apos;s architecture.
+        </p>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px' }}>
+          {[
+            { name: 'Bluestone', note: 'Premium natural stone, classic NoVA choice' },
+            { name: 'Flagstone', note: 'Irregular organic layout, rustic character' },
+            { name: 'Concrete Pavers', note: 'Versatile, budget-flexible, durable' },
+            { name: 'Travertine', note: 'Elegant European aesthetic' },
+          ].map((mat, i) => (
+            <div key={i} style={{ background: '#f9f9f9', border: '1px solid #e8e8e8', borderRadius: '6px', padding: '20px 16px', textAlign: 'center' }}>
+              <div style={{ fontWeight: '700', fontSize: '16px', marginBottom: '6px', color: '#111' }}>{mat.name}</div>
+              <div style={{ fontSize: '13px', color: '#666' }}>{mat.note}</div>
+            </div>
+          ))}
+        </div>
+      </section>
 
       <ServiceMain
         subtitle="Natural Stone. Timeless Design."
-        title="What is Bluestone Hardscaping?"
-        description="Loudoun Decks is the premier custom hardscaper in Northern Virginia. Bluestone is a heavy, layered sandstone quarried primarily in New York and Pennsylvania. Renowned for its durability and slip-resistant texture, it is the absolute gold-standard for luxury patios in the Mid-Atlantic region."
+        title="Custom Patio Contractor in Northern Virginia"
+        description="Loudoun Decks is the premier custom hardscaper in Northern Virginia. We specialize in premium patio builds using bluestone, flagstone, and concrete pavers — engineered for Virginia's demanding climate and built for decades of performance."
         listItems={[
-          "Unique organic color variations fading from blue to rust",
-          "Naturally slip-resistant cleft surface",
+          "Bluestone, flagstone, travertine, and concrete paver options",
+          "Naturally slip-resistant surfaces for pool decks and walkways",
           "Ideal for patios, walkways, pool decks, and fire pits",
           "Decades of proven weather resistance"
         ]}
         image1="/images/img36.jpeg"
         image2="/showcase/img12.jpeg"
       />
-
       <ServiceContentExpansion sections={expansionSections} />
-
       <ServiceInclusions
         title="Our Layout & Build Process"
-        description="A patio is only as good as what’s underneath it. We employ a rigorous, engineered approach to base layering."
+        description="A patio is only as good as what's underneath it. We employ a rigorous, engineered approach to base layering."
         items={patioProcess}
       />
-
       <section style={{ padding: '60px 20px', maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
         <h2 style={{ fontSize: '32px', marginBottom: '15px' }}>See the Transformation</h2>
         <p style={{ marginBottom: '40px', fontSize: '18px', color: '#555' }}>From a plain grass backyard to a premium outdoor living space.</p>
@@ -173,11 +175,10 @@ export default function PatiosPage() {
             <Image src="/showcase/img11.jpeg" alt="Before patio installation" fill style={{ objectFit: 'cover' }} />
           </div>
           <div style={{ position: 'relative', height: '400px', borderRadius: '8px', overflow: 'hidden' }}>
-            <Image src="/showcase/img12.jpeg" alt="After bluestone patio" fill style={{ objectFit: 'cover' }} />
+            <Image src="/showcase/img12.jpeg" alt="After custom stone patio" fill style={{ objectFit: 'cover' }} />
           </div>
         </div>
       </section>
-
       <section style={{ background: '#f9f9f9', padding: '60px 20px' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto' }}>
           <h2 style={{ fontSize: '32px', marginBottom: '30px', textAlign: 'center' }}>Patio Design FAQs</h2>
@@ -189,48 +190,38 @@ export default function PatiosPage() {
           ))}
         </div>
       </section>
-
       <section style={{ padding: '20px 20px 60px', maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
         <h2 style={{ fontSize: '32px', marginBottom: '15px' }}>Project Gallery</h2>
-        <p style={{ marginBottom: '40px', fontSize: '18px', color: '#555' }}>A closer look at our custom bluestone installations and finishes.</p>
+        <p style={{ marginBottom: '40px', fontSize: '18px', color: '#555' }}>A closer look at our custom stone installations and finishes.</p>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
           <div style={{ position: 'relative', height: '400px', borderRadius: '8px', overflow: 'hidden' }}>
             <Image src="/showcase/img13.jpg" alt="Bluestone layout detail" fill style={{ objectFit: 'cover' }} />
           </div>
           <div style={{ position: 'relative', height: '400px', borderRadius: '8px', overflow: 'hidden' }}>
-            <Image src="/showcase/img14.jpg" alt="Bluestone patio finish" fill style={{ objectFit: 'cover' }} />
+            <Image src="/showcase/img14.jpg" alt="Custom patio finish" fill style={{ objectFit: 'cover' }} />
           </div>
         </div>
       </section>
-
       <ServiceInclusions
         title="Why LDN Decks for Hardscaping"
         description="Local experts delivering high-end, indestructible architecture."
         items={whyLdnDecks}
       />
-
       <section style={{ padding: '40px 20px', backgroundColor: '#f9f9f9', borderTop: '1px solid #eee' }}>
         <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
           <h3 style={{ fontSize: '24px', marginBottom: '15px' }}>Official Resources & Safety Standards</h3>
           <p style={{ marginBottom: '20px', color: '#666' }}>We build all our patios to exceed local Northern Virginia building codes and hardscape specifications.</p>
           <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}>
             {authorityLinks.map((link, idx) => (
-              <a 
-                key={idx} 
-                href={link.url} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                style={{ color: 'var(--site-color)', fontWeight: '600', textDecoration: 'underline', fontSize: '14px' }}
-              >
+              <a key={idx} href={link.url} target="_blank" rel="noopener noreferrer"
+                style={{ color: 'var(--site-color)', fontWeight: '600', textDecoration: 'underline', fontSize: '14px' }}>
                 {link.text}
               </a>
             ))}
           </div>
         </div>
       </section>
-
       <ServiceAreasGrid />
-
       <ContactHome />
     </main>
   );

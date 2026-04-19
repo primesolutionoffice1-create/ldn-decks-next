@@ -7,6 +7,7 @@ import StructuredData from "../components/StructuredData";
 const outfit = Outfit({
   variable: "--font-outfit",
   subsets: ["latin"],
+  display: "swap",
 });
 
 import { buildMetadata, SITE_URL } from "@/lib/seo";

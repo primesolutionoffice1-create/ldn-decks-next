@@ -6,7 +6,6 @@ import ServiceInclusions from '@/components/ServiceInclusions';
 import ServiceContentExpansion from '@/components/ServiceContentExpansion';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import ContactHome from '@/components/ContactHome';
-
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -14,6 +13,23 @@ export const metadata = buildMetadata({
   title: "Trex Railings With Cocktail Top Loudoun VA | Custom Deck Upgrades",
   description: "Upgrade your deck with modern Trex railing systems and a custom cocktail top in Northern Virginia. Perfect for entertaining and adding a premium finish."
 });
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Trex Railing Installation",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Loudoun Decks",
+    "@id": "https://www.ldndecks.com/#business"
+  },
+  "areaServed": [
+    { "@type": "AdministrativeArea", "name": "Loudoun County, VA" },
+    { "@type": "AdministrativeArea", "name": "Fairfax County, VA" },
+    { "@type": "AdministrativeArea", "name": "Prince William County, VA" }
+  ],
+  "description": "Professional Trex railing and cocktail top installation in Northern Virginia. Trex Transcend and Select systems with custom wood or composite cocktail tops."
+};
 
 const expansionSections = [
   {
@@ -74,13 +90,13 @@ const whyLdnDecks = [
 export default function TrexRailingsPage() {
   return (
     <main>
-      <ServicesHeader 
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <ServicesHeader
         subtext="Deck Railing Upgrade Loudoun VA"
         title="Trex Railings with Cocktail Top - Style Meets Function"
         description="Upgrade your deck with modern Trex railing systems and a custom cocktail top - perfect for entertaining, relaxing, and adding a premium finish to your outdoor space."
       />
-
-      <ServiceMain 
+      <ServiceMain
         subtitle="More Than Just a Railing"
         title="What is a Cocktail Top?"
         description="Installed by LDN Decks – Northern Virginia. A cocktail top is a flat surface installed on top of your deck railing, creating a functional ledge."
@@ -93,15 +109,12 @@ export default function TrexRailingsPage() {
         image1="/showcase/img06.jpg"
         image2="/showcase/img07.jpeg"
       />
-
       <ServiceContentExpansion sections={expansionSections} />
-
-      <ServiceInclusions 
+      <ServiceInclusions
         title="How We Install Your Railings"
         description="A seamless process to upgrade your outdoor living space."
         items={howWeInstall}
       />
-
       <section style={{ padding: '60px 20px', maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
         <h2 style={{ fontSize: '32px', marginBottom: '15px' }}>See the Transformation</h2>
         <p style={{ marginBottom: '40px', fontSize: '18px', color: '#555' }}>From standard railings to a premium entertaining space.</p>
@@ -114,15 +127,12 @@ export default function TrexRailingsPage() {
           </div>
         </div>
       </section>
-
-      <ServiceInclusions 
+      <ServiceInclusions
         title="Trust the Experts"
         description="Why choose LDN Decks for your composite railing installation in Northern Virginia?"
         items={whyLdnDecks}
       />
-
       <ServiceAreasGrid />
-
       <ContactHome />
     </main>
   );

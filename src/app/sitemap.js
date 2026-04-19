@@ -1,4 +1,5 @@
 import { getAllCityPaths } from '@/data/cityData';
+import { SITE_URL } from '@/lib/seo';
 
 // Tiered lastModified dates - avoids identical timestamps that Google discounts.
 // Tier 1 (homepage, top service pages): most recent update
@@ -11,7 +12,7 @@ const TIER3 = "2026-03-20";
 const TIER4 = "2026-01-10";
 
 export default async function sitemap() {
-        const baseUrl = "https://www.ldndecks.com";
+                const baseUrl = SITE_URL;
 
         const staticPages = [
                 // Tier 1 - Homepage & top commercial pages

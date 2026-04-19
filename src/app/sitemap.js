@@ -109,6 +109,9 @@ export default async function sitemap() {
 
                 // Additional keyword pages
                 { path: "/cable-railing-for-decks-northern-virginia",   priority: 0.85, lastMod: TIER1, freq: "weekly" },
+                { path: "/paver-vs-flagstone-patio-northern-virginia",  priority: 0.85, lastMod: TIER1, freq: "weekly" },
+                { path: "/multi-level-deck-builder-northern-virginia",  priority: 0.90, lastMod: TIER1, freq: "weekly" },
+                { path: "/how-tariffs-affect-deck-prices-2026",         priority: 0.85, lastMod: TIER1, freq: "weekly" },
 
                 // Tier 4 - Evergreen / rarely changes
                 { path: "/about",                        priority: 0.65, lastMod: TIER4, freq: "monthly" },

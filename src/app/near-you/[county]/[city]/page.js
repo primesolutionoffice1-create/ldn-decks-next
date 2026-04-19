@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getAllCityPaths, getCityData } from '@/data/cityData';
 import ServicesHeader from '@/components/ServicesHeader';
@@ -10,10 +11,9 @@ import WhyChooseDetails from '@/components/WhyChooseDetails';
 import ContactHome from '@/components/ContactHome';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import styles from './CityPage.module.css';
-
 import { buildMetadata } from '@/lib/seo';
 
-// Pre-render all 43 city pages at build time
+// Pre-render all city pages at build time
 export async function generateStaticParams() {
   const paths = await getAllCityPaths();
   return paths;
@@ -23,7 +23,6 @@ export async function generateMetadata({ params }) {
   const { county, city } = await params;
   const data = getCityData(county, city);
   if (!data) return {};
-
   return buildMetadata({
     path: `/near-you/${county}/${city}`,
     title: `Best Deck Builder in ${data.cityName}, VA | 5-Star Custom Decks & Patios`,
@@ -34,7 +33,6 @@ export async function generateMetadata({ params }) {
 export default async function CityPage({ params }) {
   const { county, city: citySlug } = await params;
   const data = getCityData(county, citySlug);
-
   if (!data) {
     notFound();
   }
@@ -46,7 +44,7 @@ export default async function CityPage({ params }) {
   const mainImg = `/images/img${(cityIndex % 30) + 1 < 10 ? '0' : ''}${(cityIndex % 30) + 1}.jpeg`;
   const subImg = `/images/img${((cityIndex + 5) % 30) + 1 < 10 ? '0' : ''}${(cityIndex + 5) % 30 + 1}.jpeg`;
   const visualImg = `/images/img${((cityIndex + 10) % 30) + 1 < 10 ? '0' : ''}${(cityIndex + 10) % 30 + 1}.jpeg`;
-  
+
   // Gallery images (6 unique ones per city)
   const galleryImages = [
     `/images/img${((cityIndex + 1) % 36) + 1 < 10 ? '0' : ''}${((cityIndex + 1) % 36) + 1}.jpeg`,
@@ -82,13 +80,12 @@ export default async function CityPage({ params }) {
 
   return (
     <main>
-      <ServicesHeader 
+      <ServicesHeader
         subtext={`5-Star Google Rated Specialist in ${countyName}`}
         title={`Deck Builder in ${cityName}`}
         description={`Loudoun Decks is the premier custom deck builder in ${cityName}, VA. We help ${cityName} families create luxury outdoor living spaces with a focus on durability and 5-Star service.`}
       />
-
-      <ServiceMain 
+      <ServiceMain
         subtitle={`Premier ${cityName} Contractor`}
         title={`High-End Custom Decking in ${cityName}, Virginia`}
         description={`Elevate your lifestyle with a professional deck build in ${cityName}, VA. We specialize in custom Trex, AZEK, and Western Red Cedar designs tailored for the unique neighborhoods of ${cityName}.`}
@@ -97,33 +94,30 @@ export default async function CityPage({ params }) {
         image1={mainImg}
         image2={subImg}
       />
-
       <section className={styles.localFocus}>
         <div className={styles.container}>
           <div className={styles.content}>
             <h2>The Standard for Custom Decking in {cityName}</h2>
             <p>
-              As a dedicated deck builder in {cityName}, Virginia, Loudoun Decks combines local neighborhood knowledge with world-class construction standards. We understand the specific soil types and building codes across {countyName}, ensuring your installation is structurally superior and visually stunning. Explore our full range of [custom outdoor services](/services) to see how we can transform your backyard.
+              As a dedicated deck builder in {cityName}, Virginia, Loudoun Decks combines local
+              neighborhood knowledge with world-class construction standards. We understand the
+              specific soil types and building codes across {countyName}, ensuring your installation
+              is structurally superior and visually stunning. Explore our full range of{' '}
+              <Link href="/services">custom outdoor services</Link> to see how we can transform
+              your backyard.
             </p>
           </div>
         </div>
       </section>
-
       <MasonryGallery images={galleryImages} />
-
       <ServiceVisual image={visualImg} />
-
-      <WhyChooseDetails 
+      <WhyChooseDetails
         title={`Why Your ${cityName} Neighbors Choose Us`}
         items={whyChooseItems}
       />
-
       <ProcessSteps />
-
       <ServiceAreasGrid />
-
       <ContactHome />
     </main>
   );
 }
-

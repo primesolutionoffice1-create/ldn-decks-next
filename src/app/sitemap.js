@@ -91,6 +91,13 @@ export default async function sitemap() {
                 { path: "/winterize-your-deck-northern-virginia",      priority: 0.85, lastMod: TIER1, freq: "weekly" },
                 { path: "/what-size-deck-should-i-build",              priority: 0.85, lastMod: TIER1, freq: "weekly" },
 
+                // Tier 1.5c - Final batch keyword pages
+                { path: "/porch-repair-vs-replacement-northern-virginia", priority: 0.85, lastMod: TIER1, freq: "weekly" },
+                { path: "/deck-enclosure-ideas-northern-virginia",       priority: 0.85, lastMod: TIER1, freq: "weekly" },
+                { path: "/pool-deck-builder-northern-virginia",          priority: 0.90, lastMod: TIER1, freq: "weekly" },
+                { path: "/pet-friendly-deck-design",                     priority: 0.80, lastMod: TIER1, freq: "weekly" },
+                { path: "/under-deck-ceiling-ideas",                     priority: 0.85, lastMod: TIER1, freq: "weekly" },
+
                 // Tier 4 - Evergreen / rarely changes
                 { path: "/about",                        priority: 0.65, lastMod: TIER4, freq: "monthly" },
                 { path: "/about/why-choose-us",          priority: 0.65, lastMod: TIER4, freq: "monthly" },

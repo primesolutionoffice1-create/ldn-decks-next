@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import ServicesHeader from '@/components/ServicesHeader';
 import ServiceMain from '@/components/ServiceMain';
 import ServiceInclusions from '@/components/ServiceInclusions';
@@ -6,63 +7,29 @@ import ServiceContentExpansion from '@/components/ServiceContentExpansion';
 import ServicesFAQ from '@/components/ServicesFAQ';
 import ContactHome from '@/components/ContactHome';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
-
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: "/services/porches",
-  title: "Custom Porch Builder NoVA | Screened-In & Open Porch Installtion",
+  title: "Custom Porch Builder NoVA | Screened-In & Open Porch Installation",
   description: "Loudoun Decks is a premier porch builder in Northern Virginia. We specialize in custom screened porches, open-air pavilions, and front porch remodels. Licensed & 5-Star Rated."
 });
 
 const inclusions = [
-  {
-    title: "Structural Integration",
-    desc: "Designing porch rooflines and foundations that integrate seamlessly with your home's existing architecture in Loudoun and Fairfax."
-  },
-  {
-    title: "Seasonal Comfort",
-    desc: "Integrating ceiling fans, recessed lighting, and screening systems to extend your outdoor season across Northern Virginia."
-  },
-  {
-    title: "Durable Finishes",
-    desc: "Using moisture-resistant materials and premium trim to ensure your porch remains a 5-Star space for decades."
-  }
+  { title: "Structural Integration", desc: "Designing porch rooflines and foundations that integrate seamlessly with your home's existing architecture in Loudoun and Fairfax." },
+  { title: "Seasonal Comfort", desc: "Integrating ceiling fans, recessed lighting, and screening systems to extend your outdoor season across Northern Virginia." },
+  { title: "Durable Finishes", desc: "Using moisture-resistant materials and premium trim to ensure your porch remains a 5-Star space for decades." }
 ];
 
 const porchFAQs = [
-  {
-    q: "How much does a custom porch cost in Fairfax County?",
-    a: "Custom porch projects in Fairfax County typically range from $25,000 to $75,000+ depending on roofing complexity, screening systems, and electrical integration."
-  },
-  {
-    q: "Is a permit required for a screened-in porch in Loudoun County?",
-    a: "Yes. Any structural addition like a porch requires a building permit in Loudoun County. We handle the entire engineering and application process for you."
-  },
-  {
-    q: "Can I convert my existing deck into a screened porch?",
-    a: "Often, yes. If the existing foundation and framing can support the additional dead load of a roof, we can resurface and screen your deck into a beautiful porch."
-  },
-  {
-    q: "How long does porch construction take in Northern Virginia?",
-    a: "Because porches involve roofing and often electrical work, the construction phase usually takes 3-5 weeks after permit approval."
-  },
-  {
-    q: "What are the benefits of an open-air porch vs. screened?",
-    a: "Open-air porches offer maximum airflow and an unobstructed garden feel, while screened porches provide 100% protection from insects and light rain."
-  },
-  {
-    q: "Do you build front porches in Arlington?",
-    a: "Yes. Loudoun Decks is a leading front porch remodeler in Arlington, helping homeowners improve curb appeal and functional entry space."
-  },
-  {
-    q: "Do your porches include a 5-Star Google Rated guarantee?",
-    a: "We pride ourselves on being a 5-Star Google Rated deck and porch contractor, ensuring every client in NoVA receives premium communication and quality."
-  },
-  {
-    q: "Will a new porch increase my home's resale value?",
-    a: "In the Northern Virginia market, professional outdoor living spaces like custom porches often see a 70-80% return on investment (ROI)."
-  }
+  { q: "How much does a custom porch cost in Fairfax County?", a: "Custom porch projects in Fairfax County typically range from $25,000 to $75,000+ depending on roofing complexity, screening systems, and electrical integration." },
+  { q: "Is a permit required for a screened-in porch in Loudoun County?", a: "Yes. Any structural addition like a porch requires a building permit in Loudoun County. We handle the entire engineering and application process for you." },
+  { q: "Can I convert my existing deck into a screened porch?", a: "Often, yes. If the existing foundation and framing can support the additional dead load of a roof, we can resurface and screen your deck into a beautiful porch." },
+  { q: "How long does porch construction take in Northern Virginia?", a: "Because porches involve roofing and often electrical work, the construction phase usually takes 3-5 weeks after permit approval." },
+  { q: "What are the benefits of an open-air porch vs. screened?", a: "Open-air porches offer maximum airflow and an unobstructed garden feel, while screened porches provide 100% protection from insects and light rain." },
+  { q: "Do you build front porches in Arlington?", a: "Yes. Loudoun Decks is a leading front porch remodeler in Arlington, helping homeowners improve curb appeal and functional entry space." },
+  { q: "Do your porches include a 5-Star Google Rated guarantee?", a: "We pride ourselves on being a 5-Star Google Rated deck and porch contractor, ensuring every client in NoVA receives premium communication and quality." },
+  { q: "Will a new porch increase my home's resale value?", a: "In the Northern Virginia market, professional outdoor living spaces like custom porches often see a 70-80% return on investment (ROI)." }
 ];
 
 const expansionSections = [
@@ -114,13 +81,60 @@ const authorityLinks = [
 export default function PorchesPage() {
   return (
     <main>
-      <ServicesHeader 
+      <ServicesHeader
         subtext="5-Star Google Rated Builder"
         title="Custom Porch Design & Construction"
-        description="Loudoun Decks builds premium screened-in porches, open pavilions, and custom front porches across Loudoun County, Fairfax County, and Prince William County. 1,500+ words of expertise."
+        description="Loudoun Decks builds premium screened-in porches, open pavilions, and custom front porches across Loudoun County, Fairfax County, and Prince William County. Most custom porch projects start at $25,000+."
       />
 
-      <ServiceMain 
+      {/* Pricing Anchor */}
+      <section style={{ backgroundColor: '#f9f9f9', padding: '24px 20px', borderBottom: '1px solid #eee' }}>
+        <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
+          <p style={{ fontSize: '16px', color: '#555', margin: 0 }}>
+            <strong style={{ color: '#222' }}>Most custom porch projects start at $25,000+</strong>
+            {' '}— roofing complexity, screening systems, and electrical integration affect final pricing.{' '}
+            <strong>Free estimate included.</strong>
+          </p>
+        </div>
+      </section>
+
+      {/* Porch Type Navigation */}
+      <section style={{ padding: '60px 20px', maxWidth: '1100px', margin: '0 auto' }}>
+        <h2 style={{ fontSize: '32px', fontWeight: '800', textAlign: 'center', marginBottom: '12px' }}>
+          Choose the Right Porch Style
+        </h2>
+        <p style={{ textAlign: 'center', color: '#555', fontSize: '17px', marginBottom: '40px' }}>
+          Every porch type serves a different lifestyle. Explore your options below.
+        </p>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
+          <Link href="/services/porches/front-porch" style={{ display: 'block', textDecoration: 'none', background: '#fff', border: '1px solid #e5e5e5', borderRadius: '8px', padding: '32px 28px', transition: 'box-shadow 0.2s ease', boxShadow: '0 2px 8px rgba(0,0,0,0.06)' }}>
+            <div style={{ fontSize: '28px', marginBottom: '12px' }}>🏡</div>
+            <h3 style={{ fontSize: '20px', fontWeight: '700', color: '#111', marginBottom: '10px' }}>Front Porch</h3>
+            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.6', marginBottom: '16px' }}>
+              Transform your home&apos;s entrance with a custom-designed front porch. High curb appeal, structural roofline integration, and premium materials built to last decades.
+            </p>
+            <span style={{ color: 'var(--site-color)', fontWeight: '700', fontSize: '14px' }}>Explore Front Porch →</span>
+          </Link>
+          <Link href="/services/porches/open-porch" style={{ display: 'block', textDecoration: 'none', background: '#fff', border: '1px solid #e5e5e5', borderRadius: '8px', padding: '32px 28px', transition: 'box-shadow 0.2s ease', boxShadow: '0 2px 8px rgba(0,0,0,0.06)' }}>
+            <div style={{ fontSize: '28px', marginBottom: '12px' }}>🌿</div>
+            <h3 style={{ fontSize: '20px', fontWeight: '700', color: '#111', marginBottom: '10px' }}>Open Porch</h3>
+            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.6', marginBottom: '16px' }}>
+              Maximum airflow, unobstructed views, and seamless connection to the outdoors. Ideal for outdoor kitchens, dining, and year-round entertaining in Northern Virginia.
+            </p>
+            <span style={{ color: 'var(--site-color)', fontWeight: '700', fontSize: '14px' }}>Explore Open Porch →</span>
+          </Link>
+          <Link href="/services/porches/screened-porch" style={{ display: 'block', textDecoration: 'none', background: '#fff', border: '1px solid #e5e5e5', borderRadius: '8px', padding: '32px 28px', transition: 'box-shadow 0.2s ease', boxShadow: '0 2px 8px rgba(0,0,0,0.06)' }}>
+            <div style={{ fontSize: '28px', marginBottom: '12px' }}>🪟</div>
+            <h3 style={{ fontSize: '20px', fontWeight: '700', color: '#111', marginBottom: '10px' }}>Screened Porch</h3>
+            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.6', marginBottom: '16px' }}>
+              Full protection from insects and light rain without sacrificing the outdoor feel. The most popular premium porch upgrade for Loudoun and Fairfax County homeowners.
+            </p>
+            <span style={{ color: 'var(--site-color)', fontWeight: '700', fontSize: '14px' }}>Explore Screened Porch →</span>
+          </Link>
+        </div>
+      </section>
+
+      <ServiceMain
         subtitle="Luxury Outdoor Living"
         title="Professional Porch Contractor Serving NoVA"
         description="Extend your home's footprint with a custom structural porch. We specialize in integrated roof systems and high-performance screening for homeowners in Arlington, Stafford, and beyond."
@@ -134,44 +148,29 @@ export default function PorchesPage() {
         image1="/images/img16.jpeg"
         image2="/images/img20.jpeg"
       />
-
       <ServiceContentExpansion sections={expansionSections} />
-
-      <ServiceInclusions 
+      <ServiceInclusions
         title="Built for the Virginia Lifestyle"
         description="Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. Our porches are built to weather the elements gracefully."
         items={inclusions}
       />
-
-      <ServicesFAQ 
-        title="Porch Construction & Design FAQs"
-        faqs={porchFAQs}
-      />
-
+      <ServicesFAQ title="Porch Construction & Design FAQs" faqs={porchFAQs} />
       <section style={{ padding: '40px 20px', backgroundColor: '#f9f9f9', borderTop: '1px solid #eee' }}>
         <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
           <h3 style={{ fontSize: '24px', marginBottom: '15px' }}>Official Resources & Safety Standards</h3>
           <p style={{ marginBottom: '20px', color: '#666' }}>We build all our porches to exceed local Northern Virginia building codes and safety regulations.</p>
           <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}>
             {authorityLinks.map((link, idx) => (
-              <a 
-                key={idx} 
-                href={link.url} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                style={{ color: 'var(--site-color)', fontWeight: '600', textDecoration: 'underline', fontSize: '14px' }}
-              >
+              <a key={idx} href={link.url} target="_blank" rel="noopener noreferrer"
+                style={{ color: 'var(--site-color)', fontWeight: '600', textDecoration: 'underline', fontSize: '14px' }}>
                 {link.text}
               </a>
             ))}
           </div>
         </div>
       </section>
-
       <ServiceAreasGrid />
-
       <ContactHome />
     </main>
   );
-}
-
+              }

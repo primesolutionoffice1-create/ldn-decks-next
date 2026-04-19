@@ -1,4 +1,4 @@
-export const SITE_URL = "https://www.ldndecks.com";
+export const SITE_URL = "https://ldndecks.com";
 
 /**
  * Build consistent metadata for Next.js App Router

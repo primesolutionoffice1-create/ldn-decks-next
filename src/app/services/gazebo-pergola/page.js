@@ -12,7 +12,7 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: "/services/gazebo-pergola",
-  title: "Custom Gazebos and Pergolas Loudoun VA | Professional Shade Structures",
+      title: "Gazebo & Pergola Builder | Loudoun VA | LDN Decks",
   description: "Add shade and stunning architectural character to your backyard with custom gazebos and pergolas in Northern Virginia. Expert design and build services."
 });
 

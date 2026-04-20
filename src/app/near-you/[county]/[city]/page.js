@@ -59,7 +59,7 @@ export async function generateMetadata({ params }) {
   if (!data) return {};
   return buildMetadata({
     path: `/near-you/${county}/${city}`,
-    title: `Best Deck Builder in ${data.cityName}, VA | 5-Star Custom Decks & Patios`,
+            title: `Deck Builder in ${data.cityName} VA | LDN Decks`,
     description: `Searching for the best deck builder in ${data.cityName}, VA? Loudoun Decks is a 5-Star Google Rated contractor specializing in custom Trex and wood decks across ${data.cityName} and ${data.countyName}.`
   });
 }

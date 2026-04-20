@@ -12,7 +12,7 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: "/services/entry-doors",
-  title: "Professional Entry Door Installation Loudoun VA | Custom Front Doors",
+      title: "Entry Door Installation Loudoun VA | LDN Decks",
   description: "Improve curb appeal, security, and energy efficiency with professional entry door installation in Northern Virginia. Custom fiberglass and wood door solutions."
 });
 

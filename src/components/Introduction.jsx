@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './Introduction.module.css';
+import { trackPhoneClick } from '@/lib/tracking';
 
 const CheckIcon = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={styles.checkIcon}>
@@ -44,24 +45,22 @@ export default function Introduction() {
         {/* Images Column */}
         <div className={styles.imagesCol}>
           <div className={styles.subImgWrapper}>
-            <Image 
-              src="/images/img53.jpeg" 
-              alt="Custom composite deck in Northern Virginia" 
-              fill 
-              className={styles.imgProps} 
-              sizes="(max-width: 768px) 50vw, 300px" 
+            <Image
+              src="/images/img53.jpeg"
+              alt="Custom composite deck in Northern Virginia"
+              fill
+              className={styles.imgProps}
+              sizes="(max-width: 768px) 50vw, 300px"
             />
           </div>
-
           <div className={styles.frameOutline}></div>
-
           <div className={styles.mainImgWrapper}>
-            <Image 
-              src="/images/img31.jpeg" 
-              alt="Loudoun County deck construction experts" 
-              fill 
-              className={styles.imgProps} 
-              sizes="(max-width: 768px) 80vw, 400px" 
+            <Image
+              src="/images/img31.jpeg"
+              alt="Loudoun County deck construction experts"
+              fill
+              className={styles.imgProps}
+              sizes="(max-width: 768px) 80vw, 400px"
             />
           </div>
         </div>
@@ -76,7 +75,6 @@ export default function Introduction() {
           <p className={styles.description}>
             We are Loudoun County&apos;s premier outdoor living specialists. Whether it is a brand-new composite deck or a custom fencing solution, our team of expert carpenters ensures every joint is perfect, structurally sound, and built to withstand the elements.
           </p>
-
           <ul className={styles.checkList}>
             <li>
               <CheckIcon />
@@ -87,7 +85,6 @@ export default function Introduction() {
               <span>Fully permitted, code-compliant, and structurally certified builds</span>
             </li>
           </ul>
-
           <div className={styles.progressContainer}>
             <div className={styles.progressItem}>
               <div className={styles.progressHeader}>
@@ -112,8 +109,7 @@ export default function Introduction() {
               </div>
             </div>
           </div>
-
-          <a href="tel:+15716557207" className={styles.ctaButton}>
+          <a href="tel:+15716557207" className={styles.ctaButton} onClick={trackPhoneClick}>
             Call For A Free Quote
           </a>
         </div>

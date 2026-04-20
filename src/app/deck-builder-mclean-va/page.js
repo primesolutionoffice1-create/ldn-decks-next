@@ -9,7 +9,7 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-mclean-va',
-  title: 'Best Deck Builder in McLean, VA | Custom Trex & Composite Decks',
+      title: 'Deck Builder in McLean VA | Trex & Composite | LDN Decks',
   description: 'Top-rated deck builder serving McLean, VA. 5.0★ Google (41 reviews). Custom Trex & TimberTech decks, screened porches, patios. Free estimate. Call (571) 655-7207.',
 });
 

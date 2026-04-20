@@ -10,7 +10,7 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: "/services/patios",
-  title: "Custom Patio Builder Northern Virginia | Bluestone, Pavers & Hardscaping",
+      title: "Custom Patio Builder | Northern Virginia | LDN Decks",
   description: "Expert custom patio design and installation in Northern Virginia. Bluestone, natural stone, concrete pavers, and full hardscape builds. Free estimate from LDN Decks."
 });
 

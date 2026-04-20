@@ -1,5 +1,7 @@
+'use client';
 import React from 'react';
 import Link from 'next/link';
+import { trackPhoneClick } from '@/lib/tracking';
 import styles from './ServicesCallToAction.module.css';
 
 export default function ServicesCallToAction() {
@@ -10,7 +12,7 @@ export default function ServicesCallToAction() {
         <p className={styles.description}>
           Get in touch with our experts today to schedule your free consultation and transform your outdoor living space.
         </p>
-        <a href="tel:+15716557207" className={styles.ctaButton}>
+        <a href="tel:+15716557207" className={styles.ctaButton} onClick={trackPhoneClick}>
           Call Now: (571) 655-7207
         </a>
       </div>

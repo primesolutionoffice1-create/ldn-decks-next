@@ -1,19 +1,21 @@
 "use client";
 import { useContact } from '@/context/ContactContext';
+import { trackPhoneClick } from '@/lib/tracking';
 import styles from './Hero.module.css';
 import Image from 'next/image';
+
 export default function Hero() {
   const { openContact } = useContact();
 
   return (
     <section className={styles.heroSection}>
-      <Image 
-                                                          src="/home-page-ldn.png"
-                    alt="Loudoun Decks Hero"
+      <Image
+        src="/home-page-ldn.png"
+        alt="Loudoun Decks Hero"
         fill
         priority
         fetchPriority="high"
-                                sizes="100vw"
+        sizes="100vw"
       />
       <div className={styles.overlay}></div>
       <div className={styles.content}>
@@ -30,10 +32,11 @@ export default function Hero() {
           Northern Virginia’s #1 Rated Composite Deck Builder
         </h1>
         <p className={styles.heroDescription}>
-          Custom-designed decks, screened porches & outdoor living spaces. Trex & TimberTech certified. Serving Loudoun, Fairfax & Prince William Counties.
+          Custom-designed decks, screened porches & outdoor living spaces.
+          Trex & TimberTech certified. Serving Loudoun, Fairfax & Prince William Counties.
         </p>
         <div className={styles.buttonGroup}>
-          <a href="tel:+15716557207" className={styles.ctaButton}>
+          <a href="tel:+15716557207" className={styles.ctaButton} onClick={trackPhoneClick}>
             Call Now: (571) 655-7207
           </a>
           <button onClick={openContact} className={styles.ctaButtonAlt}>

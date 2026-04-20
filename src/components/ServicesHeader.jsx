@@ -2,6 +2,7 @@
 import React from 'react';
 import styles from './ServicesHeader.module.css';
 import { useContact } from '@/context/ContactContext';
+import { trackPhoneClick } from '@/lib/tracking';
 
 export default function ServicesHeader({
   subtext = "What We DO",
@@ -31,6 +32,7 @@ export default function ServicesHeader({
             href="tel:+15716557207"
             className={styles.ctaSecondary}
             aria-label="Call Loudoun Decks"
+            onClick={trackPhoneClick}
           >
             Call (571) 655-7207
           </a>

@@ -11,7 +11,7 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: "/services/porches",
-  title: "Custom Porch Builder NoVA | Screened-In & Open Porch Installation",
+      title: "Custom Porch Builder | Screened & Open | LDN Decks",
   description: "Loudoun Decks is a premier porch builder in Northern Virginia. We specialize in custom screened porches, open-air pavilions, and front porch remodels. Licensed & 5-Star Rated."
 });
 

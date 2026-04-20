@@ -15,7 +15,7 @@ const LocationIcon = () => (
 
 export const metadata = buildMetadata({
   path: "/near-you/loudoun-county",
-  title: "Deck Builder in Loudoun County, VA | Ashburn & Leesburg",
+      title: "Deck Builder in Loudoun County VA | LDN Decks",
   description: "Trusted local deck and outdoor living contractor serving Loudoun County, VA. Custom decks, patios, and porches in Ashburn, Leesburg, Sterling, and more.",
 });
 

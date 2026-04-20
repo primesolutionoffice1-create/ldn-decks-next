@@ -12,7 +12,7 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: "/services/windows",
-  title: "Window Replacement Loudoun County | Energy Efficient Windows Fairfax NoVA",
+      title: "Window Replacement Loudoun County | LDN Decks",
   description: "Loudoun Decks provides premium window replacement and installation across Northern Virginia. Improve energy efficiency, quiet, and curb appeal."
 });
 

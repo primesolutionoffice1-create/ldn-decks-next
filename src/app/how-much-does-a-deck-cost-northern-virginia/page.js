@@ -8,7 +8,7 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/how-much-does-a-deck-cost-northern-virginia',
-  title: 'How Much Does a Deck Cost in Northern Virginia? (2026 Prices)',
+      title: 'Deck Cost in Northern Virginia 2026 | LDN Decks',
   description: 'Composite deck costs $30-$75/sqft installed in Northern Virginia. Pressure-treated wood $18-$35/sqft. Real project costs, price tables & free estimate.',
   image: '/images/img10.jpeg',
 });

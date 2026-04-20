@@ -1,7 +1,9 @@
+'use client';
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './ServicesHome.module.css';
+import { trackPhoneClick } from '@/lib/tracking';
 
 const servicesData = [
   {
@@ -30,10 +32,8 @@ const servicesData = [
 export default function ServicesHome() {
   return (
     <section className={styles.servicesSection}>
-      {/* Background structural splitting */}
       <div className={styles.bgTop}></div>
       <div className={styles.bgBottom}></div>
-
       <div className={styles.container}>
         <div className={styles.header}>
           <div className={styles.titleArea}>
@@ -47,12 +47,17 @@ export default function ServicesHome() {
             <p>From ground-up construction to precise restoration, ldndecks provides comprehensive outdoor solutions. Each service is tailored to your home&apos;s unique layout and your family&apos;s needs, backed by our ironclad warranty.</p>
           </div>
         </div>
-
         <div className={styles.cardsGrid}>
           {servicesData.map(service => (
             <Link key={service.id} href={service.link} className={styles.card}>
               <div className={styles.imgWrapper}>
-                <Image src={service.image} alt={service.title} fill className={styles.cardImg} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+                <Image
+                  src={service.image}
+                  alt={service.title}
+                  fill
+                  className={styles.cardImg}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
               </div>
               <div className={styles.cardContent}>
                 <h3>{service.title}</h3>
@@ -61,12 +66,15 @@ export default function ServicesHome() {
             </Link>
           ))}
         </div>
-
         <div className={styles.btnWrapper} style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
-          <a href="tel:+15716557207" className={styles.ctaButton}>
+          <a href="tel:+15716557207" className={styles.ctaButton} onClick={trackPhoneClick}>
             Call To Discuss Properties
           </a>
-          <Link href="/services" className={styles.ctaButton} style={{ backgroundColor: 'transparent', border: '2px solid var(--site-color)', color: 'var(--site-color)' }}>
+          <Link
+            href="/services"
+            className={styles.ctaButton}
+            style={{ backgroundColor: 'transparent', border: '2px solid var(--site-color)', color: 'var(--site-color)' }}
+          >
             More Services
           </Link>
         </div>

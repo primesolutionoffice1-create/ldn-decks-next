@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation';
 import { useContact } from '@/context/ContactContext';
 import styles from './ContactForm.module.css';
 import { sendContactEmail } from '@/server/sendEmail';
-import { trackFormSubmit } from '@/lib/tracking';
+import { trackFormSubmit, trackPhoneClick } from '@/lib/tracking';
 
 export default function ContactForm({ hideInfoCol = false, noPadding = false }) {
   const [status, setStatus] = useState(null);
@@ -15,13 +15,10 @@ export default function ContactForm({ hideInfoCol = false, noPadding = false }) 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus("submitting");
-
     const formData = new FormData(e.target);
     const email = formData.get('email') || '';
     const phone = formData.get('phone') || '';
-
     const result = await sendContactEmail(formData);
-
     if (result && result.success) {
       // Fire GTM tracking only once per submission
       if (!hasTracked.current) {
@@ -48,7 +45,7 @@ export default function ContactForm({ hideInfoCol = false, noPadding = false }) 
               <div className={styles.contactPoint}>
                 <strong>Phone:</strong>
                 <br/>
-                <a href="tel:+15716557207" aria-label="Call Loudoun Decks">(571) 655-7207</a>
+                <a href="tel:+15716557207" aria-label="Call Loudoun Decks" onClick={trackPhoneClick}>(571) 655-7207</a>
               </div>
               <div className={styles.contactPoint}>
                 <strong>Email:</strong>

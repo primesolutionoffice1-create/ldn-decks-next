@@ -8,7 +8,7 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-vienna-va',
-  title: 'Best Deck Builder in Vienna, VA | Custom Composite Decks & Porches',
+      title: 'Deck Builder in Vienna VA | Custom Decks | LDN Decks',
   description: 'Top-rated deck builder serving Vienna, VA. 5.0★ Google (41 reviews). Custom Trex & TimberTech decks, screened porches. Free estimate. Call (571) 655-7207.',
 });
 

@@ -80,13 +80,13 @@ export default function DeckRailingPage() {
           <h2 style={S.h2}>Virginia Building Code Requirements</h2>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
             <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Railing required:</strong> On any deck surface 30 inches or more above grade</li>
-            <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Minimum height:</strong> 36 inches (some Fairfax County areas require 42 inches for decks over 30" above grade)</li>
-            <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Baluster spacing:</strong> Maximum 4 inches apart (the "4-inch sphere rule" — no child&apos;s head can pass through)</li>
+            <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Minimum height:</strong> 36 inches (some Fairfax County areas require 42 inches for decks over 30&quot; above grade)</li>
+            <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Baluster spacing:</strong> Maximum 4 inches apart (the &quot;4-inch sphere rule&quot; no child&apos;s head can pass through)</li>
             <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Load rating:</strong> Must withstand 200 lbs of concentrated force at the top rail</li>
-            <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Graspable handrail:</strong> Required on all stairs — 1.25" to 2" diameter, continuous</li>
-            <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Cable rail:</strong> Maximum 3" spacing between cables, must pass 200-lb load test</li>
+            <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Graspable handrail:</strong> Required on all stairs 1.25&quot; to 2&quot; diameter, continuous</li>
+            <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Cable rail:</strong> Maximum 3&quot; spacing between cables, must pass 200-lb load test</li>
           </ul>
-          <p style={S.p}><strong>HOA note:</strong> Many Northern Virginia HOAs have additional restrictions beyond building code — specific railing profiles, colors, or style requirements. We check your HOA guidelines before recommending a railing system. <Link href="/hoa-deck-rules-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Read our HOA guide</Link>.</p>
+          <p style={S.p}><strong>HOA note:</strong> Many Northern Virginia HOAs have additional restrictions beyond building code specific railing profiles, colors, or style requirements. We check your HOA guidelines before recommending a railing system. <Link href="/hoa-deck-rules-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Read our HOA guide</Link>.</p>
 
           <h2 style={S.h2}>Choosing the Right Railing for Your Deck</h2>
           <h3 style={S.h3}>For a view deck (elevated, scenic lot)</h3>
@@ -94,7 +94,7 @@ export default function DeckRailingPage() {
           <h3 style={S.h3}>For a traditional home</h3>
           <p style={S.p}>Composite or aluminum railings in white, bronze, or black. Match the home&apos;s trim color. Trex Signature in Charcoal Black is our most-specified option for colonial and transitional homes.</p>
           <h3 style={S.h3}>For a pool surround</h3>
-          <p style={S.p}>Glass panels (meet most pool barrier codes) or aluminum with self-closing gates. Check your county&apos;s pool fence requirements — they&apos;re separate from deck railing codes.</p>
+          <p style={S.p}>Glass panels (meet most pool barrier codes) or aluminum with self-closing gates. Check your county&apos;s pool fence requirements they&apos;re separate from deck railing codes.</p>
           <h3 style={S.h3}>For budget-conscious builds</h3>
           <p style={S.p}>Aluminum railings offer the best value for a modern, maintenance-free look. $35–$60/linear ft is significantly less than cable or glass, with zero upkeep.</p>
 

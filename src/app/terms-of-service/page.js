@@ -37,7 +37,7 @@ export default function TermsOfService() {
       <section style={{ marginTop: '30px' }}>
         <h2>4. Disclaimer of Warranties</h2>
         <p>
-          The materials on Loudoun Decks' website are provided on an 'as is' basis. Loudoun Decks makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.
+          The materials on Loudoun Decks&apos; website are provided on an &apos;as is&apos; basis. Loudoun Decks makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.
         </p>
       </section>
 

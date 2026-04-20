@@ -23,7 +23,7 @@ export default function PrivacyPolicy() {
       <section style={{ marginTop: '30px' }}>
         <h2>2. Cookies and Web Beacons</h2>
         <p>
-          Like any other website, Loudoun Decks uses 'cookies'. These cookies are used to store information including visitors' preferences, and the pages on the website that the visitor accessed or visited. The information is used to optimize the users' experience by customizing our web page content based on visitors' browser type and/or other information.
+          Like any other website, Loudoun Decks uses &apos;cookies&apos;. These cookies are used to store information including visitors&apos; preferences, and the pages on the website that the visitor accessed or visited. The information is used to optimize the users&apos; experience by customizing our web page content based on visitors&apos; browser type and/or other information.
         </p>
       </section>
 
@@ -47,14 +47,14 @@ export default function PrivacyPolicy() {
       <section style={{ marginTop: '30px' }}>
         <h2>5. Third Party Privacy Policies</h2>
         <p>
-          Loudoun Decks's Privacy Policy does not apply to other advertisers or websites. Thus, we are advising you to consult the respective Privacy Policies of these third-party ad servers for more detailed information. It may include their practices and instructions about how to opt-out of certain options.
+          Loudoun Decks&apos;s Privacy Policy does not apply to other advertisers or websites. Thus, we are advising you to consult the respective Privacy Policies of these third-party ad servers for more detailed information. It may include their practices and instructions about how to opt-out of certain options.
         </p>
       </section>
 
       <section style={{ marginTop: '30px' }}>
         <h2>6. CCPA Privacy Rights (Do Not Sell My Personal Information)</h2>
         <p>
-          Under the CCPA, among other rights, California consumers have the right to request that a business that collects a consumer's personal data disclose the categories and specific pieces of personal data that a business has collected about consumers. If you make a request, we have one month to respond to you.
+          Under the CCPA, among other rights, California consumers have the right to request that a business that collects a consumer&apos;s personal data disclose the categories and specific pieces of personal data that a business has collected about consumers. If you make a request, we have one month to respond to you.
         </p>
       </section>
 

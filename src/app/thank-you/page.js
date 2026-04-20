@@ -37,7 +37,7 @@ export default function ThankYouPage() {
           
           <h1 className={styles.title}>Message Received!</h1>
           <p className={styles.message}>
-            Thank you for reaching out to Loudoun Decks. We've received your inquiry and our team is already reviewing your project details.
+            Thank you for reaching out to Loudoun Decks. We&apos;ve received your inquiry and our team is already reviewing your project details.
           </p>
           
           <div className={styles.nextSteps}>
@@ -48,11 +48,11 @@ export default function ThankYouPage() {
             </div>
             <div className={styles.step}>
               <div className={styles.dot}></div>
-              <span>We'll call you to schedule a free on-site visit</span>
+              <span>We&apos;ll call you to schedule a free on-site visit</span>
             </div>
             <div className={styles.step}>
               <div className={styles.dot}></div>
-              <span>You'll get a detailed 3D design & quote</span>
+              <span>You&apos;ll get a detailed 3D design &amp; quote</span>
             </div>
           </div>
           

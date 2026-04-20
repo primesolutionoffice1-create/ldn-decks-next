@@ -86,7 +86,7 @@ export default function PromoModal() {
         <div className={styles.textContent}>
           <h2>Ready for Your Dream Deck?</h2>
           <p>
-            Transform your outdoor living space with Northern Virginia's premier custom deck builder.
+            Transform your outdoor living space with Northern Virginia&apos;s premier custom deck builder.
             We specialize in top-tier composite decking, customized patios, and beautiful pergolas!
           </p>
           <p className={styles.highlightText}>Unlock your free, no-obligation estimate today!</p>

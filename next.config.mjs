@@ -77,6 +77,11 @@ const nextConfig = {
       { source: '/top-decks-build-near-you/deck-builder-in-leesburg', destination: '/near-you/loudoun-county/leesburg', permanent: true },
       { source: '/top-decks-build-near-you/deck-builder-in-manassas', destination: '/near-you/prince-william-county/manassas', permanent: true },
       { source: '/top-decks-build-near-you/deck-builder-in-sterling-va', destination: '/near-you/loudoun-county/sterling', permanent: true },
+
+      // Old Showcase Redirects
+      { source: '/deck-projects-showcase/deck-builder-ashburn', destination: '/near-you/loudoun-county/ashburn', permanent: true },
+      { source: '/deck-projects-showcase', destination: '/showcase', permanent: true },
+      { source: '/deck-projects-showcase/:path*', destination: '/showcase', permanent: true },
     ];
   },
   async headers() {

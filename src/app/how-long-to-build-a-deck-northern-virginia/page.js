@@ -122,7 +122,7 @@ export default function HowLongToBuildPage() {
           <ol style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
             <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Start in winter (Jan–Feb).</strong> Zero wait for crews, materials in stock, HOA boards less backlogged.</li>
             <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Have your HOA guidelines ready.</strong> If you can provide your ARC requirements at the first meeting, we submit faster.</li>
-            <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Decide on materials early.</strong> "I'll think about colors" adds 1–2 weeks. Pick your material and color at the design meeting.</li>
+            <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Decide on materials early.</strong> &quot;I&apos;ll think about colors&quot; adds 1–2 weeks. Pick your material and color at the design meeting.</li>
             <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Finalize the design before signing.</strong> Changes after permit submission mean resubmission + another review cycle.</li>
             <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Clear the work area.</strong> Move furniture, planters, and anything within 10 feet of the build zone before day 1.</li>
           </ol>

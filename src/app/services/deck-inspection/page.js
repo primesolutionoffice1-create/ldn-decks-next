@@ -9,7 +9,7 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: "/services/deck-inspection",
-  title: "Professional Deck Inspection Loudoun VA | $350 Structural Safety Audit",
+      title: "Deck Inspection Loudoun VA | $350 Safety Audit | LDN Decks",
   description: "Ensure your outdoor space is safe with a professional $350 deck inspection in Northern Virginia. We identify hidden structural rot, foundational settling, and safety hazards."
 });
 

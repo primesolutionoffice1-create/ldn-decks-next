@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
@@ -29,8 +28,7 @@ export default function TrexVsTimberTechPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <Breadcrumbs />
-
+      
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Trex vs TimberTech vs AZEK</h1>

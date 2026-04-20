@@ -37,10 +37,9 @@ metadata.other = {
 };
 metadata.verification = {
   google: "KqDI0PPrY8iiZYZI-hk1ikIKVqCtIcTrO3dHSM7U-Eg",
-  // Bing Webmaster Tools verification — replace YOUR_BING_CODE with actual code from:
-  // https://www.bing.com/webmasters → Add Site → Meta Tag verification
-  // other: { "msvalidate.01": "YOUR_BING_CODE" },
+  yandex: "yandex-verification-placeholder",
 };
+// NOTE: Bing verification requires manual step — see instructions below layout
 
 import { ContactProvider } from "@/context/ContactContext";
 import LayoutContent from "./LayoutContent";

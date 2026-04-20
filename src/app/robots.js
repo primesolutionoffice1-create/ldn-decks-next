@@ -13,11 +13,20 @@ export default function robots() {
   }
 
   return {
-    rules: {
-      userAgent: '*',
-      allow: '/',
-      disallow: '/private/',
-    },
+    rules: [
+      {
+        userAgent: '*',
+        allow: '/',
+        disallow: '/private/',
+      },
+      {
+        userAgent: 'Bingbot',
+        allow: '/',
+        disallow: '/private/',
+        crawlDelay: 1,
+      },
+    ],
     sitemap: `${SITE_URL}/sitemap.xml`,
+    host: SITE_URL,
   }
 }

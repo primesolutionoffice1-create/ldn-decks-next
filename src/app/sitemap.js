@@ -115,6 +115,9 @@ export default async function sitemap() {
                 { path: "/northern-virginia-deck-building-guide",       priority: 0.95, lastMod: TIER1, freq: "weekly" },
                 { path: "/eco-friendly-composite-decking",              priority: 0.80, lastMod: TIER1, freq: "monthly" },
                 { path: "/questions-to-ask-before-building-a-deck",     priority: 0.85, lastMod: TIER1, freq: "monthly" },
+                { path: "/deck-design-ideas-2026",                      priority: 0.90, lastMod: TIER1, freq: "weekly" },
+                { path: "/deck-builder-centreville-va",                 priority: 0.92, lastMod: TIER1, freq: "weekly" },
+                { path: "/deck-safety-inspection-checklist",            priority: 0.85, lastMod: TIER1, freq: "monthly" },
 
                 // Tier 4 - Evergreen / rarely changes
                 { path: "/about",                        priority: 0.65, lastMod: TIER4, freq: "monthly" },

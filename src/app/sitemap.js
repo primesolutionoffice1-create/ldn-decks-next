@@ -120,6 +120,9 @@ export default async function sitemap() {
                 { path: "/deck-safety-inspection-checklist",            priority: 0.85, lastMod: TIER1, freq: "monthly" },
                 { path: "/deck-builder-herndon-va",                     priority: 0.90, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-builder-manassas-va",                    priority: 0.90, lastMod: TIER1, freq: "weekly" },
+                { path: "/deck-builder-woodbridge-va",                  priority: 0.90, lastMod: TIER1, freq: "weekly" },
+                { path: "/deck-builder-chantilly-va",                   priority: 0.90, lastMod: TIER1, freq: "weekly" },
+                { path: "/deck-permit-prince-william-county-virginia",  priority: 0.85, lastMod: TIER1, freq: "weekly" },
 
                 // Tier 4 - Evergreen / rarely changes
                 { path: "/about",                        priority: 0.65, lastMod: TIER4, freq: "monthly" },

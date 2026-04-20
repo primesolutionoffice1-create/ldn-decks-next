@@ -11,7 +11,7 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: "/services/fence",
-  title: "Professional Fence Installation Loudoun County | Privacy & Wood Fencing NoVA",
+      title: "Fence Installation Loudoun County | LDN Decks",
   description: "Loudoun Decks provides expert fence installation for homeowners in Loudoun County, Fairfax, and Prince William. Custom wood, vinyl, and aluminum fencing."
 });
 

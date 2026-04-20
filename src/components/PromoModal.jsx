@@ -2,6 +2,8 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import styles from './PromoModal.module.css';
+import { useContact } from '@/context/ContactContext';
+import { trackPhoneClick } from '@/lib/tracking';
 
 const CloseIcon = () => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
@@ -15,8 +17,6 @@ const PhoneIcon = () => (
   </svg>
 );
 
-import { useContact } from '@/context/ContactContext';
-
 export default function PromoModal() {
   const { openContact } = useContact();
   const [isOpen, setIsOpen] = useState(false);
@@ -24,13 +24,11 @@ export default function PromoModal() {
   useEffect(() => {
     // Only show once per session so it isn't an annoyance when navigating
     const hasSeenModal = sessionStorage.getItem('promoModalSeen');
-
     if (!hasSeenModal) {
       const timer = setTimeout(() => {
         setIsOpen(true);
         sessionStorage.setItem('promoModalSeen', 'true');
       }, 3000); // Trigger after exactly 3 seconds
-
       return () => clearTimeout(timer);
     }
   }, []);
@@ -47,7 +45,9 @@ export default function PromoModal() {
     } else {
       document.body.style.overflow = 'unset';
     }
-    return () => { document.body.style.overflow = 'unset'; };
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
   }, [isOpen]);
 
   if (!isOpen) return null;
@@ -65,7 +65,6 @@ export default function PromoModal() {
         >
           <CloseIcon />
         </button>
-
         <div className={styles.imageContainer}>
           <Image
             src="/images/img63.jpeg"
@@ -75,19 +74,25 @@ export default function PromoModal() {
             sizes="(max-width: 600px) 100vw, 400px"
           />
           <div className={styles.logoOverlay}>
-            <Image src="/ldndecks-logo.webp" alt="Loudoun Decks" width={140} height={50} style={{ objectFit: 'contain' }} />
+            <Image
+              src="/ldndecks-logo.webp"
+              alt="Loudoun Decks"
+              width={140}
+              height={50}
+              style={{ objectFit: 'contain' }}
+            />
           </div>
         </div>
-
         <div className={styles.textContent}>
           <h2>Ready for Your Dream Deck?</h2>
           <p>
-            Transform your outdoor living space with Northern Virginia's premier custom deck builder. We specialize in top-tier composite decking, customized patios, and beautiful pergolas!
+            Transform your outdoor living space with Northern Virginia's premier custom deck builder.
+            We specialize in top-tier composite decking, customized patios, and beautiful pergolas!
           </p>
           <p className={styles.highlightText}>Unlock your free, no-obligation estimate today!</p>
 
           <div className={styles.buttonGroup}>
-            <a href="tel:+15716557207" className={styles.callBtn}>
+            <a href="tel:+15716557207" className={styles.callBtn} onClick={trackPhoneClick}>
               <PhoneIcon />
               Call Us
             </a>

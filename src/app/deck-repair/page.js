@@ -11,7 +11,7 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/deck-repair',
-  title: 'Deck Repair Loudoun County | Structural Restoration Fairfax & Prince William',
+      title: 'Deck Repair | Loudoun County & Fairfax VA | LDN Decks',
   description: 'Loudoun Decks provides professional deck repair and structural restoration across Northern Virginia. Fix rot, wobbly railings, and unstable ledgers with 1,500+ words of expertise.',
   image: '/images/img05.jpeg',
 });

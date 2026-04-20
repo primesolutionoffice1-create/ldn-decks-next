@@ -20,7 +20,6 @@ export default function ContactForm({ hideInfoCol = false, noPadding = false }) 
     const phone = formData.get('phone') || '';
     const result = await sendContactEmail(formData);
     if (result && result.success) {
-      // Fire GTM tracking only once per submission
       if (!hasTracked.current) {
         hasTracked.current = true;
         trackFormSubmit({ email, phone, formType: 'quote' });
@@ -37,7 +36,6 @@ export default function ContactForm({ hideInfoCol = false, noPadding = false }) 
     <section className={`${styles.formSection} ${noPadding ? styles.noPadding : ''}`}>
       <div className={`${styles.container} ${noPadding ? styles.noPadding : ''}`}>
         <div className={`${styles.grid} ${hideInfoCol ? styles.fullWidthGrid : ''}`}>
-          {/* Info Column */}
           {!hideInfoCol && (
             <div className={styles.infoCol}>
               <h2>Reach Out Directly</h2>
@@ -64,7 +62,6 @@ export default function ContactForm({ hideInfoCol = false, noPadding = false }) 
               </div>
             </div>
           )}
-          {/* Form Column */}
           <div className={`${styles.formCol} ${noPadding ? styles.formColNoPadding : ''}`}>
             <form onSubmit={handleSubmit} className={styles.formBlock} aria-label="Project Inquiry Form">
               <div className={styles.row}>
@@ -119,13 +116,7 @@ export default function ContactForm({ hideInfoCol = false, noPadding = false }) 
               </div>
               <div className={styles.inputGroup}>
                 <label htmlFor="message">Message <span className={styles.req}>*</span></label>
-                <textarea
-                  id="message"
-                  name="message"
-                  required
-                  rows="6"
-                  placeholder="Tell us about your deck or outdoor project..."
-                ></textarea>
+                <textarea id="message" name="message" required rows="6" placeholder="Tell us about your deck or outdoor project..."></textarea>
               </div>
               <button
                 type="submit"

@@ -75,6 +75,7 @@ const slugify = (text) => {
 };
 
 import { useContact } from '@/context/ContactContext';
+import { trackPhoneClick } from '@/lib/tracking';
 
 export default function Header() {
   const { isContactOpen, openContact, closeContact, toggleContact } = useContact();
@@ -160,7 +161,7 @@ export default function Header() {
                 </a>
               </div>
               <div className={styles.topBarItem}>
-                 <a href="tel:+15716557207" aria-label="Call Loudoun Decks">
+                 <a href="tel:+15716557207" aria-label="Call Loudoun Decks" onClick={trackPhoneClick}>
                     <PhoneIcon />
                     <span>(571) 655-7207</span>
                  </a>
@@ -283,7 +284,7 @@ export default function Header() {
                 </div>
               </nav>
 
-              <a href="tel:+15716557207" className={styles.callNowBtn} aria-label="Call Us">
+              <a href="tel:+15716557207" className={styles.callNowBtn} aria-label="Call Us" onClick={trackPhoneClick}>
                 <PhoneIcon />
                 <span>Call Now</span>
               </a>
@@ -501,7 +502,7 @@ export default function Header() {
           </div>
 
           <div style={{ marginTop: 'auto', padding: '40px 20px' }}>
-            <a href="tel:+15716557207" className={styles.callNowBtn} style={{ width: '100%', justifyContent: 'center' }}>
+            <a href="tel:+15716557207" className={styles.callNowBtn} style={{ width: '100%', justifyContent: 'center' }} onClick={trackPhoneClick}>
               <PhoneIcon />
               <span>Call Us Now</span>
             </a>

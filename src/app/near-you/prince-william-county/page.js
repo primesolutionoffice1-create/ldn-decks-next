@@ -86,6 +86,37 @@ export default function PrinceWilliamCountyPage() {
         </div>
       </section>
       <ServiceVisual image="/images/img02.jpeg" />
+
+      <article style={{ padding: '4rem 0' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Why Prince William County Homeowners Choose LDN Decks</h2>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Prince William County offers some of the best value in Northern Virginia real estate, with median home prices around $500,000 and rapidly growing communities in Gainesville, Haymarket, and Bristow. Homeowners here are investing in outdoor living to maximize their property value and extend their usable living space.</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Our second office is located at <strong>8735 Quarry Rd., Unit 102, Manassas, VA 20110</strong> — right in the heart of Prince William County. This means faster response times, local material sourcing, and deep familiarity with county requirements.</p>
+
+          <h3 style={{ fontSize: '1.3rem', fontWeight: 600, margin: '2rem 0 1rem' }}>Prince William County Permits</h3>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Prince William County requires building permits for decks over 200 sqft or 30 inches above grade. Processing time is typically <strong>2-3 weeks</strong> — the fastest of the three major Northern Virginia counties. We handle the full permit process including submission, plan review coordination, and all three required inspections.</p>
+
+          <h3 style={{ fontSize: '1.3rem', fontWeight: 600, margin: '2rem 0 1rem' }}>Deck Cost in Prince William County (2026)</h3>
+          <div style={{ overflowX: 'auto', marginBottom: '2rem' }}>
+            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.9rem' }}>
+              <thead><tr style={{ background: '#f5f5f5' }}><th style={{ padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #ddd' }}>Project</th><th style={{ padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #ddd' }}>Cost Range</th></tr></thead>
+              <tbody>
+                {[['300 sqft Composite Deck', '$14,000 – $28,000'], ['500 sqft Multi-Level Deck', '$28,000 – $48,000'], ['Screened Porch', '$30,000 – $55,000'], ['Deck Replacement', '$16,000 – $32,000'], ['Fence Installation', '$4,000 – $12,000']].map((r, i) => (
+                  <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>{r.map((c, j) => <td key={j} style={{ padding: '0.75rem', borderBottom: '1px solid #eee', fontWeight: j === 1 ? 600 : 400 }}>{c}</td>)}</tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7, fontSize: '0.9rem', color: '#666' }}>Prince William County pricing is typically 10-15% lower than Fairfax or Loudoun due to lower labor costs and less complex HOA requirements.</p>
+
+          <h3 style={{ fontSize: '1.3rem', fontWeight: 600, margin: '2rem 0 1rem' }}>Popular Projects by Area</h3>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Manassas & Manassas Park:</strong> Full deck replacements on 1990s-2000s homes, composite upgrades from aging pressure-treated wood, and combined deck + fence packages for privacy.</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Gainesville & Haymarket:</strong> New construction decks on recently built homes in Heritage Hunt, Dominion Valley, and Piedmont communities. Multi-level designs for walkout basements are especially popular on the rolling terrain.</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Woodbridge & Lake Ridge:</strong> Budget-friendly Trex Enhance composite builds ($30-$50/sqft), screened porch additions for waterfront and lakeside properties, and under-deck patio systems that create dry space below elevated decks.</p>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}><strong>Bristow & Nokesville:</strong> Large estate decks with panoramic views, outdoor kitchens, and fire pit integration. The larger lot sizes in western Prince William allow for expansive outdoor living packages.</p>
+        </div>
+      </article>
+
       <section className={styles.citiesSection}>
         <div className={styles.container}>
           <h2 className={styles.citiesTitle}>Top Areas We Serve in Prince William County</h2>

@@ -4,6 +4,9 @@ import ServiceMain from '@/components/ServiceMain';
 import ServiceVisual from '@/components/ServiceVisual';
 import ServicesFAQ from '@/components/ServicesFAQ';
 import ContactHome from '@/components/ContactHome';
+import RelatedGuides from '@/components/RelatedGuides';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import RatingBadge from '@/components/RatingBadge';
 import styles from '../LocationPage.module.css';
 import { buildMetadata } from '@/lib/seo';
 
@@ -47,6 +50,7 @@ const faqs = [
 export default function LoudounCountyPage() {
   return (
     <main>
+      <Breadcrumbs />
       <ServicesHeader
         subtext="Serving Northern Virginia"
         title="Deck Builder in Loudoun County, VA"
@@ -97,6 +101,8 @@ export default function LoudounCountyPage() {
         </div>
       </section>
       <ServicesFAQ title="Frequently Asked Questions About Decks in Loudoun County" faqs={faqs} />
+      <RatingBadge />
+      <RelatedGuides currentPath="/near-you/loudoun-county" />
       <ContactHome />
     </main>
   );

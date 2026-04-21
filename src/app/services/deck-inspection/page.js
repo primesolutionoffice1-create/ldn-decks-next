@@ -5,6 +5,8 @@ import ServicesHeader from '@/components/ServicesHeader';
 import Testimonials from '@/components/Testimonials';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import ContactHome from '@/components/ContactHome';
+import ServiceSchema from '@/components/ServiceSchema';
+import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -16,6 +18,7 @@ export const metadata = buildMetadata({
 export default function DeckInspectionPage() {
   return (
     <main>
+      <ServiceSchema name="Deck Safety Inspection" description="Professional structural deck inspection in Northern Virginia. Ledger board, posts, joists, railings checked." price="150" />
       <ServicesHeader
         subtext="Deck Inspection Services"
         title="Comprehensive Deck Inspection for $350"
@@ -91,6 +94,7 @@ export default function DeckInspectionPage() {
       </section>
       <Testimonials />
       <ServiceAreasGrid />
+      <RelatedGuides currentPath="/services/deck-inspection" />
       <ContactHome />
     </main>
   );

@@ -6,6 +6,8 @@ import ServiceInclusions from '@/components/ServiceInclusions';
 import ServiceContentExpansion from '@/components/ServiceContentExpansion';
 import ProcessSteps from '@/components/ProcessSteps';
 import ContactHome from '@/components/ContactHome';
+import ServiceSchema from '@/components/ServiceSchema';
+import RelatedGuides from '@/components/RelatedGuides';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import { buildMetadata } from '@/lib/seo';
 
@@ -54,6 +56,7 @@ const expansionSections = [
 export default function DeckStairLightingPage() {
   return (
     <main>
+      <ServiceSchema name="Deck & Stair Lighting" description="Integrated LED deck lighting, stair riser lights, post cap lights, and under-rail strips." price="2000" />
       <ServicesHeader
         subtext="Deck Stair Lighting Loudoun VA"
         title="Deck Stair Lighting That Looks Amazing & Keeps Your Family Safe"
@@ -100,6 +103,7 @@ export default function DeckStairLightingPage() {
 
       <ServiceAreasGrid />
 
+      <RelatedGuides currentPath="/services/deck-stair-lighting" />
       <ContactHome />
     </main>
   );

@@ -6,6 +6,8 @@ import ServiceInclusions from '@/components/ServiceInclusions';
 import ServiceContentExpansion from '@/components/ServiceContentExpansion';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import ContactHome from '@/components/ContactHome';
+import ServiceSchema from '@/components/ServiceSchema';
+import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -83,6 +85,7 @@ export default function NewDecksPage() {
 
   return (
     <main>
+      <ServiceSchema name="Custom Deck Building" description="Professional custom deck design and construction in Northern Virginia. Composite (Trex, TimberTech) and wood decks. Permits and HOA handled." price="15000" />
       <JsonLd data={serviceSchema} />
       <ServicesHeader
         subtext="Custom Deck Design Loudoun VA"
@@ -147,6 +150,7 @@ export default function NewDecksPage() {
         </div>
       </section>
       <ServiceAreasGrid />
+      <RelatedGuides currentPath="/services/new-decks" />
       <ContactHome />
     </main>
   );

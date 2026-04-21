@@ -81,17 +81,21 @@ export default function Footer() {
               <li><Link href="/about">About</Link></li>
               <li><Link href="/services">Our Services</Link></li>
               <li><Link href="/showcase">Recent Projects</Link></li>
+              <li><Link href="/deck-cost-calculator">Cost Calculator</Link></li>
+              <li><Link href="/reviews">Reviews</Link></li>
               <li><button onClick={openContact} className={styles.footerBtnLink}>Contact Us</button></li>
             </ul>
           </div>
 
           <div className={styles.col3}>
-            <h3>Links</h3>
+            <h3>Guides</h3>
             <ul>
-              <li><Link href="/team">Our Team</Link></li>
-              <li><Link href="/privacy-policy">Privacy Policy</Link></li>
-              <li><Link href="/terms-of-service">Terms of Service</Link></li>
-              <li><button onClick={openContact} className={styles.footerBtnLink}>Free Estimate</button></li>
+              <li><Link href="/northern-virginia-deck-building-guide">Deck Building Guide</Link></li>
+              <li><Link href="/how-much-does-a-deck-cost-northern-virginia">Deck Cost Guide</Link></li>
+              <li><Link href="/trex-vs-timbertech-vs-azek">Trex vs TimberTech vs AZEK</Link></li>
+              <li><Link href="/composite-deck-vs-wood-deck-virginia">Composite vs Wood</Link></li>
+              <li><Link href="/does-a-deck-add-value-to-your-home">Deck ROI &amp; Home Value</Link></li>
+              <li><Link href="/how-to-choose-a-deck-builder-northern-virginia">Choosing a Builder</Link></li>
             </ul>
           </div>
 

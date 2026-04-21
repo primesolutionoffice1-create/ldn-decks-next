@@ -2,6 +2,7 @@ import React from 'react';
 import TeamHeader from '@/components/TeamHeader';
 import TeamGrid from '@/components/TeamGrid';
 import ContactHome from '@/components/ContactHome';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -13,6 +14,7 @@ export const metadata = buildMetadata({
 export default function TeamPage() {
   return (
     <main>
+      <Breadcrumbs />
       <TeamHeader />
       <TeamGrid />
       <ContactHome />

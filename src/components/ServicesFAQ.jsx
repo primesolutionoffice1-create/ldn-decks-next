@@ -28,8 +28,26 @@ export default function ServicesFAQ({ title = "Services FAQs", faqs = faqData })
     setOpenIndex(openIndex === idx ? null : idx);
   };
 
+  // Generate FAQPage schema from the FAQ data
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(item => ({
+      "@type": "Question",
+      "name": item.q,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.a,
+      },
+    })),
+  };
+
   return (
     <section className={styles.faqSection}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <div className={styles.container}>
          <h2 className={styles.title}>{title}</h2>
          <div className={styles.accordionContainer}>

@@ -4,6 +4,8 @@ import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
+import RelatedGuides from '@/components/RelatedGuides';
+import RatingBadge from '@/components/RatingBadge';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import { buildMetadata } from '@/lib/seo';
 
@@ -120,6 +122,7 @@ export default function McLeanDeckBuilderPage() {
       </article>
 
       <SimpleCTA title="Get Your McLean Deck Quote" buttonText="Get Free Estimate" link="/contact" />
+      <RelatedGuides currentPath="/deck-builder-mclean-va" />
       <ContactHome />
     </>
   );

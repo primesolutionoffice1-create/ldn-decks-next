@@ -6,6 +6,8 @@ import ServiceInclusions from '@/components/ServiceInclusions';
 import ServiceContentExpansion from '@/components/ServiceContentExpansion';
 import ServicesFAQ from '@/components/ServicesFAQ';
 import ContactHome from '@/components/ContactHome';
+import ServiceSchema from '@/components/ServiceSchema';
+import RelatedGuides from '@/components/RelatedGuides';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import { buildMetadata } from '@/lib/seo';
 
@@ -81,6 +83,7 @@ const authorityLinks = [
 export default function PorchesPage() {
   return (
     <main>
+      <ServiceSchema name="Porch Construction" description="Custom front porches, screened porches, and open porches in Northern Virginia. Design and build." price="25000" />
       <ServicesHeader
         subtext="5-Star Google Rated Builder"
         title="Custom Porch Design & Construction"
@@ -170,6 +173,7 @@ export default function PorchesPage() {
         </div>
       </section>
       <ServiceAreasGrid />
+      <RelatedGuides currentPath="/services/porches" />
       <ContactHome />
     </main>
   );

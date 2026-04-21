@@ -6,6 +6,8 @@ import ServiceInclusions from '@/components/ServiceInclusions';
 import ServiceContentExpansion from '@/components/ServiceContentExpansion';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import ContactHome from '@/components/ContactHome';
+import ServiceSchema from '@/components/ServiceSchema';
+import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -107,6 +109,7 @@ const authorityLinks = [
 export default function PatiosPage() {
   return (
     <main>
+      <ServiceSchema name="Patio Installation" description="Custom paver, flagstone, and stamped concrete patios in Northern Virginia. Design, permitting, and installation." price="10000" />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchemaData) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchemaData) }} />
 
@@ -222,6 +225,7 @@ export default function PatiosPage() {
         </div>
       </section>
       <ServiceAreasGrid />
+      <RelatedGuides currentPath="/services/patios" />
       <ContactHome />
     </main>
   );

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -11,9 +12,35 @@ export const metadata = buildMetadata({
   description: 'Loudoun Decks: Virginia Class A Licensed, fully insured, Trex Pro certified, BBB accredited. Verify our credentials. Serving Loudoun, Fairfax & Prince William.',
 });
 
+const credentialSchema = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://www.ldndecks.com/#organization",
+  "name": "Loudoun Decks",
+  "hasCredential": [
+    { "@type": "EducationalOccupationalCredential", "credentialCategory": "license", "name": "Virginia Class A Contractor License", "recognizedBy": { "@type": "GovernmentOrganization", "name": "Virginia Department of Professional and Occupational Regulation (DPOR)" } },
+    { "@type": "EducationalOccupationalCredential", "credentialCategory": "certification", "name": "Trex Platinum Partner", "recognizedBy": { "@type": "Organization", "name": "Trex Company" } },
+    { "@type": "EducationalOccupationalCredential", "credentialCategory": "certification", "name": "TimberTech Certified Installer", "recognizedBy": { "@type": "Organization", "name": "TimberTech / AZEK" } },
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Deck Building Services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom Deck Building", "description": "Licensed and insured custom deck construction in Northern Virginia" } },
+    ],
+  },
+  "areaServed": [
+    { "@type": "County", "name": "Loudoun County, VA" },
+    { "@type": "County", "name": "Fairfax County, VA" },
+    { "@type": "County", "name": "Prince William County, VA" },
+  ],
+};
+
 export default function CertificationsPage() {
   return (
     <>
+      <JsonLd data={credentialSchema} />
+      <Breadcrumbs />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Certifications &amp; Licenses</h1>

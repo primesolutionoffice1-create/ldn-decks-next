@@ -5,6 +5,8 @@ import ServiceInclusions from '@/components/ServiceInclusions';
 import Testimonials from '@/components/Testimonials';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import ContactHome from '@/components/ContactHome';
+import ServiceSchema from '@/components/ServiceSchema';
+import RelatedGuides from '@/components/RelatedGuides';
 
 import { buildMetadata } from '@/lib/seo';
 
@@ -40,6 +42,7 @@ const maintenanceProcess = [
 export default function DeckMaintenancePage() {
   return (
     <main>
+      <ServiceSchema name="Deck Maintenance" description="Annual deck cleaning, inspection, and maintenance for Northern Virginia homeowners. Wood and composite." price="300" />
       <ServicesHeader
         subtext="Deck Maintenance Services"
         title="Professional Deck Maintenance & Care"
@@ -70,6 +73,7 @@ export default function DeckMaintenancePage() {
 
       <Testimonials />
       <ServiceAreasGrid />
+      <RelatedGuides currentPath="/services/deck-maintenance" />
       <ContactHome />
     </main>
   );

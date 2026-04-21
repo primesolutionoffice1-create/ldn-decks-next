@@ -1,0 +1,46 @@
+import React from 'react';
+
+/**
+ * ServiceSchema — Adds Service structured data to service pages.
+ * Helps Google show rich results for service searches and enables AI systems
+ * to understand what specific services you offer with pricing.
+ */
+export default function ServiceSchema({ name, description, price, areaServed }) {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name,
+    description,
+    provider: {
+      '@type': 'LocalBusiness',
+      '@id': 'https://www.ldndecks.com/#organization',
+      name: 'Loudoun Decks',
+    },
+    areaServed: areaServed || {
+      '@type': 'State',
+      name: 'Virginia',
+    },
+    ...(price ? {
+      offers: {
+        '@type': 'Offer',
+        priceSpecification: {
+          '@type': 'UnitPriceSpecification',
+          priceCurrency: 'USD',
+          price,
+          unitText: 'per project',
+        },
+      },
+    } : {}),
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '5.0',
+      reviewCount: '41',
+      bestRating: '5',
+    },
+  };
+
+  return React.createElement('script', {
+    type: 'application/ld+json',
+    dangerouslySetInnerHTML: { __html: JSON.stringify(schema) },
+  });
+}

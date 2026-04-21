@@ -6,7 +6,10 @@ import ServiceContentExpansion from '@/components/ServiceContentExpansion';
 import ProcessSteps from '@/components/ProcessSteps';
 import ServicesFAQ from '@/components/ServicesFAQ';
 import ContactHome from '@/components/ContactHome';
+import ServiceSchema from '@/components/ServiceSchema';
+import RelatedGuides from '@/components/RelatedGuides';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -110,6 +113,8 @@ const expansionSections = [
 export default function DeckRepairPage() {
   return (
     <main>
+      <Breadcrumbs />
+      <ServiceSchema name="Deck Repair" description="Deck repair services for Northern Virginia. Board replacement, railing repair, structural fixes." price="3000" />
       <ServicesHeader 
         subtext="5-Star Google Rated Restoration"
         title="Professional Deck Repair & Structural Restoration"
@@ -148,6 +153,7 @@ export default function DeckRepairPage() {
 
       <ServiceAreasGrid />
 
+      <RelatedGuides currentPath="/deck-repair" />
       <ContactHome />
     </main>
   );

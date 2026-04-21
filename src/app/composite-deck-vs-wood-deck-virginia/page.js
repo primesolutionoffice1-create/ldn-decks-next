@@ -2,14 +2,18 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
+import ArticleSchema from '@/components/ArticleSchema';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
+import RelatedGuides from '@/components/RelatedGuides';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/composite-deck-vs-wood-deck-virginia',
   title: 'Composite Deck vs Wood Deck: Complete Virginia Comparison (2026)',
   description: 'Composite vs wood deck — cost, maintenance, lifespan, ROI compared for Virginia homeowners. 15-year total cost analysis shows composite wins long-term.',
+  image: '/images/img16.jpeg',
 });
 
 const faqSchema = {
@@ -27,8 +31,16 @@ const S = { h2: { fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' },
 export default function CompositeVsWoodPage() {
   return (
     <>
+      <Breadcrumbs />
       <JsonLd data={faqSchema} />
-      
+      <ArticleSchema
+        title="Composite Deck vs Wood Deck: Complete Virginia Comparison (2026)"
+        description="Composite vs wood deck — cost, maintenance, lifespan, ROI compared for Virginia homeowners. 15-year total cost analysis."
+        path="/composite-deck-vs-wood-deck-virginia"
+        datePublished="2025-05-01"
+        dateModified="2026-04-18"
+      />
+
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Composite Deck vs Wood Deck</h1>
@@ -154,6 +166,7 @@ export default function CompositeVsWoodPage() {
       </article>
 
       <SimpleCTA title="Not Sure Which Material Fits Your Budget?" buttonText="Get Free Estimate" link="/contact" />
+      <RelatedGuides currentPath="/composite-deck-vs-wood-deck-virginia" />
       <ContactHome />
     </>
   );

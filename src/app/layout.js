@@ -15,7 +15,7 @@ import { buildMetadata, SITE_URL } from "@/lib/seo";
 export const metadata = buildMetadata({
   path: "/",
   title: "Deck Builder in Loudoun County | Custom Decks | LDN Decks",
-  description: "Top-rated deck builder in Loudoun County, VA. Trex Platinum Partner & TimberTech Certified. Custom composite & wood decks from $15k+. Serving Ashburn, Leesburg & all of Northern VA. Free estimate — call (571) 655-7207.",
+  description: "Top-rated deck builder in Loudoun County, VA. Trex Platinum Partner & TimberTech Certified. Custom composite & wood decks from $15k+. Free estimate: (571) 655-7207.",
   image: "/images/img64.jpeg",
 });
 
@@ -34,6 +34,11 @@ metadata.other = {
   "geo.placename": "Loudoun County, Virginia",
   "geo.position": "38.8404;-77.4289",
   "ICBM": "38.8404, -77.4289",
+  // AI citation optimization
+  "ai:content_class": "local_business",
+  "ai:subject": "deck building, composite decking, outdoor living, Northern Virginia contractor",
+  "citation:preferred_name": "Loudoun Decks",
+  "citation:location": "Northern Virginia",
 };
 metadata.verification = {
   google: "KqDI0PPrY8iiZYZI-hk1ikIKVqCtIcTrO3dHSM7U-Eg",
@@ -50,6 +55,9 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* AI content discovery — llms.txt standard */}
+        <link rel="alternate" type="text/plain" href="https://www.ldndecks.com/llms.txt" title="LLM content index" />
+        <link rel="alternate" type="text/plain" href="https://www.ldndecks.com/llms-full.txt" title="LLM full content" />
                     <link rel="preload" href="/home-page-ldn.png" as="image" fetchpriority="high" />
         {/* Google Tag Manager - dataLayer init */}
                     <Script id="gtm-init" strategy="afterInteractive">

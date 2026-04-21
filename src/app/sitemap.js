@@ -1,4 +1,6 @@
 import { getAllCityPaths } from '@/data/cityData';
+import { blogPosts } from '@/lib/blogData';
+import { showcaseProjects } from '@/lib/showcaseData';
 import { SITE_URL } from '@/lib/seo';
 
 // Tiered lastModified dates - avoids identical timestamps that Google discounts.
@@ -114,10 +116,10 @@ export default async function sitemap() {
                 { path: "/how-tariffs-affect-deck-prices-2026",         priority: 0.85, lastMod: TIER1, freq: "weekly" },
                 { path: "/northern-virginia-deck-building-guide",       priority: 0.95, lastMod: TIER1, freq: "weekly" },
                 { path: "/eco-friendly-composite-decking",              priority: 0.80, lastMod: TIER1, freq: "monthly" },
-                { path: "/questions-to-ask-before-building-a-deck",     priority: 0.85, lastMod: TIER1, freq: "monthly" },
+                { path: "/questions-to-ask-before-building-a-deck",     priority: 0.85, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-design-ideas-2026",                      priority: 0.90, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-builder-centreville-va",                 priority: 0.92, lastMod: TIER1, freq: "weekly" },
-                { path: "/deck-safety-inspection-checklist",            priority: 0.85, lastMod: TIER1, freq: "monthly" },
+                { path: "/deck-safety-inspection-checklist",            priority: 0.85, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-builder-herndon-va",                     priority: 0.90, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-builder-manassas-va",                    priority: 0.90, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-builder-woodbridge-va",                  priority: 0.90, lastMod: TIER1, freq: "weekly" },
@@ -147,6 +149,17 @@ export default async function sitemap() {
                 { path: "/pressure-washing-deck-northern-virginia",     priority: 0.80, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-builder-bristow-va",                     priority: 0.85, lastMod: TIER1, freq: "weekly" },
 
+                // Missing service page
+                { path: "/services/deck-stair-lighting",               priority: 0.75, lastMod: TIER3, freq: "monthly" },
+
+                // Linkable assets & authority pages
+                { path: "/deck-cost-calculator",                       priority: 0.90, lastMod: TIER1, freq: "monthly" },
+                { path: "/press",                                      priority: 0.50, lastMod: TIER1, freq: "monthly" },
+
+                // AI discovery files
+                { path: "/llms.txt",                                   priority: 0.50, lastMod: TIER1, freq: "monthly" },
+                { path: "/llms-full.txt",                              priority: 0.50, lastMod: TIER1, freq: "monthly" },
+
                 // Tier 4 - Evergreen / rarely changes
                 { path: "/about",                        priority: 0.65, lastMod: TIER4, freq: "monthly" },
                 { path: "/about/why-choose-us",          priority: 0.65, lastMod: TIER4, freq: "monthly" },
@@ -163,7 +176,28 @@ export default async function sitemap() {
                 freq: "monthly",
         }));
 
-        const allPages = [...staticPages, ...cityPaths];
+        // Blog posts — dynamically generated from blogData with real publish dates
+        const blogPaths = blogPosts.map(post => {
+                // Parse date like "April 4, 2026" to ISO
+                const parsed = new Date(post.date);
+                const lastMod = isNaN(parsed.getTime()) ? TIER3 : parsed.toISOString().split('T')[0];
+                return {
+                        path: `/blog/${post.slug}`,
+                        priority: 0.70,
+                        lastMod,
+                        freq: "monthly",
+                };
+        });
+
+        // Showcase projects — dynamically generated from showcaseData
+        const showcasePaths = showcaseProjects.map(project => ({
+                path: `/showcase/${project.slug}`,
+                priority: 0.60,
+                lastMod: TIER3,
+                freq: "monthly",
+        }));
+
+        const allPages = [...staticPages, ...cityPaths, ...blogPaths, ...showcasePaths];
 
         return allPages.map(({ path, priority, lastMod, freq }) => ({
                 url: `${baseUrl}${path}`,

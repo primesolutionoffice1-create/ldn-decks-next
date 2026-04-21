@@ -7,7 +7,7 @@ export default function StructuredData() {
               "name": "Loudoun Decks",
               "alternateName": "LDN Decks",
                                               "image": "https://www.ldndecks.com/ldndecks-logo.webp",
-                                              "@id": "https://www.ldndecks.com/#business",
+                                              "@id": "https://www.ldndecks.com/#organization",
                                               "url": "https://www.ldndecks.com",
               "telephone": "+1-571-655-7207",
               "email": "office@ldndecks.com",
@@ -92,9 +92,85 @@ export default function StructuredData() {
                         "https://www.facebook.com/profile.php?id=61573750423712",
                         "https://x.com/ldndecks",
                         "https://www.instagram.com/loudoundecks/",
-                        "https://www.tiktok.com/@loudoun.decks"
+                        "https://www.tiktok.com/@loudoun.decks",
+                        "https://www.yelp.com/biz/loudoun-decks-centreville",
+                        "https://www.bbb.org/us/va/centreville/profile/deck-builder/loudoun-decks-0241-236091241"
                       ]
       };
+
+  // WebSite schema — enables sitelinks and site search in AI responses
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Loudoun Decks",
+    "alternateName": "LDN Decks",
+    "url": "https://www.ldndecks.com",
+    "description": "Top-rated custom deck builder in Northern Virginia. Expert guides on deck costs, materials, permits, and outdoor living.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Loudoun Decks",
+      "@id": "https://www.ldndecks.com/#organization"
+    },
+    "inLanguage": "en-US",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://www.ldndecks.com/search?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  };
+
+  // Organization schema — knowledge panel signals for AI systems
+  const orgSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Loudoun Decks",
+    "alternateName": "LDN Decks",
+    "url": "https://www.ldndecks.com",
+    "@id": "https://www.ldndecks.com/#organization",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.ldndecks.com/ldndecks-logo.webp",
+      "width": 400,
+      "height": 400
+    },
+    "image": "https://www.ldndecks.com/ldndecks-logo.webp",
+    "telephone": "+1-571-655-7207",
+    "email": "office@ldndecks.com",
+    "foundingLocation": {
+      "@type": "Place",
+      "name": "Loudoun County, Virginia"
+    },
+    "areaServed": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": 38.8404,
+        "longitude": -77.4289
+      },
+      "geoRadius": "50 mi"
+    },
+    "knowsAbout": [
+      "Composite decking installation",
+      "Trex deck building",
+      "TimberTech AZEK installation",
+      "Deck cost in Northern Virginia",
+      "Deck permits Virginia",
+      "Screened porch construction",
+      "Deck repair and replacement",
+      "Outdoor living spaces"
+    ],
+    "sameAs": [
+      "https://www.facebook.com/profile.php?id=61573750423712",
+      "https://x.com/ldndecks",
+      "https://www.instagram.com/loudoundecks/",
+      "https://www.tiktok.com/@loudoun.decks",
+      "https://www.yelp.com/biz/loudoun-decks-centreville",
+      "https://www.bbb.org/us/va/centreville/profile/deck-builder/loudoun-decks-0241-236091241"
+    ]
+  };
 
   return React.createElement(
           React.Fragment,
@@ -102,6 +178,14 @@ export default function StructuredData() {
           React.createElement('script', {
                     type: 'application/ld+json',
                     dangerouslySetInnerHTML: { __html: JSON.stringify(jsonLd) }
+          }),
+          React.createElement('script', {
+                    type: 'application/ld+json',
+                    dangerouslySetInnerHTML: { __html: JSON.stringify(websiteSchema) }
+          }),
+          React.createElement('script', {
+                    type: 'application/ld+json',
+                    dangerouslySetInnerHTML: { __html: JSON.stringify(orgSchema) }
           })
         );
 }

@@ -5,6 +5,8 @@ import ServiceInclusions from '@/components/ServiceInclusions';
 import ServiceContentExpansion from '@/components/ServiceContentExpansion';
 import ServicesFAQ from '@/components/ServicesFAQ';
 import ContactHome from '@/components/ContactHome';
+import ServiceSchema from '@/components/ServiceSchema';
+import RelatedGuides from '@/components/RelatedGuides';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 
 import { buildMetadata } from '@/lib/seo';
@@ -109,6 +111,7 @@ const expansionSections = [
 export default function FencePage() {
   return (
     <main>
+      <ServiceSchema name="Fence Installation" description="Custom fencing in Northern Virginia. Privacy, composite, vinyl, wood, and aluminum options." price="6000" />
       <ServicesHeader
         subtext="5-Star Google Rated Installation"
         title="Custom Fence Design & Installation"
@@ -145,6 +148,7 @@ export default function FencePage() {
 
       <ServiceAreasGrid />
 
+      <RelatedGuides currentPath="/services/fence" />
       <ContactHome />
     </main>
   );

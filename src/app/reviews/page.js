@@ -3,6 +3,8 @@ import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
+import RelatedGuides from '@/components/RelatedGuides';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -14,7 +16,7 @@ export const metadata = buildMetadata({
 const reviewSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "@id": "https://www.ldndecks.com/#business",
+  "@id": "https://www.ldndecks.com/#organization",
   "name": "Loudoun Decks",
   "aggregateRating": {
     "@type": "AggregateRating",
@@ -27,6 +29,11 @@ const reviewSchema = {
     { "@type": "Review", "author": { "@type": "Person", "name": "Sarah J." }, "reviewRating": { "@type": "Rating", "ratingValue": "5" }, "reviewBody": "Loudoun Decks built our 400 sqft Trex deck in Ashburn. From design to final walkthrough, everything was professional and on schedule. The crew was respectful, clean, and skilled. Our deck looks amazing and we use it every evening now.", "datePublished": "2026-03-15" },
     { "@type": "Review", "author": { "@type": "Person", "name": "Michael T." }, "reviewRating": { "@type": "Rating", "ratingValue": "5" }, "reviewBody": "Best contractor experience we've had in 15 years of homeownership. Nick and his team replaced our old wood deck with Trex Transcend in Leesburg. Handled the HOA submission, pulled all permits, and finished a day early. Highly recommend.", "datePublished": "2026-02-28" },
     { "@type": "Review", "author": { "@type": "Person", "name": "Robert & Linda K." }, "reviewRating": { "@type": "Rating", "ratingValue": "5" }, "reviewBody": "We had a screened porch built with EZE-Breeze windows in Centreville. The quality of work is outstanding. We've already used it through March evenings with just a space heater. Worth every penny.", "datePublished": "2026-01-20" },
+    { "@type": "Review", "author": { "@type": "Person", "name": "Jennifer M." }, "reviewRating": { "@type": "Rating", "ratingValue": "5" }, "reviewBody": "Loudoun Decks designed and built a beautiful two-level deck for our family. The attention to detail was impressive — from the hidden fasteners to the integrated lighting. The permit process was handled entirely by them.", "datePublished": "2025-12-10" },
+    { "@type": "Review", "author": { "@type": "Person", "name": "David P." }, "reviewRating": { "@type": "Rating", "ratingValue": "5" }, "reviewBody": "Had our 12-year-old wood deck resurfaced with TimberTech. The team was efficient, the communication was excellent, and the result looks like a brand new deck. No more annual staining — love it.", "datePublished": "2025-11-18" },
+    { "@type": "Review", "author": { "@type": "Person", "name": "Amanda S." }, "reviewRating": { "@type": "Rating", "ratingValue": "5" }, "reviewBody": "We hired Loudoun Decks for a large project — AZEK deck with an outdoor kitchen island. The design process was collaborative, they understood our vision immediately, and the execution was flawless. Our neighbors keep asking who built it.", "datePublished": "2025-10-05" },
+    { "@type": "Review", "author": { "@type": "Person", "name": "Chris & Maria R." }, "reviewRating": { "@type": "Rating", "ratingValue": "5" }, "reviewBody": "Beautiful pergola installation. The team was professional from day one. They suggested lighting options we hadn't considered that completely transformed the space. Great value for the quality delivered.", "datePublished": "2025-09-20" },
+    { "@type": "Review", "author": { "@type": "Person", "name": "Tom H." }, "reviewRating": { "@type": "Rating", "ratingValue": "5" }, "reviewBody": "Got both a new composite deck and privacy fence done in one project. Saved money by bundling, and the timeline was faster than expected. Very happy with the communication throughout.", "datePublished": "2025-08-15" },
   ]
 };
 
@@ -45,6 +52,7 @@ export default function ReviewsPage() {
   return (
     <>
       <JsonLd data={reviewSchema} />
+      <Breadcrumbs />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>What Our Clients Say</h1>
@@ -121,6 +129,7 @@ export default function ReviewsPage() {
       </article>
 
       <SimpleCTA title="Join 41+ Happy Homeowners" buttonText="Get Free Estimate" link="/contact" />
+      <RelatedGuides currentPath="/reviews" />
       <ContactHome />
     </>
   );

@@ -7,8 +7,11 @@ import ServiceContentExpansion from '@/components/ServiceContentExpansion';
 import ProcessSteps from '@/components/ProcessSteps';
 import ServicesFAQ from '@/components/ServicesFAQ';
 import ContactHome from '@/components/ContactHome';
+import RelatedGuides from '@/components/RelatedGuides';
+import RatingBadge from '@/components/RatingBadge';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import JsonLd from '@/components/JsonLd';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -109,6 +112,7 @@ const expansionSections = [
 export default function DeckBuilderLeesburgPage() {
     return (
           <main>
+      <Breadcrumbs />
             <JsonLd data={leesburgFaqSchema} />
             <ServicesHeader
           subtext="Leesburg, VA's Trusted Builder"
@@ -154,7 +158,8 @@ export default function DeckBuilderLeesburgPage() {
           faqs={leesburgFAQs}
         />
                   <ServiceAreasGrid />
-                  <ContactHome />
+                  <RelatedGuides currentPath="/deck-builder-leesburg-va" />
+      <ContactHome />
             </main>
     );
 }

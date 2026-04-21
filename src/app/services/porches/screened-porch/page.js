@@ -5,6 +5,8 @@ import ServiceInclusions from '@/components/ServiceInclusions';
 import ProcessSteps from '@/components/ProcessSteps';
 import ServicesFAQ from '@/components/ServicesFAQ';
 import ContactHome from '@/components/ContactHome';
+import ServiceSchema from '@/components/ServiceSchema';
+import RelatedGuides from '@/components/RelatedGuides';
 import ServiceVisual from '@/components/ServiceVisual';
 import { buildMetadata } from '@/lib/seo';
 
@@ -37,6 +39,7 @@ const faqs = [
 export default function ScreenedPorchPage() {
     return (
           <main>
+      <ServiceSchema name="Screened Porch Construction" description="Custom screened porches in Northern Virginia. Extend your outdoor season to 9-10 months. EZE-Breeze options available." price="25000" />
             <ServicesHeader
           subtext="Porch Services"
           title="Custom Screened-In Porches"
@@ -64,7 +67,8 @@ export default function ScreenedPorchPage() {
         />
                   <ProcessSteps />
                   <ServicesFAQ title="Screened Porch FAQs" faqs={faqs} />
-                  <ContactHome />
+                  <RelatedGuides currentPath="/services/porches/screened-porch" />
+      <ContactHome />
             </main>
     );
 }

@@ -9,6 +9,8 @@ import MasonryGallery from '@/components/MasonryGallery';
 import ProcessSteps from '@/components/ProcessSteps';
 import WhyChooseDetails from '@/components/WhyChooseDetails';
 import ContactHome from '@/components/ContactHome';
+import RelatedGuides from '@/components/RelatedGuides';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import styles from './CityPage.module.css';
 import { buildMetadata } from '@/lib/seo';
@@ -56,7 +58,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }) {
   const { county, city } = await params;
   const data = getCityData(county, city);
-  if (!data) return {};
+  if (!data) return { title: 'Location Not Found', robots: { index: false, follow: false } };
   return buildMetadata({
     path: `/near-you/${county}/${city}`,
             title: `Deck Builder in ${data.cityName} VA | LDN Decks`,
@@ -113,6 +115,7 @@ export default async function CityPage({ params }) {
 
   return (
     <main>
+      <Breadcrumbs />
       <ServicesHeader
         subtext={`5-Star Google Rated Specialist in ${countyName}`}
         title={`Deck Builder in ${cityName}`}
@@ -173,6 +176,7 @@ export default async function CityPage({ params }) {
       />
       <ProcessSteps />
       <ServiceAreasGrid />
+      <RelatedGuides currentPath={`/near-you/${county}/${citySlug}`} />
       <ContactHome />
     </main>
   );

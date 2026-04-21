@@ -16,15 +16,15 @@ export async function generateMetadata({ params }) {
   const { slug } = await params;
   const project = showcaseProjects.find((p) => p.slug === slug);
 
-  if (!project) return { title: "Project Not Found" };
+  if (!project) return { title: "Project Not Found", robots: { index: false, follow: false } };
 
-  return {
+  const { buildMetadata } = await import('@/lib/seo');
+  return buildMetadata({
+    path: `/showcase/${project.slug}`,
     title: `${project.title} | ${project.location}`,
-    description: `View details for our ${project.title.toLowerCase()} project in ${project.location}. Quality craftsmanship by Loudoun Decks.`,
-    openGraph: {
-      images: [project.image],
-    }
-  };
+    description: `View our ${project.title.toLowerCase()} project in ${project.location}. Professional deck & outdoor construction by Loudoun Decks, Northern Virginia's top-rated contractor.`,
+    image: project.image,
+  });
 }
 
 export default async function ProjectPage({ params }) {

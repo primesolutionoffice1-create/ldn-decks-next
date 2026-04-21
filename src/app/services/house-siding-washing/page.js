@@ -4,6 +4,7 @@ import ServiceMain from '@/components/ServiceMain';
 import ServiceInclusions from '@/components/ServiceInclusions';
 import ServicesFAQ from '@/components/ServicesFAQ';
 import ContactHome from '@/components/ContactHome';
+import RelatedGuides from '@/components/RelatedGuides';
 import ServiceVisual from '@/components/ServiceVisual';
 
 import { buildMetadata } from '@/lib/seo';
@@ -69,6 +70,7 @@ export default function HouseSidingWashingPage() {
         ]}
       />
 
+      <RelatedGuides currentPath="/services/house-siding-washing" />
       <ContactHome />
     </main>
   );

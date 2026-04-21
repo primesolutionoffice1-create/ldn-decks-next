@@ -5,6 +5,8 @@ import HowItWorksTriple from '@/components/HowItWorksTriple';
 import WhyChooseDetails from '@/components/WhyChooseDetails';
 import ServiceVisual from '@/components/ServiceVisual';
 import ContactHome from '@/components/ContactHome';
+import RelatedGuides from '@/components/RelatedGuides';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './NearYouPage.module.css';
@@ -34,6 +36,7 @@ const chooseItems = [
 export default function NearYouPage() {
   return (
     <main>
+      <Breadcrumbs />
       <ServicesHeader 
         subtext="Serving Northern Virginia"
         title="Deck Builder Near You"
@@ -89,6 +92,7 @@ export default function NearYouPage() {
         items={chooseItems}
       />
 
+      <RelatedGuides currentPath="/near-you" />
       <ContactHome />
     </main>
   );

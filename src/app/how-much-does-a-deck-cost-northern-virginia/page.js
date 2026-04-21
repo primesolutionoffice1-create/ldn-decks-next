@@ -2,8 +2,11 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
+import ArticleSchema from '@/components/ArticleSchema';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
+import RelatedGuides from '@/components/RelatedGuides';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -28,8 +31,17 @@ const faqSchema = {
 export default function DeckCostPage() {
   return (
     <>
+      <Breadcrumbs />
       <JsonLd data={faqSchema} />
-      
+      <ArticleSchema
+        title="How Much Does a Deck Cost in Northern Virginia?"
+        description="Composite deck costs $30-$75/sqft installed in Northern Virginia. Pressure-treated wood $18-$35/sqft. Real project costs, price tables & free estimate."
+        path="/how-much-does-a-deck-cost-northern-virginia"
+        image="/images/img10.jpeg"
+        datePublished="2025-03-01"
+        dateModified="2026-04-18"
+      />
+
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>How Much Does a Deck Cost in Northern Virginia?</h1>
@@ -37,7 +49,7 @@ export default function DeckCostPage() {
         </div>
       </section>
 
-      <section style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
+      <section data-speakable="true" style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
           <p>A standard composite deck in Northern Virginia costs <strong>$30–$75 per square foot installed</strong>, or <strong>$15,000–$45,000</strong> for a typical 300–500 sq ft project. Pressure-treated wood decks start at $18–$35/sqft. Northern Virginia runs 25–35% above the state average. <a href="tel:+15716557207" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Call (571) 655-7207</a> for a free, itemized quote.</p>
@@ -156,6 +168,7 @@ export default function DeckCostPage() {
       </article>
 
       <SimpleCTA title="Ready to Get Your Deck Priced?" buttonText="Get Free Estimate" link="/contact" />
+      <RelatedGuides currentPath="/how-much-does-a-deck-cost-northern-virginia" />
       <ContactHome />
     </>
   );

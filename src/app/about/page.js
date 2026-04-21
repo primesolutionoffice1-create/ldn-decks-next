@@ -4,6 +4,7 @@ import QualityLeader from '@/components/QualityLeader';
 import StatsRow from '@/components/StatsRow';
 import AboutDetails from '@/components/AboutDetails';
 import TeamGrid from '@/components/TeamGrid';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -15,6 +16,7 @@ export const metadata = buildMetadata({
 export default function AboutPage() {
     return (
           <main>
+      <Breadcrumbs />
             <AboutHeader />
             <QualityLeader />
             <StatsRow />

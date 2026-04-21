@@ -4,6 +4,7 @@ import ServiceMain from '@/components/ServiceMain';
 import ServiceInclusions from '@/components/ServiceInclusions';
 import ServicesFAQ from '@/components/ServicesFAQ';
 import ContactHome from '@/components/ContactHome';
+import RelatedGuides from '@/components/RelatedGuides';
 import ServiceVisual from '@/components/ServiceVisual';
 import ProcessSteps from '@/components/ProcessSteps';
 
@@ -98,6 +99,7 @@ export default function OutdoorWashingPage() {
         faqs={washingFAQs}
       />
 
+      <RelatedGuides currentPath="/services/outdoor-washing" />
       <ContactHome />
     </main>
   );

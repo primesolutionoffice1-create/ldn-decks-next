@@ -4,12 +4,19 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { blogPosts } from '@/lib/blogData';
 import { buildMetadata } from '@/lib/seo';
+import RelatedGuides from '@/components/RelatedGuides';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import styles from './BlogContent.module.css';
+
+// Pre-render all blog posts at build time for proper indexing
+export async function generateStaticParams() {
+  return blogPosts.map((post) => ({ slug: post.slug }));
+}
 
 export async function generateMetadata({ params }) {
   const resolvedParams = await params;
   const post = blogPosts.find(p => p.slug === resolvedParams.slug);
-  if (!post) return { title: 'Post Not Found' };
+  if (!post) return { title: 'Post Not Found', robots: { index: false, follow: false } };
   const base = buildMetadata({
     path: `/blog/${post.slug}`,
     title: post.title,
@@ -42,16 +49,37 @@ export default async function SingleBlogPage({ params }) {
     "headline": post.title,
     "image": [`https://www.ldndecks.com${post.image}`],
     "datePublished": new Date(post.date).toISOString(),
+    "dateModified": new Date(post.date).toISOString(),
     "author": [{
       "@type": "Organization",
       "name": post.author,
       "url": "https://www.ldndecks.com"
     }],
-    "description": post.excerpt
+    "publisher": {
+      "@type": "Organization",
+      "name": "Loudoun Decks",
+      "url": "https://www.ldndecks.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.ldndecks.com/ldndecks-logo.webp"
+      }
+    },
+    "description": post.excerpt,
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://www.ldndecks.com/blog/${post.slug}`
+    },
+    "isAccessibleForFree": true,
+    "inLanguage": "en-US",
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": [".leadParagraph", "h1", "h2"]
+    }
   };
 
   return (
     <article className={styles.articlePage}>
+       <Breadcrumbs />
        <script
          type="application/ld+json"
          dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
@@ -99,6 +127,7 @@ export default async function SingleBlogPage({ params }) {
              </div>
           </div>
        </div>
+       <RelatedGuides currentPath={`/blog/${post.slug}`} />
     </article>
   );
 }

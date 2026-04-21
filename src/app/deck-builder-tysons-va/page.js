@@ -4,6 +4,8 @@ import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
+import RelatedGuides from '@/components/RelatedGuides';
+import RatingBadge from '@/components/RatingBadge';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -88,6 +90,7 @@ export default function TysonsDeckBuilderPage() {
         </div>
       </article>
       <SimpleCTA title="Modern Deck for Modern Living" buttonText="Get Free Estimate" link="/contact" />
+      <RelatedGuides currentPath="/deck-builder-tysons-va" />
       <ContactHome />
     </>
   );

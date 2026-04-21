@@ -5,7 +5,10 @@ import ServiceInclusions from '@/components/ServiceInclusions';
 import ProcessSteps from '@/components/ProcessSteps';
 import ServicesFAQ from '@/components/ServicesFAQ';
 import ContactHome from '@/components/ContactHome';
+import ServiceSchema from '@/components/ServiceSchema';
+import RelatedGuides from '@/components/RelatedGuides';
 import ServiceVisual from '@/components/ServiceVisual';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -17,6 +20,8 @@ export const metadata = buildMetadata({
 export default function DeckReplacementPage() {
   return (
     <main>
+      <Breadcrumbs />
+      <ServiceSchema name="Deck Replacement" description="Complete deck demolition and rebuild. Wood to composite upgrades. Permits handled." price="25000" />
       <ServicesHeader 
         subtext="Deck Restoration"
         title="Full Deck Replacement Services"
@@ -52,6 +57,7 @@ export default function DeckReplacementPage() {
 
       <ProcessSteps />
 
+      <RelatedGuides currentPath="/deck-replacement" />
       <ContactHome />
     </main>
   );

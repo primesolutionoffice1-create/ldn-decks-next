@@ -6,6 +6,8 @@ import ServiceInclusions from '@/components/ServiceInclusions';
 import ServiceContentExpansion from '@/components/ServiceContentExpansion';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import ContactHome from '@/components/ContactHome';
+import ServiceSchema from '@/components/ServiceSchema';
+import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -85,6 +87,7 @@ const whyLdnDecks = [
 export default function UnderDeckPatiosPage() {
   return (
     <main>
+      <ServiceSchema name="Under-Deck Patio Systems" description="Dry-space ceiling systems that create usable patio space beneath elevated decks." price="8000" />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <ServicesHeader
         subtext="Under Deck Patio Loudoun VA"
@@ -128,6 +131,7 @@ export default function UnderDeckPatiosPage() {
         items={whyLdnDecks}
       />
       <ServiceAreasGrid />
+      <RelatedGuides currentPath="/services/under-deck-patios" />
       <ContactHome />
     </main>
   );

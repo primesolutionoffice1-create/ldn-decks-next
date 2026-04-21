@@ -6,6 +6,8 @@ import ServiceContentExpansion from '@/components/ServiceContentExpansion';
 import ProcessSteps from '@/components/ProcessSteps';
 import ServicesFAQ from '@/components/ServicesFAQ';
 import ContactHome from '@/components/ContactHome';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import RelatedGuides from '@/components/RelatedGuides';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import JsonLd from '@/components/JsonLd';
 import { buildMetadata, SITE_URL } from '@/lib/seo';
@@ -124,6 +126,7 @@ const expansionSections = [
 export default function DeckBuildersLoudounPage() {
       return (
               <main>
+      <Breadcrumbs />
                 <JsonLd data={loudounFaqSchema} />
                 <ServicesHeader
             subtext="Loudoun's Premier Choice"
@@ -147,7 +150,7 @@ export default function DeckBuildersLoudounPage() {
                       <ServiceContentExpansion sections={expansionSections} />
                       <ServiceInclusions
             title="Built by Neighbors, for Neighbors"
-            description="Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. Our work is the gold standard for the Loudoun Valley."
+            description="Trusted deck builder serving Loudoun, Fairfax & Prince William counties. Trex Platinum Partner. 5-star rated. Free estimates."
             items={inclusions}
           />
                       <ProcessSteps />
@@ -156,7 +159,8 @@ export default function DeckBuildersLoudounPage() {
             faqs={loudounFAQs}
           />
                       <ServiceAreasGrid />
-                      <ContactHome />
+                      <RelatedGuides currentPath="/deck-builders-loudoun" />
+      <ContactHome />
                 </main>
       );
 }

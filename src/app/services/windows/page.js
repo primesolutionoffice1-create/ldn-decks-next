@@ -6,6 +6,8 @@ import ServiceContentExpansion from '@/components/ServiceContentExpansion';
 import ProcessSteps from '@/components/ProcessSteps';
 import ServicesFAQ from '@/components/ServicesFAQ';
 import ContactHome from '@/components/ContactHome';
+import ServiceSchema from '@/components/ServiceSchema';
+import RelatedGuides from '@/components/RelatedGuides';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 
 import { buildMetadata } from '@/lib/seo';
@@ -110,6 +112,7 @@ const expansionSections = [
 export default function WindowsPage() {
   return (
     <main>
+      <ServiceSchema name="Window Installation" description="Residential window replacement and installation in Northern Virginia." price="5000" />
       <ServicesHeader 
         subtext="5-Star Google Rated Experts"
         title="Window Replacement & Installation"
@@ -148,6 +151,7 @@ export default function WindowsPage() {
 
       <ServiceAreasGrid />
 
+      <RelatedGuides currentPath="/services/windows" />
       <ContactHome />
     </main>
   );

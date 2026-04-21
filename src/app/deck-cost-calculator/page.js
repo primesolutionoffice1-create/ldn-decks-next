@@ -1,0 +1,215 @@
+'use client';
+import React, { useState } from 'react';
+import Link from 'next/link';
+
+// This page is a LINKABLE ASSET — designed to attract backlinks from
+// real estate blogs, home improvement sites, and local news.
+// Embeddable widget code at the bottom encourages other sites to link back.
+
+const materials = [
+  { name: 'Pressure-Treated Wood', min: 18, max: 35, lifespan: '10-15 years' },
+  { name: 'Cedar', min: 25, max: 45, lifespan: '15-20 years' },
+  { name: 'Trex Enhance', min: 30, max: 50, lifespan: '25+ years' },
+  { name: 'Trex Transcend', min: 45, max: 65, lifespan: '25+ years' },
+  { name: 'TimberTech AZEK', min: 50, max: 75, lifespan: '30-50 years' },
+];
+
+const addons = [
+  { name: 'Stairs (per flight)', min: 1500, max: 4000 },
+  { name: 'Composite Railings', min: 3000, max: 8000 },
+  { name: 'Cable Railings', min: 5000, max: 12000 },
+  { name: 'Built-in Lighting', min: 1500, max: 4000 },
+  { name: 'Pergola', min: 5000, max: 15000 },
+  { name: 'Screened Porch Conversion', min: 15000, max: 40000 },
+];
+
+export default function DeckCostCalculator() {
+  const [sqft, setSqft] = useState(350);
+  const [material, setMaterial] = useState(2);
+  const [selectedAddons, setSelectedAddons] = useState([]);
+
+  const mat = materials[material];
+  const baseLow = sqft * mat.min;
+  const baseHigh = sqft * mat.max;
+  const addonLow = selectedAddons.reduce((sum, i) => sum + addons[i].min, 0);
+  const addonHigh = selectedAddons.reduce((sum, i) => sum + addons[i].max, 0);
+  const totalLow = baseLow + addonLow;
+  const totalHigh = baseHigh + addonHigh;
+  // NoVA premium: 25-35%
+  const novaLow = Math.round(totalLow * 1.25);
+  const novaHigh = Math.round(totalHigh * 1.35);
+
+  const fmt = (n) => '$' + n.toLocaleString();
+
+  const toggleAddon = (i) => {
+    setSelectedAddons(prev =>
+      prev.includes(i) ? prev.filter(x => x !== i) : [...prev, i]
+    );
+  };
+
+  return (
+    <main style={{ background: '#fff' }}>
+      <section style={{ background: 'var(--color-dark, #1a1a2e)', color: '#fff', padding: '4rem 0' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
+          <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Northern Virginia Deck Cost Calculator</h1>
+          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Get an instant estimate for your deck project. Prices reflect 2026 Northern Virginia market rates.</p>
+        </div>
+      </section>
+
+      <section style={{ padding: '3rem 0' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+            {/* Left: Inputs */}
+            <div>
+              <h2 style={{ fontSize: '1.3rem', fontWeight: 700, marginBottom: '1.5rem' }}>Configure Your Deck</h2>
+
+              <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 600 }}>
+                Deck Size: {sqft} sq ft
+              </label>
+              <input
+                type="range"
+                min={100}
+                max={800}
+                value={sqft}
+                onChange={(e) => setSqft(Number(e.target.value))}
+                style={{ width: '100%', marginBottom: '1.5rem' }}
+              />
+              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.8rem', color: '#888', marginTop: '-1rem', marginBottom: '1.5rem' }}>
+                <span>100 sqft</span><span>800 sqft</span>
+              </div>
+
+              <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 600 }}>Material</label>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', marginBottom: '1.5rem' }}>
+                {materials.map((m, i) => (
+                  <button
+                    key={i}
+                    onClick={() => setMaterial(i)}
+                    style={{
+                      padding: '0.75rem 1rem',
+                      border: i === material ? '2px solid var(--color-primary, #d14817)' : '1px solid #ddd',
+                      borderRadius: 8,
+                      background: i === material ? '#fff3e0' : '#fff',
+                      cursor: 'pointer',
+                      textAlign: 'left',
+                      fontWeight: i === material ? 600 : 400,
+                    }}
+                  >
+                    {m.name} <span style={{ color: '#888', fontSize: '0.85rem' }}>({fmt(m.min)}-{fmt(m.max)}/sqft · {m.lifespan})</span>
+                  </button>
+                ))}
+              </div>
+
+              <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 600 }}>Add-Ons (optional)</label>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.35rem', marginBottom: '1.5rem' }}>
+                {addons.map((a, i) => (
+                  <label key={i} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.5rem', borderRadius: 6, background: selectedAddons.includes(i) ? '#f0f7ff' : '#fafafa', cursor: 'pointer' }}>
+                    <input type="checkbox" checked={selectedAddons.includes(i)} onChange={() => toggleAddon(i)} />
+                    <span>{a.name}</span>
+                    <span style={{ marginLeft: 'auto', color: '#888', fontSize: '0.85rem' }}>{fmt(a.min)}-{fmt(a.max)}</span>
+                  </label>
+                ))}
+              </div>
+            </div>
+
+            {/* Right: Results */}
+            <div>
+              <div style={{ background: '#f8f9fa', borderRadius: 12, padding: '2rem', position: 'sticky', top: '2rem' }}>
+                <h2 style={{ fontSize: '1.3rem', fontWeight: 700, marginBottom: '1.5rem' }}>Your Estimate</h2>
+
+                <div style={{ marginBottom: '1rem' }}>
+                  <p style={{ color: '#888', fontSize: '0.85rem', marginBottom: '0.25rem' }}>Base Deck ({sqft} sqft × {mat.name})</p>
+                  <p style={{ fontSize: '1.2rem', fontWeight: 600 }}>{fmt(baseLow)} – {fmt(baseHigh)}</p>
+                </div>
+
+                {selectedAddons.length > 0 && (
+                  <div style={{ marginBottom: '1rem' }}>
+                    <p style={{ color: '#888', fontSize: '0.85rem', marginBottom: '0.25rem' }}>Add-Ons</p>
+                    <p style={{ fontSize: '1.2rem', fontWeight: 600 }}>+ {fmt(addonLow)} – {fmt(addonHigh)}</p>
+                  </div>
+                )}
+
+                <div style={{ borderTop: '2px solid #ddd', paddingTop: '1rem', marginTop: '1rem' }}>
+                  <p style={{ color: '#888', fontSize: '0.85rem', marginBottom: '0.25rem' }}>Northern Virginia Estimate (incl. 25-35% regional premium)</p>
+                  <p style={{ fontSize: '2rem', fontWeight: 700, color: 'var(--color-primary, #d14817)' }}>
+                    {fmt(novaLow)} – {fmt(novaHigh)}
+                  </p>
+                  <p style={{ color: '#888', fontSize: '0.8rem' }}>Includes materials, labor, permits & cleanup</p>
+                </div>
+
+                <div style={{ marginTop: '1.5rem' }}>
+                  <Link
+                    href="/contact"
+                    style={{
+                      display: 'block',
+                      textAlign: 'center',
+                      background: 'var(--color-primary, #d14817)',
+                      color: '#fff',
+                      padding: '1rem',
+                      borderRadius: 8,
+                      fontWeight: 700,
+                      textDecoration: 'none',
+                      fontSize: '1.1rem',
+                    }}
+                  >
+                    Get Your Free Detailed Quote
+                  </Link>
+                  <p style={{ textAlign: 'center', color: '#888', fontSize: '0.8rem', marginTop: '0.5rem' }}>Or call (571) 655-7207</p>
+                </div>
+
+                <div style={{ marginTop: '1.5rem', padding: '1rem', background: '#fff', borderRadius: 8, border: '1px solid #e5e5e5' }}>
+                  <p style={{ fontWeight: 600, fontSize: '0.85rem', marginBottom: '0.5rem' }}>About this estimate</p>
+                  <p style={{ fontSize: '0.8rem', color: '#666', lineHeight: 1.6 }}>
+                    Based on 2026 Northern Virginia market rates from 200+ completed projects by Loudoun Decks.
+                    Actual costs vary by site conditions, HOA requirements, and design complexity.
+                    For an exact price, request a free on-site consultation.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Embed Code Section — this is what makes it a LINKABLE ASSET */}
+          <div style={{ marginTop: '4rem', padding: '2rem', background: '#f0f7ff', borderRadius: 12, border: '1px solid #cce0ff' }}>
+            <h2 style={{ fontSize: '1.3rem', fontWeight: 700, marginBottom: '0.5rem' }}>Embed This Calculator on Your Website</h2>
+            <p style={{ color: '#666', marginBottom: '1rem', fontSize: '0.9rem' }}>
+              Real estate agents, home improvement bloggers, and HOA communities — feel free to embed this calculator. Just copy the code below:
+            </p>
+            <pre style={{ background: '#1a1a2e', color: '#4ade80', padding: '1rem', borderRadius: 8, overflow: 'auto', fontSize: '0.8rem', lineHeight: 1.5 }}>
+{`<iframe
+  src="https://www.ldndecks.com/deck-cost-calculator"
+  width="100%"
+  height="900"
+  frameborder="0"
+  title="Northern Virginia Deck Cost Calculator by Loudoun Decks"
+></iframe>
+<p style="font-size:12px;color:#888;">
+  Calculator by <a href="https://www.ldndecks.com">Loudoun Decks</a> —
+  Northern Virginia's Top-Rated Deck Builder
+</p>`}
+            </pre>
+          </div>
+
+          {/* Related guides */}
+          <div style={{ marginTop: '3rem', padding: '2rem 0', borderTop: '1px solid #e5e5e5' }}>
+            <h2 style={{ fontSize: '1.3rem', fontWeight: 700, marginBottom: '1rem' }}>Learn More About Deck Costs</h2>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1rem' }}>
+              <Link href="/how-much-does-a-deck-cost-northern-virginia" style={{ padding: '1rem', border: '1px solid #e5e5e5', borderRadius: 8, textDecoration: 'none', color: 'inherit' }}>
+                <p style={{ fontWeight: 600, color: 'var(--color-primary, #d14817)' }}>Deck Cost Guide 2026</p>
+                <p style={{ fontSize: '0.85rem', color: '#666' }}>Full pricing breakdown by material</p>
+              </Link>
+              <Link href="/trex-vs-timbertech-vs-azek" style={{ padding: '1rem', border: '1px solid #e5e5e5', borderRadius: 8, textDecoration: 'none', color: 'inherit' }}>
+                <p style={{ fontWeight: 600, color: 'var(--color-primary, #d14817)' }}>Trex vs TimberTech vs AZEK</p>
+                <p style={{ fontSize: '0.85rem', color: '#666' }}>Compare brands side by side</p>
+              </Link>
+              <Link href="/does-a-deck-add-value-to-your-home" style={{ padding: '1rem', border: '1px solid #e5e5e5', borderRadius: 8, textDecoration: 'none', color: 'inherit' }}>
+                <p style={{ fontWeight: 600, color: 'var(--color-primary, #d14817)' }}>Deck ROI & Home Value</p>
+                <p style={{ fontSize: '0.85rem', color: '#666' }}>How much value does a deck add?</p>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  );
+}

@@ -139,6 +139,7 @@ export default async function sitemap() {
                 { path: "/deck-builder-springfield-va",                 priority: 0.88, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-builder-lorton-va",                      priority: 0.85, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-builder-purcellville-va",                priority: 0.85, lastMod: TIER1, freq: "weekly" },
+                { path: "/stamped-concrete-patio-northern-virginia",    priority: 0.85, lastMod: TIER1, freq: "weekly" },
 
                 // Tier 4 - Evergreen / rarely changes
                 { path: "/about",                        priority: 0.65, lastMod: TIER4, freq: "monthly" },

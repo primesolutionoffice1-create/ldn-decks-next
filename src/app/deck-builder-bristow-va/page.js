@@ -1,7 +1,7 @@
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
@@ -24,7 +24,6 @@ export default function BristowDeckBuilderPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <Breadcrumbs />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Custom Deck Builder in Bristow, VA</h1>
@@ -38,7 +37,17 @@ export default function BristowDeckBuilderPage() {
       </section>
       <article style={{ padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Bristow — Builder-Grade to Custom-Grade</h2>
+          <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
+            <Image
+              src="/images/img26.jpeg"
+              alt="Premium custom deck built by LDN Decks in Bristow, Virginia"
+              fill
+              style={{ objectFit: 'cover' }}
+              sizes="(max-width: 900px) 100vw, 900px"
+              priority
+            />
+          </div>
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Bristow — Growing Spaces for Growing Families</h2>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Bristow&apos;s communities (built mostly 2005-2018) are entering the deck upgrade cycle. Builder-grade PT wood decks installed 7-15 years ago are now graying, splintering, and requiring annual staining. We transform these into modern composite decks — often resurfacing the existing frame to save 40-60%.</p>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Resurfacing specialists:</strong> Many Bristow frames (7-15 years old) are structurally sound — save big by keeping the frame</li>

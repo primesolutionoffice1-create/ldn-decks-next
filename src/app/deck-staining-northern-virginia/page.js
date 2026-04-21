@@ -1,7 +1,7 @@
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
@@ -28,7 +28,6 @@ export default function DeckStainingPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <Breadcrumbs />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -40,12 +39,23 @@ export default function DeckStainingPage() {
       <article style={{ padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
 
+          <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
+            <Image
+              src="/images/img60.jpeg"
+              alt="Professional deck staining and wood protection in Northern Virginia"
+              fill
+              style={{ objectFit: 'cover' }}
+              sizes="(max-width: 900px) 100vw, 900px"
+              priority
+            />
+          </div>
+
           <h2 style={S.h2}>Why Your Wood Deck Needs Staining in Virginia</h2>
           <p style={S.p}>Virginia&apos;s climate is brutal on untreated wood. Without staining and sealing:</p>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Freeze-thaw (50-80 cycles/winter):</strong> Water penetrates wood grain, freezes, expands, splits boards from the inside</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>UV damage (200+ sunny days/year):</strong> Bleaches wood to gray within 12 months, breaks down lignin fibers</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Humidity (70-90% in summer):</strong> Promotes mold, mildew, and rot — especially on shaded sections</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Humidity (70-90% in summer):</strong> Promotes mold, mildew, and rot especially on shaded sections</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Result without staining:</strong> A new PT wood deck deteriorates visibly within 2 years and structurally within 5-8 years</li>
           </ul>
 
@@ -119,7 +129,7 @@ export default function DeckStainingPage() {
 
           <div style={{ background: '#e8f5e9', borderRadius: 8, padding: '1.5rem', marginBottom: '2rem' }}>
             <h3 style={{ fontWeight: 700, color: '#2e7d32', marginBottom: '0.5rem' }}>Tired of Restaining Every 2 Years?</h3>
-            <p style={{ lineHeight: 1.7 }}>Consider <Link href="/services/deck-resurfacing" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck resurfacing</Link> with composite. We remove your old wood boards, keep the frame, and install Trex or TimberTech decking that never needs staining. It&apos;s the last stain job you&apos;ll ever need — and over 10+ years, it&apos;s cheaper than repeated staining. <Link href="/composite-deck-vs-wood-deck-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>See the full cost comparison</Link>.</p>
+            <p style={{ lineHeight: 1.7 }}>Consider <Link href="/services/deck-resurfacing" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck resurfacing</Link> with composite. We remove your old wood boards, keep the frame, and install Trex or TimberTech decking that never needs staining. It&apos;s the last stain job you&apos;ll ever need and over 10+ years, it&apos;s cheaper than repeated staining. <Link href="/composite-deck-vs-wood-deck-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>See the full cost comparison</Link>.</p>
           </div>
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Frequently Asked Questions</h2>

@@ -1,7 +1,7 @@
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
@@ -43,15 +43,24 @@ export default function DeckDesignIdeasPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <Breadcrumbs />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>15 Deck Design Ideas for Northern Virginia</h1>
-          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>2026 trends and inspiration from real projects — find the design that fits your home</p>
+          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>2026 trends and inspiration from real projects find the design that fits your home</p>
         </div>
       </section>
       <article style={{ padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
+          <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
+            <Image
+              src="/images/img13.jpeg"
+              alt="Modern 2026 deck design ideas for Northern Virginia homes"
+              fill
+              style={{ objectFit: 'cover' }}
+              sizes="(max-width: 900px) 100vw, 900px"
+              priority
+            />
+          </div>
           <div style={{ display: 'grid', gap: '1.5rem', marginBottom: '3rem' }}>
             {designs.map((d, i) => (
               <div key={i} style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', borderLeft: '4px solid var(--color-primary)' }}>

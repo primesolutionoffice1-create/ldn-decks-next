@@ -1,7 +1,7 @@
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
@@ -28,7 +28,6 @@ export default function DeckVsPatioPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <Breadcrumbs />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -46,6 +45,17 @@ export default function DeckVsPatioPage() {
 
       <article style={{ padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
+
+          <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
+            <Image
+              src="/images/img32.jpeg"
+              alt="Custom deck and patio combination build in Northern Virginia"
+              fill
+              style={{ objectFit: 'cover' }}
+              sizes="(max-width: 900px) 100vw, 900px"
+              priority
+            />
+          </div>
 
           <h2 style={S.h2}>Side-by-Side Comparison</h2>
           <div style={{ overflowX: 'auto', marginBottom: '2rem' }}>
@@ -85,7 +95,7 @@ export default function DeckVsPatioPage() {
 
           <h2 style={S.h2}>When a Patio Wins</h2>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
-            <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Flat, level yard:</strong> No need for an elevated structure — pavers sit directly on a gravel base.</li>
+            <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Flat, level yard:</strong> No need for an elevated structure pavers sit directly on a gravel base.</li>
             <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Fire pit area:</strong> Ground-level is safer and more natural for fire features. You can&apos;t put a fire pit on a composite deck.</li>
             <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Pool surround:</strong> Pavers handle water better and stay cooler than most deck surfaces.</li>
             <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Budget priority:</strong> 20–40% less than a comparable deck. Great value for the space.</li>

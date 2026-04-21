@@ -1,7 +1,7 @@
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
@@ -28,12 +28,11 @@ export default function DeckFinancingPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <Breadcrumbs />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Deck Financing Options</h1>
-          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Build your dream deck now — affordable monthly payments, quick approval</p>
+          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Build your dream deck now affordable monthly payments, quick approval</p>
           <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             <a href="tel:+15716557207" style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</a>
             <Link href="/contact" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Estimate</Link>
@@ -44,13 +43,24 @@ export default function DeckFinancingPage() {
       <article style={{ padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
 
+          <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
+            <Image
+              src="/images/img01.jpeg"
+              alt="Modern outdoor deck build made affordable with financing options"
+              fill
+              style={{ objectFit: 'cover' }}
+              sizes="(max-width: 900px) 100vw, 900px"
+              priority
+            />
+          </div>
+
           <h2 style={S.h2}>How Deck Financing Works</h2>
           <ol style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
-            <li style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Get your free estimate</strong> — we design your deck and provide a detailed, itemized quote.</li>
-            <li style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Apply in minutes</strong> — quick online application through our lending partners. Soft credit check (no impact on your score) for pre-qualification.</li>
-            <li style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Choose your terms</strong> — select from 12, 24, 36, 48, or 60-month payment plans. Fixed rates, no hidden fees.</li>
-            <li style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>We build your deck</strong> — construction starts per the agreed schedule. You make your first payment after the project begins.</li>
-            <li style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Enjoy now, pay over time</strong> — your deck adds value to your home from day one while you spread the cost comfortably.</li>
+            <li style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Get your free estimate</strong> we design your deck and provide a detailed, itemized quote.</li>
+            <li style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Apply in minutes</strong> quick online application through our lending partners. Soft credit check (no impact on your score) for pre-qualification.</li>
+            <li style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Choose your terms</strong> select from 12, 24, 36, 48, or 60-month payment plans. Fixed rates, no hidden fees.</li>
+            <li style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>We build your deck</strong> construction starts per the agreed schedule. You make your first payment after the project begins.</li>
+            <li style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Enjoy now, pay over time</strong> your deck adds value to your home from day one while you spread the cost comfortably.</li>
           </ol>
 
           <h2 style={S.h2}>Typical Monthly Payments</h2>

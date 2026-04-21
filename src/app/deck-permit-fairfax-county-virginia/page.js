@@ -1,7 +1,7 @@
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
@@ -28,7 +28,6 @@ export default function FairfaxPermitPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <Breadcrumbs />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -47,6 +46,17 @@ export default function FairfaxPermitPage() {
       <article style={{ padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
 
+          <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
+            <Image
+              src="/images/img20.jpeg"
+              alt="Structural deck framing and footing detail for Fairfax County permit inspection"
+              fill
+              style={{ objectFit: 'cover' }}
+              sizes="(max-width: 900px) 100vw, 900px"
+              priority
+            />
+          </div>
+
           <h2 style={S.h2}>When Is a Permit Required?</h2>
           <p style={S.p}>Fairfax County requires a building permit for decks that meet any of these criteria:</p>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
@@ -60,14 +70,14 @@ export default function FairfaxPermitPage() {
           <h2 style={S.h2}>Fairfax County Permit Process (Step by Step)</h2>
           <ol style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
             <li style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Prepare plans and documents:</strong> Site plan showing deck footprint, property lines, and setbacks. Structural drawings with footing sizes, beam spans, joist spacing. Material specifications. For decks meeting the Fairfax County Typical Deck Detail, simplified plans are accepted.</li>
-            <li style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Zoning review:</strong> Fairfax County reviews your deck&apos;s position relative to setback lines, lot coverage limits, and any applicable proffers or easements. This is the step that catches most homeowners off guard — setbacks in Fairfax are often 25–35 feet from the rear property line.</li>
-            <li style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Building plan review:</strong> A structural reviewer checks your plans for code compliance — footing depth (below 30&quot; frost line), beam sizing, ledger connection, railing height (36&quot; minimum, 42&quot; if over 30&quot; above grade), and stair specifications.</li>
+            <li style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Zoning review:</strong> Fairfax County reviews your deck&apos;s position relative to setback lines, lot coverage limits, and any applicable proffers or easements. This is the step that catches most homeowners off guard setbacks in Fairfax are often 25–35 feet from the rear property line.</li>
+            <li style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Building plan review:</strong> A structural reviewer checks your plans for code compliance footing depth (below 30&quot; frost line), beam sizing, ledger connection, railing height (36&quot; minimum, 42&quot; if over 30&quot; above grade), and stair specifications.</li>
             <li style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Permit issuance:</strong> Once approved, the permit is issued and must be posted visibly at the job site during construction.</li>
             <li style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Three inspections during construction:</strong>
               <ul style={{ paddingLeft: '1.25rem', marginTop: '0.5rem' }}>
-                <li>Footing inspection — holes dug, before concrete is poured</li>
-                <li>Framing inspection — joists, beams, ledger, hardware installed, before decking goes on</li>
-                <li>Final inspection — complete structure including railings, stairs, and fasteners</li>
+                <li>Footing inspection holes dug, before concrete is poured</li>
+                <li>Framing inspection joists, beams, ledger, hardware installed, before decking goes on</li>
+                <li>Final inspection complete structure including railings, stairs, and fasteners</li>
               </ul>
             </li>
           </ol>

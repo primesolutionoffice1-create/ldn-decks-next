@@ -1,7 +1,7 @@
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
@@ -15,9 +15,9 @@ export const metadata = buildMetadata({
 const faqSchema = {
   "@context": "https://schema.org", "@type": "FAQPage",
   mainEntity: [
-    { "@type": "Question", name: "How do I winterize my deck in Virginia?", acceptedAnswer: { "@type": "Answer", text: "Clean all debris, inspect for damage, apply stain/sealant (wood only), check flashing, move furniture, clear gutters above deck. Do this before first frost (typically late October in Northern Virginia). Composite decks need less — just clean debris and inspect hardware." } },
-    { "@type": "Question", name: "Can I use salt on my deck in winter?", acceptedAnswer: { "@type": "Answer", text: "No — rock salt and calcium chloride can damage both wood and composite decking. Use sand or kitty litter for traction. For ice, use a plastic shovel and let sun/salt-free de-icer do the work." } },
-    { "@type": "Question", name: "Should I cover my deck in winter?", acceptedAnswer: { "@type": "Answer", text: "No need to cover the entire deck — that traps moisture and promotes mold. Do cover or store outdoor furniture, cushions, and grills. Leave the deck surface exposed for air circulation." } },
+    { "@type": "Question", name: "How do I winterize my deck in Virginia?", acceptedAnswer: { "@type": "Answer", text: "Clean all debris, inspect for damage, apply stain/sealant (wood only), check flashing, move furniture, clear gutters above deck. Do this before first frost (typically late October in Northern Virginia). Composite decks need less just clean debris and inspect hardware." } },
+    { "@type": "Question", name: "Can I use salt on my deck in winter?", acceptedAnswer: { "@type": "Answer", text: "No rock salt and calcium chloride can damage both wood and composite decking. Use sand or kitty litter for traction. For ice, use a plastic shovel and let sun/salt-free de-icer do the work." } },
+    { "@type": "Question", name: "Should I cover my deck in winter?", acceptedAnswer: { "@type": "Answer", text: "No need to cover the entire deck that traps moisture and promotes mold. Do cover or store outdoor furniture, cushions, and grills. Leave the deck surface exposed for air circulation." } },
   ],
 };
 
@@ -27,7 +27,6 @@ export default function WinterizeDeckPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <Breadcrumbs />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>How to Winterize Your Deck in Northern Virginia</h1>
@@ -37,18 +36,27 @@ export default function WinterizeDeckPage() {
       <section style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>When to do this:</p>
-          <p><strong>October — before the first frost.</strong> Northern Virginia typically sees first freeze in late October / early November. Complete all steps while temps are above 50°F (needed for stain/sealant to cure).</p>
+          <p><strong>October before the first frost.</strong> Northern Virginia typically sees first freeze in late October / early November. Complete all steps while temps are above 50°F (needed for stain/sealant to cure).</p>
         </div>
       </section>
       <article style={{ padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-
+          <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
+            <Image
+              src="/images/img60.jpeg"
+              alt="Protecting a deck from winter weather in Northern Virginia"
+              fill
+              style={{ objectFit: 'cover' }}
+              sizes="(max-width: 900px) 100vw, 900px"
+              priority
+            />
+          </div>
           <h2 style={S.h2}>10-Step Winterization Checklist</h2>
           <ol style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
             {[
               { step: 'Clear ALL leaves and debris', detail: 'Wet leaves trap moisture against the deck surface, promoting mold and rot over winter. Clear between board gaps with a putty knife or deck gap tool.' },
               { step: 'Deep clean the surface', detail: 'Sweep, then wash with deck cleaner and soft brush. Power wash wood decks at 1,200–1,500 PSI max. Composite: soap and water only.' },
-              { step: 'Inspect every board', detail: 'Look for: soft spots (poke with screwdriver), cracks, splits, popped nails/screws, loose boards. Fix before winter — damage worsens with freeze-thaw.' },
+              { step: 'Inspect every board', detail: 'Look for: soft spots (poke with screwdriver), cracks, splits, popped nails/screws, loose boards. Fix before winter damage worsens with freeze-thaw.' },
               { step: 'Check railing posts', detail: 'Push-test every post. Wobbly posts mean water has entered the base connection. Tighten or replace before freeze-thaw makes it worse.' },
               { step: 'Inspect the ledger board', detail: 'Where the deck meets the house is the #1 failure point. Look for gaps, rusted flashing, water stains on the wall below. Seal any gaps with appropriate flashing and sealant.' },
               { step: 'Apply stain/sealant (wood decks only)', detail: 'If water no longer beads on the surface, apply a fresh coat. Needs 48 hours of above-50°F temps to cure. This is the single most important wood deck winterization step.' },
@@ -88,15 +96,15 @@ export default function WinterizeDeckPage() {
             </div>
           </div>
 
-          <h2 style={S.h2}>Wood vs Composite — Winter Differences</h2>
-          <p style={S.p}><strong>Wood decks</strong> are vulnerable to freeze-thaw. Water enters the grain, freezes, expands, and cracks boards from the inside. A fresh stain/sealant coat before winter is essential — it&apos;s the barrier between your wood and 50–80 freeze-thaw cycles.</p>
+          <h2 style={S.h2}>Wood vs Composite Winter Differences</h2>
+          <p style={S.p}><strong>Wood decks</strong> are vulnerable to freeze-thaw. Water enters the grain, freezes, expands, and cracks boards from the inside. A fresh stain/sealant coat before winter is essential it&apos;s the barrier between your wood and 50–80 freeze-thaw cycles.</p>
           <p style={S.p}><strong>Composite decks</strong> are largely immune to freeze-thaw because the capped surface prevents moisture entry. Winterization is simpler: clear debris, inspect hardware, done. This is the #1 reason homeowners switch to composite. <Link href="/composite-deck-vs-wood-deck-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Read the full comparison</Link>.</p>
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>FAQ</h2>
           {[
             { q: "How do I winterize my deck?", a: "Clean debris, inspect for damage, stain/seal (wood only), check flashing, store furniture. Do before first frost (late October in NoVA)." },
-            { q: "Can I use salt on my deck?", a: "No — damages both wood and composite. Use sand or kitty litter for traction." },
-            { q: "Should I cover my deck?", a: "No — covers trap moisture. Store furniture, but leave the deck surface exposed for air circulation." },
+            { q: "Can I use salt on my deck?", a: "No damages both wood and composite. Use sand or kitty litter for traction." },
+            { q: "Should I cover my deck?", a: "No covers trap moisture. Store furniture, but leave the deck surface exposed for air circulation." },
           ].map((faq, i) => (
             <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
               <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>

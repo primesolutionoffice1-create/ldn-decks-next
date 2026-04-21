@@ -1,7 +1,7 @@
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
@@ -17,7 +17,7 @@ const faqSchema = {
   mainEntity: [
     { "@type": "Question", name: "What is the best decking material for dogs?", acceptedAnswer: { "@type": "Answer", text: "Capped composite (Trex Transcend or TimberTech AZEK) is the best decking for dogs. It resists scratches from claws, doesn't splinter (safe for paws), stays cooler than wood in sun, and cleans easily. Avoid uncapped or low-end composites that scratch more easily." } },
     { "@type": "Question", name: "Will dog claws scratch composite decking?", acceptedAnswer: { "@type": "Answer", text: "Light surface scratches are possible but capped composites (Trex Transcend, TimberTech AZEK) are highly scratch-resistant. Any minor marks blend into the wood-grain texture over time. Pressure-treated wood shows claw marks more visibly and splinters into paws." } },
-    { "@type": "Question", name: "How do I keep my dog safe on a deck?", acceptedAnswer: { "@type": "Answer", text: "Key safety features: railing balusters spaced 3 inches or less (prevents head entrapment), pet gates at stairs, no toxic stains or treatments, shade area for hot days, and fresh water station. Avoid cable railings — dogs can squeeze through or get tangled." } },
+    { "@type": "Question", name: "How do I keep my dog safe on a deck?", acceptedAnswer: { "@type": "Answer", text: "Key safety features: railing balusters spaced 3 inches or less (prevents head entrapment), pet gates at stairs, no toxic stains or treatments, shade area for hot days, and fresh water station. Avoid cable railings dogs can squeeze through or get tangled." } },
   ],
 };
 
@@ -27,17 +27,25 @@ export default function PetFriendlyDeckPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <Breadcrumbs />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Pet-Friendly Deck Design</h1>
-          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Build a deck your dog (and you) will love — materials, safety features, and design tips</p>
+          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Build a deck your dog (and you) will love materials, safety features, and design tips</p>
         </div>
       </section>
       <article style={{ padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-
-          <h2 style={S.h2}>Best Decking Materials for Pets</h2>
+          <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
+            <Image
+              src="/images/img37.jpeg"
+              alt="Designing a pet-friendly deck with built-in safety features"
+              fill
+              style={{ objectFit: 'cover' }}
+              sizes="(max-width: 900px) 100vw, 900px"
+              priority
+            />
+          </div>
+          <h2 style={S.h2}>Standard vs. Pet-Optimized Deck Designs</h2>
           <div style={{ overflowX: 'auto', marginBottom: '2rem' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.9rem' }}>
               <thead><tr style={{ background: '#f5f5f5' }}>{['Material', 'Scratch Resistance', 'Splinter-Free', 'Heat', 'Easy to Clean', 'Pet Rating'].map(h => <th key={h} style={{ padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #ddd' }}>{h}</th>)}</tr></thead>
@@ -61,12 +69,12 @@ export default function PetFriendlyDeckPage() {
           <ol style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
             {[
               { title: 'Composite decking (capped)', detail: 'No splinters in paws, resists claw scratches, cleans pet messes easily with soap and water. The #1 pet-friendly upgrade.' },
-              { title: 'Close-spaced balusters (3" or less)', detail: 'Standard code is 4" max, but for small dogs and puppies, specify 3" spacing. Prevents head entrapment. Avoid cable railings — dogs can squeeze through or get caught.' },
+              { title: 'Close-spaced balusters (3" or less)', detail: 'Standard code is 4" max, but for small dogs and puppies, specify 3" spacing. Prevents head entrapment. Avoid cable railings dogs can squeeze through or get caught.' },
               { title: 'Pet gates at stairs', detail: 'Built-in gate mounts at the top and bottom of deck stairs. Keeps dogs on the deck when unsupervised. We can integrate gate hardware into the railing design.' },
-              { title: 'Shade zone', detail: 'A pergola or canopy section so your dog has escape from direct sun. Virginia summers hit 90°F+ — deck surfaces can reach 130°F. Dogs need shade.' },
+              { title: 'Shade zone', detail: 'A pergola or canopy section so your dog has escape from direct sun. Virginia summers hit 90°F+ deck surfaces can reach 130°F. Dogs need shade.' },
               { title: 'Fresh water station', detail: 'A built-in hose bib connection or designated area for a water bowl. Small detail that makes daily life easier.' },
               { title: 'Easy-access ramp (for older dogs)', detail: 'If your deck is elevated, a wide ramp alongside the stairs lets senior dogs or dogs with joint issues access the deck comfortably.' },
-              { title: 'Designated wash zone', detail: 'A section of the deck near the hose connection with a slight drainage slope — perfect for post-walk paw rinses and summer baths. Composite surfaces handle water without damage.' },
+              { title: 'Designated wash zone', detail: 'A section of the deck near the hose connection with a slight drainage slope perfect for post-walk paw rinses and summer baths. Composite surfaces handle water without damage.' },
             ].map((item, i) => (
               <li key={i} style={{ marginBottom: '1.25rem', lineHeight: 1.7 }}>
                 <strong>{item.title}</strong>
@@ -78,7 +86,7 @@ export default function PetFriendlyDeckPage() {
           <h2 style={S.h2}>Common Pet Deck Mistakes to Avoid</h2>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
             <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Cable railings:</strong> Dogs can squeeze through horizontal cables, get tangled, or use them as a ladder. Use solid balusters instead.</li>
-            <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Toxic stains/sealants:</strong> Some wood treatments contain chemicals harmful to pets who lick surfaces. Composite eliminates this entirely — no chemicals needed.</li>
+            <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Toxic stains/sealants:</strong> Some wood treatments contain chemicals harmful to pets who lick surfaces. Composite eliminates this entirely no chemicals needed.</li>
             <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Wide board gaps:</strong> Small dog nails can get caught in wide gaps between boards. Hidden fastener systems create tighter, safer gaps.</li>
             <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Dark colors in full sun:</strong> Dark composite can hit 140°F+ in direct Virginia sun. Choose lighter colors (Trex Island Mist, Foggy Wharf) for pet-heavy areas.</li>
             <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>No shade:</strong> Dogs overheat faster than humans. Always include a shaded section.</li>

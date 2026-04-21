@@ -1,7 +1,7 @@
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
@@ -16,7 +16,7 @@ const faqSchema = {
   "@context": "https://schema.org", "@type": "FAQPage",
   mainEntity: [
     { "@type": "Question", name: "How much does a multi-level deck cost in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "Multi-level composite decks in Northern Virginia cost $35,000-$80,000+ depending on total square footage, number of levels, materials, and features. A typical two-level deck (400-600 sqft total) runs $40,000-$65,000 with Trex Transcend and standard railings." } },
-    { "@type": "Question", name: "Are multi-level decks good for sloped yards?", acceptedAnswer: { "@type": "Answer", text: "Yes — multi-level decks are the ideal solution for sloped lots, which are common in Northern Virginia. Instead of fighting the grade with retaining walls, the deck follows the natural slope with stepped levels connected by stairs. This turns unusable hillside into functional outdoor living space." } },
+    { "@type": "Question", name: "Are multi-level decks good for sloped yards?", acceptedAnswer: { "@type": "Answer", text: "Yes multi-level decks are the ideal solution for sloped lots, which are common in Northern Virginia. Instead of fighting the grade with retaining walls, the deck follows the natural slope with stepped levels connected by stairs. This turns unusable hillside into functional outdoor living space." } },
     { "@type": "Question", name: "How long does a multi-level deck take to build?", acceptedAnswer: { "@type": "Answer", text: "3-5 weeks of construction time for most two-level decks. Three-level or larger projects: 4-6 weeks. Total timeline including design, permits, and construction: 8-14 weeks." } },
   ],
 };
@@ -27,10 +27,19 @@ export default function MultiLevelDeckPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <Breadcrumbs />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-          <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Multi-Level Deck Builder in Northern Virginia</h1>
+          <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
+            <Image
+              src="/images/img26.jpeg"
+              alt="Premium custom multi-level deck built by LDN Decks in Northern Virginia"
+              fill
+              style={{ objectFit: 'cover' }}
+              sizes="(max-width: 900px) 100vw, 900px"
+              priority
+            />
+          </div>
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Multi-Level Decks Elevating Your Outdoor Experience</h2>
           <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Two-story, split-level &amp; cascading decks for sloped lots and walkout basements</p>
           <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             <a href="tel:+15716557207" style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</a>
@@ -42,7 +51,7 @@ export default function MultiLevelDeckPage() {
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
 
           <h2 style={S.h2}>Why Multi-Level Decks Are Popular in Northern Virginia</h2>
-          <p style={S.p}>Northern Virginia&apos;s hilly terrain makes multi-level decks one of our most-requested designs. Many NoVA homes — especially in Loudoun, western Fairfax, and Prince William — sit on sloped lots where a single flat deck would either be too high off the ground or require massive support posts.</p>
+          <p style={S.p}>Northern Virginia&apos;s hilly terrain makes multi-level decks one of our most-requested designs. Many NoVA homes especially in Loudoun, western Fairfax, and Prince William sit on sloped lots where a single flat deck would either be too high off the ground or require massive support posts.</p>
           <p style={S.p}>A multi-level design solves this by creating <strong>distinct outdoor zones at different heights</strong>, connected by stairs. Each level serves a purpose: upper dining near the kitchen door, lower lounge closer to the yard, and sometimes a ground-level patio with fire pit.</p>
 
           <h2 style={S.h2}>Multi-Level Deck Configurations</h2>
@@ -86,7 +95,7 @@ export default function MultiLevelDeckPage() {
             <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Zone each level by function:</strong> Upper = dining/cooking (near kitchen), Middle = lounging/conversation, Lower = fire pit/play area/hot tub</li>
             <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Stair width matters:</strong> 4-foot-wide stairs between levels feel generous; 3-foot minimum is code but feels cramped for two-way traffic</li>
             <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Lighting is essential:</strong> Each level transition needs stair lighting for safety. <Link href="/deck-lighting-ideas-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>See lighting options</Link></li>
-            <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Railing varies by height:</strong> Upper levels need full railings (36-42&quot;). Lower levels under 30&quot; above grade may not require railings by code — but consider adding for aesthetics</li>
+            <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Railing varies by height:</strong> Upper levels need full railings (36-42&quot;). Lower levels under 30&quot; above grade may not require railings by code but consider adding for aesthetics</li>
             <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Under-deck space:</strong> Elevated upper levels create covered space below. Add an <Link href="/under-deck-ceiling-ideas" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>under-deck ceiling system</Link> to make it usable</li>
             <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Footings go deeper:</strong> Upper-level support posts may need 42&quot;+ deep footings (below frost line) with larger diameter. More footings = more inspection points</li>
           </ul>
@@ -98,7 +107,7 @@ export default function MultiLevelDeckPage() {
             { price: '$73,000', desc: '700 sqft Wrap-Around + Screened Porch, McLean', detail: 'L-shaped multi-level wrapping two sides of the house. Upper screened porch (250 sqft) + open deck dining (250 sqft) + lower walkout level (200 sqft). AZEK Vintage in Dark Hickory. 6-week build.' },
           ].map((p, i) => (
             <div key={i} style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', marginBottom: '1rem' }}>
-              <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>{p.price} — {p.desc}</h3>
+              <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>{p.price} {p.desc}</h3>
               <p style={{ lineHeight: 1.7 }}>{p.detail}</p>
             </div>
           ))}

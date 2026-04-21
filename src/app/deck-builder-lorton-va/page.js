@@ -1,7 +1,7 @@
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
@@ -24,7 +24,6 @@ export default function LortonDeckBuilderPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <Breadcrumbs />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Custom Deck Builder in Lorton, VA</h1>
@@ -38,7 +37,17 @@ export default function LortonDeckBuilderPage() {
       </section>
       <article style={{ padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Lorton — From Laurel Hill to Mason Neck</h2>
+          <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
+            <Image
+              src="/images/img33.jpeg"
+              alt="Premium custom deck built by LDN Decks in Lorton, Virginia"
+              fill
+              style={{ objectFit: 'cover' }}
+              sizes="(max-width: 900px) 100vw, 900px"
+              priority
+            />
+          </div>
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Lorton — Riverside Luxury &amp; Established Comfort</h2>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Lorton combines newer premium communities like Laurel Hill and Crosspointe with established neighborhoods near the Occoquan River and Mason Neck. The diversity of properties means everything from builder-grade upgrades on 10-year-old homes to complete outdoor living builds on larger, wooded lots.</p>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Laurel Hill expertise:</strong> Builder-grade PT decks ready for composite upgrade</li>

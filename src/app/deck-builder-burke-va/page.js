@@ -1,7 +1,7 @@
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
@@ -24,7 +24,6 @@ export default function BurkeDeckBuilderPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <Breadcrumbs />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Custom Deck Builder in Burke, VA</h1>
@@ -38,7 +37,17 @@ export default function BurkeDeckBuilderPage() {
       </section>
       <article style={{ padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Burke — The Deck Replacement Capital of Fairfax County</h2>
+          <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
+            <Image
+              src="/images/img32.jpeg"
+              alt="Premium custom deck built by LDN Decks in Burke, Virginia"
+              fill
+              style={{ objectFit: 'cover' }}
+              sizes="(max-width: 900px) 100vw, 900px"
+              priority
+            />
+          </div>
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Burke — Timeless Wood and Modern Composite</h2>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Burke&apos;s established neighborhoods (many built 1980s-2000s) have some of the oldest wood decks in Fairfax County. Many are 20-30+ years old and well past their lifespan. We specialize in replacing these aging structures with modern composite decks that will last another 25-50 years with zero maintenance.</p>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Deck replacement experts:</strong> Hundreds of Burke decks are due for replacement — we do this daily</li>

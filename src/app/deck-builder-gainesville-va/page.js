@@ -1,7 +1,7 @@
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
@@ -24,7 +24,6 @@ export default function GainesvilleDeckBuilderPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <Breadcrumbs />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Custom Deck Builder in Gainesville, VA</h1>
@@ -38,7 +37,17 @@ export default function GainesvilleDeckBuilderPage() {
       </section>
       <article style={{ padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Gainesville — Builder-Grade to Custom-Grade</h2>
+          <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
+            <Image
+              src="/images/img13.jpeg"
+              alt="Premium custom deck built by LDN Decks in Gainesville, Virginia"
+              fill
+              style={{ objectFit: 'cover' }}
+              sizes="(max-width: 900px) 100vw, 900px"
+              priority
+            />
+          </div>
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Gainesville — Modern Luxury in Prince William County</h2>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Gainesville&apos;s newer communities often come with builder-grade pressure-treated decks that start showing wear within 5-8 years. We specialize in upgrading these to premium composite — transforming basic builder decks into custom outdoor living spaces. Many Gainesville homeowners add screened porches and outdoor kitchens during the upgrade.</p>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Builder-grade upgrades:</strong> Replace your 5-8 year old PT deck with Trex — often keeping the original frame to save cost</li>

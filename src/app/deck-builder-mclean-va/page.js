@@ -1,7 +1,7 @@
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
@@ -9,7 +9,7 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-mclean-va',
-      title: 'Deck Builder in McLean VA | Trex & Composite | LDN Decks',
+  title: 'Deck Builder in McLean VA | Trex & Composite | LDN Decks',
   description: 'Top-rated deck builder serving McLean, VA. 5.0★ Google (41 reviews). Custom Trex & TimberTech decks, screened porches, patios. Free estimate. Call (571) 655-7207.',
 });
 
@@ -28,7 +28,6 @@ export default function McLeanDeckBuilderPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <Breadcrumbs />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -45,10 +44,21 @@ export default function McLeanDeckBuilderPage() {
       <article style={{ padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
 
+          <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
+            <Image
+              src="/images/img64.jpeg"
+              alt="Luxury custom deck builder services in McLean, Virginia"
+              fill
+              style={{ objectFit: 'cover' }}
+              sizes="(max-width: 900px) 100vw, 900px"
+              priority
+            />
+          </div>
+
           <h2 style={S.h2}>Why McLean Homeowners Choose Loudoun Decks</h2>
           <p style={S.p}>McLean homes demand premium craftsmanship. With home values averaging $1.2M+ and lot sizes that allow expansive outdoor living, McLean deck projects are among our most detailed and rewarding builds. We specialize in the high-end composite and screened porch work that McLean properties deserve.</p>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Premium materials:</strong> Trex Transcend, TimberTech AZEK, and exotic hardwoods — not builder-grade products</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Premium materials:</strong> Trex Transcend, TimberTech AZEK, and exotic hardwoods not builder-grade products</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Fairfax County expertise:</strong> We know the zoning setbacks, lot coverage rules, and RPA (Resource Protection Area) requirements that affect many McLean lots near the Potomac</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>HOA and covenant compliance:</strong> We work within the guidelines of Langley Forest, Chesterbrook, Salona Village, the Farms, and other McLean communities</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Design complexity:</strong> Multi-level decks, wraparound designs, integrated outdoor kitchens, and screened porches with fireplaces</li>
@@ -70,7 +80,7 @@ export default function McLeanDeckBuilderPage() {
             ))}
           </div>
 
-          <h2 style={S.h2}>McLean Deck Projects — What to Expect</h2>
+          <h2 style={S.h2}>McLean Deck Projects What to Expect</h2>
           <p style={S.p}><strong>Typical project range:</strong> $35,000–$85,000. McLean homeowners typically choose premium materials (AZEK, Trex Transcend) with upgraded features (integrated lighting, cable railings, stone elements).</p>
           <p style={S.p}><strong>Permits:</strong> McLean is in Fairfax County. Deck permits require zoning + building review, typically 3–6 weeks. Many McLean lots near the Potomac are in RPA zones with additional environmental review. <Link href="/deck-permit-fairfax-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Read our Fairfax County permit guide</Link>.</p>
           <p style={S.p}><strong>HOA/Covenants:</strong> Some McLean neighborhoods have HOA architectural review; others operate under deed covenants that restrict materials, colors, or structures. We research your specific property&apos;s restrictions before design begins.</p>

@@ -1,7 +1,7 @@
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
@@ -17,7 +17,7 @@ const faqSchema = {
   mainEntity: [
     { "@type": "Question", name: "How much does a fence cost in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "Fencing in Northern Virginia costs $25-$75 per linear foot installed depending on material. Wood privacy: $25-$40/ft. Vinyl: $30-$50/ft. Composite: $40-$65/ft. Aluminum ornamental: $35-$55/ft. A typical 150 linear ft yard: $4,000-$11,000." } },
     { "@type": "Question", name: "Do I need a permit for a fence in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "It varies by county. Loudoun County: fences under 7 feet typically don't need permits but DO need HOA approval. Fairfax County: similar. However, fences in setback zones, corner lots, or near easements may need permits. We check your specific property." } },
-    { "@type": "Question", name: "Can you build a fence and deck together?", acceptedAnswer: { "@type": "Answer", text: "Yes — bundling a fence with a deck project saves 15-25% compared to hiring separately. Shared mobilization, site prep, and material delivery reduce costs. Many clients add privacy fencing when building a new deck." } },
+    { "@type": "Question", name: "Can you build a fence and deck together?", acceptedAnswer: { "@type": "Answer", text: "Yes bundling a fence with a deck project saves 15-25% compared to hiring separately. Shared mobilization, site prep, and material delivery reduce costs. Many clients add privacy fencing when building a new deck." } },
   ],
 };
 
@@ -27,11 +27,20 @@ export default function FenceBuilderPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <Breadcrumbs />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-          <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Fence Builder in Northern Virginia</h1>
-          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Privacy fencing, composite, vinyl, wood &amp; aluminum — HOA-compliant, permits handled</p>
+          <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
+            <Image
+              src="/images/img21.jpeg"
+              alt="Premium custom fencing by LDN Decks in Northern Virginia"
+              fill
+              style={{ objectFit: 'cover' }}
+              sizes="(max-width: 900px) 100vw, 900px"
+              priority
+            />
+          </div>
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Fencing The Perfect Complement to Your New Deck</h2>
+          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Privacy fencing, composite, vinyl, wood &amp; aluminum HOA-compliant, permits handled</p>
           <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             <a href="tel:+15716557207" style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</a>
             <Link href="/contact" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Estimate</Link>
@@ -65,10 +74,10 @@ export default function FenceBuilderPage() {
           <h2 style={S.h2}>Most Popular Fence Styles in Northern Virginia</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
             {[
-              { title: 'Board-on-Board Privacy', desc: 'Overlapping boards with no gaps — complete privacy from neighbors. Most popular in HOA communities. Available in wood, vinyl, or composite.', range: '$30–$55/ft' },
-              { title: 'Horizontal Slat Modern', desc: 'Horizontal boards with small gaps — modern aesthetic that complements contemporary homes. Often paired with cable railing decks.', range: '$35–$60/ft' },
+              { title: 'Board-on-Board Privacy', desc: 'Overlapping boards with no gaps complete privacy from neighbors. Most popular in HOA communities. Available in wood, vinyl, or composite.', range: '$30–$55/ft' },
+              { title: 'Horizontal Slat Modern', desc: 'Horizontal boards with small gaps modern aesthetic that complements contemporary homes. Often paired with cable railing decks.', range: '$35–$60/ft' },
               { title: 'Aluminum Ornamental', desc: 'Open picket design for security without blocking views. Pool-code compliant. Zero maintenance. Popular for front yards and pool areas.', range: '$35–$55/ft' },
-              { title: 'Composite Privacy', desc: 'Same technology as composite decking — zero maintenance, won\'t rot, fade, or warp. 25-50 year lifespan. Premium investment.', range: '$40–$65/ft' },
+              { title: 'Composite Privacy', desc: 'Same technology as composite decking zero maintenance, won\'t rot, fade, or warp. 25-50 year lifespan. Premium investment.', range: '$40–$65/ft' },
             ].map((item) => (
               <div key={item.title} style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.25rem' }}>
                 <h3 style={{ fontWeight: 600, marginBottom: '0.25rem' }}>{item.title}</h3>
@@ -83,8 +92,8 @@ export default function FenceBuilderPage() {
           <div style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', marginBottom: '2rem' }}>
             <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>Example: 350 sqft Deck + 120 ft Privacy Fence</h3>
             <p style={{ marginBottom: '0.5rem' }}>Separate projects: $30,000 (deck) + $6,000 (fence) = $36,000</p>
-            <p style={{ marginBottom: '0.5rem' }}>Bundled together: $30,500 total — <strong>saves $5,500 (15%)</strong></p>
-            <p style={{ fontSize: '0.9rem', color: '#555' }}>Same materials, same quality, same warranty — just smarter scheduling.</p>
+            <p style={{ marginBottom: '0.5rem' }}>Bundled together: $30,500 total <strong>saves $5,500 (15%)</strong></p>
+            <p style={{ fontSize: '0.9rem', color: '#555' }}>Same materials, same quality, same warranty just smarter scheduling.</p>
           </div>
 
           <h2 style={S.h2}>HOA Fence Guidelines</h2>
@@ -102,7 +111,7 @@ export default function FenceBuilderPage() {
           {[
             { q: "Fence cost in Northern Virginia?", a: "Wood: $25-$40/ft. Vinyl: $30-$50/ft. Composite: $40-$65/ft. Aluminum: $35-$55/ft. Typical 150 ft yard: $4k-$11k." },
             { q: "Permit needed?", a: "Usually no for standard residential fences under 7 ft. HOA approval almost always required. Corner lots and setback zones may need permits." },
-            { q: "Bundle with deck?", a: "Yes — save 15-25% by building fence + deck together. Shared mobilization and delivery." },
+            { q: "Bundle with deck?", a: "Yes save 15-25% by building fence + deck together. Shared mobilization and delivery." },
           ].map((faq, i) => (
             <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
               <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>

@@ -1,7 +1,7 @@
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
@@ -29,21 +29,31 @@ export default function HOADeckRulesPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <Breadcrumbs />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>HOA Deck Rules in Northern Virginia</h1>
-          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>What you need to know before building — approval process, restrictions, and how we handle it</p>
+          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>What you need to know before building approval process, restrictions, and how we handle it</p>
         </div>
       </section>
 
       <article style={{ padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
 
+          <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
+            <Image
+              src="/images/img15.jpeg"
+              alt="HOA compliant custom deck builders in Northern Virginia community"
+              fill
+              style={{ objectFit: 'cover' }}
+              sizes="(max-width: 900px) 100vw, 900px"
+              priority
+            />
+          </div>
+
           <h2 style={S.h2}>Do You Need HOA Approval?</h2>
-          <p style={S.p}><strong>Almost certainly yes.</strong> Over 80% of Northern Virginia homes are in HOA communities. If you live in any planned development — Broadlands, Ashburn Farm, Brambleton, South Riding, Belmont Country Club, Stone Ridge, One Loudoun, Reston, Burke Centre, or hundreds of others — you need architectural review committee (ARC) approval before any exterior construction.</p>
-          <p style={S.p}>This applies to new decks, replacements, screened porches, pergolas, fences, and even changing stain color. <strong>HOA approval is separate from your county building permit</strong> — you need both.</p>
+          <p style={S.p}><strong>Almost certainly yes.</strong> Over 80% of Northern Virginia homes are in HOA communities. If you live in any planned development Broadlands, Ashburn Farm, Brambleton, South Riding, Belmont Country Club, Stone Ridge, One Loudoun, Reston, Burke Centre, or hundreds of others you need architectural review committee (ARC) approval before any exterior construction.</p>
+          <p style={S.p}>This applies to new decks, replacements, screened porches, pergolas, fences, and even changing stain color. <strong>HOA approval is separate from your county building permit</strong> you need both.</p>
 
           <h2 style={S.h2}>Common HOA Restrictions</h2>
           <h3 style={S.h3}>Materials &amp; Colors</h3>
@@ -59,9 +69,9 @@ export default function HOADeckRulesPage() {
           <ol style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
             <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Get your HOA&apos;s design guidelines</strong> — usually on your management company&apos;s portal. We have guidelines on file for 50+ communities.</li>
             <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Prepare the submission:</strong> site plan, materials list, railing details, sometimes a rendering.</li>
-            <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Submit to the ARC</strong> — via management portal (FirstService, SFMC, Cardinal, etc.).</li>
-            <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Wait for review</strong> — most meet every 2–4 weeks. Average turnaround: 2–4 weeks.</li>
-            <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Receive approval</strong> — conditions typically involve minor color or railing changes. We address and resubmit within 48 hours.</li>
+            <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Submit to the ARC</strong> via management portal (FirstService, SFMC, Cardinal, etc.).</li>
+            <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Wait for review</strong> most meet every 2–4 weeks. Average turnaround: 2–4 weeks.</li>
+            <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Receive approval</strong> conditions typically involve minor color or railing changes. We address and resubmit within 48 hours.</li>
             <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Apply for county building permit.</strong> We do both in parallel when possible.</li>
           </ol>
 

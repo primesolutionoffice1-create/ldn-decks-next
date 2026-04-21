@@ -1,7 +1,7 @@
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
@@ -15,7 +15,7 @@ export const metadata = buildMetadata({
 const faqSchema = {
   "@context": "https://schema.org", "@type": "FAQPage",
   mainEntity: [
-    { "@type": "Question", name: "What is the most popular deck railing in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "Composite railings (Trex Signature, TimberTech) are the most popular — they match composite decking, require zero maintenance, and meet all Virginia building codes. Aluminum is the second most popular for modern/clean aesthetics." } },
+    { "@type": "Question", name: "What is the most popular deck railing in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "Composite railings (Trex Signature, TimberTech) are the most popular they match composite decking, require zero maintenance, and meet all Virginia building codes. Aluminum is the second most popular for modern/clean aesthetics." } },
     { "@type": "Question", name: "How much do deck railings cost?", acceptedAnswer: { "@type": "Answer", text: "Deck railing costs in Northern Virginia: pressure-treated wood $20-$35/linear ft, composite $40-$70/linear ft, aluminum $35-$60/linear ft, cable rail $60-$100/linear ft, glass panel $80-$150/linear ft. For a typical 60 linear ft deck, railings add $2,000-$9,000." } },
     { "@type": "Question", name: "What is the Virginia building code for deck railings?", acceptedAnswer: { "@type": "Answer", text: "Virginia requires railings on any deck surface 30 inches or more above grade. Minimum railing height: 36 inches (42 inches if deck is more than 30 inches above grade in some jurisdictions). Baluster spacing: maximum 4 inches apart (no sphere larger than 4 inches can pass through)." } },
     { "@type": "Question", name: "Are cable railings allowed in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "Cable railings meet Virginia building code if cables are spaced no more than 3 inches apart and the system passes a 200-lb load test. However, some HOAs restrict cable railings for aesthetic reasons. We check your HOA guidelines before recommending cable rail." } },
@@ -28,12 +28,21 @@ export default function DeckRailingPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <Breadcrumbs />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-          <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Deck Railing Options for Northern Virginia</h1>
-          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Compare styles, costs, and Virginia code requirements — find the right railing for your deck</p>
+          <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
+            <Image
+              src="/images/img57.jpeg"
+              alt="Premium deck railing options by LDN Decks in Northern Virginia"
+              fill
+              style={{ objectFit: 'cover' }}
+              sizes="(max-width: 900px) 100vw, 900px"
+              priority
+            />
+          </div>
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Deck Railing Balancing Safety and Style</h2>
+          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Compare styles, costs, and Virginia code requirements find the right railing for your deck</p>
         </div>
       </section>
 
@@ -47,7 +56,7 @@ export default function DeckRailingPage() {
               <tbody>
                 {[
                   ['Pressure-treated wood', '$20–$35', '$1,200–$2,100', 'Stain every 1-2 yrs', 'Traditional', 'Yes'],
-                  ['Composite (Trex/TimberTech)', '$40–$70', '$2,400–$4,200', 'None', 'Modern/traditional', 'Yes — most popular'],
+                  ['Composite (Trex/TimberTech)', '$40–$70', '$2,400–$4,200', 'None', 'Modern/traditional', 'Yes most popular'],
                   ['Aluminum', '$35–$60', '$2,100–$3,600', 'None', 'Clean, modern', 'Yes'],
                   ['Cable rail', '$60–$100', '$3,600–$6,000', 'Re-tension yearly', 'Modern, open view', 'Some restrict'],
                   ['Glass panel', '$80–$150', '$4,800–$9,000', 'Clean glass 2x/yr', 'Contemporary, unobstructed', 'Some restrict'],
@@ -100,7 +109,7 @@ export default function DeckRailingPage() {
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Frequently Asked Questions</h2>
           {[
-            { q: "What's the most popular railing in Northern Virginia?", a: "Composite (Trex Signature/TimberTech) — matches decking, zero maintenance, HOA-friendly. Aluminum is second for modern looks." },
+            { q: "What's the most popular railing in Northern Virginia?", a: "Composite (Trex Signature/TimberTech) matches decking, zero maintenance, HOA-friendly. Aluminum is second for modern looks." },
             { q: "How much do railings cost?", a: "Wood: $20-$35/ft. Composite: $40-$70/ft. Aluminum: $35-$60/ft. Cable: $60-$100/ft. Glass: $80-$150/ft. Typical 60ft deck: $2,000-$9,000." },
             { q: "What's the code for deck railings in Virginia?", a: "Required if 30\"+ above grade. Min height 36\" (42\" in some areas). Baluster spacing max 4\". Must withstand 200 lbs." },
             { q: "Are cable railings HOA-approved?", a: "They meet building code if properly spaced, but some HOAs restrict them. We check your guidelines first." },

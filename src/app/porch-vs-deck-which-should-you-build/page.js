@@ -1,7 +1,7 @@
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
@@ -9,7 +9,7 @@ import { buildMetadata } from '@/lib/seo';
 export const metadata = buildMetadata({
   path: '/porch-vs-deck-which-should-you-build',
   title: 'Porch vs Deck: Which Should You Build? (2026 Cost & ROI Guide)',
-  description: 'Porch vs deck compared — cost, ROI, usable months, maintenance. Screened porches: $25k-$70k, 9-10 months use. Open decks: $15k-$45k, 5-6 months. We build both.',
+  description: 'Porch vs deck compared cost, ROI, usable months, maintenance. Screened porches: $25k-$70k, 9-10 months use. Open decks: $15k-$45k, 5-6 months. We build both.',
 });
 
 const faqSchema = {
@@ -27,7 +27,6 @@ export default function PorchVsDeckPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <Breadcrumbs />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Porch vs Deck: Which Should You Build?</h1>
@@ -42,7 +41,17 @@ export default function PorchVsDeckPage() {
       </section>
       <article style={{ padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-          <h2 style={S.h2}>Side-by-Side Comparison</h2>
+          <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
+            <Image
+              src="/images/img64.jpeg"
+              alt="Comparing a screened porch with an open deck in Northern Virginia"
+              fill
+              style={{ objectFit: 'cover' }}
+              sizes="(max-width: 900px) 100vw, 900px"
+              priority
+            />
+          </div>
+          <h2 style={S.h2}>The 5 Major Differences: Porch vs. Deck</h2>
           <div style={{ overflowX: 'auto', marginBottom: '2rem' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.9rem' }}>
               <thead><tr style={{ background: '#f5f5f5' }}>{['Factor', 'Open Deck', 'Screened Porch'].map(h => <th key={h} style={S.th}>{h}</th>)}</tr></thead>
@@ -53,7 +62,7 @@ export default function PorchVsDeckPage() {
                   ['Bug protection', 'None', 'Full'],
                   ['Rain use', 'No', 'Yes (roof + screens)'],
                   ['Pollen season', 'Exposed', 'Protected'],
-                  ['Grilling', 'Yes — ideal', 'No (fire risk in enclosed space)'],
+                  ['Grilling', 'Yes ideal', 'No (fire risk in enclosed space)'],
                   ['Sunbathing', 'Yes', 'Filtered through screen'],
                   ['Resale ROI', '65–80%', '70–85%'],
                   ['Maintenance', 'Occasional wash', 'Occasional wash + screen repair'],
@@ -73,19 +82,19 @@ export default function PorchVsDeckPage() {
 
           <h2 style={S.h2}>When to Build a Deck</h2>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>You love grilling outdoors</strong> — open-flame cooking isn&apos;t safe in an enclosed porch</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Budget under $30k</strong> — more square footage for the money</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>You want full sun</strong> — tanning, gardening, open-air feeling</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Multi-level yard</strong> — decks handle slopes better than porches</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>You love grilling outdoors</strong> open-flame cooking isn&apos;t safe in an enclosed porch</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Budget under $30k</strong> more square footage for the money</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>You want full sun</strong> tanning, gardening, open-air feeling</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Multi-level yard</strong> decks handle slopes better than porches</li>
           </ul>
 
           <h2 style={S.h2}>When to Build a Screened Porch</h2>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Bugs are a dealbreaker</strong> — mosquitoes, stink bugs, gnats kept out entirely</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Pollen allergy</strong> — screens reduce pollen exposure significantly in spring</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>You entertain often</strong> — dining, games, TV watching without weather interruption</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>3-season or 4-season use</strong> — EZE-Breeze windows extend into Nov/Mar</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Higher ROI priority</strong> — porches return 70–85% vs 65–80% for decks</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Bugs are a dealbreaker</strong> mosquitoes, stink bugs, gnats kept out entirely</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Pollen allergy</strong> screens reduce pollen exposure significantly in spring</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>You entertain often</strong> dining, games, TV watching without weather interruption</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>3-season or 4-season use</strong> EZE-Breeze windows extend into Nov/Mar</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Higher ROI priority</strong> porches return 70–85% vs 65–80% for decks</li>
           </ul>
 
           <h2 style={S.h2}>The Best of Both: Deck + Porch Combo</h2>
@@ -94,7 +103,7 @@ export default function PorchVsDeckPage() {
           <p style={S.p}><strong>Example project:</strong> 300 sqft Trex Transcend deck + 200 sqft screened porch with EZE-Breeze windows, beadboard ceiling, and ceiling fan in Centreville = $52,000.</p>
 
           <h2 style={S.h2}>Can You Convert a Deck into a Porch Later?</h2>
-          <p style={S.p}>Yes — if the existing deck framing can support the added roof weight. We inspect the structure before quoting. Converting typically costs $20,000–$40,000 depending on size and features. If you think you might want a porch later, tell us during deck design — we can oversize the footings and framing now (minimal added cost) to make future conversion easy.</p>
+          <p style={S.p}>Yes if the existing deck framing can support the added roof weight. We inspect the structure before quoting. Converting typically costs $20,000–$40,000 depending on size and features. If you think you might want a porch later, tell us during deck design we can oversize the footings and framing now (minimal added cost) to make future conversion easy.</p>
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Frequently Asked Questions</h2>
           {[
@@ -120,7 +129,7 @@ export default function PorchVsDeckPage() {
           </ul>
         </div>
       </article>
-      <SimpleCTA title="Not Sure? We Build Both — Free Consultation" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Not Sure? We Build Both Free Consultation" buttonText="Get Free Estimate" link="/contact" />
       <ContactHome />
     </>
   );

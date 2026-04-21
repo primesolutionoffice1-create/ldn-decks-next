@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
 import SimpleCTA from '@/components/SimpleCTA';
@@ -44,6 +45,17 @@ export default function CompositeVsWoodPage() {
 
       <article style={{ padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
+
+          <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
+             <Image 
+              src="/images/img11.jpeg" 
+              alt="Composite vs pressure-treated wood deck comparison in Virginia" 
+              fill 
+              style={{ objectFit: 'cover' }}
+              sizes="(max-width: 900px) 100vw, 900px"
+              priority
+            />
+          </div>
 
           <h2 style={S.h2}>Head-to-Head Comparison</h2>
           <div style={{ overflowX: 'auto', marginBottom: '2rem' }}>

@@ -1,7 +1,7 @@
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
@@ -15,7 +15,7 @@ export const metadata = buildMetadata({
 const faqSchema = {
   "@context": "https://schema.org", "@type": "FAQPage",
   mainEntity: [
-    { "@type": "Question", name: "What is deck resurfacing?", acceptedAnswer: { "@type": "Answer", text: "Deck resurfacing means removing the old deck boards (and usually railings) but keeping the existing frame — joists, beams, posts, and footings. New composite deck boards and railings are installed on the existing structure. This saves 40-60% vs a full rebuild because you're not paying for new framing, footings, or demolition of a sound structure." } },
+    { "@type": "Question", name: "What is deck resurfacing?", acceptedAnswer: { "@type": "Answer", text: "Deck resurfacing means removing the old deck boards (and usually railings) but keeping the existing frame joists, beams, posts, and footings. New composite deck boards and railings are installed on the existing structure. This saves 40-60% vs a full rebuild because you're not paying for new framing, footings, or demolition of a sound structure." } },
     { "@type": "Question", name: "When should I resurface vs replace my deck?", acceptedAnswer: { "@type": "Answer", text: "Resurface if: joists are solid (poke test), posts are straight and not rotting, footings aren't shifting, and ledger board is secure. Replace if: joists are soft/rotting, posts are leaning, footings have heaved, deck feels bouncy, or ledger is pulling away from house. We offer free inspections to determine which you need." } },
     { "@type": "Question", name: "How much does deck resurfacing cost vs replacement?", acceptedAnswer: { "@type": "Answer", text: "In Northern Virginia: resurfacing costs $10,000-$25,000 for a typical 300-400 sqft deck. Full replacement costs $20,000-$50,000 for the same size. Resurfacing saves 40-60% when the existing frame is structurally sound." } },
     { "@type": "Question", name: "How long does resurfacing take vs replacement?", acceptedAnswer: { "@type": "Answer", text: "Resurfacing: 1-2 weeks (no footing or framing work needed). Full replacement: 2-4 weeks (includes demolition, new footings, framing, then decking). Permit timeline is the same for both." } },
@@ -28,23 +28,31 @@ export default function ResurfacingVsReplacementPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <Breadcrumbs />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Deck Resurfacing vs Replacement</h1>
-          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Save 40-60% by resurfacing — or invest in a full rebuild when it&apos;s the smarter choice</p>
+          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Save 40-60% by resurfacing or invest in a full rebuild when it&apos;s the smarter choice</p>
         </div>
       </section>
       <section style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
-          <p><strong>Resurface</strong> ($10k–$25k) if your frame is solid — saves 40-60%. <strong>Replace</strong> ($20k–$50k) if joists are rotting, posts leaning, or deck feels bouncy. <strong>Not sure?</strong> We offer free inspections — we&apos;ll tell you honestly which makes sense.</p>
+          <p><strong>Resurface</strong> ($10k–$25k) if your frame is solid saves 40-60%. <strong>Replace</strong> ($20k–$50k) if joists are rotting, posts leaning, or deck feels bouncy. <strong>Not sure?</strong> We offer free inspections we&apos;ll tell you honestly which makes sense.</p>
         </div>
       </section>
       <article style={{ padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-
-          <h2 style={S.h2}>Side-by-Side Comparison</h2>
+          <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
+            <Image
+              src="/images/img26.jpeg"
+              alt="Deck resurfacing process in Northern Virginia"
+              fill
+              style={{ objectFit: 'cover' }}
+              sizes="(max-width: 900px) 100vw, 900px"
+              priority
+            />
+          </div>
+          <h2 style={S.h2}>Standard vs. Premium Resurfacing Option</h2>
           <div style={{ overflowX: 'auto', marginBottom: '2rem' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.9rem' }}>
               <thead><tr style={{ background: '#f5f5f5' }}>{['Factor', 'Resurfacing', 'Full Replacement'].map(h => <th key={h} style={S.th}>{h}</th>)}</tr></thead>
@@ -55,7 +63,7 @@ export default function ResurfacingVsReplacementPage() {
                   ['Cost (500 sqft)', '$16,000–$25,000', '$35,000–$55,000'],
                   ['Savings', '40–60% less than replacement', '—'],
                   ['Build time', '1–2 weeks', '2–4 weeks'],
-                  ['Requires', 'Solid frame (joists, posts, footings)', 'Nothing — all new'],
+                  ['Requires', 'Solid frame (joists, posts, footings)', 'Nothing all new'],
                   ['Result', 'Looks 100% new on surface', 'New structure + surface'],
                   ['Permit', 'Often required (new decking material)', 'Always required'],
                   ['Warranty', '5-yr workmanship + 25-yr material', '5-yr workmanship + 25-yr material'],
@@ -103,12 +111,12 @@ export default function ResurfacingVsReplacementPage() {
             { type: 'Resurfacing', price: '$19,500', loc: 'South Riding', detail: '280 sqft deck, 12 years old. Frame solid after inspection. Removed PT boards, installed Trex Enhance + aluminum railings + stair lights. Saved $14,000 vs full rebuild. 1-week build.' },
             { type: 'Resurfacing', price: '$22,000', loc: 'Brambleton', detail: '300 sqft, 10 years old. Frame inspected OK. Trex Transcend + Trex Select railings. HOA approved. 1.5-week build.' },
             { type: 'Full Replacement', price: '$38,000', loc: 'Leesburg', detail: '480 sqft. 18-year-old deck with rotting joists and shifting footings. Full demolition + new footings + new framing + Trex Transcend + Signature railings + lighting. 3-week build.' },
-            { type: 'Full Replacement', price: '$28,000', loc: 'Sterling', detail: '320 sqft. Posts rotting at base, deck bounced when walked on. Unsafe — replaced everything. Trex Transcend + aluminum railings. 2.5-week build.' },
+            { type: 'Full Replacement', price: '$28,000', loc: 'Sterling', detail: '320 sqft. Posts rotting at base, deck bounced when walked on. Unsafe replaced everything. Trex Transcend + aluminum railings. 2.5-week build.' },
           ].map((p, i) => (
             <div key={i} style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', marginBottom: '1rem', borderLeft: `4px solid ${p.type === 'Resurfacing' ? '#2e7d32' : '#c62828'}` }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem', flexWrap: 'wrap' }}>
                 <span style={{ fontWeight: 700, color: p.type === 'Resurfacing' ? '#2e7d32' : '#c62828' }}>{p.type}</span>
-                <span style={{ fontWeight: 600 }}>{p.price} — {p.loc}</span>
+                <span style={{ fontWeight: 600 }}>{p.price} {p.loc}</span>
               </div>
               <p style={{ lineHeight: 1.7, fontSize: '0.95rem' }}>{p.detail}</p>
             </div>
@@ -118,7 +126,7 @@ export default function ResurfacingVsReplacementPage() {
           {[
             { q: "What is deck resurfacing?", a: "Remove old boards/railings, keep the frame, install new composite. Looks 100% new. Saves 40-60% vs full rebuild." },
             { q: "When to resurface vs replace?", a: "Resurface: frame is solid (joists, posts, footings OK). Replace: structural issues (rot, lean, bounce, shifting)." },
-            { q: "Cost difference?", a: "Resurface: $10k-$25k. Replace: $20k-$50k. Same size deck — the difference is whether the frame stays." },
+            { q: "Cost difference?", a: "Resurface: $10k-$25k. Replace: $20k-$50k. Same size deck the difference is whether the frame stays." },
             { q: "How long?", a: "Resurface: 1-2 weeks. Replace: 2-4 weeks. Permit timeline is the same for both." },
           ].map((faq, i) => (
             <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
@@ -140,7 +148,7 @@ export default function ResurfacingVsReplacementPage() {
           </ul>
         </div>
       </article>
-      <SimpleCTA title="Free Deck Inspection — Resurface or Replace?" buttonText="Schedule Free Inspection" link="/contact" />
+      <SimpleCTA title="Free Deck Inspection Resurface or Replace?" buttonText="Schedule Free Inspection" link="/contact" />
       <ContactHome />
     </>
   );

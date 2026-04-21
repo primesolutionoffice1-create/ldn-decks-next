@@ -1,7 +1,7 @@
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
@@ -29,12 +29,11 @@ export default function OutdoorKitchenPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <Breadcrumbs />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Outdoor Kitchen Builder in Northern Virginia</h1>
-          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Custom design, permits &amp; build — grill islands to full kitchens</p>
+          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Custom design, permits &amp; build grill islands to full kitchens</p>
           <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             <a href="tel:+15716557207" style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</a>
             <Link href="/contact" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Estimate</Link>
@@ -44,6 +43,17 @@ export default function OutdoorKitchenPage() {
 
       <article style={{ padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
+
+          <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
+            <Image
+              src="/images/img55.jpeg"
+              alt="Custom outdoor kitchen with built-in grill and stone island in McLean"
+              fill
+              style={{ objectFit: 'cover' }}
+              sizes="(max-width: 900px) 100vw, 900px"
+              priority
+            />
+          </div>
 
           <h2 style={S.h2}>What We Build</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
@@ -83,17 +93,17 @@ export default function OutdoorKitchenPage() {
 
           <h2 style={S.h2}>Materials That Survive Virginia Weather</h2>
           <p style={S.p}><strong>Countertops:</strong> Granite and porcelain tile handle freeze-thaw without cracking. We avoid marble (stains) and concrete (cracks in cold) outdoors.</p>
-          <p style={S.p}><strong>Island structure:</strong> CMU (concrete block) or galvanized steel frame — not wood framing, which rots near water and heat sources.</p>
-          <p style={S.p}><strong>Appliances:</strong> 304-grade stainless steel rated for outdoor use. We work with Blaze, Bull, Lynx, and DCS brands. Avoid indoor appliances outdoors — they&apos;ll rust within one Virginia winter.</p>
+          <p style={S.p}><strong>Island structure:</strong> CMU (concrete block) or galvanized steel frame not wood framing, which rots near water and heat sources.</p>
+          <p style={S.p}><strong>Appliances:</strong> 304-grade stainless steel rated for outdoor use. We work with Blaze, Bull, Lynx, and DCS brands. Avoid indoor appliances outdoors they&apos;ll rust within one Virginia winter.</p>
           <p style={S.p}><strong>Finishes:</strong> Natural stone veneer, stucco, or porcelain tile. All rated for exterior use and freeze-thaw rated for Virginia&apos;s climate.</p>
 
           <h2 style={S.h2}>Permits and Utilities</h2>
           <p style={S.p}><strong>Gas line:</strong> Any new gas line requires a plumbing permit and inspection. We coordinate with licensed plumbers.</p>
           <p style={S.p}><strong>Electrical:</strong> Outlets, lighting, and appliance circuits require electrical permits. GFCI protection required for all outdoor outlets.</p>
-          <p style={S.p}><strong>Water/drain:</strong> Outdoor sinks require water supply and drain connections — plumbing permit required.</p>
+          <p style={S.p}><strong>Water/drain:</strong> Outdoor sinks require water supply and drain connections plumbing permit required.</p>
           <p style={S.p}><strong>Structure:</strong> Covered outdoor kitchens (with roof/pergola) require building permits. Freestanding islands on existing patios may not. We determine what&apos;s needed and handle all submissions.</p>
 
-          <h2 style={S.h2}>Combine with a Deck — Package Pricing</h2>
+          <h2 style={S.h2}>Combine with a Deck Package Pricing</h2>
           <p style={S.p}>Building your outdoor kitchen as part of a new deck project is 15–25% cheaper than adding one later. We design the deck framing to support the kitchen weight from the start, run utilities during construction (before decking goes on), and eliminate the cost of a second mobilization.</p>
           <p style={S.p}><strong>Popular combo:</strong> 400 sqft Trex Transcend deck + built-in grill island with granite counter, sink, and bar seating = $55,000–$70,000 (vs $70,000–$85,000 if built separately).</p>
 

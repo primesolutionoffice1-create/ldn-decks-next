@@ -1,7 +1,7 @@
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
@@ -24,7 +24,6 @@ export default function BrambletonDeckBuilderPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <Breadcrumbs />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Custom Deck Builder in Brambleton, VA</h1>
@@ -38,6 +37,16 @@ export default function BrambletonDeckBuilderPage() {
       </section>
       <article style={{ padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
+          <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
+            <Image
+              src="/images/img22.jpeg"
+              alt="Premium custom deck built by LDN Decks in Brambleton, Virginia"
+              fill
+              style={{ objectFit: 'cover' }}
+              sizes="(max-width: 900px) 100vw, 900px"
+              priority
+            />
+          </div>
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Brambleton — Time to Upgrade Your Builder Deck</h2>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Brambleton is one of Loudoun County&apos;s largest and most active communities, and many original homes (built 2007-2015) now have builder-grade pressure-treated decks that are showing their age — graying, splintering, and requiring annual staining. We specialize in transforming these into modern, maintenance-free composite decks.</p>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>

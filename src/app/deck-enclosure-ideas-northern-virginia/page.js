@@ -1,7 +1,7 @@
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
@@ -16,8 +16,8 @@ const faqSchema = {
   "@context": "https://schema.org", "@type": "FAQPage",
   mainEntity: [
     { "@type": "Question", name: "How much does it cost to enclose a deck?", acceptedAnswer: { "@type": "Answer", text: "Basic screen enclosure: $8,000-$20,000. EZE-Breeze 3-season room: $15,000-$35,000. Full sunroom conversion: $40,000-$80,000+. Cost depends on existing deck condition, size, and enclosure type." } },
-    { "@type": "Question", name: "Can I enclose my existing deck?", acceptedAnswer: { "@type": "Answer", text: "Usually yes — if the deck framing and footings can support the added weight of posts, roof structure, and wall panels. We inspect the existing structure first. Some decks need footing upgrades or joist reinforcement before enclosing." } },
-    { "@type": "Question", name: "What is the difference between a screened porch and a 3-season room?", acceptedAnswer: { "@type": "Answer", text: "A screened porch uses mesh screens — keeps bugs out but doesn't block wind or cold. A 3-season room uses EZE-Breeze vinyl panels that slide open like screens in summer and close for wind/rain protection in spring and fall, extending usable season from 6 months to 9-10 months." } },
+    { "@type": "Question", name: "Can I enclose my existing deck?", acceptedAnswer: { "@type": "Answer", text: "Usually yes if the deck framing and footings can support the added weight of posts, roof structure, and wall panels. We inspect the existing structure first. Some decks need footing upgrades or joist reinforcement before enclosing." } },
+    { "@type": "Question", name: "What is the difference between a screened porch and a 3-season room?", acceptedAnswer: { "@type": "Answer", text: "A screened porch uses mesh screens keeps bugs out but doesn't block wind or cold. A 3-season room uses EZE-Breeze vinyl panels that slide open like screens in summer and close for wind/rain protection in spring and fall, extending usable season from 6 months to 9-10 months." } },
   ],
 };
 
@@ -27,21 +27,31 @@ export default function DeckEnclosurePage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <Breadcrumbs />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Deck Enclosure Ideas for Northern Virginia</h1>
-          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Turn your open deck into a screened porch, 3-season room, or sunroom — costs and options compared</p>
+          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Turn your open deck into a screened porch, 3-season room, or sunroom costs and options compared</p>
         </div>
       </section>
       <section style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
-          <p>Three enclosure levels: <strong>Screen enclosure</strong> ($8k–$20k) — bugs out, breeze in. <strong>EZE-Breeze 3-season</strong> ($15k–$35k) — our most popular, extends season to 9–10 months. <strong>Full sunroom</strong> ($40k–$80k+) — year-round, climate-controlled.</p>
+          <p>Three enclosure levels: <strong>Screen enclosure</strong> ($8k–$20k) bugs out, breeze in. <strong>EZE-Breeze 3-season</strong> ($15k–$35k) our most popular, extends season to 9–10 months. <strong>Full sunroom</strong> ($40k–$80k+) year-round, climate-controlled.</p>
         </div>
       </section>
       <article style={{ padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
+
+          <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
+            <Image
+              src="/images/img23.jpeg"
+              alt="Premium deck enclosure project by LDN Decks in Northern Virginia"
+              fill
+              style={{ objectFit: 'cover' }}
+              sizes="(max-width: 900px) 100vw, 900px"
+              priority
+            />
+          </div>
 
           <h2 style={S.h2}>Enclosure Options Compared</h2>
           <div style={{ overflowX: 'auto', marginBottom: '2rem' }}>
@@ -78,9 +88,9 @@ export default function DeckEnclosurePage() {
           <p style={S.p}><strong>Why it&apos;s the sweet spot:</strong> 70–85% ROI at resale (highest of any enclosure type), 40–60% cheaper than a full sunroom, and most Northern Virginia buyers specifically look for EZE-Breeze porches in listings.</p>
 
           <h2 style={S.h2}>Full Sunroom Conversion ($40,000–$80,000+)</h2>
-          <p style={S.p}>A permanent, climate-controlled room addition. Insulated walls, real windows (double/triple-pane), HVAC connection, and finished interior. Functions as a year-round living space — essentially adding a room to your home.</p>
+          <p style={S.p}>A permanent, climate-controlled room addition. Insulated walls, real windows (double/triple-pane), HVAC connection, and finished interior. Functions as a year-round living space essentially adding a room to your home.</p>
           <p style={S.p}><strong>Includes:</strong> Insulated framing, real windows, HVAC ductwork, electrical panel connection, insulated roof, drywall or finished ceiling, flooring (tile, LVP, or hardwood).</p>
-          <p style={S.p}><strong>Consideration:</strong> Full sunrooms have lower ROI (50–70%) because the cost is high relative to the appraised value increase. They make financial sense when you need the living space — not as a pure investment play.</p>
+          <p style={S.p}><strong>Consideration:</strong> Full sunrooms have lower ROI (50–70%) because the cost is high relative to the appraised value increase. They make financial sense when you need the living space not as a pure investment play.</p>
 
           <h2 style={S.h2}>Can Your Existing Deck Handle an Enclosure?</h2>
           <p style={S.p}>Most decks built in the last 15 years can support a screen or EZE-Breeze enclosure if:</p>
@@ -90,7 +100,7 @@ export default function DeckEnclosurePage() {
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>Ledger board connection is solid</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>Posts can accommodate roof attachment</li>
           </ul>
-          <p style={S.p}>We inspect everything before quoting. If structural upgrades are needed (joist sistering, footing enlargement), we include them in the estimate. <strong>Pro tip:</strong> If you&apos;re building a new deck and think you might want to enclose it later, tell us now — we&apos;ll oversize the footings and framing at minimal extra cost.</p>
+          <p style={S.p}>We inspect everything before quoting. If structural upgrades are needed (joist sistering, footing enlargement), we include them in the estimate. <strong>Pro tip:</strong> If you&apos;re building a new deck and think you might want to enclose it later, tell us now we&apos;ll oversize the footings and framing at minimal extra cost.</p>
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>FAQ</h2>
           {[
@@ -116,7 +126,7 @@ export default function DeckEnclosurePage() {
           </ul>
         </div>
       </article>
-      <SimpleCTA title="Enclose Your Deck — Free Design Consultation" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Enclose Your Deck Free Design Consultation" buttonText="Get Free Estimate" link="/contact" />
       <ContactHome />
     </>
   );

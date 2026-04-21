@@ -1,7 +1,7 @@
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
@@ -27,7 +27,6 @@ export default function DeckLifespanPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <Breadcrumbs />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -45,6 +44,17 @@ export default function DeckLifespanPage() {
 
       <article style={{ padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
+
+          <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
+            <Image
+              src="/images/img40.jpeg"
+              alt="Durable long-lasting composite deck build by Trex Platinum Partner"
+              fill
+              style={{ objectFit: 'cover' }}
+              sizes="(max-width: 900px) 100vw, 900px"
+              priority
+            />
+          </div>
 
           <h2 style={S.h2}>Average Lifespan by Material</h2>
           <div style={{ overflowX: 'auto', marginBottom: '2rem' }}>
@@ -68,7 +78,7 @@ export default function DeckLifespanPage() {
           </div>
 
           <h2 style={S.h2}>What Kills a Deck in Virginia</h2>
-          <p style={S.p}><strong>Freeze-thaw cycles (50–80 per winter):</strong> Water enters wood grain, freezes, expands, splits the board. Repeat 50+ times per winter and boards crack within 3–5 years without sealing. Capped composite is impervious — no water entry.</p>
+          <p style={S.p}><strong>Freeze-thaw cycles (50–80 per winter):</strong> Water enters wood grain, freezes, expands, splits the board. Repeat 50+ times per winter and boards crack within 3–5 years without sealing. Capped composite is impervious no water entry.</p>
           <p style={S.p}><strong>Humidity (70–90% in summer):</strong> Sustained moisture breeds mold, mildew, and rot in wood. Even sealed wood eventually absorbs moisture through end cuts and fastener holes. Composite&apos;s plastic cap prevents penetration.</p>
           <p style={S.p}><strong>UV exposure (200+ sunny days/year):</strong> Bleaches wood to gray within 12 months. Stain helps but must be reapplied every 1–2 years. Composite uses UV-stabilized pigments that fade minimally and stabilize.</p>
           <p style={S.p}><strong>Insect damage:</strong> Carpenter bees, termites, and wood-boring beetles target untreated wood in Virginia. Composite has no organic food source for insects.</p>
@@ -91,7 +101,7 @@ export default function DeckLifespanPage() {
             <div style={{ background: '#e8f5e9', borderRadius: 8, padding: '1.5rem' }}>
               <h3 style={{ fontWeight: 700, marginBottom: '0.75rem', color: '#2e7d32' }}>Resurface ✓</h3>
               <ul style={{ paddingLeft: '1.25rem', fontSize: '0.95rem' }}>
-                <li style={{ marginBottom: '0.5rem' }}>Frame/joists are solid (poke test — screwdriver shouldn&apos;t sink in)</li>
+                <li style={{ marginBottom: '0.5rem' }}>Frame/joists are solid (poke test screwdriver shouldn&apos;t sink in)</li>
                 <li style={{ marginBottom: '0.5rem' }}>Only surface boards are worn, faded, or splintering</li>
                 <li style={{ marginBottom: '0.5rem' }}>Footings are stable (no shifting or heaving)</li>
                 <li style={{ marginBottom: '0.5rem' }}>Ledger board connection is solid</li>

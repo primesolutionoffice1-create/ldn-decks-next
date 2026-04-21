@@ -1,7 +1,7 @@
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
@@ -28,7 +28,6 @@ export default function ChooseDeckBuilderPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <Breadcrumbs />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -39,6 +38,17 @@ export default function ChooseDeckBuilderPage() {
 
       <article style={{ padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
+
+          <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
+            <Image
+              src="/images/img25.jpeg"
+              alt="Professional deck construction detail showing quality craftsmanship"
+              fill
+              style={{ objectFit: 'cover' }}
+              sizes="(max-width: 900px) 100vw, 900px"
+              priority
+            />
+          </div>
 
           <h2 style={S.h2}>10 Questions to Ask Before You Hire</h2>
           <ol style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
@@ -61,7 +71,7 @@ export default function ChooseDeckBuilderPage() {
             ))}
           </ol>
 
-          <h2 style={S.h2}>5 Red Flags — Walk Away If You See These</h2>
+          <h2 style={S.h2}>5 Red Flags Walk Away If You See These</h2>
           <ol style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
             {[
               { flag: 'No Virginia contractor license', why: 'Illegal for work over $1,000. Zero recourse if something goes wrong.' },

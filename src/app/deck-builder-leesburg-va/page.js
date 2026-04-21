@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import ServicesHeader from '@/components/ServicesHeader';
 import ServiceMain from '@/components/ServiceMain';
 import ServiceInclusions from '@/components/ServiceInclusions';
@@ -114,6 +115,19 @@ export default function DeckBuilderLeesburgPage() {
           title="Custom Deck Builder in Leesburg, VA"
           description="Loudoun Decks brings premium deck building to Leesburg. Traditional and contemporary designs, full permit management, and 5-Star rated service."
         />
+          <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
+          <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
+            <Image
+              src="/images/img32.jpeg"
+              alt="Premium custom deck built by LDN Decks in Leesburg, Virginia"
+              fill
+              style={{ objectFit: 'cover' }}
+              sizes="(max-width: 900px) 100vw, 900px"
+              priority
+            />
+          </div>
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Leesburg — Historic Charm &amp; Contemporary Decks</h2>
+          </div>
                   <ServiceMain
           subtitle="Leesburg's Trusted Choice"
           title="Deck Builder Leesburg VA - Craftsmanship You Can Trust"

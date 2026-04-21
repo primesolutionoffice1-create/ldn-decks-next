@@ -1,7 +1,7 @@
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
@@ -15,7 +15,7 @@ export const metadata = buildMetadata({
 const faqSchema = {
   "@context": "https://schema.org", "@type": "FAQPage",
   mainEntity: [
-    { "@type": "Question", name: "How often should I maintain my deck in Virginia?", acceptedAnswer: { "@type": "Answer", text: "Wood decks: clean and inspect twice yearly (spring + fall), stain/seal every 1-2 years. Composite decks: clean once or twice yearly with soap and water — no staining or sealing needed. Virginia's freeze-thaw and humidity require more frequent attention than milder climates." } },
+    { "@type": "Question", name: "How often should I maintain my deck in Virginia?", acceptedAnswer: { "@type": "Answer", text: "Wood decks: clean and inspect twice yearly (spring + fall), stain/seal every 1-2 years. Composite decks: clean once or twice yearly with soap and water no staining or sealing needed. Virginia's freeze-thaw and humidity require more frequent attention than milder climates." } },
     { "@type": "Question", name: "What is the best time to clean a deck in Virginia?", acceptedAnswer: { "@type": "Answer", text: "Early spring (March-April) after winter debris and before pollen season. Second cleaning in fall (October) to remove leaves and prep for winter. Avoid cleaning in freezing temps or extreme heat." } },
     { "@type": "Question", name: "Do composite decks need any maintenance?", acceptedAnswer: { "@type": "Answer", text: "Minimal. Clean with soap and water 1-2 times per year. Remove leaves/debris that can trap moisture. No staining, sealing, or sanding ever needed. Occasional mold from organic debris can be removed with composite deck cleaner." } },
   ],
@@ -27,7 +27,6 @@ export default function DeckMaintenancePage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <Breadcrumbs />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Deck Maintenance Checklist for Virginia</h1>
@@ -37,16 +36,27 @@ export default function DeckMaintenancePage() {
       <article style={{ padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
 
+          <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
+            <Image
+              src="/images/img60.jpeg"
+              alt="Deck maintenance and care in Northern Virginia"
+              fill
+              style={{ objectFit: 'cover' }}
+              sizes="(max-width: 900px) 100vw, 900px"
+              priority
+            />
+          </div>
+
           <h2 style={S.h2}>Spring Checklist (March–April)</h2>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
             {[
-              '✅ Remove all debris — leaves, branches, pine needles that accumulated over winter',
-              '✅ Inspect every board for winter damage — cracks, splits, soft spots, popped nails',
-              '✅ Check railing posts for wobble (push test — they shouldn\'t move)',
-              '✅ Inspect ledger board connection (where deck meets house) — look for gaps or rot',
+              '✅ Remove all debris leaves, branches, pine needles that accumulated over winter',
+              '✅ Inspect every board for winter damage cracks, splits, soft spots, popped nails',
+              '✅ Check railing posts for wobble (push test they shouldn\'t move)',
+              '✅ Inspect ledger board connection (where deck meets house) look for gaps or rot',
               '✅ Check under-deck for pest activity (carpenter bees, termites, wasps)',
               '✅ Clean with deck wash or soap + water and a soft brush',
-              '✅ Power wash (wood decks only — 1,200-1,500 PSI max, fan tip)',
+              '✅ Power wash (wood decks only 1,200-1,500 PSI max, fan tip)',
               '✅ For wood decks: apply stain/sealant if water no longer beads on surface',
               '✅ For composite decks: spot-clean any mold with Corte Clean or brand-recommended cleaner',
             ].map((item, i) => <li key={i} style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>{item}</li>)}
@@ -55,23 +65,23 @@ export default function DeckMaintenancePage() {
           <h2 style={S.h2}>Summer Checklist (May–August)</h2>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
             {[
-              '✅ Move planters periodically — trapped moisture breeds mold underneath',
-              '✅ Clean grill drippings immediately — grease stains set permanently on wood',
+              '✅ Move planters periodically trapped moisture breeds mold underneath',
+              '✅ Clean grill drippings immediately grease stains set permanently on wood',
               '✅ Sweep weekly if trees overhang (pollen, sap, leaves)',
               '✅ Check for ant trails and wasp nests in joist bays',
               '✅ Tighten any loose screws/fasteners (heat expansion loosens hardware)',
-              '✅ Rinse off sunscreen/insect spray spills — they can stain composite',
+              '✅ Rinse off sunscreen/insect spray spills they can stain composite',
             ].map((item, i) => <li key={i} style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>{item}</li>)}
           </ul>
 
           <h2 style={S.h2}>Fall Checklist (September–November)</h2>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
             {[
-              '✅ Clear ALL leaves — wet leaves trap moisture and cause mold/rot (biggest fall risk)',
+              '✅ Clear ALL leaves wet leaves trap moisture and cause mold/rot (biggest fall risk)',
               '✅ Clean between board gaps where debris collects (use a putty knife or gap cleaner)',
-              '✅ Clean gutters above the deck — overflowing gutters pour water onto deck surface',
+              '✅ Clean gutters above the deck overflowing gutters pour water onto deck surface',
               '✅ Apply wood brightener + fresh stain coat if skipped in spring (last chance before winter)',
-              '✅ Check flashing where deck meets house — water intrusion here causes the most expensive damage',
+              '✅ Check flashing where deck meets house water intrusion here causes the most expensive damage',
               '✅ Store or cover outdoor furniture to reduce winter debris accumulation',
             ].map((item, i) => <li key={i} style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>{item}</li>)}
           </ul>
@@ -84,11 +94,11 @@ export default function DeckMaintenancePage() {
               '✅ Use sand or kitty litter for traction instead of salt',
               '✅ Keep snow from piling against the house/ledger board area',
               '✅ After major snow/ice events, inspect for structural stress (sagging, shifting)',
-              '✅ Do NOT pressure wash in freezing temperatures — water in crevices will freeze and expand',
+              '✅ Do NOT pressure wash in freezing temperatures water in crevices will freeze and expand',
             ].map((item, i) => <li key={i} style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>{item}</li>)}
           </ul>
 
-          <h2 style={S.h2}>Wood vs Composite — Maintenance Compared</h2>
+          <h2 style={S.h2}>Wood vs Composite Maintenance Compared</h2>
           <div style={{ overflowX: 'auto', marginBottom: '2rem' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.9rem' }}>
               <thead><tr style={{ background: '#f5f5f5' }}>{['Task', 'Wood Deck', 'Composite Deck'].map(h => <th key={h} style={{ padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #ddd' }}>{h}</th>)}</tr></thead>
@@ -111,22 +121,22 @@ export default function DeckMaintenancePage() {
               </tbody>
             </table>
           </div>
-          <p style={S.p}>Tired of the maintenance cycle? <Link href="/services/deck-resurfacing" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck resurfacing</Link> replaces your wood boards with composite — keep the frame, eliminate maintenance forever.</p>
+          <p style={S.p}>Tired of the maintenance cycle? <Link href="/services/deck-resurfacing" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck resurfacing</Link> replaces your wood boards with composite keep the frame, eliminate maintenance forever.</p>
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>When to Call a Pro</h2>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Soft/spongy boards</strong> — potential structural rot, needs inspection</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Wobbly railings</strong> — safety hazard, may need post replacement</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Deck feels bouncy</strong> — possible joist/beam failure, get inspected immediately</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Ledger board pulling away from house</strong> — critical safety issue, call today</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Mold returns within weeks of cleaning</strong> — may need board replacement or resurfacing</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Soft/spongy boards</strong> potential structural rot, needs inspection</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Wobbly railings</strong> safety hazard, may need post replacement</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Deck feels bouncy</strong> possible joist/beam failure, get inspected immediately</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Ledger board pulling away from house</strong> critical safety issue, call today</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Mold returns within weeks of cleaning</strong> may need board replacement or resurfacing</li>
           </ul>
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>FAQ</h2>
           {[
             { q: "How often should I maintain my deck?", a: "Wood: clean + inspect 2x/year, stain every 1-2 years. Composite: clean 1-2x/year with soap and water. No staining ever." },
             { q: "Best time to clean?", a: "Early spring (March-April) and fall (October). Avoid freezing temps and extreme heat." },
-            { q: "Do composite decks need maintenance?", a: "Minimal — soap and water 1-2x/year. Remove leaves/debris. No staining, sealing, or sanding." },
+            { q: "Do composite decks need maintenance?", a: "Minimal soap and water 1-2x/year. Remove leaves/debris. No staining, sealing, or sanding." },
           ].map((faq, i) => (
             <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
               <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>

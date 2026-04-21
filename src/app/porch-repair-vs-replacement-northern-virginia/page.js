@@ -1,7 +1,7 @@
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
@@ -15,7 +15,7 @@ export const metadata = buildMetadata({
 const faqSchema = {
   "@context": "https://schema.org", "@type": "FAQPage",
   mainEntity: [
-    { "@type": "Question", name: "Should I repair or replace my porch?", acceptedAnswer: { "@type": "Answer", text: "Repair if: damage is limited to surface boards, screens, or trim — structure is solid. Replace if: posts are rotting at the base, roof is sagging, foundation is shifting, or framing is soft/spongy. When repair costs exceed 40-50% of replacement cost, replacement is the better long-term investment." } },
+    { "@type": "Question", name: "Should I repair or replace my porch?", acceptedAnswer: { "@type": "Answer", text: "Repair if: damage is limited to surface boards, screens, or trim structure is solid. Replace if: posts are rotting at the base, roof is sagging, foundation is shifting, or framing is soft/spongy. When repair costs exceed 40-50% of replacement cost, replacement is the better long-term investment." } },
     { "@type": "Question", name: "How much does porch repair cost in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "Porch repairs in Northern Virginia: screen replacement $300-$1,200, board replacement $500-$3,000, post repair $800-$2,500, railing repair $500-$2,000. Most repairs fall between $1,500 and $8,000." } },
     { "@type": "Question", name: "How much does a new porch cost in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "A new screened porch in Northern Virginia costs $25,000-$70,000+ depending on size, materials, and features. Open porches: $15,000-$40,000. Full porch replacement including demolition of the old structure adds $2,000-$5,000." } },
   ],
@@ -27,11 +27,10 @@ export default function PorchRepairPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <Breadcrumbs />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Porch Repair vs Replacement: Which Saves You Money?</h1>
-          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>When to repair, when to replace, and how to tell the difference — Northern Virginia guide</p>
+          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>When to repair, when to replace, and how to tell the difference Northern Virginia guide</p>
         </div>
       </section>
       <section style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
@@ -42,8 +41,17 @@ export default function PorchRepairPage() {
       </section>
       <article style={{ padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-
-          <h2 style={S.h2}>Repair vs Replace — Decision Guide</h2>
+          <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
+            <Image
+              src="/images/img61.jpeg"
+              alt="Assessing porch repair vs replacement for a Northern Virginia home"
+              fill
+              style={{ objectFit: 'cover' }}
+              sizes="(max-width: 900px) 100vw, 900px"
+              priority
+            />
+          </div>
+          <h2 style={S.h2}>The 'Pick-Test' How to Check Your Porch's Structural Integrity</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
             <div style={{ background: '#e8f5e9', borderRadius: 8, padding: '1.5rem' }}>
               <h3 style={{ fontWeight: 700, color: '#2e7d32', marginBottom: '0.75rem' }}>REPAIR ✓ ($1,500–$8,000)</h3>
@@ -99,8 +107,8 @@ export default function PorchRepairPage() {
           <h2 style={S.h2}>The 40% Rule</h2>
           <p style={S.p}><strong>When repair costs exceed 40–50% of full replacement cost, replace.</strong> Here&apos;s why:</p>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>You&apos;re already paying for labor, permits, and mobilization — the incremental cost for new materials isn&apos;t much more</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>A repaired 20-year-old porch will need more repairs soon — you&apos;re chasing a declining asset</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>You&apos;re already paying for labor, permits, and mobilization the incremental cost for new materials isn&apos;t much more</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>A repaired 20-year-old porch will need more repairs soon you&apos;re chasing a declining asset</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>A new porch comes with a full 5-year workmanship warranty + manufacturer material warranties</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>New construction brings the porch up to current building code (required at sale anyway)</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>Composite materials mean the new porch needs near-zero maintenance going forward</li>
@@ -108,7 +116,7 @@ export default function PorchRepairPage() {
           <p style={S.p}><strong>Example:</strong> If a new screened porch costs $45,000 and repairs are quoted at $15,000+ (33%), strongly consider replacement. At $20,000+ (44%), replacement is almost certainly the better investment.</p>
 
           <h2 style={S.h2}>Free Porch Inspection</h2>
-          <p style={S.p}>Not sure if your porch needs repair or replacement? We offer <strong>free on-site inspections</strong>. We check every structural element — posts, beams, joists, ledger, roof, footings — and give you an honest assessment with photos. No obligation, no pressure.</p>
+          <p style={S.p}>Not sure if your porch needs repair or replacement? We offer <strong>free on-site inspections</strong>. We check every structural element posts, beams, joists, ledger, roof, footings and give you an honest assessment with photos. No obligation, no pressure.</p>
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>FAQ</h2>
           {[

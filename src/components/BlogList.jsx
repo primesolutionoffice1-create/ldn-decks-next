@@ -30,11 +30,13 @@ export default function BlogList() {
     alert(`Triggering share to ${network} for: "${title}"`);
   };
 
+  const sortedPosts = [...blogPosts].sort((a, b) => new Date(b.date) - new Date(a.date));
+
   return (
     <section className={styles.blogSection}>
       <div className={styles.container}>
         <div className={styles.grid}>
-          {blogPosts.map(post => (
+          {sortedPosts.map(post => (
             <div key={post.id} className={styles.blogCard}>
               <Link href={`/blog/${post.slug}`} className={styles.imgLink}>
                 <div className={styles.imgWrapper}>

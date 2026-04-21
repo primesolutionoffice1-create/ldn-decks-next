@@ -1,7 +1,7 @@
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
@@ -18,7 +18,7 @@ const faqSchema = {
     { "@type": "Question", name: "How long does it take to build a deck?", acceptedAnswer: { "@type": "Answer", text: "Construction takes 2-4 weeks for most decks in Northern Virginia. However, the full timeline from first call to completion is 6-12 weeks when you include consultation (1 week), design (1-2 weeks), permits (2-6 weeks), and construction (2-4 weeks)." } },
     { "@type": "Question", name: "What takes the longest in the deck building process?", acceptedAnswer: { "@type": "Answer", text: "Permits. Loudoun County takes 10-15 business days, Fairfax County 3-6 weeks. This is why we recommend starting the process 2-3 months before your desired completion date." } },
     { "@type": "Question", name: "Can weather delay a deck build?", acceptedAnswer: { "@type": "Answer", text: "Yes. Rain days can add 1-3 days. Extended freezing (ground too hard for footings) can pause work for days. Summer thunderstorms rarely cause significant delays. We build through light rain and adjust schedules proactively." } },
-    { "@type": "Question", name: "How long does a screened porch take to build?", acceptedAnswer: { "@type": "Answer", text: "Screened porches take 3-6 weeks of construction time — longer than a standard deck due to the roof structure, screening, and often electrical work. Total timeline including permits: 8-14 weeks." } },
+    { "@type": "Question", name: "How long does a screened porch take to build?", acceptedAnswer: { "@type": "Answer", text: "Screened porches take 3-6 weeks of construction time longer than a standard deck due to the roof structure, screening, and often electrical work. Total timeline including permits: 8-14 weeks." } },
   ],
 };
 
@@ -28,26 +28,34 @@ export default function HowLongToBuildPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <Breadcrumbs />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>How Long Does It Take to Build a Deck in Northern Virginia?</h1>
-          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Complete timeline from first call to completion — permits, construction, and what causes delays</p>
+          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Complete timeline from first call to completion permits, construction, and what causes delays</p>
         </div>
       </section>
 
       <section style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
-          <p>Construction takes <strong>2–4 weeks</strong>. Full timeline from consultation to completion: <strong>6–12 weeks</strong>. The biggest variable is permits — Loudoun County: 10–15 business days, Fairfax County: 3–6 weeks. Start the process 2–3 months before your desired completion date.</p>
+          <p>Construction takes <strong>2–4 weeks</strong>. Full timeline from consultation to completion: <strong>6–12 weeks</strong>. The biggest variable is permits Loudoun County: 10–15 business days, Fairfax County: 3–6 weeks. Start the process 2–3 months before your desired completion date.</p>
         </div>
       </section>
 
       <article style={{ padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-
-          <h2 style={S.h2}>Full Timeline: Step by Step</h2>
+          <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
+            <Image
+              src="/images/img13.jpeg"
+              alt="Deck construction timeline and process in Northern Virginia"
+              fill
+              style={{ objectFit: 'cover' }}
+              sizes="(max-width: 900px) 100vw, 900px"
+              priority
+            />
+          </div>
+          <h2 style={S.h2}>The 5 Phases of a Deck Build</h2>
           <div style={{ overflowX: 'auto', marginBottom: '2rem' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.9rem' }}>
               <thead><tr style={{ background: '#f5f5f5' }}>{['Phase', 'Duration', 'What Happens'].map(h => <th key={h} style={S.th}>{h}</th>)}</tr></thead>
@@ -57,7 +65,7 @@ export default function HowLongToBuildPage() {
                   ['2. Design & estimate', '1–2 weeks', 'Custom design, material selection, detailed itemized estimate delivered'],
                   ['3. HOA submission', '2–4 weeks', 'Prepare and submit ARC package (if applicable), wait for approval'],
                   ['4. Permit application', '2–6 weeks', 'Submit plans to county, zoning + building review, receive permit'],
-                  ['5. Material ordering', '1–2 weeks', 'Order decking, railings, hardware — runs parallel with permit wait'],
+                  ['5. Material ordering', '1–2 weeks', 'Order decking, railings, hardware runs parallel with permit wait'],
                   ['6. Construction', '2–4 weeks', 'Footings, framing, decking, railings, stairs, lighting, inspections'],
                   ['7. Final inspection + walkthrough', '2–3 days', 'County final inspection, cleanup, client walkthrough, warranty delivery'],
                 ].map((row, i) => (
@@ -97,9 +105,9 @@ export default function HowLongToBuildPage() {
               <thead><tr style={{ background: '#f5f5f5' }}>{['County', 'Plan Review', 'Notes'].map(h => <th key={h} style={S.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {[
-                  ['Loudoun County', '10–15 business days', 'Fastest in NoVA — clean submissions process quickly'],
-                  ['Fairfax County', '3–6 weeks', 'Slowest — zoning review adds time, especially near RPA zones'],
-                  ['Prince William County', '2–4 weeks', 'Middle ground — straightforward for standard decks'],
+                  ['Loudoun County', '10–15 business days', 'Fastest in NoVA clean submissions process quickly'],
+                  ['Fairfax County', '3–6 weeks', 'Slowest zoning review adds time, especially near RPA zones'],
+                  ['Prince William County', '2–4 weeks', 'Middle ground straightforward for standard decks'],
                   ['Arlington County', '2–4 weeks', 'Smaller county, generally efficient'],
                   ['Stafford County', '2–3 weeks', 'Less demand, typically faster processing'],
                 ].map((row, i) => (
@@ -112,7 +120,7 @@ export default function HowLongToBuildPage() {
           </div>
 
           <h2 style={S.h2}>What Causes Delays</h2>
-          <p style={S.p}><strong>Weather:</strong> Rain adds 1–3 days. Frozen ground (Dec–Feb) can delay footings. Summer thunderstorms rarely cause significant impact — crews work early mornings.</p>
+          <p style={S.p}><strong>Weather:</strong> Rain adds 1–3 days. Frozen ground (Dec–Feb) can delay footings. Summer thunderstorms rarely cause significant impact crews work early mornings.</p>
           <p style={S.p}><strong>Permit revisions:</strong> If the county requests changes to your plans, add 1–2 weeks. We minimize this by checking compliance before submitting.</p>
           <p style={S.p}><strong>HOA delays:</strong> Some HOAs meet monthly. If you miss the submission deadline, you wait a full month. We track all major NoVA HOA review cycles.</p>
           <p style={S.p}><strong>Material backorders:</strong> Popular Trex colors can sell out in peak season (May–Aug). We order materials as soon as the contract is signed, before permits are even approved.</p>

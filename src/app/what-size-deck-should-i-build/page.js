@@ -1,7 +1,7 @@
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
@@ -27,7 +27,6 @@ export default function DeckSizePage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <Breadcrumbs />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>What Size Deck Should I Build?</h1>
@@ -42,8 +41,17 @@ export default function DeckSizePage() {
       </section>
       <article style={{ padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-
-          <h2 style={S.h2}>Recommended Deck Size by Use</h2>
+          <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
+            <Image
+              src="/images/img26.jpeg"
+              alt="Planning the perfect deck size for a Northern Virginia home"
+              fill
+              style={{ objectFit: 'cover' }}
+              sizes="(max-width: 900px) 100vw, 900px"
+              priority
+            />
+          </div>
+          <h2 style={S.h2}>The 20% Rule Finding Your Perfect Deck Size</h2>
           <div style={{ overflowX: 'auto', marginBottom: '2rem' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.9rem' }}>
               <thead><tr style={{ background: '#f5f5f5' }}>{['Use Case', 'Min Size', 'Recommended', 'What Fits'].map(h => <th key={h} style={S.th}>{h}</th>)}</tr></thead>
@@ -75,7 +83,7 @@ export default function DeckSizePage() {
                   ['Grill station', '6x4 ft (24 sqft)', 'Plus 3 ft clearance from railings/walls'],
                   ['Lounge set (sofa + 2 chairs)', '10x8 ft (80 sqft)', 'Coffee table in center'],
                   ['Adirondack chairs (2)', '6x4 ft (24 sqft)', 'Plus side table'],
-                  ['Hot tub', '10x10 ft (100 sqft)', 'Reinforced framing required — tell us early'],
+                  ['Hot tub', '10x10 ft (100 sqft)', 'Reinforced framing required tell us early'],
                   ['Fire pit (portable)', '8x8 ft (64 sqft)', 'Clearance from railings and roof'],
                   ['Bar/counter seating (4)', '8x3 ft (24 sqft)', 'Often built into railing or island'],
                   ['Walking path', '3 ft wide minimum', 'Main traffic lanes around furniture'],

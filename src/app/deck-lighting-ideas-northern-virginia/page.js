@@ -1,7 +1,7 @@
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
@@ -17,7 +17,7 @@ const faqSchema = {
   mainEntity: [
     { "@type": "Question", name: "How much does deck lighting cost?", acceptedAnswer: { "@type": "Answer", text: "Deck lighting in Northern Virginia costs $500-$5,000+ depending on type and scope. Post cap lights: $50-$100 each. Stair riser lights: $40-$80 each. Under-rail LED strips: $300-$800. A full lighting package for a 300 sqft deck typically runs $1,500-$3,500." } },
     { "@type": "Question", name: "What is the best lighting for a deck?", acceptedAnswer: { "@type": "Answer", text: "LED post cap lights + stair riser lights are the best combination for most decks. They provide safety lighting on stairs, ambient glow from posts, and integrate cleanly with composite railing systems like Trex Signature. Add under-rail LED strips for a premium look." } },
-    { "@type": "Question", name: "Can you add lighting to an existing deck?", acceptedAnswer: { "@type": "Answer", text: "Yes. Post cap lights and solar options require no wiring. Hardwired stair lights and under-rail strips require running low-voltage wire under the deck boards — easier on composite decks where boards can be partially removed and reinstalled." } },
+    { "@type": "Question", name: "Can you add lighting to an existing deck?", acceptedAnswer: { "@type": "Answer", text: "Yes. Post cap lights and solar options require no wiring. Hardwired stair lights and under-rail strips require running low-voltage wire under the deck boards easier on composite decks where boards can be partially removed and reinstalled." } },
   ],
 };
 
@@ -27,11 +27,20 @@ export default function DeckLightingPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <Breadcrumbs />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-          <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Deck Lighting Ideas for Northern Virginia</h1>
-          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>8 lighting options with costs — transform your deck for evening entertaining</p>
+          <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
+            <Image
+              src="/images/img50.jpeg"
+              alt="Premium deck lighting installation by LDN Decks in Northern Virginia"
+              fill
+              style={{ objectFit: 'cover' }}
+              sizes="(max-width: 900px) 100vw, 900px"
+              priority
+            />
+          </div>
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Deck Lighting Ambience and Safety for Your Outdoor Space</h2>
+          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>8 lighting options with costs transform your deck for evening entertaining</p>
         </div>
       </section>
       <article style={{ padding: '4rem 0' }}>
@@ -77,21 +86,21 @@ export default function DeckLightingPage() {
 
           <h2 style={S.h2}>Why Deck Lighting Matters</h2>
           <p style={S.p}><strong>Safety:</strong> Virginia building code requires adequate lighting on deck stairs. Stair riser lights satisfy this while looking far better than a floodlight.</p>
-          <p style={S.p}><strong>Extended use:</strong> Northern Virginia has 7–8 months of comfortable evening weather. Lighting lets you use your deck after sunset — effectively doubling your hours of enjoyment.</p>
+          <p style={S.p}><strong>Extended use:</strong> Northern Virginia has 7–8 months of comfortable evening weather. Lighting lets you use your deck after sunset effectively doubling your hours of enjoyment.</p>
           <p style={S.p}><strong>Home value:</strong> Lighting is one of the top 3 features buyers notice on a deck (along with materials and railings). It signals a finished, professional build.</p>
           <p style={S.p}><strong>Security:</strong> A well-lit deck deters intruders and illuminates your backyard entry points.</p>
 
           <h2 style={S.h2}>Add Lighting to an Existing Deck?</h2>
-          <p style={S.p}><strong>Easiest:</strong> Post cap lights (solar — no wiring) and string lights (plug into outdoor outlet). DIY-friendly.</p>
-          <p style={S.p}><strong>Medium:</strong> Low-voltage stair risers and under-rail strips. Requires running wire under deck boards — easier on composite decks where boards lift out.</p>
+          <p style={S.p}><strong>Easiest:</strong> Post cap lights (solar no wiring) and string lights (plug into outdoor outlet). DIY-friendly.</p>
+          <p style={S.p}><strong>Medium:</strong> Low-voltage stair risers and under-rail strips. Requires running wire under deck boards easier on composite decks where boards lift out.</p>
           <p style={S.p}><strong>Hardest:</strong> Recessed in-board lights and under-deck soffits. Best installed during initial construction. Retrofit requires removing and reinstalling deck boards.</p>
-          <p style={S.p}><strong>Our recommendation:</strong> If building a new deck, include lighting in the initial design — it costs 30–50% less than retrofitting later because wiring runs during framing before boards go on.</p>
+          <p style={S.p}><strong>Our recommendation:</strong> If building a new deck, include lighting in the initial design it costs 30–50% less than retrofitting later because wiring runs during framing before boards go on.</p>
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Frequently Asked Questions</h2>
           {[
             { q: "How much does deck lighting cost?", a: "Basic (post caps + stairs): $500-$1,200. Popular package with LED strips: $1,500-$3,000. Premium with smart controls: $3,000-$5,000+." },
-            { q: "What's the best deck lighting?", a: "Post cap lights + stair risers + under-rail LED strips — our most-requested combo. Warm white (2700K) looks best on composite." },
-            { q: "Can I add lights to an existing deck?", a: "Yes. Solar post caps need no wiring. Hardwired options require running low-voltage wire — easier on composite decks." },
+            { q: "What's the best deck lighting?", a: "Post cap lights + stair risers + under-rail LED strips our most-requested combo. Warm white (2700K) looks best on composite." },
+            { q: "Can I add lights to an existing deck?", a: "Yes. Solar post caps need no wiring. Hardwired options require running low-voltage wire easier on composite decks." },
           ].map((faq, i) => (
             <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
               <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>

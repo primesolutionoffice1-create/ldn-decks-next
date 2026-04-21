@@ -1,7 +1,7 @@
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
@@ -16,7 +16,7 @@ const faqSchema = {
   "@context": "https://schema.org", "@type": "FAQPage",
   mainEntity: [
     { "@type": "Question", name: "Is a paver or flagstone patio cheaper?", acceptedAnswer: { "@type": "Answer", text: "Concrete pavers are 30-50% cheaper than natural flagstone. Pavers: $25-$40/sqft installed. Flagstone: $35-$65/sqft installed. For a 300 sqft patio, that's $7,500-$12,000 for pavers vs $10,500-$19,500 for flagstone." } },
-    { "@type": "Question", name: "Which lasts longer — pavers or flagstone?", acceptedAnswer: { "@type": "Answer", text: "Both last 25-50+ years with proper installation and base prep. Pavers are more uniform and easier to replace individually. Flagstone is natural stone that won't fade but can crack in severe freeze-thaw if not properly set." } },
+    { "@type": "Question", name: "Which lasts longer pavers or flagstone?", acceptedAnswer: { "@type": "Answer", text: "Both last 25-50+ years with proper installation and base prep. Pavers are more uniform and easier to replace individually. Flagstone is natural stone that won't fade but can crack in severe freeze-thaw if not properly set." } },
     { "@type": "Question", name: "Which is better for Virginia's climate?", acceptedAnswer: { "@type": "Answer", text: "Both perform well. Pavers have slight edge for freeze-thaw because interlocking joints flex with ground movement. Flagstone set in mortar can crack; dry-set flagstone is more forgiving. We recommend proper base depth (8-12 inches) for both in Virginia." } },
   ],
 };
@@ -27,10 +27,19 @@ export default function PaverVsFlagstonePage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <Breadcrumbs />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-          <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Paver vs Flagstone Patio: Which Is Best?</h1>
+          <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
+            <Image
+              src="/images/img32.jpeg"
+              alt="Comparison of paver and flagstone patios in Northern Virginia"
+              fill
+              style={{ objectFit: 'cover' }}
+              sizes="(max-width: 900px) 100vw, 900px"
+              priority
+            />
+          </div>
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Pavers vs. Flagstone Choosing the Right Hardscape</h2>
           <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Cost, durability, and look compared for Northern Virginia patios</p>
         </div>
       </section>
@@ -56,8 +65,8 @@ export default function PaverVsFlagstonePage() {
                   ['Freeze-thaw', 'Excellent (joints flex)', 'Good (dry-set) / Fair (mortared)'],
                   ['Maintenance', 'Re-sand joints every 3-5 yrs, re-level as needed', 'Weed control, occasional re-setting'],
                   ['Slip resistance', 'Excellent (textured surface)', 'Good (varies by stone type)'],
-                  ['Repair', 'Easy — lift and replace individual pavers', 'Harder — each piece is unique'],
-                  ['Heat retention', 'Moderate — lighter colors stay cooler', 'Cool — natural stone absorbs less heat'],
+                  ['Repair', 'Easy lift and replace individual pavers', 'Harder each piece is unique'],
+                  ['Heat retention', 'Moderate lighter colors stay cooler', 'Cool natural stone absorbs less heat'],
                   ['Drainage', 'Good (permeable options available)', 'Good (natural gaps between stones)'],
                   ['Best for', 'Driveways, walkways, pool decks, patios', 'Garden paths, patios, natural landscapes'],
                 ].map((row, i) => (
@@ -82,7 +91,7 @@ export default function PaverVsFlagstonePage() {
 
           <h2 style={S.h2}>When to Choose Flagstone</h2>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Natural aesthetic:</strong> No two pieces are alike — organic, timeless beauty</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Natural aesthetic:</strong> No two pieces are alike organic, timeless beauty</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Premium property:</strong> Flagstone signals quality on high-end homes (Great Falls, McLean, Vienna estates)</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Garden integration:</strong> Blends seamlessly with landscaping, ground cover, and natural settings</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Heat sensitivity:</strong> Natural stone stays cooler than manufactured pavers in direct sun</li>
@@ -95,7 +104,7 @@ export default function PaverVsFlagstonePage() {
               <thead><tr style={{ background: '#f5f5f5' }}>{['Stone', 'Cost/sqft', 'Color', 'Best For'].map(h => <th key={h} style={S.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {[
-                  ['PA Bluestone', '$35–$50', 'Blue-gray, natural', 'Most popular in NoVA — classic, versatile'],
+                  ['PA Bluestone', '$35–$50', 'Blue-gray, natural', 'Most popular in NoVA classic, versatile'],
                   ['Travertine', '$40–$65', 'Cream, tan, ivory', 'Pool surrounds, elegant patios'],
                   ['Tennessee Fieldstone', '$30–$45', 'Tan, brown, warm', 'Rustic patios, garden paths'],
                   ['Quartzite', '$35–$55', 'Gray, silver, gold', 'Modern natural look, very durable'],

@@ -1,7 +1,7 @@
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
@@ -27,7 +27,6 @@ export default function DeckValuePage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <Breadcrumbs />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -45,6 +44,17 @@ export default function DeckValuePage() {
 
       <article style={{ padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
+
+          <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
+            <Image
+              src="/images/img36.jpeg"
+              alt="Luxury custom deck adding significant resale value to Virginia home"
+              fill
+              style={{ objectFit: 'cover' }}
+              sizes="(max-width: 900px) 100vw, 900px"
+              priority
+            />
+          </div>
 
           <h2 style={S.h2}>ROI by Deck Type</h2>
           <div style={{ overflowX: 'auto', marginBottom: '2rem' }}>
@@ -75,11 +85,11 @@ export default function DeckValuePage() {
 
           <h2 style={S.h2}>What Buyers Actually Look For</h2>
           <ol style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
-            <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Low maintenance materials</strong> — buyers strongly prefer composite. &ldquo;No staining needed&rdquo; is a listing selling point.</li>
-            <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Usable space</strong> — a 300 sqft deck with seating, dining, and grill zones beats a 500 sqft empty platform.</li>
-            <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Lighting</strong> — integrated stair and post lights signal a finished, professional build.</li>
-            <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Code compliance</strong> — permitted decks avoid inspection issues at sale. Unpermitted decks kill deals.</li>
-            <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Screened option</strong> — screened porches command the highest premium.</li>
+            <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Low maintenance materials</strong> buyers strongly prefer composite. &ldquo;No staining needed&rdquo; is a listing selling point.</li>
+            <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Usable space</strong> a 300 sqft deck with seating, dining, and grill zones beats a 500 sqft empty platform.</li>
+            <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Lighting</strong> integrated stair and post lights signal a finished, professional build.</li>
+            <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Code compliance</strong> permitted decks avoid inspection issues at sale. Unpermitted decks kill deals.</li>
+            <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Screened option</strong> screened porches command the highest premium.</li>
           </ol>
 
           <h2 style={S.h2}>When a Deck Hurts Resale (Rare)</h2>

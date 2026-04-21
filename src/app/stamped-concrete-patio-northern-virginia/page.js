@@ -1,7 +1,7 @@
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
@@ -17,7 +17,7 @@ const faqSchema = {
   mainEntity: [
     { "@type": "Question", name: "How much does a stamped concrete patio cost in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "Stamped concrete patios cost $15-$30 per square foot installed in Northern Virginia. A typical 300 sqft patio: $4,500-$9,000. This is 30-50% less than pavers and the most affordable patio option for budget-conscious homeowners." } },
     { "@type": "Question", name: "How long does stamped concrete last in Virginia?", acceptedAnswer: { "@type": "Answer", text: "Stamped concrete lasts 20-30 years with proper installation and maintenance. Reseal every 2-3 years to protect against Virginia's freeze-thaw cycles. Without resealing, the surface can crack and the color can fade within 5-8 years." } },
-    { "@type": "Question", name: "Stamped concrete vs pavers — which is better?", acceptedAnswer: { "@type": "Answer", text: "Stamped concrete is 30-50% cheaper upfront but has higher maintenance (resealing) and is harder to repair (can't replace one section). Pavers cost more but are more durable in freeze-thaw, individual pavers are replaceable, and they don't need resealing. For budget: stamped concrete. For longevity: pavers." } },
+    { "@type": "Question", name: "Stamped concrete vs pavers which is better?", acceptedAnswer: { "@type": "Answer", text: "Stamped concrete is 30-50% cheaper upfront but has higher maintenance (resealing) and is harder to repair (can't replace one section). Pavers cost more but are more durable in freeze-thaw, individual pavers are replaceable, and they don't need resealing. For budget: stamped concrete. For longevity: pavers." } },
   ],
 };
 
@@ -27,17 +27,26 @@ export default function StampedConcretePage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <Breadcrumbs />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-          <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Stamped Concrete Patio in Northern Virginia</h1>
-          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>The most affordable patio option — patterns, colors, costs, and what to know before you build</p>
+          <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
+            <Image
+              src="/images/img11.jpeg"
+              alt="Premium stamped concrete patio built by LDN Decks in Northern Virginia"
+              fill
+              style={{ objectFit: 'cover' }}
+              sizes="(max-width: 900px) 100vw, 900px"
+              priority
+            />
+          </div>
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Stamped Concrete The Foundation of Modern Patios</h2>
+          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>The most affordable patio option patterns, colors, costs, and what to know before you build</p>
         </div>
       </section>
       <section style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
-          <p>Stamped concrete: <strong>$15–$30/sqft installed</strong> ($4,500–$9,000 for 300 sqft). Most affordable patio option — 30-50% less than pavers. Patterns mimic slate, flagstone, brick, or wood plank. Reseal every 2-3 years for Virginia climate. Lasts 20-30 years.</p>
+          <p>Stamped concrete: <strong>$15–$30/sqft installed</strong> ($4,500–$9,000 for 300 sqft). Most affordable patio option 30-50% less than pavers. Patterns mimic slate, flagstone, brick, or wood plank. Reseal every 2-3 years for Virginia climate. Lasts 20-30 years.</p>
         </div>
       </section>
       <article style={{ padding: '4rem 0' }}>
@@ -70,7 +79,7 @@ export default function StampedConcretePage() {
               { name: 'Herringbone Brick', desc: 'Classic brick pattern. Traditional homes. Available in red, brown, and gray tones.' },
               { name: 'Wood Plank', desc: 'Mimics wooden boardwalk. Modern/rustic. Popular for pool surrounds and walkways.' },
               { name: 'Cobblestone', desc: 'Old-world European look. Small rounded stones. Formal gardens and entries.' },
-              { name: 'Seamless Texture', desc: 'No pattern lines — just textured surface. Most affordable. Clean, modern look.' },
+              { name: 'Seamless Texture', desc: 'No pattern lines just textured surface. Most affordable. Clean, modern look.' },
             ].map((p) => (
               <div key={p.name} style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.25rem' }}>
                 <h3 style={{ fontWeight: 600, marginBottom: '0.5rem', fontSize: '1rem' }}>{p.name}</h3>
@@ -105,7 +114,7 @@ export default function StampedConcretePage() {
 
           <h2 style={S.h2}>Virginia Climate Considerations</h2>
           <p style={S.p}><strong>Freeze-thaw:</strong> Stamped concrete&apos;s biggest weakness in Virginia. Water enters micro-cracks, freezes, expands. Regular resealing (every 2-3 years) is essential to prevent this. Without it, cracks appear within 5-8 years.</p>
-          <p style={S.p}><strong>Comparison:</strong> Pavers handle freeze-thaw better because the joints flex with ground movement. Stamped concrete is a rigid slab — it cracks rather than flexing. This is why we recommend pavers for most NoVA patios, but stamped concrete remains the best budget option.</p>
+          <p style={S.p}><strong>Comparison:</strong> Pavers handle freeze-thaw better because the joints flex with ground movement. Stamped concrete is a rigid slab it cracks rather than flexing. This is why we recommend pavers for most NoVA patios, but stamped concrete remains the best budget option.</p>
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>FAQ</h2>
           {[

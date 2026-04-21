@@ -1,7 +1,7 @@
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
@@ -27,7 +27,6 @@ export default function BestTimeToBuildPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <Breadcrumbs />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -45,6 +44,17 @@ export default function BestTimeToBuildPage() {
 
       <article style={{ padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
+
+          <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
+            <Image
+              src="/images/img30.jpeg"
+              alt="Deck building project in Northern Virginia scheduled during optimal season"
+              fill
+              style={{ objectFit: 'cover' }}
+              sizes="(max-width: 900px) 100vw, 900px"
+              priority
+            />
+          </div>
 
           <h2 style={S.h2}>Northern Virginia Deck Building Calendar</h2>
           <div style={{ overflowX: 'auto', marginBottom: '2rem' }}>
@@ -75,7 +85,7 @@ export default function BestTimeToBuildPage() {
             <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Material availability.</strong> Popular Trex colors and TimberTech lines can sell out in peak season. Off-peak means full selection.</li>
           </ul>
 
-          <h2 style={S.h2}>Summer Peak Season — What to Expect</h2>
+          <h2 style={S.h2}>Summer Peak Season What to Expect</h2>
           <p style={S.p}>May through August is when 60% of deck projects are booked in Northern Virginia. Expect:</p>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>4–6 week wait from signed contract to construction start</li>

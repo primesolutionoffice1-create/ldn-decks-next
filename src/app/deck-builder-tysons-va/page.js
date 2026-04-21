@@ -1,7 +1,7 @@
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
@@ -24,7 +24,6 @@ export default function TysonsDeckBuilderPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <Breadcrumbs />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Modern Deck Builder in Tysons, VA</h1>
@@ -38,10 +37,20 @@ export default function TysonsDeckBuilderPage() {
       </section>
       <article style={{ padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Tysons — Modern Living, Modern Decks</h2>
+          <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
+            <Image
+              src="/images/img35.jpeg"
+              alt="Premium custom deck built by LDN Decks in Tysons, Virginia"
+              fill
+              style={{ objectFit: 'cover' }}
+              sizes="(max-width: 900px) 100vw, 900px"
+              priority
+            />
+          </div>
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Tysons Modern Living in Northern Virginia’s Hub</h2>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Tysons has evolved from a suburban office park into a walkable urban center with luxury townhomes, mixed-use developments, and established single-family neighborhoods. Deck projects here range from sleek, compact rooftop terraces on new construction to full-size outdoor living expansions on established properties near Tysons Corner.</p>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Modern aesthetic:</strong> Clean lines, aluminum or cable railings, dark composite colors (Lava Rock, Dark Hickory) — matching Tysons&apos; contemporary architecture</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Modern aesthetic:</strong> Clean lines, aluminum or cable railings, dark composite colors (Lava Rock, Dark Hickory) matching Tysons&apos; contemporary architecture</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Townhome specialists:</strong> Compact 150-300 sqft builds that maximize small rear yards and rooftop spaces</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>High-rise adjacent:</strong> We work with HOAs and management companies in Tysons&apos; newer communities</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Fairfax County permitting:</strong> <Link href="/deck-permit-fairfax-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Full permit guide</Link></li>
@@ -49,8 +58,8 @@ export default function TysonsDeckBuilderPage() {
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Featured Tysons Project</h2>
           <div style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', marginBottom: '2rem' }}>
-            <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>$28,000 — 220 sqft Modern Townhome Deck, The Boro</h3>
-            <p style={{ lineHeight: 1.7 }}>Compact but stunning: TimberTech AZEK deck in Coastline (light beach tone) with black aluminum cable railings, flush-mount LED deck lights, and integrated planter boxes. Designed for a rear-facing townhome with limited space. Fairfax County permit. HOA managed by FirstService — approved in 2 weeks. 2-week build.</p>
+            <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>$28,000 220 sqft Modern Townhome Deck, The Boro</h3>
+            <p style={{ lineHeight: 1.7 }}>Compact but stunning: TimberTech AZEK deck in Coastline (light beach tone) with black aluminum cable railings, flush-mount LED deck lights, and integrated planter boxes. Designed for a rear-facing townhome with limited space. Fairfax County permit. HOA managed by FirstService approved in 2 weeks. 2-week build.</p>
           </div>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>FAQ</h2>

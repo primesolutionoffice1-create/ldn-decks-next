@@ -1,7 +1,7 @@
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
@@ -24,7 +24,6 @@ export default function AlexandriaDeckBuilderPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <Breadcrumbs />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Custom Deck Builder in Alexandria, VA</h1>
@@ -38,6 +37,16 @@ export default function AlexandriaDeckBuilderPage() {
       </section>
       <article style={{ padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
+          <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
+            <Image
+              src="/images/img10.jpeg"
+              alt="Premium custom deck installation by LDN Decks in Alexandria, Virginia"
+              fill
+              style={{ objectFit: 'cover' }}
+              sizes="(max-width: 900px) 100vw, 900px"
+              priority
+            />
+          </div>
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Alexandria — Historic Charm Meets Modern Outdoor Living</h2>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Alexandria ranges from the historic rowhouses of Old Town to the established neighborhoods of Del Ray, Seminary Hill, and West End, to the newer developments in Kingstowne and Franconia. Each area has distinct lot sizes, architectural styles, and permitting requirements — and we navigate all of them.</p>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>

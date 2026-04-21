@@ -1,7 +1,7 @@
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
@@ -16,7 +16,7 @@ const faqSchema = {
   "@context": "https://schema.org", "@type": "FAQPage",
   mainEntity: [
     { "@type": "Question", name: "How much does a deck cost in South Riding?", acceptedAnswer: { "@type": "Answer", text: "South Riding deck projects range from $18,000-$45,000. Composite decks: $32-$55/sqft installed. Most South Riding projects involve upgrading builder-grade PT decks (2005-2015 homes) to Trex or TimberTech composite. Resurfacing: $10k-$20k if frame is solid." } },
-    { "@type": "Question", name: "Does South Riding HOA allow composite decks?", acceptedAnswer: { "@type": "Answer", text: "Yes. South Riding HOA allows and prefers composite over wood. Architectural review required — submit site plan, materials, and colors. We handle the entire ARC process with 100% approval rate." } },
+    { "@type": "Question", name: "Does South Riding HOA allow composite decks?", acceptedAnswer: { "@type": "Answer", text: "Yes. South Riding HOA allows and prefers composite over wood. Architectural review required submit site plan, materials, and colors. We handle the entire ARC process with 100% approval rate." } },
   ],
 };
 
@@ -24,7 +24,6 @@ export default function SouthRidingDeckBuilderPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <Breadcrumbs />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Custom Deck Builder in South Riding, VA</h1>
@@ -38,25 +37,35 @@ export default function SouthRidingDeckBuilderPage() {
       </section>
       <article style={{ padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>South Riding — Your Builder Deck Is Ready for an Upgrade</h2>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>South Riding homes (mostly built 2005-2015) typically came with basic pressure-treated wood decks that are now 10-20 years old — graying, splintering, and requiring constant maintenance. We transform these into beautiful, maintenance-free composite decks. Many South Riding homeowners combine the upgrade with adding a screened porch or pergola.</p>
+          <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
+            <Image
+              src="/images/img22.jpeg"
+              alt="Premium custom deck built by LDN Decks in South Riding, Virginia"
+              fill
+              style={{ objectFit: 'cover' }}
+              sizes="(max-width: 900px) 100vw, 900px"
+              priority
+            />
+          </div>
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>South Riding From Builder Wood to Maintenance-Free Composite</h2>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>South Riding homes (mostly built 2005-2015) typically came with basic pressure-treated wood decks that are now 10-20 years old graying, splintering, and requiring constant maintenance. We transform these into beautiful, maintenance-free composite decks. Many South Riding homeowners combine the upgrade with adding a screened porch or pergola.</p>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Resurfacing saves money:</strong> If your deck frame is solid (we inspect free), we keep it and replace only the boards — 40-60% less than full rebuild</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Resurfacing saves money:</strong> If your deck frame is solid (we inspect free), we keep it and replace only the boards 40-60% less than full rebuild</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>South Riding HOA expert:</strong> We know the ARC requirements, approved materials/colors, and submission timeline</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Loudoun County permits:</strong> Fastest in NoVA — 10-15 business days. We handle everything.</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Loudoun County permits:</strong> Fastest in NoVA 10-15 business days. We handle everything.</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>15 minutes from HQ:</strong> Fast site visits and responsive service</li>
           </ul>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Featured South Riding Project</h2>
           <div style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', marginBottom: '2rem' }}>
-            <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>$19,500 — 280 sqft Deck Resurfacing, South Riding</h3>
-            <p style={{ lineHeight: 1.7 }}>Resurfaced a 12-year-old builder-grade PT deck with Trex Enhance (Saddle). Frame inspected and solid — removed old boards, installed Trex with hidden fasteners, new aluminum railings, 4 stair lights. Total transformation for under $20k. South Riding HOA approved in 12 days. Loudoun County permit. 1-week build.</p>
+            <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>$19,500 280 sqft Deck Resurfacing, South Riding</h3>
+            <p style={{ lineHeight: 1.7 }}>Resurfaced a 12-year-old builder-grade PT deck with Trex Enhance (Saddle). Frame inspected and solid removed old boards, installed Trex with hidden fasteners, new aluminum railings, 4 stair lights. Total transformation for under $20k. South Riding HOA approved in 12 days. Loudoun County permit. 1-week build.</p>
           </div>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>FAQ</h2>
           {[
             { q: "Cost in South Riding?", a: "New deck: $18k-$45k. Resurfacing: $10k-$20k (saves 40-60% if frame is solid). Composite: $32-$55/sqft." },
-            { q: "South Riding HOA allow composite?", a: "Yes — they prefer it. We handle ARC submissions. 100% approval rate." },
+            { q: "South Riding HOA allow composite?", a: "Yes they prefer it. We handle ARC submissions. 100% approval rate." },
           ].map((faq, i) => (
             <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
               <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>

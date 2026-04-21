@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import ServicesHeader from '@/components/ServicesHeader';
 import ServiceMain from '@/components/ServiceMain';
 import ServiceInclusions from '@/components/ServiceInclusions';
@@ -129,6 +130,19 @@ export default function DeckBuilderAshburnPage() {
           image2="/images/img37.jpeg"
         />
                   <ServiceContentExpansion sections={expansionSections} />
+                  <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
+          <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
+            <Image
+              src="/images/img17.jpeg"
+              alt="Premium custom deck built by LDN Decks in Ashburn, Virginia"
+              fill
+              style={{ objectFit: 'cover' }}
+              sizes="(max-width: 900px) 100vw, 900px"
+              priority
+            />
+          </div>
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Ashburn — The Heart of Loudoun Luxury Outdoor Living</h2>
+          </div>
                   <ServiceInclusions
           title="Why Ashburn Chooses Loudoun Decks"
           description="We are not a franchise. We are a local Loudoun County team with deep roots in Ashburn and the credentials to back every build."

@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
 import SimpleCTA from '@/components/SimpleCTA';
@@ -28,7 +29,7 @@ export default function TrexVsTimberTechPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      
+
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Trex vs TimberTech vs AZEK</h1>
@@ -45,6 +46,17 @@ export default function TrexVsTimberTechPage() {
 
       <article style={{ padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
+
+          <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
+            <Image
+              src="/images/img05.jpeg"
+              alt="High-quality Trex and TimberTech composite decking comparison detail"
+              fill
+              style={{ objectFit: 'cover' }}
+              sizes="(max-width: 900px) 100vw, 900px"
+              priority
+            />
+          </div>
 
           <h2 style={S.h2}>Side-by-Side Comparison</h2>
           <div style={{ overflowX: 'auto', marginBottom: '2rem' }}>
@@ -80,7 +92,7 @@ export default function TrexVsTimberTechPage() {
 
           <h2 style={S.h2}>Why Material Matters in Virginia&apos;s Climate</h2>
           <h3 style={S.h3}>Freeze-Thaw Cycles (December–March)</h3>
-          <p style={S.p}>Northern Virginia experiences 50–80 freeze-thaw cycles per winter. Water seeps into uncapped materials, freezes, expands, and cracks the surface. All four options above are fully capped — moisture cannot penetrate.</p>
+          <p style={S.p}>Northern Virginia experiences 50–80 freeze-thaw cycles per winter. Water seeps into uncapped materials, freezes, expands, and cracks the surface. All four options above are fully capped moisture cannot penetrate.</p>
           <h3 style={S.h3}>Summer Heat (90°F+ for 60+ Days)</h3>
           <p style={S.p}>Dark composite surfaces can reach 130–150°F in direct sun. AZEK and Trex Transcend stay 20–30°F cooler due to shell technology. Important for barefoot comfort on south/west-facing decks.</p>
           <h3 style={S.h3}>Humidity and Mold</h3>

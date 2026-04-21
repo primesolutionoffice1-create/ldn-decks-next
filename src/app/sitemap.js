@@ -144,6 +144,8 @@ export default async function sitemap() {
                 { path: "/fence-builder-northern-virginia",             priority: 0.85, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-builder-stafford-va",                    priority: 0.85, lastMod: TIER1, freq: "weekly" },
                 { path: "/fire-pit-builder-northern-virginia",          priority: 0.85, lastMod: TIER1, freq: "weekly" },
+                { path: "/pressure-washing-deck-northern-virginia",     priority: 0.80, lastMod: TIER1, freq: "weekly" },
+                { path: "/deck-builder-bristow-va",                     priority: 0.85, lastMod: TIER1, freq: "weekly" },
 
                 // Tier 4 - Evergreen / rarely changes
                 { path: "/about",                        priority: 0.65, lastMod: TIER4, freq: "monthly" },

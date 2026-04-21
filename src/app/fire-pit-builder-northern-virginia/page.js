@@ -4,7 +4,7 @@ import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
-import { buildMetadata } from '@/lib/';
+import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/fire-pit-builder-northern-virginia',

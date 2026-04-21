@@ -51,7 +51,7 @@ export default function PorchRepairPage() {
               priority
             />
           </div>
-          <h2 style={S.h2}>The 'Pick-Test' How to Check Your Porch's Structural Integrity</h2>
+          <h2 style={S.h2}>The &apos;Pick-Test&apos; How to Check Your Porch&apos;s Structural Integrity</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
             <div style={{ background: '#e8f5e9', borderRadius: 8, padding: '1.5rem' }}>
               <h3 style={{ fontWeight: 700, color: '#2e7d32', marginBottom: '0.75rem' }}>REPAIR ✓ ($1,500–$8,000)</h3>

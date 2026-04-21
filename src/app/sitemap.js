@@ -133,6 +133,8 @@ export default async function sitemap() {
                 { path: "/deck-builder-alexandria-va",                  priority: 0.88, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-builder-arlington-va",                   priority: 0.88, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-builder-brambleton-va",                  priority: 0.88, lastMod: TIER1, freq: "weekly" },
+                { path: "/deck-builder-south-riding-va",                priority: 0.88, lastMod: TIER1, freq: "weekly" },
+                { path: "/deck-resurfacing-vs-replacement",             priority: 0.90, lastMod: TIER1, freq: "weekly" },
 
                 // Tier 4 - Evergreen / rarely changes
                 { path: "/about",                        priority: 0.65, lastMod: TIER4, freq: "monthly" },

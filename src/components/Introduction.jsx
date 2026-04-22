@@ -71,18 +71,18 @@ export default function Introduction() {
             <span className={styles.subheading}>Our Introduction</span>
             <span className={styles.line}></span>
           </div>
-          <h2 className={styles.title}>Trusted Decking<br /> Professionals</h2>
+          <h2 className={styles.title}>Built in Northern Virginia.<br /> For Northern Virginia.</h2>
           <p className={styles.description}>
-            We are Loudoun County&apos;s premier outdoor living specialists. Whether it is a brand-new composite deck or a custom fencing solution, our team of expert carpenters ensures every joint is perfect, structurally sound, and built to withstand the elements.
+            Since 2001, we&apos;ve built 500+ decks across Loudoun, Fairfax, and Prince William counties &mdash; from modest backyard additions to full outdoor living spaces with screened porches, pergolas, and kitchens. We know Loudoun County&apos;s permit process, HOA requirements, and Virginia&apos;s climate better than anyone. Every project is personally overseen by Nick, and we don&apos;t consider a job done until you&apos;d recommend us to your neighbor.
           </p>
           <ul className={styles.checkList}>
             <li>
               <CheckIcon />
-              <span>Premium, weather-resistant materials guaranteed to last</span>
+              <span>Trex Platinum Partner &amp; TimberTech Certified &mdash; highest tier in Northern Virginia</span>
             </li>
             <li>
               <CheckIcon />
-              <span>Fully permitted, code-compliant, and structurally certified builds</span>
+              <span>100% permit approval rate &mdash; we handle all HOA and county submissions for you</span>
             </li>
           </ul>
           <div className={styles.progressContainer}>

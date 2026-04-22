@@ -49,6 +49,10 @@ export default function FairfaxDeckBuilderPage() {
               priority
             />
           </div>
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Why Fairfax Homeowners Choose Loudoun Decks</h2>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Fairfax County has some of the most detailed deck permit requirements in Northern Virginia &mdash; structural drawings, setback calculations, ledger attachment specifications. We&apos;ve submitted hundreds of Fairfax County permit applications and know exactly what the Building Development Division requires to approve on the first submission. We serve Fairfax City, Fair Lakes, Fairfax Station, and surrounding neighborhoods.</p>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>Recent projects: 400 sqft composite deck in Fair Lakes (2025), deck replacement in Fairfax Station (2024), multi-level deck + stairs in Burke (2024).</p>
+
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Fairfax — The Heart of Northern Virginia Innovation</h2>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>The Fairfax area is a hub of established single-family neighborhoods with mature lots — many with original decks from the 1990s-2000s that are ready for replacement. We specialize in transforming these aging wood decks into modern, maintenance-free composite outdoor living spaces.</p>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>

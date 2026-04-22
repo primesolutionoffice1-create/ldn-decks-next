@@ -78,6 +78,13 @@ const leesburgFaqSchema = {
 
 const expansionSections = [
   {
+        title: "Why Leesburg Homeowners Choose Loudoun Decks",
+        paragraphs: [
+                "Leesburg\u2019s mix of historic districts and newer developments means deck permits and HOA rules vary significantly by neighborhood. Our team knows the difference between building in Downtown Leesburg\u2019s historic overlay zone vs. a newer Lansdowne community. We handle all Town of Leesburg permit submissions and have completed projects in Lansdowne, River Creek, Potomac Crossing, and the historic downtown area.",
+                "Recent projects: 360 sqft TimberTech Terrain deck in Lansdowne (2025), screened porch addition in River Creek (2024), fence + pergola combo in Potomac Crossing (2024)."
+              ]
+  },
+  {
         title: "Leesburg's Most Trusted Custom Deck Builder",
         paragraphs: [
                 "Leesburg, Virginia blends historic charm with modern Northern Virginia growth. As the county seat of Loudoun County, craftsmanship and quality are non-negotiable here. Loudoun Decks has built its reputation in Leesburg by delivering premium outdoor living spaces that honor the character of the town while providing all the functionality modern families demand.",

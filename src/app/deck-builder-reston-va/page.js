@@ -75,6 +75,13 @@ const restonFaqSchema = {
 
 const expansionSections = [
       {
+            title: "Why Reston Homeowners Choose Loudoun Decks",
+            paragraphs: [
+                  "Reston Association has specific design standards for all exterior structures \u2014 materials, colors, and dimensions must be pre-approved before you can even apply for a Fairfax County permit. We\u2019ve navigated RA\u2019s approval process dozens of times and know which materials and colors are pre-approved, which require a variance, and how to write your application to minimize back-and-forth.",
+                  "We build in all Reston clusters and have completed projects in North Point, South Lakes, and Lake Anne neighborhoods. Recent projects: 320 sqft Trex deck with Transcend Lineage railings in North Point (2025), screened porch addition in South Lakes (2024)."
+            ]
+      },
+      {
             title: "Premium Deck Builder Serving Reston, VA",
             paragraphs: [
                   "Reston, Virginia is a community unlike any other in Northern Virginia. Planned around paths, lakes, and green spaces, Reston homeowners have a unique relationship with the outdoors. A custom deck here is not just a home improvement. It is an extension of the outdoor lifestyle that defines the community. Loudoun Decks brings premium deck building craftsmanship to Reston and Fairfax County.",

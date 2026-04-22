@@ -79,6 +79,13 @@ const ashburnFaqSchema = {
 
 const expansionSections = [
   {
+        title: "Why Ashburn Homeowners Choose Loudoun Decks",
+        paragraphs: [
+                "Ashburn\u2019s HOA communities \u2014 from Brambleton to One Loudoun \u2014 have strict architectural guidelines for decks and outdoor structures. We\u2019ve worked with dozens of Ashburn HOAs and have a 100% approval rate on submissions. We know what Brambleton HOA allows, what colors are approved in Ryan Homes communities, and how to get your permit through Loudoun County\u2019s LOLA portal without delays.",
+                "Recent Ashburn projects include a 480 sqft Trex Transcend deck in Brambleton (2025), a screened porch addition in One Loudoun (2025), and a deck replacement with cable railing in Moorefield Station (2024)."
+              ]
+  },
+  {
         title: "Ashburn's Premier Custom Deck Builder",
         paragraphs: [
                 "Ashburn, VA is one of Northern Virginia's fastest-growing and most affluent communities  -  and the outdoor spaces of Ashburn homes reflect that standard. As a dedicated deck builder in Ashburn, Loudoun Decks has spent years building the premium custom decks and outdoor living spaces that Ashburn homeowners demand. We are not a volume builder. We are a craftsmanship-first company that takes on a selective number of full projects each year.",

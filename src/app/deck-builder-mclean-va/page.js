@@ -58,13 +58,8 @@ export default function McLeanDeckBuilderPage() {
           </div>
 
           <h2 style={S.h2}>Why McLean Homeowners Choose Loudoun Decks</h2>
-          <p style={S.p}>McLean homes demand premium craftsmanship. With home values averaging $1.2M+ and lot sizes that allow expansive outdoor living, McLean deck projects are among our most detailed and rewarding builds. We specialize in the high-end composite and screened porch work that McLean properties deserve.</p>
-          <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Premium materials:</strong> Trex Transcend, TimberTech AZEK, and exotic hardwoods not builder-grade products</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Fairfax County expertise:</strong> We know the zoning setbacks, lot coverage rules, and RPA (Resource Protection Area) requirements that affect many McLean lots near the Potomac</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>HOA and covenant compliance:</strong> We work within the guidelines of Langley Forest, Chesterbrook, Salona Village, the Farms, and other McLean communities</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Design complexity:</strong> Multi-level decks, wraparound designs, integrated outdoor kitchens, and screened porches with fireplaces</li>
-          </ul>
+          <p style={S.p}>McLean homeowners expect premium results &mdash; and so do we. The area&apos;s larger lots and higher-end homes call for custom multi-level designs, premium composite materials, and elevated finishes like glass panel railings, cable railing systems, and integrated lighting. We&apos;ve built some of our most ambitious projects in McLean, working with homeowners who want outdoor spaces that match the quality of their interiors.</p>
+          <p style={S.p}>Recent projects: 600 sqft multi-level Trex Signature deck with glass railings in McLean (2025), outdoor kitchen + pergola combo in Langley (2024), deck replacement with TimberTech AZEK in Chesterbrook (2024).</p>
 
           <h2 style={S.h2}>What We Build in McLean</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>

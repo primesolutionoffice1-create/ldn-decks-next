@@ -7,6 +7,7 @@ import ProcessSteps from '@/components/ProcessSteps';
 import ServicesFAQ from '@/components/ServicesFAQ';
 import ContactHome from '@/components/ContactHome';
 import ServiceSchema from '@/components/ServiceSchema';
+import SimpleCTA from '@/components/SimpleCTA';
 import RelatedGuides from '@/components/RelatedGuides';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import Breadcrumbs from '@/components/Breadcrumbs';
@@ -15,7 +16,7 @@ import { buildMetadata } from '@/lib/seo';
 export const metadata = buildMetadata({
   path: '/deck-repair',
       title: 'Deck Repair | Loudoun County & Fairfax VA | LDN Decks',
-  description: 'Loudoun Decks provides professional deck repair and structural restoration across Northern Virginia. Fix rot, wobbly railings, and unstable ledgers with 1,500+ words of expertise.',
+  description: 'Professional deck repair in Northern Virginia. Fix rot, wobbly railings, and ledger board failures. Free safety inspection — call (571) 655-7207.',
   image: '/images/img05.jpeg',
 });
 
@@ -115,11 +116,22 @@ export default function DeckRepairPage() {
     <main>
       <Breadcrumbs />
       <ServiceSchema name="Deck Repair" description="Deck repair services for Northern Virginia. Board replacement, railing repair, structural fixes." price="3000" />
-      <ServicesHeader 
+      <ServicesHeader
         subtext="5-Star Google Rated Restoration"
         title="Professional Deck Repair & Structural Restoration"
         description="Loudoun Decks provides expert deck repair services across Loudoun County, Fairfax County, and Prince William County. Restore your deck's safety and beauty with NoVA's local experts."
       />
+
+      {/* Urgent CTA — critical for Ads landing page conversion */}
+      <section style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem', textAlign: 'center' }}>
+          <p style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.75rem' }}>Worried about your deck&apos;s safety? Get a free inspection.</p>
+          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <a href="tel:+15716557207" style={{ display: 'inline-block', background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 1.5rem', borderRadius: '8px', fontWeight: 600, textDecoration: 'none', fontSize: '1rem' }}>Call (571) 655-7207</a>
+            <a href="/contact" style={{ display: 'inline-block', background: 'var(--color-dark)', color: '#fff', padding: '0.75rem 1.5rem', borderRadius: '8px', fontWeight: 600, textDecoration: 'none', fontSize: '1rem' }}>Get Free Estimate</a>
+          </div>
+        </div>
+      </section>
 
       <ServiceMain 
         subtitle="Safety First"
@@ -146,7 +158,9 @@ export default function DeckRepairPage() {
 
       <ProcessSteps />
 
-      <ServicesFAQ 
+      <SimpleCTA title="Deck Needs Repair? We Can Help." buttonText="Get Free Inspection" link="/contact" />
+
+      <ServicesFAQ
         title="Deck Repair & Maintenance FAQs"
         faqs={repairFAQs}
       />

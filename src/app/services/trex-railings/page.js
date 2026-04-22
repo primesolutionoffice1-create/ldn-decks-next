@@ -7,6 +7,7 @@ import ServiceContentExpansion from '@/components/ServiceContentExpansion';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
+import ServicesFAQ from '@/components/ServicesFAQ';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -88,6 +89,33 @@ const whyLdnDecks = [
   { title: "Reliable", desc: "Built for durability and long-term use." }
 ];
 
+const faqs = [
+  {
+    q: "How much do Trex railings cost in Northern Virginia?",
+    a: "Trex railing installation in Loudoun County and Fairfax County typically ranges from $150 to $250 per linear foot installed, including labor. A standard 40-linear-foot deck railing project with cocktail top averages $6,000–$10,000 depending on the Trex system (Transcend vs. Select) and infill style chosen."
+  },
+  {
+    q: "What is the difference between cable, composite, and aluminum railings?",
+    a: "Cable railings offer a sleek, open sight-line perfect for decks with views in Great Falls or Potomac Falls. Composite railings like Trex Transcend are low-maintenance and weather-resistant, ideal for NoVA's humid summers. Aluminum railings are lightweight, powder-coated, and the most budget-friendly option while still providing a modern look."
+  },
+  {
+    q: "What are the railing height requirements in Northern Virginia?",
+    a: "Virginia Residential Code requires deck railings to be at least 36 inches tall for decks up to 30 inches off the ground, and 42 inches tall for decks higher than 30 inches. Loudoun County and Fairfax County enforce these standards, and we ensure every installation we complete in Leesburg, Ashburn, and Chantilly is fully code-compliant."
+  },
+  {
+    q: "What color options are available for Trex railings?",
+    a: "Trex Transcend railings are available in classic colors including White, Vintage Lantern, Tree House, and Charcoal Black, with multiple baluster and post cap finish options. We help homeowners across Loudoun and Prince William County select combinations that complement their composite deck surface and home exterior."
+  },
+  {
+    q: "How long does Trex railing installation take?",
+    a: "Most residential Trex railing projects in Northern Virginia are completed in 1–2 days once materials are on-site. Larger decks or projects requiring custom cocktail tops, gate installations, or stair railings in Herndon, Sterling, or Reston may take 2–3 days for a clean, polished result."
+  },
+  {
+    q: "Can Trex railings be added to an existing deck?",
+    a: "Yes. Trex railings can be retrofitted onto most existing decks in Northern Virginia, provided the deck framing and post footings are structurally sound. We always perform a structural assessment before installation to ensure your deck in Loudoun or Fairfax County meets code requirements for the new railing system."
+  }
+];
+
 export default function TrexRailingsPage() {
   return (
     <main>
@@ -135,6 +163,7 @@ export default function TrexRailingsPage() {
       />
       <ServiceAreasGrid />
       <RelatedGuides currentPath="/services/trex-railings" />
+      <ServicesFAQ title="Trex Railings FAQs" faqs={faqs} />
       <ContactHome />
     </main>
   );

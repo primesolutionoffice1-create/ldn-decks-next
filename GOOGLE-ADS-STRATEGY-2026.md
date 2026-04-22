@@ -504,7 +504,7 @@ D: Real project photos + costs. Trex Platinum Partner.
 
 | Campanie | Landing Page URL | De ce |
 |---|---|---|
-| Premium Composite Decks | /composite-deck-cost-northern-virginia | Price-focused, tables, real projects |
+| Premium Composite Decks | /get-estimate | Conversion-optimized landing page with form, social proof, CTAs |
 | Fairfax-Search Deck Leads | /deck-builder-fairfax-va | Geo-specific |
 | Deck Repair - Loudoun | /deck-repair-loudoun-county | Geo + service specific, CTA fixat |
 | PMAX remarketing | / (homepage) | General awareness |

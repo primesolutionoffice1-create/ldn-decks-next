@@ -7,6 +7,7 @@ import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import ContactHome from '@/components/ContactHome';
 import ServiceSchema from '@/components/ServiceSchema';
 import RelatedGuides from '@/components/RelatedGuides';
+import ServicesFAQ from '@/components/ServicesFAQ';
 
 import { buildMetadata } from '@/lib/seo';
 
@@ -36,6 +37,33 @@ const maintenanceProcess = [
   {
     title: "5. Premium Sealing & Staining",
     desc: "We apply high-quality, commercial-grade stains and sealers uniquely chosen for your deck's material to protect against UV fading and water intrusion."
+  }
+];
+
+const faqs = [
+  {
+    q: "How much does professional deck maintenance cost in Northern Virginia?",
+    a: "Deck maintenance in Loudoun County, Fairfax County, and Prince William County typically ranges from $300 to $900 depending on deck size, condition, and the services needed. A full clean, sand, and stain on a 400 sq ft wood deck averages around $500–$700."
+  },
+  {
+    q: "How often should I have my deck professionally maintained?",
+    a: "Most wood decks in NoVA should be cleaned and resealed every 1–2 years due to the region's humid summers and freeze-thaw winter cycles. Composite decks require less frequent care — typically a professional cleaning every 2–3 years."
+  },
+  {
+    q: "Is composite deck maintenance different from wood deck maintenance?",
+    a: "Yes. Composite decking like Trex does not need staining or sealing, but it still benefits from regular cleaning to prevent mold, mildew, and organic staining — especially in shaded yards common across Ashburn, Sterling, and Reston. Wood decks require full sealing and staining to prevent rot and UV damage."
+  },
+  {
+    q: "What is the best season to schedule deck maintenance in Northern Virginia?",
+    a: "Late spring (April–May) or early fall (September–October) are ideal in NoVA. These windows avoid the peak summer humidity and the freezing temperatures that can prevent stains and sealers from curing properly."
+  },
+  {
+    q: "Can I do deck maintenance myself, or should I hire a professional?",
+    a: "DIY cleaning is possible, but professional maintenance ensures proper pressure levels that won't damage wood fibers, correct product selection for your deck material, and even application for lasting results. For homeowners in Leesburg, Chantilly, or Herndon, professional service can double the life of a wood deck."
+  },
+  {
+    q: "What happens if I skip deck maintenance for several years?",
+    a: "Neglected decks in Northern Virginia's climate develop deep moisture damage, rot, and structural instability. What starts as a $500 maintenance job can escalate into a $10,000–$20,000 full deck replacement. Annual or biannual maintenance is the most cost-effective way to protect your investment."
   }
 ];
 
@@ -74,6 +102,7 @@ export default function DeckMaintenancePage() {
       <Testimonials />
       <ServiceAreasGrid />
       <RelatedGuides currentPath="/services/deck-maintenance" />
+      <ServicesFAQ title="Deck Maintenance FAQs" faqs={faqs} />
       <ContactHome />
     </main>
   );

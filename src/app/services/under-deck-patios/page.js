@@ -7,6 +7,7 @@ import ServiceContentExpansion from '@/components/ServiceContentExpansion';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
+import ServicesFAQ from '@/components/ServicesFAQ';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -83,6 +84,33 @@ const whyLdnDecks = [
   { title: "Longevity", desc: "Built for long-term durability." }
 ];
 
+const faqs = [
+  {
+    q: "How much does an under deck patio system cost in Northern Virginia?",
+    a: "Under deck patio systems in Loudoun County and Fairfax County typically range from $15 to $30 per square foot installed, putting a 300 sq ft project between $4,500 and $9,000. The final cost depends on the drainage system chosen, ceiling finish, lighting, and whether electrical work is needed."
+  },
+  {
+    q: "What is the RainEscape drainage system and how does it work?",
+    a: "RainEscape by Trex is a trough-and-downspout drainage system installed between the deck joists above. It captures rainwater as it falls through the deck boards and channels it to downspouts at the perimeter, keeping the patio below completely dry. It's one of the most popular systems we install across Ashburn, Leesburg, and Chantilly."
+  },
+  {
+    q: "Will the under deck patio stay dry during heavy rain?",
+    a: "Yes — a properly installed drainage system like RainEscape or a similar aluminum trough system effectively channels water away even during the heavy summer thunderstorms common in Northern Virginia. We design each system with adequate slope and downspout capacity for the rainfall patterns in Loudoun and Prince William County."
+  },
+  {
+    q: "How much usable space does an under deck patio create?",
+    a: "An under deck patio utilizes the full footprint of the deck above, which for most Northern Virginia homes ranges from 200 to 600 square feet. This effectively doubles your outdoor living area without any additional foundation work or zoning changes, making it one of the highest-value additions available to homeowners in Herndon, Sterling, and Reston."
+  },
+  {
+    q: "Do I need a permit for an under deck patio system in Northern Virginia?",
+    a: "In most cases, a drainage and ceiling system installed beneath an existing deck does not require a separate permit in Loudoun or Fairfax County, since no new structural elements are added. However, if electrical work such as recessed lighting or ceiling fans is included, an electrical permit is typically required. We coordinate all permitting for our clients."
+  },
+  {
+    q: "What ceiling finish options are available for under deck patios?",
+    a: "We offer vinyl tongue-and-groove ceiling panels, aluminum ceiling systems, and beadboard-style finishes — all moisture-resistant and designed for outdoor use in NoVA's climate. Recessed LED lighting, ceiling fans, and painted finishes can be added to create a polished, finished patio feel beneath decks in communities across Loudoun and Fairfax County."
+  }
+];
+
 export default function UnderDeckPatiosPage() {
   return (
     <main>
@@ -130,6 +158,7 @@ export default function UnderDeckPatiosPage() {
       />
       <ServiceAreasGrid />
       <RelatedGuides currentPath="/services/under-deck-patios" />
+      <ServicesFAQ title="Under Deck Patio FAQs" faqs={faqs} />
       <ContactHome />
     </main>
   );

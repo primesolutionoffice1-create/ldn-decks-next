@@ -7,6 +7,7 @@ import ServiceContentExpansion from '@/components/ServiceContentExpansion';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
+import ServicesFAQ from '@/components/ServicesFAQ';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -83,6 +84,33 @@ const whyLdnDecks = [
   { title: "Longevity", desc: "Built for long-term durability." }
 ];
 
+const faqs = [
+  {
+    q: "How much does a custom fire pit cost in Northern Virginia?",
+    a: "Custom fire pit installations in Loudoun County and Fairfax County typically range from $1,500 to $6,000 depending on size, materials, and fuel type. Gas fire pits with natural stone and integrated seating walls are on the higher end, while simple wood-burning paver designs start around $1,500–$2,500."
+  },
+  {
+    q: "Do I need a permit to install a fire pit in Northern Virginia?",
+    a: "Permit requirements vary by jurisdiction. In Loudoun County and Fairfax County, most permanent built-in fire pits require a building permit, while freestanding units generally do not. We handle the permit research and submission process for all our clients in Leesburg, Ashburn, Chantilly, and surrounding areas."
+  },
+  {
+    q: "What is the difference between a gas and wood-burning fire pit?",
+    a: "Gas fire pits (propane or natural gas) offer instant, smokeless flames with simple on/off control — ideal for entertaining in neighborhoods across Reston, Herndon, and Centreville. Wood-burning fire pits provide a more classic campfire experience with natural crackling sound and aroma, but require ash cleanup and may be restricted in some HOA communities."
+  },
+  {
+    q: "What materials are used to build a custom fire pit in NoVA?",
+    a: "We build fire pits using bluestone, concrete pavers, natural fieldstone, and brick — all materials that withstand the Northern Virginia climate through hot summers and cold winters. The material is typically matched to your existing patio or deck design for a cohesive look."
+  },
+  {
+    q: "How far should a fire pit be from my deck or house?",
+    a: "Virginia building codes and most local fire safety guidelines recommend keeping a fire pit at least 10 feet from any structure, deck, or overhanging branches. During your free consultation, we evaluate your yard layout in Purcellville, Broadlands, or wherever you are located to find the safest and most functional placement."
+  },
+  {
+    q: "Can a fire pit be installed on an existing patio?",
+    a: "Yes, in many cases we can integrate a fire pit into your existing patio surface in Northern Virginia. We assess the patio's foundation, material compatibility, and gas line access (if applicable) before recommending the best approach for your Loudoun or Fairfax County home."
+  }
+];
+
 export default function FirePitsPage() {
   return (
     <main>
@@ -130,6 +158,7 @@ export default function FirePitsPage() {
       />
       <ServiceAreasGrid />
       <RelatedGuides currentPath="/services/fire-pits" />
+      <ServicesFAQ title="Fire Pit FAQs" faqs={faqs} />
       <ContactHome />
     </main>
   );

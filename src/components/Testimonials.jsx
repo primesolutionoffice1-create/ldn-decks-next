@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from './Testimonials.module.css';
 
 const StarIcon = () => (
@@ -77,6 +78,20 @@ export default function Testimonials() {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className={styles.reviewsCta}>
+          <Link href="/reviews" className={styles.reviewsButton}>
+            Read All 41 Google Reviews &rarr;
+          </Link>
+          <a
+            href="https://www.google.com/maps/place/Loudoun+Decks/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.googleLink}
+          >
+            View on Google Maps &#8599;
+          </a>
         </div>
       </div>
     </section>

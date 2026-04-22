@@ -119,6 +119,45 @@
   font-weight: 600;
 }
 
+.reviewsCta {
+  text-align: center;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.reviewsButton {
+  display: inline-block;
+  background-color: var(--site-color);
+  color: #fff;
+  padding: 16px 36px;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.reviewsButton:hover {
+  background-color: #b83d12;
+  transform: translateY(-2px);
+}
+
+.googleLink {
+  display: inline-block;
+  color: #888;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.googleLink:hover {
+  color: var(--site-color);
+}
+
 @media screen and (max-width: 1024px) {
   .cardsGrid {
     grid-template-columns: repeat(2, 1fr);

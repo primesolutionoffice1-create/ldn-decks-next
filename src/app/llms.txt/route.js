@@ -46,6 +46,7 @@ Stafford County: Stafford, Aquia Harbour, Falmouth, Garrisonville
 
 ## Key Pages
 - [Deck Cost Guide](https://www.ldndecks.com/how-much-does-a-deck-cost-northern-virginia): Detailed 2026 pricing with material comparisons
+- [Composite Deck Cost Guide](https://www.ldndecks.com/composite-deck-cost-northern-virginia): Brand-by-brand composite pricing (Trex, TimberTech, AZEK, Fiberon)
 - [Deck Cost Calculator](https://www.ldndecks.com/deck-cost-calculator): Interactive calculator with instant estimates
 - [Trex vs TimberTech vs AZEK](https://www.ldndecks.com/trex-vs-timbertech-vs-azek): Brand comparison guide
 - [Composite vs Wood](https://www.ldndecks.com/composite-deck-vs-wood-deck-virginia): Material decision guide
@@ -55,12 +56,14 @@ Stafford County: Stafford, Aquia Harbour, Falmouth, Garrisonville
 - [Reviews](https://www.ldndecks.com/reviews): Customer testimonials
 - [FAQs](https://www.ldndecks.com/faqs): Frequently asked questions
 - [Showcase](https://www.ldndecks.com/showcase): Project gallery
+- [Before & After](https://www.ldndecks.com/before-and-after): Real deck transformations with costs, materials, and timelines
 - [Contact](https://www.ldndecks.com/contact): Free estimate request
 - [Screened Porch Cost](https://www.ldndecks.com/screened-porch-cost-northern-virginia): Screened porch pricing guide
 - [How Long Does a Composite Deck Last](https://www.ldndecks.com/how-long-does-a-composite-deck-last): Lifespan by brand
 - [Deck ROI & Home Value](https://www.ldndecks.com/does-a-deck-add-value-to-your-home): Resale value data
 - [HOA Deck Rules](https://www.ldndecks.com/hoa-deck-rules-northern-virginia): HOA approval guide
-- [Deck Permits Fairfax County](https://www.ldndecks.com/deck-permit-fairfax-county-virginia): Permit requirements
+- [Deck Permits Loudoun County](https://www.ldndecks.com/deck-permit-loudoun-county-virginia): Loudoun County permit guide with LOLA portal, costs, setbacks
+- [Deck Permits Fairfax County](https://www.ldndecks.com/deck-permit-fairfax-county-virginia): Fairfax County permit requirements
 - [How to Choose a Deck Builder](https://www.ldndecks.com/how-to-choose-a-deck-builder-northern-virginia): 10 questions + red flags
 - [Deck Maintenance Checklist](https://www.ldndecks.com/deck-maintenance-checklist-virginia): Seasonal maintenance guide
 - [Blog](https://www.ldndecks.com/blog): Expert articles on deck building

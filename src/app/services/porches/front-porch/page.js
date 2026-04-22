@@ -91,11 +91,22 @@ const faqs = [
   { q: "Can I add a railing to my front porch?", a: "Yes. Front porch railings are required by code when the porch floor is more than 30 inches above grade. We offer composite, aluminum, and painted wood railing systems in styles appropriate for your home's architectural character." }
 ];
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(({ q, a }) => ({
+    "@type": "Question",
+    "name": q,
+    "acceptedAnswer": { "@type": "Answer", "text": a }
+  }))
+};
+
 export default function FrontPorchPage() {
   return (
     <main>
       <ServiceSchema name="Front Porch Construction" description="Custom front porch additions for Northern Virginia homes. Colonial, craftsman, and modern designs." price="20000" />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <ServicesHeader
         subtext="Front Porch Builder Northern Virginia"
         title="Custom Front Porch Design & Construction"

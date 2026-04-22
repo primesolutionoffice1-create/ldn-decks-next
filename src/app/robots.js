@@ -20,7 +20,7 @@ export default function robots() {
       {
         userAgent: '*',
         allow: '/',
-        disallow: '/private/',
+        disallow: ['/private/', '/*?*utm_', '/*?*gclid=', '/*?*fbclid=', '/*?*msclkid='],
       },
       {
         userAgent: 'Bingbot',

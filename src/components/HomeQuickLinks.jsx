@@ -1,0 +1,75 @@
+import React from 'react';
+import Link from 'next/link';
+
+const links = [
+  {
+    href: '/before-and-after',
+    title: 'Before & After',
+    desc: 'See real deck transformations with costs and timelines.',
+  },
+  {
+    href: '/composite-deck-cost-northern-virginia',
+    title: 'Composite Deck Pricing',
+    desc: '2026 cost guide — Trex, TimberTech & AZEK compared.',
+  },
+  {
+    href: '/reviews',
+    title: '41+ Five-Star Reviews',
+    desc: 'Read what Northern Virginia homeowners say about us.',
+  },
+  {
+    href: '/areas-we-serve',
+    title: 'Areas We Serve',
+    desc: '70+ cities across Loudoun, Fairfax & Prince William.',
+  },
+  {
+    href: '/team',
+    title: 'Meet Our Team',
+    desc: '24+ years of deck building expertise in NoVA.',
+  },
+  {
+    href: '/deck-cost-calculator',
+    title: 'Instant Cost Calculator',
+    desc: 'Get a ballpark estimate in 60 seconds.',
+  },
+];
+
+export default function HomeQuickLinks() {
+  return (
+    <section style={{ padding: '4rem 0', background: '#f9f9f9' }}>
+      <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 1.5rem' }}>
+        <h2 style={{ fontSize: '1.8rem', fontWeight: 700, textAlign: 'center', marginBottom: '0.5rem' }}>
+          Explore Loudoun Decks
+        </h2>
+        <p style={{ textAlign: 'center', color: '#666', marginBottom: '2.5rem', fontSize: '1rem' }}>
+          Everything you need to plan your deck project in Northern Virginia
+        </p>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.25rem' }}>
+          {links.map(({ href, title, desc }) => (
+            <Link
+              key={href}
+              href={href}
+              style={{
+                display: 'block',
+                background: '#fff',
+                borderRadius: '10px',
+                padding: '1.5rem',
+                textDecoration: 'none',
+                color: 'inherit',
+                border: '1px solid #e5e5e5',
+                transition: 'border-color 0.2s, box-shadow 0.2s',
+              }}
+            >
+              <h3 style={{ fontSize: '1.05rem', fontWeight: 600, marginBottom: '0.4rem', color: 'var(--color-dark)' }}>
+                {title}
+              </h3>
+              <p style={{ fontSize: '0.85rem', color: '#666', lineHeight: 1.5, margin: 0 }}>
+                {desc}
+              </p>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

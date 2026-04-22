@@ -78,6 +78,7 @@ export default async function sitemap() {
                 { path: "/best-time-to-build-a-deck-northern-virginia", priority: 0.85, lastMod: TIER1, freq: "weekly" },
                 { path: "/how-to-choose-a-deck-builder-northern-virginia", priority: 0.85, lastMod: TIER1, freq: "weekly" },
                 { path: "/how-long-does-a-composite-deck-last",        priority: 0.85, lastMod: TIER1, freq: "weekly" },
+                { path: "/deck-permit-loudoun-county-virginia",        priority: 0.90, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-permit-fairfax-county-virginia",        priority: 0.85, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-builder-mclean-va",                     priority: 0.90, lastMod: TIER1, freq: "weekly" },
                 { path: "/outdoor-kitchen-builder-northern-virginia",   priority: 0.85, lastMod: TIER1, freq: "weekly" },
@@ -100,6 +101,9 @@ export default async function sitemap() {
                 { path: "/pet-friendly-deck-design",                     priority: 0.80, lastMod: TIER1, freq: "weekly" },
                 { path: "/under-deck-ceiling-ideas",                     priority: 0.85, lastMod: TIER1, freq: "weekly" },
 
+                // Before & After + Authority pages
+                { path: "/before-and-after",                            priority: 0.90, lastMod: TIER1, freq: "weekly" },
+
                 // Authority & E-E-A-T pages
                 { path: "/about/certifications-and-licenses",           priority: 0.80, lastMod: TIER1, freq: "monthly" },
                 { path: "/areas-we-serve",                              priority: 0.85, lastMod: TIER1, freq: "monthly" },
@@ -117,6 +121,7 @@ export default async function sitemap() {
                 { path: "/northern-virginia-deck-building-guide",       priority: 0.95, lastMod: TIER1, freq: "weekly" },
                 { path: "/eco-friendly-composite-decking",              priority: 0.80, lastMod: TIER1, freq: "monthly" },
                 { path: "/questions-to-ask-before-building-a-deck",     priority: 0.85, lastMod: TIER1, freq: "weekly" },
+                { path: "/trex-transcend-review-northern-virginia",       priority: 0.90, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-design-ideas-2026",                      priority: 0.90, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-builder-centreville-va",                 priority: 0.92, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-safety-inspection-checklist",            priority: 0.85, lastMod: TIER1, freq: "weekly" },
@@ -136,6 +141,7 @@ export default async function sitemap() {
                 { path: "/deck-builder-arlington-va",                   priority: 0.88, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-builder-brambleton-va",                  priority: 0.88, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-builder-south-riding-va",                priority: 0.88, lastMod: TIER1, freq: "weekly" },
+                { path: "/composite-deck-cost-northern-virginia",        priority: 0.95, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-resurfacing-vs-replacement",             priority: 0.90, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-builder-burke-va",                       priority: 0.88, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-builder-springfield-va",                 priority: 0.88, lastMod: TIER1, freq: "weekly" },

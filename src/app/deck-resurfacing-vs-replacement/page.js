@@ -137,6 +137,7 @@ export default function ResurfacingVsReplacementPage() {
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Related</h2>
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {[
+              ['/before-and-after', 'Before & After Deck Transformations'],
               ['/services/deck-resurfacing', 'Deck Resurfacing Services'],
               ['/how-much-does-a-deck-cost-northern-virginia', 'Deck Cost Guide'],
               ['/how-long-does-a-composite-deck-last', 'How Long Does a Deck Last?'],

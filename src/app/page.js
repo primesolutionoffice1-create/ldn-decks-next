@@ -12,6 +12,7 @@ import TrustLogos from "@/components/TrustLogos";
 import ContactMap from "@/components/ContactMap";
 import ContactHome from "@/components/ContactHome";
 import RelatedGuides from "@/components/RelatedGuides";
+import HomeQuickLinks from "@/components/HomeQuickLinks";
 import JsonLd from "@/components/JsonLd";
 import styles from "./page.module.css";
 import { buildMetadata } from "@/lib/seo";
@@ -45,6 +46,10 @@ const homepageSchema = {
     "https://www.ldndecks.com/services",
     "https://www.ldndecks.com/northern-virginia-deck-building-guide",
     "https://www.ldndecks.com/how-much-does-a-deck-cost-northern-virginia",
+    "https://www.ldndecks.com/composite-deck-cost-northern-virginia",
+    "https://www.ldndecks.com/before-and-after",
+    "https://www.ldndecks.com/areas-we-serve",
+    "https://www.ldndecks.com/reviews",
     "https://www.ldndecks.com/deck-cost-calculator",
     "https://www.ldndecks.com/contact"
   ]
@@ -63,6 +68,7 @@ export default function Home() {
             <HandCraftedDecks />
             <ServicesHome />
             <Testimonials />
+            <HomeQuickLinks />
             <FAQ />
             <TrustLogos />
             <RelatedGuides currentPath="/" />

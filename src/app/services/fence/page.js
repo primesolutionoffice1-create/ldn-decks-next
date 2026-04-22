@@ -108,10 +108,21 @@ const expansionSections = [
   }
 ];
 
+const fenceFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": fenceFAQs.map(({ q, a }) => ({
+    "@type": "Question",
+    "name": q,
+    "acceptedAnswer": { "@type": "Answer", "text": a }
+  }))
+};
+
 export default function FencePage() {
   return (
     <main>
       <ServiceSchema name="Fence Installation" description="Custom fencing in Northern Virginia. Privacy, composite, vinyl, wood, and aluminum options." price="6000" />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(fenceFaqSchema) }} />
       <ServicesHeader
         subtext="5-Star Google Rated Installation"
         title="Custom Fence Design & Installation"

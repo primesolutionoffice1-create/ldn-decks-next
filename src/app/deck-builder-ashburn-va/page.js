@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import ServicesHeader from '@/components/ServicesHeader';
 import ServiceMain from '@/components/ServiceMain';
 import ServiceInclusions from '@/components/ServiceInclusions';
@@ -158,6 +159,21 @@ export default function DeckBuilderAshburnPage() {
           faqs={ashburnFAQs}
         />
                   <ServiceAreasGrid />
+                  <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
+                    <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Related Guides</h2>
+                    <ul style={{ listStyle: 'none', padding: 0 }}>
+                      {[
+                        ['/deck-permit-loudoun-county-virginia', 'Loudoun County Deck Permit Guide'],
+                        ['/hoa-deck-rules-northern-virginia', 'HOA Deck Rules in Northern Virginia'],
+                        ['/how-much-does-a-deck-cost-northern-virginia', 'How Much Does a Deck Cost in Northern Virginia?'],
+                        ['/composite-deck-vs-wood-deck-virginia', 'Composite Deck vs Wood Deck'],
+                      ].map(([href, text]) => (
+                        <li key={href} style={{ marginBottom: '0.5rem' }}>
+                          <Link href={href} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{text} →</Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </section>
                   <RelatedGuides currentPath="/deck-builder-ashburn-va" />
       <ContactHome />
             </main>

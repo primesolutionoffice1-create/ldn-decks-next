@@ -80,10 +80,21 @@ const authorityLinks = [
   { text: "Fairfax County Deck & Porch Guide", url: "https://www.fairfaxcounty.gov/landdevelopment/typical-deck-details" }
 ];
 
+const porchFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": porchFAQs.map(({ q, a }) => ({
+    "@type": "Question",
+    "name": q,
+    "acceptedAnswer": { "@type": "Answer", "text": a }
+  }))
+};
+
 export default function PorchesPage() {
   return (
     <main>
       <ServiceSchema name="Porch Construction" description="Custom front porches, screened porches, and open porches in Northern Virginia. Design and build." price="25000" />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(porchFaqSchema) }} />
       <ServicesHeader
         subtext="5-Star Google Rated Builder"
         title="Custom Porch Design & Construction"

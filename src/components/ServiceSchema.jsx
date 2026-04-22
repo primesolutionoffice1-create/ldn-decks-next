@@ -16,10 +16,13 @@ export default function ServiceSchema({ name, description, price, areaServed }) 
       '@id': 'https://www.ldndecks.com/#organization',
       name: 'Loudoun Decks',
     },
-    areaServed: areaServed || {
-      '@type': 'State',
-      name: 'Virginia',
-    },
+    areaServed: areaServed || [
+      { '@type': 'AdministrativeArea', name: 'Loudoun County, VA' },
+      { '@type': 'AdministrativeArea', name: 'Fairfax County, VA' },
+      { '@type': 'AdministrativeArea', name: 'Prince William County, VA' },
+      { '@type': 'AdministrativeArea', name: 'Arlington County, VA' },
+      { '@type': 'AdministrativeArea', name: 'Stafford County, VA' },
+    ],
     ...(price ? {
       offers: {
         '@type': 'Offer',

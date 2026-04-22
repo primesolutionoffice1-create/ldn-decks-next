@@ -91,11 +91,22 @@ const faqs = [
   { q: "Can an open porch have an outdoor kitchen?", a: "Yes — and this is one of the primary advantages of choosing an open porch over a screened porch. Open-air porches provide the ventilation required for gas grills, smokers, and pizza ovens. We integrate full outdoor kitchen setups including built-in grill stations, bar tops, refrigerator cutouts, and countertop surfaces." }
 ];
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(({ q, a }) => ({
+    "@type": "Question",
+    "name": q,
+    "acceptedAnswer": { "@type": "Answer", "text": a }
+  }))
+};
+
 export default function OpenPorchPage() {
   return (
     <main>
       <ServiceSchema name="Open Porch Construction" description="Custom open-air porch design and construction. Extend your outdoor living with a covered porch." price="18000" />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <ServicesHeader
         subtext="Open Porch Builder Northern Virginia"
         title="Custom Open Porch Design & Construction"

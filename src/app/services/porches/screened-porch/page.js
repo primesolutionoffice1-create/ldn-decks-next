@@ -36,10 +36,21 @@ const faqs = [
   { q: "Do you handle the permit process for screened porches?", a: "Absolutely. We manage all plans, engineering, and county submissions to ensure your build is 100% legal and safe." }
   ];
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(({ q, a }) => ({
+    "@type": "Question",
+    "name": q,
+    "acceptedAnswer": { "@type": "Answer", "text": a }
+  }))
+};
+
 export default function ScreenedPorchPage() {
     return (
           <main>
       <ServiceSchema name="Screened Porch Construction" description="Custom screened porches in Northern Virginia. Extend your outdoor season to 9-10 months. EZE-Breeze options available." price="25000" />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
             <ServicesHeader
           subtext="Porch Services"
           title="Custom Screened-In Porches"

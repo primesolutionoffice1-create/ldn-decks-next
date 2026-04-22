@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import ServicesHeader from '@/components/ServicesHeader';
 import ServiceMain from '@/components/ServiceMain';
 import ServiceInclusions from '@/components/ServiceInclusions';
@@ -125,7 +126,7 @@ export default function NewDecksPage() {
       />
       <section style={{ padding: '60px 20px', maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
         <h2 style={{ fontSize: '32px', marginBottom: '15px' }}>See the Transformation</h2>
-        <p style={{ marginBottom: '40px', fontSize: '18px', color: '#555' }}>From empty backyard to fully customized outdoor living space.</p>
+        <p style={{ marginBottom: '40px', fontSize: '18px', color: '#555' }}>From empty backyard to fully customized outdoor living space. <Link href="/before-and-after" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>See our Before &amp; After Deck Transformations →</Link></p>
         <div style={{ position: 'relative', height: '500px', borderRadius: '8px', overflow: 'hidden' }}>
           <Image src="/showcase/img10.jpeg" alt="Custom deck transformation" fill style={{ objectFit: 'cover' }} />
         </div>

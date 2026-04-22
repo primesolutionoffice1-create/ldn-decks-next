@@ -152,6 +152,7 @@ export default function DeckCostPage() {
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, margin: '2.5rem 0 1rem' }}>Related Guides</h2>
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {[
+              ['/composite-deck-cost-northern-virginia', 'Composite Deck Cost — Brand-by-Brand Pricing Guide'],
               ['/trex-vs-timbertech-vs-azek', 'Trex vs TimberTech vs AZEK — Best Composite Decking'],
               ['/composite-deck-vs-wood-deck-virginia', 'Composite Deck vs Wood Deck — Complete Comparison'],
               ['/screened-porch-cost-northern-virginia', 'Screened Porch Cost in Northern Virginia'],

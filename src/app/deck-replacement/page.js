@@ -11,11 +11,16 @@ import ServiceVisual from '@/components/ServiceVisual';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { buildMetadata } from '@/lib/seo';
 
-export const metadata = buildMetadata({
-  path: '/deck-replacement',
-  title: 'Deck Replacement Services | Professional Teardown & Rebuild',
-  description: 'Is your old deck beyond repair? We provide complete deck replacement services, handling the teardown and building a beautiful new outdoor space.',
-});
+export const metadata = {
+  ...buildMetadata({
+    path: '/deck-replacement',
+    title: 'Deck Replacement Services | Professional Teardown & Rebuild',
+    description: 'Is your old deck beyond repair? We provide complete deck replacement services, handling the teardown and building a beautiful new outdoor space.',
+  }),
+  alternates: {
+    canonical: 'https://www.ldndecks.com/services/deck-replacement',
+  },
+};
 
 export default function DeckReplacementPage() {
   return (

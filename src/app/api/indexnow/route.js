@@ -36,7 +36,16 @@ function buildAllUrls() {
 
   // Static high-priority pages
   const staticPages = [
-    '', '/services', '/about', '/contact', '/faqs', '/showcase', '/reviews', '/blog',
+    '', '/services', '/about', '/contact', '/faqs', '/showcase', '/reviews', '/blog', '/before-and-after',
+    '/services/new-decks', '/services/deck-resurfacing', '/services/porches',
+    '/services/porches/screened-porch', '/services/porches/open-porch', '/services/porches/front-porch',
+    '/services/gazebo-pergola', '/services/deck-maintenance', '/services/deck-inspection',
+    '/services/patios', '/services/fence', '/services/fire-pits', '/services/deck-washing',
+    '/services/deck-replacement', '/services/trex-railings', '/services/under-deck-patios',
+    '/services/fence-cleaning', '/services/concrete-washing', '/services/outdoor-washing',
+    '/services/house-siding-washing', '/services/windows', '/services/entry-doors',
+    '/services/trex-calm-shell',
+    '/deck-design-ideas-northern-virginia-2026', '/deck-cost-calculator', '/team', '/press',
     '/near-you', '/near-you/loudoun-county', '/near-you/fairfax-county', '/near-you/prince-william-county',
     '/areas-we-serve', '/about/certifications-and-licenses', '/about/why-choose-us', '/about/process',
     '/northern-virginia-deck-building-guide',
@@ -79,6 +88,10 @@ function buildAllUrls() {
     '/questions-to-ask-before-building-a-deck',
     '/how-tariffs-affect-deck-prices-2026',
     '/deck-resurfacing-vs-replacement',
+    '/composite-deck-cost-northern-virginia',
+    '/before-and-after',
+    '/deck-permit-loudoun-county-virginia',
+    '/trex-transcend-review-northern-virginia',
     '/porch-repair-vs-replacement-northern-virginia',
     '/deck-permit-prince-william-county-virginia',
     '/deck-repair-loudoun-county',

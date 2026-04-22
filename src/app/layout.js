@@ -1,4 +1,6 @@
 import { Outfit } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next";
 import "./variables.css";
 import "./globals.css";
 import Script from "next/script";
@@ -92,6 +94,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <LayoutContent>
             {children}
           </LayoutContent>
+                    <SpeedInsights />
+                    <Analytics />
         </ContactProvider>
       </body>
     </html>

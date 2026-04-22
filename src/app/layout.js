@@ -1,6 +1,6 @@
 import { Outfit } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Analytics } from "@vercel/analytics/next";
+import { Analytics } from "@vercel/analytics/react";
 import "./variables.css";
 import "./globals.css";
 import Script from "next/script";

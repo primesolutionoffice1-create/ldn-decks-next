@@ -11,21 +11,27 @@ const StarIcon = () => (
 const testimonialsData = [
   {
     id: 1,
-    name: "Sarah Jenkins",
-    text: "ldndecks transformed our backyard completely! The new redwood deck they built is stunning and exactly what we envisioned. Professional, timely, and excellent craftsmanship.",
-    image: "/images/img17.jpeg"
+    name: "James R.",
+    location: "Ashburn, VA",
+    project: "Trex Composite Deck, 500 sqft",
+    text: "Nick and his team built us a 500 sqft Trex Transcend deck in Ashburn, from permit to final walkthrough in under 3 weeks. Every neighbor has asked who did it. Honest pricing, zero surprises, and they left the yard cleaner than they found it.",
+    image: "/showcase/img01.jpg"
   },
   {
     id: 2,
-    name: "Michael Thompson",
-    text: "I hired them for deck resurfacing and couldn't be happier. They saved my old deck from ruin and made it look brand new. Their attention to detail is second to none.",
-    image: "/images/img18.jpeg"
+    name: "Maria & Tom S.",
+    location: "Leesburg, VA",
+    project: "Composite Deck + Screened Porch",
+    text: "We got 4 quotes. Loudoun Decks wasn\u2019t the cheapest, but Nick came to the house, explained everything in detail, and showed us exactly why composite is worth it long-term. Two years later, our deck still looks brand new. Worth every penny.",
+    image: "/showcase/img13.jpg"
   },
   {
     id: 3,
-    name: "Robert & Linda",
-    text: "From the initial consultation to the final cleanup, the entire team was a dream to work with. Our new outdoor fencing is incredibly sturdy and beautiful.",
-    image: "/images/img19.jpeg"
+    name: "David K.",
+    location: "South Riding, VA",
+    project: "Deck Replacement + Railings",
+    text: "They handled the HOA submission and Loudoun County permit themselves \u2014 I didn\u2019t lift a finger on the paperwork. Deck was done in 10 days. The Trex Calm Shell color we chose looks incredible against our siding.",
+    image: "/showcase/img21.jpg"
   }
 ];
 
@@ -62,11 +68,11 @@ export default function Testimonials() {
               
               <div className={styles.clientProfile}>
                 <div className={styles.avatarWrapper}>
-                  <Image src={t.image} alt={t.name} fill className={styles.avatar} sizes="65px" />
+                  <Image src={t.image} alt={`${t.project} — ${t.location}`} fill className={styles.avatar} sizes="65px" />
                 </div>
                 <div className={styles.clientInfo}>
                   <h4>{t.name}</h4>
-                  <span>Satisfied Customer</span>
+                  <span>{t.location} &middot; {t.project}</span>
                 </div>
               </div>
             </div>

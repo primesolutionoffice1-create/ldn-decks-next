@@ -134,9 +134,9 @@ export default function GetEstimatePage() {
           <div>
             <h3 style={{ fontSize: '1.2rem', fontWeight: 600, marginBottom: '1.5rem' }}>What Homeowners Say</h3>
             {[
-              { text: "LDN Decks transformed our backyard. The Trex Transcend deck is gorgeous and we haven't had to do a thing to maintain it.", name: "Sarah M.", city: "Ashburn" },
-              { text: "Best decision we made was going with composite. The team was professional, on time, and the final product exceeded our expectations.", name: "Mike R.", city: "Leesburg" },
-              { text: "From design to permits to the final build — they handled everything. Our screened porch is now the most-used room in the house.", name: "Jennifer L.", city: "Reston" },
+              { text: "Nick and his team built us a 500 sqft Trex Transcend deck in Ashburn, from permit to final walkthrough in under 3 weeks. Every neighbor has asked who did it.", name: "James R.", city: "Ashburn" },
+              { text: "We got 4 quotes. Loudoun Decks wasn\u2019t the cheapest, but Nick explained everything in detail and showed us why composite is worth it. Two years later, our deck still looks brand new.", name: "Maria & Tom S.", city: "Leesburg" },
+              { text: "They handled the HOA submission and Loudoun County permit themselves \u2014 I didn\u2019t lift a finger. Deck was done in 10 days. The Trex Calm Shell color looks incredible.", name: "David K.", city: "South Riding" },
             ].map((r, i) => (
               <div key={i} style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.25rem', marginBottom: '1rem' }}>
                 <div style={{ color: '#fbbf24', marginBottom: '0.5rem' }}>&#9733;&#9733;&#9733;&#9733;&#9733;</div>

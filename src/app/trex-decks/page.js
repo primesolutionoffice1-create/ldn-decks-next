@@ -15,7 +15,7 @@ import { buildMetadata } from '@/lib/seo';
 export const metadata = buildMetadata({
   path: '/trex-decks',
       title: 'Trex Deck Builder | Loudoun County VA | LDN Decks',
-  description: 'Loudoun Decks is a certified Trex deck builder serving Northern Virginia. High-end Transcend designs, low-maintenance living, and 1,500+ words of expert product knowledge.',
+  description: 'Certified Trex Platinum Partner in Northern Virginia. Transcend, Enhance & Lineage decks — premium designs, zero maintenance. Free estimate — (571) 655-7207.',
   image: '/images/img12.jpeg',
 });
 

@@ -6,7 +6,6 @@ import ServiceInclusions from '@/components/ServiceInclusions';
 import ServiceContentExpansion from '@/components/ServiceContentExpansion';
 import ServicesFAQ from '@/components/ServicesFAQ';
 import ContactHome from '@/components/ContactHome';
-import ServiceSchema from '@/components/ServiceSchema';
 import RelatedGuides from '@/components/RelatedGuides';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import { buildMetadata } from '@/lib/seo';
@@ -104,7 +103,6 @@ const faqSchema = {
 export default function OpenPorchPage() {
   return (
     <main>
-      <ServiceSchema name="Open Porch Construction" description="Custom open-air porch design and construction. Extend your outdoor living with a covered porch." price="18000" />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <ServicesHeader

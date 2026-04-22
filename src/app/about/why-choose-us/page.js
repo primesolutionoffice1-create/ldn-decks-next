@@ -12,7 +12,7 @@ import { buildMetadata } from '@/lib/seo';
 export const metadata = buildMetadata({
   path: "/about/why-choose-us",
   title: "Why Choose LDN Decks | Northern Virginia's Premier Deck Builder",
-  description: "Learn why homeowners across Northern Virginia choose Loudoun Decks.",
+  description: "Why Northern Virginia homeowners choose LDN Decks: Trex Platinum Partner, 24+ years experience, 5-star Google rating, 10-year warranty, and in-house crews.",
 });
 
 export default function WhyChooseUsPage() {

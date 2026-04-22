@@ -11,8 +11,8 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: "/about/process",
-  title: "Our Process | LDN Decks",
-  description: "Learn about our clear and structured process for building outdoor living projects in Northern Virginia.",
+  title: "Our Deck Building Process | 6 Steps to Your Dream Deck",
+  description: "From free consultation to final walkthrough — our 6-step deck building process in Northern Virginia. Design, permits, HOA, construction, and warranty.",
 });
 
 export default function ProcessPage() {

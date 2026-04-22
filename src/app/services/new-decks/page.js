@@ -7,8 +7,8 @@ import ServiceInclusions from '@/components/ServiceInclusions';
 import ServiceContentExpansion from '@/components/ServiceContentExpansion';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import ContactHome from '@/components/ContactHome';
-import ServiceSchema from '@/components/ServiceSchema';
 import RelatedGuides from '@/components/RelatedGuides';
+import JsonLd from '@/components/JsonLd';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -67,8 +67,6 @@ const authorityLinks = [
   { text: "Official Trex Warranty & Care", url: "https://www.trex.com/customer-support/trex-owners/warranty/" }
 ];
 
-import JsonLd from '@/components/JsonLd';
-
 export default function NewDecksPage() {
   const serviceSchema = {
     "@context": "https://schema.org",
@@ -86,7 +84,6 @@ export default function NewDecksPage() {
 
   return (
     <main>
-      <ServiceSchema name="Custom Deck Building" description="Professional custom deck design and construction in Northern Virginia. Composite (Trex, TimberTech) and wood decks. Permits and HOA handled." price="15000" />
       <JsonLd data={serviceSchema} />
       <ServicesHeader
         subtext="Custom Deck Design Loudoun VA"

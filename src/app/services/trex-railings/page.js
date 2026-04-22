@@ -6,7 +6,6 @@ import ServiceInclusions from '@/components/ServiceInclusions';
 import ServiceContentExpansion from '@/components/ServiceContentExpansion';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import ContactHome from '@/components/ContactHome';
-import ServiceSchema from '@/components/ServiceSchema';
 import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
 
@@ -92,7 +91,6 @@ const whyLdnDecks = [
 export default function TrexRailingsPage() {
   return (
     <main>
-      <ServiceSchema name="Trex Railing Installation" description="Certified Trex railing installation. Composite, aluminum, and glass options for Northern Virginia decks." price="4000" />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <ServicesHeader
         subtext="Deck Railing Upgrade Loudoun VA"

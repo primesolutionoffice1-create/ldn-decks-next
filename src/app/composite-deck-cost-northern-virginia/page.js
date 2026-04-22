@@ -11,8 +11,8 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/composite-deck-cost-northern-virginia',
-  title: 'Composite Deck Cost in Northern Virginia 2026 | Complete Price Guide',
-  description: 'How much does a composite deck cost in Northern Virginia? Trex $30-$50/sqft, TimberTech $40-$65/sqft, AZEK $50-$75/sqft installed. Real project prices, brand comparison & free estimate.',
+  title: 'Composite Deck Cost Northern Virginia 2026 | Price Guide',
+  description: 'Composite deck costs in Northern Virginia: Trex $30-$50/sqft, TimberTech $40-$65/sqft, AZEK $50-$75/sqft installed. Real project prices and free estimates.',
   image: '/images/img11.jpeg',
 });
 

@@ -12,7 +12,7 @@ import { buildMetadata } from '@/lib/seo';
 export const metadata = buildMetadata({
   path: '/deck-permit-loudoun-county-virginia',
   title: 'Loudoun County Deck Permit Guide 2026 | Requirements & Process',
-  description: 'Everything you need to know about deck permits in Loudoun County, VA. Requirements, costs ($150-$500), timeline (2-4 weeks), LOLA portal guide, and inspections explained.',
+  description: 'Deck permits in Loudoun County, VA: costs ($150-$500), timeline (2-4 weeks), LOLA portal guide, setbacks, and inspections. We handle everything.',
   image: '/images/img20.jpeg',
 });
 

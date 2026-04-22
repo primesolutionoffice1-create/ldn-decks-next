@@ -6,7 +6,6 @@ import ServiceInclusions from '@/components/ServiceInclusions';
 import ServiceContentExpansion from '@/components/ServiceContentExpansion';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import ContactHome from '@/components/ContactHome';
-import ServiceSchema from '@/components/ServiceSchema';
 import RelatedGuides from '@/components/RelatedGuides';
 import JsonLd from '@/components/JsonLd';
 import { buildMetadata } from '@/lib/seo';
@@ -69,7 +68,6 @@ const replacementBenefits = [
 export default function DeckReplacementPage() {
   return (
     <main>
-      <ServiceSchema name="Deck Replacement" description="Full deck tear-down and rebuild with new composite or wood materials. Permits and cleanup included." price="20000" />
       <JsonLd data={serviceSchema} />
       <ServicesHeader
         subtext="Old to New Transformation"

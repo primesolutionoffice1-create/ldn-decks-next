@@ -6,7 +6,6 @@ import ServiceInclusions from '@/components/ServiceInclusions';
 import ServiceContentExpansion from '@/components/ServiceContentExpansion';
 import ServicesFAQ from '@/components/ServicesFAQ';
 import ContactHome from '@/components/ContactHome';
-import ServiceSchema from '@/components/ServiceSchema';
 import RelatedGuides from '@/components/RelatedGuides';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import { buildMetadata } from '@/lib/seo';
@@ -104,7 +103,6 @@ const faqSchema = {
 export default function FrontPorchPage() {
   return (
     <main>
-      <ServiceSchema name="Front Porch Construction" description="Custom front porch additions for Northern Virginia homes. Colonial, craftsman, and modern designs." price="20000" />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <ServicesHeader

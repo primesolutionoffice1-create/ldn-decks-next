@@ -13,12 +13,17 @@ import ArticleSchema from '@/components/ArticleSchema';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { buildMetadata } from '@/lib/seo';
 
-export const metadata = buildMetadata({
-  path: '/deck-design-ideas-northern-virginia-2026',
+export const metadata = {
+  ...buildMetadata({
+    path: '/deck-design-ideas-northern-virginia-2026',
     title: 'Deck Design Ideas Northern Virginia 2026',
-      description: 'Explore the top deck design ideas for Northern Virginia homeowners in 2026. Custom composite decks, multi-level builds, screened porches & pergolas. Trex Platinum Partner. Free estimate - call (571) 655-7207.',
-        image: '/images/img36.jpeg',
-        });
+    description: 'Top deck design ideas for Northern Virginia homeowners in 2026. Composite decks, multi-level builds, screened porches & pergolas. Free estimate.',
+    image: '/images/img36.jpeg',
+  }),
+  alternates: {
+    canonical: 'https://www.ldndecks.com/deck-design-ideas-2026',
+  },
+};
 
         const inclusions = [
           {

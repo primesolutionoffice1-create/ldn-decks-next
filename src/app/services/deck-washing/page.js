@@ -4,7 +4,6 @@ import ServiceMain from '@/components/ServiceMain';
 import ServiceInclusions from '@/components/ServiceInclusions';
 import ServicesFAQ from '@/components/ServicesFAQ';
 import ContactHome from '@/components/ContactHome';
-import ServiceSchema from '@/components/ServiceSchema';
 import RelatedGuides from '@/components/RelatedGuides';
 import ServiceProcessHorizontal from '@/components/ServiceProcessHorizontal';
 import ServiceContentExpansion from '@/components/ServiceContentExpansion';
@@ -134,7 +133,6 @@ const serviceSchemaData = {
 export default function DeckWashingPage() {
   return (
     <main>
-      <ServiceSchema name="Deck Pressure Washing" description="Professional deck cleaning and pressure washing. Safe PSI for wood and composite. Mold and mildew removal." price="350" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchemaData) }}

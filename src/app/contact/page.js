@@ -9,8 +9,8 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
     path: '/contact',
-    title: 'Contact Us',
-    description: 'Get a free estimate on your deck or outdoor living project. Call or message the LDN Decks team serving Loudoun, Fairfax, and Prince William County.',
+    title: 'Contact Us | Free Deck Estimate Northern Virginia',
+    description: 'Get a free deck estimate from LDN Decks. Call (571) 655-7207 or submit a request. Serving Loudoun, Fairfax & Prince William counties.',
 });
 
 export default function ContactPage() {

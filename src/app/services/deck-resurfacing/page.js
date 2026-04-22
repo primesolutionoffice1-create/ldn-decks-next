@@ -6,7 +6,6 @@ import ServiceInclusions from '@/components/ServiceInclusions';
 import ServiceContentExpansion from '@/components/ServiceContentExpansion';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import ContactHome from '@/components/ContactHome';
-import ServiceSchema from '@/components/ServiceSchema';
 import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
 
@@ -109,7 +108,6 @@ const authorityLinks = [
 export default function DeckResurfacingPage() {
   return (
     <main>
-      <ServiceSchema name="Deck Resurfacing" description="Transform your old wood deck with new composite decking. Keep the frame, replace the surface. 25-40% less than full replacement." price="10000" />
       {/* Dynamic SEO Schemas */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchemaData) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchemaData) }} />

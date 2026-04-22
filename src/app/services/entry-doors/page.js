@@ -4,7 +4,6 @@ import ServiceMain from '@/components/ServiceMain';
 import ServiceInclusions from '@/components/ServiceInclusions';
 import ServicesFAQ from '@/components/ServicesFAQ';
 import ContactHome from '@/components/ContactHome';
-import ServiceSchema from '@/components/ServiceSchema';
 import RelatedGuides from '@/components/RelatedGuides';
 import ServiceVisual from '@/components/ServiceVisual';
 import ServiceContentExpansion from '@/components/ServiceContentExpansion';
@@ -127,7 +126,6 @@ const inclusions = [
 export default function EntryDoorsPage() {
   return (
     <main>
-      <ServiceSchema name="Entry Door Installation" description="Custom front door and patio door installation for Northern Virginia homes." price="3000" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchemaData) }}

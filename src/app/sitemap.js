@@ -46,6 +46,8 @@ export default async function sitemap() {
                 { path: "/near-you/loudoun-county",      priority: 0.85, lastMod: TIER2, freq: "weekly" },
                 { path: "/near-you/fairfax-county",      priority: 0.85, lastMod: TIER2, freq: "weekly" },
                 { path: "/near-you/prince-william-county", priority: 0.85, lastMod: TIER2, freq: "weekly" },
+                { path: "/near-you/arlington-county",    priority: 0.80, lastMod: TIER1, freq: "weekly" },
+                { path: "/near-you/stafford-county",     priority: 0.80, lastMod: TIER1, freq: "weekly" },
 
                 // Tier 3 - Secondary & support pages
                 { path: "/services/patios",              priority: 0.80, lastMod: TIER3, freq: "monthly" },

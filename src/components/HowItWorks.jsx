@@ -20,7 +20,7 @@ const steps = [
   {
     number: '04',
     title: 'Enjoy & Warranty',
-    desc: 'We hand over your dream deck backed by our ironclad 5-year workmanship warranty.'
+    desc: 'We hand over your dream deck backed by our 5-year workmanship warranty, plus 25\u201350 year manufacturer warranties on all composite materials.'
   }
 ];
 

@@ -206,7 +206,7 @@ export default function BeforeAndAfterPage() {
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Before &amp; After Deck Transformations</h1>
           <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Real projects from Loudoun, Fairfax &amp; Prince William counties — with costs, materials, and timelines</p>
-          <p style={{ color: '#aaa', marginTop: '1rem', fontSize: '0.9rem' }}>5.0 on Google &middot; 41 reviews &middot; Trex Platinum Partner &middot; 10-Year Workmanship Warranty</p>
+          <p style={{ color: '#aaa', marginTop: '1rem', fontSize: '0.9rem' }}>5.0 on Google &middot; 41 reviews &middot; Trex Platinum Partner &middot; 5-Year Workmanship Warranty</p>
         </div>
       </section>
 
@@ -303,7 +303,7 @@ export default function BeforeAndAfterPage() {
             <li><strong>Permit management</strong> — we submit plans, coordinate HOA review, and schedule inspections.</li>
             <li><strong>Professional build</strong> — our in-house crew (never subcontracted) builds your deck on schedule.</li>
             <li><strong>Final walkthrough</strong> — we inspect every detail with you before the project is marked complete.</li>
-            <li><strong>10-year workmanship warranty</strong> — plus 25–50 year manufacturer warranty on materials.</li>
+            <li><strong>5-year workmanship warranty</strong> on all labor — plus 25–50 year manufacturer warranty on materials.</li>
           </ol>
 
           {/* Types of Transformations */}

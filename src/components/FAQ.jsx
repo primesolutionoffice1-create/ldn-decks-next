@@ -21,7 +21,7 @@ const faqsData = [
   },
   {
     question: "Do you provide warranties on your work?",
-    answer: "Yes, we stand firmly behind our craftsmanship. We offer a 24-year workmanship warranty on all structural builds, alongside passing down the comprehensive manufacturer warranties for the specific materials used."
+    answer: "Yes. We stand behind our work with a 5-year workmanship warranty on all labor. On top of that, Trex composite decking carries a 25-year residential warranty and TimberTech/AZEK carries a 30-year warranty, both passed directly to you. Combined, you\u2019re looking at decades of coverage from both materials and craftsmanship."
   }
 ];
 

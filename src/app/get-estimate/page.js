@@ -8,7 +8,7 @@ import { buildMetadata } from '@/lib/seo';
 export const metadata = buildMetadata({
   path: '/get-estimate',
   title: 'Free Deck Estimate | Trex Platinum Partner | LDN Decks',
-  description: 'Get a free deck estimate from Northern Virginia\'s top-rated Trex Platinum Partner. 5.0 Google rating, 10-year warranty. Call (571) 655-7207.',
+  description: 'Get a free deck estimate from Northern Virginia\'s top-rated Trex Platinum Partner. 5.0 Google rating, 5-year warranty. Call (571) 655-7207.',
   image: '/images/img36.jpeg',
 });
 
@@ -72,7 +72,7 @@ export default function GetEstimatePage() {
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem', marginBottom: '2rem' }}>
               {[
                 { label: 'Trex Platinum', sub: 'Top 1% in US' },
-                { label: '10-Year Warranty', sub: 'Workmanship' },
+                { label: '5-Year Warranty', sub: 'Workmanship' },
                 { label: '24+ Years', sub: 'Experience' },
                 { label: 'Licensed', sub: '& Insured' },
               ].map(b => (

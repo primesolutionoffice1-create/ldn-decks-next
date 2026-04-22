@@ -12,7 +12,7 @@
 **Experienta:** 24+ ani
 **Certificari:** Trex Platinum Partner (top 1% national), TimberTech Certified Installer
 **Google Rating:** 5.0 (41 reviews)
-**Warranty:** 10-year workmanship warranty
+**Warranty:** 5-year workmanship warranty
 **Zone servite:** Loudoun County, Fairfax County, Prince William County, Arlington County, Stafford County
 
 **Servicii principale:**
@@ -98,7 +98,7 @@
 - **Buget Ads estimat:** $5,000-$8,000/luna
 - **Ce fac bine:** Volum masiv de social proof, 40+ pagini de locatie, blog activ, ghid desarcabil, consultari CAD/3D, campanii LSA active
 - **Slabiciuni:** Rating sub 5.0, recenzii mixte despre management, NU sunt Trex Platinum
-- **Cum ii bati:** Review-urile tale sunt 5.0 perfect vs 4.4 ai lor. Trex Platinum (top 1%) vs fara certificare specifica. 10-year warranty vs 2-year ai lor.
+- **Cum ii bati:** Review-urile tale sunt 5.0 perfect vs 4.4 ai lor. Trex Platinum (top 1%) vs fara certificare specifica. 5-year warranty vs 2-year ai lor.
 
 ### Competitor #2: Shiner Exteriors (MULTI-SERVICE)
 - **Website:** shinerexteriors.com
@@ -142,7 +142,7 @@
 - **Buget Ads estimat:** $2,000-$4,000/luna
 - **Ce fac bine:** Quality focus, BBB rating
 - **Slabiciuni:** FARA blog, site vechi, fara pricing, fara content marketing
-- **Cum ii bati:** Content marketing masiv (244 pagini vs ~15), modern website, 10-year warranty
+- **Cum ii bati:** Content marketing masiv (244 pagini vs ~15), modern website, 5-year warranty
 
 ### Competitor #6: Nova Construction Pro
 - **Website:** novaconstructionpro.com
@@ -250,7 +250,7 @@ Sitelink 4: Trex vs TimberTech Guide
 
 ```
 Callout 1: Trex Platinum Partner (Top 1%)
-Callout 2: 10-Year Workmanship Warranty
+Callout 2: 5-Year Workmanship Warranty
 Callout 3: 5.0 Google Rating
 Callout 4: Free 3D Design Consultation
 Callout 5: Licensed & Insured
@@ -329,7 +329,7 @@ Ad Copy:
   H2: Trex Platinum Partner | Top 1% Certified  
   H3: Free Estimate — (571) 655-7207
   D1: Transform your old wood deck into a zero-maintenance Trex composite. 
-      10-year warranty. Free 3D design. Serving Loudoun, Fairfax & PW County.
+      5-year warranty. Free 3D design. Serving Loudoun, Fairfax & PW County.
   D2: See our Before & After gallery. 24+ years in NoVA. 5.0 Google rating.
       Licensed & insured. Permits handled. Call today.
 ```
@@ -346,7 +346,7 @@ Keywords:
 Landing Page: /how-to-choose-a-deck-builder-northern-virginia
 Ad Copy:
   H1: Northern Virginia's #1 Rated Deck Builder
-  H2: 5.0★ Google | 10-Year Warranty
+  H2: 5.0★ Google | 5-Year Warranty
   H3: Trex Platinum — Only Top 1% Qualify
   D1: 24+ years building custom decks in Loudoun, Fairfax & Prince William. 
       Trex Platinum Partner. Free on-site design consultation.
@@ -369,7 +369,7 @@ Ad Copy:
   H2: Extend Outdoor Season to 10 Months
   H3: From $25K | Free Design Consultation
   D1: Bug-free outdoor living with EZE-Breeze windows, vaulted ceilings & 
-      LED lighting. Trex-certified builder. 10-year warranty.
+      LED lighting. Trex-certified builder. 5-year warranty.
   D2: 5.0 Google rating. We handle permits & HOA. Serving Ashburn, Leesburg, 
       Reston, McLean & all of Northern Virginia. Call today.
 ```
@@ -391,7 +391,7 @@ Ad Copy:
   D1: See actual project costs from $18K-$55K. Trex, TimberTech & AZEK compared.
       Platinum Partner pricing. Free itemized quote.
   D2: Use our instant deck cost calculator. 24+ years in Northern Virginia.
-      5.0★ rated. 10-year warranty. (571) 655-7207.
+      5.0★ rated. 5-year warranty. (571) 655-7207.
 ```
 
 #### 10. Seteaza remarketing extins
@@ -468,7 +468,7 @@ LDN Decks | (571) 655-7207
 ```
 H1: Trex Platinum Partner — Top 1% in US
 H2: Custom Composite Decks from $15K
-H3: 5.0★ Google Rating | 10-Year Warranty
+H3: 5.0★ Google Rating | 5-Year Warranty
 D: Northern Virginia's highest-certified Trex installer. 24+ years. 
    Free 3D design. Call (571) 655-7207.
 ```
@@ -479,7 +479,7 @@ H1: Custom Composite Decks — NoVA
 H2: Starting at $30/sqft Installed
 H3: Free Estimate — (571) 655-7207
 D: Trex, TimberTech & AZEK. See our pricing guide with real project costs.
-   5-star rated. 10-year warranty. Licensed & insured.
+   5-star rated. 5-year warranty. Licensed & insured.
 ```
 
 **Variant C (Urgency-focused):**
@@ -495,7 +495,7 @@ D: Premium composite decks in Loudoun, Fairfax & PW County.
 ```
 H1: 100+ NoVA Decks Built Since 2024
 H2: See Our Before & After Gallery
-H3: 5.0★ Google | 10-Year Warranty
+H3: 5.0★ Google | 5-Year Warranty
 D: Real project photos + costs. Trex Platinum Partner. 
    Free on-site consultation. Serving all of Northern Virginia.
 ```
@@ -521,7 +521,7 @@ D: Real project photos + costs. Trex Platinum Partner.
 |---|---|---|
 | Trex PLATINUM Partner (top 1%) | NIMENI local la Platinum | Headline principal |
 | 5.0 rating PERFECT | Niciun competitor major (Steadfast: 4.4) | Ad extension + trust signal |
-| 10-year workmanship warranty | Steadfast: 2 ani, restul: nimic | Unique selling point |
+| 5-year workmanship warranty | Steadfast: 2 ani, restul: nimic | Unique selling point |
 | Pricing calculator pe site | Doar Sunburst | Sitelink extension |
 | 244 pagini de continut SEO | Steadfast: ~80, restul: sub 30 | Quality Score boost |
 | Before & After page dedicata | Steadfast: partial | Sitelink + conversion |

@@ -142,6 +142,11 @@ const nextConfig = {
       { source: '/deck-projects-showcase/deck-builder-ashburn', destination: '/near-you/loudoun-county/ashburn', permanent: true },
       { source: '/deck-projects-showcase', destination: '/showcase', permanent: true },
       { source: '/deck-projects-showcase/:path*', destination: '/showcase', permanent: true },
+
+              // Legacy WordPress image redirects (broken 404s from old WP upload paths)
+      { source: '/wp-content/uploads/2024/09/ldndecks-logo-new-e1731874431860.webp', destination: '/ldndecks-logo.webp', permanent: true },
+  { source: '/wp-content/uploads/2024/09/ldndecks-logo-new.png', destination: '/ldndecks-logo.webp', permanent: true },
+{ source: '/wp-content/:path*', destination: '/', permanent: true },
     ];
   },
   async headers() {

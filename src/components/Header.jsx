@@ -189,6 +189,7 @@ export default function Header() {
                     <Link href="/contact">Our contacts</Link>
                     <Link href="/about/why-choose-us">Why Choose Us</Link>
                     <Link href="/about/process">Our Process</Link>
+                    <Link href="/about/warranty">2-Year Warranty</Link>
                     <Link href="/faqs">FAQ</Link>
                   </div>
                 </div>
@@ -345,6 +346,7 @@ export default function Header() {
                   <Link href="/contact" onClick={() => setIsMobileOpen(false)}>Our contacts</Link>
                   <Link href="/about/why-choose-us" onClick={() => setIsMobileOpen(false)}>Why Choose Us</Link>
                   <Link href="/about/process" onClick={() => setIsMobileOpen(false)}>Our Process</Link>
+                  <Link href="/about/warranty" onClick={() => setIsMobileOpen(false)}>2-Year Warranty</Link>
                   <Link href="/faqs" onClick={() => setIsMobileOpen(false)}>FAQ</Link>
                 </div>
               </div>

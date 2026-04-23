@@ -126,6 +126,8 @@ export default async function sitemap() {
                 { path: "/questions-to-ask-before-building-a-deck",     priority: 0.85, lastMod: TIER1, freq: "weekly" },
                 { path: "/trex-transcend-review-northern-virginia",       priority: 0.90, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-design-ideas-2026",                      priority: 0.90, lastMod: TIER1, freq: "weekly" },
+                { path: "/best-deck-stain-sealer-virginia",             priority: 0.85, lastMod: TIER1, freq: "weekly" },
+                { path: "/outdoor-living-trends-northern-virginia-2026", priority: 0.85, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-builder-centreville-va",                 priority: 0.92, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-safety-inspection-checklist",            priority: 0.85, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-builder-herndon-va",                     priority: 0.90, lastMod: TIER1, freq: "weekly" },

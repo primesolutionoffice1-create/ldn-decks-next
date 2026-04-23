@@ -5,7 +5,6 @@ import ShowcaseStats from '@/components/ShowcaseStats';
 import Testimonials from '@/components/Testimonials';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -17,7 +16,6 @@ export const metadata = buildMetadata({
 export default function ShowcasePage() {
   return (
     <main>
-      <Breadcrumbs />
       <ShowcaseHeader />
       <ShowcaseGrid />
       <ShowcaseStats />

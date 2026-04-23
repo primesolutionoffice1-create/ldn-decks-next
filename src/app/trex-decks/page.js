@@ -9,7 +9,6 @@ import ContactHome from '@/components/ContactHome';
 import ServiceSchema from '@/components/ServiceSchema';
 import RelatedGuides from '@/components/RelatedGuides';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -113,7 +112,6 @@ const expansionSections = [
 export default function TrexDecksPage() {
   return (
     <main>
-      <Breadcrumbs />
       <ServiceSchema name="Trex Deck Installation" description="Certified Trex Platinum Partner installer in Northern Virginia. Trex Enhance, Select, and Transcend product lines. 25-year warranty." price="18000" />
       <ServicesHeader 
         subtext="Certified Trex Pro Builder"

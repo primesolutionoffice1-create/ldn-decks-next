@@ -9,7 +9,6 @@ import ContactHome from '@/components/ContactHome';
 import ServiceSchema from '@/components/ServiceSchema';
 import RelatedGuides from '@/components/RelatedGuides';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -113,7 +112,6 @@ const expansionSections = [
 export default function CompositeDecksPage() {
   return (
     <main>
-      <Breadcrumbs />
       <ServiceSchema name="Composite Deck Installation" description="Expert composite deck installation in Northern Virginia. Trex Platinum Partner and TimberTech Certified. 25-50 year warranties." price="20000" />
       <ServicesHeader 
         subtext="5-Star Google Rated Specialist"

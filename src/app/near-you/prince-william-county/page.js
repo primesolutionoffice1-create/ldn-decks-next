@@ -5,7 +5,6 @@ import ServiceVisual from '@/components/ServiceVisual';
 import ServicesFAQ from '@/components/ServicesFAQ';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import RatingBadge from '@/components/RatingBadge';
 import styles from '../LocationPage.module.css';
 import { buildMetadata } from '@/lib/seo';
@@ -49,7 +48,6 @@ const faqs = [
 export default function PrinceWilliamCountyPage() {
   return (
     <main>
-      <Breadcrumbs />
       <ServicesHeader
         subtext="Serving Northern Virginia"
         title="Deck Builder in Prince William County, VA"

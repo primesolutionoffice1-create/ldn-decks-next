@@ -4,7 +4,6 @@ import ContactForm from '@/components/ContactForm';
 import ContactMap from '@/components/ContactMap';
 import ServicesFooterInfo from '@/components/ServicesFooterInfo';
 import ContactFAQ from '@/components/ContactFAQ';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -16,7 +15,6 @@ export const metadata = buildMetadata({
 export default function ContactPage() {
     return (
           <main>
-      <Breadcrumbs />
             <ContactHeader />
             <ContactForm />
             <ContactMap />

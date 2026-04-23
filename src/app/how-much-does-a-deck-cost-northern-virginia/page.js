@@ -6,7 +6,6 @@ import ArticleSchema from '@/components/ArticleSchema';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -31,7 +30,6 @@ const faqSchema = {
 export default function DeckCostPage() {
   return (
     <>
-      <Breadcrumbs />
       <JsonLd data={faqSchema} />
       <ArticleSchema
         title="How Much Does a Deck Cost in Northern Virginia?"

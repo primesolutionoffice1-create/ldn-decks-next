@@ -6,7 +6,6 @@ import ProcessFAQ from '@/components/ProcessFAQ';
 import ServicesFooterInfo from '@/components/ServicesFooterInfo';
 import ServicesCallToAction from '@/components/ServicesCallToAction';
 import SimpleCTA from '@/components/SimpleCTA';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -18,7 +17,6 @@ export const metadata = buildMetadata({
 export default function ProcessPage() {
   return (
     <main>
-      <Breadcrumbs />
       <ProcessHeader />
       <ProcessSteps />
       <ServicesFooterInfo />

@@ -6,7 +6,6 @@ import ServiceContentExpansion from '@/components/ServiceContentExpansion';
 import ProcessSteps from '@/components/ProcessSteps';
 import ServicesFAQ from '@/components/ServicesFAQ';
 import ContactHome from '@/components/ContactHome';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import RelatedGuides from '@/components/RelatedGuides';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import JsonLd from '@/components/JsonLd';
@@ -126,7 +125,6 @@ const expansionSections = [
 export default function DeckBuildersLoudounPage() {
       return (
               <main>
-      <Breadcrumbs />
                 <JsonLd data={loudounFaqSchema} />
                 <ServicesHeader
             subtext="Loudoun's Premier Choice"

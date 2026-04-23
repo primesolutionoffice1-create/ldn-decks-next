@@ -10,7 +10,6 @@ import RelatedGuides from '@/components/RelatedGuides';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import JsonLd from '@/components/JsonLd';
 import ArticleSchema from '@/components/ArticleSchema';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = {
@@ -116,7 +115,6 @@ export const metadata = {
                                                                                                                                                                                                                                                                                               export default function DeckDesignIdeasNVA2026Page() {
                                                                                                                                                                                                                                                                                                 return (
                                                                                                                                                                                                                                                                                                     <main>
-      <Breadcrumbs />
                                                                                                                                                                                                                                                                                                           <JsonLd data={faqSchema} />
           <ArticleSchema
             title="Deck Design Ideas Northern Virginia 2026"

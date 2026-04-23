@@ -10,7 +10,6 @@ import SimpleCTA from '@/components/SimpleCTA';
 import RelatedGuides from '@/components/RelatedGuides';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import JsonLd from '@/components/JsonLd';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -127,7 +126,6 @@ export const metadata = buildMetadata({
                                                                                                                                                                                                                                                                                                                                                         export default function DeckRepairLoudounCountyPage() {
                                                                                                                                                                                                                                                                                                                                                           return (
                                                                                                                                                                                                                                                                                                                                                               <main>
-      <Breadcrumbs />
                                                                                                                                                                                                                                                                                                                                                                     <JsonLd data={faqSchema} />
                                                                                                                                                                                                                                                                                                                                                                           <ServicesHeader
                                                                                                                                                                                                                                                                                                                                                                                   subtext="Loudoun County's 5-Star Rated Repair Team"

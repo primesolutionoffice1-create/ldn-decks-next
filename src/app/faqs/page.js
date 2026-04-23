@@ -3,7 +3,6 @@ import FAQHeader from '@/components/FAQHeader';
 import FAQCategorized from '@/components/FAQCategorized';
 import SimpleCTA from '@/components/SimpleCTA';
 import RelatedGuides from '@/components/RelatedGuides';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -15,7 +14,6 @@ export const metadata = buildMetadata({
 export default function FAQPage() {
   return (
     <main>
-      <Breadcrumbs />
       <FAQHeader />
       <FAQCategorized />
       <RelatedGuides currentPath="/faqs" />

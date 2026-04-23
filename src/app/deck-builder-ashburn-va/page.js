@@ -12,7 +12,6 @@ import RelatedGuides from '@/components/RelatedGuides';
 import RatingBadge from '@/components/RatingBadge';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import JsonLd from '@/components/JsonLd';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -120,7 +119,6 @@ const expansionSections = [
 export default function DeckBuilderAshburnPage() {
     return (
           <main>
-      <Breadcrumbs />
             <JsonLd data={ashburnFaqSchema} />
             <ServicesHeader
           subtext="Ashburn, VA's #1 Rated Builder"

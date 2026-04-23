@@ -10,7 +10,6 @@ import ServiceSchema from '@/components/ServiceSchema';
 import SimpleCTA from '@/components/SimpleCTA';
 import RelatedGuides from '@/components/RelatedGuides';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -114,7 +113,6 @@ const expansionSections = [
 export default function DeckRepairPage() {
   return (
     <main>
-      <Breadcrumbs />
       <ServiceSchema name="Deck Repair" description="Deck repair services for Northern Virginia. Board replacement, railing repair, structural fixes." price="3000" />
       <ServicesHeader
         subtext="5-Star Google Rated Restoration"

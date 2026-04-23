@@ -6,7 +6,6 @@ import ArticleSchema from '@/components/ArticleSchema';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -190,7 +189,6 @@ const S = {
 export default function BeforeAndAfterPage() {
   return (
     <>
-      <Breadcrumbs />
       <JsonLd data={imageGallerySchema} />
       <ArticleSchema
         title="Before & After Deck Projects — Northern Virginia"

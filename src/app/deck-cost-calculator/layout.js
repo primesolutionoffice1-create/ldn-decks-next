@@ -1,5 +1,4 @@
 import { buildMetadata } from '@/lib/seo';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import RelatedGuides from '@/components/RelatedGuides';
 import ContactHome from '@/components/ContactHome';
 
@@ -12,7 +11,6 @@ export const metadata = buildMetadata({
 export default function Layout({ children }) {
   return (
     <>
-      <Breadcrumbs />
       {children}
       <RelatedGuides currentPath="/deck-cost-calculator" />
       <ContactHome />

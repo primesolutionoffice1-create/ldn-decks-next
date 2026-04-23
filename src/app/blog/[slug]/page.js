@@ -5,7 +5,6 @@ import { notFound } from 'next/navigation';
 import { blogPosts } from '@/lib/blogData';
 import { buildMetadata } from '@/lib/seo';
 import RelatedGuides from '@/components/RelatedGuides';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import styles from './BlogContent.module.css';
 
 // Pre-render all blog posts at build time for proper indexing
@@ -79,7 +78,6 @@ export default async function SingleBlogPage({ params }) {
 
   return (
     <article className={styles.articlePage}>
-       <Breadcrumbs />
        <script
          type="application/ld+json"
          dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}

@@ -5,7 +5,6 @@ import ServicesFAQ from '@/components/ServicesFAQ';
 import ServicesFooterInfo from '@/components/ServicesFooterInfo';
 import ServicesCallToAction from '@/components/ServicesCallToAction';
 import RelatedGuides from '@/components/RelatedGuides';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -17,7 +16,6 @@ export const metadata = buildMetadata({
 export default function ServicesPage() {
   return (
     <main>
-       <Breadcrumbs />
        <ServicesHeader />
        <ServicesGrid />
        <ServicesFAQ />

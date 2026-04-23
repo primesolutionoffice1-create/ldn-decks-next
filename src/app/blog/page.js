@@ -2,7 +2,6 @@ import React from 'react';
 import BlogHeader from '@/components/BlogHeader';
 import BlogList from '@/components/BlogList';
 import RelatedGuides from '@/components/RelatedGuides';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -14,7 +13,6 @@ export const metadata = buildMetadata({
 export default function BlogPage() {
   return (
     <main>
-      <Breadcrumbs />
       <BlogHeader />
       <BlogList />
       <RelatedGuides currentPath="/blog" />

@@ -10,7 +10,6 @@ import ProcessSteps from '@/components/ProcessSteps';
 import WhyChooseDetails from '@/components/WhyChooseDetails';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import styles from './CityPage.module.css';
 import { buildMetadata } from '@/lib/seo';
@@ -115,7 +114,6 @@ export default async function CityPage({ params }) {
 
   return (
     <main>
-      <Breadcrumbs />
       <ServicesHeader
         subtext={`5-Star Google Rated Specialist in ${countyName}`}
         title={`Deck Builder in ${cityName}`}

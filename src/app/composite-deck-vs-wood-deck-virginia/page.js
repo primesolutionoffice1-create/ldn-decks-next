@@ -6,7 +6,6 @@ import ArticleSchema from '@/components/ArticleSchema';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -31,7 +30,6 @@ const S = { h2: { fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' },
 export default function CompositeVsWoodPage() {
   return (
     <>
-      <Breadcrumbs />
       <JsonLd data={faqSchema} />
       <ArticleSchema
         title="Composite Deck vs Wood Deck: Complete Virginia Comparison (2026)"

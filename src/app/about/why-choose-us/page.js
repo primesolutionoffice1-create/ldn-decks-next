@@ -6,7 +6,6 @@ import WhyChooseServices from '@/components/WhyChooseServices';
 import ProjectProcess from '@/components/ProjectProcess';
 import WhyChooseDetails from '@/components/WhyChooseDetails';
 import WhyChooseFAQ from '@/components/WhyChooseFAQ';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -18,7 +17,6 @@ export const metadata = buildMetadata({
 export default function WhyChooseUsPage() {
   return (
     <main>
-      <Breadcrumbs />
       <WhyChooseHeader />
       <ServicesCallToAction />
       <ServicesFooterInfo />

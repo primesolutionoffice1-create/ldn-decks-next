@@ -7,6 +7,7 @@ import ServiceContentExpansion from '@/components/ServiceContentExpansion';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
+import SimpleCTA from '@/components/SimpleCTA';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -192,6 +193,7 @@ export default function DeckResurfacingPage() {
       </section>
       <ServiceAreasGrid />
       <RelatedGuides currentPath="/services/deck-resurfacing" />
+      <SimpleCTA title="Resurface Your Deck Today" buttonText="Get Free Estimate" link="/contact" />
       <ContactHome />
     </main>
   );

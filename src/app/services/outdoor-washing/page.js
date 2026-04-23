@@ -7,6 +7,7 @@ import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import ServiceVisual from '@/components/ServiceVisual';
 import ProcessSteps from '@/components/ProcessSteps';
+import SimpleCTA from '@/components/SimpleCTA';
 
 import { buildMetadata } from '@/lib/seo';
 
@@ -99,6 +100,7 @@ export default function OutdoorWashingPage() {
         faqs={washingFAQs}
       />
 
+      <SimpleCTA title="Book Your Outdoor Cleaning" buttonText="Get Free Estimate" link="/contact" />
       <RelatedGuides currentPath="/services/outdoor-washing" />
       <ContactHome />
     </main>

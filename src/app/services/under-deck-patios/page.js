@@ -8,6 +8,7 @@ import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import ServicesFAQ from '@/components/ServicesFAQ';
+import SimpleCTA from '@/components/SimpleCTA';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -159,6 +160,7 @@ export default function UnderDeckPatiosPage() {
       <ServiceAreasGrid />
       <RelatedGuides currentPath="/services/under-deck-patios" />
       <ServicesFAQ title="Under Deck Patio FAQs" faqs={faqs} />
+      <SimpleCTA title="Create Your Under-Deck Living Space" buttonText="Get Free Estimate" link="/contact" />
       <ContactHome />
     </main>
   );

@@ -8,6 +8,7 @@ import ContactHome from '@/components/ContactHome';
 import ServiceSchema from '@/components/ServiceSchema';
 import RelatedGuides from '@/components/RelatedGuides';
 import ServiceVisual from '@/components/ServiceVisual';
+import SimpleCTA from '@/components/SimpleCTA';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -78,6 +79,7 @@ export default function ScreenedPorchPage() {
         />
                   <ProcessSteps />
                   <ServicesFAQ title="Screened Porch FAQs" faqs={faqs} />
+                  <SimpleCTA title="Build Your Screened Porch" buttonText="Get Free Estimate" link="/contact" />
                   <RelatedGuides currentPath="/services/porches/screened-porch" />
       <ContactHome />
             </main>

@@ -6,6 +6,7 @@ import ServiceInclusions from '@/components/ServiceInclusions';
 import ServiceContentExpansion from '@/components/ServiceContentExpansion';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import ContactHome from '@/components/ContactHome';
+import SimpleCTA from '@/components/SimpleCTA';
 import RelatedGuides from '@/components/RelatedGuides';
 import ServicesFAQ from '@/components/ServicesFAQ';
 import { buildMetadata } from '@/lib/seo';
@@ -159,6 +160,7 @@ export default function FirePitsPage() {
       <ServiceAreasGrid />
       <RelatedGuides currentPath="/services/fire-pits" />
       <ServicesFAQ title="Fire Pit FAQs" faqs={faqs} />
+      <SimpleCTA title="Build Your Dream Fire Pit" buttonText="Get Free Estimate" link="/contact" />
       <ContactHome />
     </main>
   );

@@ -7,6 +7,7 @@ import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import ContactHome from '@/components/ContactHome';
 import ServiceSchema from '@/components/ServiceSchema';
 import RelatedGuides from '@/components/RelatedGuides';
+import SimpleCTA from '@/components/SimpleCTA';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -95,6 +96,7 @@ export default function DeckInspectionPage() {
       <Testimonials />
       <ServiceAreasGrid />
       <RelatedGuides currentPath="/services/deck-inspection" />
+      <SimpleCTA title="Schedule Your $350 Deck Inspection" buttonText="Get Free Estimate" link="/contact" />
       <ContactHome />
     </main>
   );

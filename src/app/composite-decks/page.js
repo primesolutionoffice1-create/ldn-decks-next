@@ -9,6 +9,7 @@ import ContactHome from '@/components/ContactHome';
 import ServiceSchema from '@/components/ServiceSchema';
 import RelatedGuides from '@/components/RelatedGuides';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
+import ServicesCallToAction from '@/components/ServicesCallToAction';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -30,6 +31,14 @@ const inclusions = [
   {
     title: "Structural Integrity",
     desc: "Framing systems engineered specifically to support the increased weight of composite decking in Loudoun and Fairfax."
+  },
+  {
+    title: "Permits & HOA Handled",
+    desc: "We manage the entire permit process and HOA architectural review submissions so you don't have to."
+  },
+  {
+    title: "Typical Timeline: 2–4 Weeks",
+    desc: "Most composite deck projects are completed in 2–4 weeks from permit approval, depending on size and complexity."
   }
 ];
 
@@ -128,7 +137,9 @@ export default function CompositeDecksPage() {
           "Low-maintenance surfaces (no staining)",
           "Hidden fastener systems for seamless looks",
           "Scratch, stain, and fade resistant",
-          "Comprehensive 25-50 year warranties"
+          "Comprehensive 25-50 year warranties",
+          "All permits + HOA approvals handled",
+          "See our before & after transformations"
         ]}
         image1="/images/img10.jpeg"
         image2="/images/img11.jpeg"
@@ -150,6 +161,8 @@ export default function CompositeDecksPage() {
       />
 
       <ServiceAreasGrid />
+
+      <ServicesCallToAction />
 
       <RelatedGuides currentPath="/composite-decks" />
       <ContactHome />

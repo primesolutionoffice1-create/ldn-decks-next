@@ -8,6 +8,7 @@ import ServicesFAQ from '@/components/ServicesFAQ';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
+import SimpleCTA from '@/components/SimpleCTA';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -158,6 +159,7 @@ export default function OpenPorchPage() {
       </section>
 
       <ServiceAreasGrid />
+      <SimpleCTA title="Build Your Open Porch" buttonText="Get Free Estimate" link="/contact" />
       <RelatedGuides currentPath="/services/porches/open-porch" />
       <ContactHome />
     </main>

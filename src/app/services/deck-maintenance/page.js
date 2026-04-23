@@ -8,6 +8,7 @@ import ContactHome from '@/components/ContactHome';
 import ServiceSchema from '@/components/ServiceSchema';
 import RelatedGuides from '@/components/RelatedGuides';
 import ServicesFAQ from '@/components/ServicesFAQ';
+import SimpleCTA from '@/components/SimpleCTA';
 
 import { buildMetadata } from '@/lib/seo';
 
@@ -103,6 +104,7 @@ export default function DeckMaintenancePage() {
       <ServiceAreasGrid />
       <RelatedGuides currentPath="/services/deck-maintenance" />
       <ServicesFAQ title="Deck Maintenance FAQs" faqs={faqs} />
+      <SimpleCTA title="Book Your Deck Maintenance" buttonText="Get Free Estimate" link="/contact" />
       <ContactHome />
     </main>
   );

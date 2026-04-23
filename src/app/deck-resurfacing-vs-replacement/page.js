@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
 import SimpleCTA from '@/components/SimpleCTA';
+import ServicesCallToAction from '@/components/ServicesCallToAction';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
 
@@ -65,7 +66,7 @@ export default function ResurfacingVsReplacementPage() {
                   ['Build time', '1–2 weeks', '2–4 weeks'],
                   ['Requires', 'Solid frame (joists, posts, footings)', 'Nothing all new'],
                   ['Result', 'Looks 100% new on surface', 'New structure + surface'],
-                  ['Permit', 'Often required (new decking material)', 'Always required'],
+                  ['Permit & HOA', 'Often required — we handle permits + HOA approval', 'Always required — we handle permits + HOA approval'],
                   ['Warranty', '5-yr workmanship + 25-yr material', '5-yr workmanship + 25-yr material'],
                   ['When to choose', 'Frame is solid, only boards are worn/ugly', 'Structural issues, unsafe, or want new layout'],
                 ].map((row, i) => (
@@ -91,7 +92,7 @@ export default function ResurfacingVsReplacementPage() {
                 <li style={{ marginBottom: '0.5rem' }}>Ledger: secure, flashing intact</li>
                 <li style={{ marginBottom: '0.5rem' }}>Beams: no cracks, no sag</li>
               </ul>
-              <p style={{ fontSize: '0.9rem', fontWeight: 600, marginTop: '0.75rem' }}>Cost: $10k–$25k | Time: 1–2 weeks</p>
+              <p style={{ fontSize: '0.9rem', fontWeight: 600, marginTop: '0.75rem' }}>Cost: $10k–$25k | Time: 1–2 weeks | Permits + HOA handled</p>
             </div>
             <div style={{ background: '#ffebee', borderRadius: 8, padding: '1.5rem' }}>
               <h3 style={{ fontWeight: 700, color: '#c62828', marginBottom: '0.75rem' }}>REPLACE ✗ (frame fails)</h3>
@@ -102,7 +103,7 @@ export default function ResurfacingVsReplacementPage() {
                 <li style={{ marginBottom: '0.5rem' }}>Ledger: pulling away from house</li>
                 <li style={{ marginBottom: '0.5rem' }}>Deck: bounces when walked on</li>
               </ul>
-              <p style={{ fontSize: '0.9rem', fontWeight: 600, marginTop: '0.75rem' }}>Cost: $20k–$50k | Time: 2–4 weeks</p>
+              <p style={{ fontSize: '0.9rem', fontWeight: 600, marginTop: '0.75rem' }}>Cost: $20k–$50k | Time: 2–4 weeks | Permits + HOA handled</p>
             </div>
           </div>
 
@@ -149,7 +150,8 @@ export default function ResurfacingVsReplacementPage() {
           </ul>
         </div>
       </article>
-      <SimpleCTA title="Free Deck Inspection Resurface or Replace?" buttonText="Schedule Free Inspection" link="/contact" />
+      <ServicesCallToAction />
+      <SimpleCTA title="Free Deck Inspection — Resurface or Replace?" buttonText="Schedule Free Inspection" link="/contact" />
       <ContactHome />
     </>
   );

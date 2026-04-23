@@ -6,6 +6,7 @@ import ServicesFAQ from '@/components/ServicesFAQ';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import ServiceVisual from '@/components/ServiceVisual';
+import SimpleCTA from '@/components/SimpleCTA';
 
 import { buildMetadata } from '@/lib/seo';
 
@@ -70,6 +71,7 @@ export default function HouseSidingWashingPage() {
         ]}
       />
 
+      <SimpleCTA title="Get Your Siding Cleaned" buttonText="Get Free Estimate" link="/contact" />
       <RelatedGuides currentPath="/services/house-siding-washing" />
       <ContactHome />
     </main>

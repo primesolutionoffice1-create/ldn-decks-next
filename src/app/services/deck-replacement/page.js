@@ -8,6 +8,7 @@ import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import JsonLd from '@/components/JsonLd';
+import SimpleCTA from '@/components/SimpleCTA';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -135,6 +136,7 @@ export default function DeckReplacementPage() {
       />
       <ServiceAreasGrid />
       <RelatedGuides currentPath="/services/deck-replacement" />
+      <SimpleCTA title="Ready for a New Deck?" buttonText="Get Free Estimate" link="/contact" />
       <ContactHome />
     </main>
   );

@@ -8,13 +8,14 @@ import ContactHome from '@/components/ContactHome';
 import ServiceSchema from '@/components/ServiceSchema';
 import RelatedGuides from '@/components/RelatedGuides';
 import ServiceVisual from '@/components/ServiceVisual';
+import ServicesCallToAction from '@/components/ServicesCallToAction';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = {
   ...buildMetadata({
     path: '/deck-replacement',
     title: 'Deck Replacement Services | Professional Teardown & Rebuild',
-    description: 'Is your old deck beyond repair? We provide complete deck replacement services, handling the teardown and building a beautiful new outdoor space.',
+    description: 'Complete deck replacement from $25k. Teardown, permits & HOA handled, 2–4 week build. Trex & TimberTech certified. Free estimate in Loudoun, Fairfax & Prince William.',
   }),
   alternates: {
     canonical: 'https://www.ldndecks.com/services/deck-replacement',
@@ -25,10 +26,10 @@ export default function DeckReplacementPage() {
   return (
     <main>
       <ServiceSchema name="Deck Replacement" description="Complete deck demolition and rebuild. Wood to composite upgrades. Permits handled." price="25000" />
-      <ServicesHeader 
-        subtext="Deck Restoration"
+      <ServicesHeader
+        subtext="Projects from $25,000+"
         title="Full Deck Replacement Services"
-        description="Replace your worn-out, unsafe deck with a modern, high-quality outdoor sanctuary."
+        description="Replace your worn-out, unsafe deck with a modern composite sanctuary. Permits & HOA handled. Typical timeline: 2–4 weeks."
       />
 
       <ServiceMain 
@@ -40,7 +41,9 @@ export default function DeckReplacementPage() {
           "Safe demolition and removal of old materials",
           "Foundation and ledger board inspection/repair",
           "New structural framing to modern codes",
-          "Premium decking surfaces and railings"
+          "Premium composite decking (Trex / TimberTech / AZEK)",
+          "All county permits + HOA approvals handled",
+          "Typical build: 2–4 weeks from permit approval"
         ]}
         image1="/images/img08.jpeg"
         image2="/images/img09.jpeg"
@@ -48,17 +51,20 @@ export default function DeckReplacementPage() {
 
       <ServiceVisual image="/images/img22.jpeg" />
 
-      <ServiceInclusions 
+      <ServiceInclusions
         title="The Teardown-to-Build Process"
         description="We minimize disruption to your property while we transform your outdoor area."
         items={[
-          { title: "Permit Management", desc: "We handle all the necessary county permits for the demolition and new construction." },
+          { title: "Permits & HOA Handled", desc: "We manage all county permits and HOA architectural review submissions — you don't lift a finger." },
           { title: "Modern Safety Standards", desc: "Your new deck will meet all current building codes, often far exceeding the standards of your old deck." },
-          { title: "Design Upgrades", desc: "Replacement is the perfect time to change the shape, size, or layout of your deck." }
+          { title: "Design Upgrades", desc: "Replacement is the perfect time to change the shape, size, or layout of your deck." },
+          { title: "Before & After Results", desc: "See real transformations from our Loudoun, Fairfax, and Prince William County projects in our gallery." }
         ]}
       />
 
       <ProcessSteps />
+
+      <ServicesCallToAction />
 
       <RelatedGuides currentPath="/deck-replacement" />
       <ContactHome />

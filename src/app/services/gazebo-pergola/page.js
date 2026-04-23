@@ -8,6 +8,7 @@ import RelatedGuides from '@/components/RelatedGuides';
 import ServiceVisual from '@/components/ServiceVisual';
 import ServiceContentExpansion from '@/components/ServiceContentExpansion';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
+import SimpleCTA from '@/components/SimpleCTA';
 
 import { buildMetadata } from '@/lib/seo';
 
@@ -175,6 +176,7 @@ export default function GazeboPergolaPage() {
       <ServiceAreasGrid />
 
       <RelatedGuides currentPath="/services/gazebo-pergola" />
+      <SimpleCTA title="Design Your Pergola or Gazebo" buttonText="Get Free Estimate" link="/contact" />
       <ContactHome />
     </main>
   );

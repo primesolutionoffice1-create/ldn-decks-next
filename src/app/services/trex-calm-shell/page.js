@@ -7,6 +7,7 @@ import ServiceContentExpansion from '@/components/ServiceContentExpansion';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
+import SimpleCTA from '@/components/SimpleCTA';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -117,6 +118,7 @@ export default function TrexCalmShellPage() {
         items={whyLdnDecks}
       />
       <ServiceAreasGrid />
+      <SimpleCTA title="Get Your Trex Calm Shell Quote" buttonText="Get Free Estimate" link="/contact" />
       <RelatedGuides currentPath="/services/trex-calm-shell" />
       <ContactHome />
     </main>

@@ -8,6 +8,7 @@ import RelatedGuides from '@/components/RelatedGuides';
 import ServiceVisual from '@/components/ServiceVisual';
 import ServiceContentExpansion from '@/components/ServiceContentExpansion';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
+import SimpleCTA from '@/components/SimpleCTA';
 
 import { buildMetadata } from '@/lib/seo';
 
@@ -174,6 +175,7 @@ export default function EntryDoorsPage() {
       <ServiceAreasGrid />
 
       <RelatedGuides currentPath="/services/entry-doors" />
+      <SimpleCTA title="Upgrade Your Entry Door" buttonText="Get Free Estimate" link="/contact" />
       <ContactHome />
     </main>
   );

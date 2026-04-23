@@ -9,6 +9,7 @@ import ContactHome from '@/components/ContactHome';
 import ServiceSchema from '@/components/ServiceSchema';
 import RelatedGuides from '@/components/RelatedGuides';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
+import SimpleCTA from '@/components/SimpleCTA';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -104,6 +105,7 @@ export default function DeckStairLightingPage() {
       <ServiceAreasGrid />
 
       <RelatedGuides currentPath="/services/deck-stair-lighting" />
+      <SimpleCTA title="Light Up Your Deck" buttonText="Get Free Estimate" link="/contact" />
       <ContactHome />
     </main>
   );

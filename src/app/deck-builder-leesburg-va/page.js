@@ -10,6 +10,7 @@ import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import RatingBadge from '@/components/RatingBadge';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
+import SimpleCTA from '@/components/SimpleCTA';
 import JsonLd from '@/components/JsonLd';
 import { buildMetadata } from '@/lib/seo';
 
@@ -163,6 +164,7 @@ export default function DeckBuilderLeesburgPage() {
           faqs={leesburgFAQs}
         />
                   <ServiceAreasGrid />
+                  <SimpleCTA title="Build Your Dream Deck in Leesburg" buttonText="Get Free Estimate" link="/contact" />
                   <RelatedGuides currentPath="/deck-builder-leesburg-va" />
       <ContactHome />
             </main>

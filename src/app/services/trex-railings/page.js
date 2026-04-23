@@ -8,6 +8,7 @@ import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import ServicesFAQ from '@/components/ServicesFAQ';
+import SimpleCTA from '@/components/SimpleCTA';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -164,6 +165,7 @@ export default function TrexRailingsPage() {
       <ServiceAreasGrid />
       <RelatedGuides currentPath="/services/trex-railings" />
       <ServicesFAQ title="Trex Railings FAQs" faqs={faqs} />
+      <SimpleCTA title="Upgrade Your Deck Railings" buttonText="Get Free Estimate" link="/contact" />
       <ContactHome />
     </main>
   );

@@ -9,6 +9,7 @@ import ContactHome from '@/components/ContactHome';
 import ServiceSchema from '@/components/ServiceSchema';
 import RelatedGuides from '@/components/RelatedGuides';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
+import SimpleCTA from '@/components/SimpleCTA';
 
 import { buildMetadata } from '@/lib/seo';
 
@@ -151,6 +152,7 @@ export default function WindowsPage() {
 
       <ServiceAreasGrid />
 
+      <SimpleCTA title="Get Your Window Quote" buttonText="Get Free Estimate" link="/contact" />
       <RelatedGuides currentPath="/services/windows" />
       <ContactHome />
     </main>

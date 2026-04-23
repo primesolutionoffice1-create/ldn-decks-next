@@ -8,6 +8,7 @@ import ProcessSteps from '@/components/ProcessSteps';
 import ServicesFAQ from '@/components/ServicesFAQ';
 import ContactHome from '@/components/ContactHome';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
+import SimpleCTA from '@/components/SimpleCTA';
 import JsonLd from '@/components/JsonLd';
 import { buildMetadata } from '@/lib/seo';
 
@@ -161,6 +162,7 @@ export default function DeckBuilderRestonPage() {
                         faqs={restonFAQs}
                   />
                   <ServiceAreasGrid />
+                  <SimpleCTA title="Build Your Dream Deck in Reston" buttonText="Get Free Estimate" link="/contact" />
                   <ContactHome />
             </main>
       );

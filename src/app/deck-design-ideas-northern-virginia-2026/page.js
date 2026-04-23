@@ -124,7 +124,7 @@ export const metadata = {
             path="/deck-design-ideas-northern-virginia-2026"
             image="/images/img36.jpeg"
             datePublished="2025-09-01"
-            dateModified="2026-04-18"
+            dateModified="2026-04-23"
           />
                                                                                                                                                                                                                                                                                                                 <ServicesHeader
                                                                                                                                                                                                                                                                                                                         subtext="Northern Virginia's #1 Rated Deck Builder"

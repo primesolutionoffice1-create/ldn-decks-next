@@ -76,7 +76,7 @@ export default function TrexTranscendReviewPage() {
         path="/trex-transcend-review-northern-virginia"
         image="/images/img36.jpeg"
         datePublished="2026-04-21"
-        dateModified="2026-04-21"
+        dateModified="2026-04-23"
       />
 
       {/* Hero */}

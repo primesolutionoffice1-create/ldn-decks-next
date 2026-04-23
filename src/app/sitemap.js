@@ -8,8 +8,8 @@ import { SITE_URL } from '@/lib/seo';
 // Tier 2 (city landing pages, county hubs): last significant content update
 // Tier 3 (secondary service pages, blog, contact): stable pages
 // Tier 4 (legal, team): rarely change
-const TIER1 = "2026-04-18";
-const TIER2 = "2026-04-10";
+const TIER1 = "2026-04-23";
+const TIER2 = "2026-04-18";
 const TIER3 = "2026-03-20";
 const TIER4 = "2026-01-10";
 

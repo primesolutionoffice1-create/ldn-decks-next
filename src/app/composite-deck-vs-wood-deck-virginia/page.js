@@ -38,7 +38,7 @@ export default function CompositeVsWoodPage() {
         description="Composite vs wood deck — cost, maintenance, lifespan, ROI compared for Virginia homeowners. 15-year total cost analysis."
         path="/composite-deck-vs-wood-deck-virginia"
         datePublished="2025-05-01"
-        dateModified="2026-04-18"
+        dateModified="2026-04-23"
       />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>

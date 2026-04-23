@@ -48,7 +48,7 @@ export default function LoudounPermitPage() {
         path="/deck-permit-loudoun-county-virginia"
         image="/images/img20.jpeg"
         datePublished="2026-04-21"
-        dateModified="2026-04-21"
+        dateModified="2026-04-23"
       />
 
       {/* Hero */}

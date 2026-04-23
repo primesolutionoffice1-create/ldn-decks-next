@@ -39,7 +39,7 @@ export default function DeckCostPage() {
         path="/how-much-does-a-deck-cost-northern-virginia"
         image="/images/img10.jpeg"
         datePublished="2025-03-01"
-        dateModified="2026-04-18"
+        dateModified="2026-04-23"
       />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>

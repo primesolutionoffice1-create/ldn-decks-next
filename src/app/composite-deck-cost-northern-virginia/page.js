@@ -48,7 +48,7 @@ export default function CompositeDeckCostPage() {
         path="/composite-deck-cost-northern-virginia"
         image="/images/img11.jpeg"
         datePublished="2026-04-21"
-        dateModified="2026-04-21"
+        dateModified="2026-04-23"
       />
 
       {/* Hero */}

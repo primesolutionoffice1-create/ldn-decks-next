@@ -198,7 +198,7 @@ export default function BeforeAndAfterPage() {
         path="/before-and-after"
         image="/images/img04.jpeg"
         datePublished="2026-04-21"
-        dateModified="2026-04-21"
+        dateModified="2026-04-23"
       />
 
       {/* Hero */}

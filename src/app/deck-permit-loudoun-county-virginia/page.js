@@ -19,7 +19,7 @@ const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   mainEntity: [
-    { "@type": "Question", name: "Do I need a permit to build a deck in Loudoun County?", acceptedAnswer: { "@type": "Answer", text: "Yes — any deck attached to a house, exceeding 256 square feet, or more than 16.5 inches above grade requires a building permit in Loudoun County. This covers virtually all functional residential decks." } },
+    { "@type": "Question", name: "Do I need a permit to build a deck in Loudoun County?", acceptedAnswer: { "@type": "Answer", text: "Yes any deck attached to a house, exceeding 256 square feet, or more than 16.5 inches above grade requires a building permit in Loudoun County. This covers virtually all functional residential decks." } },
     { "@type": "Question", name: "How long does a Loudoun County deck permit take?", acceptedAnswer: { "@type": "Answer", text: "Plan review through the LOLA portal typically takes 2-4 weeks. Simple residential decks using standard Loudoun County deck details are reviewed faster. Complex multi-level or commercial-grade projects may take 4-6 weeks." } },
     { "@type": "Question", name: "How much does a deck permit cost in Loudoun County?", acceptedAnswer: { "@type": "Answer", text: "Loudoun County deck permits cost $150-$500 depending on project scope and valuation. The fee is calculated based on the estimated construction cost. We include all permit fees in our project estimates." } },
     { "@type": "Question", name: "What inspections does Loudoun County require for a deck?", acceptedAnswer: { "@type": "Answer", text: "Three inspections: (1) footing inspection before concrete is poured, (2) framing inspection after joists, beams, and ledger are installed but before decking, and (3) final inspection of the completed structure including railings, stairs, and all connections." } },
@@ -61,7 +61,7 @@ export default function LoudounPermitPage() {
       <section data-speakable="true" style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
-          <p><strong>Yes, you need a permit.</strong> Any deck attached to your house, over 256 sqft, or more than 16.5&quot; above grade requires a Loudoun County building permit. Plan review takes <strong>2–4 weeks</strong> via the LOLA portal. Permit costs <strong>$150–$500</strong>. <strong>We handle the entire process</strong> — plans, submission, and inspections. <a href="tel:+15716557207" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Call (571) 655-7207</a>.</p>
+          <p><strong>Yes, you need a permit.</strong> Any deck attached to your house, over 256 sqft, or more than 16.5&quot; above grade requires a Loudoun County building permit. Plan review takes <strong>2–4 weeks</strong> via the LOLA portal. Permit costs <strong>$150–$500</strong>. <strong>We handle the entire process</strong> plans, submission, and inspections. <a href="tel:+15716557207" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Call (571) 655-7207</a>.</p>
         </div>
       </section>
 
@@ -84,17 +84,17 @@ export default function LoudounPermitPage() {
           <h2 style={S.h2}>When Is a Deck Permit Required in Loudoun County?</h2>
           <p style={S.p}>Under the Virginia Uniform Statewide Building Code (VUSBC), which Loudoun County enforces, a building permit is required when your deck meets <strong>any</strong> of the following criteria:</p>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '1.5rem' }}>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Attached to the house</strong> — any deck connected to your home via a ledger board</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Over 256 square feet</strong> — this includes the total footprint of the deck surface</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>More than 16.5 inches above grade</strong> — measured at the highest point above the ground</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Will support concentrated loads</strong> — hot tubs, outdoor kitchens, or heavy planters</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Attached to the house</strong> any deck connected to your home via a ledger board</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Over 256 square feet</strong> this includes the total footprint of the deck surface</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>More than 16.5 inches above grade</strong> measured at the highest point above the ground</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Will support concentrated loads</strong> hot tubs, outdoor kitchens, or heavy planters</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Located within a setback zone or easement</strong></li>
           </ul>
           <p style={S.p}>In practice, this means <strong>virtually every functional residential deck in Loudoun County requires a permit</strong>. Even deck resurfacing projects may require a permit if the existing structure doesn&apos;t meet current code (e.g., missing joist hangers, undersized footings, or no ledger flashing).</p>
 
           <div style={{ background: '#fef2f2', border: '1px solid #fecaca', borderRadius: 8, padding: '1.25rem', marginBottom: '2rem' }}>
             <p style={{ fontWeight: 600, marginBottom: '0.5rem', color: '#991b1b' }}>What happens if you build without a permit?</p>
-            <p style={{ lineHeight: 1.7, color: '#7f1d1d', margin: 0 }}>Building without a required permit in Loudoun County is a Class 1 misdemeanor. The county can issue stop-work orders, require demolition, and impose fines. Unpermitted structures also create serious complications during home sales — title companies and buyer inspectors flag them, and lenders may refuse to finance the purchase until the issue is resolved.</p>
+            <p style={{ lineHeight: 1.7, color: '#7f1d1d', margin: 0 }}>Building without a required permit in Loudoun County is a Class 1 misdemeanor. The county can issue stop-work orders, require demolition, and impose fines. Unpermitted structures also create serious complications during home sales title companies and buyer inspectors flag them, and lenders may refuse to finance the purchase until the issue is resolved.</p>
           </div>
 
           {/* ===== SECTION 2: What You Need ===== */}
@@ -120,19 +120,19 @@ export default function LoudounPermitPage() {
           <p style={S.p}>Loudoun County requires that any contractor performing work valued over $1,000 hold a valid Virginia Class A, B, or C contractor&apos;s license. We provide our license information as part of every permit application we submit.</p>
 
           <h3 style={S.h3}>4. HOA Approval (If Applicable)</h3>
-          <p style={S.p}>If your property is in an HOA community — and in Loudoun County, most are — you typically need HOA architectural review board approval <strong>before</strong> submitting your county permit application. We handle HOA submissions with full CAD renderings and material specs. More on this below.</p>
+          <p style={S.p}>If your property is in an HOA community and in Loudoun County, most are you typically need HOA architectural review board approval <strong>before</strong> submitting your county permit application. We handle HOA submissions with full CAD renderings and material specs. More on this below.</p>
 
           {/* ===== SECTION 3: LOLA Portal ===== */}
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>How to Submit: The LOLA Portal</h2>
           <p style={S.p}>All Loudoun County building permit applications are submitted through the <strong>LOLA (Loudoun Online Land Applications)</strong> portal. Here&apos;s the step-by-step process:</p>
 
           <ol style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
-            <li style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Create a LOLA account</strong> — Register at the Loudoun County Department of Building and Development website.</li>
-            <li style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Start a new application</strong> — Select &ldquo;Building Permit&rdquo; → &ldquo;Residential&rdquo; → &ldquo;Deck/Porch.&rdquo;</li>
-            <li style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Upload required documents</strong> — Site plan (PDF), structural drawings (PDF), material specifications, and contractor license information.</li>
-            <li style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Pay application fee</strong> — The initial fee is paid at submission. The total fee depends on project valuation.</li>
-            <li style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Track review status</strong> — LOLA shows real-time status. Reviewers may submit &ldquo;correction notices&rdquo; if plans need revision. You resubmit corrected plans through the same portal.</li>
-            <li style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Receive approved permit</strong> — Once approved, print the permit and post it visibly at the job site for the duration of construction.</li>
+            <li style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Create a LOLA account</strong> Register at the Loudoun County Department of Building and Development website.</li>
+            <li style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Start a new application</strong> Select &ldquo;Building Permit&rdquo; → &ldquo;Residential&rdquo; → &ldquo;Deck/Porch.&rdquo;</li>
+            <li style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Upload required documents</strong> Site plan (PDF), structural drawings (PDF), material specifications, and contractor license information.</li>
+            <li style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Pay application fee</strong> The initial fee is paid at submission. The total fee depends on project valuation.</li>
+            <li style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Track review status</strong> LOLA shows real-time status. Reviewers may submit &ldquo;correction notices&rdquo; if plans need revision. You resubmit corrected plans through the same portal.</li>
+            <li style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Receive approved permit</strong> Once approved, print the permit and post it visibly at the job site for the duration of construction.</li>
           </ol>
 
           <div style={{ background: '#f0fdf4', border: '1px solid #bbf7d0', borderRadius: 8, padding: '1.25rem', marginBottom: '2rem' }}>
@@ -206,7 +206,7 @@ export default function LoudounPermitPage() {
                 num: '1',
                 title: 'Footing Inspection',
                 when: 'After holes are dug, before concrete is poured',
-                what: 'Inspector verifies footing hole depth (24" minimum below grade for frost line), diameter, and location match the approved plans. Soil conditions are checked — if the inspector finds fill dirt or unstable soil, deeper footings or helical piers may be required.',
+                what: 'Inspector verifies footing hole depth (24" minimum below grade for frost line), diameter, and location match the approved plans. Soil conditions are checked if the inspector finds fill dirt or unstable soil, deeper footings or helical piers may be required.',
               },
               {
                 num: '2',
@@ -231,7 +231,7 @@ export default function LoudounPermitPage() {
 
           {/* ===== SECTION 7: Setbacks ===== */}
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Loudoun County Setback Requirements</h2>
-          <p style={S.p}>One of the most common reasons deck permits are delayed or denied is setback violations. Your deck cannot extend into the required setback zone — the buffer between your structure and the property line.</p>
+          <p style={S.p}>One of the most common reasons deck permits are delayed or denied is setback violations. Your deck cannot extend into the required setback zone the buffer between your structure and the property line.</p>
 
           <div style={{ overflowX: 'auto', marginBottom: '2rem' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.9rem' }}>
@@ -255,7 +255,7 @@ export default function LoudounPermitPage() {
               </tbody>
             </table>
           </div>
-          <p style={S.p}><strong>Important:</strong> In higher-density neighborhoods like Brambleton (R-8), the rear setback of 20 feet can significantly limit deck size. We measure your property during the free on-site consultation and design within your allowable building envelope from day one — preventing costly redesigns after submission.</p>
+          <p style={S.p}><strong>Important:</strong> In higher-density neighborhoods like Brambleton (R-8), the rear setback of 20 feet can significantly limit deck size. We measure your property during the free on-site consultation and design within your allowable building envelope from day one preventing costly redesigns after submission.</p>
 
           {/* ===== SECTION 8: HOA ===== */}
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>HOA Coordination in Loudoun County</h2>
@@ -264,12 +264,12 @@ export default function LoudounPermitPage() {
           <h3 style={S.h3}>Common Loudoun County HOA Requirements</h3>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '1.5rem' }}>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Color restrictions:</strong> Many HOAs (Brambleton, Broadlands, Ashburn Farm) limit decking colors to earth tones. We bring sample boards to your consultation.</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Railing style:</strong> Some communities require specific railing profiles — no cable rail, specific spindle spacing, etc.</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Railing style:</strong> Some communities require specific railing profiles no cable rail, specific spindle spacing, etc.</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Height limits:</strong> Pergolas and porch roof structures may have maximum height restrictions.</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Material requirements:</strong> Certain HOAs require composite only (no pressure-treated wood).</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Neighbor notification:</strong> Some boards require adjacent homeowner sign-off before approval.</li>
           </ul>
-          <p style={S.p}>We&apos;ve successfully navigated HOA approvals in dozens of Loudoun County communities. We prepare the full submission package — 3D renders, material specs, color samples, and structural drawings — and submit on your behalf. Read our <Link href="/hoa-deck-rules-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>complete HOA deck rules guide</Link> for more detail.</p>
+          <p style={S.p}>We&apos;ve successfully navigated HOA approvals in dozens of Loudoun County communities. We prepare the full submission package 3D renders, material specs, color samples, and structural drawings and submit on your behalf. Read our <Link href="/hoa-deck-rules-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>complete HOA deck rules guide</Link> for more detail.</p>
 
           {/* ===== SECTION 9: Common Code Requirements ===== */}
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Key Building Code Requirements in Loudoun County</h2>
@@ -284,11 +284,11 @@ export default function LoudounPermitPage() {
               </thead>
               <tbody>
                 {[
-                  ['Footing depth', '24" minimum below grade', 'Below Virginia\'s frost line — prevents heaving in freeze-thaw cycles'],
+                  ['Footing depth', '24" minimum below grade', 'Below Virginia\'s frost line prevents heaving in freeze-thaw cycles'],
                   ['Footing diameter', '16-24" depending on load', 'Must support beam + joist + deck + live load (40 psf) + snow load (25 psf)'],
                   ['Ledger attachment', 'Lag bolts or through-bolts with flashing', 'Ledger failure is the #1 cause of deck collapses nationally'],
                   ['Joist hangers', 'Simpson Strong-Tie or equivalent at every connection', 'Prevents lateral separation under load'],
-                  ['Railing height', '36" (standard) or 42" (if >30" above grade)', 'Fall protection — most common inspection failure point'],
+                  ['Railing height', '36" (standard) or 42" (if >30" above grade)', 'Fall protection most common inspection failure point'],
                   ['Baluster spacing', '4" maximum gap', 'Prevents children from passing through the railing'],
                   ['Stair rise/run', '7.75" max rise, 10" min run, consistent within 3/8"', 'Inconsistent stairs are a trip hazard and automatic failure'],
                   ['Guard post attachment', 'Bolted through rim joist, not surface-mounted', 'Surface-mounted posts fail under lateral force'],
@@ -305,15 +305,15 @@ export default function LoudounPermitPage() {
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Do You Need a Permit for Deck Resurfacing?</h2>
           <p style={S.p}>This is one of the most common questions we get. The answer depends on what&apos;s underneath:</p>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '1.5rem' }}>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>If the existing subframe meets current code</strong> — proper ledger attachment, adequate joist hangers, compliant footings — then a cosmetic resurfacing (replacing boards and railings only) may not require a new permit.</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>If the existing subframe does NOT meet current code</strong> — missing flashing, undersized joists, inadequate footings — the county may require a permit and structural upgrades before new decking can be installed.</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>If the existing subframe meets current code</strong> proper ledger attachment, adequate joist hangers, compliant footings then a cosmetic resurfacing (replacing boards and railings only) may not require a new permit.</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>If the existing subframe does NOT meet current code</strong> missing flashing, undersized joists, inadequate footings the county may require a permit and structural upgrades before new decking can be installed.</li>
           </ul>
           <p style={S.p}>We always inspect the existing structure before quoting a <Link href="/deck-resurfacing-vs-replacement" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>resurfacing project</Link>. If a permit is needed, we handle it. If not, we document the inspection for your records.</p>
 
           {/* ===== SECTION 11: FAQs ===== */}
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Frequently Asked Questions</h2>
           {[
-            { q: "Do I need a permit to build a deck in Loudoun County?", a: "Yes — any deck attached to a house, exceeding 256 sqft, or more than 16.5 inches above grade requires a building permit. This covers virtually all functional residential decks." },
+            { q: "Do I need a permit to build a deck in Loudoun County?", a: "Yes any deck attached to a house, exceeding 256 sqft, or more than 16.5 inches above grade requires a building permit. This covers virtually all functional residential decks." },
             { q: "How long does a Loudoun County deck permit take?", a: "Plan review through LOLA takes 2-4 weeks. Simple decks using standard Loudoun County deck details review faster. Complex multi-level projects may take 4-6 weeks." },
             { q: "How much does a deck permit cost in Loudoun County?", a: "Permit fees range from $150-$500 depending on project scope and valuation. We include all permit costs in our project estimates." },
             { q: "What inspections are required?", a: "Three: footing inspection (before concrete), framing inspection (before decking), and final inspection (complete structure). We coordinate all inspections." },

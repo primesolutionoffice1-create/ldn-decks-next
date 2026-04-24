@@ -64,9 +64,9 @@ export default function McLeanDeckBuilderPage() {
           <h2 style={S.h2}>What We Build in McLean</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
             {[
-              { title: 'Custom Composite Decks', desc: 'Trex Transcend, TimberTech AZEK — multi-level, wraparound, with premium railings and lighting', link: '/services/new-decks' },
-              { title: 'Screened Porches', desc: 'EZE-Breeze, retractable screens, fireplaces, stained ceilings — 3-season and 4-season options', link: '/services/porches' },
-              { title: 'Outdoor Kitchens', desc: 'Built-in grills, stone islands, bar counters, pizza ovens — designed for McLean entertaining', link: '/services/fire-pits' },
+              { title: 'Custom Composite Decks', desc: 'Trex Transcend, TimberTech AZEK multi-level, wraparound, with premium railings and lighting', link: '/services/new-decks' },
+              { title: 'Screened Porches', desc: 'EZE-Breeze, retractable screens, fireplaces, stained ceilings 3-season and 4-season options', link: '/services/porches' },
+              { title: 'Outdoor Kitchens', desc: 'Built-in grills, stone islands, bar counters, pizza ovens designed for McLean entertaining', link: '/services/fire-pits' },
               { title: 'Pergolas & Covered Structures', desc: 'Freestanding and attached, with optional louvered roofs for adjustable shade', link: '/services/gazebo-pergola' },
             ].map((item) => (
               <div key={item.title} style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.25rem' }}>
@@ -84,7 +84,7 @@ export default function McLeanDeckBuilderPage() {
 
           <h2 style={S.h2}>Featured McLean Project</h2>
           <div style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', marginBottom: '2rem' }}>
-            <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>$68,000 — 550 sqft Deck + Screened Porch, Langley Forest</h3>
+            <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>$68,000 550 sqft Deck + Screened Porch, Langley Forest</h3>
             <p style={{ lineHeight: 1.7 }}>Multi-level TimberTech AZEK deck (350 sqft) in Dark Hickory connected to a screened porch (200 sqft) with retractable screens, tongue-and-groove cedar ceiling, electric heater, and built-in bar counter. Trex Signature railings with integrated post cap lights. Fairfax County RPA review + building permit. HOA approved first submission. 5.5-week build.</p>
           </div>
 

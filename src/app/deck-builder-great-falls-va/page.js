@@ -18,7 +18,7 @@ const faqSchema = {
   "@context": "https://schema.org", "@type": "FAQPage",
   mainEntity: [
     { "@type": "Question", name: "How much does a deck cost in Great Falls, VA?", acceptedAnswer: { "@type": "Answer", text: "Deck projects in Great Falls typically range from $40,000-$100,000+ due to larger lots, premium material preferences (AZEK, Trex Transcend), and complex designs. Great Falls homeowners often add screened porches, outdoor kitchens, and multi-level designs." } },
-    { "@type": "Question", name: "Do I need special permits for a deck in Great Falls?", acceptedAnswer: { "@type": "Answer", text: "Great Falls is in Fairfax County — standard building permits required. Many Great Falls lots are in RPA (Resource Protection Area) zones near the Potomac River, requiring additional environmental review. We handle all permitting including RPA submissions." } },
+    { "@type": "Question", name: "Do I need special permits for a deck in Great Falls?", acceptedAnswer: { "@type": "Answer", text: "Great Falls is in Fairfax County standard building permits required. Many Great Falls lots are in RPA (Resource Protection Area) zones near the Potomac River, requiring additional environmental review. We handle all permitting including RPA submissions." } },
     { "@type": "Question", name: "Do Great Falls homes have HOA restrictions on decks?", acceptedAnswer: { "@type": "Answer", text: "Some Great Falls neighborhoods have deed covenants or HOA architectural review. Many estate-lot homes have no HOA. We research your specific property's restrictions before design begins." } },
   ],
 };
@@ -41,7 +41,7 @@ export default function GreatFallsDeckBuilderPage() {
               priority
             />
           </div>
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Great Falls — Architectural Custom Decks for Luxury Properties</h2>
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Great Falls Architectural Custom Decks for Luxury Properties</h2>
           <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Custom composite decks, screened porches &amp; outdoor living for Great Falls estate homes</p>
           <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             <a href="tel:+15716557207" style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</a>
@@ -56,11 +56,11 @@ export default function GreatFallsDeckBuilderPage() {
           <h2 style={S.h2}>Why Great Falls Homeowners Choose Loudoun Decks</h2>
           <p style={S.p}>Great Falls properties demand exceptional craftsmanship. With home values averaging $1.5M+ and lot sizes of 1-5+ acres, Great Falls deck projects are among the most detailed and architecturally significant in Northern Virginia. We specialize in the premium outdoor living spaces these properties deserve.</p>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
-            <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Premium materials exclusively:</strong> TimberTech AZEK, Trex Transcend, exotic hardwoods — materials that match the caliber of Great Falls homes</li>
+            <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Premium materials exclusively:</strong> TimberTech AZEK, Trex Transcend, exotic hardwoods materials that match the caliber of Great Falls homes</li>
             <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>RPA zone expertise:</strong> Many Great Falls lots near the Potomac are in Resource Protection Areas requiring additional environmental review. We navigate this process routinely.</li>
             <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Architectural complexity:</strong> Multi-level decks, wraparound designs, integrated outdoor kitchens, screened porches with fireplaces, pool deck surrounds</li>
             <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Estate-scale projects:</strong> 600-1,200+ sqft outdoor living spaces designed to complement the scale of Great Falls properties</li>
-            <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Fairfax County permitting:</strong> We handle all zoning review, building permits, and inspections — including the more complex requirements for large properties</li>
+            <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Fairfax County permitting:</strong> We handle all zoning review, building permits, and inspections including the more complex requirements for large properties</li>
           </ul>
 
           <h2 style={S.h2}>What We Build in Great Falls</h2>
@@ -69,7 +69,7 @@ export default function GreatFallsDeckBuilderPage() {
               { title: 'Estate Composite Decks', desc: 'Multi-level AZEK and Trex Transcend builds with premium railings, integrated lighting, and custom details', range: '$50k–$120k+' },
               { title: 'Screened Porches & Sunrooms', desc: 'EZE-Breeze, retractable screens, stone fireplaces, cedar ceilings, climate-controlled options', range: '$40k–$90k+' },
               { title: 'Pool Deck Surrounds', desc: 'Heat-resistant pavers and composite around pools with code-compliant barriers and outdoor showers', range: '$35k–$80k+' },
-              { title: 'Outdoor Kitchens', desc: 'Full kitchens with grill, pizza oven, bar, sink, fridge — designed for Great Falls entertaining', range: '$30k–$80k+' },
+              { title: 'Outdoor Kitchens', desc: 'Full kitchens with grill, pizza oven, bar, sink, fridge designed for Great Falls entertaining', range: '$30k–$80k+' },
             ].map((item) => (
               <div key={item.title} style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.25rem' }}>
                 <h3 style={{ fontWeight: 600, marginBottom: '0.25rem' }}>{item.title}</h3>
@@ -81,7 +81,7 @@ export default function GreatFallsDeckBuilderPage() {
 
           <h2 style={S.h2}>Great Falls Project Example</h2>
           <div style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', marginBottom: '2rem' }}>
-            <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>$92,000 — 800 sqft Multi-Level Deck + Screened Porch, River Creek</h3>
+            <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>$92,000 800 sqft Multi-Level Deck + Screened Porch, River Creek</h3>
             <p style={{ lineHeight: 1.7 }}>Three-level TimberTech AZEK deck (500 sqft) in Mahogany connected to a screened porch (300 sqft) with stone fireplace, tongue-and-groove cedar ceiling, retractable screens, and built-in bar. Trex Signature cable railings for Potomac River views. RPA environmental review + Fairfax County building permit. HOA architectural review approved first submission. 7-week build.</p>
           </div>
 
@@ -94,7 +94,7 @@ export default function GreatFallsDeckBuilderPage() {
           {[
             { q: "How much does a deck cost in Great Falls?", a: "$40,000-$100,000+ for most projects. Great Falls homeowners typically choose AZEK or Trex Transcend with premium features." },
             { q: "Do I need special permits?", a: "Standard Fairfax County permits plus potential RPA review for lots near the Potomac. We handle everything." },
-            { q: "HOA restrictions?", a: "Varies — some neighborhoods have covenants, many estate lots have no HOA. We research your property before design." },
+            { q: "HOA restrictions?", a: "Varies some neighborhoods have covenants, many estate lots have no HOA. We research your property before design." },
           ].map((faq, i) => (
             <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
               <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>

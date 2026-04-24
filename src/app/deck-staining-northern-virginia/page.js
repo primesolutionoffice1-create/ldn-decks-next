@@ -18,7 +18,7 @@ const faqSchema = {
     { "@type": "Question", name: "How much does deck staining cost in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "Professional deck staining in Northern Virginia costs $3-$7 per square foot, or $600-$2,100 for a typical 200-300 sqft deck. Price depends on deck condition, stain type, and prep work required." } },
     { "@type": "Question", name: "How often should you stain a deck in Virginia?", acceptedAnswer: { "@type": "Answer", text: "Every 1-2 years for high-traffic decks, every 2-3 years for moderate use. Virginia's freeze-thaw cycles and UV exposure break down stain faster than milder climates. South-facing decks need more frequent treatment." } },
     { "@type": "Question", name: "What's the best time to stain a deck in Virginia?", acceptedAnswer: { "@type": "Answer", text: "Late spring (April-May) or early fall (September-October) when temperatures are 50-85°F with low humidity and no rain forecast for 48 hours. Avoid summer heat (stain dries too fast) and winter cold (won't cure)." } },
-    { "@type": "Question", name: "Should I stain or replace my old deck?", acceptedAnswer: { "@type": "Answer", text: "Stain if: boards are structurally sound, just faded or gray. Replace if: boards are soft, splintering badly, or rotting. If you're spending $2,000+ on staining an old deck, consider resurfacing with composite — the last stain job you'll ever need." } },
+    { "@type": "Question", name: "Should I stain or replace my old deck?", acceptedAnswer: { "@type": "Answer", text: "Stain if: boards are structurally sound, just faded or gray. Replace if: boards are soft, splintering badly, or rotting. If you're spending $2,000+ on staining an old deck, consider resurfacing with composite the last stain job you'll ever need." } },
   ],
 };
 
@@ -63,7 +63,7 @@ export default function DeckStainingPage() {
           <ol style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
             {[
               { step: 'Inspection', detail: 'We check every board, joist connection, and fastener. If structural issues are found, we address them before staining (no point staining a deck that needs repair).' },
-              { step: 'Power washing', detail: 'Professional-grade pressure washing removes dirt, mildew, old stain, and gray oxidation. We use the right PSI — too much damages wood fibers.' },
+              { step: 'Power washing', detail: 'Professional-grade pressure washing removes dirt, mildew, old stain, and gray oxidation. We use the right PSI too much damages wood fibers.' },
               { step: 'Sanding (if needed)', detail: 'Rough or splintering boards are sanded smooth. This also opens the wood grain to accept stain more evenly.' },
               { step: 'Brightener application', detail: 'Wood brightener restores the natural color and opens pores for maximum stain penetration. This step is what separates a professional job from DIY.' },
               { step: 'Stain application', detail: 'We apply premium exterior stain (typically 2 coats) using professional sprayers and back-brushing for even coverage. We use UV-resistant, waterproof formulations rated for Virginia climate.' },
@@ -104,9 +104,9 @@ export default function DeckStainingPage() {
               <thead><tr style={{ background: '#f5f5f5' }}>{['Stain Type', 'Frequency in Virginia', 'Best For'].map(h => <th key={h} style={S.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {[
-                  ['Transparent', 'Every 1–2 years', 'Shows full wood grain, natural look — needs most maintenance'],
-                  ['Semi-transparent', 'Every 2–3 years', 'Best balance — shows grain with more UV/water protection'],
-                  ['Solid stain', 'Every 3–4 years', 'Most protection, hides grain — looks like paint, can peel'],
+                  ['Transparent', 'Every 1–2 years', 'Shows full wood grain, natural look needs most maintenance'],
+                  ['Semi-transparent', 'Every 2–3 years', 'Best balance shows grain with more UV/water protection'],
+                  ['Solid stain', 'Every 3–4 years', 'Most protection, hides grain looks like paint, can peel'],
                 ].map((row, i) => (
                   <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
                     {row.map((cell, j) => <td key={j} style={{ ...S.td, fontWeight: j === 0 ? 600 : 400 }}>{cell}</td>)}
@@ -119,7 +119,7 @@ export default function DeckStainingPage() {
           <h2 style={S.h2}>Signs Your Deck Needs Restaining Now</h2>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
             {[
-              'Water droplets no longer bead on the surface — they absorb immediately',
+              'Water droplets no longer bead on the surface they absorb immediately',
               'Wood has turned gray or silver (UV damage)',
               'Visible mold or green discoloration that returns within weeks of cleaning',
               'Stain is peeling, flaking, or wearing through in traffic areas',
@@ -151,7 +151,7 @@ export default function DeckStainingPage() {
               ['/services/deck-washing', 'Deck Washing Services'],
               ['/services/deck-resurfacing', 'Deck Resurfacing (Upgrade to Composite)'],
               ['/how-long-does-a-composite-deck-last', 'How Long Does a Composite Deck Last?'],
-              ['/composite-deck-vs-wood-deck-virginia', 'Composite vs Wood — Full Comparison'],
+              ['/composite-deck-vs-wood-deck-virginia', 'Composite vs Wood Full Comparison'],
             ].map(([href, text]) => (
               <li key={href} style={{ marginBottom: '0.5rem' }}><Link href={href} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{text} →</Link></li>
             ))}

@@ -68,7 +68,7 @@ export default function ResurfacingVsReplacementPage() {
                   ['Build time', '1–2 weeks', '2–4 weeks'],
                   ['Requires', 'Solid frame (joists, posts, footings)', 'Nothing all new'],
                   ['Result', 'Looks 100% new on surface', 'New structure + surface'],
-                  ['Permit & HOA', 'Often required — we handle permits + HOA approval', 'Always required — we handle permits + HOA approval'],
+                  ['Permit & HOA', 'Often required we handle permits + HOA approval', 'Always required we handle permits + HOA approval'],
                   ['Warranty', '5-yr workmanship + 25-yr material', '5-yr workmanship + 25-yr material'],
                   ['When to choose', 'Frame is solid, only boards are worn/ugly', 'Structural issues, unsafe, or want new layout'],
                 ].map((row, i) => (
@@ -153,7 +153,7 @@ export default function ResurfacingVsReplacementPage() {
         </div>
       </article>
       <ServicesCallToAction />
-      <SimpleCTA title="Free Deck Inspection — Resurface or Replace?" buttonText="Schedule Free Inspection" link="/contact" />
+      <SimpleCTA title="Free Deck Inspection Resurface or Replace?" buttonText="Schedule Free Inspection" link="/contact" />
       <ContactHome />
     </>
   );

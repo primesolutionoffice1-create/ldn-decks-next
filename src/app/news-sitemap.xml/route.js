@@ -1,7 +1,7 @@
 import { blogPosts } from '@/lib/blogData';
 import { SITE_URL } from '@/lib/seo';
 
-// Google News Sitemap — helps blog posts get indexed faster and appear in Google News
+// Google News Sitemap helps blog posts get indexed faster and appear in Google News
 // https://developers.google.com/search/docs/crawling-indexing/sitemaps/news-sitemap
 
 export async function GET() {
@@ -10,7 +10,7 @@ export async function GET() {
       const date = new Date(post.date);
       if (isNaN(date.getTime())) return null;
       // Only include posts from the last 2 days (Google News requirement: max 2 days old)
-      // But we include all for initial submission — Google will filter
+      // But we include all for initial submission Google will filter
       const isoDate = date.toISOString();
       return `
     <url>

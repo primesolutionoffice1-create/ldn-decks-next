@@ -17,8 +17,8 @@ export const metadata = buildMetadata({
 const faqSchema = {
   "@context": "https://schema.org", "@type": "FAQPage",
   mainEntity: [
-    { "@type": "Question", name: "How much does a deck cost in Falls Church, VA?", acceptedAnswer: { "@type": "Answer", text: "Falls Church deck projects range from $25,000-$60,000. Composite decks: $40-$65/sqft installed. Falls Church's smaller lots often require creative designs — compact multi-level builds, bump-outs, and screened porch conversions are common." } },
-    { "@type": "Question", name: "City of Falls Church vs Fairfax County permits?", acceptedAnswer: { "@type": "Answer", text: "The City of Falls Church is independent with its own building department — smaller and often faster than Fairfax County. Many addresses in the 22042/22043/22044 zip codes are actually in Fairfax County, not the City. We determine your exact jurisdiction." } },
+    { "@type": "Question", name: "How much does a deck cost in Falls Church, VA?", acceptedAnswer: { "@type": "Answer", text: "Falls Church deck projects range from $25,000-$60,000. Composite decks: $40-$65/sqft installed. Falls Church's smaller lots often require creative designs compact multi-level builds, bump-outs, and screened porch conversions are common." } },
+    { "@type": "Question", name: "City of Falls Church vs Fairfax County permits?", acceptedAnswer: { "@type": "Answer", text: "The City of Falls Church is independent with its own building department smaller and often faster than Fairfax County. Many addresses in the 22042/22043/22044 zip codes are actually in Fairfax County, not the City. We determine your exact jurisdiction." } },
   ],
 };
 
@@ -29,7 +29,7 @@ export default function FallsChurchDeckBuilderPage() {
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Custom Deck Builder in Falls Church, VA</h1>
-          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Composite decks &amp; screened porches for Falls Church homeowners — compact lot specialists</p>
+          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Composite decks &amp; screened porches for Falls Church homeowners compact lot specialists</p>
           <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             <a href="tel:+15716557207" style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</a>
             <Link href="/contact" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Estimate</Link>
@@ -49,25 +49,25 @@ export default function FallsChurchDeckBuilderPage() {
               priority
             />
           </div>
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Falls Church — The Little City with Big Deck Potential</h2>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Falls Church is known for its walkable neighborhoods, excellent schools, and charming character — but also for smaller lot sizes compared to outer suburbs. We specialize in maximizing outdoor living space on compact Falls Church properties through creative design: multi-level decks that use vertical space, bump-out extensions, and screened porches that turn unusable side yards into living areas.</p>
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Falls Church The Little City with Big Deck Potential</h2>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Falls Church is known for its walkable neighborhoods, excellent schools, and charming character but also for smaller lot sizes compared to outer suburbs. We specialize in maximizing outdoor living space on compact Falls Church properties through creative design: multi-level decks that use vertical space, bump-out extensions, and screened porches that turn unusable side yards into living areas.</p>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Compact lot expertise:</strong> Smaller yards need smarter design — we maximize every square foot</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Independent City permitting:</strong> City of Falls Church has its own building department — often faster than Fairfax County</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Close-neighbor sensitivity:</strong> We design with privacy in mind — screen walls, pergola shade, strategic plantings</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Tree-city considerations:</strong> Falls Church has significant urban canopy — we protect root zones during construction</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Compact lot expertise:</strong> Smaller yards need smarter design we maximize every square foot</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Independent City permitting:</strong> City of Falls Church has its own building department often faster than Fairfax County</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Close-neighbor sensitivity:</strong> We design with privacy in mind screen walls, pergola shade, strategic plantings</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Tree-city considerations:</strong> Falls Church has significant urban canopy we protect root zones during construction</li>
           </ul>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Featured Falls Church Project</h2>
           <div style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', marginBottom: '2rem' }}>
-            <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>$42,000 — 280 sqft Deck + 150 sqft Screened Porch, City of Falls Church</h3>
-            <p style={{ lineHeight: 1.7 }}>Compact but complete outdoor living solution on a 0.15 acre lot. L-shaped Trex Transcend deck (Island Mist) with attached screened porch featuring EZE-Breeze panels and cedar ceiling. Privacy lattice on neighbor-facing side. City of Falls Church building permit — approved in 10 business days. 3-week build.</p>
+            <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>$42,000 280 sqft Deck + 150 sqft Screened Porch, City of Falls Church</h3>
+            <p style={{ lineHeight: 1.7 }}>Compact but complete outdoor living solution on a 0.15 acre lot. L-shaped Trex Transcend deck (Island Mist) with attached screened porch featuring EZE-Breeze panels and cedar ceiling. Privacy lattice on neighbor-facing side. City of Falls Church building permit approved in 10 business days. 3-week build.</p>
           </div>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>FAQ</h2>
           {[
             { q: "Deck cost in Falls Church?", a: "$25,000-$60,000. Composite: $40-$65/sqft. Creative compact designs our specialty." },
-            { q: "Which permit do I need?", a: "City of Falls Church (independent) or Fairfax County — many FC zip codes overlap. We determine your jurisdiction." },
+            { q: "Which permit do I need?", a: "City of Falls Church (independent) or Fairfax County many FC zip codes overlap. We determine your jurisdiction." },
           ].map((faq, i) => (
             <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
               <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>

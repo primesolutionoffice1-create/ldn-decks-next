@@ -8,8 +8,8 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/hoa-deck-rules-northern-virginia',
-  title: 'HOA Deck Rules in Northern Virginia — Approval Guide (2026)',
-  description: 'Most NoVA HOAs require approval before deck construction. Learn the process, common restrictions, what to submit, and how we handle it — 100% approval rate.',
+  title: 'HOA Deck Rules in Northern Virginia Approval Guide (2026)',
+  description: 'Most NoVA HOAs require approval before deck construction. Learn the process, common restrictions, what to submit, and how we handle it 100% approval rate.',
 });
 
 const faqSchema = {
@@ -67,7 +67,7 @@ export default function HOADeckRulesPage() {
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>The Approval Process (Step by Step)</h2>
           <ol style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
-            <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Get your HOA&apos;s design guidelines</strong> — usually on your management company&apos;s portal. We have guidelines on file for 50+ communities.</li>
+            <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Get your HOA&apos;s design guidelines</strong> usually on your management company&apos;s portal. We have guidelines on file for 50+ communities.</li>
             <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Prepare the submission:</strong> site plan, materials list, railing details, sometimes a rendering.</li>
             <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Submit to the ARC</strong> via management portal (FirstService, SFMC, Cardinal, etc.).</li>
             <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Wait for review</strong> most meet every 2–4 weeks. Average turnaround: 2–4 weeks.</li>
@@ -110,7 +110,7 @@ export default function HOADeckRulesPage() {
             { q: "Do I need HOA approval?", a: "Almost always yes in Northern Virginia. Over 80% of homes are in HOA communities requiring architectural review." },
             { q: "What do I submit?", a: "Site plan, materials list, railing details, sometimes a rendering. We prepare and submit everything." },
             { q: "How long does approval take?", a: "2-4 weeks. We track review cycles for all major NoVA HOAs." },
-            { q: "Can the HOA deny my deck?", a: "Rarely — and usually only for non-compliant materials. We review guidelines first. Our rate is 100%." },
+            { q: "Can the HOA deny my deck?", a: "Rarely and usually only for non-compliant materials. We review guidelines first. Our rate is 100%." },
             { q: "What if I build without approval?", a: "Fines ($50-$200/day), liens, or required removal. Also creates sale issues." },
           ].map((faq, i) => (
             <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>

@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 
-// This page is a LINKABLE ASSET — designed to attract backlinks from
+// This page is a LINKABLE ASSET designed to attract backlinks from
 // real estate blogs, home improvement sites, and local news.
 // Embeddable widget code at the bottom encourages other sites to link back.
 
@@ -169,14 +169,14 @@ export default function DeckCostCalculator() {
             </div>
           </div>
 
-          {/* Embed Code Section — this is what makes it a LINKABLE ASSET */}
+          {/* Embed Code Section this is what makes it a LINKABLE ASSET */}
           <div style={{ marginTop: '4rem', padding: '2rem', background: '#f0f7ff', borderRadius: 12, border: '1px solid #cce0ff' }}>
             <h2 style={{ fontSize: '1.3rem', fontWeight: 700, marginBottom: '0.5rem' }}>Embed This Calculator on Your Website</h2>
             <p style={{ color: '#666', marginBottom: '1rem', fontSize: '0.9rem' }}>
-              Real estate agents, home improvement bloggers, and HOA communities — feel free to embed this calculator. Just copy the code below:
+              Real estate agents, home improvement bloggers, and HOA communities feel free to embed this calculator. Just copy the code below:
             </p>
             <pre style={{ background: '#1a1a2e', color: '#4ade80', padding: '1rem', borderRadius: 8, overflow: 'auto', fontSize: '0.8rem', lineHeight: 1.5 }}>
-{`<iframe
+              {`<iframe
   src="https://www.ldndecks.com/deck-cost-calculator"
   width="100%"
   height="900"
@@ -184,7 +184,7 @@ export default function DeckCostCalculator() {
   title="Northern Virginia Deck Cost Calculator by Loudoun Decks"
 ></iframe>
 <p style="font-size:12px;color:#888;">
-  Calculator by <a href="https://www.ldndecks.com">Loudoun Decks</a> —
+  Calculator by <a href="https://www.ldndecks.com">Loudoun Decks</a>
   Northern Virginia's Top-Rated Deck Builder
 </p>`}
             </pre>
@@ -214,9 +214,9 @@ export default function DeckCostCalculator() {
             <p style={{ color: '#64748b', marginBottom: '1.5rem' }}>
               Are you a real estate agent or homeowner? You can share these results or embed this calculator on your own website.
             </p>
-            
+
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.5rem' }}>
-              <button 
+              <button
                 onClick={() => {
                   const text = `Deck Price Estimate for ${sqft} sq ft: ${fmt(novaLow)} - ${fmt(novaHigh)}\nMaterial: ${materials[material].name}\nCalculated at: https://www.ldndecks.com/deck-cost-calculator`;
                   navigator.clipboard.writeText(text);
@@ -235,7 +235,7 @@ export default function DeckCostCalculator() {
                 Copy Results to Clipboard
               </button>
 
-              <button 
+              <button
                 onClick={() => {
                   const embedCode = `<iframe src="https://www.ldndecks.com/deck-cost-calculator" width="100%" height="800px" frameborder="0"></iframe>\n<p>Calculator provided by <a href="https://www.ldndecks.com">LDN Decks</a></p>`;
                   navigator.clipboard.writeText(embedCode);

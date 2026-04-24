@@ -14,8 +14,8 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/deck-repair',
-      title: 'Deck Repair | Loudoun County & Fairfax VA | LDN Decks',
-  description: 'Professional deck repair in Northern Virginia. Fix rot, wobbly railings, and ledger board failures. Free safety inspection — call (571) 655-7207.',
+  title: 'Deck Repair | Loudoun County & Fairfax VA | LDN Decks',
+  description: 'Professional deck repair in Northern Virginia. Fix rot, wobbly railings, and ledger board failures. Free safety inspection call (571) 655-7207.',
   image: '/images/img05.jpeg',
 });
 
@@ -120,7 +120,7 @@ export default function DeckRepairPage() {
         description="Loudoun Decks provides expert deck repair services across Loudoun County, Fairfax County, and Prince William County. Restore your deck's safety and beauty with NoVA's local experts."
       />
 
-      {/* Urgent CTA — critical for Ads landing page conversion */}
+      {/* Urgent CTA critical for Ads landing page conversion */}
       <section style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem', textAlign: 'center' }}>
           <p style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.75rem' }}>Worried about your deck&apos;s safety? Get a free inspection.</p>
@@ -131,7 +131,7 @@ export default function DeckRepairPage() {
         </div>
       </section>
 
-      <ServiceMain 
+      <ServiceMain
         subtitle="Safety First"
         title="Expert Deck Contractor Serving Northern Virginia"
         description="Don't compromise on your family's safety. We specialize in identifying rot, reinforcing structures, and professional resurfacing for homeowners in Arlington, Stafford, and beyond."
@@ -148,7 +148,7 @@ export default function DeckRepairPage() {
 
       <ServiceContentExpansion sections={expansionSections} />
 
-      <ServiceInclusions 
+      <ServiceInclusions
         title="Restoring Integrity to Every Board"
         description="Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. Our repairs are engineered to last."
         items={inclusions}

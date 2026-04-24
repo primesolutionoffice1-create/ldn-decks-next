@@ -62,12 +62,12 @@ export default function BestTimeToBuildPage() {
               <thead><tr style={{ background: '#f5f5f5' }}>{['Month', 'Demand', 'Wait Time', 'Pricing', 'Weather'].map(h => <th key={h} style={S.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {[
-                  ['Jan–Feb', 'Low', '1–2 weeks', 'Best (10–15% off)', 'Cold — footings OK if ground not frozen'],
-                  ['Mar–Apr', 'Medium', '2–3 weeks', 'Good', 'Ideal — mild temps, ground thawed'],
+                  ['Jan–Feb', 'Low', '1–2 weeks', 'Best (10–15% off)', 'Cold footings OK if ground not frozen'],
+                  ['Mar–Apr', 'Medium', '2–3 weeks', 'Good', 'Ideal mild temps, ground thawed'],
                   ['May–Jun', 'Peak', '4–6 weeks', 'Standard', 'Great weather, high demand'],
-                  ['Jul–Aug', 'Peak', '4–6 weeks', 'Standard', 'Hot — crews work early mornings'],
-                  ['Sep–Oct', 'Medium', '2–3 weeks', 'Good', 'Ideal — cool and dry'],
-                  ['Nov–Dec', 'Low', '1–2 weeks', 'Best (10–15% off)', 'Cold — shorter days, but doable'],
+                  ['Jul–Aug', 'Peak', '4–6 weeks', 'Standard', 'Hot crews work early mornings'],
+                  ['Sep–Oct', 'Medium', '2–3 weeks', 'Good', 'Ideal cool and dry'],
+                  ['Nov–Dec', 'Low', '1–2 weeks', 'Best (10–15% off)', 'Cold shorter days, but doable'],
                 ].map((row, i) => (
                   <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
                     {row.map((cell, j) => <td key={j} style={{ ...S.td, fontWeight: j === 0 ? 600 : 400, color: (i === 0 || i === 1 || i === 4 || i === 5) && j === 3 ? 'green' : 'inherit' }}>{cell}</td>)}
@@ -118,7 +118,7 @@ export default function BestTimeToBuildPage() {
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Frequently Asked Questions</h2>
           {[
             { q: "When is the best time to build a deck in Northern Virginia?", a: "February–April for best pricing and scheduling. May–August is peak with 4-6 week waits. September–November is the second-best window." },
-            { q: "Can you build a deck in winter?", a: "Yes — footings can be poured above 32°F. Winter builds often get 10-15% better pricing." },
+            { q: "Can you build a deck in winter?", a: "Yes footings can be poured above 32°F. Winter builds often get 10-15% better pricing." },
             { q: "How far ahead should I book?", a: "6-8 weeks minimum for peak season. For summer completion, start consulting in February-March." },
           ].map((faq, i) => (
             <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
@@ -141,7 +141,7 @@ export default function BestTimeToBuildPage() {
         </div>
       </article>
 
-      <SimpleCTA title="Book Now for Spring/Summer — Slots Filling Fast" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Book Now for Spring/Summer Slots Filling Fast" buttonText="Get Free Estimate" link="/contact" />
       <ContactHome />
     </>
   );

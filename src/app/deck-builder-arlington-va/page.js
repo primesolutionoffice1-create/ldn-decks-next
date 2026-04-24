@@ -49,11 +49,11 @@ export default function ArlingtonDeckBuilderPage() {
               priority
             />
           </div>
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Arlington — Urban Outdoor Living</h2>
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Arlington Urban Outdoor Living</h2>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Arlington County packs some of the highest property values in Northern Virginia into its 26 square miles. From the Bungalow neighborhoods of Clarendon to the established homes of Donaldson Run and Williamsburg, every outdoor square foot matters. We design decks that make the most of Arlington&apos;s compact but valuable lots.</p>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Urban lot expertise:</strong> Tight setbacks, small yards, close neighbors — we design privacy and function into every build</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Arlington County permitting:</strong> Own building department with specific zoning codes — we know them well</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Urban lot expertise:</strong> Tight setbacks, small yards, close neighbors we design privacy and function into every build</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Arlington County permitting:</strong> Own building department with specific zoning codes we know them well</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>High-value properties:</strong> Median home value $750K+ means premium materials (AZEK, Trex Transcend) are the standard</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Modern aesthetic:</strong> Arlington&apos;s contemporary renovations pair well with clean-line railings, dark composite colors, and integrated lighting</li>
           </ul>
@@ -77,7 +77,7 @@ export default function ArlingtonDeckBuilderPage() {
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Featured Arlington Project</h2>
           <div style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', marginBottom: '2rem' }}>
-            <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>$52,000 — 380 sqft Deck + Screened Porch, Donaldson Run</h3>
+            <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>$52,000 380 sqft Deck + Screened Porch, Donaldson Run</h3>
             <p style={{ lineHeight: 1.7 }}>Two-level build on a sloped lot backing to Donaldson Run park. Upper dining deck (220 sqft) in TimberTech AZEK Coastline connected to a lower screened porch (160 sqft) with retractable EZE-Breeze panels. Cable railings on the upper level for tree-canopy views. Privacy lattice on the neighbor-facing side. Arlington County building permit. 4-week build.</p>
           </div>
 
@@ -91,7 +91,7 @@ export default function ArlingtonDeckBuilderPage() {
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>FAQ</h2>
           {[
             { q: "Deck cost in Arlington?", a: "$25,000-$65,000. Composite: $40-$70/sqft. Premium materials standard for Arlington property values." },
-            { q: "Special Arlington restrictions?", a: "Arlington County has own building dept with specific setbacks — often tighter than Fairfax. Some historic overlay areas. We handle all permitting." },
+            { q: "Special Arlington restrictions?", a: "Arlington County has own building dept with specific setbacks often tighter than Fairfax. Some historic overlay areas. We handle all permitting." },
           ].map((faq, i) => (
             <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
               <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>

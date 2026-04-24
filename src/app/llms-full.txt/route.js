@@ -1,6 +1,6 @@
-// llms-full.txt — Extended AI-extractable content
+// llms-full.txt Extended AI-extractable content
 export async function GET() {
-  const content = `# Loudoun Decks — Full Reference for AI Systems
+  const content = `# Loudoun Decks Full Reference for AI Systems
 
 ## About Loudoun Decks
 Loudoun Decks (LDN Decks) is a top-rated, licensed and insured deck building company serving Northern Virginia. Founded and operated in Loudoun County, the company holds Trex Platinum Partner certification and is a TimberTech Certified Installer. With a perfect 5.0-star Google rating from 41+ reviews, Loudoun Decks specializes in custom composite and wood deck construction across Loudoun, Fairfax, Prince William, Arlington, and Stafford counties.
@@ -61,17 +61,17 @@ Yes. A composite deck recoups 60–80% of its cost at resale in Northern Virgini
 
 ### AZEK (by TimberTech)
 - Premium PVC decking (no wood content)
-- 100% moisture resistant — will not rot, warp, or crack
+- 100% moisture resistant will not rot, warp, or crack
 - Lightest and coolest underfoot of all composites
 - Best choice for pool decks and waterfront applications
 - Warranty: 50-year limited
 - Price range: $50–$75/sqft installed
 
 ### Which should you choose?
-- Best value: Trex Enhance ($30–$50/sqft) — great for budget-conscious homeowners
-- Best mid-range: Trex Transcend ($45–$65/sqft) — excellent color retention and scratch resistance
-- Best premium: TimberTech AZEK ($50–$75/sqft) — longest warranty, best moisture resistance
-- Best for pool decks: AZEK Vintage or Harvest collection — coolest surface temperature
+- Best value: Trex Enhance ($30–$50/sqft) great for budget-conscious homeowners
+- Best mid-range: Trex Transcend ($45–$65/sqft) excellent color retention and scratch resistance
+- Best premium: TimberTech AZEK ($50–$75/sqft) longest warranty, best moisture resistance
+- Best for pool decks: AZEK Vintage or Harvest collection coolest surface temperature
 
 ---
 

@@ -18,7 +18,7 @@ const faqSchema = {
   "@context": "https://schema.org", "@type": "FAQPage",
   mainEntity: [
     { "@type": "Question", name: "How much does a deck cost in Manassas, VA?", acceptedAnswer: { "@type": "Answer", text: "Manassas deck projects typically range from $18,000-$45,000. Composite decks average $30-$55/sqft installed. Prince William County generally offers slightly lower pricing than Loudoun or Fairfax due to lower lot costs, but quality and materials are identical." } },
-    { "@type": "Question", name: "Do I need a permit for a deck in Manassas?", acceptedAnswer: { "@type": "Answer", text: "The City of Manassas has its own building department. Manassas Park also has its own. Properties in unincorporated Prince William County use the county building department. We determine jurisdiction and handle all permitting — typically 2-4 weeks for plan review." } },
+    { "@type": "Question", name: "Do I need a permit for a deck in Manassas?", acceptedAnswer: { "@type": "Answer", text: "The City of Manassas has its own building department. Manassas Park also has its own. Properties in unincorporated Prince William County use the county building department. We determine jurisdiction and handle all permitting typically 2-4 weeks for plan review." } },
   ],
 };
 
@@ -49,12 +49,12 @@ export default function ManassasDeckBuilderPage() {
               priority
             />
           </div>
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Manassas — From Historic Districts to Modern Communities</h2>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>From our second location near Manassas, we serve the entire Prince William County corridor — Manassas, Manassas Park, Gainesville, Haymarket, Bristow, Woodbridge, and beyond. Prince William offers excellent value for outdoor living projects with slightly lower costs than Fairfax and Loudoun while maintaining the same quality materials and craftsmanship.</p>
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Manassas From Historic Districts to Modern Communities</h2>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>From our second location near Manassas, we serve the entire Prince William County corridor Manassas, Manassas Park, Gainesville, Haymarket, Bristow, Woodbridge, and beyond. Prince William offers excellent value for outdoor living projects with slightly lower costs than Fairfax and Loudoun while maintaining the same quality materials and craftsmanship.</p>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Three jurisdictions:</strong> City of Manassas, Manassas Park, and Prince William County each have their own building departments — we know them all</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Three jurisdictions:</strong> City of Manassas, Manassas Park, and Prince William County each have their own building departments we know them all</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Larger lots:</strong> PW County properties often have bigger yards = bigger deck potential at better per-sqft value</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>HOA variety:</strong> From Dominion Valley estates to Signal Hill townhomes — we handle every HOA type</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>HOA variety:</strong> From Dominion Valley estates to Signal Hill townhomes we handle every HOA type</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Warehouse nearby:</strong> Our Manassas-area warehouse means faster material delivery to PW County jobs</li>
           </ul>
 
@@ -77,7 +77,7 @@ export default function ManassasDeckBuilderPage() {
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Featured Manassas Project</h2>
           <div style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', marginBottom: '2rem' }}>
-            <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>$28,000 — 350 sqft Trex Enhance Deck, Signal Hill</h3>
+            <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>$28,000 350 sqft Trex Enhance Deck, Signal Hill</h3>
             <p style={{ lineHeight: 1.7 }}>Budget-friendly composite build replacing a rotting wood deck. Trex Enhance in Saddle with aluminum railings and 4 stair lights. Prince William County permit (approved in 2 weeks). HOA submission handled. 2-week build. Client saved $8k vs Transcend while getting a 25-year warranty deck.</p>
           </div>
 

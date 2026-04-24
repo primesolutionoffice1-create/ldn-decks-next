@@ -11,7 +11,7 @@ import { buildMetadata } from '@/lib/seo';
 export const metadata = buildMetadata({
   path: '/composite-deck-vs-wood-deck-virginia',
   title: 'Composite Deck vs Wood Deck: Complete Virginia Comparison (2026)',
-  description: 'Composite vs wood deck — cost, maintenance, lifespan, ROI compared for Virginia homeowners. 15-year total cost analysis shows composite wins long-term.',
+  description: 'Composite vs wood deck cost, maintenance, lifespan, ROI compared for Virginia homeowners. 15-year total cost analysis shows composite wins long-term.',
   image: '/images/img16.jpeg',
 });
 
@@ -33,7 +33,7 @@ export default function CompositeVsWoodPage() {
       <JsonLd data={faqSchema} />
       <ArticleSchema
         title="Composite Deck vs Wood Deck: Complete Virginia Comparison (2026)"
-        description="Composite vs wood deck — cost, maintenance, lifespan, ROI compared for Virginia homeowners. 15-year total cost analysis."
+        description="Composite vs wood deck cost, maintenance, lifespan, ROI compared for Virginia homeowners. 15-year total cost analysis."
         path="/composite-deck-vs-wood-deck-virginia"
         datePublished="2025-05-01"
         dateModified="2026-04-23"
@@ -42,7 +42,7 @@ export default function CompositeVsWoodPage() {
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Composite Deck vs Wood Deck</h1>
-          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Complete comparison for Virginia homeowners — cost, maintenance, lifespan, and ROI</p>
+          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Complete comparison for Virginia homeowners cost, maintenance, lifespan, and ROI</p>
         </div>
       </section>
 
@@ -57,10 +57,10 @@ export default function CompositeVsWoodPage() {
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
 
           <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
-             <Image 
-              src="/images/img11.jpeg" 
-              alt="Composite vs pressure-treated wood deck comparison in Virginia" 
-              fill 
+            <Image
+              src="/images/img11.jpeg"
+              alt="Composite vs pressure-treated wood deck comparison in Virginia"
+              fill
               style={{ objectFit: 'cover' }}
               sizes="(max-width: 900px) 100vw, 900px"
               priority

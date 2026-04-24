@@ -18,7 +18,7 @@ const faqSchema = {
   "@context": "https://schema.org", "@type": "FAQPage",
   mainEntity: [
     { "@type": "Question", name: "How much does a deck cost in Gainesville, VA?", acceptedAnswer: { "@type": "Answer", text: "Gainesville deck projects range from $18,000-$48,000. Composite decks average $30-$55/sqft installed. Gainesville's newer developments (Heritage Hunt, Virginia Oaks, Piedmont) often have builder-grade decks ready for upgrade." } },
-    { "@type": "Question", name: "Do Gainesville HOAs allow composite decks?", acceptedAnswer: { "@type": "Answer", text: "Yes — most Gainesville HOAs prefer composite over wood because it maintains consistent appearance. Heritage Hunt, Virginia Oaks, Piedmont, and University all allow composite. We check specific guidelines before material selection." } },
+    { "@type": "Question", name: "Do Gainesville HOAs allow composite decks?", acceptedAnswer: { "@type": "Answer", text: "Yes most Gainesville HOAs prefer composite over wood because it maintains consistent appearance. Heritage Hunt, Virginia Oaks, Piedmont, and University all allow composite. We check specific guidelines before material selection." } },
   ],
 };
 
@@ -29,7 +29,7 @@ export default function GainesvilleDeckBuilderPage() {
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Custom Deck Builder in Gainesville, VA</h1>
-          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Composite decks &amp; outdoor living for Gainesville — Heritage Hunt, Virginia Oaks, Piedmont</p>
+          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Composite decks &amp; outdoor living for Gainesville Heritage Hunt, Virginia Oaks, Piedmont</p>
           <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             <a href="tel:+15716557207" style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</a>
             <Link href="/contact" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Estimate</Link>
@@ -49,13 +49,13 @@ export default function GainesvilleDeckBuilderPage() {
               priority
             />
           </div>
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Gainesville — Modern Luxury in Prince William County</h2>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Gainesville&apos;s newer communities often come with builder-grade pressure-treated decks that start showing wear within 5-8 years. We specialize in upgrading these to premium composite — transforming basic builder decks into custom outdoor living spaces. Many Gainesville homeowners add screened porches and outdoor kitchens during the upgrade.</p>
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Gainesville Modern Luxury in Prince William County</h2>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Gainesville&apos;s newer communities often come with builder-grade pressure-treated decks that start showing wear within 5-8 years. We specialize in upgrading these to premium composite transforming basic builder decks into custom outdoor living spaces. Many Gainesville homeowners add screened porches and outdoor kitchens during the upgrade.</p>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Builder-grade upgrades:</strong> Replace your 5-8 year old PT deck with Trex — often keeping the original frame to save cost</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Growing communities:</strong> Heritage Hunt, Virginia Oaks, Piedmont, University, Bull Run — we build in all of them</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Builder-grade upgrades:</strong> Replace your 5-8 year old PT deck with Trex often keeping the original frame to save cost</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Growing communities:</strong> Heritage Hunt, Virginia Oaks, Piedmont, University, Bull Run we build in all of them</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>PW County permitting:</strong> Fast 2-4 week plan review. We handle everything.</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Great value:</strong> Gainesville offers excellent outdoor living value — larger lots at better per-sqft costs</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Great value:</strong> Gainesville offers excellent outdoor living value larger lots at better per-sqft costs</li>
           </ul>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Services in Gainesville</h2>
@@ -77,7 +77,7 @@ export default function GainesvilleDeckBuilderPage() {
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Featured Gainesville Project</h2>
           <div style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', marginBottom: '2rem' }}>
-            <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>$26,000 — 340 sqft Deck Resurfacing, Heritage Hunt</h3>
+            <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>$26,000 340 sqft Deck Resurfacing, Heritage Hunt</h3>
             <p style={{ lineHeight: 1.7 }}>Resurfaced a 7-year-old builder-grade PT deck with Trex Transcend (Spiced Rum). Kept the original frame (structurally sound after inspection), replaced all boards, added Trex Select railings and 6 stair lights. Saved $15k vs full rebuild. PW County permit. Heritage Hunt HOA approved. 1.5-week build.</p>
           </div>
 
@@ -91,7 +91,7 @@ export default function GainesvilleDeckBuilderPage() {
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>FAQ</h2>
           {[
             { q: "Deck cost in Gainesville?", a: "$18,000-$48,000. Composite: $30-$55/sqft. Great value in PW County." },
-            { q: "HOA allow composite?", a: "Yes — Heritage Hunt, Virginia Oaks, Piedmont all allow and prefer composite. We check your specific guidelines." },
+            { q: "HOA allow composite?", a: "Yes Heritage Hunt, Virginia Oaks, Piedmont all allow and prefer composite. We check your specific guidelines." },
           ].map((faq, i) => (
             <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
               <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>

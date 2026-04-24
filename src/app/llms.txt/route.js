@@ -1,4 +1,4 @@
-// llms.txt — Standard for AI content discovery
+// llms.txt Standard for AI content discovery
 // See: https://llmstxt.org/
 export async function GET() {
   const content = `# Loudoun Decks (LDN Decks)

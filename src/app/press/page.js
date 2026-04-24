@@ -8,7 +8,7 @@ import { buildMetadata } from '@/lib/seo';
 export const metadata = buildMetadata({
   path: '/press',
   title: 'Press & Media Kit | Loudoun Decks',
-  description: 'Press resources, company facts, high-resolution logos, and media contact for Loudoun Decks — Northern Virginia\'s top-rated deck builder.',
+  description: 'Press resources, company facts, high-resolution logos, and media contact for Loudoun Decks Northern Virginia\'s top-rated deck builder.',
 });
 
 export default function PressPage() {
@@ -41,8 +41,8 @@ export default function PressPage() {
                   ['Google Rating', '5.0 stars (41+ verified reviews)'],
                   ['Certifications', 'Trex Platinum Partner, TimberTech Certified Installer'],
                   ['License', 'Virginia Class A Contractor (DPOR Licensed)'],
-                  ['Insurance', 'Fully insured — general liability & workers\' comp'],
-                  ['Owner', 'Nick — Owner & Lead Designer, 15+ years experience'],
+                  ['Insurance', 'Fully insured general liability & workers\' comp'],
+                  ['Owner', 'Nick Owner & Lead Designer, 15+ years experience'],
                 ].map(([label, value], i) => (
                   <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
                     <td style={{ padding: '0.75rem', fontWeight: 600, borderBottom: '1px solid #eee', width: '35%' }}>{label}</td>
@@ -58,8 +58,8 @@ export default function PressPage() {
             <li><strong>200+ custom deck projects</strong> completed across Northern Virginia</li>
             <li><strong>5.0-star Google rating</strong> with 41+ verified reviews (100% 5-star)</li>
             <li><strong>70+ cities served</strong> across 5 Northern Virginia counties</li>
-            <li><strong>Trex Platinum Partner</strong> — highest tier of Trex certification</li>
-            <li><strong>TimberTech Certified Installer</strong> — qualified for all product lines</li>
+            <li><strong>Trex Platinum Partner</strong> highest tier of Trex certification</li>
+            <li><strong>TimberTech Certified Installer</strong> qualified for all product lines</li>
             <li><strong>100% permit approval rate</strong> across Loudoun, Fairfax & Prince William counties</li>
             <li><strong>5-Year Workmanship Warranty</strong> on all projects in addition to manufacturer warranties</li>
             <li><strong>Average project value:</strong> $15,000–$65,000</li>
@@ -104,7 +104,7 @@ export default function PressPage() {
           </ul>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem' }}>Media Contact</h2>
-          <p style={{ marginBottom: '0.5rem' }}><strong>Nick</strong> — Owner & Lead Designer</p>
+          <p style={{ marginBottom: '0.5rem' }}><strong>Nick</strong> Owner & Lead Designer</p>
           <p style={{ marginBottom: '0.5rem' }}>Email: <a href="mailto:office@ldndecks.com" style={{ color: 'var(--color-primary, #d14817)' }}>office@ldndecks.com</a></p>
           <p style={{ marginBottom: '2rem' }}>Phone: <a href="tel:+15716557207" style={{ color: 'var(--color-primary, #d14817)' }}>(571) 655-7207</a></p>
 

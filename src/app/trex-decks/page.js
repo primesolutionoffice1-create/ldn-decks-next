@@ -13,8 +13,8 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/trex-decks',
-      title: 'Trex Deck Builder | Loudoun County VA | LDN Decks',
-  description: 'Certified Trex Platinum Partner in Northern Virginia. Transcend, Enhance & Lineage decks — premium designs, zero maintenance. Free estimate — (571) 655-7207.',
+  title: 'Trex Deck Builder | Loudoun County VA | LDN Decks',
+  description: 'Certified Trex Platinum Partner in Northern Virginia. Transcend, Enhance & Lineage decks premium designs, zero maintenance. Free estimate (571) 655-7207.',
   image: '/images/img12.jpeg',
 });
 
@@ -113,13 +113,13 @@ export default function TrexDecksPage() {
   return (
     <main>
       <ServiceSchema name="Trex Deck Installation" description="Certified Trex Platinum Partner installer in Northern Virginia. Trex Enhance, Select, and Transcend product lines. 25-year warranty." price="18000" />
-      <ServicesHeader 
+      <ServicesHeader
         subtext="Certified Trex Pro Builder"
         title="Custom Trex Deck Building & Installation"
         description="Loudoun Decks is the premier certified Trex installer in Loudoun County, Fairfax County, and Prince William County. Experience the ultimate in low-maintenance luxury."
       />
 
-      <ServiceMain 
+      <ServiceMain
         subtitle="World #1 Brand"
         title="Expert Trex Contractor Serving Northern Virginia"
         description="Trex Transcend® provides a beautiful, splinter-free surface that lasts for decades. We specialize in custom brand-name builds across Arlington, Stafford, and total NoVA."
@@ -136,7 +136,7 @@ export default function TrexDecksPage() {
 
       <ServiceContentExpansion sections={expansionSections} />
 
-      <ServiceInclusions 
+      <ServiceInclusions
         title="The Trex Distinction"
         description="Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. We bring Trex excellence to every home."
         items={inclusions}
@@ -144,7 +144,7 @@ export default function TrexDecksPage() {
 
       <ProcessSteps />
 
-      <ServicesFAQ 
+      <ServicesFAQ
         title="Trex Decking & Warranty FAQs"
         faqs={trexFAQs}
       />

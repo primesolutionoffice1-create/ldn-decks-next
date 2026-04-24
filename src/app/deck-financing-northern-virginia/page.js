@@ -9,7 +9,7 @@ import { buildMetadata } from '@/lib/seo';
 export const metadata = buildMetadata({
   path: '/deck-financing-northern-virginia',
   title: 'Deck Financing Options in Northern Virginia | Build Now, Pay Over Time',
-  description: 'Finance your deck project with affordable monthly payments. $0 down options, 12-60 month terms, quick approval. Build your dream deck now — pay over time.',
+  description: 'Finance your deck project with affordable monthly payments. $0 down options, 12-60 month terms, quick approval. Build your dream deck now pay over time.',
 });
 
 const faqSchema = {
@@ -17,7 +17,7 @@ const faqSchema = {
   mainEntity: [
     { "@type": "Question", name: "Can I finance a deck in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "Yes. We offer financing through trusted lending partners with terms from 12 to 60 months. Many homeowners finance $20,000-$50,000 deck projects with monthly payments of $350-$900 depending on term length and rate." } },
     { "@type": "Question", name: "What are typical monthly payments for a deck?", acceptedAnswer: { "@type": "Answer", text: "For a $30,000 composite deck: approximately $525/month over 60 months, or $680/month over 48 months at typical rates. Exact payments depend on credit score and term selected." } },
-    { "@type": "Question", name: "Do you offer $0 down financing?", acceptedAnswer: { "@type": "Answer", text: "Yes — qualified applicants can finance 100% of the project with $0 down. Approval is typically within minutes and does not affect your credit score for the initial check." } },
+    { "@type": "Question", name: "Do you offer $0 down financing?", acceptedAnswer: { "@type": "Answer", text: "Yes qualified applicants can finance 100% of the project with $0 down. Approval is typically within minutes and does not affect your credit score for the initial check." } },
     { "@type": "Question", name: "Is financing a deck a good idea?", acceptedAnswer: { "@type": "Answer", text: "Yes, especially for composite decks that add 60-80% of their cost to home value. You enjoy the deck immediately while paying over time, and the home equity increase often exceeds the financing cost." } },
   ],
 };
@@ -106,10 +106,10 @@ export default function DeckFinancingPage() {
               <thead><tr style={{ background: '#f5f5f5' }}>{['Option', 'Terms', 'Best For'].map(h => <th key={h} style={S.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {[
-                  ['Personal home improvement loan', '12–60 months, fixed rate, unsecured', 'Most homeowners — quick approval, no home equity needed'],
+                  ['Personal home improvement loan', '12–60 months, fixed rate, unsecured', 'Most homeowners quick approval, no home equity needed'],
                   ['Home equity loan (HELOC)', 'Variable or fixed, longer terms, lower rates', 'Larger projects ($50k+) where you have significant equity'],
                   ['Credit card (0% intro APR)', '12–18 months interest-free', 'Smaller projects under $15k if you can pay within promo period'],
-                  ['Contractor financing', 'Through our lending partners', 'Convenience — apply as part of your estimate process'],
+                  ['Contractor financing', 'Through our lending partners', 'Convenience apply as part of your estimate process'],
                 ].map((row, i) => (
                   <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
                     {row.map((cell, j) => <td key={j} style={{ ...S.td, fontWeight: j === 0 ? 600 : 400 }}>{cell}</td>)}
@@ -129,10 +129,10 @@ export default function DeckFinancingPage() {
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Frequently Asked Questions</h2>
           {[
-            { q: "Can I finance a deck?", a: "Yes — we offer financing with terms from 12 to 60 months. $0 down options available for qualified applicants." },
+            { q: "Can I finance a deck?", a: "Yes we offer financing with terms from 12 to 60 months. $0 down options available for qualified applicants." },
             { q: "What are typical monthly payments?", a: "For a $30,000 deck: ~$525/mo over 60 months or ~$680/mo over 48 months at typical rates." },
             { q: "Does applying affect my credit score?", a: "The initial pre-qualification uses a soft check (no impact). A hard check occurs only when you accept terms and formally apply." },
-            { q: "Is financing a deck a good idea?", a: "Yes — especially for composite decks that add 60-80% of cost to home value. You enjoy the deck now and build equity simultaneously." },
+            { q: "Is financing a deck a good idea?", a: "Yes especially for composite decks that add 60-80% of cost to home value. You enjoy the deck now and build equity simultaneously." },
           ].map((faq, i) => (
             <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
               <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>

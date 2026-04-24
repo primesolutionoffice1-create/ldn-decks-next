@@ -52,7 +52,7 @@ export default function GetEstimatePage() {
     <>
       <JsonLd data={serviceSchema} />
 
-      {/* Hero — Above the Fold: Trust + CTA */}
+      {/* Hero Above the Fold: Trust + CTA */}
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '3rem 0 2rem' }}>
         <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 1.5rem', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'center' }}>
           <div>
@@ -65,7 +65,7 @@ export default function GetEstimatePage() {
             </h1>
             <p style={{ color: '#ccc', fontSize: '1.05rem', lineHeight: 1.6, marginBottom: '1.5rem' }}>
               Northern Virginia&apos;s only <strong style={{ color: '#fff' }}>Trex Platinum Partner</strong> (top 1% nationally).
-              Custom composite decks, screened porches &amp; outdoor living — designed and built by our in-house crew.
+              Custom composite decks, screened porches &amp; outdoor living designed and built by our in-house crew.
             </p>
 
             {/* Trust Badges */}
@@ -86,7 +86,7 @@ export default function GetEstimatePage() {
             <a href="tel:+15716557207" style={{ display: 'inline-block', background: 'var(--color-primary)', color: '#fff', padding: '1rem 2rem', borderRadius: '8px', fontWeight: 700, textDecoration: 'none', fontSize: '1.1rem' }}>
               Call (571) 655-7207
             </a>
-            <p style={{ color: '#777', fontSize: '0.8rem', marginTop: '0.5rem' }}>Or fill out the form below — we respond within 2 hours</p>
+            <p style={{ color: '#777', fontSize: '0.8rem', marginTop: '0.5rem' }}>Or fill out the form below we respond within 2 hours</p>
           </div>
 
           <div style={{ position: 'relative', height: '400px', borderRadius: '12px', overflow: 'hidden' }}>

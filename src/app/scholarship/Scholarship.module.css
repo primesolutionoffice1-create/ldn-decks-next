@@ -53,9 +53,9 @@
 }
 
 .awardBox {
-  background: #f7fafc;
+  background: #fff5f2;
   padding: 2rem;
-  border-left: 5px solid #3182ce;
+  border-left: 5px solid #d14817;
   margin-bottom: 3rem;
   border-radius: 0 12px 12px 0;
 }
@@ -63,7 +63,7 @@
 .amount {
   font-size: 3rem;
   font-weight: 800;
-  color: #3182ce;
+  color: #d14817;
   margin: 0.5rem 0;
 }
 

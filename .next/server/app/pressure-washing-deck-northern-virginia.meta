@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/pressure-washing-deck-northern-virginia/layout,_N_T_/pressure-washing-deck-northern-virginia/page,_N_T_/pressure-washing-deck-northern-virginia"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/pressure-washing-deck-northern-virginia/__PAGE__",
+    "/pressure-washing-deck-northern-virginia",
+    "/_index",
+    "/_head"
+  ]
+}

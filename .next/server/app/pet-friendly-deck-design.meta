@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/pet-friendly-deck-design/layout,_N_T_/pet-friendly-deck-design/page,_N_T_/pet-friendly-deck-design"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/pet-friendly-deck-design/__PAGE__",
+    "/pet-friendly-deck-design",
+    "/_index",
+    "/_head"
+  ]
+}

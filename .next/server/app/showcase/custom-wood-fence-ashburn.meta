@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/showcase/layout,_N_T_/showcase/[slug]/layout,_N_T_/showcase/[slug]/page,_N_T_/showcase/custom-wood-fence-ashburn"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/showcase/$d$slug/__PAGE__",
+    "/showcase/$d$slug",
+    "/showcase",
+    "/_index",
+    "/_head"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/deck-staining-northern-virginia/layout,_N_T_/deck-staining-northern-virginia/page,_N_T_/deck-staining-northern-virginia"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/deck-staining-northern-virginia/__PAGE__",
+    "/deck-staining-northern-virginia",
+    "/_index",
+    "/_head"
+  ]
+}

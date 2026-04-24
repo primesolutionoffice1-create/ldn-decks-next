@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/northern-virginia-deck-building-guide/layout,_N_T_/northern-virginia-deck-building-guide/page,_N_T_/northern-virginia-deck-building-guide"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/northern-virginia-deck-building-guide/__PAGE__",
+    "/northern-virginia-deck-building-guide",
+    "/_index",
+    "/_head"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/stamped-concrete-patio-northern-virginia/layout,_N_T_/stamped-concrete-patio-northern-virginia/page,_N_T_/stamped-concrete-patio-northern-virginia"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/stamped-concrete-patio-northern-virginia/__PAGE__",
+    "/stamped-concrete-patio-northern-virginia",
+    "/_index",
+    "/_head"
+  ]
+}

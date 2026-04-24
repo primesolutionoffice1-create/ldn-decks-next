@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/best-deck-stain-sealer-virginia/layout,_N_T_/best-deck-stain-sealer-virginia/page,_N_T_/best-deck-stain-sealer-virginia"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/best-deck-stain-sealer-virginia/__PAGE__",
+    "/best-deck-stain-sealer-virginia",
+    "/_index",
+    "/_head"
+  ]
+}

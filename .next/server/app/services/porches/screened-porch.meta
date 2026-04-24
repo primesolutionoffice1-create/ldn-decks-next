@@ -1,0 +1,17 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/services/layout,_N_T_/services/porches/layout,_N_T_/services/porches/screened-porch/layout,_N_T_/services/porches/screened-porch/page,_N_T_/services/porches/screened-porch"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/services/porches/screened-porch/__PAGE__",
+    "/services/porches/screened-porch",
+    "/services/porches",
+    "/services",
+    "/_index",
+    "/_head"
+  ]
+}

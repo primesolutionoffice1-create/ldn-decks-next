@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/services/layout,_N_T_/services/house-siding-washing/layout,_N_T_/services/house-siding-washing/page,_N_T_/services/house-siding-washing"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/services/house-siding-washing/__PAGE__",
+    "/services/house-siding-washing",
+    "/services",
+    "/_index",
+    "/_head"
+  ]
+}

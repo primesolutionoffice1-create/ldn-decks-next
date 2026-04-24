@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/deck-builder-manassas-va/layout,_N_T_/deck-builder-manassas-va/page,_N_T_/deck-builder-manassas-va"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/deck-builder-manassas-va/__PAGE__",
+    "/deck-builder-manassas-va",
+    "/_index",
+    "/_head"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/deck-builder-oakton-va/layout,_N_T_/deck-builder-oakton-va/page,_N_T_/deck-builder-oakton-va"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/deck-builder-oakton-va/__PAGE__",
+    "/deck-builder-oakton-va",
+    "/_index",
+    "/_head"
+  ]
+}

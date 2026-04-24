@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/composite-decks/layout,_N_T_/composite-decks/page,_N_T_/composite-decks"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/composite-decks/__PAGE__",
+    "/composite-decks",
+    "/_index",
+    "/_head"
+  ]
+}

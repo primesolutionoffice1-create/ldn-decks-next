@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/services/layout,_N_T_/services/outdoor-washing/layout,_N_T_/services/outdoor-washing/page,_N_T_/services/outdoor-washing"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/services/outdoor-washing/__PAGE__",
+    "/services/outdoor-washing",
+    "/services",
+    "/_index",
+    "/_head"
+  ]
+}

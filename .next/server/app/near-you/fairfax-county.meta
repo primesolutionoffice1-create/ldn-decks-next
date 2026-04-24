@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/near-you/layout,_N_T_/near-you/fairfax-county/layout,_N_T_/near-you/fairfax-county/page,_N_T_/near-you/fairfax-county"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/near-you/fairfax-county/__PAGE__",
+    "/near-you/fairfax-county",
+    "/near-you",
+    "/_index",
+    "/_head"
+  ]
+}

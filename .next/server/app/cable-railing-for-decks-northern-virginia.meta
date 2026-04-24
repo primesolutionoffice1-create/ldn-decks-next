@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/cable-railing-for-decks-northern-virginia/layout,_N_T_/cable-railing-for-decks-northern-virginia/page,_N_T_/cable-railing-for-decks-northern-virginia"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/cable-railing-for-decks-northern-virginia/__PAGE__",
+    "/cable-railing-for-decks-northern-virginia",
+    "/_index",
+    "/_head"
+  ]
+}

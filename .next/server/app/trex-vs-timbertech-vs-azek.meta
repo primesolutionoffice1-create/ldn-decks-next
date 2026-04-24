@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/trex-vs-timbertech-vs-azek/layout,_N_T_/trex-vs-timbertech-vs-azek/page,_N_T_/trex-vs-timbertech-vs-azek"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/trex-vs-timbertech-vs-azek/__PAGE__",
+    "/trex-vs-timbertech-vs-azek",
+    "/_index",
+    "/_head"
+  ]
+}

@@ -82,7 +82,7 @@ const expansionSections = [
     title: "Identifying Red Flags: When Your Deck Becomes a Hazard",
     paragraphs: [
       "Many homeowners in regions like Fairfax Station and Burke overlook the subtle signs of deck degradation. The most common 'red flag' is wobbly or loose railings. In Virginia, building codes have become much stricter regarding railing attachment methods because railings are responsible for preventing falls. If your railing posts are through-bolted rather than just nailed, you are in much better shape. If they move when you lean on them, you need immediate deck repair.",
-      "Another critical area is the stair system. Over time, the 'stringers' (the side supports of the stairs) can pull away from the deck or rot at the base where they touch the ground. We frequently handle stair restorations in Sterling and Herndon, reinforcing these high-traffic areas with custom steel brackets and new pressure-treated timber. Ensuring your stairs are level and secure is a top priority for any 5-Star Google Rated contractor.",
+      "Another critical area is the stair system. Over time, the 'stringers' (the side supports of the stairs) can pull away from the deck or rot at the base where they touch the ground. We frequently handle stair restorations in Sterling and Herndon, reinforcing these high-traffic areas with custom steel brackets and new pressure-treated timber. Ensuring your stairs are level and secure is a top priority for any professional contractor.",
       "As your custom deck builder and restoration expert, we perform deep-dive inspections to identify these hazards before they escalate into emergencies."
     ],
     listItems: [

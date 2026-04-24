@@ -108,7 +108,7 @@ export default function GetEstimatePage() {
           {[
             { num: '100+', label: 'Decks built' },
             { num: '5.0', label: 'Google rating' },
-            { num: '10yr', label: 'Warranty' },
+            { num: '5yr', label: 'Warranty' },
             { num: '$15K+', label: 'Projects from' },
           ].map(s => (
             <div key={s.label} style={{ textAlign: 'center' }}>

@@ -64,7 +64,7 @@ const trexFAQs = [
   },
   {
     q: "Will a Trex deck improve my home's resale value in NoVA?",
-    a: "Yes. Trex is a highly recognized premium brand. Having a 'Certified Trex Deck' is a major selling point for high-ticket homes in Loudoun and Fairfax Counties."
+    a: "Yes. Trex is a highly recognized premium brand. Having a 'Certified Trex Deck' is a major selling point for premium homes in Loudoun and Fairfax Counties."
   }
 ];
 
@@ -80,7 +80,7 @@ const expansionSections = [
   {
     title: "Navigating the Trex Product Tiers: Finding Your Perfect Match",
     paragraphs: [
-      "Trex offers a variety of product 'collections' to suit different architectural styles and budgets across areas like Fairfax Station and Arlington. The 'Transcend' line is our most requested collection for high-ticket projects. It features the thickest protective 'cap,' making it virtually immune to scratches, stains, and mold. The Transcend Tropicals collection offers stunning, multi-tonal boards that capture the look of exotic hardwoods like Ipe or Mahogany without the ethical or maintenance concerns of real wood.",
+      "Trex offers a variety of product 'collections' to suit different architectural styles and budgets across areas like Fairfax Station and Arlington. The 'Transcend' line is our most requested collection for premium projects. It features the thickest protective 'cap,' making it virtually immune to scratches, stains, and mold. The Transcend Tropicals collection offers stunning, multi-tonal boards that capture the look of exotic hardwoods like Ipe or Mahogany without the ethical or maintenance concerns of real wood.",
       "For homeowners in Great Falls and Mclean, the ability to mix and match colors between the decking and the railing is a major design advantage. We often design decks with a 'picture frame' border in a darker Trex color, which creates a clean, sophisticated look that highlights the custom craftsmanship of your build. The 'Select' line remains a popular mid-tier option for families in Sterling and Herndon who want the Trex name and quality at a slightly more accessible price point.",
       "As your dedicated Trex contractor near you, we guide you through these selections, helping you visualize how different colors and textures will integrate with your home’s existing siding and trim."
     ],
@@ -96,7 +96,7 @@ const expansionSections = [
     paragraphs: [
       "In modern Northern Virginia, sustainability is more than just a buzzword-it is a priority. One of the reasons we are proud to be a Trex builder in regions like Vienna and Reston is Trex's commitment to the environment. Every Trex deck board is made from 95% recycled material, including reclaimed industrial wood scraps and recycled plastic film from grocery bags and dry cleaning wrap. Trex is one of the largest recyclers of plastic film in North America.",
       "This eco-friendly approach does not mean sacrificing quality. In fact, Trex material science produces a board that is more durable than natural wood. It won't splinter, making it much safer for bare feet and pets. It won't rot, even in the shaded, damp environments found in some parts of Prince William County and Stafford. You are essentially turning tons of waste into a permanent, high-value asset for your property.",
-      "By choosing a 5-Star Google Rated Trex installer, you are supporting sustainable construction practices while ensuring your home features the world's most trusted name in outdoor living."
+      "By choosing a certified Trex installer, you are supporting sustainable construction practices while ensuring your home features the world's most trusted name in outdoor living."
     ]
   },
   {

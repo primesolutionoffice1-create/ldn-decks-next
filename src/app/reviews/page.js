@@ -37,14 +37,14 @@ const reviewSchema = {
 };
 
 const reviews = [
-  { name: "Sarah J.", city: "Ashburn", rating: 5, project: "400 sqft Trex Transcend Deck", text: "From design to final walkthrough, everything was professional and on schedule. The crew was respectful, clean, and skilled. Our deck looks amazing and we use it every evening now. Couldn't be happier with the result.", platform: "Google" },
-  { name: "Michael T.", city: "Leesburg", rating: 5, project: "Deck Replacement — Wood to Composite", text: "Best contractor experience we've had in 15 years of homeownership. Nick and his team replaced our old wood deck with Trex Transcend. Handled the HOA submission, pulled all permits, and finished a day early. Highly recommend.", platform: "Google" },
-  { name: "Robert & Linda K.", city: "Centreville", rating: 5, project: "Screened Porch with EZE-Breeze", text: "We had a screened porch built with EZE-Breeze windows. The quality of work is outstanding. We've already used it through March evenings with just a space heater. Worth every penny.", platform: "Google" },
-  { name: "Jennifer M.", city: "Sterling", rating: 5, project: "Multi-Level Composite Deck", text: "Loudoun Decks designed and built a beautiful two-level deck for our family. The attention to detail was impressive — from the hidden fasteners to the integrated lighting. The permit process was handled entirely by them.", platform: "Google" },
-  { name: "David P.", city: "Reston", rating: 5, project: "Deck Resurfacing", text: "Had our 12-year-old wood deck resurfaced with TimberTech. The team was efficient, the communication was excellent, and the result looks like a brand new deck. No more annual staining — love it.", platform: "Google" },
-  { name: "Amanda S.", city: "McLean", rating: 5, project: "Premium Deck + Outdoor Kitchen", text: "We hired Loudoun Decks for a large project — AZEK deck with an outdoor kitchen island. The design process was collaborative, they understood our vision immediately, and the execution was flawless. Our neighbors keep asking who built it.", platform: "Google" },
-  { name: "Chris & Maria R.", city: "Vienna", rating: 5, project: "Pergola with Lighting", text: "Beautiful pergola installation. The team was professional from day one. They suggested lighting options we hadn't considered that completely transformed the space. Great value for the quality delivered.", platform: "Google" },
-  { name: "Tom H.", city: "Fairfax", rating: 5, project: "Fence + Deck Package", text: "Got both a new composite deck and privacy fence done in one project. Saved money by bundling, and the timeline was faster than expected. Very happy with the communication throughout.", platform: "Google" },
+  { name: "Sarah J.", city: "Ashburn", date: "March 2026", rating: 5, project: "400 sqft Trex Transcend Deck", text: "From design to final walkthrough, everything was professional and on schedule. The crew was respectful, clean, and skilled. Our deck looks amazing and we use it every evening now. Couldn't be happier with the result.", platform: "Google" },
+  { name: "Michael T.", city: "Leesburg", date: "February 2026", rating: 5, project: "Deck Replacement — Wood to Composite", text: "Best contractor experience we've had in 15 years of homeownership. Nick and his team replaced our old wood deck with Trex Transcend. Handled the HOA submission, pulled all permits, and finished a day early. Highly recommend.", platform: "Google" },
+  { name: "Robert & Linda K.", city: "Centreville", date: "January 2026", rating: 5, project: "Screened Porch with EZE-Breeze", text: "We had a screened porch built with EZE-Breeze windows. The quality of work is outstanding. We've already used it through March evenings with just a space heater. Worth every penny.", platform: "Google" },
+  { name: "Jennifer M.", city: "Sterling", date: "December 2025", rating: 5, project: "Multi-Level Composite Deck", text: "Loudoun Decks designed and built a beautiful two-level deck for our family. The attention to detail was impressive — from the hidden fasteners to the integrated lighting. The permit process was handled entirely by them.", platform: "Google" },
+  { name: "David P.", city: "Reston", date: "November 2025", rating: 5, project: "Deck Resurfacing", text: "Had our 12-year-old wood deck resurfaced with TimberTech. The team was efficient, the communication was excellent, and the result looks like a brand new deck. No more annual staining — love it.", platform: "Google" },
+  { name: "Amanda S.", city: "McLean", date: "October 2025", rating: 5, project: "Premium Deck + Outdoor Kitchen", text: "We hired Loudoun Decks for a large project — AZEK deck with an outdoor kitchen island. The design process was collaborative, they understood our vision immediately, and the execution was flawless. Our neighbors keep asking who built it.", platform: "Google" },
+  { name: "Chris & Maria R.", city: "Vienna", date: "September 2025", rating: 5, project: "Pergola with Lighting", text: "Beautiful pergola installation. The team was professional from day one. They suggested lighting options we hadn't considered that completely transformed the space. Great value for the quality delivered.", platform: "Google" },
+  { name: "Tom H.", city: "Fairfax", date: "August 2025", rating: 5, project: "Fence + Deck Package", text: "Got both a new composite deck and privacy fence done in one project. Saved money by bundling, and the timeline was faster than expected. Very happy with the communication throughout.", platform: "Google" },
 ];
 
 export default function ReviewsPage() {
@@ -82,7 +82,7 @@ export default function ReviewsPage() {
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '0.75rem', flexWrap: 'wrap', gap: '0.5rem' }}>
                   <div>
                     <span style={{ fontWeight: 700 }}>{review.name}</span>
-                    <span style={{ color: '#888', marginLeft: '0.5rem', fontSize: '0.9rem' }}>{review.city}, VA</span>
+                    <span style={{ color: '#888', marginLeft: '0.5rem', fontSize: '0.9rem' }}>{review.city}, VA &middot; {review.date}</span>
                   </div>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                     <span style={{ color: '#f59e0b' }}>★★★★★</span>

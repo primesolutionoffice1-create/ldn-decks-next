@@ -29,8 +29,8 @@ const windowInclusions = [
     desc: "Multi-point sealing techniques in Loudoun and Fairfax that eliminate drafts and moisture infiltration permanently."
   },
   {
-    title: "High-Ticket Aesthetics",
-    desc: "Custom trim and color-matching for windows in Arlington and Stafford that enhance your home's 5-Star curb appeal."
+    title: "Premium Aesthetics",
+    desc: "Custom trim and color-matching for windows in Arlington and Stafford that enhance your home's curb appeal."
   }
 ];
 
@@ -97,7 +97,7 @@ const expansionSections = [
     paragraphs: [
       "The 'magic' of a modern window replacement lies in the glass. We primarily install double-pane units filled with Argon gas-a heavy, clear, non-toxic gas that acts as a powerful insulator between the panes. In high-stakes markets like Arlington and Herndon, adding Low-E (Low Emissivity) coatings can drastically reduce the amount of UV light entering your home. This does more than just lower your cooling bills; it prevents your furniture, flooring, and artwork from fading due to sun exposure.",
       "Noise reduction is another major benefit of professional window installation. For our clients near Dulles Airport or busy corridors like I-66 and the Capital Beltway, we offer specialized sound-dampening glass packages. These use varied glass thicknesses and laminated layers to disrupt sound waves, turning a noisy street into a quiet sanctuary. This 5-Star functionality is what sets premium window systems apart from budget-grade alternatives.",
-      "We take pride in being a deck company near you that also understands the thermal dynamics of your home’s interior, providing a holistic approach to your property’s overall performance and value."
+      "We take pride in being a deck company near you that also understands the thermal dynamics of your home’s interior, providing a holistic approach to your property's overall performance and value."
     ]
   },
   {
@@ -105,7 +105,7 @@ const expansionSections = [
     paragraphs: [
       "Even the most expensive window in the world will fail if it's not installed correctly. Shoddy installation leads to air leaks, water infiltration, and operational issues within just a few years. At Loudoun Decks, our installation protocol is rigorous. We use precision laser leveling to ensure every window is perfectly square and plumb. We utilize high-grade expanding foam and professional-grade flashing to create a triple-layered seal against Virginia's heavy rains.",
       "We manage the entire project from initial measurements to final walkthrough. Our 'Full projects only' philosophy ensures that we are responsible for every detail, including the permit process in Stafford County and coordination with local building inspectors in Arlington. When we leave the job site, we ensure all debris is removed and your home is as clean as when we arrived, leaving only beautiful new views.",
-      "Choosing a 5-Star Google Rated contractor for your window replacement project means you are choosing peace of mind, professional communication, and a result that will look and perform flawlessly for decades."
+      "Choosing a top-rated contractor for your window replacement project means you are choosing peace of mind, professional communication, and a result that will look and perform flawlessly for decades."
     ]
   }
 ];

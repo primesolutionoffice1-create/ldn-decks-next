@@ -47,7 +47,7 @@ const expansionSections = [
   {
     title: "Screened-In vs. Open-Air: Finding Your Perfect Profile",
     paragraphs: [
-      "The debate between a screened-in porch and an open-air porch often comes down to how you plan to use the space. In areas like Sterling and Herndon, where mosquitoes can be particularly active during the summer, a screened porch is the ultimate high-ticket solution. Modern screening systems, like the ScreenEze technology we use, provide crystal-clear views while keeping even the smallest gnats out. These porches often become the most-used room in the house during the spring and autumn months.",
+      "The debate between a screened-in porch and an open-air porch often comes down to how you plan to use the space. In areas like Sterling and Herndon, where mosquitoes can be particularly active during the summer, a screened porch is the ultimate premium solution. Modern screening systems, like the ScreenEze technology we use, provide crystal-clear views while keeping even the smallest gnats out. These porches often become the most-used room in the house during the spring and autumn months.",
       "On the other hand, an open-air porch (often called a 'covered deck' or pavilion) offers an unmatched sense of freedom and airflow. These structures are ideal for homeowners in Fairfax and Vienna who want to integrate outdoor kitchens, pizza ovens, or fire features where ventilation is paramount. They provide essential shade and protection from the rain overhead while maintaining an open, airy connection to the surrounding landscape.",
       "As your custom deck builder and porch specialist, we can design hybrid spaces that feature both screened and open sections, allowing you the best of both worlds depending on the time of day and the season."
     ],
@@ -63,7 +63,7 @@ const expansionSections = [
     paragraphs: [
       "The true magic of a custom porch build in Northern Virginia lies in the interior finishes. We go far beyond standard pressure-treated lumber. Our clients in Lansdowne and Leesburg often opt for tongue-and-groove cedar ceilings, mahogany flooring, or low-maintenance PVC beadboard. These materials elevate the space from a 'porch' to a 'luxury retreat.' We pay close attention to the details-recessed LED lighting on dimmers, high-powered ceiling fans for humid afternoons, and even infrared heaters for crisp November nights.",
       "Security and longevity are built into every finish. We use high-grade sealants and hidden fastener systems to ensure that your porch looks as clean and professional as your home's interior. We also specialize in 'Eze-Breeze' vertical track windows, which allow you to convert your screened porch into a three-season room by sliding clear vinyl panels over the screens to block the wind and cold.",
-      "By choosing a 5-Star Google Rated contractor, you ensure that these technical details-like electrical grounding and structural load-bearing roof connections-are handled by experts who value your family's safety above all else."
+      "By choosing a licensed, experienced contractor, you ensure that these technical details-like electrical grounding and structural load-bearing roof connections-are handled by experts who value your family's safety above all else."
     ]
   },
   {

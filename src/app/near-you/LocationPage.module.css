@@ -1,0 +1,101 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.permitSection {
+  padding: 100px 0;
+  background-color: #fcfaf8;
+}
+
+.permitContent {
+  max-width: 800px;
+}
+
+.permitText h2 {
+  font-size: 38px;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 30px;
+}
+
+.permitText p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 25px;
+}
+
+.permitList {
+  list-style: none;
+  padding: 0;
+  margin: 30px 0;
+}
+
+.permitList li {
+  font-size: 18px;
+  color: #333;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+}
+
+.permitList li::before {
+  content: "✓";
+  color: var(--site-color);
+  font-weight: 900;
+  margin-right: 15px;
+}
+
+.permitFooter {
+  font-weight: 700;
+  color: var(--black);
+  margin-top: 40px;
+}
+
+.citiesSection {
+  padding: 100px 0;
+  background-color: var(--white);
+}
+
+.citiesTitle {
+  font-size: 32px;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.citiesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.cityItem {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-left: 4px solid var(--site-color);
+  font-weight: 600;
+  color: #333;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.cityItem:hover {
+  transform: translateX(5px);
+  background-color: #fef4f0;
+}
+
+@media screen and (max-width: 768px) {
+  .permitText h2 {
+    font-size: 28px;
+  }
+  
+  .citiesGrid {
+    grid-template-columns: 1fr;
+  }
+}

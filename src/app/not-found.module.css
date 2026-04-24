@@ -1,0 +1,142 @@
+.notFoundWrapper {
+  position: relative;
+  width: 100%;
+  min-height: 70vh;
+  padding: 120px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white);
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 10;
+  padding: 0 40px;
+}
+
+/* 404 Floating Number Animation */
+.textWrap {
+  margin-bottom: 20px;
+}
+
+.glitch {
+  font-size: 200px;
+  font-weight: 900;
+  color: var(--site-color);
+  margin: 0;
+  line-height: 1;
+  position: relative;
+  text-shadow: 0 15px 40px rgba(228, 88, 38, 0.15);
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(1.5deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+.subtextWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.subtext {
+  color: var(--black);
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.line {
+  width: 35px;
+  height: 2px;
+  background-color: var(--site-color);
+}
+
+.title {
+  font-size: 42px;
+  font-weight: 800;
+  color: var(--black);
+  margin: 0 0 20px 0;
+}
+
+.description {
+  color: #666;
+  font-size: 17px;
+  line-height: 1.7;
+  max-width: 520px;
+  margin: 0 auto 40px auto;
+}
+
+/* Styled Return Button */
+.homeBtn {
+  display: inline-block;
+  background-color: var(--button-color);
+  color: var(--white);
+  padding: 18px 45px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: capitalize;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(228, 88, 38, 0.2);
+}
+
+.homeBtn:hover {
+  background-color: var(--button-hover-color);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(228, 88, 38, 0.3);
+}
+
+/* Background floating decorations */
+.floatingCircle1 {
+  position: absolute;
+  top: 10%;
+  left: 15%;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(228, 88, 38, 0.05) 0%, transparent 65%);
+  animation: floatShift 15s infinite alternate;
+}
+
+.floatingCircle2 {
+  position: absolute;
+  bottom: 5%;
+  right: 15%;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(228, 88, 38, 0.04) 0%, transparent 70%);
+  animation: floatShift 20s infinite alternate-reverse;
+}
+
+@keyframes floatShift {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(40px, -50px) scale(1.1); }
+  100% { transform: translate(-30px, 30px) scale(0.9); }
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+  .glitch {
+    font-size: 130px;
+  }
+  .title {
+    font-size: 32px;
+  }
+  .description {
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,49 @@
+.ctaSection {
+  background-color: #f7f6f1; /* Off-white matching the theme */
+  padding: 80px 0;
+  text-align: center;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--black);
+  margin: 0 0 20px 0;
+}
+
+.description {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555;
+  margin: 0 auto 40px auto;
+  max-width: 600px;
+}
+
+.ctaButton {
+  display: inline-block;
+  background-color: var(--site-color);
+  color: var(--white);
+  padding: 16px 36px;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+  background-color: var(--button-hover-color);
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 28px;
+  }
+}

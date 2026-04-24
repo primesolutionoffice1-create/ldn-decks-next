@@ -285,6 +285,10 @@ export default function Header() {
                 </div>
 
                 <div className={styles.navItem}>
+                  <Link href="/deck-cost-calculator" className={isActive("/deck-cost-calculator")}>Calculator</Link>
+                </div>
+
+                <div className={styles.navItem}>
                   <Link href="/blog" className={isActive("/blog")}>Blog</Link>
                 </div>
               </nav>
@@ -504,6 +508,12 @@ export default function Header() {
           <div className={styles.mobileNavItem}>
             <div className={`${styles.mobileNavLink} ${isActive('/before-and-after')}`}>
               <Link href="/before-and-after" onClick={() => setIsMobileOpen(false)}>Before &amp; After</Link>
+            </div>
+          </div>
+
+          <div className={styles.mobileNavItem}>
+            <div className={`${styles.mobileNavLink} ${isActive('/deck-cost-calculator')}`}>
+              <Link href="/deck-cost-calculator" onClick={() => setIsMobileOpen(false)}>Calculator</Link>
             </div>
           </div>
 

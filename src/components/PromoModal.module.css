@@ -103,7 +103,7 @@
 
 .highlightText {
   font-weight: 700;
-  color: var(--site-color, #E65C2B) !important;
+  color: var(--site-color) !important;
   font-size: 18px !important;
 }
 
@@ -119,15 +119,15 @@
   align-items: center;
   justify-content: center;
   gap: 12px;
-  background-color: var(--button-color, #E65C2B);
-  color: var(--white, #ffffff);
+  background-color: var(--button-color);
+  color: var(--white);
   padding: 16px 24px;
   border-radius: 8px;
   font-size: 16px;
   font-weight: 700;
   text-decoration: none;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(230, 92, 43, 0.3);
+  box-shadow: 0 4px 15px rgba(209, 72, 23, 0.3);
 }
 
 .estimateBtn {
@@ -135,8 +135,8 @@
   align-items: center;
   justify-content: center;
   background-color: transparent;
-  color: var(--site-color, #E65C2B);
-  border: 2px solid var(--site-color, #E65C2B);
+  color: var(--site-color);
+  border: 2px solid var(--site-color);
   padding: 14px 24px;
   border-radius: 8px;
   font-size: 16px;
@@ -146,13 +146,13 @@
 }
 
 .callBtn:hover {
-  background-color: var(--button-hover-color, #c14d24);
+  background-color: var(--black);
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(230, 92, 43, 0.4);
+  box-shadow: 0 8px 20px rgba(209, 72, 23, 0.4);
 }
 
 .estimateBtn:hover {
-  background-color: var(--site-color, #E65C2B);
+  background-color: var(--site-color);
   color: var(--white);
   transform: translateY(-3px);
 }

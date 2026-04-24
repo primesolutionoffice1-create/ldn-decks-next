@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import Features from "@/components/Features";
+import CalculatorCTA from "@/components/CalculatorCTA";
 import HandCraftedDecks from "@/components/HandCraftedDecks";
 import Introduction from "@/components/Introduction";
 import PromoModal from "@/components/PromoModal";
@@ -62,6 +63,7 @@ export default function Home() {
       <PromoModal />
             <Hero />
             <Features />
+            <CalculatorCTA />
             <MaterialPartners />
             <Introduction />
             <HowItWorks />

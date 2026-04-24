@@ -28,7 +28,7 @@ export default function PromoModal() {
       const timer = setTimeout(() => {
         setIsOpen(true);
         sessionStorage.setItem('promoModalSeen', 'true');
-      }, 3000); // Trigger after exactly 3 seconds
+      }, 10000); // Trigger after exactly 10 seconds
       return () => clearTimeout(timer);
     }
   }, []);

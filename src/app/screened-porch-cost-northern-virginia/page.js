@@ -4,6 +4,7 @@ import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
+import TrustBanner from '@/components/TrustBanner';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -34,6 +35,7 @@ export default function ScreenedPorchCostPage() {
           <p style={{ color: '#ccc', fontSize: '1.1rem' }}>2026 pricing guide with real project examples</p>
         </div>
       </section>
+      <TrustBanner />
 
       <section style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>

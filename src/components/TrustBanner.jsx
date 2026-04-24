@@ -1,0 +1,40 @@
+import React from 'react';
+import styles from './TrustBanner.module.css';
+
+export default function TrustBanner() {
+  return (
+    <div className={styles.banner}>
+      <div className={styles.item}>
+        <div className={styles.icon}>🏆</div>
+        <div className={styles.text}>
+          <strong>Trex Platinum Partner</strong>
+          <span>Top 1% in North America</span>
+        </div>
+      </div>
+      <div className={styles.divider}></div>
+      <div className={styles.item}>
+        <div className={styles.icon}>⭐</div>
+        <div className={styles.text}>
+          <strong>5.0 Google Rating</strong>
+          <span>41+ Five-Star Reviews</span>
+        </div>
+      </div>
+      <div className={styles.divider}></div>
+      <div className={styles.item}>
+        <div className={styles.icon}>🛡️</div>
+        <div className={styles.text}>
+          <strong>5-Year Warranty</strong>
+          <span>Workmanship Guaranteed</span>
+        </div>
+      </div>
+      <div className={styles.divider}></div>
+      <div className={styles.item}>
+        <div className={styles.icon}>✅</div>
+        <div className={styles.text}>
+          <strong>Licensed & Insured</strong>
+          <span>VA Class A Contractor</span>
+        </div>
+      </div>
+    </div>
+  );
+}

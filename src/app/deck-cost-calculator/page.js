@@ -51,7 +51,7 @@ export default function DeckCostCalculator() {
     <main style={{ background: '#fff' }}>
       <section style={{ background: 'var(--color-dark, #1a1a2e)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-          <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Northern Virginia Deck Cost Calculator</h1>
+          <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Northern Virginia Deck Price Calculator</h1>
           <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Get an instant estimate for your deck project. Prices reflect 2026 Northern Virginia market rates.</p>
         </div>
       </section>
@@ -206,6 +206,53 @@ export default function DeckCostCalculator() {
                 <p style={{ fontWeight: 600, color: 'var(--color-primary, #d14817)' }}>Deck ROI & Home Value</p>
                 <p style={{ fontSize: '0.85rem', color: '#666' }}>How much value does a deck add?</p>
               </Link>
+            </div>
+          </div>
+          {/* Sharing and Embedding Tools */}
+          <div style={{ marginTop: '4rem', padding: '2rem', background: '#f8fafc', borderRadius: '12px', border: '1px solid #e2e8f0' }}>
+            <h3 style={{ fontSize: '1.2rem', fontWeight: 700, marginBottom: '1rem', color: '#1e293b' }}>Share or Use This Tool</h3>
+            <p style={{ color: '#64748b', marginBottom: '1.5rem' }}>
+              Are you a real estate agent or homeowner? You can share these results or embed this calculator on your own website.
+            </p>
+            
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.5rem' }}>
+              <button 
+                onClick={() => {
+                  const text = `Deck Price Estimate for ${sqft} sq ft: ${fmt(novaLow)} - ${fmt(novaHigh)}\nMaterial: ${materials[material].name}\nCalculated at: https://www.ldndecks.com/deck-cost-calculator`;
+                  navigator.clipboard.writeText(text);
+                  alert('Results copied to clipboard!');
+                }}
+                style={{
+                  padding: '12px',
+                  background: '#2d3748',
+                  color: '#fff',
+                  border: 'none',
+                  borderRadius: '6px',
+                  fontWeight: 600,
+                  cursor: 'pointer'
+                }}
+              >
+                Copy Results to Clipboard
+              </button>
+
+              <button 
+                onClick={() => {
+                  const embedCode = `<iframe src="https://www.ldndecks.com/deck-cost-calculator" width="100%" height="800px" frameborder="0"></iframe>\n<p>Calculator provided by <a href="https://www.ldndecks.com">LDN Decks</a></p>`;
+                  navigator.clipboard.writeText(embedCode);
+                  alert('Embed code copied to clipboard!');
+                }}
+                style={{
+                  padding: '12px',
+                  background: '#fff',
+                  color: '#2d3748',
+                  border: '2px solid #2d3748',
+                  borderRadius: '6px',
+                  fontWeight: 600,
+                  cursor: 'pointer'
+                }}
+              >
+                Copy Embed Code
+              </button>
             </div>
           </div>
         </div>

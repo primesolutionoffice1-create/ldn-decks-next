@@ -4,6 +4,7 @@ import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
 import SimpleCTA from '@/components/SimpleCTA';
 import ServicesCallToAction from '@/components/ServicesCallToAction';
+import TrustBanner from '@/components/TrustBanner';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
 
@@ -35,6 +36,7 @@ export default function ResurfacingVsReplacementPage() {
           <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Save 40-60% by resurfacing or invest in a full rebuild when it&apos;s the smarter choice</p>
         </div>
       </section>
+      <TrustBanner />
       <section style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>

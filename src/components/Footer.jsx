@@ -113,7 +113,7 @@ export default function Footer() {
               </li>
               <li className={styles.alignStart}>
                 <LocationIcon />
-                <span>13704 Winding Oak Cir,<br />Centreville, VA 20121, Virginia</span>
+                <span>8735 Quarry Rd., Unit 102,<br />Manassas, VA 20110, Virginia</span>
               </li>
             </ul>
           </div>
@@ -123,7 +123,7 @@ export default function Footer() {
       {/* Bottom Solid Black Bar */}
       <div className={styles.bottomBar}>
         <div className={styles.containerBottom}>
-          <p>© Copyrights are Reserved by Loudoun Decks | <Link href="/privacy-policy">Privacy Policy</Link> | <Link href="/terms-of-service">Terms of Service</Link></p>
+          <p>© Copyrights are Reserved by LDN Decks | <Link href="/privacy-policy">Privacy Policy</Link> | <Link href="/terms-of-service">Terms of Service</Link></p>
 
           <div className={styles.socials}>
             <a href="https://www.facebook.com/profile.php?id=61573750423712" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="Facebook"><FbIcon /></a>

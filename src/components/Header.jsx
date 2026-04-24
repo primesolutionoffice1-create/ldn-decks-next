@@ -285,7 +285,7 @@ export default function Header() {
                 </div>
 
                 <div className={styles.navItem}>
-                  <Link href="/deck-cost-calculator" className={isActive("/deck-cost-calculator")}>Calculator</Link>
+                  <Link href="/deck-cost-calculator" className={isActive("/deck-cost-calculator")}>Deck Price Calculator</Link>
                 </div>
 
                 <div className={styles.navItem}>
@@ -513,7 +513,7 @@ export default function Header() {
 
           <div className={styles.mobileNavItem}>
             <div className={`${styles.mobileNavLink} ${isActive('/deck-cost-calculator')}`}>
-              <Link href="/deck-cost-calculator" onClick={() => setIsMobileOpen(false)}>Calculator</Link>
+              <Link href="/deck-cost-calculator" onClick={() => setIsMobileOpen(false)}>Deck Price Calculator</Link>
             </div>
           </div>
 

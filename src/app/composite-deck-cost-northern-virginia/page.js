@@ -4,6 +4,7 @@ import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
 import ArticleSchema from '@/components/ArticleSchema';
 import SimpleCTA from '@/components/SimpleCTA';
+import TrustBanner from '@/components/TrustBanner';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
@@ -56,6 +57,7 @@ export default function CompositeDeckCostPage() {
           <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Brand-by-brand pricing for Trex, TimberTech, AZEK &amp; Fiberon — with real project totals</p>
         </div>
       </section>
+      <TrustBanner />
 
       {/* Quick Answer */}
       <section data-speakable="true" style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>

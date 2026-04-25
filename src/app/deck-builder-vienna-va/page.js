@@ -1,126 +1,186 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import JsonLd from '@/components/JsonLd';
-import SimpleCTA from '@/components/SimpleCTA';
+import ServicesHeader from '@/components/ServicesHeader';
+import ServiceMain from '@/components/ServiceMain';
+import ServiceInclusions from '@/components/ServiceInclusions';
+import ServiceContentExpansion from '@/components/ServiceContentExpansion';
+import ProcessSteps from '@/components/ProcessSteps';
+import ServicesFAQ from '@/components/ServicesFAQ';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
-import RatingBadge from '@/components/RatingBadge';
+import ServiceAreasGrid from '@/components/ServiceAreasGrid';
+import SimpleCTA from '@/components/SimpleCTA';
+import JsonLd from '@/components/JsonLd';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-vienna-va',
-  title: 'Deck Builder in Vienna VA | Custom Decks | LDN Decks',
-  description: 'Top-rated deck builder serving Vienna, VA. 5.0★ Google (41 reviews). Custom Trex & TimberTech decks, screened porches. Free estimate. Call (571) 655-7207.',
+  title: 'Deck Builder in Vienna VA | Custom Composite Decks',
+  description: 'Top-rated deck builder in Vienna, VA. 5.0★ Google. Custom Trex & TimberTech decks, screened porches & pergolas. Town of Vienna permit experts. Free estimate.',
+  image: '/images/img37.jpeg',
 });
 
-const faqSchema = {
-  "@context": "https://schema.org", "@type": "FAQPage",
-  mainEntity: [
-    { "@type": "Question", name: "How much does a deck cost in Vienna, VA?", acceptedAnswer: { "@type": "Answer", text: "Most Vienna deck projects range from $25,000-$65,000. Composite decks average $40-$65/sqft installed. Vienna's mix of townhomes and single-family homes means project sizes vary widely from 200 sqft townhome decks to 500+ sqft estate builds." } },
-    { "@type": "Question", name: "Do I need a permit for a deck in Vienna?", acceptedAnswer: { "@type": "Answer", text: "The Town of Vienna has its own building department (separate from Fairfax County) for properties within town limits. Properties in the Vienna zip code but outside town limits fall under Fairfax County. We determine which jurisdiction applies and handle all permitting." } },
-    { "@type": "Question", name: "Do Vienna HOAs allow composite decks?", acceptedAnswer: { "@type": "Answer", text: "Most Vienna HOAs allow and even prefer composite decking because it maintains a consistent appearance over time. We check your specific HOA guidelines before material selection." } },
-  ],
+const inclusions = [
+  {
+    title: "Town of Vienna Experts",
+    desc: "We navigate the unique building department requirements of the Town of Vienna, ensuring faster permit approvals for your project."
+  },
+  {
+    title: "Fairfax Luxury Standards",
+    desc: "Building high-end outdoor spaces that match the premium real estate of Vienna, Windover Heights, and Tysons Woods."
+  },
+  {
+    title: "Full Project Management",
+    desc: "From initial CAD designs to HOA submissions and final county inspections, we handle the entire process in Vienna."
+  }
+];
+
+const viennaFAQs = [
+  {
+    q: "How much does a custom deck cost in Vienna, VA?",
+    a: "Most professional deck projects in Vienna range from $25,000 to $65,000. Composite decks (Trex/AZEK) typically average between $40 and $65 per square foot installed, depending on structural needs and railing choices."
+  },
+  {
+    q: "Do I need a permit for a deck in the Town of Vienna?",
+    a: "Yes. If your property is within the Town of Vienna limits, you need a permit from the Town's building department. If you are in the Vienna zip code but outside town limits, you fall under Fairfax County. We handle the process for both."
+  },
+  {
+    q: "Do HOAs in Vienna allow composite decking?",
+    a: "Yes, nearly all Vienna HOAs (like those in Vienna Woods or Country Creek) approve and often prefer composite decking due to its consistent appearance and lack of maintenance issues over time."
+  },
+  {
+    q: "How long does it take to build a deck in Vienna?",
+    a: "Permit review usually takes 2-4 weeks. Once the permit is issued, construction of a standard composite deck typically takes 1-2 weeks. Screened porches or multi-level projects may take 3-4 weeks."
+  },
+  {
+    q: "Are you a licensed deck builder in Fairfax County?",
+    a: "Yes, Loudoun Decks is a Class A licensed contractor, fully insured, and carries specialized certifications from Trex (Platinum Partner) and TimberTech."
+  }
+];
+
+const viennaFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": viennaFAQs.map(({ q, a }) => ({
+    "@type": "Question",
+    "name": q,
+    "acceptedAnswer": { "@type": "Answer", "text": a }
+  }))
 };
 
-const S = { h2: { fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }, p: { marginBottom: '1rem', lineHeight: 1.7 } };
+const expansionSections = [
+  {
+    title: "Vienna's Choice for Premium Outdoor Living",
+    paragraphs: [
+      "Vienna, VA is a community that values quality, tradition, and well-maintained properties. As a premier deck builder in Vienna, Loudoun Decks understands that a deck is more than just an add-on; it is a critical extension of your home's value and your family's lifestyle. From the historic charm of Windover Heights to the modern renovations in Tysons Woods, we build outdoor spaces that stand the test of time.",
+      "We specialize in 'Full Projects Only,' meaning we manage the design, the structural engineering, the permitting, and the final 5-Star build. Our clients in Vienna expect precision, and that is exactly what we deliver. We utilize advanced materials like Trex Transcend and TimberTech Vintage to ensure your deck remains as beautiful as the day it was finished, with no need for the sanding and staining required by traditional wood decks.",
+      "Whether you are looking to replace a 20-year-old pressure-treated deck or you are designing a brand-new outdoor oasis from scratch, our team provides the local expertise and craftsmanship necessary to navigate Vienna's unique regulatory environment."
+    ]
+  },
+  {
+    title: "Navigating Vienna & Fairfax County Regulations",
+    paragraphs: [
+      "Building in Vienna requires a deep understanding of local zoning and building codes. If your home is within the Town of Vienna limits, your project must go through the Town's specific building department. This often involves a faster review cycle but requires precise adherence to town-specific setbacks and height restrictions. Our team has built many projects within town limits and knows exactly how to get your plans approved efficiently.",
+      "For homes in the greater Vienna area that fall under Fairfax County jurisdiction, we utilize our years of experience with the Fairfax County Land Development Services (LDS) portal. We ensure every footing, every ledger connection, and every railing detail meets or exceeds the current building codes. We handle the 100% of the paperwork so you can focus on choosing your materials and design.",
+      "Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. We take pride in our 100% permit approval rate across all NoVA jurisdictions, including the sometimes complex requirements of Vienna HOAs."
+    ],
+    listItems: [
+      { label: "Town of Vienna Specialist", text: "Expertise in navigating the Town's specific building department and zoning rules." },
+      { label: "Fairfax County Compliant", text: "All projects outside town limits are built to the highest Fairfax County safety standards." },
+      { label: "HOA Submission Management", text: "We provide full CAD drawings and site plans for your HOA's architectural review board." },
+      { label: "Licensed & Insured", text: "Class A Contractor status with full workers' comp and liability coverage for your protection." }
+    ]
+  },
+  {
+    title: "Custom Designs for Vienna Neighborhoods",
+    paragraphs: [
+      "Every neighborhood in Vienna has its own 'vibe' and structural requirements. In neighborhoods with smaller lots, like Vienna Woods, we specialize in high-efficiency deck designs that maximize usable space without overwhelming the backyard. In areas with larger estates, like near Wolf Trap, we often build multi-level masterpieces featuring screened porches, outdoor kitchens, and integrated fire pits.",
+      "Our featured Vienna projects often include the Trex Signature Aluminum railing in Charcoal Black—a sleek, modern look that is incredibly popular among Vienna homeowners for its slim profile and high-end feel. Combined with a multi-tonal composite board like Trex Transcend Spiced Rum or Island Mist, your deck will be the envy of the neighborhood.",
+      "We also specialize in deck resurfacing in Vienna. If your existing deck frame is structurally sound, we can save you significant time and money by replacing only the surface boards and railings with premium composite. This is a perfect option for the many well-built homes in Vienna that just need an aesthetic and maintenance upgrade."
+    ]
+  },
+  {
+    title: "The Financial ROI of a 5-Star Deck in Vienna",
+    paragraphs: [
+      "In the competitive Vienna and Tysons Corner real estate markets, curb appeal and outdoor amenities are top priorities for buyers. A professionally installed composite deck by a 5-Star rated builder is one of the highest ROI investments you can make in your home. It expands your living square footage for a fraction of the cost of an indoor addition.",
+      "Moreover, by choosing low-maintenance materials, you are saving thousands of dollars over the lifespan of the deck. Traditional wood decks in Virginia's humid climate require professional staining every 2 years—a cost that can easily exceed $8,000 over a decade. A composite deck by Loudoun Decks eliminates these costs, paying for its premium price point in just a few short years.",
+      "Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. We are committed to building high-value, high-performance decks that enhance your lifestyle and your property value in the heart of Northern Virginia."
+    ]
+  }
+];
 
 export default function ViennaDeckBuilderPage() {
   return (
-    <>
-      <JsonLd data={faqSchema} />
-      <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
-        <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-          <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
-            <Image
-              src="/images/img37.jpeg"
-              alt="Premium custom deck built by LDN Decks in Vienna, Virginia"
-              fill
-              style={{ objectFit: 'cover' }}
-              sizes="(max-width: 900px) 100vw, 900px"
-              priority
-            />
-          </div>
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Vienna Luxury Outdoor Living in the Heart of Fairfax</h2>
-          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Composite decks, screened porches &amp; outdoor living for Vienna homeowners</p>
-          <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-            <a href="tel:+15716557207" style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</a>
-            <Link href="/contact" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Estimate</Link>
-          </div>
-          <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#aaa' }}>★★★★★ 5.0 on Google · 41 reviews · Licensed &amp; Insured · 5-Year Warranty</p>
+    <main>
+      <JsonLd data={viennaFaqSchema} />
+      <ServicesHeader
+        subtext="Vienna, VA's #1 Rated Builder"
+        title="Custom Deck Builder in Vienna, VA"
+        description="Loudoun Decks builds premium composite and wood decks in Vienna, Tysons, and across Fairfax County. Trex Platinum Partner. 5-Star Google Rated."
+      />
+
+      {/* Pricing Anchor - Conversion Filtering */}
+      <section style={{ backgroundColor: '#fff5f2', padding: '24px 20px', borderBottom: '1px solid #ffdbd1' }}>
+        <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
+          <p style={{ fontSize: '16px', color: '#d14817', margin: 0, fontWeight: '500' }}>
+            <strong style={{ color: '#111', fontSize: '18px' }}>Project Minimum: $5,000+</strong>
+            <br />
+            We specialize in <strong style={{ color: '#111' }}>full builds and large scale projects</strong> only. 
+            We do <strong style={{ color: '#111' }}>NOT</strong> offer small repairs or minor fixes.
+          </p>
         </div>
       </section>
-      <article style={{ padding: '4rem 0' }}>
-        <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
 
-          <h2 style={S.h2}>Why Vienna Homeowners Choose Loudoun Decks</h2>
-          <p style={S.p}>Vienna combines established neighborhoods with newer developments, creating diverse outdoor living needs. Whether you&apos;re replacing an aging wood deck in Tysons Woods or building a new composite deck in a Vienna single-family home, we deliver the quality and attention to detail that Vienna properties deserve.</p>
-          <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Town of Vienna + Fairfax County expertise:</strong> We know which jurisdiction applies to your property and handle permitting accordingly</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Neighborhood familiarity:</strong> We&apos;ve built in Tysons Woods, Vienna Woods, Windover Heights, Country Creek, and many other Vienna communities</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Right-sized projects:</strong> From compact townhome decks (200 sqft) to spacious single-family builds (500+ sqft)</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Premium materials:</strong> Trex Transcend, TimberTech, AZEK composite decking that matches Vienna&apos;s well-maintained aesthetic</li>
-          </ul>
-
-          <h2 style={S.h2}>Services in Vienna</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
-            {[
-              { title: 'New Composite Decks', range: '$20k–$50k', link: '/services/new-decks' },
-              { title: 'Deck Resurfacing', range: '$12k–$30k', link: '/services/deck-resurfacing' },
-              { title: 'Screened Porches', range: '$25k–$60k', link: '/services/porches' },
-              { title: 'Pergolas & Gazebos', range: '$10k–$30k', link: '/services/gazebo-pergola' },
-              { title: 'Fencing', range: '$5k–$15k', link: '/services/fence' },
-              { title: 'Deck Staining', range: '$600–$2,000', link: '/deck-staining-northern-virginia' },
-            ].map((item) => (
-              <Link key={item.title} href={item.link} style={{ display: 'block', background: '#f9f9f9', borderRadius: 8, padding: '1rem', textDecoration: 'none', color: 'inherit' }}>
-                <h3 style={{ fontWeight: 600, marginBottom: '0.25rem', fontSize: '0.95rem' }}>{item.title}</h3>
-                <p style={{ fontSize: '0.85rem', color: 'var(--color-primary)', fontWeight: 600 }}>{item.range}</p>
-              </Link>
-            ))}
-          </div>
-
-          <h2 style={S.h2}>Featured Vienna Project</h2>
-          <div style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', marginBottom: '2rem' }}>
-            <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>$36,000 380 sqft Trex Transcend Deck, Vienna Woods</h3>
-            <p style={{ lineHeight: 1.7 }}>Single-level composite deck replacing a 15-year-old pressure-treated original. Trex Transcend in Spiced Rum with Trex Signature railings in Charcoal Black, 6 integrated stair lights, and a built-in planter box. Town of Vienna building permit. HOA approved in one submission. 3-week build.</p>
-          </div>
-
-          <h2 style={S.h2}>Vienna Permitting</h2>
-          <p style={S.p}><strong>Town of Vienna:</strong> Properties within the Town of Vienna limits have their own building department at Vienna Town Hall. Plan review is typically faster than Fairfax County 1-3 weeks for standard deck plans.</p>
-          <p style={S.p}><strong>Fairfax County:</strong> Properties in the 22180/22182 zip codes but outside town limits fall under Fairfax County&apos;s building department. Plan review: 3-6 weeks. <Link href="/deck-permit-fairfax-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Read our Fairfax County permit guide</Link>.</p>
-          <p style={S.p}><strong>Not sure which applies?</strong> Tell us your address we&apos;ll determine jurisdiction and handle everything.</p>
-
-          <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>FAQ</h2>
-          {[
-            { q: "How much does a deck cost in Vienna?", a: "$25,000-$65,000 for most projects. Composite decks: $40-$65/sqft installed." },
-            { q: "Do I need a permit?", a: "Yes. Town of Vienna or Fairfax County depending on your exact location. We determine which and handle everything." },
-            { q: "Do HOAs allow composite?", a: "Most Vienna HOAs prefer composite for consistent appearance. We check your specific guidelines." },
-          ].map((faq, i) => (
-            <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
-              <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>
-              <p style={{ marginTop: '1rem', lineHeight: 1.7, color: '#555' }}>{faq.a}</p>
-            </details>
-          ))}
-
-          <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Also Serving Nearby</h2>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '2rem' }}>
-            {[
-              ['/deck-builder-mclean-va', 'McLean'],
-              ['/deck-builder-great-falls-va', 'Great Falls'],
-              ['/near-you/fairfax-county/oakton', 'Oakton'],
-              ['/near-you/fairfax-county/fairfax', 'Fairfax'],
-              ['/near-you/fairfax-county/tysons', 'Tysons'],
-              ['/near-you/fairfax-county/falls-church', 'Falls Church'],
-              ['/near-you/fairfax-county/reston', 'Reston'],
-            ].map(([href, text]) => (
-              <Link key={href} href={href} style={{ padding: '0.4rem 0.8rem', border: '1px solid #e5e5e5', borderRadius: 20, fontSize: '0.9rem', textDecoration: 'none', color: 'var(--color-dark)' }}>{text}</Link>
-            ))}
-          </div>
+      <ServiceMain
+        subtitle="Vienna's Trusted Choice"
+        title="Deck Builder Vienna VA - Premium Craftsmanship"
+        description="We build the outdoor spaces Vienna homeowners are proud to show off. Custom designs, Town of Vienna permit expertise, and premium materials from $25k+."
+        listItems={[
+          "Trex Platinum & TimberTech Certified",
+          "Town of Vienna building permit experts",
+          "Custom multi-level and single-level designs",
+          "Screened porches, pergolas & outdoor kitchens",
+          "5-Star Google Rated - call (571) 655-7207"
+        ]}
+        image1="/images/img37.jpeg"
+        image2="/images/img38.jpeg"
+      />
+      <ServiceContentExpansion sections={expansionSections} />
+      
+      <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
+        <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
+          <Image
+            src="/images/img31.jpeg"
+            alt="Premium custom deck built by LDN Decks in Vienna, Virginia"
+            fill
+            style={{ objectFit: 'cover' }}
+            sizes="(max-width: 900px) 100vw, 900px"
+          />
         </div>
-      </article>
-      <SimpleCTA title="Get Your Vienna Deck Quote" buttonText="Get Free Estimate" link="/contact" />
+        <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Vienna Luxury Outdoor Living in the Heart of Fairfax</h2>
+        <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>
+          Our featured Vienna project includes a <strong>$36,000 380 sqft Trex Transcend Deck</strong> in Vienna Woods. 
+          This project replaced a 15-year-old pressure-treated deck with a modern composite sanctuary featuring 
+          Trex Signature railings and integrated LED lighting. We handled the full Town of Vienna building permit 
+          and HOA approval process, completing the build in just 3 weeks.
+        </p>
+      </div>
+
+      <ServiceInclusions
+        title="Why Vienna Homeowners Choose Loudoun Decks"
+        description="Local knowledge, premium materials, and a process built for Vienna properties."
+        items={inclusions}
+      />
+      <ProcessSteps />
+      <ServicesFAQ
+        title="Deck Builder Vienna VA - FAQs"
+        faqs={viennaFAQs}
+      />
+      <ServiceAreasGrid />
+      <SimpleCTA title="Build Your Dream Deck in Vienna" buttonText="Get Free Estimate" link="/contact" />
       <RelatedGuides currentPath="/deck-builder-vienna-va" />
       <ContactHome />
-    </>
+    </main>
   );
 }

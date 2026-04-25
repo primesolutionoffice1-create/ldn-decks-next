@@ -61,18 +61,11 @@ const MinusIcon = () => (
   </svg>
 );
 
-const loudounCities = ["Ashburn", "Leesburg", "Sterling", "Aldie", "Middleburg", "Round Hill", "Purcellville", "Lovettsville", "Hamilton", "Waterford", "Brambleton", "South Riding", "Stone Ridge", "Broadlands"];
-const fairfaxCities = ["Alexandria", "Fairfax", "Vienna", "Reston", "Herndon", "Mclean", "Falls Church", "Annandale", "Burke", "Springfield", "Chantilly", "Centreville", "Oakton", "Great Falls", "Lorton", "Tysons", "West Springfield"];
-const pwcCities = ["Woodbridge", "Dumfries", "Quantico", "Haymarket", "Gainesville", "Bristow", "Nokesville", "Lake Ridge", "Montclair"];
+import { counties, slugify } from '@/data/cityData';
 
-const slugify = (text) => {
-  return text.toString().toLowerCase()
-    .replace(/\s+/g, '-')
-    .replace(/[^\w\-]+/g, '')
-    .replace(/\-\-+/g, '-')
-    .replace(/^-+/, '')
-    .replace(/-+$/, '');
-};
+
+// Using slugify imported from cityData
+
 
 import { useContact } from '@/context/ContactContext';
 import { trackPhoneClick } from '@/lib/tracking';
@@ -241,38 +234,19 @@ export default function Header() {
                 <div className={styles.navItem}>
                   <Link href="/near-you" className={isActive("/near-you")}>Near You <CaretDownIcon /></Link>
                   <div className={styles.dropdown}>
-                    <div className={styles.nestedNavItem}>
-                      <Link href="/near-you/loudoun-county" onClick={() => setActiveSubMenu({})}>
-                        Loudoun County <CaretRightIcon />
-                      </Link>
-                      <div className={styles.subMenu}>
-                        {loudounCities.map(city => (
-                          <Link key={city} href={`/near-you/loudoun-county/${slugify(city)}`} onClick={() => setIsMobileOpen(false)}>{city}, VA</Link>
-                        ))}
+                    {Object.entries(counties).map(([countySlug, county]) => (
+                      <div key={countySlug} className={styles.nestedNavItem}>
+                        <Link href={`/near-you/${countySlug}`} onClick={() => setActiveSubMenu({})}>
+                          {county.name} <CaretRightIcon />
+                        </Link>
+                        <div className={styles.subMenu}>
+                          {county.cities.slice(0, 15).map(city => (
+                            <Link key={city} href={`/near-you/${countySlug}/${slugify(city)}`} onClick={() => setIsMobileOpen(false)}>{city}, VA</Link>
+                          ))}
+                        </div>
                       </div>
-                    </div>
+                    ))}
 
-                    <div className={styles.nestedNavItem}>
-                      <Link href="/near-you/fairfax-county" onClick={() => setActiveSubMenu({})}>
-                        Fairfax County <CaretRightIcon />
-                      </Link>
-                      <div className={styles.subMenu}>
-                        {fairfaxCities.map(city => (
-                          <Link key={city} href={`/near-you/fairfax-county/${slugify(city)}`} onClick={() => setIsMobileOpen(false)}>{city}, VA</Link>
-                        ))}
-                      </div>
-                    </div>
-
-                    <div className={styles.nestedNavItem}>
-                      <Link href="/near-you/prince-william-county" onClick={() => setActiveSubMenu({})}>
-                        Prince William County <CaretRightIcon />
-                      </Link>
-                      <div className={styles.subMenu}>
-                        {pwcCities.map(city => (
-                          <Link key={city} href={`/near-you/prince-william-county/${slugify(city)}`} onClick={() => setIsMobileOpen(false)}>{city}, VA</Link>
-                        ))}
-                      </div>
-                    </div>
                   </div>
                 </div>
 
@@ -438,62 +412,28 @@ export default function Header() {
             <div className={`${styles.drawerAccordion} ${openDropdown === 'near' ? styles.expanded : ''}`}>
                <div className={styles.drawerAccordionInner}>
                 <div className={styles.mobileDropdown}>
-                  {/* Loudoun County */}
-                  <div 
-                    className={styles.mobileNavLink} 
-                    onClick={(e) => { e.stopPropagation(); toggleSubMenu('loudoun'); }}
-                    style={{ fontSize: '14px', fontWeight: '500', padding: '10px 20px 10px 30px', background: 'transparent' }}
-                  >
-                    <Link href="/near-you/loudoun-county" onClick={() => setIsMobileOpen(false)} style={{ padding: 0 }}>Loudoun County</Link>
-                    {activeSubMenu['loudoun'] ? <MinusIcon /> : <PlusIcon />}
-                  </div>
-                  <div className={`${styles.drawerAccordion} ${activeSubMenu['loudoun'] ? styles.expanded : ''}`}>
-                    <div className={styles.drawerAccordionInner}>
-                      <div className={styles.mobileDropdown} style={{ background: 'transparent' }}>
-                        {loudounCities.map(city => (
-                          <Link key={city} href={`/near-you/loudoun-county/${slugify(city)}`} onClick={() => setIsMobileOpen(false)} style={{ paddingLeft: '50px', fontSize: '13px' }}>- {city}, VA</Link>
-                        ))}
+                  {Object.entries(counties).map(([countySlug, county]) => (
+                    <React.Fragment key={countySlug}>
+                      <div 
+                        className={styles.mobileNavLink} 
+                        onClick={(e) => { e.stopPropagation(); toggleSubMenu(countySlug); }}
+                        style={{ fontSize: '14px', fontWeight: '500', padding: '10px 20px 10px 30px', background: 'transparent' }}
+                      >
+                        <Link href={`/near-you/${countySlug}`} onClick={() => setIsMobileOpen(false)} style={{ padding: 0 }}>{county.name}</Link>
+                        {activeSubMenu[countySlug] ? <MinusIcon /> : <PlusIcon />}
                       </div>
-                    </div>
-                  </div>
+                      <div className={`${styles.drawerAccordion} ${activeSubMenu[countySlug] ? styles.expanded : ''}`}>
+                        <div className={styles.drawerAccordionInner}>
+                          <div className={styles.mobileDropdown} style={{ background: 'transparent' }}>
+                            {county.cities.slice(0, 15).map(city => (
+                              <Link key={city} href={`/near-you/${countySlug}/${slugify(city)}`} onClick={() => setIsMobileOpen(false)} style={{ paddingLeft: '50px', fontSize: '13px' }}>- {city}, VA</Link>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    </React.Fragment>
+                  ))}
 
-                  {/* Fairfax County */}
-                  <div 
-                    className={styles.mobileNavLink} 
-                    onClick={(e) => { e.stopPropagation(); toggleSubMenu('fairfax'); }}
-                    style={{ fontSize: '14px', fontWeight: '500', padding: '10px 20px 10px 30px', background: 'transparent' }}
-                  >
-                    <Link href="/near-you/fairfax-county" onClick={() => setIsMobileOpen(false)} style={{ padding: 0 }}>Fairfax County</Link>
-                    {activeSubMenu['fairfax'] ? <MinusIcon /> : <PlusIcon />}
-                  </div>
-                  <div className={`${styles.drawerAccordion} ${activeSubMenu['fairfax'] ? styles.expanded : ''}`}>
-                    <div className={styles.drawerAccordionInner}>
-                      <div className={styles.mobileDropdown} style={{ background: 'transparent' }}>
-                        {fairfaxCities.map(city => (
-                          <Link key={city} href={`/near-you/fairfax-county/${slugify(city)}`} onClick={() => setIsMobileOpen(false)} style={{ paddingLeft: '50px', fontSize: '13px' }}>- {city}, VA</Link>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Prince William County */}
-                  <div 
-                    className={styles.mobileNavLink} 
-                    onClick={(e) => { e.stopPropagation(); toggleSubMenu('pwc'); }}
-                    style={{ fontSize: '14px', fontWeight: '500', padding: '10px 20px 10px 30px', background: 'transparent' }}
-                  >
-                    <Link href="/near-you/prince-william-county" onClick={() => setIsMobileOpen(false)} style={{ padding: 0 }}>Prince William County</Link>
-                    {activeSubMenu['pwc'] ? <MinusIcon /> : <PlusIcon />}
-                  </div>
-                  <div className={`${styles.drawerAccordion} ${activeSubMenu['pwc'] ? styles.expanded : ''}`}>
-                    <div className={styles.drawerAccordionInner}>
-                      <div className={styles.mobileDropdown} style={{ background: 'transparent' }}>
-                        {pwcCities.map(city => (
-                          <Link key={city} href={`/near-you/prince-william-county/${slugify(city)}`} onClick={() => setIsMobileOpen(false)} style={{ paddingLeft: '50px', fontSize: '13px' }}>- {city}, VA</Link>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>

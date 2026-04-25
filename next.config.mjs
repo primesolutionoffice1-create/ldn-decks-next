@@ -143,10 +143,18 @@ const nextConfig = {
       { source: '/deck-projects-showcase', destination: '/showcase', permanent: true },
       { source: '/deck-projects-showcase/:path*', destination: '/showcase', permanent: true },
 
-              // Legacy WordPress image redirects (broken 404s from old WP upload paths)
+      // Major City Page Consolidation (Redirect dynamic to static SEO-optimized)
+      { source: '/near-you/loudoun-county/ashburn', destination: '/deck-builder-ashburn-va', permanent: true },
+      { source: '/near-you/loudoun-county/leesburg', destination: '/deck-builder-leesburg-va', permanent: true },
+      { source: '/near-you/fairfax-county/vienna', destination: '/deck-builder-vienna-va', permanent: true },
+      { source: '/near-you/fairfax-county/mclean', destination: '/deck-builder-mclean-va', permanent: true },
+      { source: '/near-you/prince-william-county/woodbridge', destination: '/deck-builder-woodbridge-va', permanent: true },
+      { source: '/near-you/fairfax-county/chantilly', destination: '/deck-builder-chantilly-va', permanent: true },
+
+      // Legacy WordPress image redirects (broken 404s from old WP upload paths)
       { source: '/wp-content/uploads/2024/09/ldndecks-logo-new-e1731874431860.webp', destination: '/ldndecks-logo.webp', permanent: true },
-  { source: '/wp-content/uploads/2024/09/ldndecks-logo-new.png', destination: '/ldndecks-logo.webp', permanent: true },
-{ source: '/wp-content/:path*', destination: '/', permanent: true },
+      { source: '/wp-content/uploads/2024/09/ldndecks-logo-new.png', destination: '/ldndecks-logo.webp', permanent: true },
+      { source: '/wp-content/:path*', destination: '/', permanent: true },
     ];
   },
   async headers() {

@@ -14,6 +14,7 @@ import ContactMap from "@/components/ContactMap";
 import ContactHome from "@/components/ContactHome";
 import RelatedGuides from "@/components/RelatedGuides";
 import HomeQuickLinks from "@/components/HomeQuickLinks";
+import HomeSEOContent from "@/components/HomeSEOContent";
 import JsonLd from "@/components/JsonLd";
 import styles from "./page.module.css";
 import { buildMetadata } from "@/lib/seo";
@@ -107,6 +108,7 @@ export default function Home() {
             <HandCraftedDecks />
             <ServicesHome />
             <Testimonials />
+            <HomeSEOContent />
             <HomeQuickLinks />
             <FAQ />
             <TrustLogos />

@@ -128,6 +128,18 @@ export default function CompositeDecksPage() {
         description="Loudoun Decks is the premier composite deck builder in Loudoun County, Fairfax County, and Prince William County. High-performance, low-maintenance outdoor luxury."
       />
 
+      {/* Pricing Anchor - Conversion Filtering */}
+      <section style={{ backgroundColor: '#fff5f2', padding: '24px 20px', borderBottom: '1px solid #ffdbd1' }}>
+        <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
+          <p style={{ fontSize: '16px', color: '#d14817', margin: 0, fontWeight: '500' }}>
+            <strong style={{ color: '#111', fontSize: '18px' }}>Project Minimum: $5,000+</strong>
+            <br />
+            We specialize in <strong style={{ color: '#111' }}>full builds and large scale projects</strong> only. 
+            We do <strong style={{ color: '#111' }}>NOT</strong> offer small repairs or minor fixes.
+          </p>
+        </div>
+      </section>
+
       <ServiceMain 
         subtitle="Built for Life"
         title="Expert Composite Deck Contractor Serving NoVA"

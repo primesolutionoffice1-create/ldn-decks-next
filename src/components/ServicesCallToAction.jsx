@@ -12,9 +12,14 @@ export default function ServicesCallToAction() {
         <p className={styles.description}>
           Get in touch with our experts today to schedule your free consultation and transform your outdoor living space.
         </p>
-        <a href="tel:+15716557207" className={styles.ctaButton} onClick={trackPhoneClick}>
-          Call Now: (571) 655-7207
-        </a>
+        <div className={styles.buttonGroup}>
+          <a href="tel:+15716557207" className={styles.phoneButton} onClick={trackPhoneClick}>
+            Call Now: (571) 655-7207
+          </a>
+          <Link href="/contact" className={styles.estimateButton}>
+            Get Free Estimate
+          </Link>
+        </div>
       </div>
     </section>
   );

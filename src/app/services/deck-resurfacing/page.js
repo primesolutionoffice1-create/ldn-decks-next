@@ -119,13 +119,14 @@ export default function DeckResurfacingPage() {
         description="Don't tear down a structurally sound deck. Transform your outdated outdoor space into a premium retreat with high-end TimberTech Vintage Collection composite boards—engineered for beauty, durability, and a lifetime of performance."
       />
 
-      {/* Pricing Anchor */}
-      <section style={{ backgroundColor: '#f9f9f9', padding: '24px 20px', borderBottom: '1px solid #eee' }}>
+      {/* Pricing Anchor - Conversion Filtering */}
+      <section style={{ backgroundColor: '#fff5f2', padding: '24px 20px', borderBottom: '1px solid #ffdbd1' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
-          <p style={{ fontSize: '16px', color: '#555', margin: 0 }}>
-            <strong style={{ color: '#222' }}>Deck resurfacing projects typically start at $12,000+</strong>
-            {' '}— materials, deck size, structural condition, and railing upgrades affect final pricing.{' '}
-            <strong>Free structural evaluation included.</strong>
+          <p style={{ fontSize: '16px', color: '#d14817', margin: 0, fontWeight: '500' }}>
+            <strong style={{ color: '#111', fontSize: '18px' }}>Project Minimum: $5,000+</strong>
+            <br />
+            We specialize in <strong style={{ color: '#111' }}>full builds and large scale projects</strong> only. 
+            We do <strong style={{ color: '#111' }}>NOT</strong> offer small repairs or minor fixes.
           </p>
         </div>
       </section>

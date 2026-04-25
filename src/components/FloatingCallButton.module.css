@@ -1,12 +1,12 @@
 .floatingBtn {
-  display: none;
+  display: flex;
   position: fixed;
   bottom: 100px;
   right: 40px;
   width: 55px;
   height: 55px;
   background-color: var(--button-color, #E65C2B);
-  color: var(--white, #ffffff);
+  color: #ffffff;
   border-radius: 50%;
   align-items: center;
   justify-content: center;
@@ -27,6 +27,7 @@
   align-items: center;
   justify-content: center;
   animation: vibrate 3s infinite ease-in-out;
+  color: #ffffff;
 }
 
 @keyframes vibrate {
@@ -53,7 +54,6 @@
 
 @media screen and (max-width: 1024px) {
   .floatingBtn {
-    display: flex;
     bottom: 85px; /* Offsets smoothly above the ScrollToTop button */
     right: 25px;
     width: 50px;

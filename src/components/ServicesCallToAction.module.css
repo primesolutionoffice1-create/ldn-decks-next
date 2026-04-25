@@ -25,21 +25,46 @@
   max-width: 600px;
 }
 
-.ctaButton {
+.buttonGroup {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.phoneButton, .estimateButton {
   display: inline-block;
-  background-color: var(--site-color);
-  color: var(--white);
   padding: 16px 36px;
   font-size: 18px;
   font-weight: 700;
-  border-radius: 4px;
+  border-radius: 8px;
   text-decoration: none;
-  transition: transform 0.3s, background-color 0.3s;
+  transition: all 0.3s ease;
+  min-width: 240px;
 }
 
-.ctaButton:hover {
+.phoneButton {
+  background-color: var(--site-color);
+  color: var(--white);
+  box-shadow: 0 4px 14px rgba(209, 72, 23, 0.25);
+}
+
+.phoneButton:hover {
   transform: translateY(-2px);
   background-color: var(--button-hover-color);
+  box-shadow: 0 6px 20px rgba(209, 72, 23, 0.35);
+}
+
+.estimateButton {
+  background-color: var(--black);
+  color: var(--white);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+.estimateButton:hover {
+  transform: translateY(-2px);
+  background-color: #333;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
 }
 
 @media screen and (max-width: 768px) {

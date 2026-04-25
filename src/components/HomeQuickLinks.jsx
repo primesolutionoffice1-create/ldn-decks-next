@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 import Link from 'next/link';
 
@@ -44,32 +45,66 @@ export default function HomeQuickLinks() {
         <p style={{ textAlign: 'center', color: '#666', marginBottom: '2.5rem', fontSize: '1rem' }}>
           Everything you need to plan your deck project in Northern Virginia
         </p>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.25rem' }}>
+        <div className="quick-links-grid">
           {links.map(({ href, title, desc }) => (
             <Link
               key={href}
               href={href}
-              style={{
-                display: 'block',
-                background: '#fff',
-                borderRadius: '10px',
-                padding: '1.5rem',
-                textDecoration: 'none',
-                color: 'inherit',
-                border: '1px solid #e5e5e5',
-                transition: 'border-color 0.2s, box-shadow 0.2s',
-              }}
+              className="quick-link-card"
             >
-              <h3 style={{ fontSize: '1.05rem', fontWeight: 600, marginBottom: '0.4rem', color: 'var(--color-dark)' }}>
+              <h3 className="quick-link-title">
                 {title}
               </h3>
-              <p style={{ fontSize: '0.85rem', color: '#666', lineHeight: 1.5, margin: 0 }}>
+              <p className="quick-link-desc">
                 {desc}
               </p>
             </Link>
           ))}
         </div>
       </div>
+      <style jsx>{`
+        .quick-links-grid {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          gap: 1.25rem;
+        }
+        @media (min-width: 768px) {
+          .quick-links-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+        @media (min-width: 1024px) {
+          .quick-links-grid {
+            grid-template-columns: repeat(3, 1fr);
+          }
+        }
+        .quick-link-card {
+          display: block;
+          background: #fff;
+          border-radius: 10px;
+          padding: 1.5rem;
+          text-decoration: none;
+          color: inherit;
+          border: 1px solid #e5e5e5;
+          transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        .quick-link-card:hover {
+          border-color: var(--color-primary);
+          box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        .quick-link-title {
+          font-size: 1.05rem;
+          font-weight: 600;
+          margin-bottom: 0.4rem;
+          color: var(--color-dark);
+        }
+        .quick-link-desc {
+          font-size: 0.85rem;
+          color: #666;
+          line-height: 1.5;
+          margin: 0;
+        }
+      `}</style>
     </section>
   );
 }

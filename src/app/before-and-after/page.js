@@ -18,7 +18,7 @@ export const metadata = buildMetadata({
 const imageGallerySchema = {
   "@context": "https://schema.org",
   "@type": "ImageGallery",
-  "name": "Before & After Deck Projects — LDN Decks",
+  "name": "Before & After Deck Projects LDN Decks",
   "description": "Real before and after deck transformation photos from Loudoun Decks projects across Northern Virginia.",
   "url": "https://www.ldndecks.com/before-and-after",
   "publisher": {
@@ -33,19 +33,19 @@ const imageGallerySchema = {
     "provider": { "@type": "LocalBusiness", "name": "Loudoun Decks" }
   },
   "image": [
-    { "@type": "ImageObject", "url": "https://www.ldndecks.com/images/img04.jpeg", "name": "Deck resurfacing before and after — Sterling, VA", "description": "Worn pressure-treated wood deck transformed with Trex composite resurfacing in Sterling, Virginia." },
-    { "@type": "ImageObject", "url": "https://www.ldndecks.com/images/img10.jpeg", "name": "New composite deck build — Ashburn, VA", "description": "Bare backyard transformed into a custom Trex Transcend composite deck in Ashburn, Virginia." },
-    { "@type": "ImageObject", "url": "https://www.ldndecks.com/images/img01.jpeg", "name": "Custom deck installation — Reston, VA", "description": "Custom multi-level composite deck installation in Reston, Virginia." },
-    { "@type": "ImageObject", "url": "https://www.ldndecks.com/images/img05.jpeg", "name": "Balcony reconstruction — Chantilly, VA", "description": "Deteriorating balcony fully reconstructed with composite decking in Chantilly, Virginia." },
-    { "@type": "ImageObject", "url": "https://www.ldndecks.com/images/img03.jpeg", "name": "Deck construction — Manassas, VA", "description": "New deck construction replacing an old wooden structure in Manassas, Virginia." },
-    { "@type": "ImageObject", "url": "https://www.ldndecks.com/images/img07.jpeg", "name": "New deck build — Manassas, VA", "description": "Complete new deck build with composite decking and aluminum railings in Manassas, Virginia." },
+    { "@type": "ImageObject", "url": "https://www.ldndecks.com/images/img04.jpeg", "name": "Deck resurfacing before and after Sterling, VA", "description": "Worn pressure-treated wood deck transformed with Trex composite resurfacing in Sterling, Virginia." },
+    { "@type": "ImageObject", "url": "https://www.ldndecks.com/images/img10.jpeg", "name": "New composite deck build Ashburn, VA", "description": "Bare backyard transformed into a custom Trex Transcend composite deck in Ashburn, Virginia." },
+    { "@type": "ImageObject", "url": "https://www.ldndecks.com/images/img01.jpeg", "name": "Custom deck installation Reston, VA", "description": "Custom multi-level composite deck installation in Reston, Virginia." },
+    { "@type": "ImageObject", "url": "https://www.ldndecks.com/images/img05.jpeg", "name": "Balcony reconstruction Chantilly, VA", "description": "Deteriorating balcony fully reconstructed with composite decking in Chantilly, Virginia." },
+    { "@type": "ImageObject", "url": "https://www.ldndecks.com/images/img03.jpeg", "name": "Deck construction Manassas, VA", "description": "New deck construction replacing an old wooden structure in Manassas, Virginia." },
+    { "@type": "ImageObject", "url": "https://www.ldndecks.com/images/img07.jpeg", "name": "New deck build Manassas, VA", "description": "Complete new deck build with composite decking and aluminum railings in Manassas, Virginia." },
   ]
 };
 
 const projects = [
   {
     id: 1,
-    title: 'Deck Resurfacing — Wood to Trex Composite',
+    title: 'Deck Resurfacing Wood to Trex Composite',
     location: 'Sterling, VA',
     county: 'Loudoun County',
     date: 'December 2024',
@@ -53,7 +53,7 @@ const projects = [
     afterImg: '/images/img04.jpeg',
     beforeAlt: 'Faded and splintering pressure-treated wood deck before resurfacing in Sterling VA',
     afterAlt: 'Same deck after Trex composite resurfacing with new railings in Sterling VA',
-    material: 'Trex Enhance Naturals — Toasted Sand',
+    material: 'Trex Enhance Naturals Toasted Sand',
     size: '320 sqft',
     duration: '8 days',
     cost: '$19,000',
@@ -62,7 +62,7 @@ const projects = [
   },
   {
     id: 2,
-    title: 'New Composite Deck — Bare Yard to Outdoor Living Room',
+    title: 'New Composite Deck Bare Yard to Outdoor Living Room',
     location: 'Ashburn, VA',
     county: 'Loudoun County',
     date: 'October 2024',
@@ -70,7 +70,7 @@ const projects = [
     afterImg: '/images/img10.jpeg',
     beforeAlt: 'Empty grass backyard before deck construction in Ashburn VA',
     afterAlt: 'Finished Trex Transcend composite deck with furniture in Ashburn VA',
-    material: 'Trex Transcend — Havana Gold',
+    material: 'Trex Transcend Havana Gold',
     size: '400 sqft',
     duration: '2.5 weeks',
     cost: '$32,000',
@@ -87,16 +87,16 @@ const projects = [
     afterImg: '/images/img01.jpeg',
     beforeAlt: 'Old small wooden deck before replacement in Reston VA',
     afterAlt: 'New custom multi-level composite deck after completion in Reston VA',
-    material: 'Trex Transcend Lineage — Biscayne',
+    material: 'Trex Transcend Lineage Biscayne',
     size: '480 sqft (two levels)',
     duration: '3 weeks',
     cost: '$44,000',
     description: 'The original 180 sqft wood deck was undersized for this family of five. We demolished the old structure and built a two-level composite deck: upper dining level off the kitchen and a lower fire pit lounge stepping down toward the yard. Wide cascading stairs connect both levels with integrated riser lighting.',
-    highlight: 'Went from 180 sqft to 480 sqft — nearly 3x the usable outdoor space.',
+    highlight: 'Went from 180 sqft to 480 sqft nearly 3x the usable outdoor space.',
   },
   {
     id: 4,
-    title: 'Balcony Reconstruction — Rotted Framing to Composite',
+    title: 'Balcony Reconstruction Rotted Framing to Composite',
     location: 'Chantilly, VA',
     county: 'Fairfax County',
     date: 'November 2024',
@@ -104,16 +104,16 @@ const projects = [
     afterImg: '/images/img05.jpeg',
     beforeAlt: 'Deteriorating wooden balcony with rotted framing in Chantilly VA before reconstruction',
     afterAlt: 'Fully reconstructed composite balcony with new railings in Chantilly VA',
-    material: 'TimberTech Pro — Dark Roast',
+    material: 'TimberTech Pro Dark Roast',
     size: '160 sqft',
     duration: '10 days',
     cost: '$22,000',
-    description: 'This second-story balcony had severe structural rot in the ledger board and 3 supporting joists — a safety hazard the homeowner discovered during a routine inspection. We performed a full tear-down, installed new flashing and a code-compliant ledger connection, rebuilt the subframe with pressure-treated lumber, and surfaced with TimberTech Pro composite boards.',
+    description: 'This second-story balcony had severe structural rot in the ledger board and 3 supporting joists a safety hazard the homeowner discovered during a routine inspection. We performed a full tear-down, installed new flashing and a code-compliant ledger connection, rebuilt the subframe with pressure-treated lumber, and surfaced with TimberTech Pro composite boards.',
     highlight: 'Structural rot discovered during our $350 inspection likely prevented a collapse.',
   },
   {
     id: 5,
-    title: 'Complete Deck Replacement — PT Wood to AZEK',
+    title: 'Complete Deck Replacement PT Wood to AZEK',
     location: 'Manassas, VA',
     county: 'Prince William County',
     date: 'November 2024',
@@ -121,12 +121,12 @@ const projects = [
     afterImg: '/images/img03.jpeg',
     beforeAlt: 'Old warped pressure-treated deck before full replacement in Manassas VA',
     afterAlt: 'Brand new AZEK Vintage composite deck after replacement in Manassas VA',
-    material: 'TimberTech AZEK Vintage — English Walnut',
+    material: 'TimberTech AZEK Vintage English Walnut',
     size: '350 sqft',
     duration: '2 weeks',
     cost: '$38,000',
-    description: 'A 20-year-old pressure-treated deck that had been stained 8+ times but was beyond saving — multiple boards were soft, the stairs were wobbly, and the railing posts had separated from the frame. Full demolition, new concrete footings, rebuilt subframe, and premium AZEK polymer decking with cable railing for an unobstructed backyard view.',
-    highlight: 'AZEK\'s full PVC construction — zero wood content — means this deck will outlast the house.',
+    description: 'A 20-year-old pressure-treated deck that had been stained 8+ times but was beyond saving multiple boards were soft, the stairs were wobbly, and the railing posts had separated from the frame. Full demolition, new concrete footings, rebuilt subframe, and premium AZEK polymer decking with cable railing for an unobstructed backyard view.',
+    highlight: 'AZEK\'s full PVC construction zero wood content means this deck will outlast the house.',
   },
   {
     id: 6,
@@ -138,7 +138,7 @@ const projects = [
     afterImg: '/images/img07.jpeg',
     beforeAlt: 'Grass yard with old concrete pad before deck construction in Manassas VA',
     afterAlt: 'Completed new composite deck with attached cedar pergola in Manassas VA',
-    material: 'Trex Transcend — Spiced Rum + Cedar Pergola',
+    material: 'Trex Transcend Spiced Rum + Cedar Pergola',
     size: '420 sqft deck + 12x14 pergola',
     duration: '3 weeks',
     cost: '$48,000',
@@ -172,12 +172,12 @@ const projects = [
     afterImg: '/images/img25.jpeg',
     beforeAlt: 'Damaged wood pool deck before replacement in Great Falls VA',
     afterAlt: 'New AZEK pool deck with glass railings in Great Falls VA',
-    material: 'TimberTech AZEK Harvest — Slate Gray',
+    material: 'TimberTech AZEK Harvest Slate Gray',
     size: '500 sqft',
     duration: '3 weeks',
     cost: '$58,000',
-    description: 'The existing wood pool deck was warped, splintering, and a splinter hazard for barefoot kids. We replaced it with AZEK polymer decking — specifically chosen because its full PVC construction resists pool chemical splash, chlorine damage, and moisture penetration that destroys wood and even some composite boards. Glass panel railings maintain the sight line to the pool.',
-    highlight: 'AZEK\'s PVC core resists chlorine splash — critical for pool-adjacent installations.',
+    description: 'The existing wood pool deck was warped, splintering, and a splinter hazard for barefoot kids. We replaced it with AZEK polymer decking specifically chosen because its full PVC construction resists pool chemical splash, chlorine damage, and moisture penetration that destroys wood and even some composite boards. Glass panel railings maintain the sight line to the pool.',
+    highlight: 'AZEK\'s PVC core resists chlorine splash critical for pool-adjacent installations.',
   },
 ];
 
@@ -191,7 +191,7 @@ export default function BeforeAndAfterPage() {
     <>
       <JsonLd data={imageGallerySchema} />
       <ArticleSchema
-        title="Before & After Deck Projects — Northern Virginia"
+        title="Before & After Deck Projects Northern Virginia"
         description="Real before and after deck transformation photos from LDN Decks projects across Loudoun, Fairfax & Prince William counties."
         path="/before-and-after"
         image="/images/img04.jpeg"
@@ -203,7 +203,7 @@ export default function BeforeAndAfterPage() {
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Before &amp; After Deck Transformations</h1>
-          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Real projects from Loudoun, Fairfax &amp; Prince William counties — with costs, materials, and timelines</p>
+          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Real projects from Loudoun, Fairfax &amp; Prince William counties with costs, materials, and timelines</p>
           <p style={{ color: '#aaa', marginTop: '1rem', fontSize: '0.9rem' }}>5.0 on Google &middot; 41 reviews &middot; Trex Platinum Partner &middot; 5-Year Workmanship Warranty</p>
         </div>
       </section>
@@ -221,7 +221,7 @@ export default function BeforeAndAfterPage() {
       <article style={{ padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
 
-          <p style={S.p}>Every deck project starts somewhere — sometimes a bare backyard, sometimes a rotting 20-year-old structure that&apos;s become a safety hazard. Below are real transformations from our builds across Northern Virginia. Each project includes the materials used, total cost, timeline, and what made it unique.</p>
+          <p style={S.p}>Every deck project starts somewhere sometimes a bare backyard, sometimes a rotting 20-year-old structure that&apos;s become a safety hazard. Below are real transformations from our builds across Northern Virginia. Each project includes the materials used, total cost, timeline, and what made it unique.</p>
           <p style={{ ...S.p, marginBottom: '3rem' }}>Want to see your backyard on this page? <a href="tel:+15716557207" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Call (571) 655-7207</a> for a free design consultation.</p>
 
           {/* Project Cards */}
@@ -293,15 +293,15 @@ export default function BeforeAndAfterPage() {
 
           {/* What You Can Expect */}
           <h2 style={S.h2}>What to Expect From Your Deck Transformation</h2>
-          <p style={S.p}>Every project on this page followed the same process — and yours will too:</p>
+          <p style={S.p}>Every project on this page followed the same process and yours will too:</p>
           <ol style={{ paddingLeft: '1.5rem', lineHeight: 2, marginBottom: '2rem' }}>
-            <li><strong>Free on-site consultation</strong> — we measure, photograph, and discuss your vision in person.</li>
-            <li><strong>3D design rendering</strong> — you see exactly what your deck will look like before we break ground.</li>
-            <li><strong>Itemized written quote</strong> — materials, labor, permits, timeline, and warranty terms in writing.</li>
-            <li><strong>Permit management</strong> — we submit plans, coordinate HOA review, and schedule inspections.</li>
-            <li><strong>Professional build</strong> — our in-house crew (never subcontracted) builds your deck on schedule.</li>
-            <li><strong>Final walkthrough</strong> — we inspect every detail with you before the project is marked complete.</li>
-            <li><strong>5-year workmanship warranty</strong> on all labor — plus 25–50 year manufacturer warranty on materials.</li>
+            <li><strong>Free on-site consultation</strong> we measure, photograph, and discuss your vision in person.</li>
+            <li><strong>3D design rendering</strong> you see exactly what your deck will look like before we break ground.</li>
+            <li><strong>Itemized written quote</strong> materials, labor, permits, timeline, and warranty terms in writing.</li>
+            <li><strong>Permit management</strong> we submit plans, coordinate HOA review, and schedule inspections.</li>
+            <li><strong>Professional build</strong> our in-house crew (never subcontracted) builds your deck on schedule.</li>
+            <li><strong>Final walkthrough</strong> we inspect every detail with you before the project is marked complete.</li>
+            <li><strong>5-year workmanship warranty</strong> on all labor plus 25–50 year manufacturer warranty on materials.</li>
           </ol>
 
           {/* Types of Transformations */}
@@ -329,7 +329,7 @@ export default function BeforeAndAfterPage() {
               ['/composite-deck-cost-northern-virginia', 'Composite Deck Cost in Northern Virginia (2026)'],
               ['/how-much-does-a-deck-cost-northern-virginia', 'How Much Does a Deck Cost?'],
               ['/deck-resurfacing-vs-replacement', 'Resurfacing vs Full Replacement'],
-              ['/composite-deck-vs-wood-deck-virginia', 'Composite vs Wood — 15-Year Cost Analysis'],
+              ['/composite-deck-vs-wood-deck-virginia', 'Composite vs Wood 15-Year Cost Analysis'],
               ['/showcase', 'Full Project Gallery'],
             ].map(([href, text]) => (
               <li key={href} style={{ marginBottom: '0.5rem' }}>

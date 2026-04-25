@@ -18,7 +18,7 @@ const faqSchema = {
   "@context": "https://schema.org", "@type": "FAQPage",
   mainEntity: [
     { "@type": "Question", name: "How much does a deck cost in Fairfax, VA?", acceptedAnswer: { "@type": "Answer", text: "Fairfax deck projects range from $22,000-$55,000. Composite decks average $35-$65/sqft installed. The City of Fairfax and surrounding Fairfax County areas have moderate lot sizes with strong demand for deck replacements and screened porches." } },
-    { "@type": "Question", name: "City of Fairfax vs Fairfax County — which permit do I need?", acceptedAnswer: { "@type": "Answer", text: "The City of Fairfax (independent city) has its own building department. Properties in the 22030/22031/22032 zip codes may be in either the City or the County — they overlap. We determine your exact jurisdiction and handle the correct permitting process." } },
+    { "@type": "Question", name: "City of Fairfax vs Fairfax County which permit do I need?", acceptedAnswer: { "@type": "Answer", text: "The City of Fairfax (independent city) has its own building department. Properties in the 22030/22031/22032 zip codes may be in either the City or the County they overlap. We determine your exact jurisdiction and handle the correct permitting process." } },
   ],
 };
 
@@ -53,13 +53,13 @@ export default function FairfaxDeckBuilderPage() {
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Fairfax County has some of the most detailed deck permit requirements in Northern Virginia &mdash; structural drawings, setback calculations, ledger attachment specifications. We&apos;ve submitted hundreds of Fairfax County permit applications and know exactly what the Building Development Division requires to approve on the first submission. We serve Fairfax City, Fair Lakes, Fairfax Station, and surrounding neighborhoods.</p>
           <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>Recent projects: 400 sqft composite deck in Fair Lakes (2025), deck replacement in Fairfax Station (2024), multi-level deck + stairs in Burke (2024).</p>
 
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Fairfax — The Heart of Northern Virginia Innovation</h2>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>The Fairfax area is a hub of established single-family neighborhoods with mature lots — many with original decks from the 1990s-2000s that are ready for replacement. We specialize in transforming these aging wood decks into modern, maintenance-free composite outdoor living spaces.</p>
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Fairfax The Heart of Northern Virginia Innovation</h2>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>The Fairfax area is a hub of established single-family neighborhoods with mature lots many with original decks from the 1990s-2000s that are ready for replacement. We specialize in transforming these aging wood decks into modern, maintenance-free composite outdoor living spaces.</p>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>City + County jurisdiction expertise:</strong> City of Fairfax and Fairfax County have separate building departments — we navigate both</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>City + County jurisdiction expertise:</strong> City of Fairfax and Fairfax County have separate building departments we navigate both</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Established neighborhoods:</strong> Fairfax Station, Burke, Kings Park, Mantua, Mosby Woods, Fairfax Hills</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Deck replacement specialists:</strong> Hundreds of Fairfax homes need their 20+ year old decks upgraded</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Close to HQ:</strong> Adjacent to our Centreville office — responsive service</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Close to HQ:</strong> Adjacent to our Centreville office responsive service</li>
           </ul>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Services in Fairfax</h2>
@@ -81,12 +81,12 @@ export default function FairfaxDeckBuilderPage() {
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Featured Fairfax Project</h2>
           <div style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', marginBottom: '2rem' }}>
-            <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>$38,000 — 420 sqft Multi-Level Deck, Kings Park</h3>
+            <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>$38,000 420 sqft Multi-Level Deck, Kings Park</h3>
             <p style={{ lineHeight: 1.7 }}>Two-level composite deck on a sloped lot. Upper dining area (280 sqft) off the kitchen, lower lounge (140 sqft) with built-in bench and fire pit pad at grade. Trex Transcend in Havana Gold, Trex Signature railings, 12 integrated stair lights. City of Fairfax building permit. 3.5-week build.</p>
           </div>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>City of Fairfax vs Fairfax County Permits</h2>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Important distinction:</strong> The City of Fairfax is an independent city with its own building department, separate from Fairfax County. Properties in the 22030/22031/22032 zip codes can be in either jurisdiction — they overlap geographically.</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Important distinction:</strong> The City of Fairfax is an independent city with its own building department, separate from Fairfax County. Properties in the 22030/22031/22032 zip codes can be in either jurisdiction they overlap geographically.</p>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>City of Fairfax:</strong> Generally faster permit processing (2-3 weeks) and slightly lower fees than the county. Smaller department = more personal service.</p>
           <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}><strong>Fairfax County:</strong> Larger department, 3-6 weeks for standard plan review. More complex zoning rules. <Link href="/deck-permit-fairfax-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Read our full Fairfax County permit guide</Link>.</p>
           <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}><strong>Not sure which you&apos;re in?</strong> Give us your address and we determine the correct jurisdiction instantly.</p>
@@ -94,7 +94,7 @@ export default function FairfaxDeckBuilderPage() {
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>FAQ</h2>
           {[
             { q: "Deck cost in Fairfax?", a: "$22,000-$55,000. Composite: $35-$65/sqft installed." },
-            { q: "City or County permit?", a: "Depends on exact address — City of Fairfax and Fairfax County overlap in 22030/22031/22032 zip codes. We determine and handle the correct one." },
+            { q: "City or County permit?", a: "Depends on exact address City of Fairfax and Fairfax County overlap in 22030/22031/22032 zip codes. We determine and handle the correct one." },
           ].map((faq, i) => (
             <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
               <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>

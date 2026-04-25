@@ -61,7 +61,7 @@ export default function OutdoorKitchenPage() {
               { title: 'Grill Islands', desc: 'Built-in gas grills with stone or stucco surround, granite countertops, storage drawers', price: '$15k–$25k' },
               { title: 'Kitchen + Bar', desc: 'L-shaped or U-shaped island with grill, sink, refrigerator, and bar-height seating', price: '$30k–$50k' },
               { title: 'Full Outdoor Kitchen', desc: 'Complete kitchen: grill, side burner, pizza oven, sink, fridge, ice maker, trash pull-out, lighting', price: '$50k–$80k+' },
-              { title: 'Pizza Ovens', desc: 'Wood-fired or gas pizza ovens — standalone or integrated into island', price: '$5k–$15k' },
+              { title: 'Pizza Ovens', desc: 'Wood-fired or gas pizza ovens standalone or integrated into island', price: '$5k–$15k' },
             ].map((item) => (
               <div key={item.title} style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.25rem' }}>
                 <h3 style={{ fontWeight: 600, marginBottom: '0.25rem' }}>{item.title}</h3>
@@ -81,7 +81,7 @@ export default function OutdoorKitchenPage() {
                   ['Kitchen + Bar', 'Grill, sink, fridge, bar seating, lighting, gas line', '$30,000–$50,000'],
                   ['Full Kitchen', 'Grill, burner, pizza oven, sink, fridge, ice maker, lighting, electrical', '$50,000–$80,000+'],
                   ['Add to Existing Deck', 'Grill island on reinforced deck section, fire-rated materials', '$18,000–$35,000'],
-                  ['Combo: Deck + Kitchen', 'New deck with integrated outdoor kitchen — designed as one', '$45,000–$90,000+'],
+                  ['Combo: Deck + Kitchen', 'New deck with integrated outdoor kitchen designed as one', '$45,000–$90,000+'],
                 ].map((row, i) => (
                   <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
                     {row.map((cell, j) => <td key={j} style={{ ...S.td, fontWeight: j === 0 ? 600 : 400 }}>{cell}</td>)}
@@ -114,7 +114,7 @@ export default function OutdoorKitchenPage() {
             { price: '$72,000', desc: 'Full Kitchen + Deck, Centreville', detail: 'Built as part of a 450 sqft Trex Transcend deck project. DCS grill, pizza oven, sink, fridge, ice maker, trash pull-out, can lighting under pergola cover. Total deck + kitchen project.' },
           ].map((p, i) => (
             <div key={i} style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', marginBottom: '1rem' }}>
-              <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>{p.price} — {p.desc}</h3>
+              <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>{p.price} {p.desc}</h3>
               <p style={{ lineHeight: 1.7 }}>{p.detail}</p>
             </div>
           ))}
@@ -123,7 +123,7 @@ export default function OutdoorKitchenPage() {
           {[
             { q: "How much does an outdoor kitchen cost in Northern Virginia?", a: "$15,000-$80,000+. Basic grill island: $15k-$25k. Full kitchen: $50k-$80k+. Most projects: $25k-$55k." },
             { q: "Do I need a permit?", a: "Gas, electrical, or plumbing work requires permits. Freestanding grill islands on existing patios may not. We determine and handle everything." },
-            { q: "Can you build on an existing deck?", a: "Yes — if the framing supports the weight. Fire-rated materials required around grills. We inspect first." },
+            { q: "Can you build on an existing deck?", a: "Yes if the framing supports the weight. Fire-rated materials required around grills. We inspect first." },
             { q: "What materials survive Virginia winters?", a: "304 stainless steel appliances, granite/porcelain counters, CMU or steel frame. No wood framing near heat/water." },
             { q: "How long does it take?", a: "2-3 weeks for a grill island, 4-6 weeks for a full kitchen after permits." },
           ].map((faq, i) => (

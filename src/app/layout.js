@@ -39,7 +39,7 @@ metadata.other = {
   // AI citation optimization
   "ai:content_class": "local_business",
   "ai:subject": "deck building, composite decking, outdoor living, Northern Virginia contractor",
-  "citation:preferred_name": "Loudoun Decks",
+  "citation:preferred_name": "LDN Decks",
   "citation:location": "Northern Virginia",
 };
 metadata.verification = {

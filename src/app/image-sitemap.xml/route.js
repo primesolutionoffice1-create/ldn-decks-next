@@ -1,7 +1,7 @@
 import { showcaseProjects } from '@/lib/showcaseData';
 import { SITE_URL } from '@/lib/seo';
 
-// Image Sitemap — helps Google Image Search index all project photos
+// Image Sitemap helps Google Image Search index all project photos
 // Showcase/project photos are high-value for "deck ideas" and "deck design" image searches
 // https://developers.google.com/search/docs/crawling-indexing/sitemaps/image-sitemaps
 
@@ -15,7 +15,7 @@ export async function GET() {
       <loc>${SITE_URL}/showcase/${project.slug}</loc>
       <image:image>
         <image:loc>${SITE_URL}${project.image}</image:loc>
-        <image:title>${escapeXml(project.title)} — ${escapeXml(project.location)}</image:title>
+        <image:title>${escapeXml(project.title)} ${escapeXml(project.location)}</image:title>
         <image:caption>${escapeXml(project.title)} by Loudoun Decks in ${escapeXml(project.location)}. Professional deck and outdoor living construction in Northern Virginia.</image:caption>
       </image:image>
     </url>`);
@@ -27,7 +27,7 @@ export async function GET() {
       <loc>${SITE_URL}</loc>
       <image:image>
         <image:loc>${SITE_URL}/home-page-ldn.png</image:loc>
-        <image:title>Loudoun Decks — Custom Deck Builder Northern Virginia</image:title>
+        <image:title>Loudoun Decks Custom Deck Builder Northern Virginia</image:title>
         <image:caption>Custom composite deck building in Northern Virginia by Loudoun Decks. Trex Platinum Partner.</image:caption>
       </image:image>
     </url>`);
@@ -35,16 +35,16 @@ export async function GET() {
   // Key content page images
   const contentImages = [
     { page: '/how-much-does-a-deck-cost-northern-virginia', image: '/images/img10.jpeg', title: 'Deck Cost Guide Northern Virginia 2026' },
-    { page: '/composite-deck-cost-northern-virginia', image: '/images/img11.jpeg', title: 'Composite Deck Cost Northern Virginia — Brand-by-Brand Pricing' },
+    { page: '/composite-deck-cost-northern-virginia', image: '/images/img11.jpeg', title: 'Composite Deck Cost Northern Virginia Brand-by-Brand Pricing' },
     { page: '/trex-vs-timbertech-vs-azek', image: '/og-default.webp', title: 'Trex vs TimberTech vs AZEK Comparison' },
-    { page: '/trex-transcend-review-northern-virginia', image: '/images/img36.jpeg', title: 'Trex Transcend Review — Honest Assessment After 500+ Installs' },
+    { page: '/trex-transcend-review-northern-virginia', image: '/images/img36.jpeg', title: 'Trex Transcend Review Honest Assessment After 500+ Installs' },
     { page: '/composite-deck-vs-wood-deck-virginia', image: '/images/img16.jpeg', title: 'Composite Deck vs Wood Deck Virginia Comparison' },
     { page: '/deck-design-ideas-northern-virginia-2026', image: '/images/img36.jpeg', title: 'Deck Design Ideas 2026 Northern Virginia' },
     { page: '/screened-porch-cost-northern-virginia', image: '/images/img23.jpeg', title: 'Screened Porch Cost Northern Virginia' },
     { page: '/northern-virginia-deck-building-guide', image: '/og-default.webp', title: 'Complete Deck Building Guide Northern Virginia' },
     { page: '/before-and-after', image: '/images/img04.jpeg', title: 'Before and After Deck Transformations Northern Virginia' },
     { page: '/deck-permit-loudoun-county-virginia', image: '/images/img20.jpeg', title: 'Loudoun County Deck Permit Guide 2026' },
-    { page: '/get-estimate', image: '/images/img36.jpeg', title: 'Free Deck Estimate — LDN Decks Northern Virginia' },
+    { page: '/get-estimate', image: '/images/img36.jpeg', title: 'Free Deck Estimate LDN Decks Northern Virginia' },
   ];
 
   for (const ci of contentImages) {
@@ -54,7 +54,7 @@ export async function GET() {
       <image:image>
         <image:loc>${SITE_URL}${ci.image}</image:loc>
         <image:title>${escapeXml(ci.title)}</image:title>
-        <image:caption>${escapeXml(ci.title)} — Expert guide by Loudoun Decks, Northern Virginia's top-rated deck builder.</image:caption>
+        <image:caption>${escapeXml(ci.title)} Expert guide by Loudoun Decks, Northern Virginia's top-rated deck builder.</image:caption>
       </image:image>
     </url>`);
   }
@@ -100,7 +100,7 @@ export async function GET() {
       <image:image>
         <image:loc>${SITE_URL}${gi.image}</image:loc>
         <image:title>${escapeXml(gi.title)}</image:title>
-        <image:caption>${escapeXml(gi.title)} — Professional deck and outdoor living project by Loudoun Decks.</image:caption>
+        <image:caption>${escapeXml(gi.title)} Professional deck and outdoor living project by Loudoun Decks.</image:caption>
       </image:image>
     </url>`);
   }

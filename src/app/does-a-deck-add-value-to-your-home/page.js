@@ -104,7 +104,7 @@ export default function DeckValuePage() {
           {[
             { q: "Does a deck add value in Virginia?", a: "Yes. Composite decks recoup 60-80%. In competitive NoVA markets, a quality deck can add $15,000-$40,000 to your home's value." },
             { q: "What deck type has the best ROI?", a: "Composite (65-80%), then screened porches (70-85%). Wood decks return 50-65%." },
-            { q: "Deck or patio — which adds more value?", a: "Decks typically have higher ROI (65-80%) than patios (50-70%), especially on sloped lots or homes with walkout basements." },
+            { q: "Deck or patio which adds more value?", a: "Decks typically have higher ROI (65-80%) than patios (50-70%), especially on sloped lots or homes with walkout basements." },
           ].map((faq, i) => (
             <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
               <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>

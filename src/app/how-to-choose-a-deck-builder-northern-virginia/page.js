@@ -4,6 +4,7 @@ import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
+import TrustBanner from '@/components/TrustBanner';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -17,7 +18,7 @@ const faqSchema = {
   mainEntity: [
     { "@type": "Question", name: "How do I verify a deck builder's license in Virginia?", acceptedAnswer: { "@type": "Answer", text: "Visit the Virginia DPOR License Lookup at https://dfrnet.dpor.virginia.gov/. Search by company name or license number. Every contractor doing work over $1,000 in Virginia must have a Class A, B, or C contractor license." } },
     { "@type": "Question", name: "What should I look for in a deck builder's estimate?", acceptedAnswer: { "@type": "Answer", text: "An itemized materials list (brand, model, color), separate labor cost, permit fees, dumpster/cleanup, project timeline, warranty terms in writing, and the contractor's Virginia license number." } },
-    { "@type": "Question", name: "Should I get multiple deck quotes?", acceptedAnswer: { "@type": "Answer", text: "Yes — get 2-3 quotes from licensed contractors. Compare not just price, but scope, materials, warranty, timeline, and permit handling. The cheapest quote often excludes permits, cleanup, or uses inferior materials." } },
+    { "@type": "Question", name: "Should I get multiple deck quotes?", acceptedAnswer: { "@type": "Answer", text: "Yes get 2-3 quotes from licensed contractors. Compare not just price, but scope, materials, warranty, timeline, and permit handling. The cheapest quote often excludes permits, cleanup, or uses inferior materials." } },
     { "@type": "Question", name: "What are red flags when hiring a deck builder?", acceptedAnswer: { "@type": "Answer", text: "No Virginia contractor license, cash-only payment demands, no written warranty, no permit mentioned, can't provide recent local references, pressure to sign immediately, price significantly below all other quotes." } },
   ],
 };
@@ -35,6 +36,7 @@ export default function ChooseDeckBuilderPage() {
           <p style={{ color: '#ccc', fontSize: '1.1rem' }}>10 questions to ask, 5 red flags to avoid, and how to verify credentials</p>
         </div>
       </section>
+      <TrustBanner />
 
       <article style={{ padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -100,10 +102,10 @@ export default function ChooseDeckBuilderPage() {
           <div style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', marginBottom: '2rem' }}>
             <ul style={{ listStyle: 'none', padding: 0 }}>
               {[
-                ['Licensed', 'Virginia Class A Contractor — DPOR verified'],
-                ['Insured', 'Full liability + workers\' comp — certificate on request'],
-                ['Permits', 'We pull all permits and coordinate every inspection — 100% approval rate'],
-                ['HOA', 'We prepare and submit ARC packages — 100% approval rate across 50+ communities'],
+                ['Licensed', 'Virginia Class A Contractor DPOR verified'],
+                ['Insured', 'Full liability + workers\' comp certificate on request'],
+                ['Permits', 'We pull all permits and coordinate every inspection 100% approval rate'],
+                ['HOA', 'We prepare and submit ARC packages 100% approval rate across 50+ communities'],
                 ['Materials', 'Trex Pro certified installer + TimberTech + AZEK'],
                 ['Warranty', '5-year workmanship warranty in writing, on top of manufacturer warranties'],
                 ['Reviews', '5.0★ on Google with 41 reviews'],
@@ -119,8 +121,8 @@ export default function ChooseDeckBuilderPage() {
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Frequently Asked Questions</h2>
           {[
             { q: "How do I verify a contractor's license?", a: "Visit dpor.virginia.gov → License Lookup. Search by name or number. Must be active, Class A or B for projects over $10k." },
-            { q: "What should be in the estimate?", a: "Itemized materials (brand/model/color), labor, permits, dumpster, cleanup, timeline, and warranty — all in writing." },
-            { q: "Should I get multiple quotes?", a: "Yes — 2-3 quotes from licensed contractors. Compare scope, materials, and warranty, not just price." },
+            { q: "What should be in the estimate?", a: "Itemized materials (brand/model/color), labor, permits, dumpster, cleanup, timeline, and warranty all in writing." },
+            { q: "Should I get multiple quotes?", a: "Yes 2-3 quotes from licensed contractors. Compare scope, materials, and warranty, not just price." },
             { q: "What are the biggest red flags?", a: "No license, cash-only demands, no written warranty, suggesting to skip permits, and prices far below other quotes." },
           ].map((faq, i) => (
             <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>

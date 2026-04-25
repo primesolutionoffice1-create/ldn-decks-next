@@ -10,7 +10,7 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/how-much-does-a-deck-cost-northern-virginia',
-      title: 'Deck Cost in Northern Virginia 2026 | LDN Decks',
+  title: 'Deck Cost in Northern Virginia 2026 | LDN Decks',
   description: 'Composite deck costs $30-$75/sqft installed in Northern Virginia. Pressure-treated wood $18-$35/sqft. Real project costs, price tables & free estimate.',
   image: '/images/img10.jpeg',
 });
@@ -22,7 +22,7 @@ const faqSchema = {
     { "@type": "Question", name: "How much does a composite deck cost in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "A composite deck in Northern Virginia costs $30-$75 per square foot installed. For a typical 300-500 sq ft deck, expect $15,000-$45,000 depending on material brand, railings, stairs, and complexity." } },
     { "@type": "Question", name: "Is a composite deck worth the extra cost over wood?", acceptedAnswer: { "@type": "Answer", text: "Yes. While composite costs 40-60% more upfront, it requires zero staining or sealing, lasts 25-50 years vs 10-15 for wood, and recoups more at resale." } },
     { "@type": "Question", name: "Why are decks more expensive in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "Northern Virginia deck costs run 25-35% above the state average due to higher labor rates, stricter building codes, HOA requirements, and the cost of doing business near Washington DC." } },
-    { "@type": "Question", name: "Can I build a deck for under $15,000?", acceptedAnswer: { "@type": "Answer", text: "Yes — a small (150-200 sqft) pressure-treated wood deck with basic railings can come in under $15,000. For composite materials at this budget, expect a smaller footprint around 120-150 sqft." } },
+    { "@type": "Question", name: "Can I build a deck for under $15,000?", acceptedAnswer: { "@type": "Answer", text: "Yes a small (150-200 sqft) pressure-treated wood deck with basic railings can come in under $15,000. For composite materials at this budget, expect a smaller footprint around 120-150 sqft." } },
     { "@type": "Question", name: "Does a deck increase home value in Virginia?", acceptedAnswer: { "@type": "Answer", text: "Yes. A composite deck recoups 60-80% of its cost at resale in Northern Virginia. In competitive markets like McLean, Great Falls, and Vienna, a quality deck can add $15,000-$40,000 to your home's market value." } },
   ],
 };
@@ -58,10 +58,10 @@ export default function DeckCostPage() {
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
 
           <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
-            <Image 
-              src="/images/img10.jpeg" 
-              alt="Beautiful custom composite deck in Northern Virginia showing estimated cost value" 
-              fill 
+            <Image
+              src="/images/img10.jpeg"
+              alt="Beautiful custom composite deck in Northern Virginia showing estimated cost value"
+              fill
               style={{ objectFit: 'cover' }}
               sizes="(max-width: 900px) 100vw, 900px"
               priority
@@ -123,7 +123,7 @@ export default function DeckCostPage() {
             { price: '$52,000', desc: '600 sqft Deck + Screened Porch, McLean', detail: 'Open composite deck (400 sqft) connected to a screened porch (200 sqft) with ceiling fan, can lights, and EZE-Breeze windows. TimberTech AZEK in Dark Hickory. 4.5-week build.' },
           ].map((p, i) => (
             <div key={i} style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', marginBottom: '1rem' }}>
-              <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>{p.price} — {p.desc}</h3>
+              <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>{p.price} {p.desc}</h3>
               <p style={{ lineHeight: 1.7 }}>{p.detail}</p>
             </div>
           ))}
@@ -138,7 +138,7 @@ export default function DeckCostPage() {
             { q: "How much does a composite deck cost in Northern Virginia?", a: "A composite deck costs $30-$75 per square foot installed. For a typical 300-500 sq ft deck, expect $15,000-$45,000 depending on material brand, railings, stairs, and complexity." },
             { q: "Is a composite deck worth the extra cost over wood?", a: "Yes. Over 15 years, the total cost of ownership for composite is lower than wood when you factor in annual staining, sealing, and board replacement." },
             { q: "Why are decks more expensive in Northern Virginia?", a: "Higher labor rates, stricter building codes, HOA requirements, and proximity to Washington DC drive costs 25-35% above the Virginia average." },
-            { q: "Can I build a deck for under $15,000?", a: "Yes — a small pressure-treated wood deck (150-200 sqft) with basic railings can come in under $15,000." },
+            { q: "Can I build a deck for under $15,000?", a: "Yes a small pressure-treated wood deck (150-200 sqft) with basic railings can come in under $15,000." },
             { q: "Does a deck increase home value?", a: "Yes. A composite deck recoups 60-80% at resale. In McLean, Great Falls, and Vienna, a quality deck can add $15,000-$40,000 to your home's value." },
           ].map((faq, i) => (
             <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
@@ -150,9 +150,9 @@ export default function DeckCostPage() {
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, margin: '2.5rem 0 1rem' }}>Related Guides</h2>
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {[
-              ['/composite-deck-cost-northern-virginia', 'Composite Deck Cost — Brand-by-Brand Pricing Guide'],
-              ['/trex-vs-timbertech-vs-azek', 'Trex vs TimberTech vs AZEK — Best Composite Decking'],
-              ['/composite-deck-vs-wood-deck-virginia', 'Composite Deck vs Wood Deck — Complete Comparison'],
+              ['/composite-deck-cost-northern-virginia', 'Composite Deck Cost Brand-by-Brand Pricing Guide'],
+              ['/trex-vs-timbertech-vs-azek', 'Trex vs TimberTech vs AZEK Best Composite Decking'],
+              ['/composite-deck-vs-wood-deck-virginia', 'Composite Deck vs Wood Deck Complete Comparison'],
               ['/screened-porch-cost-northern-virginia', 'Screened Porch Cost in Northern Virginia'],
               ['/does-a-deck-add-value-to-your-home', 'Does a Deck Add Value to Your Home?'],
               ['/hoa-deck-rules-northern-virginia', 'HOA Deck Rules in Northern Virginia'],

@@ -4,8 +4,8 @@ export default function StructuredData() {
       const jsonLd = {
               "@context": "https://schema.org",
               "@type": "HomeAndConstructionBusiness",
-              "name": "Loudoun Decks",
-              "alternateName": "LDN Decks",
+              "name": "LDN Decks",
+              "alternateName": "Loudoun Decks",
                                               "image": "https://www.ldndecks.com/ldndecks-logo.webp",
                                               "@id": "https://www.ldndecks.com/#organization",
                                               "url": "https://www.ldndecks.com",
@@ -102,13 +102,13 @@ export default function StructuredData() {
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "Loudoun Decks",
-    "alternateName": "LDN Decks",
+    "name": "LDN Decks",
+    "alternateName": "Loudoun Decks",
     "url": "https://www.ldndecks.com",
     "description": "Top-rated custom deck builder in Northern Virginia. Expert guides on deck costs, materials, permits, and outdoor living.",
     "publisher": {
       "@type": "Organization",
-      "name": "Loudoun Decks",
+      "name": "LDN Decks",
       "@id": "https://www.ldndecks.com/#organization"
     },
     "inLanguage": "en-US",

@@ -32,7 +32,7 @@ export default function DeckReplacementPage() {
         description="Replace your worn-out, unsafe deck with a modern composite sanctuary. Permits & HOA handled. Typical timeline: 2–4 weeks."
       />
 
-      <ServiceMain 
+      <ServiceMain
         subtitle="Fresh Start"
         title="Professional Deck Teardown & Rebuild"
         description="When repairs aren't enough, a full replacement is the safest and most cost-effective long-term solution. Our team handles everything from safely dismantling your old structure to designing and building your dream deck."
@@ -55,7 +55,7 @@ export default function DeckReplacementPage() {
         title="The Teardown-to-Build Process"
         description="We minimize disruption to your property while we transform your outdoor area."
         items={[
-          { title: "Permits & HOA Handled", desc: "We manage all county permits and HOA architectural review submissions — you don't lift a finger." },
+          { title: "Permits & HOA Handled", desc: "We manage all county permits and HOA architectural review submissions you don't lift a finger." },
           { title: "Modern Safety Standards", desc: "Your new deck will meet all current building codes, often far exceeding the standards of your old deck." },
           { title: "Design Upgrades", desc: "Replacement is the perfect time to change the shape, size, or layout of your deck." },
           { title: "Before & After Results", desc: "See real transformations from our Loudoun, Fairfax, and Prince William County projects in our gallery." }

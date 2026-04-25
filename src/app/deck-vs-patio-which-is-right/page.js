@@ -9,7 +9,7 @@ import { buildMetadata } from '@/lib/seo';
 export const metadata = buildMetadata({
   path: '/deck-vs-patio-which-is-right',
   title: 'Deck vs Patio: Which Is Right for Your Virginia Home? (2026)',
-  description: 'Deck vs patio — cost, maintenance, ROI, and best use compared for Northern Virginia homeowners. We build both. Free consultation.',
+  description: 'Deck vs patio cost, maintenance, ROI, and best use compared for Northern Virginia homeowners. We build both. Free consultation.',
 });
 
 const faqSchema = {
@@ -17,8 +17,8 @@ const faqSchema = {
   mainEntity: [
     { "@type": "Question", name: "Is a deck or patio cheaper to build?", acceptedAnswer: { "@type": "Answer", text: "Patios are typically 20-40% cheaper. A 300 sqft paver patio costs $8,000-$18,000 vs $15,000-$35,000 for a composite deck of the same size in Northern Virginia." } },
     { "@type": "Question", name: "Does a deck or patio add more value to a home?", acceptedAnswer: { "@type": "Answer", text: "Decks typically have higher ROI (65-80%) than patios (50-70%) because they're perceived as more usable living space. However, ground-level patios work better for certain lot types." } },
-    { "@type": "Question", name: "Can you build both a deck and patio?", acceptedAnswer: { "@type": "Answer", text: "Yes — combo builds are very popular. A raised deck for dining connected to a ground-level patio with fire pit is one of our most-requested designs. Costs 30-40% less than two separate structures." } },
-    { "@type": "Question", name: "Which lasts longer — a deck or patio?", acceptedAnswer: { "@type": "Answer", text: "A paver patio can last 25-50 years with minimal maintenance. A composite deck lasts 25-50 years. Pressure-treated wood decks last 10-15 years. For longevity, both composite decks and pavers are excellent." } },
+    { "@type": "Question", name: "Can you build both a deck and patio?", acceptedAnswer: { "@type": "Answer", text: "Yes combo builds are very popular. A raised deck for dining connected to a ground-level patio with fire pit is one of our most-requested designs. Costs 30-40% less than two separate structures." } },
+    { "@type": "Question", name: "Which lasts longer a deck or patio?", acceptedAnswer: { "@type": "Answer", text: "A paver patio can last 25-50 years with minimal maintenance. A composite deck lasts 25-50 years. Pressure-treated wood decks last 10-15 years. For longevity, both composite decks and pavers are excellent." } },
   ],
 };
 
@@ -88,7 +88,7 @@ export default function DeckVsPatioPage() {
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
             <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Sloped or uneven yard:</strong> Decks are elevated on posts, so they work on any grade. Patios require extensive grading on slopes.</li>
             <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Walkout basement:</strong> A deck creates a seamless transition from the main floor to the yard, with stairs down to grade.</li>
-            <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Dining and entertaining:</strong> Decks feel like an extension of your interior — closer to the kitchen, higher vantage point.</li>
+            <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Dining and entertaining:</strong> Decks feel like an extension of your interior closer to the kitchen, higher vantage point.</li>
             <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Screened option desired:</strong> Screened porches are built on deck framing. You can&apos;t screen a ground-level patio without walls.</li>
             <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Higher resale ROI:</strong> Decks return 65–80% vs 50–70% for patios in Northern Virginia.</li>
           </ul>
@@ -131,7 +131,7 @@ export default function DeckVsPatioPage() {
           {[
             { q: "Is a deck or patio cheaper?", a: "Patios are 20-40% cheaper. A 300 sqft paver patio: $8k-$16k vs $12k-$23k for composite deck." },
             { q: "Which adds more home value?", a: "Decks (65-80% ROI) typically beat patios (50-70%) because they're perceived as more usable living space." },
-            { q: "Can you build both?", a: "Yes — combo builds are very popular and cost 30-40% less than two separate structures." },
+            { q: "Can you build both?", a: "Yes combo builds are very popular and cost 30-40% less than two separate structures." },
             { q: "Which lasts longer?", a: "Both composite decks and paver patios last 25-50 years. PT wood decks last only 10-15 years." },
           ].map((faq, i) => (
             <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
@@ -154,7 +154,7 @@ export default function DeckVsPatioPage() {
         </div>
       </article>
 
-      <SimpleCTA title="Not Sure? We Build Both — Free Consultation" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Not Sure? We Build Both Free Consultation" buttonText="Get Free Estimate" link="/contact" />
       <ContactHome />
     </>
   );

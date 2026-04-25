@@ -49,18 +49,18 @@ export default function HerndonDeckBuilderPage() {
               priority
             />
           </div>
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Herndon — Where Innovation Meets Outdoor Living</h2>
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Herndon Where Innovation Meets Outdoor Living</h2>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Herndon offers a mix of established neighborhoods with mature trees and newer developments near the Dulles Toll Road corridor. Whether you&apos;re upgrading an aging wood deck in Fox Mill Estates or building new in the Worldgate area, we deliver quality craftsmanship that Herndon homeowners expect.</p>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Town of Herndon + Fairfax County permitting:</strong> We know which jurisdiction covers your property</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Tree-heavy lots:</strong> Many Herndon properties have significant tree canopy — we design around root zones and shade patterns</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>HOA expertise:</strong> Fox Mill, Reflection Lake, McNair Farms, and other Herndon HOAs — we handle submissions</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Proximity:</strong> 15 minutes from our Centreville office — fast site visits and responsive service</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Tree-heavy lots:</strong> Many Herndon properties have significant tree canopy we design around root zones and shade patterns</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>HOA expertise:</strong> Fox Mill, Reflection Lake, McNair Farms, and other Herndon HOAs we handle submissions</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Proximity:</strong> 15 minutes from our Centreville office fast site visits and responsive service</li>
           </ul>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Featured Herndon Project</h2>
           <div style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', marginBottom: '2rem' }}>
-            <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>$31,000 — 340 sqft Trex Transcend Deck, Fox Mill Estates</h3>
+            <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>$31,000 340 sqft Trex Transcend Deck, Fox Mill Estates</h3>
             <p style={{ lineHeight: 1.7 }}>Replacing a 14-year-old pressure-treated deck. Trex Transcend in Foggy Wharf (lighter color to stay cool under partial shade). Aluminum railings in black, integrated stair lights, and new concrete landing pad at grade. Town of Herndon building permit. 2.5-week build.</p>
           </div>
 

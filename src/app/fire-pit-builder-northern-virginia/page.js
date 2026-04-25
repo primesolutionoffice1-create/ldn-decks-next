@@ -16,8 +16,8 @@ const faqSchema = {
   "@context": "https://schema.org", "@type": "FAQPage",
   mainEntity: [
     { "@type": "Question", name: "How much does a fire pit cost in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "Custom fire pits in Northern Virginia: portable gas/wood fire bowls $500-$2,000, built-in gas fire pit $3,000-$8,000, stone surround fire pit with seating wall $8,000-$15,000, fire pit + patio combo $12,000-$25,000. Gas fire pits require a gas line ($1,000-$3,000 additional if not existing)." } },
-    { "@type": "Question", name: "Can I put a fire pit on a composite deck?", acceptedAnswer: { "@type": "Answer", text: "Not directly — open flame or extreme heat will damage composite decking. Options: gas fire pit on a non-combustible pad (stone/tile insert in the deck), fire pit on an adjacent patio at grade level, or a fire table with a glass wind guard (minimal radiant heat). We design safe fire feature integration for every project." } },
-    { "@type": "Question", name: "Gas fire pit vs wood-burning — which is better?", acceptedAnswer: { "@type": "Answer", text: "Gas: instant on/off, no smoke/sparks, clean, adjustable flame, no wood storage needed. Better for decks and close-neighbor properties. Wood: authentic crackle/smell, no gas line needed, lower install cost. Better for larger lots away from structures. Most Northern Virginia HOAs prefer gas for safety." } },
+    { "@type": "Question", name: "Can I put a fire pit on a composite deck?", acceptedAnswer: { "@type": "Answer", text: "Not directly open flame or extreme heat will damage composite decking. Options: gas fire pit on a non-combustible pad (stone/tile insert in the deck), fire pit on an adjacent patio at grade level, or a fire table with a glass wind guard (minimal radiant heat). We design safe fire feature integration for every project." } },
+    { "@type": "Question", name: "Gas fire pit vs wood-burning which is better?", acceptedAnswer: { "@type": "Answer", text: "Gas: instant on/off, no smoke/sparks, clean, adjustable flame, no wood storage needed. Better for decks and close-neighbor properties. Wood: authentic crackle/smell, no gas line needed, lower install cost. Better for larger lots away from structures. Most Northern Virginia HOAs prefer gas for safety." } },
   ],
 };
 
@@ -39,8 +39,8 @@ export default function FirePitBuilderPage() {
               priority
             />
           </div>
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Fire Pits — The Heart of Your Outdoor Living Space</h2>
-          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Custom gas &amp; wood-burning fire pits — standalone, built-in, and deck-integrated designs</p>
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Fire Pits The Heart of Your Outdoor Living Space</h2>
+          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Custom gas &amp; wood-burning fire pits standalone, built-in, and deck-integrated designs</p>
           <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             <a href="tel:+15716557207" style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</a>
             <Link href="/contact" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Estimate</Link>
@@ -77,7 +77,7 @@ export default function FirePitBuilderPage() {
             <div style={{ background: '#fff3e0', border: '2px solid var(--color-primary)', borderRadius: 8, padding: '1.5rem' }}>
               <h3 style={{ fontWeight: 700, marginBottom: '0.75rem', color: 'var(--color-primary)' }}>Gas Fire Pit (Recommended for NoVA)</h3>
               <ul style={{ paddingLeft: '1.25rem', fontSize: '0.95rem' }}>
-                <li style={{ marginBottom: '0.4rem' }}>Instant on/off — no startup or cleanup</li>
+                <li style={{ marginBottom: '0.4rem' }}>Instant on/off no startup or cleanup</li>
                 <li style={{ marginBottom: '0.4rem' }}>No smoke, no sparks, no ash</li>
                 <li style={{ marginBottom: '0.4rem' }}>Adjustable flame height</li>
                 <li style={{ marginBottom: '0.4rem' }}>Safe near deck/house structures</li>
@@ -90,7 +90,7 @@ export default function FirePitBuilderPage() {
               <h3 style={{ fontWeight: 700, marginBottom: '0.75rem' }}>Wood-Burning Fire Pit</h3>
               <ul style={{ paddingLeft: '1.25rem', fontSize: '0.95rem' }}>
                 <li style={{ marginBottom: '0.4rem' }}>Authentic campfire experience (crackle, smell)</li>
-                <li style={{ marginBottom: '0.4rem' }}>No gas line required — lower install cost</li>
+                <li style={{ marginBottom: '0.4rem' }}>No gas line required lower install cost</li>
                 <li style={{ marginBottom: '0.4rem' }}>Higher heat output</li>
                 <li style={{ marginBottom: '0.4rem' }}>Requires 15+ ft from structures (fire code)</li>
                 <li style={{ marginBottom: '0.4rem' }}>Smoke can bother neighbors on small lots</li>
@@ -101,11 +101,11 @@ export default function FirePitBuilderPage() {
           </div>
 
           <h2 style={S.h2}>Fire Pit + Deck Integration</h2>
-          <p style={S.p}><strong>Can I put a fire pit on my composite deck?</strong> Not directly — but we have safe solutions:</p>
+          <p style={S.p}><strong>Can I put a fire pit on my composite deck?</strong> Not directly but we have safe solutions:</p>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
             <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Non-combustible pad:</strong> We build a stone/tile insert into the deck surface (2x2 to 3x3 ft) where the gas fire pit sits. Protects the composite from heat.</li>
-            <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Fire table with glass guard:</strong> Rectangular gas fire tables produce minimal radiant heat — safe on composite with a heat shield underneath.</li>
-            <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Adjacent ground-level:</strong> Fire pit on a paver/stone pad at the base of deck stairs. Most popular — separates the fire zone from the deck surface.</li>
+            <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Fire table with glass guard:</strong> Rectangular gas fire tables produce minimal radiant heat safe on composite with a heat shield underneath.</li>
+            <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Adjacent ground-level:</strong> Fire pit on a paver/stone pad at the base of deck stairs. Most popular separates the fire zone from the deck surface.</li>
             <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Multi-level design:</strong> Upper deck for dining, lower stone patio with built-in fire pit. <Link href="/multi-level-deck-builder-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>See multi-level deck options</Link>.</li>
           </ul>
 
@@ -116,7 +116,7 @@ export default function FirePitBuilderPage() {
             { price: '$22,000', desc: 'Fire Pit + Paver Patio, Centreville', detail: '250 sqft paver patio with centered fire pit and surrounding Adirondack seating area. Gas line, landscape lighting, and planting beds. Complete backyard transformation.' },
           ].map((p, i) => (
             <div key={i} style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', marginBottom: '1rem' }}>
-              <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>{p.price} — {p.desc}</h3>
+              <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>{p.price} {p.desc}</h3>
               <p style={{ lineHeight: 1.7 }}>{p.detail}</p>
             </div>
           ))}

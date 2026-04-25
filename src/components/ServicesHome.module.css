@@ -1,0 +1,184 @@
+.servicesSection {
+  position: relative;
+  width: 100%;
+  padding: 100px 0;
+}
+
+/* Background splitting logic to replicate screenshot style */
+.bgTop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60%;
+  background-color: #f7f4ed; /* Very light beige */
+  z-index: 1;
+}
+
+.bgBottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40%;
+  background-color: var(--white);
+  z-index: 1;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* Header layout */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 60px;
+}
+
+.titleArea {
+  flex: 1;
+}
+
+.subtextWrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 12px;
+}
+
+.subtext {
+  color: #999;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.line {
+  width: 30px;
+  height: 2px;
+  background-color: var(--site-color);
+}
+
+.title {
+  font-size: 46px;
+  font-weight: 800;
+  color: var(--black);
+  line-height: 1.15;
+  margin: 0;
+}
+
+.descArea {
+  flex: 0 0 40%;
+  color: #666;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* CARDS */
+.cardsGrid {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.card {
+  flex: 1;
+  background-color: #f7f4ed; /* matching bgTop to create floating illusion */
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  border-bottom: 3px solid var(--site-color);
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+}
+
+/* Inner card styling */
+.imgWrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 80%; /* 5:4 aspect ratio approx */
+}
+
+.cardImg {
+  object-fit: cover;
+}
+
+.cardContent {
+  padding: 35px 30px;
+}
+
+.cardContent h3 {
+  font-size: 22px;
+  color: var(--black);
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.cardContent p {
+  color: #666;
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+/* Footer CTA button */
+.btnWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.ctaButton {
+  display: inline-block;
+  background-color: var(--button-color);
+  color: var(--white);
+  font-size: 15px;
+  font-weight: 700;
+  padding: 18px 40px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.ctaButton:hover {
+  background-color: var(--button-hover-color);
+  transform: translateY(-2px);
+}
+
+/* Responsive logic */
+@media screen and (max-width: 1024px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+  .descArea {
+    flex: auto;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .cardsGrid {
+    flex-direction: column;
+  }
+  .bgTop {
+    height: 35%; /* Adjust threshold to look decent underneath stacked cards */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 36px;
+  }
+  .servicesSection {
+    padding: 60px 0;
+  }
+}

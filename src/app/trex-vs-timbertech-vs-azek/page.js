@@ -40,7 +40,7 @@ export default function TrexVsTimberTechPage() {
       <section style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Our Recommendation:</p>
-          <p><strong>Best overall:</strong> Trex Transcend ($45–$65/sqft). <strong>Best premium:</strong> TimberTech AZEK ($50–$75/sqft, 50-yr warranty). <strong>Best value:</strong> Trex Enhance ($30–$50/sqft). We install all three — <a href="tel:+15716557207" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>call for samples</a>.</p>
+          <p><strong>Best overall:</strong> Trex Transcend ($45–$65/sqft). <strong>Best premium:</strong> TimberTech AZEK ($50–$75/sqft, 50-yr warranty). <strong>Best value:</strong> Trex Enhance ($30–$50/sqft). We install all three <a href="tel:+15716557207" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>call for samples</a>.</p>
         </div>
       </section>
 
@@ -121,7 +121,7 @@ export default function TrexVsTimberTechPage() {
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Frequently Asked Questions</h2>
           {[
-            { q: "Which composite decking is best for Northern Virginia?", a: "Trex Transcend for most homeowners — best balance of performance and price. TimberTech AZEK for premium budgets. Trex Enhance for value." },
+            { q: "Which composite decking is best for Northern Virginia?", a: "Trex Transcend for most homeowners best balance of performance and price. TimberTech AZEK for premium budgets. Trex Enhance for value." },
             { q: "Which stays coolest in the sun?", a: "TimberTech AZEK and Trex Transcend stay 20-30°F cooler than standard composites. Critical for south-facing decks in Virginia summers." },
             { q: "Is TimberTech better than Trex?", a: "AZEK has a longer warranty (50yr) and better scratch resistance but costs 15-25% more. Trex Transcend matches TimberTech PRO at a lower price." },
             { q: "Can you mix brands on the same deck?", a: "Yes for different components (e.g., Trex boards + TimberTech rails). Not recommended for mixing board brands on the same surface." },
@@ -136,7 +136,7 @@ export default function TrexVsTimberTechPage() {
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {[
               ['/how-much-does-a-deck-cost-northern-virginia', 'How Much Does a Deck Cost in Northern Virginia?'],
-              ['/composite-deck-vs-wood-deck-virginia', 'Composite Deck vs Wood Deck — Complete Comparison'],
+              ['/composite-deck-vs-wood-deck-virginia', 'Composite Deck vs Wood Deck Complete Comparison'],
               ['/trex-decks', 'Our Trex Decking Services'],
               ['/does-a-deck-add-value-to-your-home', 'Does a Deck Add Value to Your Home?'],
             ].map(([href, text]) => (

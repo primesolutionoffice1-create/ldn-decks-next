@@ -17,7 +17,7 @@ export const metadata = buildMetadata({
 const faqSchema = {
   "@context": "https://schema.org", "@type": "FAQPage",
   mainEntity: [
-    { "@type": "Question", name: "How much does a deck cost in Haymarket?", acceptedAnswer: { "@type": "Answer", text: "Haymarket deck projects range from $20,000-$55,000. Composite decks: $32-$58/sqft installed. Haymarket's larger lots (especially in Dominion Valley) allow for expansive outdoor living — multi-level decks, outdoor kitchens, and screened porches." } },
+    { "@type": "Question", name: "How much does a deck cost in Haymarket?", acceptedAnswer: { "@type": "Answer", text: "Haymarket deck projects range from $20,000-$55,000. Composite decks: $32-$58/sqft installed. Haymarket's larger lots (especially in Dominion Valley) allow for expansive outdoor living multi-level decks, outdoor kitchens, and screened porches." } },
     { "@type": "Question", name: "Do Haymarket HOAs allow deck changes?", acceptedAnswer: { "@type": "Answer", text: "Yes, but approval is required. Dominion Valley, Piedmont, and Villages of Piedmont all have active architectural review committees. We prepare and submit all HOA packages with a 100% approval rate." } },
   ],
 };
@@ -29,7 +29,7 @@ export default function HaymarketDeckBuilderPage() {
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Custom Deck Builder in Haymarket, VA</h1>
-          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Composite decks &amp; outdoor living for Haymarket — Dominion Valley, Piedmont &amp; surrounding communities</p>
+          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Composite decks &amp; outdoor living for Haymarket Dominion Valley, Piedmont &amp; surrounding communities</p>
           <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             <a href="tel:+15716557207" style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</a>
             <Link href="/contact" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Estimate</Link>
@@ -49,18 +49,18 @@ export default function HaymarketDeckBuilderPage() {
               priority
             />
           </div>
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Haymarket — Large Lots, Large Decks</h2>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Haymarket&apos;s generous lot sizes — especially in Dominion Valley and the Piedmont communities — give homeowners the space for truly impressive outdoor living projects. Multi-level decks, wrap-around designs, screened porches with fireplaces, and full outdoor kitchens are all possible on Haymarket properties.</p>
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Haymarket Large Lots, Large Decks</h2>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Haymarket&apos;s generous lot sizes especially in Dominion Valley and the Piedmont communities give homeowners the space for truly impressive outdoor living projects. Multi-level decks, wrap-around designs, screened porches with fireplaces, and full outdoor kitchens are all possible on Haymarket properties.</p>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Large lot designs:</strong> 500-1,000+ sqft builds with multi-level designs and multiple outdoor zones</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Golf course views:</strong> Dominion Valley properties with course views benefit from cable railings and view-maximizing designs</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>PW County permits:</strong> Fast 2-4 week processing. We handle everything.</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>HOA expertise:</strong> Dominion Valley, Piedmont, Villages of Piedmont — we know every community&apos;s requirements</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>HOA expertise:</strong> Dominion Valley, Piedmont, Villages of Piedmont we know every community&apos;s requirements</li>
           </ul>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Featured Haymarket Project</h2>
           <div style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', marginBottom: '2rem' }}>
-            <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>$48,000 — 550 sqft Multi-Level Deck, Dominion Valley</h3>
+            <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>$48,000 550 sqft Multi-Level Deck, Dominion Valley</h3>
             <p style={{ lineHeight: 1.7 }}>Three-level cascading deck on a golf-course-backing lot. Upper dining (250 sqft), mid lounge (200 sqft), ground-level fire pit pad (100 sqft). Trex Transcend in Havana Gold, cable railings on upper levels for unobstructed course views, 14 LED lights. PW County permit. Dominion Valley HOA approved. 4-week build.</p>
           </div>
 
@@ -74,7 +74,7 @@ export default function HaymarketDeckBuilderPage() {
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>FAQ</h2>
           {[
             { q: "Deck cost in Haymarket?", a: "$20,000-$55,000. Large lot designs possible at $32-$58/sqft." },
-            { q: "HOA approval needed?", a: "Yes for Dominion Valley, Piedmont, etc. We handle all submissions — 100% approval rate." },
+            { q: "HOA approval needed?", a: "Yes for Dominion Valley, Piedmont, etc. We handle all submissions 100% approval rate." },
           ].map((faq, i) => (
             <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
               <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>

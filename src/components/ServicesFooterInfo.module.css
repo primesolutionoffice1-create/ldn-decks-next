@@ -1,0 +1,57 @@
+.footerInfoSection {
+  background-color: var(--site-color);
+  color: var(--white);
+  padding: 80px 0;
+  text-align: center;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.contentWrap h2 {
+  font-size: 36px;
+  font-weight: 800;
+  margin: 0 0 20px 0;
+  color: var(--black); /* Or white depending on the standard site-color. Let's make it white for contrast if site-color is dark brown, or black if site-color is very light. Wait, site-color is an orange-tan. White is better. */
+  color: var(--white);
+}
+
+.mainDesc {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.countiesWrap {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.countyBadge {
+  background-color: var(--white);
+  color: var(--site-color);
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 700;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.citiesText {
+  font-size: 16px;
+  color: var(--white);
+  line-height: 1.6;
+}
+
+@media screen and (max-width: 768px) {
+  .contentWrap h2 {
+    font-size: 28px;
+  }
+}

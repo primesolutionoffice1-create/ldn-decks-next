@@ -88,8 +88,8 @@ export default function DeckLifespanPage() {
             {[
               'Boards feel soft or spongy when you walk on them',
               'Visible rot at post bases, where boards meet the house, or around fasteners',
-              'Boards are splintering — especially on stairs and railings',
-              'Deck feels bouncy or unstable (structural concern — inspect immediately)',
+              'Boards are splintering especially on stairs and railings',
+              'Deck feels bouncy or unstable (structural concern inspect immediately)',
               'Railing posts wobble when pushed',
               'Stain/seal peels within months of application (wood is saturated)',
               'Visible mold or fungus that returns within weeks of cleaning',

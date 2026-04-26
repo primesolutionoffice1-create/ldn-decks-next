@@ -2,6 +2,14 @@
 const nextConfig = {
   async redirects() {
     return [
+      // Canonical WWW Redirect
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'ldndecks.com' }],
+        destination: 'https://www.ldndecks.com/:path*',
+        permanent: true,
+      },
+
                     // Core Pages
       { source: '/about-loudoun-deck-company', destination: '/about', permanent: true },
       { source: '/why-choose-us', destination: '/about/why-choose-us', permanent: true },

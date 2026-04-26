@@ -97,6 +97,11 @@ export default async function sitemap() {
                 { path: "/deck-lighting-ideas-northern-virginia",      priority: 0.85, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-maintenance-checklist-virginia",        priority: 0.85, lastMod: TIER1, freq: "weekly" },
                 { path: "/winterize-your-deck-northern-virginia",      priority: 0.85, lastMod: TIER1, freq: "weekly" },
+                { path: "/deck-warranty-guide-northern-virginia",      priority: 0.85, lastMod: TIER1, freq: "weekly" },
+                { path: "/deck-roi-calculator-northern-virginia",      priority: 0.85, lastMod: TIER1, freq: "weekly" },
+                { path: "/deck-materials-comparison-virginia",         priority: 0.85, lastMod: TIER1, freq: "weekly" },
+                { path: "/loudoun-county-hoa-deck-rules",              priority: 0.85, lastMod: TIER1, freq: "weekly" },
+                { path: "/second-story-deck-builder-northern-virginia", priority: 0.85, lastMod: TIER1, freq: "weekly" },
                 { path: "/what-size-deck-should-i-build",              priority: 0.85, lastMod: TIER1, freq: "weekly" },
 
                 // Tier 1.5c - Final batch keyword pages

@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
 import SimpleCTA from '@/components/SimpleCTA';
+import GoogleMapEmbed from '@/components/GoogleMapEmbed';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import RatingBadge from '@/components/RatingBadge';
@@ -10,7 +11,7 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-centreville-va',
-  title: 'Deck Builder in Centreville, VA | Our Hometown | LDN Decks',
+  title: 'Deck Builder in Centreville, VA | Trex | Loudoun Decks',
   description: 'Loudoun Decks is headquartered in Centreville, VA. 5.0★ Google (41+ reviews). Custom Trex & composite decks, porches, patios. Visit our showroom. (571) 655-7207.',
 });
 
@@ -124,6 +125,7 @@ export default function CentrevilleDeckBuilderPage() {
           </div>
         </div>
       </article>
+      <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Centreville" /></div></section>
       <SimpleCTA title="Visit Our Centreville Showroom" buttonText="Get Free Estimate" link="/contact" />
       <RelatedGuides currentPath="/deck-builder-centreville-va" />
       <ContactHome />

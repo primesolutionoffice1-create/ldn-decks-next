@@ -11,12 +11,13 @@ import RelatedGuides from '@/components/RelatedGuides';
 import RatingBadge from '@/components/RatingBadge';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import SimpleCTA from '@/components/SimpleCTA';
+import GoogleMapEmbed from '@/components/GoogleMapEmbed';
 import JsonLd from '@/components/JsonLd';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
       path: '/deck-builder-leesburg-va',
-      title: 'Deck Builder in Leesburg VA | Custom Decks',
+      title: 'Deck Builder in Leesburg, VA | Trex | Loudoun Decks',
       description: 'Top-rated deck builder in Leesburg, VA. Custom composite and wood decks. Trex Certified. Traditional and contemporary designs for Leesburg homes. Call (571) 655-7207.',
       image: '/images/img36.jpeg',
 });
@@ -164,6 +165,7 @@ export default function DeckBuilderLeesburgPage() {
                         faqs={leesburgFAQs}
                   />
                   <ServiceAreasGrid />
+                  <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Leesburg" /></div></section>
                   <SimpleCTA title="Build Your Dream Deck in Leesburg" buttonText="Get Free Estimate" link="/contact" />
                   <RelatedGuides currentPath="/deck-builder-leesburg-va" />
                   <ContactHome />

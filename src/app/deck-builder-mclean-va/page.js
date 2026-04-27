@@ -10,12 +10,13 @@ import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import SimpleCTA from '@/components/SimpleCTA';
+import GoogleMapEmbed from '@/components/GoogleMapEmbed';
 import JsonLd from '@/components/JsonLd';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-mclean-va',
-  title: 'Deck Builder in McLean VA | Luxury Custom Decks',
+  title: 'Deck Builder in McLean, VA | Trex Certified | Loudoun Decks',
   description: 'Top-rated deck builder in McLean, VA. 5.0★ Google. Specializing in luxury Trex & TimberTech decks, multi-level designs, and screened porches for McLean estates. Free estimate.',
   image: '/images/img64.jpeg',
 });
@@ -177,6 +178,7 @@ export default function McLeanDeckBuilderPage() {
         faqs={mcleanFAQs}
       />
       <ServiceAreasGrid />
+      <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="McLean" /></div></section>
       <SimpleCTA title="Build Your Luxury Deck in McLean" buttonText="Get Free Estimate" link="/contact" />
       <RelatedGuides currentPath="/deck-builder-mclean-va" />
       <ContactHome />

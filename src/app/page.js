@@ -21,8 +21,8 @@ import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
     path: "/",
-    title: "Deck Builder in Loudoun County | Custom Decks | LDN Decks",
-    description: "Top-rated deck builder in Loudoun County, VA. Trex Platinum Partner & TimberTech Certified. Custom composite & wood decks from $15k+. Serving Ashburn, Leesburg & Northern VA. Free estimate — (571) 655-7207.",
+    title: "Deck Builder Northern Virginia | Trex Platinum | Loudoun Decks",
+    description: "Top-rated deck builder in Northern Virginia. Trex Platinum Partner & TimberTech Certified. Custom composite decks from $15k+. Serving Loudoun, Fairfax & Prince William. Free estimate — (571) 655-7207.",
     image: "/images/img64.jpeg",
 });
 
@@ -30,8 +30,8 @@ const businessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "@id": "https://www.ldndecks.com/#organization",
-  "name": "LDN Decks",
-  "alternateName": "Loudoun Decks",
+  "name": "Loudoun Decks",
+  "alternateName": "LDN Decks",
   "url": "https://www.ldndecks.com",
   "logo": "https://www.ldndecks.com/ldndecks-logo.webp",
   "image": "https://www.ldndecks.com/images/img64.jpeg",

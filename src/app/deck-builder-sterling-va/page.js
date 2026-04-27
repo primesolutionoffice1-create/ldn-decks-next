@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
 import SimpleCTA from '@/components/SimpleCTA';
+import GoogleMapEmbed from '@/components/GoogleMapEmbed';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import RatingBadge from '@/components/RatingBadge';
@@ -10,7 +11,7 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-sterling-va',
-  title: 'Deck Builder in Sterling, VA | Custom Composite Decks | LDN Decks',
+  title: 'Deck Builder in Sterling, VA | Trex | Loudoun Decks',
   description: 'Top-rated deck builder in Sterling, VA. 5.0★ Google. Trex & TimberTech decks, screened porches. Loudoun County permits & HOA handled. Free estimate. (571) 655-7207.',
 });
 
@@ -113,6 +114,7 @@ export default function SterlingDeckBuilderPage() {
           </div>
         </div>
       </article>
+      <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Sterling" /></div></section>
       <SimpleCTA title="Get Your Sterling Deck Quote" buttonText="Get Free Estimate" link="/contact" />
       <RelatedGuides currentPath="/deck-builder-sterling-va" />
       <ContactHome />

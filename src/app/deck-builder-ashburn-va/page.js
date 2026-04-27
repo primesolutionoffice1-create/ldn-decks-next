@@ -12,12 +12,13 @@ import RelatedGuides from '@/components/RelatedGuides';
 import RatingBadge from '@/components/RatingBadge';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import SimpleCTA from '@/components/SimpleCTA';
+import GoogleMapEmbed from '@/components/GoogleMapEmbed';
 import JsonLd from '@/components/JsonLd';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-ashburn-va',
-  title: 'Deck Builder in Ashburn VA | Trex Certified',
+  title: 'Deck Builder in Ashburn, VA | Trex Certified | Loudoun Decks',
   description: 'Top-rated deck builder in Ashburn, VA. Trex Platinum Partner & TimberTech Certified. Custom composite decks, screened porches & pergolas. HOA-approved designs. Free estimate  -  call (571) 655-7207.',
   image: '/images/img36.jpeg',
 });
@@ -180,6 +181,7 @@ export default function DeckBuilderAshburnPage() {
           ))}
         </ul>
       </section>
+      <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Ashburn" /></div></section>
       <SimpleCTA title="Build Your Dream Deck in Ashburn" buttonText="Get Free Estimate" link="/contact" />
       <RelatedGuides currentPath="/deck-builder-ashburn-va" />
       <ContactHome />

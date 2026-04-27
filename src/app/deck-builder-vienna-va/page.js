@@ -11,12 +11,13 @@ import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import SimpleCTA from '@/components/SimpleCTA';
+import GoogleMapEmbed from '@/components/GoogleMapEmbed';
 import JsonLd from '@/components/JsonLd';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-vienna-va',
-  title: 'Deck Builder in Vienna VA | Custom Composite Decks',
+  title: 'Deck Builder in Vienna, VA | Trex Certified | Loudoun Decks',
   description: 'Top-rated deck builder in Vienna, VA. 5.0★ Google. Custom Trex & TimberTech decks, screened porches & pergolas. Town of Vienna permit experts. Free estimate.',
   image: '/images/img37.jpeg',
 });
@@ -178,6 +179,7 @@ export default function ViennaDeckBuilderPage() {
         faqs={viennaFAQs}
       />
       <ServiceAreasGrid />
+      <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Vienna" /></div></section>
       <SimpleCTA title="Build Your Dream Deck in Vienna" buttonText="Get Free Estimate" link="/contact" />
       <RelatedGuides currentPath="/deck-builder-vienna-va" />
       <ContactHome />

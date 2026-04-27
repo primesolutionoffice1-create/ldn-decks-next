@@ -9,12 +9,13 @@ import ServicesFAQ from '@/components/ServicesFAQ';
 import ContactHome from '@/components/ContactHome';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import SimpleCTA from '@/components/SimpleCTA';
+import GoogleMapEmbed from '@/components/GoogleMapEmbed';
 import JsonLd from '@/components/JsonLd';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
       path: '/deck-builder-reston-va',
-      title: 'Deck Builder in Reston VA | Custom Composite Decks',
+      title: 'Deck Builder in Reston, VA | Trex Certified | Loudoun Decks',
       description: 'Top-rated deck builder in Reston, VA. Custom composite decks for Reston townhomes and single-family homes. Trex Certified. HOA-approved designs. Call (571) 655-7207.',
       image: '/images/img36.jpeg',
 });
@@ -162,6 +163,7 @@ export default function DeckBuilderRestonPage() {
                         faqs={restonFAQs}
                   />
                   <ServiceAreasGrid />
+                  <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Reston" /></div></section>
                   <SimpleCTA title="Build Your Dream Deck in Reston" buttonText="Get Free Estimate" link="/contact" />
                   <ContactHome />
             </main>

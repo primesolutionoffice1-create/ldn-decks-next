@@ -25,7 +25,7 @@ export const metadata = buildMetadata({
 metadata.metadataBase = new URL(SITE_URL);
 metadata.title = {
   default: "Deck Builder in Loudoun County | Custom Decks | LDN Decks",
-  template: "%s | LDN Decks",
+  template: "%s",
 };
 metadata.icons = {
   icon: "/ldndecks-logo.webp",

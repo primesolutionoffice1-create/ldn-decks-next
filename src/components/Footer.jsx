@@ -84,6 +84,7 @@ export default function Footer() {
               <li><Link href="/before-and-after">Before &amp; After</Link></li>
               <li><Link href="/deck-cost-calculator">Cost Calculator</Link></li>
               <li><Link href="/reviews">Reviews</Link></li>
+              <li><Link href="/bbb-accredited-deck-builder-virginia">BBB Accredited</Link></li>
               <li><button onClick={openContact} className={styles.footerBtnLink}>Contact Us</button></li>
             </ul>
           </div>

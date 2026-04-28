@@ -21,14 +21,6 @@ export default function StructuredData() {
                               "addressRegion": "VA",
                               "postalCode": "20121",
                               "addressCountry": "US"
-                  },
-                  {
-                              "@type": "PostalAddress",
-                              "streetAddress": "8735 Quarry Rd., Unit 102",
-                              "addressLocality": "Manassas",
-                              "addressRegion": "VA",
-                              "postalCode": "20110",
-                              "addressCountry": "US"
                   }
                       ],
               "geo": { "@type": "GeoCoordinates", "latitude": 38.8404, "longitude": -77.4289 },
@@ -111,15 +103,7 @@ export default function StructuredData() {
       "name": "Loudoun Decks",
       "@id": "https://www.ldndecks.com/#organization"
     },
-    "inLanguage": "en-US",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": {
-        "@type": "EntryPoint",
-        "urlTemplate": "https://www.ldndecks.com/search?q={search_term_string}"
-      },
-      "query-input": "required name=search_term_string"
-    }
+    "inLanguage": "en-US"
   };
 
   // Organization schema — knowledge panel signals for AI systems

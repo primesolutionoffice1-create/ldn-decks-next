@@ -56,9 +56,9 @@ export default function ContactForm({ hideInfoCol = false, noPadding = false }) 
                 Loudoun County, Fairfax County, Prince William County, Arlington, and Stafford.
               </div>
               <div className={styles.contactPoint}>
-                <strong>Main Office &amp; Warehouse:</strong>
+                <strong>Primary Location:</strong>
                 <br/>
-                8735 Quarry Rd., Unit 102, Manassas, VA, 20110
+                13704 Winding Oak Cir, Centreville, VA 20121
               </div>
             </div>
           )}

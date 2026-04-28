@@ -21,8 +21,8 @@ import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
     path: "/",
-    title: "Deck Builder Northern Virginia | Trex Platinum | Loudoun Decks",
-    description: "Top-rated deck builder in Northern Virginia. Trex Platinum Partner & TimberTech Certified. Custom composite decks from $15k+. Serving Loudoun, Fairfax & Prince William. Free estimate — (571) 655-7207.",
+    title: "Composite Deck Builder Northern Virginia | Trex Platinum | Loudoun Decks",
+    description: "Top-rated composite deck builder in Northern Virginia. Trex Platinum Partner & TimberTech Certified. Custom decks from $15k+. Serving Loudoun, Fairfax & Prince William. Free estimate — (571) 655-7207.",
     image: "/images/img64.jpeg",
 });
 
@@ -38,8 +38,8 @@ const businessSchema = {
   "telephone": "+15716557207",
   "email": "office@ldndecks.com",
   "priceRange": "$$-$$$$",
-  "address": { "@type": "PostalAddress", "streetAddress": "8735 Quarry Rd., Unit 102", "addressLocality": "Manassas", "addressRegion": "VA", "postalCode": "20110", "addressCountry": "US" },
-  "geo": { "@type": "GeoCoordinates", "latitude": "38.7510", "longitude": "-77.4753" },
+  "address": { "@type": "PostalAddress", "streetAddress": "13704 Winding Oak Cir", "addressLocality": "Centreville", "addressRegion": "VA", "postalCode": "20121", "addressCountry": "US" },
+  "geo": { "@type": "GeoCoordinates", "latitude": "38.8404", "longitude": "-77.4289" },
   "openingHoursSpecification": [
     { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "07:00", "closes": "19:00" },
     { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "17:00" }

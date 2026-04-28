@@ -1,0 +1,14 @@
+The 4 Core Problems, Ranked by Impact
+1. 🏙️ Local page inconsistency (biggest gap)
+Ashburn and Manassas are genuinely excellent, neighborhood callouts, real project examples, jurisdiction-specific permit timelines, strong FAQs. The majority of your 70+ other pages are thin templates by comparison. Google ranks depth. The fix is rebuilding 8–10 priority city pages (Woodbridge, Reston, Herndon, Chantilly, Alexandria, Leesburg, Gainesville, Chantilly) to match the Ashburn standard.
+
+2. 🔍 Keyword targeting gaps on high-intent terms
+"Trex deck builder [city]", needs a dedicated H2 on every priority city page
+"Composite deck builder Northern Virginia", homepage H1 is right, meta title needs tightening
+"Screened porch builder Northern Virginia", you don't have a standalone geo-targeted page for this. Big missed opportunity given how often it appears as a service.
+"Deck builder near me", this is a Google Business Profile problem, not a content problem (see below)
+3. 📋 Missing schema markup
+No LocalBusiness or FAQPage structured data detected on city pages. You have FAQ sections on every page, those are eligible for Google rich results right now. Just not activated. This is a quick developer task, high reward.
+
+4. 📍 Google Business Profile
+"Deck builder near me" rankings live in the Local Pack, not in organic results. Your GBP needs: all 5 counties listed as service areas, a full services list (Trex Decks, Composite Decks, Screened Porches, etc.), more photos (geo-tagged), and a push to 10+ new reviews/month.

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { counties, slugify } from '@/data/cityData';
+import { counties, slugify, getCanonicalCityUrl } from '@/data/cityData';
 import styles from './ServiceAreasGrid.module.css';
 
 const LocationIcon = () => (
@@ -29,7 +29,7 @@ export default function ServiceAreasGrid() {
                   {county.cities.map((city, cIdx) => (
                     <li key={cIdx}>
                       <Link 
-                        href={`/near-you/${countySlug}/${slugify(city)}`}
+                        href={getCanonicalCityUrl(countySlug, city)}
                         className={styles.cityLink}
                         title={`Deck Builder in ${city}, VA`}
                       >

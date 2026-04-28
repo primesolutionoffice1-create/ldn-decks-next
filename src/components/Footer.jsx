@@ -114,7 +114,7 @@ export default function Footer() {
               </li>
               <li className={styles.alignStart}>
                 <LocationIcon />
-                <span>8735 Quarry Rd., Unit 102,<br />Manassas, VA 20110, Virginia</span>
+                <span>13704 Winding Oak Cir,<br />Centreville, VA 20121</span>
               </li>
             </ul>
           </div>

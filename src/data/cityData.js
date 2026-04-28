@@ -58,3 +58,21 @@ export function getCityData(countySlug, citySlug) {
     countySlug: countySlug
   };
 }
+
+export const canonicalCities = new Set([
+  'ashburn', 'leesburg', 'sterling', 'purcellville', 'brambleton', 'south-riding', // Loudoun
+  'alexandria', 'fairfax', 'vienna', 'reston', 'herndon', 'mclean', 'centreville', 'chantilly',
+  'falls-church', 'burke', 'springfield', 'oakton', 'great-falls', 'lorton', 'tysons', // Fairfax
+  'manassas', 'woodbridge', 'haymarket', 'gainesville', 'bristow', // Prince William
+  'arlington', // Arlington
+  'stafford' // Stafford
+]);
+
+// Helper to get the canonical URL for a city, avoiding redirects
+export function getCanonicalCityUrl(countySlug, city) {
+  const citySlug = slugify(city);
+  if (canonicalCities.has(citySlug)) {
+    return `/deck-builder-${citySlug}-va`;
+  }
+  return `/near-you/${countySlug}/${citySlug}`;
+}

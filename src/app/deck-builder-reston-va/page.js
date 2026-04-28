@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import ServicesHeader from '@/components/ServicesHeader';
 import ServiceMain from '@/components/ServiceMain';
 import ServiceInclusions from '@/components/ServiceInclusions';
@@ -7,165 +8,185 @@ import ServiceContentExpansion from '@/components/ServiceContentExpansion';
 import ProcessSteps from '@/components/ProcessSteps';
 import ServicesFAQ from '@/components/ServicesFAQ';
 import ContactHome from '@/components/ContactHome';
+import RelatedGuides from '@/components/RelatedGuides';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import SimpleCTA from '@/components/SimpleCTA';
 import GoogleMapEmbed from '@/components/GoogleMapEmbed';
 import JsonLd from '@/components/JsonLd';
+import LocalBusinessSchema from '@/components/LocalBusinessSchema';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
-      path: '/deck-builder-reston-va',
-      title: 'Deck Builder in Reston, VA | Trex Certified | Loudoun Decks',
-      description: 'Top-rated deck builder in Reston, VA. Custom composite decks for Reston townhomes and single-family homes. Trex Certified. HOA-approved designs. Call (571) 655-7207.',
-      image: '/images/img36.jpeg',
+  path: '/deck-builder-reston-va',
+  title: 'Deck Builder in Reston, VA | Trex Certified | Loudoun Decks',
+  description: 'Top-rated deck builder in Reston, VA. Trex Platinum Partner & TimberTech Certified. Custom composite decks, screened porches & pergolas. Free estimate  -  call (571) 655-7207.',
+  image: '/images/img36.jpeg',
 });
 
 const inclusions = [
-      {
-            title: "Reston Association Expertise",
-            desc: "We manage the Reston Association design review process from concept to approval, so you don't have to."
-      },
-      {
-            title: "Townhome and Single-Family Specialists",
-            desc: "Reston's mix of property types requires flexible expertise. We build quality decks for both townhomes and single-family homes."
-      },
-      {
-            title: "Fairfax County Code Compliance",
-            desc: "All Reston projects are built to Fairfax County code with proper permits, inspections, and engineering documentation."
-      }
+  {
+    title: "Reston Association (RA) Expertise",
+    desc: "We understand the strict architectural guidelines and DRB (Design Review Board) submission processes required by the Reston Association to get your deck approved."
+  },
+  {
+    title: "Premium Composite Specialists",
+    desc: "As certified Trex Platinum and TimberTech installers, we deliver high-grade composite decking that blends perfectly with Reston's natural, wooded aesthetic."
+  },
+  {
+    title: "Fairfax County Craftsmanship",
+    desc: "Building outdoor spaces that elevate Reston homes with precision engineering, clean lines, and premium materials designed to last decades."
+  }
 ];
 
 const restonFAQs = [
-      {
-            q: "Do you build decks in Reston, VA?",
-            a: "Yes. Loudoun Decks serves Reston and surrounding Fairfax County communities including Herndon, Sterling, and Potomac Falls. We build on townhomes and single-family homes."
-      },
-      {
-            q: "What does a deck cost in Reston, VA?",
-            a: "Reston deck costs range from $18,000 for a basic pressure-treated build to $50,000+ for premium composite multi-level designs. Townhome decks typically range from $15,000 to $28,000."
-      },
-      {
-            q: "Do you work with the Reston Association for deck approvals?",
-            a: "Yes. We are experienced with the RA design review process. We prepare all required drawings and documentation to expedite your approval."
-      },
-      {
-            q: "Can you build a deck on my Reston townhome?",
-            a: "Yes. We specialize in townhome deck builds in Reston, including replacements, resurfacing, and new deck additions. We understand the structural requirements specific to townhome builds."
-      },
-      {
-            q: "Are composite decks a good choice for Reston homes?",
-            a: "Yes. Trex and TimberTech composite decking is ideal for Reston homes. Low maintenance, weather-resistant, and available in HOA-approved color options."
-      },
-      {
-            q: "How long does it take to get a deck permit in Reston?",
-            a: "Fairfax County deck permits typically take 3-5 weeks. We manage the full permit application and coordinate with the county for the fastest possible timeline."
-      }
+  {
+    q: "Do you build custom decks in Reston, VA?",
+    a: "Yes. Loudoun Decks is a highly trusted deck builder serving all of Reston, including North Reston, South Lakes, and the neighborhoods around Lake Anne and Lake Audubon."
+  },
+  {
+    q: "What is the cost of a composite deck in Reston?",
+    a: "A professional composite deck in Reston typically ranges from $22,000 to $55,000+, depending on size, materials, multi-level design, and add-ons like screened porches."
+  },
+  {
+    q: "Do you handle the Reston Association DRB approval process?",
+    a: "Yes. The Reston Association Design Review Board (DRB) has strict guidelines for decking materials and colors. We provide the necessary CAD plans and material samples to facilitate the HOA submission process."
+  },
+  {
+    q: "How long does it take to build a deck in Reston?",
+    a: "Permitting in Fairfax County takes about 2-4 weeks. Once approved by the county and the Reston Association, most standard deck builds are completed in 1-2 weeks. Complex projects may take 3-4 weeks."
+  },
+  {
+    q: "Are you a Trex certified contractor in Reston VA?",
+    a: "Yes. Loudoun Decks is a Trex Platinum Partner, the highest certification level, giving our Reston clients access to top-tier warranties and expert installation."
+  },
+  {
+    q: "Do you build screened porches in Reston?",
+    a: "Yes, screened porches are very popular in Reston's wooded neighborhoods. We specialize in building structurally integrated screened porches and outdoor living spaces."
+  }
 ];
 
 const restonFaqSchema = {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": restonFAQs.map(({ q, a }) => ({
-            "@type": "Question",
-            "name": q,
-            "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": a
-            }
-      }))
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": restonFAQs.map(({ q, a }) => ({
+    "@type": "Question",
+    "name": q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": a
+    }
+  }))
 };
 
 const expansionSections = [
-      {
-            title: "Why Reston Homeowners Choose Loudoun Decks",
-            paragraphs: [
-                  "Reston Association has specific design standards for all exterior structures \u2014 materials, colors, and dimensions must be pre-approved before you can even apply for a Fairfax County permit. We\u2019ve navigated RA\u2019s approval process dozens of times and know which materials and colors are pre-approved, which require a variance, and how to write your application to minimize back-and-forth.",
-                  "We build in all Reston clusters and have completed projects in North Point, South Lakes, and Lake Anne neighborhoods. Recent projects: 320 sqft Trex deck with Transcend Lineage railings in North Point (2025), screened porch addition in South Lakes (2024)."
-            ]
-      },
-      {
-            title: "Premium Deck Builder Serving Reston, VA",
-            paragraphs: [
-                  "Reston, Virginia is a community unlike any other in Northern Virginia. Planned around paths, lakes, and green spaces, Reston homeowners have a unique relationship with the outdoors. A custom deck here is not just a home improvement. It is an extension of the outdoor lifestyle that defines the community. Loudoun Decks brings premium deck building craftsmanship to Reston and Fairfax County.",
-                  "We build on both townhomes and single-family homes throughout Reston. Our team understands the structural nuances of townhome deck builds including shared wall considerations, HOA footprint limitations, and the specific material requirements of the Reston Association. For single-family homes, we deliver the same high-end composite and wood designs we are known for across all of Northern Virginia.",
-                  "Reston projects range from $15,000 for a townhome deck replacement to $50,000+ for multi-level custom composite builds with pergola and outdoor kitchen. We compete on quality, credentials, and local track record."
-            ]
-      },
-      {
-            title: "Reston Association Approvals - We Handle Everything",
-            paragraphs: [
-                  "Navigating the Reston Association design review process is one of the biggest pain points for Reston homeowners. The RA requires specific documentation and architectural drawings before approving any exterior modification. Many homeowners find this time-consuming. We find it routine.",
-                  "We prepare professional site plans and architectural drawings that meet RA standards. We submit on your behalf, respond to review comments, and track the approval. Our experience means fewer revision cycles and faster approvals, getting your project started sooner.",
-                  "We are fully licensed and insured in Fairfax County and pull all required Fairfax County building permits. Every project is fully legal, fully documented, and built to protect your investment and property value."
-            ],
-            listItems: [
-                  { label: "RA Design Review", text: "Full documentation preparation and submission for Reston Association deck approvals." },
-                  { label: "Fairfax County Permits", text: "We handle all Fairfax County permits and schedule inspections on your behalf." },
-                  { label: "Townhome Expertise", text: "Specialized in the unique structural requirements of Reston townhome deck builds." },
-                  { label: "5-Star Rated", text: "Consistently 5-Star Google Rated by homeowners across Reston and Fairfax County." }
-            ]
-      },
-      {
-            title: "Composite and Wood Decks for Reston Homes",
-            paragraphs: [
-                  "Reston homeowners value low-maintenance performance and clean aesthetics. Composite decking from Trex or TimberTech handles Reston outdoor exposure without fading, warping, or requiring seasonal work. As a Trex Platinum Partner and TimberTech Certified contractor, we provide the full premium product line with the best warranties in the industry.",
-                  "For homeowners who prefer natural wood, we work with Western Red Cedar and pressure-treated lumber where the Reston Association approves natural materials. We match every material to the home, neighborhood, and budget, always focused on long-term performance and curb appeal.",
-                  "Whether you are replacing a deteriorating deck, adding a new deck to a townhome, or building a complete outdoor living space, Loudoun Decks delivers premium results at every scope. Call (571) 655-7207 for your free on-site estimate."
-            ]
-      }
+  {
+    title: "Why Reston Homeowners Choose Loudoun Decks",
+    paragraphs: [
+      "Reston is known for its beautiful wooded lots, scenic lakes, and strict architectural standards set by the Reston Association (RA). We’ve worked extensively in Reston and understand exactly how to design a deck that complements the natural surroundings while meeting all DRB requirements and Fairfax County building codes.",
+      "Recent Reston projects include a multi-level TimberTech deck overlooking Lake Audubon (2024), a screened porch addition in North Reston (2025), and a complete backyard transformation with a Trex Transcend deck and under-deck patio near South Lakes."
+    ]
+  },
+  {
+    title: "Reston's Premier Custom Deck Builder",
+    paragraphs: [
+      "Reston, VA is one of the premier planned communities in America. As a dedicated deck builder in Reston, Loudoun Decks brings premium craftsmanship to every project. We are not a volume builder focused on rushing through jobs; we are a detail-oriented team that prioritizes quality, aesthetics, and longevity.",
+      "Whether you're looking to replace an old wooden deck with modern composites or build a brand-new outdoor entertainment space from scratch, our team handles the entire process. We manage the Fairfax County permits, the Reston DRB architectural review board submissions, and the structural engineering.",
+      "If you are looking for a deck builder near you in Reston that delivers guaranteed quality and a stress-free experience, Loudoun Decks is your partner. Our 5-Star Google Rating reflects our commitment to our clients."
+    ]
+  },
+  {
+    title: "Composite Decking Specialists for Reston Homes",
+    paragraphs: [
+      "Reston's mature trees provide beautiful shade but can cause maintenance issues for traditional wood decks. This makes composite decking the ideal choice for Reston homeowners. As a Trex Platinum Partner and TimberTech Certified contractor, we install decking that won't rot, splinter, or require constant staining. Projects typically start around $22,000 and scale based on your specific design requirements.",
+      "We specialize in designing decks that maximize the usable outdoor space of your property, whether you have a steep sloped yard or a flat lot. Integrated lighting, custom railings (like glass or cable to preserve lake or woodland views), and built-in seating are standard requests that we execute flawlessly.",
+      "Every composite deck we build in Reston comes with a full manufacturer's warranty backed by our installation certification, ensuring your investment is protected for decades."
+    ],
+    listItems: [
+      { label: "Trex Platinum Partner", text: "Highest certification level for Trex installation in Reston and Northern Virginia." },
+      { label: "TimberTech Certified", text: "Certified installer for the full TimberTech Pro and AZEK product lines." },
+      { label: "Reston Association Ready", text: "Full handling of all Fairfax County permitting and RA DRB submissions." },
+      { label: "5-Star Rated", text: "Consistently 5-Star Google Rated by homeowners across Northern Virginia." }
+    ]
+  },
+  {
+    title: "Screened Porches and Outdoor Living in Reston",
+    paragraphs: [
+      "Given Reston's heavily wooded environment, many homeowners expand their vision beyond just a deck. A screened porch addition allows you to enjoy the Virginia outdoors without the intense summer sun, falling leaves, or evening insects. We specialize in screen room additions that look like original extensions of your home's architecture.",
+      "Pergolas are another excellent addition, providing architectural character and partial shade. We build both traditional open-rafter wood pergolas and modern low-maintenance systems.",
+      "Our full outdoor living packages \u2014 combining decks, screened porches, and under-deck dry systems \u2014 deliver a complete transformation of your property's outdoor potential, maximizing your home's resale value in the Reston real estate market."
+    ]
+  }
 ];
 
 export default function DeckBuilderRestonPage() {
-      return (
-            <main>
-                  <JsonLd data={restonFaqSchema} />
-                  <ServicesHeader
-                        subtext="Reston, VA's Trusted Builder"
-                        title="Custom Deck Builder in Reston, VA"
-                        description="Loudoun Decks builds premium decks in Reston. Reston Association approved. Fairfax County permitted. Trex Certified. 5-Star rated service."
-                  />
-                  <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-                        <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
-                              <Image
-                                    src="/images/img17.jpeg"
-                                    alt="Premium custom deck built by LDN Decks in Reston, Virginia"
-                                    fill
-                                    style={{ objectFit: 'cover' }}
-                                    sizes="(max-width: 900px) 100vw, 900px"
-                                    priority
-                              />
-                        </div>
-                        <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Reston DRB Expertise &amp; Contemporary Design</h2>
-                  </div>
-                  <ServiceMain
-                        subtitle="Reston's Trusted Choice"
-                        title="Deck Builder Reston VA - Premium Craftsmanship"
-                        description="We build decks for Reston townhomes and single-family homes. RA-approved, Fairfax County permitted, and built to last."
-                        listItems={[
-                              "Reston Association design review management",
-                              "Townhome and single-family deck specialists",
-                              "Trex Platinum and TimberTech Certified",
-                              "Screened porches, pergolas and outdoor kitchens",
-                              "5-Star Google Rated - call (571) 655-7207"
-                        ]}
-                        image1="/images/img36.jpeg"
-                        image2="/images/img37.jpeg"
-                  />
-                  <ServiceContentExpansion sections={expansionSections} />
-                  <ServiceInclusions
-                        title="Why Reston Homeowners Choose Loudoun Decks"
-                        description="Reston Association expertise, Fairfax County permitting, and premium craftsmanship backed by a 5-Star Google Rated reputation."
-                        items={inclusions}
-                  />
-                  <ProcessSteps />
-                  <ServicesFAQ
-                        title="Deck Builder Reston VA - FAQs"
-                        faqs={restonFAQs}
-                  />
-                  <ServiceAreasGrid />
-                  <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Reston" /></div></section>
-                  <SimpleCTA title="Build Your Dream Deck in Reston" buttonText="Get Free Estimate" link="/contact" />
-                  <ContactHome />
-            </main>
-      );
+  return (
+    <main>
+      <LocalBusinessSchema city="Reston" url="https://www.ldndecks.com/deck-builder-reston-va" />
+      <JsonLd data={restonFaqSchema} />
+      <ServicesHeader
+        subtext="Reston, VA's Trusted Deck Company"
+        title="Custom Deck Builder in Reston, VA"
+        description="Loudoun Decks builds premium composite decks and screened porches in Reston. Trex Platinum Partner. Reston Association DRB experts. 5-Star Google Rated."
+      />
+      <ServiceMain
+        subtitle="Fairfax County's Choice"
+        title="Deck Builder Reston VA  -  Premium Craftsmanship"
+        description="We build the outdoor spaces Reston homeowners love. Custom designs, RA DRB-ready plans, and premium composite materials starting at $22k+."
+        listItems={[
+          "Trex Platinum & TimberTech Certified",
+          "Full Fairfax County Permit & Reston DRB management",
+          "Custom multi-level and single-level designs",
+          "Screened porches, pergolas & under-deck patios",
+          "5-Star Google Rated  -  call (571) 655-7207"
+        ]}
+        image1="/images/img36.jpeg"
+        image2="/images/img37.jpeg"
+      />
+      <ServiceContentExpansion sections={expansionSections} />
+      <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
+        <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
+          <Image
+            src="/images/img17.jpeg"
+            alt="Premium custom deck built by LDN Decks in Reston, Virginia"
+            fill
+            style={{ objectFit: 'cover' }}
+            sizes="(max-width: 900px) 100vw, 900px"
+            priority
+          />
+        </div>
+        <h2 style={{ fontSize: '2.2rem', fontWeight: 700, marginBottom: '1.5rem', color: 'var(--color-primary)' }}>Trex Deck Builder Reston</h2>
+        <h3 style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: '1.5rem' }}>Reston: Harmonizing Outdoor Living with Nature</h3>
+      </div>
+      <ServiceInclusions
+        title="Why Reston Chooses Loudoun Decks"
+        description="We are a local Northern Virginia team with deep roots in Fairfax County and the credentials to back every build."
+        items={inclusions}
+      />
+      <ProcessSteps />
+      <ServicesFAQ
+        title="Deck Builder Reston VA  -  FAQs"
+        faqs={restonFAQs}
+      />
+      <ServiceAreasGrid />
+      <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
+        <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Related Guides</h2>
+        <ul style={{ listStyle: 'none', padding: 0 }}>
+          {[
+            ['/deck-permit-fairfax-county-virginia', 'Fairfax County Deck Permit Guide'],
+            ['/hoa-deck-rules-northern-virginia', 'HOA Deck Rules in Northern Virginia'],
+            ['/how-much-does-a-deck-cost-northern-virginia', 'How Much Does a Deck Cost in Northern Virginia?'],
+            ['/composite-deck-vs-wood-deck-virginia', 'Composite Deck vs Wood Deck'],
+          ].map(([href, text]) => (
+            <li key={href} style={{ marginBottom: '0.5rem' }}>
+              <Link href={href} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{text} →</Link>
+            </li>
+          ))}
+        </ul>
+      </section>
+      <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Reston" /></div></section>
+      <SimpleCTA title="Build Your Dream Deck in Reston" buttonText="Get Free Estimate" link="/contact" />
+      <RelatedGuides currentPath="/deck-builder-reston-va" />
+      <ContactHome />
+    </main>
+  );
 }

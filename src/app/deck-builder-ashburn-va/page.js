@@ -14,6 +14,7 @@ import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import SimpleCTA from '@/components/SimpleCTA';
 import GoogleMapEmbed from '@/components/GoogleMapEmbed';
 import JsonLd from '@/components/JsonLd';
+import LocalBusinessSchema from '@/components/LocalBusinessSchema';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -121,6 +122,7 @@ const expansionSections = [
 export default function DeckBuilderAshburnPage() {
   return (
     <main>
+      <LocalBusinessSchema city="Ashburn" url="https://www.ldndecks.com/deck-builder-ashburn-va" />
       <JsonLd data={ashburnFaqSchema} />
       <ServicesHeader
         subtext="Ashburn, VA's #1 Rated Builder"
@@ -153,7 +155,8 @@ export default function DeckBuilderAshburnPage() {
             priority
           />
         </div>
-        <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Ashburn The Heart of Loudoun Luxury Outdoor Living</h2>
+        <h2 style={{ fontSize: '2.2rem', fontWeight: 700, marginBottom: '1.5rem', color: 'var(--color-primary)' }}>Trex Deck Builder Ashburn</h2>
+        <h3 style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: '1.5rem' }}>Ashburn: The Heart of Loudoun Luxury Outdoor Living</h3>
       </div>
       <ServiceInclusions
         title="Why Ashburn Chooses Loudoun Decks"

@@ -1,4 +1,4 @@
-import { getAllCityPaths } from '@/data/cityData';
+import { getAllCityPaths, canonicalCities } from '@/data/cityData';
 import { blogPosts } from '@/lib/blogData';
 import { showcaseProjects } from '@/lib/showcaseData';
 import { SITE_URL } from '@/lib/seo';
@@ -74,6 +74,7 @@ export default async function sitemap() {
                 { path: "/get-estimate",                 priority: 0.85, lastMod: TIER1, freq: "weekly" },
 
                 // Tier 1.5 - High-intent keyword/content pages (new)
+                { path: "/screened-porch-builder-northern-virginia",   priority: 0.95, lastMod: TIER1, freq: "weekly" },
                 { path: "/how-much-does-a-deck-cost-northern-virginia", priority: 0.95, lastMod: TIER1, freq: "weekly" },
                 { path: "/trex-vs-timbertech-vs-azek",                 priority: 0.90, lastMod: TIER1, freq: "weekly" },
                 { path: "/screened-porch-cost-northern-virginia",       priority: 0.90, lastMod: TIER1, freq: "weekly" },
@@ -188,12 +189,14 @@ export default async function sitemap() {
                 { path: "/terms-of-service",             priority: 0.30, lastMod: TIER4, freq: "yearly" },
         ];
 
-        const cityPaths = getAllCityPaths().map(path => ({
-                path: `/near-you/${path.county}/${path.city}`,
-                priority: 0.80,
-                lastMod: TIER2,
-                freq: "monthly",
-        }));
+        const cityPaths = getAllCityPaths()
+                .filter(path => !canonicalCities.has(path.city))
+                .map(path => ({
+                        path: `/near-you/${path.county}/${path.city}`,
+                        priority: 0.80,
+                        lastMod: TIER2,
+                        freq: "monthly",
+                }));
 
         // Blog posts — dynamically generated from blogData with real publish dates
         const blogPaths = blogPosts.map(post => {

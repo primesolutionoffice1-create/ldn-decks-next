@@ -30,60 +30,62 @@ export default function WoodDecksPage() {
     <>
       <JsonLd data={faqSchema} />
       <Breadcrumbs />
-      {/* Hero with background image */}
-      <section style={{ position: 'relative', minHeight: 480, overflow: 'hidden' }}>
+      {/* Hero with full-width background image */}
+      <section style={{ position: 'relative', minHeight: 520, overflow: 'hidden' }}>
         <Image
-          src="/images/img62.jpeg"
-          alt="Premium stained wood deck with metal balusters in Northern Virginia"
+          src="/images/wood-deck-hero.jpg"
+          alt="Custom stained wood deck with modern pergola in Northern Virginia backyard"
           fill
           priority
           sizes="100vw"
           style={{ objectFit: 'cover', objectPosition: 'center' }}
         />
-        <div style={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.55)' }} />
-        <div style={{ position: 'relative', zIndex: 1, color: '#fff', padding: '4rem 0' }}>
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.45) 100%)' }} />
+        <div style={{ position: 'relative', zIndex: 1, color: '#fff', padding: '5rem 0' }}>
           <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-            <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Wood Decks in Northern Virginia</h1>
-            <p style={{ color: '#eee', fontSize: '1.1rem' }}>Pressure-treated, cedar, redwood &amp; exotic hardwood decks — natural beauty meets honest craftsmanship</p>
-            <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-              <a href="tel:+15716557207" style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</a>
-              <Link href="/contact" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Estimate</Link>
+            <h1 style={{ fontSize: '2.75rem', fontWeight: 700, marginBottom: '1rem', lineHeight: 1.15 }}>Wood Decks in Northern Virginia</h1>
+            <p style={{ color: '#eee', fontSize: '1.15rem', maxWidth: 640, lineHeight: 1.5 }}>Pressure-treated, cedar, redwood &amp; exotic hardwood decks — natural beauty meets honest craftsmanship for Loudoun, Fairfax &amp; Prince William counties</p>
+            <div style={{ marginTop: '1.75rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+              <a href="tel:+15716557207" style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.85rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</a>
+              <Link href="/contact" style={{ border: '2px solid #fff', color: '#fff', padding: '0.85rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Estimate</Link>
             </div>
-            <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#ccc' }}>★★★★★ 5.0 on Google · 41 reviews · Licensed &amp; Insured · 5-Year Warranty</p>
+            <p style={{ marginTop: '1.25rem', fontSize: '0.9rem', color: '#ddd' }}>★★★★★ 5.0 on Google · 41 reviews · Licensed &amp; Insured · 5-Year Warranty</p>
           </div>
         </div>
       </section>
 
-      {/* Photo gallery — 4-image grid */}
+      {/* Photo gallery — 6-image grid */}
       <section style={{ padding: '3rem 0', background: '#f9f9f9' }}>
-        <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 1.5rem' }}>
-          <h2 style={{ textAlign: 'center', fontSize: '1.5rem', fontWeight: 700, marginBottom: '0.5rem' }}>Real Wood Deck Projects in Northern Virginia</h2>
-          <p style={{ textAlign: 'center', color: '#555', marginBottom: '2rem' }}>From budget-friendly pressure-treated builds to premium stained wood projects we&apos;ve completed</p>
+        <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 1.5rem' }}>
+          <h2 style={{ textAlign: 'center', fontSize: '1.6rem', fontWeight: 700, marginBottom: '0.5rem' }}>Wood Deck Projects &amp; Inspiration</h2>
+          <p style={{ textAlign: 'center', color: '#555', marginBottom: '2rem', maxWidth: 700, margin: '0 auto 2rem' }}>From classic pressure-treated builds to modern wood deck designs — see what&apos;s possible for your Northern Virginia home</p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.25rem' }}>
             {[
-              { src: '/images/img60.jpeg', title: 'Stained PT Wood Deck', desc: 'Classic pressure-treated pine with rich brown stain finish — affordable durability for everyday outdoor living.' },
-              { src: '/images/img61.jpeg', title: 'Wood Deck with Metal Balusters', desc: 'Stained wood deck combined with black aluminum balusters — modern detail on traditional materials.' },
-              { src: '/images/img63.jpeg', title: 'Multi-Level Wood Deck', desc: 'Stepped wood deck design with built-in stairs — perfect for sloped Northern Virginia lots.' },
-              { src: '/images/img64.jpeg', title: 'Ground-Level Wood Deck', desc: 'Low-profile wood platform deck integrating into the landscape — no railings needed.' },
+              { src: '/images/wood-deck-classic.jpg', title: 'Classic Elevated Wood Deck', desc: 'Traditional second-story deck with stairs and full railings — the most common wood deck configuration for Northern Virginia homes.' },
+              { src: '/images/wood-deck-ground.jpg', title: 'Ground-Level Wood Deck', desc: 'Low-profile wood platform with integrated bench seating — perfect for flat lots, no railings required at this height.' },
+              { src: '/images/wood-deck-with-railings.jpg', title: 'Wood Deck with Wood Railings', desc: 'Pressure-treated wood deck with matching wood railing system — cohesive natural look that ages beautifully.' },
+              { src: '/images/wood-deck-living.jpg', title: 'Wood Deck Outdoor Living', desc: 'Wood deck transformed into a full outdoor living room with Adirondack chairs and view of the surroundings.' },
+              { src: '/images/wood-deck-pt-pine.jpg', title: 'Pressure-Treated Pine Detail', desc: 'Close-up of fresh PT pine deck boards — the most affordable wood deck option starting at $18/sqft.' },
+              { src: '/images/wood-deck-stained-floor.jpg', title: 'Stained Wood Deck Surface', desc: 'Cedar or stained pine deck with rich brown finish — natural wood beauty with weather protection.' },
             ].map((item) => (
-              <figure key={item.src} style={{ margin: 0, borderRadius: 8, overflow: 'hidden', boxShadow: '0 4px 12px rgba(0,0,0,0.1)', background: '#fff' }}>
+              <figure key={item.src} style={{ margin: 0, borderRadius: 10, overflow: 'hidden', boxShadow: '0 4px 16px rgba(0,0,0,0.08)', background: '#fff', display: 'flex', flexDirection: 'column' }}>
                 <div style={{ position: 'relative', aspectRatio: '3/2', background: '#eee' }}>
                   <Image
                     src={item.src}
-                    alt={item.title + ' in Northern Virginia by Loudoun Decks'}
+                    alt={item.title + ' — Loudoun Decks Northern Virginia'}
                     fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1100px) 50vw, 25vw"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     style={{ objectFit: 'cover' }}
                   />
                 </div>
-                <figcaption style={{ padding: '1rem' }}>
-                  <h3 style={{ fontWeight: 600, marginBottom: '0.25rem', fontSize: '1rem' }}>{item.title}</h3>
+                <figcaption style={{ padding: '1.1rem 1.25rem' }}>
+                  <h3 style={{ fontWeight: 600, marginBottom: '0.35rem', fontSize: '1rem' }}>{item.title}</h3>
                   <p style={{ fontSize: '0.85rem', color: '#555', lineHeight: 1.5 }}>{item.desc}</p>
                 </figcaption>
               </figure>
             ))}
           </div>
-          <p style={{ textAlign: 'center', marginTop: '2rem' }}>
+          <p style={{ textAlign: 'center', marginTop: '2.25rem' }}>
             <Link href="/showcase" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>View our complete project gallery →</Link>
           </p>
         </div>

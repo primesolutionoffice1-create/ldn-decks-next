@@ -186,6 +186,16 @@ const nextConfig = {
       { source: '/wp-content/uploads/2024/09/ldndecks-logo-new-e1731874431860.webp', destination: '/ldndecks-logo.webp', permanent: true },
       { source: '/wp-content/uploads/2024/09/ldndecks-logo-new.png', destination: '/ldndecks-logo.webp', permanent: true },
       { source: '/wp-content/:path*', destination: '/', permanent: true },
+
+      // Single-hop www → non-www canonical redirect
+      // Eliminates 2-hop chain: http://www → https://www → https://non-www
+      // Now: http://www → https://non-www (1 hop)
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'www.ldndecks.com' }],
+        destination: 'https://ldndecks.com/:path*',
+        permanent: true,
+      },
     ];
   },
   async headers() {

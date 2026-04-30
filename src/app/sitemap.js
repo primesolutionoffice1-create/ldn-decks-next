@@ -66,6 +66,7 @@ export default async function sitemap() {
                 { path: "/services/entry-doors",         priority: 0.65, lastMod: TIER3, freq: "monthly" },
                 { path: "/faqs",                         priority: 0.75, lastMod: TIER3, freq: "monthly" },
                 { path: "/showcase",                     priority: 0.75, lastMod: TIER3, freq: "monthly" },
+                { path: "/houzz-deck-projects",          priority: 0.75, lastMod: TIER3, freq: "monthly" },
                 { path: "/blog",                         priority: 0.70, lastMod: TIER3, freq: "weekly" },
                 { path: "/contact",                      priority: 0.70, lastMod: TIER3, freq: "monthly" },
                 { path: "/bbb-accredited-deck-builder-virginia", priority: 0.85, lastMod: TIER1, freq: "monthly" },

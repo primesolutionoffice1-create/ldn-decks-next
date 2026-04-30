@@ -251,7 +251,11 @@ export default function Header() {
                 </div>
 
                 <div className={styles.navItem}>
-                  <Link href="/showcase" className={isActive("/showcase")}>Showcase</Link>
+                  <Link href="/showcase" className={isActive("/showcase")}>Showcase <CaretDownIcon /></Link>
+                  <div className={styles.dropdown}>
+                    <Link href="/showcase">Recent Projects</Link>
+                    <Link href="/houzz-deck-projects">Houzz Projects</Link>
+                  </div>
                 </div>
 
                 <div className={styles.navItem}>
@@ -440,8 +444,19 @@ export default function Header() {
           </div>
 
           <div className={styles.mobileNavItem}>
-            <div className={`${styles.mobileNavLink} ${isActive('/showcase')}`}>
-              <Link href="/showcase" onClick={() => setIsMobileOpen(false)}>Showcase</Link>
+            <div
+              className={`${styles.mobileNavLink} ${isActive('/showcase')}`}
+              onClick={() => toggleDropdown('showcase')}
+            >
+              <span>Showcase</span> {openDropdown === 'showcase' ? <MinusIcon /> : <PlusIcon />}
+            </div>
+            <div className={`${styles.drawerAccordion} ${openDropdown === 'showcase' ? styles.expanded : ''}`}>
+               <div className={styles.drawerAccordionInner}>
+                <div className={styles.mobileDropdown}>
+                  <Link href="/showcase" onClick={() => setIsMobileOpen(false)}>Recent Projects</Link>
+                  <Link href="/houzz-deck-projects" onClick={() => setIsMobileOpen(false)}>Houzz Projects</Link>
+                </div>
+              </div>
             </div>
           </div>
 

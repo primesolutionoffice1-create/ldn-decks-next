@@ -1,14 +1,122 @@
-The 4 Core Problems, Ranked by Impact
-1. 🏙️ Local page inconsistency (biggest gap)
-Ashburn and Manassas are genuinely excellent, neighborhood callouts, real project examples, jurisdiction-specific permit timelines, strong FAQs. The majority of your 70+ other pages are thin templates by comparison. Google ranks depth. The fix is rebuilding 8–10 priority city pages (Woodbridge, Reston, Herndon, Chantilly, Alexandria, Leesburg, Gainesville, Chantilly) to match the Ashburn standard.
+STEP-BY-STEP: CREATE A HIGH-CONVERTING HOUZZ PAGE
 
-2. 🔍 Keyword targeting gaps on high-intent terms
-"Trex deck builder [city]", needs a dedicated H2 on every priority city page
-"Composite deck builder Northern Virginia", homepage H1 is right, meta title needs tightening
-"Screened porch builder Northern Virginia", you don't have a standalone geo-targeted page for this. Big missed opportunity given how often it appears as a service.
-"Deck builder near me", this is a Google Business Profile problem, not a content problem (see below)
-3. 📋 Missing schema markup
-No LocalBusiness or FAQPage structured data detected on city pages. You have FAQ sections on every page, those are eligible for Google rich results right now. Just not activated. This is a quick developer task, high reward.
+1. CREATE A NEW PAGE ON YOUR WEBSITE
 
-4. 📍 Google Business Profile
-"Deck builder near me" rankings live in the Local Pack, not in organic results. Your GBP needs: all 5 counties listed as service areas, a full services list (Trex Decks, Composite Decks, Screened Porches, etc.), more photos (geo-tagged), and a push to 10+ new reviews/month.
+Recommended URL:
+/houzz-deck-projects
+
+⸻
+
+2. SEO TITLE
+
+Loudoun Decks on Houzz | Deck Projects in Northern Virginia
+
+⸻
+
+3. META DESCRIPTION
+
+View Loudoun Decks projects on Houzz, including custom decks, screened porches, patios, and outdoor living spaces across Northern Virginia.
+
+⸻
+
+4. H1 (MAIN HEADLINE)
+
+See Loudoun Decks Projects on Houzz
+
+⸻
+
+5. MAIN PAGE CONTENT
+
+Loudoun Decks showcases completed deck, porch, patio, and outdoor living projects on Houzz so homeowners can view real examples of our work before starting their own project.
+
+Our Houzz profile includes project photos, design inspiration, and examples of custom outdoor spaces built for homes across Northern Virginia.
+
+If you are planning a new deck, deck replacement, screened porch, or patio, you can explore our Houzz portfolio and then contact our team for a free consultation.
+
+⸻
+
+6. PRIMARY BUTTON (CTA)
+
+Button Text:
+View Our Houzz Profile
+
+Link:
+https://www.houzz.com/pro/webuser-782541997/loudoun-decks
+
+Setting:
+Open in new tab
+
+⸻
+
+7. SECONDARY CTA (LEAD GENERATION)
+
+Ready to build your outdoor space?
+
+Call/Text: (571) 655-7207
+Website: https://www.ldndecks.com
+
+Button:
+Request Free Estimate
+
+Link:
+/contact
+
+⸻
+
+8. ADD 3 SERVICE SECTIONS
+
+Custom Decks
+Composite deck building, deck replacement, and outdoor living upgrades.
+
+Screened Porches
+Comfortable covered outdoor spaces designed for Northern Virginia homes.
+
+Patios & Outdoor Living
+Patio integration, hardscape planning, and full backyard transformations.
+
+⸻
+
+9. ADD VISUAL CONTENT
+
+* Screenshot of your Houzz profile
+* 3–6 high-quality project images
+* Add button under images: “View More on Houzz”
+
+⸻
+
+10. INTERNAL LINKING (VERY IMPORTANT)
+
+Add this page link to:
+
+* Footer
+* About page
+* Services pages
+* Blog posts
+
+Anchor text examples:
+View our Houzz profile
+See Loudoun Decks projects on Houzz
+
+⸻
+
+11. SUBMIT PAGE TO GOOGLE
+
+Go to Google Search Console:
+
+* URL Inspection
+* Paste your page URL
+* Click “Request Indexing”
+
+⸻
+
+12. USE THIS PAGE FOR MARKETING
+
+Add this page link to:
+
+* Facebook posts
+* Google Business Profile posts
+* Email signature
+* Follow-up emails after estimates
+
+IMPORTANT:
+This page should build trust and convert visitors — not just send them away to Houzz.

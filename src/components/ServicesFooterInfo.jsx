@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import styles from './ServicesFooterInfo.module.css';
 
 export default function ServicesFooterInfo() {
@@ -18,7 +19,7 @@ export default function ServicesFooterInfo() {
            </div>
 
            <p className={styles.citiesText}>
-              We regularly work in cities such as <strong>Ashburn, Leesburg, Sterling, Centreville, Reston, Woodbridge, and Manassas</strong>.
+              We regularly work in cities such as <strong>Ashburn, Leesburg, Sterling, Centreville, Reston, Woodbridge, and Manassas</strong>. You can also <Link href="/houzz-deck-projects" style={{ color: 'var(--site-color)', fontWeight: 600 }}>view our project gallery on Houzz</Link> to see our work in these areas.
            </p>
         </div>
       </div>

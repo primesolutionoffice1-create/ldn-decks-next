@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import styles from './AboutDetails.module.css';
 
 export default function AboutDetails() {
@@ -18,7 +19,7 @@ export default function AboutDetails() {
                <li>Porches</li>
                <li>Pergolas and gazebos</li>
              </ul>
-             <p>Each project is planned around the homeowner’s goals, available space, and intended use of the outdoor area.</p>
+             <p>Each project is planned around the homeowner’s goals, available space, and intended use of the outdoor area. You can <Link href="/houzz-deck-projects" style={{ color: 'var(--site-color)', fontWeight: 600 }}>view our Houzz profile</Link> to see examples of our work across Northern Virginia.</p>
            </div>
   
            {/* Right Block */}

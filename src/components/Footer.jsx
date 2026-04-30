@@ -81,6 +81,7 @@ export default function Footer() {
               <li><Link href="/about">About</Link></li>
               <li><Link href="/services">Our Services</Link></li>
               <li><Link href="/showcase">Recent Projects</Link></li>
+              <li><Link href="/houzz-deck-projects">Houzz Projects</Link></li>
               <li><Link href="/before-and-after">Before &amp; After</Link></li>
               <li><Link href="/deck-cost-calculator">Cost Calculator</Link></li>
               <li><Link href="/reviews">Reviews</Link></li>

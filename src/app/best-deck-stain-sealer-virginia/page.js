@@ -6,7 +6,6 @@ import ArticleSchema from '@/components/ArticleSchema';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -40,7 +39,6 @@ const S = {
 export default function BestDeckStainSealerPage() {
   return (
     <>
-      <Breadcrumbs />
       <JsonLd data={faqSchema} />
       <ArticleSchema
         title="Best Deck Stain & Sealer for Virginia Weather (2026)"

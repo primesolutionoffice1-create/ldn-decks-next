@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import ContactHome from '@/components/ContactHome';
 import SimpleCTA from '@/components/SimpleCTA';
 import JsonLd from '@/components/JsonLd';
@@ -21,10 +20,10 @@ const organizationSchema = {
   "telephone": "+15716557207",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "8735 Quarry Rd., Unit 102",
-    "addressLocality": "Manassas",
+    "streetAddress": "13704 Winding Oak Cir",
+    "addressLocality": "Centreville",
     "addressRegion": "VA",
-    "postalCode": "20110",
+    "postalCode": "20121",
     "addressCountry": "US"
   },
   "sameAs": [
@@ -119,7 +118,6 @@ const socialProfiles = [
 export default function SocialPage() {
   return (
     <main>
-      <Breadcrumbs />
       <JsonLd data={organizationSchema} />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>

@@ -4,7 +4,6 @@ import JsonLd from '@/components/JsonLd';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -167,7 +166,6 @@ const cities = [
 export default function BBBPage() {
   return (
     <>
-      <Breadcrumbs />
       <JsonLd data={businessSchema} />
       <JsonLd data={breadcrumbSchema} />
       <JsonLd data={webPageSchema} />

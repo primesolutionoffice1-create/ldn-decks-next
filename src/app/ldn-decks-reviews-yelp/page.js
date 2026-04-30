@@ -4,7 +4,6 @@ import JsonLd from '@/components/JsonLd';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -22,10 +21,10 @@ const reviewSchema = {
   "telephone": "+15716557207",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "8735 Quarry Rd., Unit 102",
-    "addressLocality": "Manassas",
+    "streetAddress": "13704 Winding Oak Cir",
+    "addressLocality": "Centreville",
     "addressRegion": "VA",
-    "postalCode": "20110",
+    "postalCode": "20121",
     "addressCountry": "US"
   },
   "aggregateRating": {
@@ -95,7 +94,6 @@ const yelpReviews = [
 export default function YelpReviewsPage() {
   return (
     <>
-      <Breadcrumbs />
       <JsonLd data={reviewSchema} />
 
       {/* Hero */}

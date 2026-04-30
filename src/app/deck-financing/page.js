@@ -4,7 +4,6 @@ import JsonLd from '@/components/JsonLd';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import EnhancifyWidget from '@/components/EnhancifyWidget';
 import FinancingCalculator from '@/components/FinancingCalculator';
 import { buildMetadata } from '@/lib/seo';
@@ -60,15 +59,6 @@ const faqSchema = {
   }))
 };
 
-const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.ldndecks.com/" },
-    { "@type": "ListItem", "position": 2, "name": "Deck Financing", "item": "https://www.ldndecks.com/deck-financing" }
-  ]
-};
-
 const S = {
   h2: { fontSize: '1.95rem', fontWeight: 800, marginBottom: '1.25rem', marginTop: '3rem', lineHeight: 1.2, letterSpacing: '-0.01em' },
   h3: { fontSize: '1.15rem', fontWeight: 700, marginBottom: '0.5rem', marginTop: '1.5rem' },
@@ -121,8 +111,6 @@ const benefits = [
 export default function DeckFinancingPage() {
   return (
     <>
-      <Breadcrumbs />
-      <JsonLd data={breadcrumbSchema} />
       <JsonLd data={faqSchema} />
 
       {/* ============ HERO ============ */}

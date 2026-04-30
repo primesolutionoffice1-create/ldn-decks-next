@@ -39,7 +39,7 @@ export default function EcoFriendlyDeckingPage() {
               priority
             />
           </div>
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Sustainable Outdoor Living Modern Composite Decking</h2>
+          <h1 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Sustainable Outdoor Living Modern Composite Decking</h1>
           <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Build a beautiful deck and reduce your environmental footprint 95% recycled materials</p>
         </div>
       </section>

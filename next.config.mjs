@@ -25,6 +25,8 @@ const nextConfig = {
       // Location Hubs
       { source: '/top-decks-build-near-you', destination: '/near-you', permanent: true },
       { source: '/get-quote', destination: '/contact', permanent: true },
+      { source: '/deck-builders', destination: '/near-you', permanent: true },
+      { source: '/deck-builder', destination: '/near-you', permanent: true },
       { source: '/deck-builder-in-loudoun-county', destination: '/near-you/loudoun-county', permanent: true },
       { source: '/deck-builder-in-fairfax-county', destination: '/near-you/fairfax-county', permanent: true },
       { source: '/deck-builder-in-prince-william-county', destination: '/near-you/prince-william-county', permanent: true },

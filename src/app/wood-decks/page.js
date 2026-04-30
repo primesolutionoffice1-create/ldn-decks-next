@@ -33,8 +33,8 @@ export default function WoodDecksPage() {
       {/* Hero with background image */}
       <section style={{ position: 'relative', minHeight: 480, overflow: 'hidden' }}>
         <Image
-          src="/images/wood-deck-premium.jpg"
-          alt="Premium stained wood deck at sunset with covered porch and fireplace in Northern Virginia"
+          src="/images/img62.jpeg"
+          alt="Premium stained wood deck with metal balusters in Northern Virginia"
           fill
           priority
           sizes="100vw"
@@ -54,43 +54,38 @@ export default function WoodDecksPage() {
         </div>
       </section>
 
-      {/* Photo gallery */}
+      {/* Photo gallery — 4-image grid */}
       <section style={{ padding: '3rem 0', background: '#f9f9f9' }}>
         <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 1.5rem' }}>
           <h2 style={{ textAlign: 'center', fontSize: '1.5rem', fontWeight: 700, marginBottom: '0.5rem' }}>Real Wood Deck Projects in Northern Virginia</h2>
-          <p style={{ textAlign: 'center', color: '#555', marginBottom: '2rem' }}>From budget-friendly pressure-treated builds to premium stained wood with covered porches</p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1.5rem' }}>
-            <figure style={{ margin: 0, borderRadius: 8, overflow: 'hidden', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}>
-              <div style={{ position: 'relative', aspectRatio: '3/2', background: '#eee' }}>
-                <Image
-                  src="/images/wood-deck-natural.jpg"
-                  alt="Pressure-treated wood deck with simple wood railings overlooking wooded backyard in Loudoun County"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  style={{ objectFit: 'cover' }}
-                />
-              </div>
-              <figcaption style={{ padding: '1rem', background: '#fff' }}>
-                <h3 style={{ fontWeight: 600, marginBottom: '0.25rem' }}>Pressure-Treated Wood Deck</h3>
-                <p style={{ fontSize: '0.9rem', color: '#555' }}>Classic PT pine deck with stained finish — affordable, durable, perfect for budget-conscious homeowners. Northern Virginia natural wooded setting.</p>
-              </figcaption>
-            </figure>
-            <figure style={{ margin: 0, borderRadius: 8, overflow: 'hidden', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}>
-              <div style={{ position: 'relative', aspectRatio: '3/2', background: '#eee' }}>
-                <Image
-                  src="/images/wood-deck-premium.jpg"
-                  alt="Premium dark-stained wood deck with metal balusters, covered porch, fireplace and outdoor TV"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  style={{ objectFit: 'cover' }}
-                />
-              </div>
-              <figcaption style={{ padding: '1rem', background: '#fff' }}>
-                <h3 style={{ fontWeight: 600, marginBottom: '0.25rem' }}>Premium Stained Wood Deck</h3>
-                <p style={{ fontSize: '0.9rem', color: '#555' }}>Dark-stained wood deck with custom metal balusters, integrated stone fireplace, covered porch, and outdoor TV. Premium outdoor living for entertaining.</p>
-              </figcaption>
-            </figure>
+          <p style={{ textAlign: 'center', color: '#555', marginBottom: '2rem' }}>From budget-friendly pressure-treated builds to premium stained wood projects we&apos;ve completed</p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.25rem' }}>
+            {[
+              { src: '/images/img60.jpeg', title: 'Stained PT Wood Deck', desc: 'Classic pressure-treated pine with rich brown stain finish — affordable durability for everyday outdoor living.' },
+              { src: '/images/img61.jpeg', title: 'Wood Deck with Metal Balusters', desc: 'Stained wood deck combined with black aluminum balusters — modern detail on traditional materials.' },
+              { src: '/images/img63.jpeg', title: 'Multi-Level Wood Deck', desc: 'Stepped wood deck design with built-in stairs — perfect for sloped Northern Virginia lots.' },
+              { src: '/images/img64.jpeg', title: 'Ground-Level Wood Deck', desc: 'Low-profile wood platform deck integrating into the landscape — no railings needed.' },
+            ].map((item) => (
+              <figure key={item.src} style={{ margin: 0, borderRadius: 8, overflow: 'hidden', boxShadow: '0 4px 12px rgba(0,0,0,0.1)', background: '#fff' }}>
+                <div style={{ position: 'relative', aspectRatio: '3/2', background: '#eee' }}>
+                  <Image
+                    src={item.src}
+                    alt={item.title + ' in Northern Virginia by Loudoun Decks'}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1100px) 50vw, 25vw"
+                    style={{ objectFit: 'cover' }}
+                  />
+                </div>
+                <figcaption style={{ padding: '1rem' }}>
+                  <h3 style={{ fontWeight: 600, marginBottom: '0.25rem', fontSize: '1rem' }}>{item.title}</h3>
+                  <p style={{ fontSize: '0.85rem', color: '#555', lineHeight: 1.5 }}>{item.desc}</p>
+                </figcaption>
+              </figure>
+            ))}
           </div>
+          <p style={{ textAlign: 'center', marginTop: '2rem' }}>
+            <Link href="/showcase" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>View our complete project gallery →</Link>
+          </p>
         </div>
       </section>
 

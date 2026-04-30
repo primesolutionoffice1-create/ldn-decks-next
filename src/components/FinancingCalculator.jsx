@@ -30,7 +30,7 @@ export default function FinancingCalculator() {
           <div style={{ marginBottom: '1.5rem' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '0.4rem' }}>
               <label style={{ fontSize: '0.85rem', color: '#555', fontWeight: 600 }}>Project Amount</label>
-              <span style={{ fontSize: '1.1rem', fontWeight: 700, color: '#0f172a' }}>{formatMoney(amount)}</span>
+              <span style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--black)' }}>{formatMoney(amount)}</span>
             </div>
             <input
               type="range"
@@ -52,7 +52,7 @@ export default function FinancingCalculator() {
           <div style={{ marginBottom: '1.5rem' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '0.4rem' }}>
               <label style={{ fontSize: '0.85rem', color: '#555', fontWeight: 600 }}>Estimated APR</label>
-              <span style={{ fontSize: '1.1rem', fontWeight: 700, color: '#0f172a' }}>{apr.toFixed(2)}%</span>
+              <span style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--black)' }}>{apr.toFixed(2)}%</span>
             </div>
             <input
               type="range"
@@ -74,7 +74,7 @@ export default function FinancingCalculator() {
           <div style={{ marginBottom: '0.5rem' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '0.4rem' }}>
               <label style={{ fontSize: '0.85rem', color: '#555', fontWeight: 600 }}>Loan Term</label>
-              <span style={{ fontSize: '1.1rem', fontWeight: 700, color: '#0f172a' }}>{years} {years === 1 ? 'year' : 'years'}</span>
+              <span style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--black)' }}>{years} {years === 1 ? 'year' : 'years'}</span>
             </div>
             <input
               type="range"
@@ -93,20 +93,20 @@ export default function FinancingCalculator() {
           </div>
         </div>
 
-        <div style={{ background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 100%)', color: '#fff', borderRadius: 12, padding: '2rem 1.75rem', textAlign: 'center' }}>
-          <p style={{ fontSize: '0.78rem', color: '#94a3b8', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>
+        <div style={{ background: 'var(--color-dark)', color: 'var(--white)', borderRadius: 12, padding: '2rem 1.75rem', textAlign: 'center' }}>
+          <p style={{ fontSize: '0.78rem', color: 'rgba(255,255,255,0.6)', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>
             Estimated Monthly Payment
           </p>
-          <p style={{ fontSize: '2.6rem', fontWeight: 800, color: '#fff', margin: '0 0 0.25rem', letterSpacing: '-0.02em', lineHeight: 1 }}>
+          <p style={{ fontSize: '2.6rem', fontWeight: 800, color: 'var(--white)', margin: '0 0 0.25rem', letterSpacing: '-0.02em', lineHeight: 1 }}>
             {formatMoney(monthly)}
-            <span style={{ fontSize: '1.1rem', color: '#94a3b8', fontWeight: 500 }}>/mo</span>
+            <span style={{ fontSize: '1.1rem', color: 'rgba(255,255,255,0.6)', fontWeight: 500 }}>/mo</span>
           </p>
           <div style={{ borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '1rem', marginTop: '1rem' }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.85rem', color: '#cbd5e1', marginBottom: '0.4rem' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.85rem', color: 'rgba(255,255,255,0.8)', marginBottom: '0.4rem' }}>
               <span>Total interest:</span>
               <span style={{ fontWeight: 600 }}>{formatMoney(totalInterest)}</span>
             </div>
-            <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.85rem', color: '#cbd5e1' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.85rem', color: 'rgba(255,255,255,0.8)' }}>
               <span>Total paid:</span>
               <span style={{ fontWeight: 600 }}>{formatMoney(totalPaid)}</span>
             </div>

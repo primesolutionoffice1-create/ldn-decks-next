@@ -114,7 +114,7 @@ export default function DeckFinancingPage() {
       <JsonLd data={faqSchema} />
 
       {/* ============ HERO ============ */}
-      <section style={{ background: 'linear-gradient(180deg, #0f172a 0%, #1e293b 100%)', color: '#fff', padding: '5rem 0 4rem' }}>
+      <section style={{ background: 'var(--color-dark)', color: 'var(--white)', padding: '5rem 0 4rem' }}>
         <div style={{ maxWidth: 920, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ color: 'var(--color-primary)', fontSize: '0.85rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: '1rem' }}>
             Premium Deck Financing &middot; Northern Virginia
@@ -122,24 +122,24 @@ export default function DeckFinancingPage() {
           <h1 style={{ fontSize: '2.85rem', fontWeight: 800, marginBottom: '1.25rem', lineHeight: 1.1, maxWidth: 780, letterSpacing: '-0.02em' }}>
             Why Wait Three Years to Save Up for the Deck You Want?
           </h1>
-          <p style={{ color: '#cbd5e1', fontSize: '1.15rem', lineHeight: 1.6, marginBottom: '1.75rem', maxWidth: 720 }}>
-            Most of our projects fall between <strong style={{ color: '#fff' }}>$15,000 and $50,000+</strong>. With flexible monthly financing, you can start enjoying a premium custom deck this season &mdash; and pay over time at a rate that fits your budget.
+          <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1.15rem', lineHeight: 1.6, marginBottom: '1.75rem', maxWidth: 720 }}>
+            Most of our projects fall between <strong style={{ color: 'var(--white)' }}>$15,000 and $50,000+</strong>. With flexible monthly financing, you can start enjoying a premium custom deck this season &mdash; and pay over time at a rate that fits your budget.
           </p>
 
           <div style={{ display: 'flex', gap: '0.85rem', flexWrap: 'wrap', marginBottom: '2rem' }}>
-            <Link href="/contact" style={{ display: 'inline-block', background: 'var(--color-primary)', color: '#fff', padding: '1.05rem 2rem', borderRadius: 10, fontWeight: 700, textDecoration: 'none', fontSize: '1.05rem', boxShadow: '0 4px 14px rgba(0,0,0,0.2)' }}>
+            <Link href="/contact" style={{ display: 'inline-block', background: 'var(--color-primary)', color: 'var(--white)', padding: '1.05rem 2rem', borderRadius: 10, fontWeight: 700, textDecoration: 'none', fontSize: '1.05rem', boxShadow: '0 4px 14px rgba(0,0,0,0.2)' }}>
               Schedule Free Consultation
             </Link>
-            <a href="tel:+15716557207" style={{ display: 'inline-block', background: 'transparent', color: '#fff', padding: '1.05rem 2rem', borderRadius: 10, fontWeight: 700, textDecoration: 'none', fontSize: '1.05rem', border: '2px solid rgba(255,255,255,0.3)' }}>
+            <a href="tel:+15716557207" style={{ display: 'inline-block', background: 'transparent', color: 'var(--white)', padding: '1.05rem 2rem', borderRadius: 10, fontWeight: 700, textDecoration: 'none', fontSize: '1.05rem', border: '2px solid rgba(255,255,255,0.3)' }}>
               Call (571) 655-7207
             </a>
           </div>
-          <p style={{ color: '#94a3b8', fontSize: '0.85rem', margin: 0, display: 'flex', alignItems: 'center', gap: '0.4rem', flexWrap: 'wrap' }}>
-            <span style={{ color: '#10b981' }}>●</span> Soft credit check only
-            <span style={{ color: '#475569' }}>·</span>
-            <span style={{ color: '#10b981' }}>●</span> No impact on credit score
-            <span style={{ color: '#475569' }}>·</span>
-            <span style={{ color: '#10b981' }}>●</span> 60-second decision
+          <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.85rem', margin: 0, display: 'flex', alignItems: 'center', gap: '0.4rem', flexWrap: 'wrap' }}>
+            <span style={{ color: 'var(--color-primary)' }}>●</span> Soft credit check only
+            <span style={{ color: 'rgba(255,255,255,0.2)' }}>·</span>
+            <span style={{ color: 'var(--color-primary)' }}>●</span> No impact on credit score
+            <span style={{ color: 'rgba(255,255,255,0.2)' }}>·</span>
+            <span style={{ color: 'var(--color-primary)' }}>●</span> 60-second decision
           </p>
         </div>
       </section>
@@ -206,8 +206,8 @@ export default function DeckFinancingPage() {
               <p style={{ fontSize: '0.85rem', color: '#999', margin: 0 }}>Ideal for projects up to $35K</p>
             </div>
 
-            <div style={{ background: '#fff', borderRadius: 12, padding: '1.75rem', border: '1px solid #e5e5e5', borderTop: '4px solid var(--color-primary)', position: 'relative' }}>
-              <span style={{ position: 'absolute', top: -10, right: 16, background: 'var(--color-primary)', color: '#fff', padding: '0.25rem 0.65rem', borderRadius: 4, fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.05em' }}>MOST POPULAR</span>
+            <div style={{ background: 'var(--white)', borderRadius: 12, padding: '1.75rem', border: '1px solid #e5e5e5', borderTop: '4px solid var(--color-primary)', position: 'relative' }}>
+              <span style={{ position: 'absolute', top: -10, right: 16, background: 'var(--color-primary)', color: 'var(--white)', padding: '0.25rem 0.65rem', borderRadius: 4, fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.05em' }}>MOST POPULAR</span>
               <p style={{ fontSize: '0.75rem', color: '#999', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>Option 2</p>
               <h3 style={{ ...S.h3, marginTop: 0 }}>Fixed-Rate Term Loan</h3>
               <p style={{ fontSize: '0.95rem', color: '#555', lineHeight: 1.6, marginBottom: '0.75rem' }}>
@@ -243,18 +243,18 @@ export default function DeckFinancingPage() {
           </div>
 
           {/* ============ WIDGET ============ */}
-          <div style={{ background: '#0f172a', borderRadius: 14, padding: '2.75rem 2rem', textAlign: 'center', marginBottom: '3rem' }}>
-            <p style={{ color: '#10b981', fontSize: '0.8rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>
+          <div style={{ background: 'var(--color-dark)', borderRadius: 14, padding: '2.75rem 2rem', textAlign: 'center', marginBottom: '3rem' }}>
+            <p style={{ color: 'var(--color-primary)', fontSize: '0.8rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>
               ● Soft Credit Check Only · No Score Impact
             </p>
-            <h2 style={{ ...S.h2, marginTop: 0, color: '#fff', textAlign: 'center', marginBottom: '0.75rem', fontSize: '1.85rem' }}>
+            <h2 style={{ ...S.h2, marginTop: 0, color: 'var(--white)', textAlign: 'center', marginBottom: '0.75rem', fontSize: '1.85rem' }}>
               See Your Real Rate in 60 Seconds
             </h2>
-            <p style={{ color: '#cbd5e1', maxWidth: 560, margin: '0 auto 1.75rem', fontSize: '1.05rem', lineHeight: 1.6 }}>
+            <p style={{ color: 'rgba(255,255,255,0.8)', maxWidth: 560, margin: '0 auto 1.75rem', fontSize: '1.05rem', lineHeight: 1.6 }}>
               No commitment. No hard credit pull. You see actual loan offers from multiple lenders before you decide anything.
             </p>
             <EnhancifyWidget />
-            <p style={{ fontSize: '0.78rem', color: '#94a3b8', marginTop: '1.5rem', maxWidth: 580, marginLeft: 'auto', marginRight: 'auto', lineHeight: 1.5 }}>
+            <p style={{ fontSize: '0.78rem', color: 'rgba(255,255,255,0.6)', marginTop: '1.5rem', maxWidth: 580, marginLeft: 'auto', marginRight: 'auto', lineHeight: 1.5 }}>
               Financing provided by Enhancify, Inc. and partner lenders. Loudoun Decks is not a lender and does not earn a commission on financing. All loans subject to credit approval.
             </p>
           </div>
@@ -370,22 +370,22 @@ export default function DeckFinancingPage() {
           ))}
 
           {/* ============ FINAL CTA ============ */}
-          <div style={{ background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 100%)', borderRadius: 14, padding: '3rem 2rem', textAlign: 'center', margin: '3.5rem 0 2rem' }}>
-            <h2 style={{ color: '#fff', fontSize: '2rem', fontWeight: 800, marginBottom: '0.75rem', marginTop: 0, lineHeight: 1.2, letterSpacing: '-0.01em' }}>
+          <div style={{ background: 'var(--color-dark)', borderRadius: 14, padding: '3rem 2rem', textAlign: 'center', margin: '3.5rem 0 2rem' }}>
+            <h2 style={{ color: 'var(--white)', fontSize: '2rem', fontWeight: 800, marginBottom: '0.75rem', marginTop: 0, lineHeight: 1.2, letterSpacing: '-0.01em' }}>
               Your Backyard Is the Last Thing You Should Compromise On.
             </h2>
-            <p style={{ color: '#cbd5e1', marginBottom: '2rem', maxWidth: 580, marginLeft: 'auto', marginRight: 'auto', fontSize: '1.05rem', lineHeight: 1.6 }}>
+            <p style={{ color: 'rgba(255,255,255,0.8)', marginBottom: '2rem', maxWidth: 580, marginLeft: 'auto', marginRight: 'auto', fontSize: '1.05rem', lineHeight: 1.6 }}>
               Schedule a free consultation. We&apos;ll measure, design, quote, and walk you through financing options that fit your project &mdash; not the other way around.
             </p>
             <div style={{ display: 'flex', gap: '0.85rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-              <Link href="/contact" style={{ display: 'inline-block', background: 'var(--color-primary)', color: '#fff', padding: '1.05rem 2rem', borderRadius: 10, fontWeight: 700, textDecoration: 'none', fontSize: '1.05rem', boxShadow: '0 4px 14px rgba(0,0,0,0.3)' }}>
+              <Link href="/contact" style={{ display: 'inline-block', background: 'var(--color-primary)', color: 'var(--white)', padding: '1.05rem 2rem', borderRadius: 10, fontWeight: 700, textDecoration: 'none', fontSize: '1.05rem', boxShadow: '0 4px 14px rgba(0,0,0,0.3)' }}>
                 Schedule Free Consultation
               </Link>
-              <a href="tel:+15716557207" style={{ display: 'inline-block', background: 'transparent', color: '#fff', padding: '1.05rem 2rem', borderRadius: 10, fontWeight: 700, textDecoration: 'none', fontSize: '1.05rem', border: '2px solid rgba(255,255,255,0.3)' }}>
+              <a href="tel:+15716557207" style={{ display: 'inline-block', background: 'transparent', color: 'var(--white)', padding: '1.05rem 2rem', borderRadius: 10, fontWeight: 700, textDecoration: 'none', fontSize: '1.05rem', border: '2px solid rgba(255,255,255,0.3)' }}>
                 Call (571) 655-7207
               </a>
             </div>
-            <p style={{ color: '#94a3b8', fontSize: '0.85rem', marginTop: '1.5rem', marginBottom: 0 }}>
+            <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.85rem', marginTop: '1.5rem', marginBottom: 0 }}>
               Most consultations scheduled within 48 hours
             </p>
           </div>

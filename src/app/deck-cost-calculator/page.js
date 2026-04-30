@@ -49,10 +49,10 @@ export default function DeckCostCalculator() {
 
   return (
     <main style={{ background: '#fff' }}>
-      <section style={{ background: 'var(--color-dark, #1a1a2e)', color: '#fff', padding: '4rem 0' }}>
+      <section style={{ background: 'var(--color-dark)', color: 'var(--white)', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Northern Virginia Deck Price Calculator</h1>
-          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Get an instant estimate for your deck project. Prices reflect 2026 Northern Virginia market rates.</p>
+          <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '1.1rem' }}>Get an instant estimate for your deck project. Prices reflect 2026 Northern Virginia market rates.</p>
         </div>
       </section>
 
@@ -143,8 +143,8 @@ export default function DeckCostCalculator() {
                     style={{
                       display: 'block',
                       textAlign: 'center',
-                      background: 'var(--color-primary, #d14817)',
-                      color: '#fff',
+                      background: 'var(--color-primary)',
+                      color: 'var(--white)',
                       padding: '1rem',
                       borderRadius: 8,
                       fontWeight: 700,
@@ -170,12 +170,12 @@ export default function DeckCostCalculator() {
           </div>
 
           {/* Embed Code Section this is what makes it a LINKABLE ASSET */}
-          <div style={{ marginTop: '4rem', padding: '2rem', background: '#f0f7ff', borderRadius: 12, border: '1px solid #cce0ff' }}>
+          <div style={{ marginTop: '4rem', padding: '2rem', background: '#fafafa', borderRadius: 12, border: '1px solid #eee' }}>
             <h2 style={{ fontSize: '1.3rem', fontWeight: 700, marginBottom: '0.5rem' }}>Embed This Calculator on Your Website</h2>
             <p style={{ color: '#666', marginBottom: '1rem', fontSize: '0.9rem' }}>
               Real estate agents, home improvement bloggers, and HOA communities feel free to embed this calculator. Just copy the code below:
             </p>
-            <pre style={{ background: '#1a1a2e', color: '#4ade80', padding: '1rem', borderRadius: 8, overflow: 'auto', fontSize: '0.8rem', lineHeight: 1.5 }}>
+            <pre style={{ background: 'var(--color-dark)', color: '#4ade80', padding: '1rem', borderRadius: 8, overflow: 'auto', fontSize: '0.8rem', lineHeight: 1.5 }}>
               {`<iframe
   src="https://www.ldndecks.com/deck-cost-calculator"
   width="100%"
@@ -210,7 +210,7 @@ export default function DeckCostCalculator() {
           </div>
           {/* Sharing and Embedding Tools */}
           <div style={{ marginTop: '4rem', padding: '2rem', background: '#f8fafc', borderRadius: '12px', border: '1px solid #e2e8f0' }}>
-            <h3 style={{ fontSize: '1.2rem', fontWeight: 700, marginBottom: '1rem', color: '#1e293b' }}>Share or Use This Tool</h3>
+            <h3 style={{ fontSize: '1.2rem', fontWeight: 700, marginBottom: '1rem', color: 'var(--black)' }}>Share or Use This Tool</h3>
             <p style={{ color: '#64748b', marginBottom: '1.5rem' }}>
               Are you a real estate agent or homeowner? You can share these results or embed this calculator on your own website.
             </p>

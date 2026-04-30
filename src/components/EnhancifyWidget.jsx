@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 
-const WIDGET_SRC = 'https://www.enhancify.com/realwidget/?page=9930216&color1=%2368BA62&color2=%231C418C&color3=%23FFFFFF';
+const WIDGET_SRC = 'https://www.enhancify.com/realwidget/?page=9930216&color1=%23d14817&color2=%23000000&color3=%23FFFFFF';
 const FALLBACK_APPLY_URL = 'https://www.enhancify.com/apply/?page=9930216';
 
 export default function EnhancifyWidget() {
@@ -74,8 +74,8 @@ export default function EnhancifyWidget() {
             rel="nofollow noopener noreferrer"
             style={{
               display: 'inline-block',
-              background: '#68BA62',
-              color: '#fff',
+              background: 'var(--color-primary)',
+              color: 'var(--white)',
               padding: '0.85rem 2rem',
               borderRadius: '8px',
               fontWeight: 700,

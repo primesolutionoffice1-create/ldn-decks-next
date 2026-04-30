@@ -4,4 +4,6 @@
   --button-color: #d14817;
   --button-hover-color: #b03c13;
   --site-color: #d14817;
+  --color-primary: var(--site-color);
+  --color-dark: var(--black);
 }

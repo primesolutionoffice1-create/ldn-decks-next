@@ -39,7 +39,7 @@ export default function StampedConcretePage() {
               priority
             />
           </div>
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Stamped Concrete The Foundation of Modern Patios</h2>
+          <h1 style={{ fontSize: '2.25rem', fontWeight: 700, marginBottom: '1rem', color: '#fff' }}>Stamped Concrete Patio in Northern Virginia</h1>
           <p style={{ color: '#ccc', fontSize: '1.1rem' }}>The most affordable patio option patterns, colors, costs, and what to know before you build</p>
         </div>
       </section>

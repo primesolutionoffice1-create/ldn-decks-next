@@ -41,7 +41,7 @@ export default function DeckRailingPage() {
               priority
             />
           </div>
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Deck Railing Balancing Safety and Style</h2>
+          <h1 style={{ fontSize: '2.25rem', fontWeight: 700, marginBottom: '1rem', color: '#fff' }}>Deck Railing Options in Northern Virginia</h1>
           <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Compare styles, costs, and Virginia code requirements find the right railing for your deck</p>
         </div>
       </section>

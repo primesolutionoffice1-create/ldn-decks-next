@@ -39,7 +39,7 @@ export default function MultiLevelDeckPage() {
               priority
             />
           </div>
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Multi-Level Decks Elevating Your Outdoor Experience</h2>
+          <h1 style={{ fontSize: '2.25rem', fontWeight: 700, marginBottom: '1rem', color: '#fff' }}>Multi-Level Deck Builder in Northern Virginia</h1>
           <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Two-story, split-level &amp; cascading decks for sloped lots and walkout basements</p>
           <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             <a href="tel:+15716557207" style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</a>

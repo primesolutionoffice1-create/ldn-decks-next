@@ -39,7 +39,7 @@ export default function DeckLightingPage() {
               priority
             />
           </div>
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Deck Lighting Ambience and Safety for Your Outdoor Space</h2>
+          <h1 style={{ fontSize: '2.25rem', fontWeight: 700, marginBottom: '1rem', color: '#fff' }}>Deck Lighting Ideas for Northern Virginia</h1>
           <p style={{ color: '#ccc', fontSize: '1.1rem' }}>8 lighting options with costs transform your deck for evening entertaining</p>
         </div>
       </section>

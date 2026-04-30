@@ -3,7 +3,7 @@ import React from 'react';
 export default function StructuredData() {
   const orgSchema = {
     '@context': 'https://schema.org',
-    '@type': ['Organization', 'LocalBusiness', 'GeneralContractor'],
+    '@type': 'GeneralContractor',
     '@id': 'https://ldndecks.com/#organization',
     name: 'Loudoun Decks',
     url: 'https://ldndecks.com',
@@ -39,11 +39,17 @@ export default function StructuredData() {
       'https://g.page/ldndecks',
     ],
     aggregateRating: {
-      "@type": "AggregateRating",
-      "ratingValue": "5.0",
-      "reviewCount": "41",
-      "bestRating": "5"
-    }
+      '@type': 'AggregateRating',
+      ratingValue: '5.0',
+      reviewCount: '41',
+      bestRating: '5',
+      worstRating: '1',
+      itemReviewed: {
+        '@type': 'GeneralContractor',
+        '@id': 'https://ldndecks.com/#organization',
+        name: 'Loudoun Decks',
+      },
+    },
   };
 
   return (

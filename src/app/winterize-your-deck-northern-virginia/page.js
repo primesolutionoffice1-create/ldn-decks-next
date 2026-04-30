@@ -8,8 +8,8 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/winterize-your-deck-northern-virginia',
-  title: 'How to Winterize Your Deck in Northern Virginia (2026 Guide)',
-  description: 'Protect your deck from Virginia freeze-thaw. 10-step winterization checklist for wood and composite decks. What to do before first frost. Free inspection.',
+  title: 'How to Winterize Your Deck in Northern Virginia',
+  description: 'Protect your deck from Virginia freeze-thaw. 10-step winterization checklist for wood and composite decks. Free inspection.',
 });
 
 const faqSchema = {

@@ -13,8 +13,8 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: "/services/porches/open-porch",
-  title: "Open Porch Builder Northern Virginia | Custom Covered Porch Design",
-  description: "Build a custom open porch in Northern Virginia. Loudoun Decks designs and builds covered open-air porches, pavilions, and outdoor living rooms for homeowners in Loudoun and Fairfax County.",
+  title: "Open Porch Builder & Design | Northern Virginia",
+  description: "Custom open porch design and construction in Northern Virginia. We build covered open-air porches, pavilions, and outdoor living rooms. Free estimates.",
 });
 
 const serviceSchema = {

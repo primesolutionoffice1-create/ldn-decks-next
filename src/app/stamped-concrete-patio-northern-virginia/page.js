@@ -8,8 +8,8 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/stamped-concrete-patio-northern-virginia',
-  title: 'Stamped Concrete Patio in Northern Virginia | Costs & Options (2026)',
-  description: 'Stamped concrete patios in Northern Virginia: $15-$30/sqft installed. Patterns: slate, flagstone, brick, wood plank. Most affordable patio option. Free estimate.',
+  title: 'Stamped Concrete Patio Northern Virginia | Costs & Options',
+  description: 'Stamped concrete patios in Northern Virginia: $15-$30/sqft installed. Patterns: slate, flagstone, brick, wood plank. Most affordable patio option.',
 });
 
 const faqSchema = {

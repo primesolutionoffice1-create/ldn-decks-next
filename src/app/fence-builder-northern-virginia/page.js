@@ -39,7 +39,7 @@ export default function FenceBuilderPage() {
               priority
             />
           </div>
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Fencing The Perfect Complement to Your New Deck</h2>
+          <h1 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Fencing The Perfect Complement to Your New Deck</h1>
           <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Privacy fencing, composite, vinyl, wood &amp; aluminum HOA-compliant, permits handled</p>
           <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             <a href="tel:+15716557207" style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</a>

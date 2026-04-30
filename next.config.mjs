@@ -13,6 +13,7 @@ const nextConfig = {
       { source: '/free-estimates', destination: '/contact', permanent: true },
       { source: '/home-2', destination: '/', permanent: true },
       { source: '/the-ultimate-deck-building-guide', destination: '/blog', permanent: true },
+      { source: '/deck-replacement', destination: '/services/deck-replacement', permanent: true },
 
       // Services
       { source: '/services/new-decks-installation', destination: '/services/new-decks', permanent: true },

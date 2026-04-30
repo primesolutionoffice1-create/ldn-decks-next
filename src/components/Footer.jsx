@@ -85,6 +85,7 @@ export default function Footer() {
               <li><Link href="/before-and-after">Before &amp; After</Link></li>
               <li><Link href="/deck-cost-calculator">Cost Calculator</Link></li>
               <li><Link href="/reviews">Reviews</Link></li>
+              <li><Link href="/blog">Blog &amp; Tips</Link></li>
               <li><Link href="/bbb-accredited-deck-builder-virginia">BBB Accredited</Link></li>
               <li><button onClick={openContact} className={styles.footerBtnLink}>Contact Us</button></li>
             </ul>
@@ -99,6 +100,18 @@ export default function Footer() {
               <li><Link href="/composite-deck-vs-wood-deck-virginia">Composite vs Wood</Link></li>
               <li><Link href="/does-a-deck-add-value-to-your-home">Deck ROI &amp; Home Value</Link></li>
               <li><Link href="/how-to-choose-a-deck-builder-northern-virginia">Choosing a Builder</Link></li>
+            </ul>
+          </div>
+
+          <div className={styles.col3}>
+            <h3>Resources</h3>
+            <ul>
+              <li><Link href="/loudoun-county-hoa-deck-rules">HOA Deck Rules</Link></li>
+              <li><Link href="/deck-financing">Deck Financing</Link></li>
+              <li><Link href="/deck-warranty-guide-northern-virginia">Warranty Guide</Link></li>
+              <li><Link href="/areas-we-serve">Areas We Serve</Link></li>
+              <li><Link href="/scholarship">Scholarship</Link></li>
+              <li><Link href="/social">Social Media</Link></li>
             </ul>
           </div>
 

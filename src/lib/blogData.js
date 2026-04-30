@@ -201,7 +201,7 @@ export const blogPosts = [
   },
   {
     id: 21,
-    title: 'Fire Pits vs. Fire Tables: Which is Better for Your Custom Deck?',
+    title: 'Fire Pits vs. Fire Tables: Which is Better?',
     slug: 'fire-pits-vs-fire-tables-deck',
     image: '/images/blog-firepit.png',
     date: 'April 22, 2026',
@@ -221,7 +221,7 @@ export const blogPosts = [
   },
   {
     id: 23,
-    title: 'Modern Deck Railing Trends: Cable, Glass, and Composite',
+    title: 'Modern Deck Railing Trends: Cable, Glass & More',
     slug: 'modern-deck-railing-trends-2026',
     image: '/images/img50.jpeg',
     date: 'April 22, 2026',

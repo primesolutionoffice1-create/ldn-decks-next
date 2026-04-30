@@ -145,7 +145,7 @@ export default function ViennaDeckBuilderPage() {
           "5-Star Google Rated - call (571) 655-7207"
         ]}
         image1="/images/img37.jpeg"
-        image2="/images/img38.jpeg"
+        image2="/images/img37.jpeg"
       />
       <ServiceContentExpansion sections={expansionSections} />
       

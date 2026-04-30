@@ -30,7 +30,11 @@ export default function BlogList() {
     alert(`Triggering share to ${network} for: "${title}"`);
   };
 
-  const sortedPosts = [...blogPosts].sort((a, b) => new Date(b.date) - new Date(a.date));
+  const sortedPosts = [...blogPosts].sort((a, b) => {
+    const dateDiff = new Date(b.date) - new Date(a.date);
+    if (dateDiff !== 0) return dateDiff;
+    return b.id - a.id; // Tie-breaker: higher ID (newer) first
+  });
 
   return (
     <section className={styles.blogSection}>

@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
 import Breadcrumbs from '@/components/Breadcrumbs';
@@ -29,13 +30,66 @@ export default function WoodDecksPage() {
     <>
       <JsonLd data={faqSchema} />
       <Breadcrumbs />
-      <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
-        <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-          <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Wood Decks in Northern Virginia</h1>
-          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Pressure-treated, cedar, redwood &amp; exotic hardwood decks — natural beauty meets honest craftsmanship</p>
-          <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-            <a href="tel:+15716557207" style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</a>
-            <Link href="/contact" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Estimate</Link>
+      {/* Hero with background image */}
+      <section style={{ position: 'relative', minHeight: 480, overflow: 'hidden' }}>
+        <Image
+          src="/images/wood-deck-premium.jpg"
+          alt="Premium stained wood deck at sunset with covered porch and fireplace in Northern Virginia"
+          fill
+          priority
+          sizes="100vw"
+          style={{ objectFit: 'cover', objectPosition: 'center' }}
+        />
+        <div style={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.55)' }} />
+        <div style={{ position: 'relative', zIndex: 1, color: '#fff', padding: '4rem 0' }}>
+          <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
+            <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Wood Decks in Northern Virginia</h1>
+            <p style={{ color: '#eee', fontSize: '1.1rem' }}>Pressure-treated, cedar, redwood &amp; exotic hardwood decks — natural beauty meets honest craftsmanship</p>
+            <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+              <a href="tel:+15716557207" style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</a>
+              <Link href="/contact" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Estimate</Link>
+            </div>
+            <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#ccc' }}>★★★★★ 5.0 on Google · 41 reviews · Licensed &amp; Insured · 5-Year Warranty</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Photo gallery */}
+      <section style={{ padding: '3rem 0', background: '#f9f9f9' }}>
+        <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 1.5rem' }}>
+          <h2 style={{ textAlign: 'center', fontSize: '1.5rem', fontWeight: 700, marginBottom: '0.5rem' }}>Real Wood Deck Projects in Northern Virginia</h2>
+          <p style={{ textAlign: 'center', color: '#555', marginBottom: '2rem' }}>From budget-friendly pressure-treated builds to premium stained wood with covered porches</p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1.5rem' }}>
+            <figure style={{ margin: 0, borderRadius: 8, overflow: 'hidden', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}>
+              <div style={{ position: 'relative', aspectRatio: '3/2', background: '#eee' }}>
+                <Image
+                  src="/images/wood-deck-natural.jpg"
+                  alt="Pressure-treated wood deck with simple wood railings overlooking wooded backyard in Loudoun County"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  style={{ objectFit: 'cover' }}
+                />
+              </div>
+              <figcaption style={{ padding: '1rem', background: '#fff' }}>
+                <h3 style={{ fontWeight: 600, marginBottom: '0.25rem' }}>Pressure-Treated Wood Deck</h3>
+                <p style={{ fontSize: '0.9rem', color: '#555' }}>Classic PT pine deck with stained finish — affordable, durable, perfect for budget-conscious homeowners. Northern Virginia natural wooded setting.</p>
+              </figcaption>
+            </figure>
+            <figure style={{ margin: 0, borderRadius: 8, overflow: 'hidden', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}>
+              <div style={{ position: 'relative', aspectRatio: '3/2', background: '#eee' }}>
+                <Image
+                  src="/images/wood-deck-premium.jpg"
+                  alt="Premium dark-stained wood deck with metal balusters, covered porch, fireplace and outdoor TV"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  style={{ objectFit: 'cover' }}
+                />
+              </div>
+              <figcaption style={{ padding: '1rem', background: '#fff' }}>
+                <h3 style={{ fontWeight: 600, marginBottom: '0.25rem' }}>Premium Stained Wood Deck</h3>
+                <p style={{ fontSize: '0.9rem', color: '#555' }}>Dark-stained wood deck with custom metal balusters, integrated stone fireplace, covered porch, and outdoor TV. Premium outdoor living for entertaining.</p>
+              </figcaption>
+            </figure>
           </div>
         </div>
       </section>

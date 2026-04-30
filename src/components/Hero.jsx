@@ -29,7 +29,7 @@ export default function Hero() {
           <span className={styles.ratingText}>5.0 Google Rating | 41 Reviews</span>
         </div>
         <h1 className={styles.title}>
-          Northern Virginia’s #1 Rated Composite Deck Builder
+          Custom Deck Builder Serving Northern Virginia
         </h1>
         <p className={styles.heroDescription}>
           Custom-designed decks, screened porches & outdoor living spaces.

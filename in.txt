@@ -1,122 +1,148 @@
-STEP-BY-STEP: CREATE A HIGH-CONVERTING HOUZZ PAGE
+📦 NEXT.JS TECHNICAL PACKAGE — IMPLEMENTATION SPECS
 
-1. CREATE A NEW PAGE ON YOUR WEBSITE
+🛠️ 1. Global configuration — app/layout.tsx
 
-Recommended URL:
-/houzz-deck-projects
-
-⸻
-
-2. SEO TITLE
-
-Loudoun Decks on Houzz | Deck Projects in Northern Virginia
-
-⸻
-
-3. META DESCRIPTION
-
-View Loudoun Decks projects on Houzz, including custom decks, screened porches, patios, and outdoor living spaces across Northern Virginia.
-
-⸻
-
-4. H1 (MAIN HEADLINE)
-
-See Loudoun Decks Projects on Houzz
-
-⸻
-
-5. MAIN PAGE CONTENT
-
-Loudoun Decks showcases completed deck, porch, patio, and outdoor living projects on Houzz so homeowners can view real examples of our work before starting their own project.
-
-Our Houzz profile includes project photos, design inspiration, and examples of custom outdoor spaces built for homes across Northern Virginia.
-
-If you are planning a new deck, deck replacement, screened porch, or patio, you can explore our Houzz portfolio and then contact our team for a free consultation.
-
-⸻
-
-6. PRIMARY BUTTON (CTA)
-
-Button Text:
-View Our Houzz Profile
-
-Link:
-https://www.houzz.com/pro/webuser-782541997/loudoun-decks
-
-Setting:
-Open in new tab
-
-⸻
-
-7. SECONDARY CTA (LEAD GENERATION)
-
-Ready to build your outdoor space?
-
-Call/Text: (571) 655-7207
-Website: https://www.ldndecks.com
-
-Button:
-Request Free Estimate
-
-Link:
-/contact
-
-⸻
-
-8. ADD 3 SERVICE SECTIONS
-
-Custom Decks
-Composite deck building, deck replacement, and outdoor living upgrades.
-
-Screened Porches
-Comfortable covered outdoor spaces designed for Northern Virginia homes.
-
-Patios & Outdoor Living
-Patio integration, hardscape planning, and full backyard transformations.
+import type { Metadata } from 'next';
+export const metadata: Metadata = {
+  metadataBase: new URL('https://ldndecks.com'),
+  title: {
+    default: 'Loudoun Decks | Custom Deck Builder Northern Virginia',
+    template: '%s | Loudoun Decks',
+  },
+  description:
+    'Award-winning custom deck builder serving Loudoun County and Northern Virginia. Trex & TimberTech certified installer. Free design consultation.',
+  alternates: { canonical: '/' },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    siteName: 'Loudoun Decks',
+    images: ['/og/loudoun-decks-og.jpg'],
+  },
+  robots: { index: true, follow: true, 'max-image-preview': 'large' },
+};
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="en">
+      <body>
+        {/* Organization + LocalBusiness schema (sitewide) */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
+        />
+        {children}
+      </body>
+    </html>
+  );
+}
+const orgSchema = {
+  '@context': 'https://schema.org',
+  '@type': ['Organization', 'LocalBusiness', 'GeneralContractor'],
+  '@id': 'https://ldndecks.com/#organization',
+  name: 'Loudoun Decks',
+  url: 'https://ldndecks.com',
+  logo: 'https://ldndecks.com/logo.png',
+  image: 'https://ldndecks.com/hero.jpg',
+  telephone: '+1-XXX-XXX-XXXX',
+  priceRange: '$$$',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'XXX Main St',
+    addressLocality: 'Ashburn',
+    addressRegion: 'VA',
+    postalCode: '20147',
+    addressCountry: 'US',
+  },
+  areaServed: [
+    { '@type': 'City', name: 'Ashburn' },
+    { '@type': 'City', name: 'Leesburg' },
+    { '@type': 'City', name: 'Sterling' },
+    { '@type': 'City', name: 'Reston' },
+    { '@type': 'City', name: 'Herndon' },
+    { '@type': 'City', name: 'Fairfax' },
+    { '@type': 'City', name: 'Vienna' },
+    { '@type': 'AdministrativeArea', name: 'Loudoun County' },
+    { '@type': 'AdministrativeArea', name: 'Fairfax County' },
+  ],
+  geo: { '@type': 'GeoCoordinates', latitude: 39.0438, longitude: -77.4874 },
+  sameAs: [
+    'https://www.facebook.com/ldndecks',
+    'https://www.instagram.com/ldndecks',
+    'https://g.page/ldndecks',
+  ],
+};
 
 ⸻
 
-9. ADD VISUAL CONTENT
+🛠️ 2. Homepage — app/page.tsx
 
-* Screenshot of your Houzz profile
-* 3–6 high-quality project images
-* Add button under images: “View More on Houzz”
+Target keywords: deck builder northern virginia, best deck builder in northern virginia
 
-⸻
-
-10. INTERNAL LINKING (VERY IMPORTANT)
-
-Add this page link to:
-
-* Footer
-* About page
-* Services pages
-* Blog posts
-
-Anchor text examples:
-View our Houzz profile
-See Loudoun Decks projects on Houzz
+export const metadata: Metadata = {
+  title: 'Best Deck Builder in Northern Virginia | Custom Decks & Patios',
+  description:
+    'Loudoun Decks designs & builds custom decks, screened porches, and patios across Northern Virginia. Trex Pro & TimberTech Gold installer. Free quote in 24h.',
+  alternates: { canonical: '/' },
+};
+export default function Home() {
+  return (
+    <main>
+      <h1>Custom Deck Builder Serving Northern Virginia</h1>
+    </main>
+  );
+}
 
 ⸻
 
-11. SUBMIT PAGE TO GOOGLE
+🛠️ 3. Service Page Template — app/services/[service]/page.tsx
 
-Go to Google Search Console:
-
-* URL Inspection
-* Paste your page URL
-* Click “Request Indexing”
+export const metadata: Metadata = {
+  title: 'Custom Deck Builder Northern Virginia | Composite & Wood Decks',
+  description:
+    'Custom decks built by Northern Virginia\'s top-rated contractor. Composite (Trex, TimberTech) & wood. 10-year workmanship warranty.',
+  alternates: { canonical: '/services/deck-builder' },
+};
 
 ⸻
 
-12. USE THIS PAGE FOR MARKETING
+🛠️ 4. Service-Area Pages — dynamic
 
-Add this page link to:
+(unchanged structurally — already correct)
 
-* Facebook posts
-* Google Business Profile posts
-* Email signature
-* Follow-up emails after estimates
+⸻
 
-IMPORTANT:
-This page should build trust and convert visitors — not just send them away to Houzz.
+🛠️ 5. Sitemap fix
+
+exclude: [
+  '/admin/*',
+  '/api/*',
+  '/draft/*',
+  // add 28 redirect URLs here
+],
+
+⸻
+
+🛠️ 6. Redirects
+
+Clean redirect chains from Site Audit.
+
+⸻
+
+🛠️ 7. FAQ Schema
+
+Add 4–6 questions per page for rich results.
+
+⸻
+
+✅ Recommended execution order
+
+Sprint 1 (5 days)
+Fix technical issues: schema, H1, titles, redirects.
+
+Sprint 2 (5 days)
+Build 4 main service pages.
+
+Sprint 3 (5 days)
+Deploy 22 service-area pages.
+
+Sprint 4 (10 days)
+Publish 8–10 SEO blog articles.

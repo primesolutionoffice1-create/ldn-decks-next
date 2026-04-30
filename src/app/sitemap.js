@@ -13,8 +13,38 @@ const TIER2 = "2026-04-18";
 const TIER3 = "2026-03-20";
 const TIER4 = "2026-01-10";
 
+// Paths to exclude from sitemap (Technical Package Sprint 1)
+const EXCLUDE_PATHS = [
+  '/admin',
+  '/api',
+  '/draft',
+  // Redirect sources from next.config.mjs
+  '/about-loudoun-deck-company',
+  '/why-choose-us',
+  '/our-process',
+  '/faq-deck-building',
+  '/project-gallery',
+  '/contacts',
+  '/blog-deck-tips',
+  '/free-estimates',
+  '/home-2',
+  '/the-ultimate-deck-building-guide',
+  '/services/new-decks-installation',
+  '/services/outdoor-power-washing',
+  '/services/gazebos-and-pergolas',
+  '/services/fences',
+  '/top-decks-build-near-you',
+  '/get-quote',
+  '/deck-builder-in-loudoun-county',
+  '/deck-builder-in-fairfax-county',
+  '/deck-builder-in-prince-william-county',
+];
+
 export default async function sitemap() {
-                const baseUrl = SITE_URL;
+  const baseUrl = SITE_URL;
+
+  // Filter helper
+  const isExcluded = (path) => EXCLUDE_PATHS.some(ex => path.startsWith(ex));
 
         const staticPages = [
                 // Tier 1 - Homepage & top commercial pages
@@ -221,7 +251,8 @@ export default async function sitemap() {
                 freq: "monthly",
         }));
 
-        const allPages = [...staticPages, ...cityPaths, ...blogPaths, ...showcasePaths];
+        const allPages = [...staticPages, ...cityPaths, ...blogPaths, ...showcasePaths]
+                .filter(p => !isExcluded(p.path));
 
         return allPages.map(({ path, priority, lastMod, freq }) => ({
                 url: `${baseUrl}${path}`,

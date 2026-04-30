@@ -20,10 +20,10 @@ import styles from "./page.module.css";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-    path: "/",
-    title: "Composite Deck Builder Northern Virginia | Trex Platinum | Loudoun Decks",
-    description: "Top-rated composite deck builder in Northern Virginia. Trex Platinum Partner & TimberTech Certified. Custom decks from $15k+. Serving Loudoun, Fairfax & Prince William. Free estimate — (571) 655-7207.",
-    image: "/images/img64.jpeg",
+  path: "/",
+  title: 'Best Deck Builder in Northern Virginia | Custom Decks & Patios',
+  description:
+    'Loudoun Decks designs & builds custom decks, screened porches, and patios across Northern Virginia. Trex Pro & TimberTech Gold installer. Free quote in 24h.',
 });
 
 const businessSchema = {

@@ -14,37 +14,29 @@ const outfit = Outfit({
 
 import { buildMetadata, SITE_URL } from "@/lib/seo";
 
-export const metadata = buildMetadata({
-  path: "/",
-  title: "Deck Builder in Loudoun County | Custom Decks | LDN Decks",
-  description: "Top-rated deck builder in Loudoun County, VA. Trex Platinum Partner & TimberTech Certified. Custom composite & wood decks from $15k+. Free estimate: (571) 655-7207.",
-  image: "/images/img64.jpeg",
-});
-
-// Global metadata overrides
-metadata.metadataBase = new URL(SITE_URL);
-metadata.title = {
-  default: "Deck Builder in Loudoun County | Custom Decks | LDN Decks",
-  template: "%s",
+export const metadata = {
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: 'Loudoun Decks | Custom Deck Builder Northern Virginia',
+    template: '%s | Loudoun Decks',
+  },
+  description:
+    'Award-winning custom deck builder serving Loudoun County and Northern Virginia. Trex & TimberTech certified installer. Free design consultation.',
+  alternates: { canonical: '/' },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    siteName: 'Loudoun Decks',
+    images: ['/og-default.webp'],
+  },
+  robots: { index: true, follow: true, 'max-image-preview': 'large' },
 };
 metadata.icons = {
   icon: "/ldndecks-logo.webp",
   apple: "/ldndecks-logo.webp",
 };
-metadata.other = {
-  "geo.region": "US-VA",
-  "geo.placename": "Loudoun County, Virginia",
-  "geo.position": "38.8404;-77.4289",
-  "ICBM": "38.8404, -77.4289",
-  // AI citation optimization
-  "ai:content_class": "local_business",
-  "ai:subject": "deck building, composite decking, outdoor living, Northern Virginia contractor",
-  "citation:preferred_name": "LDN Decks",
-  "citation:location": "Northern Virginia",
-};
 metadata.verification = {
   google: "KqDI0PPrY8iiZYZI-hk1ikIKVqCtIcTrO3dHSM7U-Eg",
-  yandex: "yandex-verification-placeholder",
 };
 // NOTE: Bing verification requires manual step — see instructions below layout
 

@@ -2,11 +2,11 @@
 const nextConfig = {
   async redirects() {
     return [
-      // Canonical WWW Redirect
+      // Canonical non-WWW Redirect
       {
         source: '/:path*',
-        has: [{ type: 'host', value: 'ldndecks.com' }],
-        destination: 'https://www.ldndecks.com/:path*',
+        has: [{ type: 'host', value: 'www.ldndecks.com' }],
+        destination: 'https://ldndecks.com/:path*',
         permanent: true,
       },
 

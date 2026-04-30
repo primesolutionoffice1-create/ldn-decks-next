@@ -121,7 +121,7 @@ const expansionSections = [
 export default function DeckBuilderWoodbridgePage() {
   return (
     <main>
-      <LocalBusinessSchema city="Woodbridge" url="https://www.ldndecks.com/deck-builder-woodbridge-va" />
+      <LocalBusinessSchema city="Woodbridge" url="https://ldndecks.com/deck-builder-woodbridge-va" />
       <JsonLd data={woodbridgeFaqSchema} />
       <ServicesHeader
         subtext="Woodbridge, VA's Trusted Deck Company"

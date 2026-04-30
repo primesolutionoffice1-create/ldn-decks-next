@@ -50,8 +50,8 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         {/* AI content discovery — llms.txt standard */}
-        <link rel="alternate" type="text/plain" href="https://www.ldndecks.com/llms.txt" title="LLM content index" />
-        <link rel="alternate" type="text/plain" href="https://www.ldndecks.com/llms-full.txt" title="LLM full content" />
+        <link rel="alternate" type="text/plain" href="https://ldndecks.com/llms.txt" title="LLM content index" />
+        <link rel="alternate" type="text/plain" href="https://ldndecks.com/llms-full.txt" title="LLM full content" />
                     <link rel="preload" href="/home-page-ldn.png" as="image" fetchpriority="high" />
         {/* Google Tag Manager - dataLayer init */}
                     <Script id="gtm-init" strategy="afterInteractive">

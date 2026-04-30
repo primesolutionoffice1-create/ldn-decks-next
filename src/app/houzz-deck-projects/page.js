@@ -21,7 +21,7 @@ const pageSchema = {
   "publisher": {
     "@type": "LocalBusiness",
     "name": "Loudoun Decks",
-    "url": "https://www.ldndecks.com"
+    "url": "https://ldndecks.com"
   }
 };
 

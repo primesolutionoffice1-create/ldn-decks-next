@@ -141,7 +141,7 @@ async function submitToIndexNow(urls) {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        host: 'www.ldndecks.com',
+        host: 'ldndecks.com',
         key: INDEXNOW_KEY,
         keyLocation: `${SITE_URL}/${INDEXNOW_KEY}.txt`,
         urlList: urls.slice(0, 10000), // IndexNow max 10k per request

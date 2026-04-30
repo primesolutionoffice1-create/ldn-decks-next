@@ -46,27 +46,27 @@ export default async function SingleBlogPage({ params }) {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "headline": post.title,
-    "image": [`https://www.ldndecks.com${post.image}`],
+    "image": [`https://ldndecks.com${post.image}`],
     "datePublished": new Date(post.date).toISOString(),
     "dateModified": new Date(post.date).toISOString(),
     "author": [{
       "@type": "Organization",
       "name": post.author,
-      "url": "https://www.ldndecks.com"
+      "url": "https://ldndecks.com"
     }],
     "publisher": {
       "@type": "Organization",
       "name": "Loudoun Decks",
-      "url": "https://www.ldndecks.com",
+      "url": "https://ldndecks.com",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.ldndecks.com/ldndecks-logo.webp"
+        "url": "https://ldndecks.com/ldndecks-logo.webp"
       }
     },
     "description": post.excerpt,
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://www.ldndecks.com/blog/${post.slug}`
+      "@id": `https://ldndecks.com/blog/${post.slug}`
     },
     "isAccessibleForFree": true,
     "inLanguage": "en-US",

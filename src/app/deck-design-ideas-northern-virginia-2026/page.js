@@ -20,7 +20,7 @@ export const metadata = {
     image: '/images/img36.jpeg',
   }),
   alternates: {
-    canonical: 'https://www.ldndecks.com/deck-design-ideas-2026',
+    canonical: 'https://ldndecks.com/deck-design-ideas-2026',
   },
 };
 

@@ -121,7 +121,7 @@ const expansionSections = [
 export default function DeckBuilderGainesvillePage() {
   return (
     <main>
-      <LocalBusinessSchema city="Gainesville" url="https://www.ldndecks.com/deck-builder-gainesville-va" />
+      <LocalBusinessSchema city="Gainesville" url="https://ldndecks.com/deck-builder-gainesville-va" />
       <JsonLd data={gainesvilleFaqSchema} />
       <ServicesHeader
         subtext="Gainesville, VA's Trusted Deck Company"

@@ -177,14 +177,14 @@ export default function DeckCostCalculator() {
             </p>
             <pre style={{ background: 'var(--color-dark)', color: '#4ade80', padding: '1rem', borderRadius: 8, overflow: 'auto', fontSize: '0.8rem', lineHeight: 1.5 }}>
               {`<iframe
-  src="https://www.ldndecks.com/deck-cost-calculator"
+  src="https://ldndecks.com/deck-cost-calculator"
   width="100%"
   height="900"
   frameborder="0"
   title="Northern Virginia Deck Cost Calculator by Loudoun Decks"
 ></iframe>
 <p style="font-size:12px;color:#888;">
-  Calculator by <a href="https://www.ldndecks.com">Loudoun Decks</a>
+  Calculator by <a href="https://ldndecks.com">Loudoun Decks</a>
   Northern Virginia's Top-Rated Deck Builder
 </p>`}
             </pre>
@@ -218,7 +218,7 @@ export default function DeckCostCalculator() {
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.5rem' }}>
               <button
                 onClick={() => {
-                  const text = `Deck Price Estimate for ${sqft} sq ft: ${fmt(novaLow)} - ${fmt(novaHigh)}\nMaterial: ${materials[material].name}\nCalculated at: https://www.ldndecks.com/deck-cost-calculator`;
+                  const text = `Deck Price Estimate for ${sqft} sq ft: ${fmt(novaLow)} - ${fmt(novaHigh)}\nMaterial: ${materials[material].name}\nCalculated at: https://ldndecks.com/deck-cost-calculator`;
                   navigator.clipboard.writeText(text);
                   alert('Results copied to clipboard!');
                 }}
@@ -237,7 +237,7 @@ export default function DeckCostCalculator() {
 
               <button
                 onClick={() => {
-                  const embedCode = `<iframe src="https://www.ldndecks.com/deck-cost-calculator" width="100%" height="800px" frameborder="0"></iframe>\n<p>Calculator provided by <a href="https://www.ldndecks.com">LDN Decks</a></p>`;
+                  const embedCode = `<iframe src="https://ldndecks.com/deck-cost-calculator" width="100%" height="800px" frameborder="0"></iframe>\n<p>Calculator provided by <a href="https://ldndecks.com">LDN Decks</a></p>`;
                   navigator.clipboard.writeText(embedCode);
                   alert('Embed code copied to clipboard!');
                 }}

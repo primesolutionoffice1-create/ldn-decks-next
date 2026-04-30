@@ -20,11 +20,11 @@ const imageGallerySchema = {
   "@type": "ImageGallery",
   "name": "Before & After Deck Projects LDN Decks",
   "description": "Real before and after deck transformation photos from Loudoun Decks projects across Northern Virginia.",
-  "url": "https://www.ldndecks.com/before-and-after",
+  "url": "https://ldndecks.com/before-and-after",
   "publisher": {
     "@type": "LocalBusiness",
     "name": "Loudoun Decks",
-    "@id": "https://www.ldndecks.com/#business",
+    "@id": "https://ldndecks.com/#business",
     "telephone": "+15716557207"
   },
   "about": {
@@ -33,12 +33,12 @@ const imageGallerySchema = {
     "provider": { "@type": "LocalBusiness", "name": "Loudoun Decks" }
   },
   "image": [
-    { "@type": "ImageObject", "url": "https://www.ldndecks.com/images/img04.jpeg", "name": "Deck resurfacing before and after Sterling, VA", "description": "Worn pressure-treated wood deck transformed with Trex composite resurfacing in Sterling, Virginia." },
-    { "@type": "ImageObject", "url": "https://www.ldndecks.com/images/img10.jpeg", "name": "New composite deck build Ashburn, VA", "description": "Bare backyard transformed into a custom Trex Transcend composite deck in Ashburn, Virginia." },
-    { "@type": "ImageObject", "url": "https://www.ldndecks.com/images/img01.jpeg", "name": "Custom deck installation Reston, VA", "description": "Custom multi-level composite deck installation in Reston, Virginia." },
-    { "@type": "ImageObject", "url": "https://www.ldndecks.com/images/img05.jpeg", "name": "Balcony reconstruction Chantilly, VA", "description": "Deteriorating balcony fully reconstructed with composite decking in Chantilly, Virginia." },
-    { "@type": "ImageObject", "url": "https://www.ldndecks.com/images/img03.jpeg", "name": "Deck construction Manassas, VA", "description": "New deck construction replacing an old wooden structure in Manassas, Virginia." },
-    { "@type": "ImageObject", "url": "https://www.ldndecks.com/images/img07.jpeg", "name": "New deck build Manassas, VA", "description": "Complete new deck build with composite decking and aluminum railings in Manassas, Virginia." },
+    { "@type": "ImageObject", "url": "https://ldndecks.com/images/img04.jpeg", "name": "Deck resurfacing before and after Sterling, VA", "description": "Worn pressure-treated wood deck transformed with Trex composite resurfacing in Sterling, Virginia." },
+    { "@type": "ImageObject", "url": "https://ldndecks.com/images/img10.jpeg", "name": "New composite deck build Ashburn, VA", "description": "Bare backyard transformed into a custom Trex Transcend composite deck in Ashburn, Virginia." },
+    { "@type": "ImageObject", "url": "https://ldndecks.com/images/img01.jpeg", "name": "Custom deck installation Reston, VA", "description": "Custom multi-level composite deck installation in Reston, Virginia." },
+    { "@type": "ImageObject", "url": "https://ldndecks.com/images/img05.jpeg", "name": "Balcony reconstruction Chantilly, VA", "description": "Deteriorating balcony fully reconstructed with composite decking in Chantilly, Virginia." },
+    { "@type": "ImageObject", "url": "https://ldndecks.com/images/img03.jpeg", "name": "Deck construction Manassas, VA", "description": "New deck construction replacing an old wooden structure in Manassas, Virginia." },
+    { "@type": "ImageObject", "url": "https://ldndecks.com/images/img07.jpeg", "name": "New deck build Manassas, VA", "description": "Complete new deck build with composite decking and aluminum railings in Manassas, Virginia." },
   ]
 };
 

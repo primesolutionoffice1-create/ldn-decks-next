@@ -121,7 +121,7 @@ const expansionSections = [
 export default function DeckBuilderHerndonPage() {
   return (
     <main>
-      <LocalBusinessSchema city="Herndon" url="https://www.ldndecks.com/deck-builder-herndon-va" />
+      <LocalBusinessSchema city="Herndon" url="https://ldndecks.com/deck-builder-herndon-va" />
       <JsonLd data={herndonFaqSchema} />
       <ServicesHeader
         subtext="Herndon, VA's Trusted Deck Company"

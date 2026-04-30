@@ -37,7 +37,7 @@ export default function PressPage() {
                   ['Second Office', '8735 Quarry Rd., Unit 102, Manassas, VA 20110'],
                   ['Phone', '(571) 655-7207'],
                   ['Email', 'office@ldndecks.com'],
-                  ['Website', 'www.ldndecks.com'],
+                  ['Website', 'ldndecks.com'],
                   ['Google Rating', '5.0 stars (41+ verified reviews)'],
                   ['Certifications', 'Trex Platinum Partner, TimberTech Certified Installer'],
                   ['License', 'Virginia Class A Contractor (DPOR Licensed)'],

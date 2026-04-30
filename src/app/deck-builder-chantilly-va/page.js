@@ -121,7 +121,7 @@ const expansionSections = [
 export default function DeckBuilderChantillyPage() {
   return (
     <main>
-      <LocalBusinessSchema city="Chantilly" url="https://www.ldndecks.com/deck-builder-chantilly-va" />
+      <LocalBusinessSchema city="Chantilly" url="https://ldndecks.com/deck-builder-chantilly-va" />
       <JsonLd data={chantillyFaqSchema} />
       <ServicesHeader
         subtext="Chantilly, VA's Trusted Deck Company"

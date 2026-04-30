@@ -15,9 +15,9 @@ export const metadata = buildMetadata({
 const reviewSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "@id": "https://www.ldndecks.com/#business",
+  "@id": "https://ldndecks.com/#business",
   "name": "LDN Decks",
-  "url": "https://www.ldndecks.com",
+  "url": "https://ldndecks.com",
   "telephone": "+15716557207",
   "address": {
     "@type": "PostalAddress",

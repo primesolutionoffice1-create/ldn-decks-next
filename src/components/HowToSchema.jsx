@@ -11,7 +11,7 @@ import React from 'react';
  * @param {{ name: string, text: string, image?: string }[]} steps - Steps in the guide
  */
 export default function HowToSchema({ name, description, image, totalTime, steps = [] }) {
-  const imageUrl = image?.startsWith('http') ? image : `https://www.ldndecks.com${image || '/og-default.webp'}`;
+  const imageUrl = image?.startsWith('http') ? image : `https://ldndecks.com${image || '/og-default.webp'}`;
 
   const schema = {
     '@context': 'https://schema.org',
@@ -25,7 +25,7 @@ export default function HowToSchema({ name, description, image, totalTime, steps
       position: i + 1,
       name: step.name,
       text: step.text,
-      ...(step.image ? { image: step.image.startsWith('http') ? step.image : `https://www.ldndecks.com${step.image}` } : {}),
+      ...(step.image ? { image: step.image.startsWith('http') ? step.image : `https://ldndecks.com${step.image}` } : {}),
     })),
   };
 

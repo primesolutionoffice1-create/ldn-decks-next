@@ -13,7 +13,7 @@ export default function ServiceSchema({ name, description, price, areaServed }) 
     description,
     provider: {
       '@type': 'LocalBusiness',
-      '@id': 'https://www.ldndecks.com/#organization',
+      '@id': 'https://ldndecks.com/#organization',
       name: 'Loudoun Decks',
     },
     areaServed: areaServed || [

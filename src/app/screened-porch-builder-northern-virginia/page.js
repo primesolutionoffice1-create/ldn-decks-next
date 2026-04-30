@@ -95,7 +95,7 @@ const expansionSections = [
 export default function ScreenedPorchBuilderNovaPage() {
   return (
     <main>
-      <LocalBusinessSchema city="Northern Virginia" url="https://www.ldndecks.com/screened-porch-builder-northern-virginia" />
+      <LocalBusinessSchema city="Northern Virginia" url="https://ldndecks.com/screened-porch-builder-northern-virginia" />
       <ServiceSchema name="Screened Porch Construction" description="Custom screened porches and 3-season rooms in Northern Virginia. Protect your outdoor living space from insects and weather." price="25000" />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       

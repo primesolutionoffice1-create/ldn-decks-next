@@ -73,7 +73,7 @@ export default function NewDecksPage() {
     "@context": "https://schema.org",
     "@type": "Service",
     "serviceType": "Custom Deck Construction",
-    "provider": { "@id": "https://www.ldndecks.com/#business" },
+    "provider": { "@id": "https://ldndecks.com/#business" },
     "areaServed": [
       { "@type": "AdministrativeArea", "name": "Loudoun County, VA" },
       { "@type": "AdministrativeArea", "name": "Fairfax County, VA" },

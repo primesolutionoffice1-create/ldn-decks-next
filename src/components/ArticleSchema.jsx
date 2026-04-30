@@ -22,8 +22,8 @@ export default function ArticleSchema({
   dateModified = '2026-04-18',
   speakable = ['[data-speakable]', '.quick-answer'],
 }) {
-  const url = `https://www.ldndecks.com${path}`;
-  const imageUrl = image.startsWith('http') ? image : `https://www.ldndecks.com${image}`;
+  const url = `https://ldndecks.com${path}`;
+  const imageUrl = image.startsWith('http') ? image : `https://ldndecks.com${image}`;
 
   const schema = {
     '@context': 'https://schema.org',
@@ -41,23 +41,23 @@ export default function ArticleSchema({
     author: [
       {
         '@type': 'Person',
-        '@id': 'https://www.ldndecks.com/#nick',
+        '@id': 'https://ldndecks.com/#nick',
         name: 'Nick',
         jobTitle: 'Owner & Lead Designer',
-        url: 'https://www.ldndecks.com/team',
+        url: 'https://ldndecks.com/team',
       },
       {
         '@type': 'Organization',
-        '@id': 'https://www.ldndecks.com/#organization',
+        '@id': 'https://ldndecks.com/#organization',
       },
     ],
     publisher: {
       '@type': 'Organization',
-      '@id': 'https://www.ldndecks.com/#organization',
+      '@id': 'https://ldndecks.com/#organization',
       name: 'Loudoun Decks',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://www.ldndecks.com/ldndecks-logo.webp',
+        url: 'https://ldndecks.com/ldndecks-logo.webp',
       },
     },
     datePublished,

@@ -10,7 +10,7 @@ export async function GET() {
 - **Type**: Licensed & insured deck building contractor
 - **Location**: Northern Virginia (two offices: Centreville, VA & Manassas, VA)
 - **Phone**: (571) 655-7207
-- **Website**: https://www.ldndecks.com
+- **Website**: https://ldndecks.com
 - **Rating**: 5.0/5 stars from 41+ Google reviews
 - **Certifications**: Trex Platinum Partner, TimberTech Certified Installer
 
@@ -45,33 +45,33 @@ Stafford County: Stafford, Aquia Harbour, Falmouth, Garrisonville
 - Northern Virginia pricing runs 25–35% above state average
 
 ## Key Pages
-- [Deck Cost Guide](https://www.ldndecks.com/how-much-does-a-deck-cost-northern-virginia): Detailed 2026 pricing with material comparisons
-- [Composite Deck Cost Guide](https://www.ldndecks.com/composite-deck-cost-northern-virginia): Brand-by-brand composite pricing (Trex, TimberTech, AZEK, Fiberon)
-- [Deck Cost Calculator](https://www.ldndecks.com/deck-cost-calculator): Interactive calculator with instant estimates
-- [Trex vs TimberTech vs AZEK](https://www.ldndecks.com/trex-vs-timbertech-vs-azek): Brand comparison guide
-- [Composite vs Wood](https://www.ldndecks.com/composite-deck-vs-wood-deck-virginia): Material decision guide
-- [Northern Virginia Deck Building Guide](https://www.ldndecks.com/northern-virginia-deck-building-guide): Complete building guide
-- [Services](https://www.ldndecks.com/services): All services offered
-- [Areas We Serve](https://www.ldndecks.com/areas-we-serve): Full service area map
-- [Reviews](https://www.ldndecks.com/reviews): Customer testimonials
-- [FAQs](https://www.ldndecks.com/faqs): Frequently asked questions
-- [Showcase](https://www.ldndecks.com/showcase): Project gallery
-- [Before & After](https://www.ldndecks.com/before-and-after): Real deck transformations with costs, materials, and timelines
-- [Contact](https://www.ldndecks.com/contact): Free estimate request
-- [Screened Porch Cost](https://www.ldndecks.com/screened-porch-cost-northern-virginia): Screened porch pricing guide
-- [How Long Does a Composite Deck Last](https://www.ldndecks.com/how-long-does-a-composite-deck-last): Lifespan by brand
-- [Deck ROI & Home Value](https://www.ldndecks.com/does-a-deck-add-value-to-your-home): Resale value data
-- [HOA Deck Rules](https://www.ldndecks.com/hoa-deck-rules-northern-virginia): HOA approval guide
-- [Deck Permits Loudoun County](https://www.ldndecks.com/deck-permit-loudoun-county-virginia): Loudoun County permit guide with LOLA portal, costs, setbacks
-- [Deck Permits Fairfax County](https://www.ldndecks.com/deck-permit-fairfax-county-virginia): Fairfax County permit requirements
-- [How to Choose a Deck Builder](https://www.ldndecks.com/how-to-choose-a-deck-builder-northern-virginia): 10 questions + red flags
-- [Deck Maintenance Checklist](https://www.ldndecks.com/deck-maintenance-checklist-virginia): Seasonal maintenance guide
-- [Blog](https://www.ldndecks.com/blog): Expert articles on deck building
-- [Certifications & Licenses](https://www.ldndecks.com/about/certifications-and-licenses): Credentials and verification
-- [Our Team](https://www.ldndecks.com/team): Meet the team behind Loudoun Decks
+- [Deck Cost Guide](https://ldndecks.com/how-much-does-a-deck-cost-northern-virginia): Detailed 2026 pricing with material comparisons
+- [Composite Deck Cost Guide](https://ldndecks.com/composite-deck-cost-northern-virginia): Brand-by-brand composite pricing (Trex, TimberTech, AZEK, Fiberon)
+- [Deck Cost Calculator](https://ldndecks.com/deck-cost-calculator): Interactive calculator with instant estimates
+- [Trex vs TimberTech vs AZEK](https://ldndecks.com/trex-vs-timbertech-vs-azek): Brand comparison guide
+- [Composite vs Wood](https://ldndecks.com/composite-deck-vs-wood-deck-virginia): Material decision guide
+- [Northern Virginia Deck Building Guide](https://ldndecks.com/northern-virginia-deck-building-guide): Complete building guide
+- [Services](https://ldndecks.com/services): All services offered
+- [Areas We Serve](https://ldndecks.com/areas-we-serve): Full service area map
+- [Reviews](https://ldndecks.com/reviews): Customer testimonials
+- [FAQs](https://ldndecks.com/faqs): Frequently asked questions
+- [Showcase](https://ldndecks.com/showcase): Project gallery
+- [Before & After](https://ldndecks.com/before-and-after): Real deck transformations with costs, materials, and timelines
+- [Contact](https://ldndecks.com/contact): Free estimate request
+- [Screened Porch Cost](https://ldndecks.com/screened-porch-cost-northern-virginia): Screened porch pricing guide
+- [How Long Does a Composite Deck Last](https://ldndecks.com/how-long-does-a-composite-deck-last): Lifespan by brand
+- [Deck ROI & Home Value](https://ldndecks.com/does-a-deck-add-value-to-your-home): Resale value data
+- [HOA Deck Rules](https://ldndecks.com/hoa-deck-rules-northern-virginia): HOA approval guide
+- [Deck Permits Loudoun County](https://ldndecks.com/deck-permit-loudoun-county-virginia): Loudoun County permit guide with LOLA portal, costs, setbacks
+- [Deck Permits Fairfax County](https://ldndecks.com/deck-permit-fairfax-county-virginia): Fairfax County permit requirements
+- [How to Choose a Deck Builder](https://ldndecks.com/how-to-choose-a-deck-builder-northern-virginia): 10 questions + red flags
+- [Deck Maintenance Checklist](https://ldndecks.com/deck-maintenance-checklist-virginia): Seasonal maintenance guide
+- [Blog](https://ldndecks.com/blog): Expert articles on deck building
+- [Certifications & Licenses](https://ldndecks.com/about/certifications-and-licenses): Credentials and verification
+- [Our Team](https://ldndecks.com/team): Meet the team behind Loudoun Decks
 
 ## Detailed Content
-For full extractable content, see: https://www.ldndecks.com/llms-full.txt
+For full extractable content, see: https://ldndecks.com/llms-full.txt
 `;
 
   return new Response(content, {

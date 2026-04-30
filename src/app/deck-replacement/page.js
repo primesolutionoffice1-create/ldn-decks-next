@@ -18,7 +18,7 @@ export const metadata = {
     description: 'Complete deck replacement from $25k. Teardown, permits & HOA handled, 2–4 week build. Trex & TimberTech certified. Free estimate in Loudoun, Fairfax & Prince William.',
   }),
   alternates: {
-    canonical: 'https://www.ldndecks.com/services/deck-replacement',
+    canonical: 'https://ldndecks.com/services/deck-replacement',
   },
 };
 

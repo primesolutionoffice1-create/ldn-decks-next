@@ -15,7 +15,7 @@ export const metadata = buildMetadata({
 const reviewSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "@id": "https://www.ldndecks.com/#organization",
+  "@id": "https://ldndecks.com/#organization",
   "name": "Loudoun Decks",
   "aggregateRating": {
     "@type": "AggregateRating",

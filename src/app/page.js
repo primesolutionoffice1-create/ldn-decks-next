@@ -21,20 +21,20 @@ import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
   path: "/",
-  title: 'Best Deck Builder in Northern Virginia | Custom Decks & Patios',
+  title: 'Best Deck Builder in Northern Virginia | Custom Decks',
   description:
-    'Loudoun Decks designs & builds custom decks, screened porches, and patios across Northern Virginia. Trex Pro & TimberTech Gold installer. Free quote in 24h.',
+    'Loudoun Decks builds custom decks, screened porches, and patios in Northern Virginia. Trex Pro & TimberTech installer. Free quote in 24h.',
 });
 
 const businessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "@id": "https://www.ldndecks.com/#organization",
+  "@id": "https://ldndecks.com/#organization",
   "name": "Loudoun Decks",
   "alternateName": "LDN Decks",
-  "url": "https://www.ldndecks.com",
-  "logo": "https://www.ldndecks.com/ldndecks-logo.webp",
-  "image": "https://www.ldndecks.com/images/img64.jpeg",
+  "url": "https://ldndecks.com",
+  "logo": "https://ldndecks.com/ldndecks-logo.webp",
+  "image": "https://ldndecks.com/images/img64.jpeg",
   "telephone": "+15716557207",
   "email": "office@ldndecks.com",
   "priceRange": "$$-$$$$",
@@ -66,30 +66,30 @@ const businessSchema = {
 const homepageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "@id": "https://www.ldndecks.com/#webpage",
-  "url": "https://www.ldndecks.com",
+  "@id": "https://ldndecks.com/#webpage",
+  "url": "https://ldndecks.com",
   "name": "Loudoun Decks — Custom Deck Builder in Northern Virginia",
   "description": "Top-rated custom deck builder in Loudoun County, Northern Virginia. Trex Platinum Partner and TimberTech Certified. Composite and wood decks, screened porches, patios, pergolas. 5.0-star Google rating. Free estimates.",
-  "isPartOf": { "@type": "WebSite", "@id": "https://www.ldndecks.com/#website" },
-  "about": { "@type": "LocalBusiness", "@id": "https://www.ldndecks.com/#organization" },
+  "isPartOf": { "@type": "WebSite", "@id": "https://ldndecks.com/#website" },
+  "about": { "@type": "LocalBusiness", "@id": "https://ldndecks.com/#organization" },
   "primaryImageOfPage": {
     "@type": "ImageObject",
-    "url": "https://www.ldndecks.com/images/img64.jpeg"
+    "url": "https://ldndecks.com/images/img64.jpeg"
   },
   "speakable": {
     "@type": "SpeakableSpecification",
     "cssSelector": ["h1", "[data-speakable]"]
   },
   "significantLink": [
-    "https://www.ldndecks.com/services",
-    "https://www.ldndecks.com/northern-virginia-deck-building-guide",
-    "https://www.ldndecks.com/how-much-does-a-deck-cost-northern-virginia",
-    "https://www.ldndecks.com/composite-deck-cost-northern-virginia",
-    "https://www.ldndecks.com/before-and-after",
-    "https://www.ldndecks.com/areas-we-serve",
-    "https://www.ldndecks.com/reviews",
-    "https://www.ldndecks.com/deck-cost-calculator",
-    "https://www.ldndecks.com/contact"
+    "https://ldndecks.com/services",
+    "https://ldndecks.com/northern-virginia-deck-building-guide",
+    "https://ldndecks.com/how-much-does-a-deck-cost-northern-virginia",
+    "https://ldndecks.com/composite-deck-cost-northern-virginia",
+    "https://ldndecks.com/before-and-after",
+    "https://ldndecks.com/areas-we-serve",
+    "https://ldndecks.com/reviews",
+    "https://ldndecks.com/deck-cost-calculator",
+    "https://ldndecks.com/contact"
   ]
 };
 

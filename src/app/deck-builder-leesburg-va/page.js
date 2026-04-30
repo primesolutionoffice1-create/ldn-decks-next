@@ -121,7 +121,7 @@ const expansionSections = [
 export default function DeckBuilderLeesburgPage() {
   return (
     <main>
-      <LocalBusinessSchema city="Leesburg" url="https://www.ldndecks.com/deck-builder-leesburg-va" />
+      <LocalBusinessSchema city="Leesburg" url="https://ldndecks.com/deck-builder-leesburg-va" />
       <JsonLd data={leesburgFaqSchema} />
       <ServicesHeader
         subtext="Leesburg, VA's Trusted Deck Company"

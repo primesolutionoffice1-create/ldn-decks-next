@@ -46,7 +46,7 @@ const reviewSchema = {
   "author": {
     "@type": "Organization",
     "name": "Loudoun Decks",
-    "url": "https://www.ldndecks.com",
+    "url": "https://ldndecks.com",
   },
   "publisher": {
     "@type": "Organization",

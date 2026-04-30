@@ -31,12 +31,12 @@ export default function TeamGrid() {
   const personSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
-    "@id": "https://www.ldndecks.com/#nick",
+    "@id": "https://ldndecks.com/#nick",
     "name": "Nick",
     "jobTitle": "Owner & Lead Designer",
-    "worksFor": { "@type": "Organization", "@id": "https://www.ldndecks.com/#organization" },
+    "worksFor": { "@type": "Organization", "@id": "https://ldndecks.com/#organization" },
     "knowsAbout": ["Composite decking installation", "Trex deck building", "TimberTech AZEK", "Custom deck design", "Northern Virginia building codes", "HOA architectural review"],
-    "image": "https://www.ldndecks.com/team/Nick.jpg",
+    "image": "https://ldndecks.com/team/Nick.jpg",
     "description": "Founder of Loudoun Decks with 15+ years of custom deck building experience in Northern Virginia. Virginia Class A Licensed Contractor, Trex Platinum Certified.",
   };
 

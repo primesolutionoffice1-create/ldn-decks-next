@@ -121,7 +121,7 @@ const expansionSections = [
 export default function DeckBuilderRestonPage() {
   return (
     <main>
-      <LocalBusinessSchema city="Reston" url="https://www.ldndecks.com/deck-builder-reston-va" />
+      <LocalBusinessSchema city="Reston" url="https://ldndecks.com/deck-builder-reston-va" />
       <JsonLd data={restonFaqSchema} />
       <ServicesHeader
         subtext="Reston, VA's Trusted Deck Company"

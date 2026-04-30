@@ -17,10 +17,10 @@ const BBB_PROFILE_URL = 'https://www.bbb.org/us/va/centreville/profile/deck-buil
 const businessSchema = {
   "@context": "https://schema.org",
   "@type": "HomeAndConstructionBusiness",
-  "@id": "https://www.ldndecks.com/#organization",
+  "@id": "https://ldndecks.com/#organization",
   "name": "Loudoun Decks",
   "alternateName": "LDN Decks",
-  "url": "https://www.ldndecks.com",
+  "url": "https://ldndecks.com",
   "telephone": "+15716557207",
   "email": "office@ldndecks.com",
   "priceRange": "$$-$$$$",
@@ -66,9 +66,9 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.ldndecks.com/" },
-    { "@type": "ListItem", "position": 2, "name": "About", "item": "https://www.ldndecks.com/about" },
-    { "@type": "ListItem", "position": 3, "name": "BBB Accredited Deck Builder", "item": "https://www.ldndecks.com/bbb-accredited-deck-builder-virginia" }
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ldndecks.com/" },
+    { "@type": "ListItem", "position": 2, "name": "About", "item": "https://ldndecks.com/about" },
+    { "@type": "ListItem", "position": 3, "name": "BBB Accredited Deck Builder", "item": "https://ldndecks.com/bbb-accredited-deck-builder-virginia" }
   ]
 };
 
@@ -77,9 +77,9 @@ const webPageSchema = {
   "@type": "WebPage",
   "name": "BBB Accredited Deck Builder in Northern Virginia",
   "description": "Loudoun Decks is a BBB Accredited A+ rated deck builder serving Northern Virginia.",
-  "url": "https://www.ldndecks.com/bbb-accredited-deck-builder-virginia",
-  "isPartOf": { "@type": "WebSite", "@id": "https://www.ldndecks.com/#website" },
-  "about": { "@type": "LocalBusiness", "@id": "https://www.ldndecks.com/#organization" }
+  "url": "https://ldndecks.com/bbb-accredited-deck-builder-virginia",
+  "isPartOf": { "@type": "WebSite", "@id": "https://ldndecks.com/#website" },
+  "about": { "@type": "LocalBusiness", "@id": "https://ldndecks.com/#organization" }
 };
 
 const faqs = [

@@ -19,7 +19,7 @@ const serviceSchema = {
   "provider": {
     "@type": "LocalBusiness",
     "name": "Loudoun Decks",
-    "@id": "https://www.ldndecks.com/#business",
+    "@id": "https://ldndecks.com/#business",
     "telephone": "+15716557207",
     "address": {
       "@type": "PostalAddress",

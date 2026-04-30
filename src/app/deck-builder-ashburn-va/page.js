@@ -122,7 +122,7 @@ const expansionSections = [
 export default function DeckBuilderAshburnPage() {
   return (
     <main>
-      <LocalBusinessSchema city="Ashburn" url="https://www.ldndecks.com/deck-builder-ashburn-va" />
+      <LocalBusinessSchema city="Ashburn" url="https://ldndecks.com/deck-builder-ashburn-va" />
       <JsonLd data={ashburnFaqSchema} />
       <ServicesHeader
         subtext="Ashburn, VA's #1 Rated Builder"

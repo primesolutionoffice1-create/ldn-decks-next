@@ -121,7 +121,7 @@ const expansionSections = [
 export default function DeckBuilderAlexandriaPage() {
   return (
     <main>
-      <LocalBusinessSchema city="Alexandria" url="https://www.ldndecks.com/deck-builder-alexandria-va" />
+      <LocalBusinessSchema city="Alexandria" url="https://ldndecks.com/deck-builder-alexandria-va" />
       <JsonLd data={alexandriaFaqSchema} />
       <ServicesHeader
         subtext="Alexandria, VA's Trusted Deck Company"

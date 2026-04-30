@@ -18,7 +18,7 @@ export default function Breadcrumbs() {
     return { label, href };
   });
 
-  const SITE_URL = "https://www.ldndecks.com";
+  const SITE_URL = "https://ldndecks.com";
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",

@@ -14,7 +14,7 @@ export const metadata = buildMetadata({
 const credentialSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  "@id": "https://www.ldndecks.com/#organization",
+  "@id": "https://ldndecks.com/#organization",
   "name": "Loudoun Decks",
   "hasCredential": [
     { "@type": "EducationalOccupationalCredential", "credentialCategory": "license", "name": "Virginia Class A Contractor License", "recognizedBy": { "@type": "GovernmentOrganization", "name": "Virginia Department of Professional and Occupational Regulation (DPOR)" } },

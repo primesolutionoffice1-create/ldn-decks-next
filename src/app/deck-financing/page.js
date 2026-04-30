@@ -11,7 +11,7 @@ import { buildMetadata } from '@/lib/seo';
 export const metadata = buildMetadata({
   path: '/deck-financing',
   title: 'Premium Deck Financing in Northern Virginia | Loudoun Decks',
-  description: 'Finance your custom deck with confidence. Monthly payment options for $15K–$50K+ premium composite decks. Soft credit pre-qualification. No impact on credit score.',
+  description: 'Finance your custom deck. Monthly options for $15K-$50K+ composite decks. Soft credit pre-qualification — no impact on credit score.',
 });
 
 const faqs = [

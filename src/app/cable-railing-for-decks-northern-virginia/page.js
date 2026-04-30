@@ -9,7 +9,7 @@ import { buildMetadata } from '@/lib/seo';
 export const metadata = buildMetadata({
   path: '/cable-railing-for-decks-northern-virginia',
   title: 'Cable Railing for Decks (NoVA)',
-  description: 'Cable railing costs $60-$100/linear ft installed in Northern Virginia. Horizontal vs vertical, Virginia code requirements, HOA considerations. We install all types.',
+  description: 'Cable railing $60-$100/linear ft in Northern Virginia. Horizontal vs vertical, VA code requirements & HOA considerations. We install all types.',
 });
 
 const faqSchema = {

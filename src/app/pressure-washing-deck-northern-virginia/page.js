@@ -9,7 +9,7 @@ import { buildMetadata } from '@/lib/seo';
 export const metadata = buildMetadata({
   path: '/pressure-washing-deck-northern-virginia',
   title: 'Deck Pressure Washing in Northern Virginia | $150-$500 | LDN Decks',
-  description: 'Professional deck pressure washing in Northern Virginia. $150-$500 for most decks. Removes mold, mildew, gray oxidation. Safe PSI for wood & composite. Free estimate.',
+  description: 'Pro deck pressure washing in Northern Virginia. $150-$500 for most decks. Removes mold, mildew, oxidation. Safe PSI for wood & composite.',
 });
 
 const faqSchema = {

@@ -9,7 +9,7 @@ import { buildMetadata } from '@/lib/seo';
 export const metadata = buildMetadata({
   path: '/pool-deck-builder-northern-virginia',
   title: 'Pool Deck Builder in Northern Virginia | Composite & Paver Pool Decks',
-  description: 'Custom pool decks in Northern Virginia: composite ($35-$75/sqft), pavers ($25-$50/sqft), stamped concrete ($15-$30/sqft). Heat-resistant surfaces, code-compliant fencing.',
+  description: 'Custom pool decks NoVA: composite ($35-$75/sqft), pavers ($25-$50/sqft), stamped concrete ($15-$30/sqft). Code-compliant. Free estimate.',
 });
 
 const faqSchema = {

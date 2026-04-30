@@ -9,7 +9,7 @@ import { buildMetadata } from '@/lib/seo';
 export const metadata = buildMetadata({
   path: '/what-size-deck-should-i-build',
   title: 'What Size Deck Should I Build? (Guide by Use + Budget)',
-  description: 'Deck size guide: 150-200 sqft for couples, 300-400 for families, 500+ for entertaining. Size recommendations by use, furniture needs, and Northern Virginia lot sizes.',
+  description: 'Deck size guide: 150-200 sqft for couples, 300-400 for families, 500+ for entertaining. Recommendations by use and Northern Virginia lot sizes.',
 });
 
 const faqSchema = {

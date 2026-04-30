@@ -14,7 +14,7 @@ import { buildMetadata } from '@/lib/seo';
 export const metadata = buildMetadata({
   path: "/services/porches/front-porch",
   title: "Front Porch Builder Northern Virginia | Custom Curb Appeal Upgrades",
-  description: "Build a custom front porch in Northern Virginia. Loudoun Decks designs and constructs premium front porches, porticos, and wraparound entries that transform your home's curb appeal in Loudoun and Fairfax County.",
+  description: "Custom front porches in Northern Virginia. Premium porticos, wraparound entries & curb appeal upgrades in Loudoun & Fairfax County. Free estimate.",
 });
 
 const serviceSchema = {

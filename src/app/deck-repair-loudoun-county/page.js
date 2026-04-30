@@ -15,7 +15,7 @@ import { buildMetadata } from '@/lib/seo';
 export const metadata = buildMetadata({
   path: '/deck-repair-loudoun-county',
   title: 'Deck Repair Loudoun County | Fix Rot, Railings & Ledger Boards',
-  description: 'Expert deck repair in Loudoun County, VA. Loudoun Decks fixes rot, unstable railings, ledger board failures & structural damage in Ashburn, Leesburg, Sterling & all of Loudoun. Free estimate - call (571) 655-7207.',
+  description: 'Expert deck repair in Loudoun County, VA. We fix rot, unstable railings, ledger board failures & structural damage. Ashburn, Leesburg, Sterling.',
   image: '/images/img05.jpeg',
 });
 

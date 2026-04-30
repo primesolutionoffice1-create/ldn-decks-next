@@ -144,7 +144,7 @@ export default function McLeanDeckBuilderPage() {
           "5-Star Google Rated - call (571) 655-7207"
         ]}
         image1="/images/img64.jpeg"
-        image2="/images/img65.jpeg"
+        image2="/images/img21.jpeg"
       />
       <ServiceContentExpansion sections={expansionSections} />
       

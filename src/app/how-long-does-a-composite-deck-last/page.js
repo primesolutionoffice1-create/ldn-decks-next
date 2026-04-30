@@ -8,7 +8,7 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/how-long-does-a-composite-deck-last',
-  title: 'How Long Does a Composite Deck Last? (Virginia Climate Guide)',
+  title: 'How Long Does a Composite Deck Last?',
   description: 'Composite decks last 25-50 years in Virginia. Trex: 25+ yrs, TimberTech AZEK: 50 yrs. Wood lasts 10-15. Signs your deck needs replacement vs resurfacing.',
 });
 

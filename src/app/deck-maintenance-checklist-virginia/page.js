@@ -8,7 +8,7 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/deck-maintenance-checklist-virginia',
-  title: 'Deck Maintenance Checklist for Virginia Homeowners (2026)',
+  title: 'Deck Maintenance Checklist for Virginia',
   description: 'Seasonal deck maintenance checklist for Virginia climate. Spring cleaning, summer care, fall prep, winter protection. Composite vs wood maintenance compared.',
 });
 

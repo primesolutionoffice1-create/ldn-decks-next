@@ -8,7 +8,7 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/paver-vs-flagstone-patio-northern-virginia',
-  title: 'Paver vs Flagstone Patio Comparison | Northern Virginia',
+  title: 'Paver vs Flagstone Patio Comparison',
   description: 'Compare cost, durability, and maintenance of pavers vs flagstone for Northern Virginia patios. We build both.',
 });
 

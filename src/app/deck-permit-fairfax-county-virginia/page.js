@@ -8,7 +8,7 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/deck-permit-fairfax-county-virginia',
-  title: 'Deck Permit Guide: Fairfax County, VA (2026 Requirements)',
+  title: 'Fairfax County Deck Permit Guide (2026)',
   description: 'Do you need a permit for a deck in Fairfax County? Yes decks over 200 sqft or 18" above grade require permits. Full step-by-step process, costs, and timeline.',
 });
 

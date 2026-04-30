@@ -8,7 +8,7 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/deck-vs-patio-which-is-right',
-  title: 'Deck vs Patio: Which Is Right for Your Virginia Home? (2026)',
+  title: 'Deck vs Patio: Which Is Right for You?',
   description: 'Deck vs patio cost, maintenance, ROI, and best use compared for Northern Virginia homeowners. We build both. Free consultation.',
 });
 

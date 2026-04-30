@@ -8,7 +8,7 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/deck-lighting-ideas-northern-virginia',
-  title: 'Deck Lighting Ideas for Northern Virginia Homes (2026 Guide + Costs)',
+  title: 'Deck Lighting Ideas (Northern VA)',
   description: '8 deck lighting options: post caps, stair risers, under-rail, string lights, recessed, landscape. Costs from $500-$5,000. Transform your deck for evening use.',
 });
 

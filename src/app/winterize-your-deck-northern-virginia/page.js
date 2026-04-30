@@ -8,7 +8,7 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/winterize-your-deck-northern-virginia',
-  title: 'How to Winterize Your Deck in Northern Virginia',
+  title: 'Winterize Your Deck in Northern VA',
   description: 'Protect your deck from Virginia freeze-thaw. 10-step winterization checklist for wood and composite decks. Free inspection.',
 });
 

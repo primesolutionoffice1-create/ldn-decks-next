@@ -8,7 +8,7 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/deck-staining-northern-virginia',
-  title: 'Deck Staining & Sealing Services in Northern Virginia (2026)',
+  title: 'Deck Staining in Northern Virginia',
   description: 'Professional deck staining in Northern Virginia. $3-$7/sqft. Protects against Virginia freeze-thaw, UV, and humidity. Free estimate. Call (571) 655-7207.',
 });
 

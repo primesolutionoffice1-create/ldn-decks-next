@@ -8,7 +8,7 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/under-deck-ceiling-ideas',
-  title: 'Under-Deck Ceiling Ideas: 5 Ways to Use the Space Below Your Deck',
+  title: 'Under-Deck Ceiling Ideas (5 Options)',
   description: 'Turn the space under your elevated deck into usable living area. Under-deck drainage systems, ceiling panels, lighting. $3,000-$15,000 in Northern Virginia.',
 });
 

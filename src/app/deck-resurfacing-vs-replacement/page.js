@@ -10,7 +10,7 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/deck-resurfacing-vs-replacement',
-  title: 'Deck Resurfacing vs Replacement: Which Saves You Money? (2026)',
+  title: 'Deck Resurfacing vs Replacement',
   description: 'Resurface for $10k-$25k (keep frame) or replace for $20k-$50k (new everything). When each makes sense, inspection guide, real cost examples from Northern Virginia.',
 });
 

@@ -8,7 +8,7 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/deck-design-ideas-2026',
-  title: '15 Deck Design Ideas for Northern Virginia (2026 Trends)',
+  title: '15 Deck Design Ideas for 2026',
   description: 'Top deck design trends for 2026: multi-level layouts, outdoor kitchens, cable railings, integrated lighting, mixed materials. Inspiration from real NoVA projects.',
 });
 

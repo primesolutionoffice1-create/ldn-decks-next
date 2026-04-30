@@ -8,7 +8,7 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/hoa-deck-rules-northern-virginia',
-  title: 'HOA Deck Rules in Northern Virginia Approval Guide (2026)',
+  title: 'HOA Deck Rules in Northern Virginia (2026)',
   description: 'Most NoVA HOAs require approval before deck construction. Learn the process, common restrictions, what to submit, and how we handle it 100% approval rate.',
 });
 

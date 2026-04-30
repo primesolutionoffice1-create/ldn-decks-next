@@ -8,7 +8,7 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/deck-railing-options-northern-virginia',
-  title: 'Deck Railing Options for Northern Virginia (2026 Guide + Costs)',
+  title: 'Deck Railing Options for Northern Virginia',
   description: 'Compare deck railing options: composite, aluminum, cable, glass, and wood. Prices from $30-$150/linear ft installed. Virginia code requirements included.',
 });
 

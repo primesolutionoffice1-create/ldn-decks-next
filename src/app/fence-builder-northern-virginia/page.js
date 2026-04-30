@@ -8,7 +8,7 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/fence-builder-northern-virginia',
-  title: 'Fence Builder in Northern Virginia | Privacy & Composite Fencing | LDN Decks',
+  title: 'Fence Builder in Northern Virginia',
   description: 'Custom fencing in Northern Virginia from $4,000-$15,000. Privacy, composite, vinyl, wood, aluminum. HOA-compliant. Permits handled. Free estimate. (571) 655-7207.',
 });
 

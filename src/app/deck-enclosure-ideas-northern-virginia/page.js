@@ -8,7 +8,7 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/deck-enclosure-ideas-northern-virginia',
-  title: 'Deck Enclosure Ideas for Northern Virginia (2026 Guide + Costs)',
+  title: 'Deck Enclosure Ideas (Northern VA)',
   description: 'Enclose your existing deck: screens ($8k-$20k), EZE-Breeze 3-season ($15k-$35k), full sunroom ($40k-$80k+). Extend outdoor season to 9-10 months.',
 });
 

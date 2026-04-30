@@ -8,7 +8,7 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/how-long-to-build-a-deck-northern-virginia',
-  title: 'How Long Does It Take to Build a Deck in Northern Virginia? (2026)',
+  title: 'How Long to Build a Deck in Virginia',
   description: 'Most decks take 2-4 weeks to build after permits. Full timeline: consultation (1 week), permits (2-6 weeks), construction (2-4 weeks). Total: 6-12 weeks.',
 });
 

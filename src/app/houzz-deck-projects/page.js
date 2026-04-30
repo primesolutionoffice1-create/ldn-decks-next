@@ -211,7 +211,7 @@ export default function HouzzProjectsPage() {
             href="https://www.houzz.com/pro/webuser-782541997/loudoun-decks" 
             target="_blank" 
             rel="noopener noreferrer"
-            style={{ display: 'inline-block', background: '#4DBC15', color: '#fff', padding: '1.25rem 3rem', borderRadius: 14, fontWeight: 700, fontSize: '1.2rem', textDecoration: 'none', boxShadow: '0 15px 30px rgba(77, 188, 21, 0.25)', transition: 'transform 0.2s' }}
+            style={{ display: 'inline-block', background: 'var(--color-primary)', color: '#fff', padding: '1.25rem 3rem', borderRadius: 14, fontWeight: 700, fontSize: '1.2rem', textDecoration: 'none', boxShadow: '0 15px 30px rgba(209, 72, 23, 0.25)', transition: 'transform 0.2s' }}
           >
             Visit Our Full Portfolio on Houzz
           </a>

@@ -134,6 +134,65 @@ export default function FirePitsPage() {
         image1="/showcase/img15.jpeg"
         image2="/showcase/img16.jpeg"
       />
+
+      <section style={{ padding: '60px 20px', maxWidth: '900px', margin: '0 auto' }}>
+        <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Fire Pit Options & Pricing</h2>
+        <div style={{ overflowX: 'auto', marginBottom: '2rem' }}>
+          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.9rem' }}>
+            <thead>
+              <tr style={{ background: '#f5f5f5' }}>
+                {['Type', 'Price Range', 'Fuel', 'Best For'].map(h => (
+                  <th key={h} style={{ padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #ddd' }}>{h}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                ['Portable fire bowl/table', '$500–$2,000', 'Propane/gas', 'Flexibility, rentals, small spaces'],
+                ['Built-in gas fire pit', '$3,000–$8,000', 'Natural gas line', 'Clean, instant, deck-adjacent'],
+                ['Stone surround (wood-burning)', '$5,000–$12,000', 'Wood logs', 'Large lots, campfire experience'],
+                ['Fire pit + seating wall', '$8,000–$18,000', 'Gas or wood', 'Gathering spot, entertaining'],
+                ['Fire pit + paver patio combo', '$12,000–$25,000', 'Gas or wood', 'Complete outdoor room at grade'],
+                ['Fire table (rectangular)', '$2,000–$6,000', 'Propane/natural gas', 'Dining integration, modern look'],
+                ['Deck-integrated gas feature', '$4,000–$10,000', 'Natural gas', 'Built into deck with non-combustible pad'],
+              ].map((row, i) => (
+                <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
+                  {row.map((cell, j) => (
+                    <td key={j} style={{ padding: '0.75rem', borderBottom: '1px solid #eee', fontWeight: j === 0 ? 600 : 400 }}>{cell}</td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Gas vs Wood-Burning Fire Pit</h2>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
+          <div style={{ background: '#fff3e0', border: '2px solid var(--color-primary)', borderRadius: 8, padding: '1.5rem' }}>
+            <h3 style={{ fontWeight: 700, marginBottom: '0.75rem', color: 'var(--color-primary)' }}>Gas Fire Pit (Recommended for NoVA)</h3>
+            <ul style={{ paddingLeft: '1.25rem', fontSize: '0.95rem', listStyleType: 'disc' }}>
+              <li style={{ marginBottom: '0.4rem' }}>Instant on/off no startup or cleanup</li>
+              <li style={{ marginBottom: '0.4rem' }}>No smoke, no sparks, no ash</li>
+              <li style={{ marginBottom: '0.4rem' }}>Adjustable flame height</li>
+              <li style={{ marginBottom: '0.4rem' }}>Safe near deck/house structures</li>
+              <li style={{ marginBottom: '0.4rem' }}>HOA-preferred (most allow gas, restrict wood)</li>
+              <li style={{ marginBottom: '0.4rem' }}>No wood storage or hauling</li>
+            </ul>
+          </div>
+          <div style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem' }}>
+            <h3 style={{ fontWeight: 700, marginBottom: '0.75rem' }}>Wood-Burning Fire Pit</h3>
+            <ul style={{ paddingLeft: '1.25rem', fontSize: '0.95rem', listStyleType: 'disc' }}>
+              <li style={{ marginBottom: '0.4rem' }}>Authentic campfire experience (crackle, smell)</li>
+              <li style={{ marginBottom: '0.4rem' }}>No gas line required lower install cost</li>
+              <li style={{ marginBottom: '0.4rem' }}>Higher heat output</li>
+              <li style={{ marginBottom: '0.4rem' }}>Requires 15+ ft from structures (fire code)</li>
+              <li style={{ marginBottom: '0.4rem' }}>Smoke can bother neighbors on small lots</li>
+              <li style={{ marginBottom: '0.4rem' }}>Some HOAs prohibit wood-burning</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       <ServiceContentExpansion sections={expansionSections} />
       <ServiceInclusions
         title="Our Layout Process"

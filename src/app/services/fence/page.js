@@ -147,6 +147,17 @@ export default function FencePage() {
 
       <ServiceContentExpansion sections={expansionSections} />
 
+      <section style={{ padding: '60px 20px', maxWidth: '900px', margin: '0 auto' }}>
+        <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Bundle: Fence + Deck = Save 15-25%</h2>
+        <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Building a fence and deck at the same time saves money through shared mobilization, site prep, material delivery, and dumpster costs. Many homeowners add privacy fencing when they build or replace their deck.</p>
+        <div style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', marginBottom: '2rem' }}>
+          <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>Example: 350 sqft Deck + 120 ft Privacy Fence</h3>
+          <p style={{ marginBottom: '0.5rem' }}>Separate projects: $30,000 (deck) + $6,000 (fence) = $36,000</p>
+          <p style={{ marginBottom: '0.5rem' }}>Bundled together: $30,500 total <strong>saves $5,500 (15%)</strong></p>
+          <p style={{ fontSize: '0.9rem', color: '#555' }}>Same materials, same quality, same warranty just smarter scheduling.</p>
+        </div>
+      </section>
+
       <ServiceInclusions
         title="Security Built for Virginia Families"
         description="Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. Our fences are built to last in the Mid-Atlantic climate."

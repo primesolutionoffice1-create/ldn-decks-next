@@ -160,6 +160,36 @@ export default function GazeboPergolaPage() {
 
       <ServiceContentExpansion sections={expansionSections} />
 
+      <section style={{ padding: '60px 20px', maxWidth: '900px', margin: '0 auto' }}>
+        <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Pergola Options & Pricing</h2>
+        <div style={{ overflowX: 'auto', marginBottom: '2rem' }}>
+          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.9rem' }}>
+            <thead>
+              <tr style={{ background: '#f5f5f5' }}>
+                {['Type', 'Size Range', 'Material', 'Price Range', 'Best For'].map(h => (
+                  <th key={h} style={{ padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #ddd' }}>{h}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                ['Basic attached', '8x10 to 12x14', 'Pressure-treated wood', '$8k–$14k', 'Budget shade over deck'],
+                ['Standard attached', '10x12 to 14x16', 'Vinyl/composite/cedar', '$12k–$22k', 'Most popular low maintenance'],
+                ['Freestanding', '10x10 to 16x20', 'Vinyl/composite/wood', '$14k–$28k', 'Garden focal point, patio shade'],
+                ['Louvered roof (motorized)', '10x12 to 16x20', 'Aluminum + composite', '$20k–$35k+', 'Adjustable shade + rain protection'],
+                ['Pergola + deck combo', 'Varies', 'Matches deck material', '$30k–$55k total', 'Complete outdoor room'],
+              ].map((row, i) => (
+                <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
+                  {row.map((cell, j) => (
+                    <td key={j} style={{ padding: '0.75rem', borderBottom: '1px solid #eee', fontWeight: j === 0 ? 600 : 400 }}>{cell}</td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
       <ServiceVisual image="/gazeboandparagols.webp" />
 
       <ServiceInclusions

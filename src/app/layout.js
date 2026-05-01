@@ -52,7 +52,7 @@ export default function RootLayout({ children }) {
         {/* AI content discovery — llms.txt standard */}
         <link rel="alternate" type="text/plain" href="https://ldndecks.com/llms.txt" title="LLM content index" />
         <link rel="alternate" type="text/plain" href="https://ldndecks.com/llms-full.txt" title="LLM full content" />
-                    <link rel="preload" href="/home-page-ldn.png" as="image" fetchpriority="high" />
+                    <link rel="preload" href="/home-page-ldn.webp" as="image" fetchpriority="high" />
         {/* Google Tag Manager - dataLayer init */}
                     <Script id="gtm-init" strategy="afterInteractive">
           {`window.dataLayer = window.dataLayer || [];`}

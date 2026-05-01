@@ -93,6 +93,8 @@ const homepageSchema = {
   ]
 };
 
+import BlogFeed from "@/components/BlogFeed";
+
 export default function Home() {
     return (
           <main className={styles.main}>
@@ -108,6 +110,7 @@ export default function Home() {
             <HandCraftedDecks />
             <ServicesHome />
             <Testimonials />
+            <BlogFeed />
             <HomeSEOContent />
             <HomeQuickLinks />
             <FAQ />

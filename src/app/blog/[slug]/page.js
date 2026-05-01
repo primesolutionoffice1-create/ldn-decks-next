@@ -5,6 +5,8 @@ import { notFound } from 'next/navigation';
 import { blogPosts } from '@/lib/blogData';
 import { buildMetadata } from '@/lib/seo';
 import RelatedGuides from '@/components/RelatedGuides';
+import ServicesHome from '@/components/ServicesHome';
+import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import styles from './BlogContent.module.css';
 
 // Pre-render all blog posts at build time for proper indexing
@@ -125,6 +127,8 @@ export default async function SingleBlogPage({ params }) {
              </div>
           </div>
        </div>
+       <ServicesHome />
+       <ServiceAreasGrid />
        <RelatedGuides currentPath={`/blog/${post.slug}`} />
     </article>
   );

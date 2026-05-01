@@ -10,7 +10,7 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/deck-roi-calculator-northern-virginia',
-  title: 'Deck ROI in Northern Virginia | 2026 Home Value Data',
+  title: 'Deck ROI in Northern Virginia (2026)',
   description: 'How much value does a deck add in Northern Virginia? Composite recoups 65-80% at resale. Real ROI data by material, size, and county.',
   image: '/images/img10.jpeg',
 });

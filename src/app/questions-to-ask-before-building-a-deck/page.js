@@ -8,7 +8,7 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/questions-to-ask-before-building-a-deck',
-  title: '20 Questions to Ask Before Building a Deck (2026 Homeowner Guide)',
+  title: '20 Questions Before Building a Deck (2026)',
   description: '20 questions every homeowner should answer before building a deck: budget, materials, permits, HOA, timeline. From a 5-star NoVA builder.',
 });
 

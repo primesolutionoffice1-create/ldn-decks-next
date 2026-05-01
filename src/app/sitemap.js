@@ -195,10 +195,7 @@ export default async function sitemap() {
                 { path: "/deck-builder-lorton-va",                      priority: 0.85, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-builder-purcellville-va",                priority: 0.85, lastMod: TIER1, freq: "weekly" },
                 { path: "/stamped-concrete-patio-northern-virginia",    priority: 0.85, lastMod: TIER1, freq: "weekly" },
-                { path: "/pergola-builder-northern-virginia",           priority: 0.85, lastMod: TIER1, freq: "weekly" },
-                { path: "/fence-builder-northern-virginia",             priority: 0.85, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-builder-stafford-va",                    priority: 0.85, lastMod: TIER1, freq: "weekly" },
-                { path: "/fire-pit-builder-northern-virginia",          priority: 0.85, lastMod: TIER1, freq: "weekly" },
                 { path: "/pressure-washing-deck-northern-virginia",     priority: 0.80, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-builder-bristow-va",                     priority: 0.85, lastMod: TIER1, freq: "weekly" },
 

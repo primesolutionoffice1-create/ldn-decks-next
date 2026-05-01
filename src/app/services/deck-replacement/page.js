@@ -76,6 +76,18 @@ export default function DeckReplacementPage() {
         description="Don't let an aging, splintering deck hold you back. We specialize in tearing down old structures and building premium, low-maintenance outdoor retreats."
       />
 
+      {/* Pricing Anchor - Conversion Filtering */}
+      <section style={{ backgroundColor: '#fff5f2', padding: '24px 20px', borderBottom: '1px solid #ffdbd1' }}>
+        <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
+          <p style={{ fontSize: '16px', color: '#d14817', margin: 0, fontWeight: '500' }}>
+            <strong style={{ color: '#111', fontSize: '18px' }}>Project Minimum: $5,000+</strong>
+            <br />
+            We specialize in <strong style={{ color: '#111' }}>full builds and large scale projects</strong> only. 
+            We do <strong style={{ color: '#111' }}>NOT</strong> offer small repairs or minor fixes.
+          </p>
+        </div>
+      </section>
+
       {/* Pricing Anchor */}
       <section style={{ backgroundColor: '#f9f9f9', padding: '24px 20px', borderBottom: '1px solid #eee' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>

@@ -18,8 +18,8 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-alexandria-va',
-  title: 'Deck Builder in Alexandria, VA | Trex Certified | Loudoun Decks',
-  description: 'Top-rated deck builder in Alexandria, VA. Trex Platinum Partner & TimberTech Certified. Custom composite decks, screened porches & pergolas. Free estimate  -  call (571) 655-7207.',
+  title: 'Deck Builder in Alexandria VA | Trex Certified | Free Quote',
+  description: 'Top-rated Alexandria, VA deck builder. Trex Platinum Partner. Custom composite decks, porches & pergolas. Licensed & insured. Free estimate in 24h — (571) 655-7207.',
   image: '/images/img36.jpeg',
 });
 

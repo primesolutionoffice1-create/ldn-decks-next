@@ -21,9 +21,9 @@ import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
   path: "/",
-  title: 'Best Deck Builder in Northern Virginia | Custom Decks',
+  title: 'Custom Deck Builders in Loudoun County VA | Free 24h Quote',
   description:
-    'Loudoun Decks builds custom decks, screened porches, and patios in Northern Virginia. Trex Pro & TimberTech installer. Free quote in 24h.',
+    'Trex Pro & TimberTech certified deck builders serving Loudoun, Fairfax & Prince William VA. Custom decks, screened porches & pergolas. Free quote in 24 hours. ★ 5-star rated.',
 });
 
 const businessSchema = {

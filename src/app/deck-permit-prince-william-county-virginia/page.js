@@ -8,8 +8,8 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/deck-permit-prince-william-county-virginia',
-  title: 'Prince William County Deck Permit Guide',
-  description: 'Deck permits in Prince William County: 2-4 week plan review, $150-$500 cost, 3 inspections required. Full process explained. We handle everything.',
+  title: 'Prince William County Deck Permit Guide | Cost & Process 2026',
+  description: 'Deck permits in Prince William County, VA: 2–4 week plan review, $150–$500 cost, 3 required inspections. Full process explained — we handle it for you.',
 });
 
 const faqSchema = {

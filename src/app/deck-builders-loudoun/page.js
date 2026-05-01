@@ -12,10 +12,10 @@ import JsonLd from '@/components/JsonLd';
 import { buildMetadata, SITE_URL } from '@/lib/seo';
 
 export const metadata = buildMetadata({
-        path: '/deck-builders-loudoun',
-        title: 'Deck Builder in Loudoun County | Trex Certified',
-        description: 'Top-rated deck builder in Loudoun County. Trex Platinum Partner. Composite decks, screened porches & pergolas in Ashburn, Leesburg & Sterling.',
-        image: '/images/img36.jpeg',
+	path: '/deck-builders-loudoun',
+	title: 'Custom Deck Builder in Loudoun County, VA | Loudoun Decks',
+	description: 'Local deck builder in Loudoun County, VA. Trex Platinum Pro. Composite decks, screened porches, pergolas. 5-star rated. Free quote within 24 hours.',
+	image: '/images/img36.jpeg',
 });
 
 const inclusions = [

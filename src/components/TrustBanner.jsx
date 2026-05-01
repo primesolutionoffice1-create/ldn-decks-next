@@ -23,7 +23,7 @@ export default function TrustBanner() {
       <div className={styles.item}>
         <div className={styles.icon}>🛡️</div>
         <div className={styles.text}>
-          <strong>5-Year Warranty</strong>
+          <strong>2-Year Warranty</strong>
           <span>Workmanship Guaranteed</span>
         </div>
       </div>

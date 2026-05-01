@@ -109,7 +109,7 @@ export default function PorchRepairPage() {
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>You&apos;re already paying for labor, permits, and mobilization the incremental cost for new materials isn&apos;t much more</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>A repaired 20-year-old porch will need more repairs soon you&apos;re chasing a declining asset</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>A new porch comes with a full 5-year workmanship warranty + manufacturer material warranties</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>A new porch comes with a full 2-year workmanship warranty + manufacturer material warranties</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>New construction brings the porch up to current building code (required at sale anyway)</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>Composite materials mean the new porch needs near-zero maintenance going forward</li>
           </ul>

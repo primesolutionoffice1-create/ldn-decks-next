@@ -1,148 +1,175 @@
-📦 NEXT.JS TECHNICAL PACKAGE — IMPLEMENTATION SPECS
+Organic traffic
+HTTP status code
+Depth
+Is indexable page
+No. of all inlinks
+First found at
+0
+html
+404 Not found
+https://ldndecks.com/images/img65.jpeg 
+0
+404
+2
+No
+0
+https://www.ldndecks.com/_next/image?url=%2Fimages%2Fimg65.jpeg&w=3840&q=75 
+0
+txt
+404 Not found
+https://ldndecks.com/_next/static/chunks/0q6-8imbv~5rb.js 
+0
+404
+2
+No
+1 
+https://www.ldndecks.com/_next/static/chunks/0q6-8imbv~5rb.js 
+0
+txt
+404 Not found
+https://ldndecks.com/_next/static/chunks/14uqs5cbth0u5.js 
+0
+404
+2
+No
+1 
+https://www.ldndecks.com/_next/static/chunks/14uqs5cbth0u5.js 
+0
+txt
+400 Bad request
+https://ldndecks.com/_next/image?url=%2Fimages%2Fimg38.jpeg&w=3840&q=75 
+0
+400
+2
+No
+1 
+https://www.ldndecks.com/_next/image?url=%2Fimages%2Fimg38.jpeg&w=3840&q=75 
+0
+txt
+404 Not found
+https://ldndecks.com/_next/static/chunks/12crq_y7mt5kg.js 
+0
+404
+2
+No
+1 
+https://www.ldndecks.com/_next/static/chunks/12crq_y7mt5kg.js 
+0
+txt
+400 Bad request
+https://ldndecks.com/_next/image?url=%2Fimages%2Fimg65.jpeg&w=3840&q=75 
+0
+400
+2
+No
+1 
+https://www.ldndecks.com/_next/image?url=%2Fimages%2Fimg65.jpeg&w=3840&q=75 
+0
+txt
+404 Not found
+https://ldndecks.com/_next/static/chunks/14qoz.25il9h..js 
+0
+404
+2
+No
+1 
+https://www.ldndecks.com/_next/static/chunks/14qoz.25il9h..js
 
-🛠️ 1. Global configuration — app/layout.tsx
 
-import type { Metadata } from 'next';
-export const metadata: Metadata = {
-  metadataBase: new URL('https://ldndecks.com'),
-  title: {
-    default: 'Loudoun Decks | Custom Deck Builder Northern Virginia',
-    template: '%s | Loudoun Decks',
-  },
-  description:
-    'Award-winning custom deck builder serving Loudoun County and Northern Virginia. Trex & TimberTech certified installer. Free design consultation.',
-  alternates: { canonical: '/' },
-  openGraph: {
-    type: 'website',
-    locale: 'en_US',
-    siteName: 'Loudoun Decks',
-    images: ['/og/loudoun-decks-og.jpg'],
-  },
-  robots: { index: true, follow: true, 'max-image-preview': 'large' },
-};
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="en">
-      <body>
-        {/* Organization + LocalBusiness schema (sitewide) */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
-        />
-        {children}
-      </body>
-    </html>
-  );
-}
-const orgSchema = {
-  '@context': 'https://schema.org',
-  '@type': ['Organization', 'LocalBusiness', 'GeneralContractor'],
-  '@id': 'https://ldndecks.com/#organization',
-  name: 'Loudoun Decks',
-  url: 'https://ldndecks.com',
-  logo: 'https://ldndecks.com/logo.png',
-  image: 'https://ldndecks.com/hero.jpg',
-  telephone: '+1-XXX-XXX-XXXX',
-  priceRange: '$$$',
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: 'XXX Main St',
-    addressLocality: 'Ashburn',
-    addressRegion: 'VA',
-    postalCode: '20147',
-    addressCountry: 'US',
-  },
-  areaServed: [
-    { '@type': 'City', name: 'Ashburn' },
-    { '@type': 'City', name: 'Leesburg' },
-    { '@type': 'City', name: 'Sterling' },
-    { '@type': 'City', name: 'Reston' },
-    { '@type': 'City', name: 'Herndon' },
-    { '@type': 'City', name: 'Fairfax' },
-    { '@type': 'City', name: 'Vienna' },
-    { '@type': 'AdministrativeArea', name: 'Loudoun County' },
-    { '@type': 'AdministrativeArea', name: 'Fairfax County' },
-  ],
-  geo: { '@type': 'GeoCoordinates', latitude: 39.0438, longitude: -77.4874 },
-  sameAs: [
-    'https://www.facebook.com/ldndecks',
-    'https://www.instagram.com/ldndecks',
-    'https://g.page/ldndecks',
-  ],
-};
+------------------------------
 
-⸻
+Lost from filter results
+0
 
-🛠️ 2. Homepage — app/page.tsx
+Lost
+0
 
-Target keywords: deck builder northern virginia, best deck builder in northern virginia
+Patches
 
-export const metadata: Metadata = {
-  title: 'Best Deck Builder in Northern Virginia | Custom Decks & Patios',
-  description:
-    'Loudoun Decks designs & builds custom decks, screened porches, and patios across Northern Virginia. Trex Pro & TimberTech Gold installer. Free quote in 24h.',
-  alternates: { canonical: '/' },
-};
-export default function Home() {
-  return (
-    <main>
-      <h1>Custom Deck Builder Serving Northern Virginia</h1>
-    </main>
-  );
-}
+Changes: Don't show
 
-⸻
+Columns
 
-🛠️ 3. Service Page Template — app/services/[service]/page.tsx
-
-export const metadata: Metadata = {
-  title: 'Custom Deck Builder Northern Virginia | Composite & Wood Decks',
-  description:
-    'Custom decks built by Northern Virginia\'s top-rated contractor. Composite (Trex, TimberTech) & wood. 10-year workmanship warranty.',
-  alternates: { canonical: '/services/deck-builder' },
-};
-
-⸻
-
-🛠️ 4. Service-Area Pages — dynamic
-
-(unchanged structurally — already correct)
-
-⸻
-
-🛠️ 5. Sitemap fix
-
-exclude: [
-  '/admin/*',
-  '/api/*',
-  '/draft/*',
-  // add 28 redirect URLs here
-],
-
-⸻
-
-🛠️ 6. Redirects
-
-Clean redirect chains from Site Audit.
-
-⸻
-
-🛠️ 7. FAQ Schema
-
-Add 4–6 questions per page for rich results.
-
-⸻
-
-✅ Recommended execution order
-
-Sprint 1 (5 days)
-Fix technical issues: schema, H1, titles, redirects.
-
-Sprint 2 (5 days)
-Build 4 main service pages.
-
-Sprint 3 (5 days)
-Deploy 22 service-area pages.
-
-Sprint 4 (10 days)
-Publish 8–10 SEO blog articles.
+Export
+Link type
+Is nofollow
+Source URL
+Source HTTP status code
+Target URL
+Target HTTP status code
+Anchor
+Hreflang attribute
+Target final redirect URL
+Target final redirect HTTP status code
+Is source canonical
+Is source noindex
+Is target canonical
+Is target noindex
+Is link internal
+Redirect
+No
+https://www.ldndecks.com/_next/static/chunks/14qoz.25il9h..js 
+308
+https://ldndecks.com/_next/static/chunks/14qoz.25il9h..js 
+404
+Yes
+No
+Yes
+No
+Yes
+Redirect
+No
+https://www.ldndecks.com/_next/static/chunks/12crq_y7mt5kg.js 
+308
+https://ldndecks.com/_next/static/chunks/12crq_y7mt5kg.js 
+404
+Yes
+No
+Yes
+No
+Yes
+Redirect
+No
+https://www.ldndecks.com/_next/image?url=%2Fimages%2Fimg65.jpeg&w=3840&q=75 
+308
+https://ldndecks.com/_next/image?url=%2Fimages%2Fimg65.jpeg&w=3840&q=75 
+400
+Yes
+No
+Yes
+No
+Yes
+Redirect
+No
+https://www.ldndecks.com/_next/static/chunks/14uqs5cbth0u5.js 
+308
+https://ldndecks.com/_next/static/chunks/14uqs5cbth0u5.js 
+404
+Yes
+No
+Yes
+No
+Yes
+Redirect
+No
+https://www.ldndecks.com/_next/static/chunks/0q6-8imbv~5rb.js 
+308
+https://ldndecks.com/_next/static/chunks/0q6-8imbv~5rb.js 
+404
+Yes
+No
+Yes
+No
+Yes
+Redirect
+No
+https://www.ldndecks.com/_next/image?url=%2Fimages%2Fimg38.jpeg&w=3840&q=75 
+308
+https://ldndecks.com/_next/image?url=%2Fimages%2Fimg38.jpeg&w=3840&q=75 
+400
+Yes
+No
+Yes
+No
+Yes
+Showing 6 of 6

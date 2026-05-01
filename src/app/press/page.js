@@ -42,7 +42,7 @@ export default function PressPage() {
                   ['Certifications', 'Trex Platinum Partner, TimberTech Certified Installer'],
                   ['License', 'Virginia Class A Contractor (DPOR Licensed)'],
                   ['Insurance', 'Fully insured general liability & workers\' comp'],
-                  ['Owner', 'Nick Owner & Lead Designer, 15+ years experience'],
+                  ['Owner', 'Nick Owner & Lead Designer, 10+ years experience'],
                 ].map(([label, value], i) => (
                   <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
                     <td style={{ padding: '0.75rem', fontWeight: 600, borderBottom: '1px solid #eee', width: '35%' }}>{label}</td>
@@ -61,7 +61,7 @@ export default function PressPage() {
             <li><strong>Trex Platinum Partner</strong> highest tier of Trex certification</li>
             <li><strong>TimberTech Certified Installer</strong> qualified for all product lines</li>
             <li><strong>100% permit approval rate</strong> across Loudoun, Fairfax & Prince William counties</li>
-            <li><strong>5-Year Workmanship Warranty</strong> on all projects in addition to manufacturer warranties</li>
+            <li><strong>2-Year Workmanship Warranty</strong> on all projects in addition to manufacturer warranties</li>
             <li><strong>Average project value:</strong> $15,000–$65,000</li>
             <li><strong>Average build time:</strong> 1–4 weeks depending on scope</li>
           </ul>

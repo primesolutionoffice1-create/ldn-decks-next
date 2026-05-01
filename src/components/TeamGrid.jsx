@@ -7,7 +7,7 @@ const teamMembers = [
     name: "Nick",
     role: "Owner & Lead Designer",
     image: "/team/Nick.jpg",
-    bio: "Founder and lead designer of Loudoun Decks with over 15 years of experience in custom deck construction across Northern Virginia. Virginia Class A Licensed Contractor. Trex Platinum Certified and TimberTech Certified Installer. Nick personally oversees every project from initial design through final inspection, ensuring each build meets the highest structural and aesthetic standards. He has completed 200+ custom deck projects across Loudoun, Fairfax, and Prince William counties.",
+    bio: "Founder and lead designer of Loudoun Decks with over 10 years of experience in custom deck construction across Northern Virginia. Virginia Class A Licensed Contractor. Trex Platinum Certified and TimberTech Certified Installer. Nick personally oversees every project from initial design through final inspection, ensuring each build meets the highest structural and aesthetic standards. He has completed 200+ custom deck projects across Loudoun, Fairfax, and Prince William counties.",
     expertise: ["Custom deck design", "Trex & TimberTech systems", "HOA architectural review", "Structural engineering", "Permit management"],
   },
   {
@@ -21,7 +21,7 @@ const teamMembers = [
     name: "Alex, Daniel & Bet",
     role: "Master Technicians",
     image: "/team/alexdanielandbet.jpeg",
-    bio: "Our lead construction team brings a combined 25+ years of hands-on deck building experience. Specialists in composite installation (Trex, TimberTech AZEK), structural framing, custom railing systems, and precision carpentry. They handle every phase of construction from footing installation to final trim, ensuring code compliance and exceptional craftsmanship on every project.",
+    bio: "Our lead construction team brings a combined 10+ years of hands-on deck building experience. Specialists in composite installation (Trex, TimberTech AZEK), structural framing, custom railing systems, and precision carpentry. They handle every phase of construction from footing installation to final trim, ensuring code compliance and exceptional craftsmanship on every project.",
     expertise: ["Composite installation", "Structural framing", "Custom railings", "Precision carpentry", "Code compliance"],
   }
 ];
@@ -37,7 +37,7 @@ export default function TeamGrid() {
     "worksFor": { "@type": "Organization", "@id": "https://ldndecks.com/#organization" },
     "knowsAbout": ["Composite decking installation", "Trex deck building", "TimberTech AZEK", "Custom deck design", "Northern Virginia building codes", "HOA architectural review"],
     "image": "https://ldndecks.com/team/Nick.jpg",
-    "description": "Founder of Loudoun Decks with 15+ years of custom deck building experience in Northern Virginia. Virginia Class A Licensed Contractor, Trex Platinum Certified.",
+    "description": "Founder of Loudoun Decks with 10+ years of custom deck building experience in Northern Virginia. Virginia Class A Licensed Contractor, Trex Platinum Certified.",
   };
 
   return (

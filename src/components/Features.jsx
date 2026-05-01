@@ -31,7 +31,7 @@ const HandshakeIcon = () => (
 const featuresData = [
   {
     icon: <RibbonIcon />,
-    title: '24+ YEARS',
+    title: '10+ YEARS',
     subtitle: 'Experience'
   },
   {

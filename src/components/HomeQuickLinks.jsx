@@ -26,7 +26,7 @@ const links = [
   {
     href: '/team',
     title: 'Meet Our Team',
-    desc: '24+ years of deck building expertise in NoVA.',
+    desc: '10+ years of deck building expertise in NoVA.',
   },
   {
     href: '/deck-cost-calculator',

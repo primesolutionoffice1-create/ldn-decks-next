@@ -61,7 +61,7 @@ export default function ChooseDeckBuilderPage() {
               { q: 'Do you handle HOA submissions?', detail: 'In Northern Virginia, most homes need HOA approval. Your builder should prepare and submit the ARC package.' },
               { q: 'What brands/materials do you install?', detail: 'Look for Trex Pro, TimberTech, or AZEK certifications. Avoid builders who are vague about materials.' },
               { q: 'Can I see recent local projects?', detail: 'Ask for 3-5 completed projects in your area, ideally within the last 12 months. Visit one if possible.' },
-              { q: 'What\'s your written warranty?', detail: 'Get the warranty in writing before signing. It should cover workmanship (minimum 2 years, ideally 5+) separately from manufacturer material warranties.' },
+              { q: 'What\'s your written warranty?', detail: 'Get the warranty in writing before signing. It should cover workmanship (2 years) separately from manufacturer material warranties.' },
               { q: 'What\'s included in the estimate?', detail: 'Materials, labor, permits, dumpster, cleanup, and timeline should all be itemized. Lump-sum quotes hide problems.' },
               { q: 'What\'s your projected timeline?', detail: 'Get a start date and estimated completion in writing. Ask what happens if weather or supply delays occur.' },
               { q: 'How do you handle change orders?', detail: 'Changes happen. A professional builder documents changes in writing with cost impact before proceeding.' },
@@ -107,7 +107,7 @@ export default function ChooseDeckBuilderPage() {
                 ['Permits', 'We pull all permits and coordinate every inspection 100% approval rate'],
                 ['HOA', 'We prepare and submit ARC packages 100% approval rate across 50+ communities'],
                 ['Materials', 'Trex Pro certified installer + TimberTech + AZEK'],
-                ['Warranty', '5-year workmanship warranty in writing, on top of manufacturer warranties'],
+                ['Warranty', '2-year workmanship warranty in writing, on top of manufacturer warranties'],
                 ['Reviews', '5.0★ on Google with 41 reviews'],
                 ['References', 'Happy to share recent project contacts in your neighborhood'],
               ].map(([label, detail]) => (

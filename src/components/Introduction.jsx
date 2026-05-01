@@ -73,7 +73,7 @@ export default function Introduction() {
           </div>
           <h2 className={styles.title}>Built in Northern Virginia.<br /> For Northern Virginia.</h2>
           <p className={styles.description}>
-            Since 2001, we&apos;ve built 500+ decks across Loudoun, Fairfax, and Prince William counties &mdash; from modest backyard additions to full outdoor living spaces with screened porches, pergolas, and kitchens. We know Loudoun County&apos;s permit process, HOA requirements, and Virginia&apos;s climate better than anyone. Every project is personally overseen by Nick, and we don&apos;t consider a job done until you&apos;d recommend us to your neighbor.
+            For over 10 years, we&apos;ve built 500+ decks across Loudoun, Fairfax, and Prince William counties &mdash; from modest backyard additions to full outdoor living spaces with screened porches, pergolas, and kitchens. We know Loudoun County&apos;s permit process, HOA requirements, and Virginia&apos;s climate better than anyone. Every project is personally overseen by Nick, and we don&apos;t consider a job done until you&apos;d recommend us to your neighbor.
           </p>
           <ul className={styles.checkList}>
             <li>

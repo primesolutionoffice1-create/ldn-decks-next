@@ -10,6 +10,7 @@ import ServiceSchema from '@/components/ServiceSchema';
 import SimpleCTA from '@/components/SimpleCTA';
 import RelatedGuides from '@/components/RelatedGuides';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
+import GoogleMapEmbed from '@/components/GoogleMapEmbed';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -162,6 +163,16 @@ export default function DeckRepairPage() {
         title="Deck Repair & Maintenance FAQs"
         faqs={repairFAQs}
       />
+
+      <section style={{ padding: '3rem 0', background: '#fafafa' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
+          <h2 style={{ fontSize: '1.6rem', fontWeight: 700, marginBottom: '0.5rem' }}>Deck Repair Service Area</h2>
+          <p style={{ fontSize: '0.95rem', color: '#555', marginBottom: '1.5rem' }}>
+            Based in Centreville, VA we serve Loudoun, Fairfax, Prince William, Arlington, and Stafford counties same-day estimates within a 40-mile radius.
+          </p>
+          <GoogleMapEmbed city="Centreville" state="VA" height="380px" />
+        </div>
+      </section>
 
       <ServiceAreasGrid />
 

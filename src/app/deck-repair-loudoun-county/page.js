@@ -9,6 +9,7 @@ import ContactHome from '@/components/ContactHome';
 import SimpleCTA from '@/components/SimpleCTA';
 import RelatedGuides from '@/components/RelatedGuides';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
+import GoogleMapEmbed from '@/components/GoogleMapEmbed';
 import JsonLd from '@/components/JsonLd';
 import { buildMetadata } from '@/lib/seo';
 
@@ -171,6 +172,16 @@ export default function DeckRepairLoudounCountyPage() {
         title="Deck Repair Loudoun County - FAQs"
         faqs={pageFAQs}
       />
+      <section style={{ padding: '3rem 0', background: '#fafafa' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
+          <h2 style={{ fontSize: '1.6rem', fontWeight: 700, marginBottom: '0.5rem' }}>Loudoun County Service Map</h2>
+          <p style={{ fontSize: '0.95rem', color: '#555', marginBottom: '1.5rem' }}>
+            We repair decks across Ashburn, Leesburg, Sterling, Brambleton, South Riding, Purcellville, Lansdowne, Round Hill, and every Loudoun County community in between.
+          </p>
+          <GoogleMapEmbed city="Leesburg" state="VA" height="380px" />
+        </div>
+      </section>
+
       <ServiceAreasGrid />
       <RelatedGuides currentPath="/deck-repair-loudoun-county" />
       <ContactHome />

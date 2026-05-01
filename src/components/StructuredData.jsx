@@ -38,18 +38,6 @@ export default function StructuredData() {
       'https://x.com/ldndecks',
       'https://g.page/ldndecks',
     ],
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      reviewCount: '41',
-      bestRating: '5',
-      worstRating: '1',
-      itemReviewed: {
-        '@type': 'GeneralContractor',
-        '@id': 'https://ldndecks.com/#organization',
-        name: 'Loudoun Decks',
-      },
-    },
   };
 
   return (

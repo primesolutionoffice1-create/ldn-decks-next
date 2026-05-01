@@ -17,11 +17,10 @@ import { buildMetadata, SITE_URL } from "@/lib/seo";
 export const metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Loudoun Decks | Custom Deck Builder Northern Virginia',
-    template: '%s | Loudoun Decks',
+    default: 'Custom Deck Builders in Loudoun County VA | Loudoun Decks',
+    template: '%s',  // pages set their own complete title
   },
-  description:
-    'Award-winning custom deck builder serving Loudoun County and Northern Virginia. Trex & TimberTech certified installer. Free design consultation.',
+  description: 'Trex Pro & TimberTech certified deck builders serving Loudoun, Fairfax & Prince William VA. Custom decks, screened porches & pergolas. Free quote in 24h.',
   alternates: { canonical: '/' },
   openGraph: {
     type: 'website',

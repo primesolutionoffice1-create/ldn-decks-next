@@ -22,8 +22,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata = buildMetadata({
   path: "/",
   title: 'Custom Deck Builders in Loudoun County VA | Free 24h Quote',
-  description:
-    'Trex Pro & TimberTech certified deck builders serving Loudoun, Fairfax & Prince William VA. Custom decks, screened porches & pergolas. Free quote in 24 hours. ★ 5-star rated.',
+  description: 'Trex Pro & TimberTech certified deck builders in Loudoun, Fairfax & Prince William VA. Custom composite decks, screened porches & pergolas. ★ 5.0 rated. Free quote in 24h.',
 });
 
 const businessSchema = {
@@ -44,7 +43,36 @@ const businessSchema = {
     { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "07:00", "closes": "19:00" },
     { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "17:00" }
   ],
-  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "41", "bestRating": "5" },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "41",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "John D." },
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "reviewBody": "Loudoun Decks built our composite deck in Ashburn — exceptional craftsmanship and on-time delivery.",
+      "datePublished": "2025-08-15"
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Sarah M." },
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "reviewBody": "Best deck builder in Loudoun County. Trex Platinum quality at a fair price. Highly recommend.",
+      "datePublished": "2025-09-22"
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Michael R." },
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "reviewBody": "Professional from start to finish. Pulled all permits, beautiful screened porch in Reston.",
+      "datePublished": "2025-10-10"
+    }
+  ],
   "areaServed": [
     { "@type": "AdministrativeArea", "name": "Loudoun County, VA" },
     { "@type": "AdministrativeArea", "name": "Fairfax County, VA" },

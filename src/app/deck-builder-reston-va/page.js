@@ -18,7 +18,7 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-reston-va',
-  title: 'Deck Builder in Reston VA | Trex Platinum Pro | Free Estimate',
+  title: 'Deck Builder in Reston VA | Trex Platinum Pro | Loudoun Decks',
   description: 'Custom composite decks, screened porches & pergolas in Reston, VA. Trex Platinum Partner & TimberTech Certified. Free 24h estimate — call (571) 655-7207.',
   image: '/images/img36.jpeg',
 });

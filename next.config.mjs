@@ -67,6 +67,21 @@ const nextConfig = {
       { source: '/top-decks-build-near-you/deck-builder-in-hillsboro', destination: '/near-you/loudoun-county/hillsboro', permanent: true },
       { source: '/top-decks-build-near-you/deck-builder-in-occoquan', destination: '/near-you/prince-william-county/occoquan', permanent: true },
       { source: '/deck-projects-showcase/new-custom-wood-fence-ashburn', destination: '/services/fence', permanent: true },
+
+      // Batch 5 - /feed/ cleanup and specific tags
+      { source: '/tag/:path*/feed', destination: '/', permanent: true },
+      { source: '/tag/vienna', destination: '/deck-builder-vienna-va', permanent: true },
+      { source: '/tag/wood-fences', destination: '/services/fence', permanent: true },
+      { source: '/tag/northern-virginia-decks', destination: '/', permanent: true },
+      { source: '/deck-balcony-resurfacing-in-sterling', destination: '/deck-builder-sterling-va', permanent: true },
+      { source: '/deck-projects-showcase/deck-builder-ashburn-va', destination: '/deck-builder-ashburn-va', permanent: true },
+      { source: '/deck-projects-showcase/deck-builder-ashburn', destination: '/deck-builder-ashburn-va', permanent: true },
+
+      // Batch 6 - Path Normalization & Final Tag Cleanup
+      { source: '/tag/:path*/feed/:path*', destination: '/', permanent: true },
+      { source: '/drafts', destination: '/', permanent: true },
+      { source: '/deck-repair-loudoun-county-va', destination: '/deck-repair-loudoun-county', permanent: true },
+      { source: '/tag/:path*', destination: '/near-you', permanent: true }, // Catch-all for any remaining tag URLs
       { source: '/about-loudoun-deck-company', destination: '/about', permanent: true },
       { source: '/why-choose-us', destination: '/about/why-choose-us', permanent: true },
       { source: '/our-process', destination: '/about/process', permanent: true },

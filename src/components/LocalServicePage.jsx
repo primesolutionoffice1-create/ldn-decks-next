@@ -10,6 +10,7 @@ import { BUSINESS, ORG_ID } from '@/lib/business';
 import { SITE_URL } from '@/lib/seo';
 import { getVerifiedReviewSourceSnippets } from '@/lib/verifiedProof';
 import { buildCityProfile, servicePageTypes } from '@/data/localServicePages';
+import { localServiceBuyerFaqs } from '@/data/localServiceBuyerFaqs';
 import styles from './LocalServicePage.module.css';
 
 const STATIC_DECK_BUILDER_CITY_SLUGS = new Set([
@@ -50,7 +51,9 @@ function cityIntro(city, service) {
 
 function buildFaqs(city, service) {
   const profile = buildCityProfile(city);
+  const buyerFaq = localServiceBuyerFaqs[`/${service.path}/${city.citySlug}`];
   return [
+    ...(buyerFaq ? [{ q: buyerFaq.q, a: buyerFaq.a }] : []),
     {
       q: `Do you build ${service.label.toLowerCase()} in ${city.city}, VA?`,
       a: `Yes. Loudoun Decks serves ${city.city} and nearby ${city.county} communities with ${service.intro}. We review the property, confirm permit and HOA requirements, and prepare a written scope before construction.`,

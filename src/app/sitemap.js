@@ -6,6 +6,7 @@ import { educationArticles } from '@/lib/educationData';
 import { showcaseProjects } from '@/lib/showcaseData';
 import { SITE_URL } from '@/lib/seo';
 import { getIndexableLocalServicePages } from '@/data/localServicePages';
+import { localServiceBuyerFaqs } from '@/data/localServiceBuyerFaqs';
 
 // Tier dates are fallbacks for entries whose source file we cannot resolve
 // (blog posts, education articles, showcase projects come from data files,
@@ -70,6 +71,8 @@ function fsMtime(filePath) {
 // Resolves the most accurate lastModified date for a route, with a tiered
 // fallback ladder: git mtime → fs mtime → caller-supplied tier date.
 function resolveLastMod(urlPath, tierFallback) {
+  const buyerFaqDate = localServiceBuyerFaqs[urlPath]?.dateModified;
+  if (buyerFaqDate) return buyerFaqDate;
   const file = pathToPageFile(urlPath);
   if (!file) return tierFallback;
   return gitMtime(file) || fsMtime(file) || tierFallback;
